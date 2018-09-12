@@ -1,0 +1,29 @@
+1/ Installation
+
+- Télécharger NODEJS
+
+npm install -g npm@latest (Installation NPM)
+npm install -g @angular/cli (Installation AngularCLI)
+
+2/ Projet et paramétrage
+
+ng new WorldArlenor --style=scss --routing --skip-tests (Création du projet WorldArlenor)
+
+- Pour modifier le port, c'est dans package.json "script {'start': 'ng serve --port 4400', ...}"
+
+3/ Gestion de la traduction
+
+npm install @ngx-translate/core@9 --save
+npm install @ngx-translate/http-loader@2 --save
+npm install rxjs-compat (SI erreur avec rxjs)
+
+https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate
+
+4/ Création des composants et des pages
+
+ng generate component components/header
+ng generate component components/footer
+ng generate component pages/home
+ng generate component pages/about
+
+- Mettre les directives app-header et app-footer dans app.components.html
