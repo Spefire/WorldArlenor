@@ -10,6 +10,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { RoleplayComponent } from './pages/roleplay/roleplay.component';
+import { CharactersComponent } from './pages/characters/characters.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -18,6 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    RoleplayComponent,
+    CharactersComponent,
     AboutComponent,
     HeaderComponent,
     FooterComponent

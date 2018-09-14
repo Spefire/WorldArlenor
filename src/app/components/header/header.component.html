@@ -1,3 +1,12 @@
-<p>
-  HEADER
-</p>
+<div class="header-section">
+  <img src="https://via.placeholder.com/50x50" alt="">
+  <a routerLink="" [innerHtml]="'HEADER.TITLE' | translate"></a>
+</div>
+<nav>
+    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'HEADER.NAV.ROLEPLAY' | translate"></a>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="" [innerHtml]="'HEADER.NAV.HOME' | translate"></a>
+    <a routerLinkActive="active" routerLink="characters" [innerHtml]="'HEADER.NAV.CHARACTERS' | translate"></a>
+</nav>
+<div class="header-section section-right">
+  <a routerLinkActive="active" routerLink="about" [innerHtml]="'HEADER.NAV.ABOUT' | translate"></a>
+</div>

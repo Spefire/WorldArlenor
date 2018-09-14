@@ -1,6 +1,21 @@
 {
+  "HEADER": {
+    "TITLE": "Le Monde d'Arlénor",
+    "NAV": {
+      "HOME": "Univers",
+      "ROLEPLAY": "Jeu de rôles",
+      "CHARACTERS": "Personnages",
+      "ABOUT" : "A propos"
+    }
+  },
   "HOME": {
     "TITLE": "Accueil"
+  },
+  "ROLEPLAY": {
+    "TITLE": "Jeu de rôles"
+  },
+  "CHARACTERS": {
+    "TITLE": "Personnages"
   },
   "ABOUT": {
     "TITLE": "A propos"

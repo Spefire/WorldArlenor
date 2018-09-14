@@ -1,0 +1,47 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 50px;
+    background-color: lightgrey;
+
+    a {
+        display: inline-block;
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 25px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: black;
+
+            transform: scaleX(0);
+
+            transition: transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);;
+        }
+
+        &.active {
+            &:after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    .header-section {
+        display: flex;
+        align-items: center;
+        min-width: 25%;
+
+        &.section-right {
+            display: inline-block;
+            text-align: right;
+        }
+    }
+}
