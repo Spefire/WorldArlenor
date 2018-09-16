@@ -1,0 +1,20 @@
+<div style="text-align:center">
+  <div padding-vert class="head-container">
+    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
+    <div class="title-container">
+        <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
+        <h2>{{ listFacts[0].title | translate }}</h2>
+        <p>{{ listFacts[0].description | translate }}</p>
+        <button routerLink="/universe/{{listFacts[0].id}}">{{ 'UNIVERSE.SEEMORE' | translate | uppercase }}</button>
+    </div>
+  </div>
+  <div separator></div>
+  <div padding-vert class="list-facts-container">
+    <div *ngFor="let fact of listFacts | slice:1" class="fact-container" routerLink="/universe/{{fact.id}}">
+      <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
+      <h2>{{ fact.title }}</h2>
+      <h3>{{ fact.type }}</h3>
+      <p>{{ fact.description }}</p>
+    </div>
+  </div>
+</div>

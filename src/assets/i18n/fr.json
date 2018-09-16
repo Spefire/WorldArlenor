@@ -12,6 +12,23 @@
     "WAIT": "Page en cours de construction !"
   },
   "HOME": {
+    "UNIVERSE": {
+      "TITLE": "L'univers du Monde d'Arlénor",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "SEEMORE": "En lire davantage"
+    },
+    "ROLEPLAY": {
+      "TITLE": "Le jeu de rôle",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "SEEMORE": "Oser l'aventure"
+    },
+    "CHARACTERS": {
+      "TITLE": "Les personnages",
+      "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
+      "SEEMORE": "Vivre leur passé"
+    }
+  },
+  "UNIVERSE": {
     "TITLE": "Univers",
     "SEEMORE": "En savoir plus"
   },

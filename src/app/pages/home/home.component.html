@@ -1,20 +1,29 @@
 <div style="text-align:center">
-  <div padding-vert class="head-container">
-    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
+  <div padding-vert class="head-container big-head">
+    <img class="title-background" src="https://via.placeholder.com/1000x550" alt="">
     <div class="title-container">
         <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-        <h2>{{ listFacts[0].title | translate }}</h2>
-        <p>{{ listFacts[0].description | translate }}</p>
-        <button routerLink="/universe/{{listFacts[0].id}}">{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
+        <h2>{{ 'HOME.UNIVERSE.TITLE' | translate }}</h2>
+        <p>{{ 'HOME.UNIVERSE.RESUME' | translate }}</p>
+        <button routerLink="universe">{{ 'HOME.UNIVERSE.SEEMORE' | translate | uppercase }}</button>
     </div>
   </div>
   <div separator></div>
-  <div padding-vert class="list-facts-container">
-    <div *ngFor="let fact of listFacts | slice:1" class="fact-container" routerLink="/universe/{{fact.id}}">
-      <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
-      <h2>{{ fact.title }}</h2>
-      <h3>{{ fact.type }}</h3>
-      <p>{{ fact.description }}</p>
+  <div padding-vert class="head-container">
+    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
+    <div class="title-container inverse-container">
+        <h2>{{ 'HOME.ROLEPLAY.TITLE' | translate }}</h2>
+        <p>{{ 'HOME.ROLEPLAY.RESUME' | translate }}</p>
+        <button routerLink="roleplay">{{ 'HOME.ROLEPLAY.SEEMORE' | translate | uppercase }}</button>
+    </div>
+  </div>
+  <div separator></div>
+  <div padding-vert class="head-container">
+    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
+    <div class="title-container">
+        <h2>{{ 'HOME.CHARACTERS.TITLE' | translate }}</h2>
+        <p>{{ 'HOME.CHARACTERS.RESUME' | translate }}</p>
+        <button routerLink="characters">{{ 'HOME.CHARACTERS.SEEMORE' | translate | uppercase }}</button>
     </div>
   </div>
 </div>

@@ -4,10 +4,6 @@
         position: relative;
         height: 250px;
 
-        &.big-head {
-            height: 400px;
-        }
-
         .title-background {
             position: absolute;
             height: 100%;
@@ -28,13 +24,6 @@
             width: 25%;
             text-align: left;
             transform: translateX(-50%) translateY(-50%);
-
-            &.inverse-container {
-                left: auto;
-                right: 25%;
-                text-align: right;
-                transform: translateX(50%) translateY(-50%);
-            }
 
             .logo-image {
                 height: 100px;
