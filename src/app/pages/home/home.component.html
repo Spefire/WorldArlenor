@@ -1,8 +1,15 @@
 <div style="text-align:center">
-  <h1>
-    {{ 'HOME.TITLE' | translate }}
-  </h1>
-  <div class="list-articles-container">
+  <div padding-vert class="head-container">
+    <img class="title-background" src="https://via.placeholder.com/600x350" alt="">
+    <div class="title-container">
+        <img class="logo-image" src="https://via.placeholder.com/250x100" alt="">
+        <h2>{{ 'HOME.SUBTITLE' | translate }}</h2>
+        <p>{{ 'HOME.RESUME' | translate }}</p>
+        <button>{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
+    </div>
+  </div>
+  <div separator></div>
+  <div padding-vert class="list-articles-container">
     <div *ngFor="let article of listArticles" class="article-container">
       <img src="https://via.placeholder.com/250x100" alt="">
       <h2>{{ article.title }}</h2>

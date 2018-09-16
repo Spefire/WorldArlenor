@@ -12,7 +12,10 @@
     "WAIT": "Page en cours de construction !"
   },
   "HOME": {
-    "TITLE": "Univers"
+    "TITLE": "Univers",
+    "SUBTITLE": "Célestia et l'Ordre des Mages Evanell",
+    "RESUME": "Dans le Monde d'Arlénor, il existe un continent perdu, appelé Célestia. Il fut appelé ainsi car le continent n'a pas d'attache terrestre...",
+    "SEEMORE": "En savoir plus"
   },
   "ROLEPLAY": {
     "TITLE": "Jeu de rôles"
