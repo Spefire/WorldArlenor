@@ -1,0 +1,26 @@
+:host {
+    width: 100%;
+
+    .list-articles-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center;
+
+        .article-container {
+            width: 250px;
+            height: 300px;
+            border: 1px solid rgba(0,0,0, 0.2);
+            border-radius: 10px;
+            box-shadow: 5px 5px rgba(0,0,0, 0.2);
+
+            margin: 10px;
+            overflow: hidden;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(0,0,0, 0.1);
+            }
+        }
+    }
+}
