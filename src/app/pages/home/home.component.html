@@ -5,12 +5,12 @@
         <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
         <h2>{{ listArticles[0].title | translate }}</h2>
         <p>{{ listArticles[0].description | translate }}</p>
-        <button>{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
+        <button routerLink="/universe/{{listArticles[0].id}}">{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
     </div>
   </div>
   <div separator></div>
   <div padding-vert class="list-articles-container">
-    <div *ngFor="let article of listArticles | slice:1" class="article-container">
+    <div *ngFor="let article of listArticles | slice:1" class="article-container" routerLink="/universe/{{article.id}}">
       <img class="article-image" src="https://via.placeholder.com/500x200" alt="">
       <h2>{{ article.title }}</h2>
       <h3>{{ article.type }}</h3>
