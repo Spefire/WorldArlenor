@@ -1,28 +1,28 @@
 import {Injectable} from "@angular/core";
 import 'rxjs/add/operator/map';
 
-import { Article, articles } from '../models/article.model';
+import { Fact, facts } from '../models/fact.model';
 
 @Injectable()
 export class ApiService {
 
   constructor() {}
 
-  public getArticle(id:number): Article {
-    var theArticle:Article;
-    articles.forEach(element => {
-      let article = new Article(JSON.stringify(element));
-      if (article.id == id) theArticle = article;
+  public getFact(id:number): Fact {
+    var theFact:Fact;
+    facts.forEach(element => {
+      let fact = new Fact(JSON.stringify(element));
+      if (fact.id == id) theFact = fact;
     });
-    return theArticle;
+    return theFact;
   }
 
-  public getArticles(): Article[] {
-    var listArticles:Article[] = [];
-    articles.forEach(element => {
-      let article = new Article(JSON.stringify(element));
-      listArticles.push(article);
+  public getFacts(): Fact[] {
+    var listFacts:Fact[] = [];
+    facts.forEach(element => {
+      let fact = new Fact(JSON.stringify(element));
+      listFacts.push(fact);
     });
-    return listArticles;
+    return listFacts;
   }
 }

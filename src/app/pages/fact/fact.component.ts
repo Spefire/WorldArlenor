@@ -1,27 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { Article } from '../../models/article.model';
+import { Fact } from '../../models/fact.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss'],
+  selector: 'app-fact',
+  templateUrl: './fact.component.html',
+  styleUrls: ['./fact.component.scss'],
   providers: [ApiService]
 })
-export class ArticleComponent implements OnInit {
+export class FactComponent implements OnInit {
 
-  public article:Article;
+  public fact:Fact;
 
   constructor(private apiService: ApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.getArticle();
+    this.getFact();
   }
   
-  getArticle(): void {
+  getFact(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.article = this.apiService.getArticle(id);
+    this.fact = this.apiService.getFact(id);
   }
 
 }

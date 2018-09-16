@@ -33,13 +33,13 @@
         }
     }
 
-    .list-articles-container {
+    .list-facts-container {
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
         justify-content: center;
 
-        .article-container {
+        .fact-container {
             width: 250px;
             height: 300px;
             border: 1px solid rgba(0,0,0, 0.2);
@@ -54,7 +54,7 @@
                 background-color: rgba(0,0,0, 0.1);
             }
 
-            .article-image {
+            .fact-image {
                 height: 100px;
                 width: 250px;
             }

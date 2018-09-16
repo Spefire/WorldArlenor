@@ -3,18 +3,18 @@
     <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
     <div class="title-container">
         <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-        <h2>{{ listArticles[0].title | translate }}</h2>
-        <p>{{ listArticles[0].description | translate }}</p>
-        <button routerLink="/universe/{{listArticles[0].id}}">{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
+        <h2>{{ listFacts[0].title | translate }}</h2>
+        <p>{{ listFacts[0].description | translate }}</p>
+        <button routerLink="/universe/{{listFacts[0].id}}">{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
     </div>
   </div>
   <div separator></div>
-  <div padding-vert class="list-articles-container">
-    <div *ngFor="let article of listArticles | slice:1" class="article-container" routerLink="/universe/{{article.id}}">
-      <img class="article-image" src="https://via.placeholder.com/500x200" alt="">
-      <h2>{{ article.title }}</h2>
-      <h3>{{ article.type }}</h3>
-      <p>{{ article.description }}</p>
+  <div padding-vert class="list-facts-container">
+    <div *ngFor="let fact of listFacts | slice:1" class="fact-container" routerLink="/universe/{{fact.id}}">
+      <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
+      <h2>{{ fact.title }}</h2>
+      <h3>{{ fact.type }}</h3>
+      <p>{{ fact.description }}</p>
     </div>
   </div>
 </div>

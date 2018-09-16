@@ -1,4 +1,4 @@
-export class Article {
+export class Fact {
 
   public id: number;
   public name?: string;
@@ -11,7 +11,7 @@ export class Article {
   }
 }
 
-export const articles = [
+export const facts = [
   {
     "id": 0,
     "title": "La Création",
