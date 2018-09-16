@@ -26,6 +26,8 @@
             transform: translateX(-50%) translateY(-50%);
 
             .logo-image {
+                height: 100px;
+                width: 250px;
                 border: 1px solid black;
             }
         }
@@ -50,6 +52,11 @@
 
             &:hover {
                 background-color: rgba(0,0,0, 0.1);
+            }
+
+            .article-image {
+                height: 100px;
+                width: 250px;
             }
         }
     }

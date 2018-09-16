@@ -1,17 +1,17 @@
 <div style="text-align:center">
   <div padding-vert class="head-container">
-    <img class="title-background" src="https://via.placeholder.com/600x350" alt="">
+    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
     <div class="title-container">
-        <img class="logo-image" src="https://via.placeholder.com/250x100" alt="">
-        <h2>{{ 'HOME.SUBTITLE' | translate }}</h2>
-        <p>{{ 'HOME.RESUME' | translate }}</p>
+        <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
+        <h2>{{ listArticles[0].title | translate }}</h2>
+        <p>{{ listArticles[0].description | translate }}</p>
         <button>{{ 'HOME.SEEMORE' | translate | uppercase }}</button>
     </div>
   </div>
   <div separator></div>
   <div padding-vert class="list-articles-container">
-    <div *ngFor="let article of listArticles" class="article-container">
-      <img src="https://via.placeholder.com/250x100" alt="">
+    <div *ngFor="let article of listArticles | slice:1" class="article-container">
+      <img class="article-image" src="https://via.placeholder.com/500x200" alt="">
       <h2>{{ article.title }}</h2>
       <h3>{{ article.type }}</h3>
       <p>{{ article.description }}</p>
