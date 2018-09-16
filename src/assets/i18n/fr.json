@@ -8,8 +8,11 @@
       "ABOUT" : "A propos"
     }
   },
+  "BODY": {
+    "WAIT": "Page en cours de construction !"
+  },
   "HOME": {
-    "TITLE": "Accueil"
+    "TITLE": "Univers"
   },
   "ROLEPLAY": {
     "TITLE": "Jeu de rôles"
