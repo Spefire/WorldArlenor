@@ -1,10 +1,12 @@
 body {
     margin: 0;
     z-index: 1;
+    color: $default-text-color;
+    background-color: $default-background-color;
 }
 
 a {
-    color: black;
+    color: $primary-text-color;
     text-decoration: none;
 }
 

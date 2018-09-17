@@ -1,10 +1,13 @@
+@import "../../../styles/variables.scss";
+
 :host {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     height: 50px;
-    background-color: lightgrey;
+    border-bottom: 2px solid $dark-color;
+    background-color: $dark-background-color;
 
     a {
         display: inline-block;
@@ -20,7 +23,7 @@
             left: 0;
             height: 2px;
             width: 100%;
-            background: black;
+            background: $primary-color;
 
             transform: scaleX(0);
 
@@ -28,6 +31,8 @@
         }
 
         &.active {
+            color: $default-text-color;
+
             &:after {
                 transform: scaleX(1);
             }
@@ -36,6 +41,10 @@
 
     .header-logo {
         cursor: pointer;
+    }
+
+    .header-title {
+        color: $default-text-color;
     }
 
     .header-section {
