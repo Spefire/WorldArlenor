@@ -28,6 +28,32 @@
       "SEEMORE": "Vivre leur passé"
     }
   },
+  "PAGE": {
+    "HOME": {
+      "TITLE": "Le Monde d'Arlénor",
+      "DESCRIPTION": "Le Monde d'Arlénor"
+    },
+    "UNIVERSE": {
+      "TITLE": "L'univers",
+      "DESCRIPTION": "L'univers'"
+    },
+    "FACT": {
+      "TITLE": "Un article",
+      "DESCRIPTION": "Un article"
+    },
+    "ROLEPLAY": {
+      "TITLE": "Le jeu de rôle",
+      "DESCRIPTION": "Le jeu de rôle"
+    },
+    "CHARACTERS": {
+      "TITLE": "Les personnages",
+      "DESCRIPTION": "Les personnages"
+    },
+    "ABOUT": {
+      "TITLE": "A propos",
+      "DESCRIPTION": "A propos"
+    }
+  },
   "UNIVERSE": {
     "TITLE": "Univers",
     "SEEMORE": "En savoir plus"

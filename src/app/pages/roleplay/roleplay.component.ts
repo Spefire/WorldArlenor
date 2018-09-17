@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-roleplay',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoleplayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title, private meta: Meta, translate: TranslateService) {
+    this.titleService.setTitle(translate.instant('PAGE.ROLEPLAY.TITLE'));
+    this.meta.updateTag({ name: 'description', content: translate.instant('PAGE.ROLEPLAY.DESCRIPTION') });
+  }
 
   ngOnInit() {
   }
