@@ -1,12 +1,12 @@
 <div class="header-section">
   <img class="header-logo" src="https://via.placeholder.com/50x50" alt="" routerLink="">
-  <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="" [innerHtml]="'HEADER.TITLE' | translate"></a>
+  <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="" [innerHtml]="'HEADER.TITLE' | translate | uppercase"></a>
 </div>
 <nav>
-    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'HEADER.NAV.ROLEPLAY' | translate"></a>
-    <a routerLinkActive="active" routerLink="universe" [innerHtml]="'HEADER.NAV.HOME' | translate"></a>
-    <a routerLinkActive="active" routerLink="characters" [innerHtml]="'HEADER.NAV.CHARACTERS' | translate"></a>
+    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'HEADER.NAV.ROLEPLAY' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="universe" [innerHtml]="'HEADER.NAV.HOME' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="characters" [innerHtml]="'HEADER.NAV.CHARACTERS' | translate | uppercase"></a>
 </nav>
 <div class="header-section section-right">
-  <a routerLinkActive="active" routerLink="about" [innerHtml]="'HEADER.NAV.ABOUT' | translate"></a>
+  <a routerLinkActive="active" routerLink="about" [innerHtml]="'HEADER.NAV.ABOUT' | translate | uppercase"></a>
 </div>
