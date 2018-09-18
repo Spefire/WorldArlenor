@@ -3,6 +3,12 @@ body {
     z-index: 1;
     color: $light-color;
     background-color: $dark-color;
+    background-image: linear-gradient(to right,
+    rgba($default-color,1), 
+    rgba($default-color,0),
+    rgba($default-color,0), 
+    rgba($default-color,0),
+    rgba($default-color,1));
 }
 
 a {

@@ -1,5 +1,9 @@
+@import "../../../styles/variables.scss";
+
 :host {
 
+    text-align: center;
+    
     .head-container {
         position: relative;
         height: 250px;
@@ -29,7 +33,7 @@
             text-align: left;
             transform: translateX(-50%) translateY(-50%);
 
-            &.inverse-container {
+            &.inversed-container {
                 left: auto;
                 right: 25%;
                 text-align: right;
@@ -69,6 +73,84 @@
                 height: 100px;
                 width: 250px;
             }
+        }
+    }
+
+    .glyphe-container {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        transform: translateX(50%) translateY(-50%);
+
+        height: 300px;
+        width: 300px;
+        perspective: 600px;
+
+        &.inversed-container {
+            right: 0%;
+            left: 25%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        &.little-container {
+            perspective: 500px;
+            height: 250px;
+            width: 250px;
+        }
+    }
+
+    .glyphe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px $primary-color, inset 0px 0px 5px $primary-color;
+    }
+    
+    .glyphe01 {
+        animation: anim01 4s infinite ease-in-out;
+    
+        @keyframes anim01 {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+    }
+    
+    .glyphe02 {
+        animation: anim02 4s infinite ease-in-out;
+    
+        @keyframes anim02 {
+            0% { transform: rotateY(0deg) rotateX(0deg) }
+            100% { transform: rotateY(360deg) rotateX(360deg) }
+        }
+    }
+    
+    .glyphe03 {
+        animation: anim03 4s infinite ease-in-out;
+    
+        @keyframes anim03 {
+            0% { transform: rotateY(0deg) rotateX(360deg) }
+            100% { transform: rotateY(360deg) rotateX(0deg) }
+        }
+    }
+    
+    .glyphe04 {
+        animation: anim04 4s infinite ease-in-out;
+    
+        @keyframes anim04 {
+            0% { transform: rotateY(360deg); }
+            100% { transform: rotateY(0deg); }
+        }
+    }
+    
+    .glyphe05 {
+        animation: anim05 4s infinite ease-in-out;
+    
+        @keyframes anim05 {
+            0% { transform: rotateX(360deg); }
+            100% { transform: rotateX(0deg); }
         }
     }
 }
