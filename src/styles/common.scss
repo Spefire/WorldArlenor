@@ -1,6 +1,6 @@
 [separator] {
-    height: 2px;
-    background-color: $primary-color;
+    height: 0px;
+    border-top : 10px double $secondary-color;
 }
 
 [container] {

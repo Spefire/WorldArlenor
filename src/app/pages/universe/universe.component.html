@@ -8,7 +8,6 @@
         <button routerLink="/universe/{{listFacts[0].id}}">{{ 'UNIVERSE.SEEMORE' | translate | uppercase }}</button>
     </div>
   </div>
-  <div separator></div>
   <div container padding-vert class="list-facts-container">
     <div *ngFor="let fact of listFacts | slice:1" class="fact-container" routerLink="/universe/{{fact.id}}">
       <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
