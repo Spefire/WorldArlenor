@@ -7,7 +7,7 @@
 
     height: 50px;
     border-bottom: 2px solid $dark-color;
-    background-color: $dark-background-color;
+    background-color: $default-color;
 
     a {
         display: inline-block;
@@ -23,7 +23,7 @@
             left: 0;
             height: 2px;
             width: 100%;
-            background: $primary-color;
+            background: $dark-secondary-color;
 
             transform: scaleX(0);
 
@@ -31,7 +31,7 @@
         }
 
         &.active {
-            color: $default-text-color;
+            color: $light-color;
 
             &:after {
                 transform: scaleX(1);
@@ -44,7 +44,7 @@
     }
 
     .header-title {
-        color: $default-text-color;
+        color: $secondary-color;
     }
 
     .header-section {
