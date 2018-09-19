@@ -2,17 +2,17 @@ body {
     margin: 0;
     z-index: 1;
     color: $light-color;
-    background-color: $dark-color;
+    background-color: $dark-primary-color;
     background-image: linear-gradient(to right,
-    rgba($default-color,1), 
+    rgba($default-color,1),
     rgba($default-color,0),
-    rgba($default-color,0), 
+    rgba($default-color,0),
     rgba($default-color,0),
     rgba($default-color,1));
 }
 
 a {
-    color: $primary-color;
+    color: $light-primary-color;
     text-decoration: none;
 }
 

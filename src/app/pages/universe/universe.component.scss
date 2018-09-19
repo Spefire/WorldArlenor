@@ -41,14 +41,14 @@
         align-content: space-between;
         justify-content: center;
         max-width: 1260px;
-        border: 10px double $secondary-color;
+        border: 10px double $light-primary-color;
 
         .fact-container {
             width: 250px;
             height: 300px;
-            border: 1px solid $dark-color;
+            border: 1px solid $dark-primary-color;
             border-radius: 10px;
-            color: $dark-color;
+            color: $dark-primary-color;
             background-color: $light-color;
 
             margin: 10px;
@@ -57,7 +57,7 @@
             transition: .5s;
 
             &:hover {
-                box-shadow: 0px 0px 0px 3px $secondary-color;
+                box-shadow: 0px 0px 0px 3px $light-primary-color;
             }
 
             .fact-image {
