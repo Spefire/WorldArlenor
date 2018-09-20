@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { Title, Meta } from '@angular/platform-browser';
+import { RoutesService } from '../../services/routes.service';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  styleUrls: ['./characters.component.scss'],
+  providers: [RoutesService]
 })
 export class CharactersComponent implements OnInit {
 
-  constructor(private titleService: Title, private meta: Meta, translate: TranslateService) {
-    this.titleService.setTitle(translate.instant('PAGE.CHARACTERS.TITLE'));
-    this.meta.updateTag({ name: 'description', content: translate.instant('PAGE.CHARACTERS.DESCRIPTION') });
+  constructor(private routesService: RoutesService) {
+    this.routesService.setTitleMetas("CHARACTERS");
   }
 
   ngOnInit() {
