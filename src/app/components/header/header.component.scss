@@ -6,7 +6,7 @@
     justify-content: space-between;
 
     height: 50px;
-    border-bottom: 2px solid $primary-color;
+    //border-bottom: 2px solid $primary-color;
     background-color: $default-color;
 
     a {
@@ -18,7 +18,7 @@
         transition: .5s;
 
         &:hover {
-          color: $light-color;
+          color: $light-secondary-color;
         }
 
         &:after {
@@ -28,7 +28,7 @@
             left: 0;
             height: 2px;
             width: 100%;
-            background: $light-color;
+            background: $secondary-color;
 
             transform: scaleX(0);
 
@@ -36,7 +36,7 @@
         }
 
         &.active {
-            color: $light-color;
+            color: $light-secondary-color;
 
             &:after {
                 transform: scaleX(1);
@@ -49,7 +49,7 @@
     }
 
     .header-title {
-        color: $light-color;
+        color: $light-secondary-color;
     }
 
     .header-section {
