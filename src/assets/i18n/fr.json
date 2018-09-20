@@ -5,7 +5,7 @@
       "HOME": "Univers",
       "ROLEPLAY": "Jeu de rôles",
       "CHARACTERS": "Personnages",
-      "ABOUT" : "A propos"
+      "ABOUT" : "A Propos"
     }
   },
   "BODY": {
@@ -13,17 +13,17 @@
   },
   "HOME": {
     "UNIVERSE": {
-      "TITLE": "L'univers du Monde d'Arlénor",
+      "TITLE": "L'Univers du Monde d'Arlénor",
       "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "En lire davantage"
     },
     "ROLEPLAY": {
-      "TITLE": "Le jeu de rôle",
+      "TITLE": "Le Jeu de rôle",
       "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "Oser l'aventure"
     },
     "CHARACTERS": {
-      "TITLE": "Les personnages",
+      "TITLE": "Les Personnages",
       "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
       "SEEMORE": "Vivre leur passé"
     }
@@ -34,24 +34,24 @@
       "DESCRIPTION": "Le Monde d'Arlénor"
     },
     "UNIVERSE": {
-      "TITLE": "L'univers",
-      "DESCRIPTION": "L'univers'"
+      "TITLE": "L'Univers",
+      "DESCRIPTION": "L'Univers'"
     },
     "FACT": {
-      "TITLE": "Un article",
-      "DESCRIPTION": "Un article"
+      "TITLE": "L'Article",
+      "DESCRIPTION": "L'Article"
     },
     "ROLEPLAY": {
-      "TITLE": "Le jeu de rôle",
-      "DESCRIPTION": "Le jeu de rôle"
+      "TITLE": "Le Jeu de rôle",
+      "DESCRIPTION": "Le Jeu de rôle"
     },
     "CHARACTERS": {
-      "TITLE": "Les personnages",
-      "DESCRIPTION": "Les personnages"
+      "TITLE": "Les Personnages",
+      "DESCRIPTION": "Les Personnages"
     },
     "ABOUT": {
-      "TITLE": "A propos",
-      "DESCRIPTION": "A propos"
+      "TITLE": "A Propos",
+      "DESCRIPTION": "A Propos"
     }
   },
   "UNIVERSE": {
@@ -65,6 +65,6 @@
     "TITLE": "Personnages"
   },
   "ABOUT": {
-    "TITLE": "A propos"
+    "TITLE": "A Propos"
   }
 }

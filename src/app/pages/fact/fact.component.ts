@@ -15,7 +15,7 @@ export class FactComponent implements OnInit {
   public fact:Fact;
 
   constructor(private apiService: ApiService, private routesService: RoutesService, private route: ActivatedRoute) {
-    this.routesService.setTitleMetas("UNIVERSE");
+    this.routesService.setTitleMetas("FACT");
   }
 
   ngOnInit() {
