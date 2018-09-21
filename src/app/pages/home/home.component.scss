@@ -145,12 +145,30 @@
         }
     }
 
-    .head-container:hover .glyphe05 {
-        animation: anim05 4s infinite ease-in-out;
+    .head-container:hover .glyphe05.map {
+        animation: anim05map 4s infinite ease-in-out;
 
-        @keyframes anim05 {
+        @keyframes anim05map {
             0% { transform: rotateX(360deg); }
             100% { transform: rotateX(0deg); }
+        }
+    }
+
+    .head-container:hover .glyphe05.dices {
+        animation: anim05dices 4s infinite ease-in-out;
+
+        @keyframes anim05dices {
+            0% { transform: rotateY(360deg) }
+            100% { transform: rotateY(0deg) }
+        }
+    }
+
+    .head-container:hover .glyphe05.book {
+        animation: anim05book 4s infinite ease-in-out;
+
+        @keyframes anim05book {
+            0% { transform: rotateY(360deg); }
+            100% { transform: rotateY(0deg); }
         }
     }
 }
