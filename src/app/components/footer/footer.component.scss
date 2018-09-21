@@ -1,0 +1,61 @@
+@import "../../../styles/variables.scss";
+
+:host {
+    display: block;
+    height: 250px;
+    background-color: $default-color;
+
+    .footer-infos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 200px;
+        border-top: 1px solid $secondary-color;
+    }
+
+    .footer-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 50px;
+        border-top: 1px solid $secondary-color;
+
+        a {
+            display: inline-block;
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 25px;
+            transition: .5s;
+    
+            &:hover {
+              color: $light-secondary-color;
+            }
+    
+            &.active {
+                color: $light-secondary-color;
+            }
+        }
+    
+        .header-logo {
+            cursor: pointer;
+        }
+    
+        .header-title {
+            color: $light-secondary-color;
+        }
+    
+        .header-section {
+            display: flex;
+            align-items: center;
+            min-width: 25%;
+    
+            &.section-right {
+                display: inline-block;
+                text-align: right;
+            }
+        }
+    }
+}
