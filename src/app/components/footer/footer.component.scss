@@ -2,17 +2,44 @@
 
 :host {
     display: block;
-    height: 210px;
+    height: 280px;
     background-color: $default-color;
 
     .footer-infos {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        position: relative;
-        height: 160px;
+        height: 230px;
         border-top: 1px solid $secondary-color;
+
+        .footer-left {
+            position: relative;
+            width: 50%;
+            margin: auto 0;
+
+            .footer-container {
+                width: 70%;
+                padding: 0 15%;
+
+                .logo-image {
+                    height: 50px;
+                    width: 125px;
+                    border: 1px solid black;
+                }
+
+                span {
+                    color: $secondary-color;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .footer-right {
+            position: relative;
+            width: 50%;
+            margin: 25px 0;
+            border-left: 1px solid $secondary-color;
+        }
 
         ul {
             display: flex;

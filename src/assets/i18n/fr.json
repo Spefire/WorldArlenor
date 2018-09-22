@@ -12,6 +12,10 @@
   "BODY": {
     "WAIT": "Page en cours de construction !"
   },
+  "FOOTER": {
+    "RESUME": "Le Monde d'Arlénor a été créé en Janvier 2015, et je ne sais pas quoi dire plus... Voici une autre phrase en attendant.",
+    "SEEMORE": "En savoir plus"
+  },
   "HOME": {
     "UNIVERSE": {
       "TITLE": "L'Univers du Monde d'Arlénor",
