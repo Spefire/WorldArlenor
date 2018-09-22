@@ -7,6 +7,7 @@ import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { AboutComponent } from './pages/about/about.component';
+import { LegacyComponent } from './pages/legacy/legacy.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'roleplay', component: RoleplayComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'legacy', component: LegacyComponent },
   { path: '**', redirectTo: '' }
 ];
 

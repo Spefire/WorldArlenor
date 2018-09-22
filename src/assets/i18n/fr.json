@@ -57,6 +57,10 @@
     "ABOUT": {
       "TITLE": "A Propos",
       "DESCRIPTION": "A Propos"
+    },
+    "LEGACY": {
+      "TITLE": "Mentions Légales",
+      "DESCRIPTION": "Mentions Légales"
     }
   },
   "UNIVERSE": {
@@ -71,5 +75,11 @@
   },
   "ABOUT": {
     "TITLE": "A Propos"
+  },
+  "LEGACY": {
+    "TITLE": "Mentions Légales",
+    "STATUT": "Statut du propriétaire : <strong>Particulier</strong>",
+    "HOST": "<strong>Hébergeur OVH<br/>2 rue Kellermann<br/>59100 ROUBAIX – France</strong>",
+    "CONTACT": "Pour contacter cet hébergeur, rendez-vous à l’adresse suivante :"
   }
 }
