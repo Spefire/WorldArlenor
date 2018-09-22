@@ -11,14 +11,14 @@ body {
     rgba($default-color,1));
 }
 
+h1 {
+  color: $secondary-color;
+  text-transform: uppercase;
+}
+
 a {
     color: $light-color;
     text-decoration: none;
-}
-
-.imgWait {
-    height: 400px;
-    width: 200px;
 }
 
 button {
@@ -29,4 +29,9 @@ button {
     background: none;
     border: 1px solid $secondary-color;
     color: $light-secondary-color;
+}
+
+.imgWait {
+  height: 400px;
+  width: 200px;
 }
