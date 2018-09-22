@@ -27,8 +27,19 @@
 
                 span {
                     color: $secondary-color;
+                    cursor: pointer;
+
                     i {
-                        margin-right: 10px;
+                        transition: 0.5s;
+                        width: 0px;
+                        margin-right: 0;
+                        transform: scaleX(0);
+                    }
+
+                    &:hover i {
+                        width: 16px;
+                        margin-right: 4px;
+                        transform: scaleX(1);
                     }
                 }
             }

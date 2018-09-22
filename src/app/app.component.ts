@@ -11,4 +11,8 @@ export class AppComponent {
     this.translate.setDefaultLang('fr');
     this.translate.use('fr');
   }
+
+  onDeactivate() {
+    window.scroll(0, 0);
+  }
 }
