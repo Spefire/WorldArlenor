@@ -1,12 +1,27 @@
 <div class="header-section">
   <img class="header-logo" src="/assets/images/logo.png" alt="" routerLink="">
-  <a class="header-title" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="" [innerHtml]="'HEADER.TITLE' | translate | uppercase"></a>
+  <a class="header-title header-main-title" routerLink="" [innerHtml]="'HEADER.HOME' | translate | uppercase"></a>
 </div>
-<nav>
-    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'HEADER.NAV.ROLEPLAY' | translate | uppercase"></a>
-    <a routerLinkActive="active" routerLink="universe" [innerHtml]="'HEADER.NAV.HOME' | translate | uppercase"></a>
-    <a routerLinkActive="active" routerLink="characters" [innerHtml]="'HEADER.NAV.CHARACTERS' | translate | uppercase"></a>
+<nav *ngIf="route != 'universe' && route != 'roleplay' && route != 'characters'">
+    <a routerLinkActive="active" routerLink="universe" [innerHtml]="'HEADER.UNIVERSE.MAIN' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'HEADER.ROLEPLAY' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="characters" [innerHtml]="'HEADER.CHARACTERS' | translate | uppercase"></a>
+</nav>
+<nav *ngIf="route == 'universe'">
+  <a class="header-subtitle" routerLink="universe" [innerHtml]="'HEADER.UNIVERSE.MAIN' | translate | uppercase"></a>
+  <a routerLinkActive="active" routerLink="universe/1" [innerHtml]="'HEADER.UNIVERSE.SECTION01' | translate | uppercase"></a>
+  <a routerLinkActive="active" routerLink="universe/2" [innerHtml]="'HEADER.UNIVERSE.SECTION02' | translate | uppercase"></a>
+  <a routerLinkActive="active" routerLink="universe/3" [innerHtml]="'HEADER.UNIVERSE.SECTION03' | translate | uppercase"></a>
+  <a routerLinkActive="active" routerLink="universe/4" [innerHtml]="'HEADER.UNIVERSE.SECTION04' | translate | uppercase"></a>
+</nav>
+<nav *ngIf="route == 'roleplay'">
+  <a class="header-subtitle" routerLink="roleplay" [innerHtml]="'HEADER.ROLEPLAY' | translate | uppercase"></a>
+  <!--a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'HEADER.ROLEPLAY' | translate | uppercase"></a-->
+</nav>
+<nav *ngIf="route == 'characters'">
+  <a class="header-subtitle" routerLink="characters" [innerHtml]="'HEADER.CHARACTERS' | translate | uppercase"></a>
+  <!--a routerLinkActive="active" routerLink="characters" [innerHtml]="'HEADER.CHARACTERS' | translate | uppercase"></a-->
 </nav>
 <div class="header-section section-right">
-  <a class="header-title" routerLinkActive="active" routerLink="about" [innerHtml]="'HEADER.NAV.ABOUT' | translate | uppercase"></a>
+  <a class="header-title" routerLink="about" [innerHtml]="'HEADER.ABOUT' | translate | uppercase"></a>
 </div>

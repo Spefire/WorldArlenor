@@ -1,13 +1,17 @@
 {
   "HEADER": {
-    "TITLE": "Le Monde d'Arlénor",
-    "NAV": {
-      "HOME": "Univers",
-      "ROLEPLAY": "Jeu de rôles",
-      "CHARACTERS": "Personnages",
-      "ABOUT": "A Propos",
-      "LEGACY": "Mentions légales"
-    }
+    "HOME": "Le Monde d'Arlénor",
+    "UNIVERSE": {
+      "MAIN": "Univers",
+      "SECTION01": "Empire Faradélien",
+      "SECTION02": "Régime Jirakanien",
+      "SECTION03": "Célestia",
+      "SECTION04": "Zones inexplorées"
+    },
+    "ROLEPLAY": "Jeu de rôles",
+    "CHARACTERS": "Personnages",
+    "ABOUT": "A Propos",
+    "LEGACY": "Mentions légales"
   },
   "BODY": {
     "WAIT": "Page en cours de construction !"

@@ -9,57 +9,72 @@
     //border-bottom: 2px solid $primary-color;
     background-color: $default-color;
 
-    a {
-        display: inline-block;
-        position: relative;
-        height: 50px;
-        line-height: 50px;
-        padding: 0 25px;
-        transition: .5s;
+    nav {
+      font-size: 13px;
+    }
 
-        &:hover {
-          color: $light-secondary-color;
-        }
+    a {
+      display: inline-block;
+      position: relative;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 15px;
+      transition: .5s;
+
+      &:hover {
+        color: $light-secondary-color;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: $secondary-color;
+
+        transform: scaleX(0);
+
+        transition: transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);
+      }
+
+      &.active {
+        color: $light-secondary-color;
 
         &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            width: 100%;
-            background: $secondary-color;
-
-            transform: scaleX(0);
-
-            transition: transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);
+          transform: scaleX(1);
         }
-
-        &.active {
-            color: $light-secondary-color;
-
-            &:after {
-                transform: scaleX(1);
-            }
-        }
+      }
     }
 
     .header-logo {
-        cursor: pointer;
+      cursor: pointer;
     }
 
     .header-title {
-        color: $light-secondary-color;
+      color: $light-secondary-color;
+      width: 100px;
+
+      &.header-main-title {
+        line-height: 25px;
+        height: 50px;
+      }
+    }
+
+    .header-subtitle {
+      color: $secondary-color;
+      border-right: 1px solid $secondary-color;
     }
 
     .header-section {
-        display: flex;
-        align-items: center;
-        min-width: 25%;
+      display: flex;
+      align-items: center;
+      //min-width: 25%;
 
-        &.section-right {
-            display: inline-block;
-            text-align: right;
-        }
+      &.section-right {
+        display: inline-block;
+        text-align: right;
+      }
     }
 }
