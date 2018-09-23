@@ -4,13 +4,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     height: 50px;
-    //border-bottom: 2px solid $primary-color;
     background-color: $default-color;
 
-    nav {
-      font-size: 13px;
+    .header-nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .header-subnav {
+      font-size: 12px;
     }
 
     a {
@@ -54,15 +61,10 @@
 
     .header-title {
       color: $light-secondary-color;
-      width: 100px;
-
-      &.header-main-title {
-        line-height: 25px;
-        height: 50px;
-      }
     }
 
     .header-subtitle {
+      font-size: 16px;
       color: $secondary-color;
       border-right: 1px solid $secondary-color;
     }
@@ -70,7 +72,6 @@
     .header-section {
       display: flex;
       align-items: center;
-      //min-width: 25%;
 
       &.section-right {
         display: inline-block;

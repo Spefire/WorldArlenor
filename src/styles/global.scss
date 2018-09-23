@@ -1,14 +1,14 @@
 body {
-    margin: 0;
-    z-index: 1;
-    color: $light-color;
-    background-color: $dark-primary-color;
-    background-image: linear-gradient(to right,
-    rgba($default-color,1),
-    rgba($default-color,0),
-    rgba($default-color,0),
-    rgba($default-color,0),
-    rgba($default-color,1));
+  margin: 0;
+  z-index: 1;
+  color: $light-color;
+  background-color: $dark-primary-color;
+  background-image: linear-gradient(to right,
+  rgba($default-color,1),
+  rgba($default-color,0),
+  rgba($default-color,0),
+  rgba($default-color,0),
+  rgba($default-color,1));
 }
 
 h1 {
@@ -17,18 +17,18 @@ h1 {
 }
 
 a {
-    color: $light-color;
-    text-decoration: none;
+  color: $light-color;
+  text-decoration: none;
 }
 
 button {
-    padding: 5px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 
-    background: none;
-    border: 1px solid $secondary-color;
-    color: $light-secondary-color;
+  background: none;
+  border: 1px solid $secondary-color;
+  color: $light-secondary-color;
 }
 
 .imgWait {
