@@ -9,7 +9,25 @@
     <div class="map-right">
       <img id="map-arlenor" class="map-background" src="assets/images/map.png" width="1800" height="1200" alt="" usemap="#map">
       <map name="map" id="map">
-        <area shape='poly' [coords]='getCoords()'
+        <area shape='poly' [coords]='getCoords("faradel")'
+        onmouseover="document.images['map-arlenor'].src='assets/images/map_faradel.png';"
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        <area shape='poly' [coords]='getCoords("jirakan")'
+        onmouseover="document.images['map-arlenor'].src='assets/images/map_jirakan.png';"
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        <area shape='poly' [coords]='getCoords("ne")'
+        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        <area shape='poly' [coords]='getCoords("se")'
+        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        <area shape='poly' [coords]='getCoords("no")'
+        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        <area shape='poly' [coords]='getCoords("so")'
+        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        <area shape='poly' [coords]='getCoords("celestia")'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_celestia.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
       </map>

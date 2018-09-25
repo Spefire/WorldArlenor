@@ -3,6 +3,9 @@ import { Fact } from '../../models/fact.model';
 import { ApiService } from '../../services/api.service';
 import { RoutesService } from '../../services/routes.service';
 
+import { coords_celestia, coords_faradel, coords_jirakan,
+  coords_ne, coords_se, coords_no, coords_so } from '../../models/map.model';
+
 @Component({
   selector: 'app-universe',
   templateUrl: './universe.component.html',
@@ -21,27 +24,23 @@ export class UniverseComponent implements OnInit {
     this.listFacts = this.apiService.getFacts();
   }
 
-  getCoords() {
+  getCoords(name: string) {
     var img = document.getElementById('map-arlenor');
     var width = img.clientWidth;
-    var base = [
-      {x: 545, y: 840},
-      {x: 615, y: 1105},
-      {x: 410, y: 1090},
-      {x: 405, y: 1055},
-      {x: 240, y: 1120},
-      {x: 50, y: 965},
-      {x: 90, y: 820},
-      {x: 270, y: 745},
-      {x: 340, y: 810},
-      {x: 300, y: 890},
-      {x: 355, y: 935},
-      {x: 490, y: 910}
-    ];
+
+    var coords;
+    if (name == "faradel") coords = coords_faradel;
+    else if (name == "jirakan") coords = coords_jirakan;
+    else if (name == "ne") coords = coords_ne;
+    else if (name == "se") coords = coords_se;
+    else if (name == "no") coords = coords_no;
+    else if (name == "so") coords = coords_so;
+    else coords = coords_celestia;
+
     var final = "";
     var isfirst = true;
     var coeff = width / 1800;
-    base.forEach(element => {
+    coords.forEach(element => {
       if (isfirst) {
         isfirst = false;
         final += element.x * coeff + "," + element.y * coeff;
