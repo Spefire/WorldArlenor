@@ -14,6 +14,13 @@ import { coords_celestia, coords_faradel, coords_jirakan,
 })
 export class UniverseComponent implements OnInit {
 
+  public coords_faradel:any;
+  public coords_jirakan:any;
+  public coords_ne:any;
+  public coords_se:any;
+  public coords_no:any;
+  public coords_so:any;
+  public coords_celestia:any;
   public listFacts:Fact[];
 
   constructor(private apiService: ApiService, private routesService: RoutesService) {
@@ -21,32 +28,56 @@ export class UniverseComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.coords_faradel = this.getCoords(coords_faradel);
+    this.coords_jirakan = this.getCoords(coords_jirakan);
+    this.coords_ne = this.getCoords(coords_ne);
+    this.coords_se = this.getCoords(coords_se);
+    this.coords_no = this.getCoords(coords_no);
+    this.coords_so = this.getCoords(coords_so);
+    this.coords_celestia = this.getCoords(coords_celestia);
+
     this.listFacts = this.apiService.getFacts();
+
+    window.onload = function () {
+      var ImageMap = function (map) {
+        var areas = map.getElementsByTagName('area');
+        var len = areas.length;
+        var coords = [];
+        var previousWidth = 1800;
+        for (var n = 0; n < len; n++) {
+          coords[n] = areas[n].coords.split(',');
+        }
+        this.resize = function () {
+          var n, m, clen;
+          var x = document.getElementById('map-arlenor').clientWidth / previousWidth;
+          for (n = 0; n < len; n++) {
+            clen = coords[n].length;
+            for (m = 0; m < clen; m++) {
+              coords[n][m] *= x;
+            }
+            areas[n].coords = coords[n].join(',');
+          }
+          previousWidth = document.getElementById('map-arlenor').clientWidth;
+          return true;
+        };
+        window.onresize = this.resize;
+      },
+      imageMap = new ImageMap(document.getElementById('map-areas'));
+      imageMap.resize();
+      return;
+    }
   }
 
-  getCoords(name: string) {
-    var img = document.getElementById('map-arlenor');
-    var width = img.clientWidth;
-
-    var coords;
-    if (name == "faradel") coords = coords_faradel;
-    else if (name == "jirakan") coords = coords_jirakan;
-    else if (name == "ne") coords = coords_ne;
-    else if (name == "se") coords = coords_se;
-    else if (name == "no") coords = coords_no;
-    else if (name == "so") coords = coords_so;
-    else coords = coords_celestia;
-
+  getCoords(coords: any) {
     var final = "";
     var isfirst = true;
-    var coeff = width / 1800;
     coords.forEach(element => {
       if (isfirst) {
         isfirst = false;
-        final += element.x * coeff + "," + element.y * coeff;
+        final += element.x + "," + element.y;
       }
       else {
-        final += "," + element.x * coeff + "," + element.y * coeff;
+        final += "," + element.x + "," + element.y;
       }
     });
     return final;

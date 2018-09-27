@@ -7,29 +7,29 @@
         <button routerLink="/universe/{{listFacts[0].id}}">{{ 'UNIVERSE.SEEMORE' | translate | uppercase }}</button>
     </div>
     <div class="map-right">
-      <img id="map-arlenor" class="map-background" src="assets/images/map.png" width="1800" height="1200" alt="" usemap="#map">
-      <map name="map" id="map">
-        <area shape='poly' [coords]='getCoords("faradel")'
+      <img id="map-arlenor" class="map-background" src="assets/images/map.png" alt="" usemap="#map-areas">
+      <map name="map-areas" id="map-areas">
+        <area shape='poly' [coords]='coords_faradel'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_faradel.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='getCoords("jirakan")'
+        <area shape='poly' [coords]='coords_jirakan'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_jirakan.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='getCoords("ne")'
+        <area shape='poly' [coords]='coords_ne'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='getCoords("se")'
+        <area shape='poly' [coords]='coords_se'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='getCoords("no")'
+        <area shape='poly' [coords]='coords_no'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='getCoords("so")'
+        <area shape='poly' [coords]='coords_so'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
         onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='getCoords("celestia")'
+        <area shape='poly' [coords]='coords_celestia'
         onmouseover="document.images['map-arlenor'].src='assets/images/map_celestia.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
+        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';">
       </map>
     </div>
   </div>
