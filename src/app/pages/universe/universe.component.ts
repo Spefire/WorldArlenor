@@ -23,63 +23,66 @@ export class UniverseComponent implements OnInit {
   public coords_celestia:any;
   public listFacts:Fact[];
 
+  private selection:string;
+
   constructor(private apiService: ApiService, private routesService: RoutesService) {
     this.routesService.setTitleMetas("UNIVERSE");
+    this.selection = "arlenor";
   }
 
   ngOnInit() {
-    this.coords_faradel = this.getCoords(coords_faradel);
-    this.coords_jirakan = this.getCoords(coords_jirakan);
-    this.coords_ne = this.getCoords(coords_ne);
-    this.coords_se = this.getCoords(coords_se);
-    this.coords_no = this.getCoords(coords_no);
-    this.coords_so = this.getCoords(coords_so);
-    this.coords_celestia = this.getCoords(coords_celestia);
-
     this.listFacts = this.apiService.getFacts();
-
-    window.onload = function () {
-      var ImageMap = function (map) {
-        var areas = map.getElementsByTagName('area');
-        var len = areas.length;
-        var coords = [];
-        var previousWidth = 1800;
-        for (var n = 0; n < len; n++) {
-          coords[n] = areas[n].coords.split(',');
-        }
-        this.resize = function () {
-          var n, m, clen;
-          var x = document.getElementById('map-arlenor').clientWidth / previousWidth;
-          for (n = 0; n < len; n++) {
-            clen = coords[n].length;
-            for (m = 0; m < clen; m++) {
-              coords[n][m] *= x;
-            }
-            areas[n].coords = coords[n].join(',');
-          }
-          previousWidth = document.getElementById('map-arlenor').clientWidth;
-          return true;
-        };
-        window.onresize = this.resize;
-      },
-      imageMap = new ImageMap(document.getElementById('map-areas'));
-      imageMap.resize();
-      return;
-    }
+    this.resizeMap();
+    window.onresize = this.resizeMap;
   }
 
-  getCoords(coords: any) {
-    var final = "";
-    var isfirst = true;
-    coords.forEach(element => {
-      if (isfirst) {
-        isfirst = false;
-        final += element.x + "," + element.y;
+  resizeMap() {
+    var getCoords = function(coords: any) {
+      var final = "";
+      var isfirst = true;
+      coords.forEach(element => {
+        if (isfirst) {
+          isfirst = false;
+          final += element.x + "," + element.y;
+        }
+        else {
+          final += "," + element.x + "," + element.y;
+        }
+      });
+      return final;
+    }
+
+    this.coords_faradel = getCoords(coords_faradel).split(',');
+    this.coords_jirakan = getCoords(coords_jirakan).split(',');
+    this.coords_ne = getCoords(coords_ne).split(',');
+    this.coords_se = getCoords(coords_se).split(',');
+    this.coords_no = getCoords(coords_no).split(',');
+    this.coords_so = getCoords(coords_so).split(',');
+    this.coords_celestia = getCoords(coords_celestia).split(',');
+
+    var coords = [
+      this.coords_faradel,
+      this.coords_jirakan,
+      this.coords_ne,
+      this.coords_se,
+      this.coords_no,
+      this.coords_so,
+      this.coords_celestia
+    ]
+
+    var areas = document.getElementById('map-areas').getElementsByTagName('area');
+    var coeff = document.getElementById('map-arlenor').clientWidth / 1800;
+    coords.forEach((element, index) => {
+      var clen = element.length;
+      for (var n = 0; n < clen; n++) {
+        element[n] *= coeff;
       }
-      else {
-        final += "," + element.x + "," + element.y;
-      }
+      areas[index].coords = element.join(',');
     });
-    return final;
+  }
+
+  changeSelection(select:string) {
+    document.images['map-arlenor'].src='assets/images/map_'+select+'.png';
+    this.selection = select;
   }
 }

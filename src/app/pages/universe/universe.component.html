@@ -2,34 +2,34 @@
   <div container padding-vert class="head-container">
     <div class="map-left">
         <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-        <h2>{{ listFacts[0].title | translate }}</h2>
-        <p>{{ listFacts[0].description | translate }}</p>
+        <h2>{{ selection }}</h2>
+        <p>{{ selection }}</p>
         <button routerLink="/universe/{{listFacts[0].id}}">{{ 'UNIVERSE.SEEMORE' | translate | uppercase }}</button>
     </div>
     <div class="map-right">
       <img id="map-arlenor" class="map-background" src="assets/images/map.png" alt="" usemap="#map-areas">
       <map name="map-areas" id="map-areas">
-        <area shape='poly' [coords]='coords_faradel'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_faradel.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='coords_jirakan'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_jirakan.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='coords_ne'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='coords_se'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='coords_no'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='coords_so'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_zones.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';"/>
-        <area shape='poly' [coords]='coords_celestia'
-        onmouseover="document.images['map-arlenor'].src='assets/images/map_celestia.png';"
-        onmouseout="document.images['map-arlenor'].src='assets/images/map.png';">
+        <area shape='poly' [coords]='coords_faradel' routerLink="universe/faradel"
+        (mouseover)="changeSelection('faradel')"
+        (mouseout)="changeSelection('arlenor')"/>
+        <area shape='poly' [coords]='coords_jirakan' routerLink="universe/jirakan"
+        (mouseover)="changeSelection('jirakan')"
+        (mouseout)="changeSelection('arlenor')"/>
+        <area shape='poly' [coords]='coords_ne' routerLink="universe/zones"
+        (mouseover)="changeSelection('zones')"
+        (mouseout)="changeSelection('arlenor')"/>
+        <area shape='poly' [coords]='coords_se' routerLink="universe/zones"
+        (mouseover)="changeSelection('zones')"
+        (mouseout)="changeSelection('arlenor')"/>
+        <area shape='poly' [coords]='coords_no' routerLink="universe/zones"
+        (mouseover)="changeSelection('zones')"
+        (mouseout)="changeSelection('arlenor')"/>
+        <area shape='poly' [coords]='coords_so' routerLink="universe/zones"
+        (mouseover)="changeSelection('zones')"
+        (mouseout)="changeSelection('arlenor')"/>
+        <area shape='poly' [coords]='coords_celestia' routerLink="universe/celestia"
+        (mouseover)="changeSelection('celestia')"
+        (mouseout)="changeSelection('arlenor')">
       </map>
     </div>
   </div>
