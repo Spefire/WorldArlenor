@@ -1,13 +1,20 @@
 <div style="text-align:center">
   <div container padding-vert class="head-container">
     <div class="map-left">
-        <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-        <h2>{{ selection }}</h2>
-        <p>{{ selection }}</p>
-        <button routerLink="/universe/{{listFacts[0].id}}">{{ 'UNIVERSE.SEEMORE' | translate | uppercase }}</button>
+      <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
+      <h2 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h2>
+      <h2 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h2>
+      <h2 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h2>
+      <h2 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h2>
+      <h2 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h2>
+      <p *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.DESCRIPTION' | translate }}</p>
+      <p *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.DESCRIPTION' | translate }}</p>
+      <p *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.DESCRIPTION' | translate }}</p>
+      <p *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.DESCRIPTION' | translate }}</p>
+      <p *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.DESCRIPTION' | translate }}</p>
     </div>
     <div class="map-right">
-      <img id="map-arlenor" class="map-background" src="assets/images/map.png" alt="" usemap="#map-areas">
+      <img id="map-arlenor" class="map-background" src="assets/images/map_arlenor.png" alt="" usemap="#map-areas">
       <map name="map-areas" id="map-areas">
         <area shape='poly' [coords]='coords_faradel' routerLink="universe/faradel"
         (mouseover)="changeSelection('faradel')"
