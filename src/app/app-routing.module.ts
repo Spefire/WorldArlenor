@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { UniverseComponent } from './pages/universe/universe.component';
+import { FaradelComponent } from './pages/universe/faradel/faradel.component';
+import { JirakanComponent } from './pages/universe/jirakan/jirakan.component';
+import { CelestiaComponent } from './pages/universe/celestia/celestia.component';
+import { ZonesComponent } from './pages/universe/zones/zones.component';
 import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -12,6 +16,10 @@ import { LegacyComponent } from './pages/legacy/legacy.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'universe', component: UniverseComponent },
+  { path: 'universe/faradel', component: FaradelComponent },
+  { path: 'universe/jirakan', component: JirakanComponent },
+  { path: 'universe/celestia', component: CelestiaComponent },
+  { path: 'universe/zones', component: ZonesComponent },
   { path: 'universe/:id', component: FactComponent },
   { path: 'roleplay', component: RoleplayComponent },
   { path: 'characters', component: CharactersComponent },

@@ -1,34 +1,37 @@
-@import "../../../styles/variables.scss";
+@import "../../../../styles/variables.scss";
 
 :host {
 
     .head-container {
-        display: flex;
         position: relative;
+        height: 400px;
 
-        .map-left {
-          width: 30%;
-          text-align: left;
-          padding-left: 5%;
-          margin: auto 0;
-
-          .logo-image {
-            height: 100px;
-            width: 250px;
-            border: 1px solid black;
-          }
+        .title-background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            //max-width: 600px;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .map-right {
-          width: 70%;
-          padding-right: 5%;
-          position: relative;
+        .title-container {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 25%;
+            text-align: left;
+            transform: translateX(-50%) translateY(-50%);
 
-          .map-background {
-            height: auto;
-            width: 100%;
-            margin: auto 0;
-          }
+            .logo-image {
+                height: 100px;
+                width: 250px;
+                border: 1px solid black;
+            }
         }
     }
 
@@ -38,7 +41,6 @@
         align-content: space-between;
         justify-content: center;
         max-width: 1260px;
-        //border: 10px double $light-secondary-color;
 
         .fact-container {
             width: 250px;

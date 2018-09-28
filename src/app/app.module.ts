@@ -11,6 +11,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UniverseComponent } from './pages/universe/universe.component';
+import { FaradelComponent } from './pages/universe/faradel/faradel.component';
+import { JirakanComponent } from './pages/universe/jirakan/jirakan.component';
+import { ZonesComponent } from './pages/universe/zones/zones.component';
+import { CelestiaComponent } from './pages/universe/celestia/celestia.component';
 import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -24,6 +28,10 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HomeComponent,
     UniverseComponent,
+    FaradelComponent,
+    JirakanComponent,
+    ZonesComponent,
+    CelestiaComponent,
     FactComponent,
     RoleplayComponent,
     CharactersComponent,

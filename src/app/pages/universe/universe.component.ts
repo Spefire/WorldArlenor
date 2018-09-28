@@ -3,7 +3,7 @@ import { Fact } from '../../models/fact.model';
 import { ApiService } from '../../services/api.service';
 import { RoutesService } from '../../services/routes.service';
 
-import { coords_celestia, coords_faradel, coords_jirakan,
+import { coords_faradel, coords_jirakan, coords_celestia,
   coords_ne, coords_se, coords_no, coords_so } from '../../models/map.model';
 
 @Component({
@@ -16,11 +16,11 @@ export class UniverseComponent implements OnInit {
 
   public coords_faradel:any;
   public coords_jirakan:any;
+  public coords_celestia:any;
   public coords_ne:any;
   public coords_se:any;
   public coords_no:any;
   public coords_so:any;
-  public coords_celestia:any;
   public listFacts:Fact[];
 
   private selection:string;
@@ -37,6 +37,9 @@ export class UniverseComponent implements OnInit {
   }
 
   resizeMap() {
+    var map_areas = document.getElementById('map-areas');
+    if (map_areas == undefined) return;
+
     var getCoords = function(coords: any) {
       var final = "";
       var isfirst = true;
@@ -54,20 +57,20 @@ export class UniverseComponent implements OnInit {
 
     this.coords_faradel = getCoords(coords_faradel).split(',');
     this.coords_jirakan = getCoords(coords_jirakan).split(',');
+    this.coords_celestia = getCoords(coords_celestia).split(',');
     this.coords_ne = getCoords(coords_ne).split(',');
     this.coords_se = getCoords(coords_se).split(',');
     this.coords_no = getCoords(coords_no).split(',');
     this.coords_so = getCoords(coords_so).split(',');
-    this.coords_celestia = getCoords(coords_celestia).split(',');
 
     var coords = [
       this.coords_faradel,
       this.coords_jirakan,
+      this.coords_celestia,
       this.coords_ne,
       this.coords_se,
       this.coords_no,
-      this.coords_so,
-      this.coords_celestia
+      this.coords_so
     ]
 
     var areas = document.getElementById('map-areas').getElementsByTagName('area');

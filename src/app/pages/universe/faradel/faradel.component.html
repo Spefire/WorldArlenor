@@ -1,0 +1,15 @@
+<div style="text-align:center">
+  <div container padding-vert class="head-container">
+    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
+    <h2>{{ 'UNIVERSE.FARADEL.TITLE' | translate }}</h2>
+  </div>
+  <div separator></div>
+  <div container padding-vert class="list-facts-container">
+    <div *ngFor="let fact of listFacts" class="fact-container" routerLink="universe">
+      <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
+      <h2>{{ fact.title }}</h2>
+      <h3>{{ fact.type }}</h3>
+      <p>{{ fact.description }}</p>
+    </div>
+  </div>
+</div>
