@@ -5,12 +5,13 @@
     .head-container {
         position: relative;
         height: 400px;
+        border-bottom: 10px double $secondary-color;
+        box-shadow: 0 -150px 300px black inset;
 
         .title-background {
             position: absolute;
             height: 100%;
             width: 100%;
-            //max-width: 600px;
             top: 0;
             left: 0;
             right: 0;
@@ -21,18 +22,23 @@
 
         .title-container {
             position: absolute;
-            top: 50%;
-            left: 25%;
-            width: 25%;
-            text-align: left;
-            transform: translateX(-50%) translateY(-50%);
-
-            .logo-image {
-                height: 100px;
-                width: 250px;
-                border: 1px solid black;
-            }
+            bottom: 10%;
+            left: 50%;
+            width: 100%;
+            font-size: 70px;
+            text-align: center;
+            transform: translateX(-50%) translateY(100%);
         }
+
+        .title-logo {
+          position: absolute;
+          bottom: 150px;
+          left: 50%;
+          height: 200px;
+          width: 200px;
+          transform: translateX(-50%);
+          border: 1px solid black;
+      }
     }
 
     .list-facts-container {
