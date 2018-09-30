@@ -25,7 +25,7 @@
                 }
 
                 span {
-                    color: $secondary-color;
+                    color: $light-secondary-color;
                     cursor: pointer;
 
                     i {
@@ -161,15 +161,8 @@
             height: 50px;
             line-height: 50px;
             padding: 0 25px;
-            transition: .5s;
 
-            &:hover {
-              color: $light-secondary-color;
-            }
-
-            &.active {
-                color: $light-secondary-color;
-            }
+            color: $light-secondary-color;
         }
 
         .footer-logo {

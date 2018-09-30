@@ -37,7 +37,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 2px;
+        height: 3px;
         width: 100%;
         background: $secondary-color;
 
@@ -64,8 +64,9 @@
     }
 
     .header-subtitle {
+      margin-right: 10px;
       font-size: 16px;
-      color: $secondary-color;
+      color: $light-secondary-color;
       border-right: 1px solid $secondary-color;
     }
 
