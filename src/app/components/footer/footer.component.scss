@@ -2,7 +2,7 @@
 
 :host {
     display: block;
-    background-color: $default-color;
+    background-color: $dark-color;
 
     .footer-infos {
         display: flex;
@@ -21,7 +21,7 @@
                 .logo-image {
                     height: 50px;
                     width: 125px;
-                    border: 1px solid black;
+                    border: 1px solid $dark-color;
                 }
 
                 span {

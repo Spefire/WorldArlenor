@@ -6,7 +6,7 @@
         position: relative;
         height: 400px;
         border-bottom: 10px double $secondary-color;
-        box-shadow: 0 -150px 300px black inset;
+        box-shadow: 0 -175px 200px $dark-color inset;
 
         .title-background {
             position: absolute;
@@ -37,7 +37,7 @@
           height: 200px;
           width: 200px;
           transform: translateX(-50%);
-          border: 1px solid black;
+          border: 1px solid $dark-color;
       }
     }
 
@@ -49,12 +49,12 @@
         max-width: 1260px;
 
         .fact-container {
-            width: 250px;
+            position: relative;
             height: 300px;
+            width: 250px;
             border: 1px solid $secondary-color;
-            border-radius: 10px;
-            color: $dark-primary-color;
-            background-color: $light-color;
+            color: $secondary-color;
+            background-color: $dark-color;
 
             margin: 10px;
             overflow: hidden;
@@ -62,12 +62,33 @@
             transition: .5s;
 
             &:hover {
-                box-shadow: 0px 0px 0px 3px $secondary-color;
+              margin-top: 0;
+              margin-bottom: 0;
+              height: 320px;
+              box-shadow: 0px 0px 0px 3px $secondary-color;
+            }
+
+            &:hover .fact-text {
+              top: 150px;
             }
 
             .fact-image {
-                height: 100px;
-                width: 250px;
+              position: absolute;
+              width: 250px;
+              top: 0;
+              left: 0;
+            }
+
+            .fact-text {
+              position: absolute;
+              height: 200px;
+              top: 100px;
+              background-color: $dark-color;
+              transition: .5s;
+
+              .fact-title {
+                color: $light-secondary-color;
+              }
             }
         }
     }

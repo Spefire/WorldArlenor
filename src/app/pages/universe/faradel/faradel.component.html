@@ -6,10 +6,11 @@
   </div>
   <div padding-vert container class="list-facts-container">
       <div *ngFor="let fact of listFacts" class="fact-container" routerLink="universe">
-        <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
-        <h2>{{ fact.title }}</h2>
-        <h3>{{ fact.type }}</h3>
-        <p>{{ fact.description }}</p>
+        <img class="fact-image" src="https://via.placeholder.com/500x300" alt="">
+        <div class="fact-text">
+          <h2 class="fact-title">{{ fact.title | uppercase }}</h2>
+          <p>{{ fact.description }}</p>
+        </div>
       </div>
   </div>
 </div>
