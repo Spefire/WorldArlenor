@@ -6,7 +6,7 @@ import { RoutesService } from '../../../services/routes.service';
 @Component({
   selector: 'app-jirakan',
   templateUrl: './jirakan.component.html',
-  styleUrls: ['./jirakan.component.scss'],
+  styleUrls: ['../universe-zones.component.scss'],
   providers: [ApiService, RoutesService]
 })
 export class JirakanComponent implements OnInit {

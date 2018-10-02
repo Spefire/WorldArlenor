@@ -6,7 +6,7 @@ import { RoutesService } from '../../../services/routes.service';
 @Component({
   selector: 'app-zones',
   templateUrl: './zones.component.html',
-  styleUrls: ['./zones.component.scss'],
+  styleUrls: ['../universe-zones.component.scss'],
   providers: [ApiService, RoutesService]
 })
 export class ZonesComponent implements OnInit {

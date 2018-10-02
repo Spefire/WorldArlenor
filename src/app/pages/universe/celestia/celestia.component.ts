@@ -6,7 +6,7 @@ import { RoutesService } from '../../../services/routes.service';
 @Component({
   selector: 'app-celestia',
   templateUrl: './celestia.component.html',
-  styleUrls: ['./celestia.component.scss'],
+  styleUrls: ['../universe-zones.component.scss'],
   providers: [ApiService, RoutesService]
 })
 export class CelestiaComponent implements OnInit {
