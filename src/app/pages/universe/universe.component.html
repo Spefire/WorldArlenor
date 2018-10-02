@@ -1,12 +1,12 @@
 <div style="text-align:center">
-  <div container padding-vert class="head-container">
+  <div padding-vert class="head-container">
     <div class="map-left">
       <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-      <h2 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h2>
-      <h2 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h2>
-      <h2 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h2>
-      <h2 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h2>
-      <h2 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h2>
+      <h1 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
+      <h1 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
+      <h1 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
+      <h1 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
+      <h1 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
       <p *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.DESCRIPTION' | translate }}</p>
       <p *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.DESCRIPTION' | translate }}</p>
       <p *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.DESCRIPTION' | translate }}</p>
@@ -40,13 +40,13 @@
       </map>
     </div>
   </div>
-  <div separator></div>
   <div container padding-vert class="list-facts-container">
     <div *ngFor="let fact of listFacts" class="fact-container" routerLink="universe">
       <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
-      <h2>{{ fact.title }}</h2>
-      <h3>{{ fact.type }}</h3>
-      <p>{{ fact.description }}</p>
+      <div class="fact-text">
+        <h2 class="fact-title">{{ fact.title | uppercase }}</h2>
+        <p>{{ fact.description }}</p>
+      </div>
     </div>
   </div>
 </div>
