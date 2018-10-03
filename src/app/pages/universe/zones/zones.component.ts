@@ -18,24 +18,25 @@ export class ZonesComponent {
   public logoSrc:string;
   public backgroundSrc:string;
   public factsZone:string;
+  public route:string;
   public listFacts:Fact[];
 
   constructor(private apiService: ApiService, private routesService: RoutesService, private translate: TranslateService, location: Location, router: Router) {
     this.routesService.setTitleMetas("UNIVERSE");
     router.events.subscribe((val) => {
       var currentLocation = location.path();
-      var route = currentLocation.split("/")[2];
-      if (route == "faradel") {
+      this.route = currentLocation.split("/")[2];
+      if (this.route == "faradel") {
         this.listFacts = this.apiService.getFacts("Faradel");
         this.translate.get('UNIVERSE.FARADEL.TITLE').subscribe((res: string) => {
           this.title = res;
         });
-      } else if (route == "jirakan") {
+      } else if (this.route == "jirakan") {
         this.listFacts = this.apiService.getFacts("Jirakan");
         this.translate.get('UNIVERSE.JIRAKAN.TITLE').subscribe((res: string) => {
           this.title = res;
         });
-      } else if (route == "celestia") {
+      } else if (this.route == "celestia") {
         this.listFacts = this.apiService.getFacts("Celestia");
         this.translate.get('UNIVERSE.CELESTIA.TITLE').subscribe((res: string) => {
           this.title = res;
