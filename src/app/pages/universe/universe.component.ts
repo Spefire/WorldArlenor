@@ -21,7 +21,7 @@ export class UniverseComponent implements OnInit {
   public coords_se:any;
   public coords_no:any;
   public coords_so:any;
-  public listFacts:Fact[];
+  public listMainFacts:any[];
 
   private selection:string;
 
@@ -31,7 +31,23 @@ export class UniverseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listFacts = this.apiService.getFacts("Univers");
+    this.listMainFacts = [
+      {
+        "route": "religion",
+        "title": "La Religion",
+        "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+      },
+      {
+        "route": "crystals",
+        "title": "La Magie des Cristaux",
+        "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
+      },
+      {
+        "route": "population",
+        "title": "Les Peuples",
+        "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+      }
+    ];
     this.resizeMap();
     window.onresize = this.resizeMap;
   }

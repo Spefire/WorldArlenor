@@ -15,72 +15,54 @@ export class Fact {
 export const facts = [
   {
     "id": 0,
-    "title": "La Religion",
-    "zone": "Univers",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
-  },
-  {
-    "id": 1,
-    "title": "La Magie des cristaux",
-    "zone": "Univers",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  },
-  {
-    "id": 2,
-    "title": "Les Peuples",
-    "zone": "Univers",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
-  },
-  {
-    "id": 3,
     "title": "La Cité de Faradel",
     "zone": "Faradel",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
-    "id": 4,
+    "id": 1,
     "title": "La Tour du Savoir",
     "zone": "Faradel",
     "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
   },
   {
-    "id": 5,
+    "id": 2,
     "title": "Le Commerce de Jirakan",
     "zone": "Jirakan",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
-    "id": 6,
+    "id": 3,
     "title": "Le Grand Massacre",
     "zone": "Jirakan",
     "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
   },
   {
-    "id": 7,
+    "id": 4,
     "title": "La Guerre contre l'En-Bas",
     "zone": "Celestia",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
-    "id": 8,
+    "id": 5,
     "title": "Le Cercle des Mages Evanell",
     "zone": "Celestia",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
-    "id": 9,
+    "id": 6,
     "title": "Les Montagnes de Kazador",
     "zone": "Zones",
     "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
   },
   {
-    "id": 10,
+    "id": 7,
     "title": "La Fôrêt d'Imerys",
     "zone": "Zones",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
-    "id": 11,
+    "id": 8,
     "title": "L'Ile de Lumeck",
     "zone": "Zones",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."

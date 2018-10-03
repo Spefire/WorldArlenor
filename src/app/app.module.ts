@@ -11,6 +11,9 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UniverseComponent } from './pages/universe/universe.component';
+import { ReligionComponent } from './pages/universe/religion/religion.component';
+import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
+import { PopulationComponent } from './pages/universe/population/population.component';
 import { FaradelComponent } from './pages/universe/faradel/faradel.component';
 import { JirakanComponent } from './pages/universe/jirakan/jirakan.component';
 import { ZonesComponent } from './pages/universe/zones/zones.component';
@@ -28,6 +31,9 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HomeComponent,
     UniverseComponent,
+    ReligionComponent,
+    CrystalsComponent,
+    PopulationComponent,
     FaradelComponent,
     JirakanComponent,
     ZonesComponent,
