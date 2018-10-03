@@ -45,7 +45,11 @@
     },
     "UNIVERSE": {
       "TITLE": "L'Univers",
-      "DESCRIPTION": "L'Univers'"
+      "DESCRIPTION": "L'Univers"
+    },
+    "FARADEL": {
+      "TITLE": "L'Empire Faradelien",
+      "DESCRIPTION": "L'Empire Faradelien"
     },
     "FACT": {
       "TITLE": "L'Article",

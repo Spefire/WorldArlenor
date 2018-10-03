@@ -14,10 +14,7 @@ import { UniverseComponent } from './pages/universe/universe.component';
 import { ReligionComponent } from './pages/universe/religion/religion.component';
 import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
 import { PopulationComponent } from './pages/universe/population/population.component';
-import { FaradelComponent } from './pages/universe/faradel/faradel.component';
-import { JirakanComponent } from './pages/universe/jirakan/jirakan.component';
 import { ZonesComponent } from './pages/universe/zones/zones.component';
-import { CelestiaComponent } from './pages/universe/celestia/celestia.component';
 import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -34,10 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ReligionComponent,
     CrystalsComponent,
     PopulationComponent,
-    FaradelComponent,
-    JirakanComponent,
     ZonesComponent,
-    CelestiaComponent,
     FactComponent,
     RoleplayComponent,
     CharactersComponent,
