@@ -40,9 +40,10 @@
       </map>
     </div>
   </div>
+  <div separator></div>
   <div container padding-vert class="list-facts-container">
     <div *ngFor="let fact of listFacts" class="fact-container" routerLink="universe">
-      <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
+      <img class="fact-image" src="https://via.placeholder.com/500x300" alt="">
       <div class="fact-text">
         <h2 class="fact-title">{{ fact.title | uppercase }}</h2>
         <p>{{ fact.description }}</p>

@@ -5,7 +5,6 @@
     .head-container {
         display: flex;
         position: relative;
-        border-bottom: 5px solid $secondary-color;
         box-shadow: 0 -150px 200px $dark-color inset;
 
         .map-left {
@@ -41,8 +40,6 @@
       align-content: space-between;
       justify-content: center;
       max-width: 1260px;
-      margin-top: 6px;
-      border-top: 1px solid $light-secondary-color;
 
       .fact-container {
           position: relative;

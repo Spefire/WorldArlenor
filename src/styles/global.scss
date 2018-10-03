@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  color: $secondary-color;
+  color: $light-secondary-color;
   text-transform: uppercase;
 }
 
@@ -27,7 +27,7 @@ button {
   cursor: pointer;
 
   background: none;
-  border: 1px solid $secondary-color;
+  border: 1px solid $dark-secondary-color;
   color: $light-secondary-color;
 }
 
