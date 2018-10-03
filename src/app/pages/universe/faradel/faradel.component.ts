@@ -6,7 +6,7 @@ import { RoutesService } from '../../../services/routes.service';
 @Component({
   selector: 'app-faradel',
   templateUrl: './faradel.component.html',
-  styleUrls: ['./faradel.component.scss'],
+  styleUrls: ['../universe-zones.component.scss'],
   providers: [ApiService, RoutesService]
 })
 export class FaradelComponent implements OnInit {
