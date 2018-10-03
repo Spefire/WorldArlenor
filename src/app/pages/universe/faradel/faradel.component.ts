@@ -18,6 +18,6 @@ export class FaradelComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listFacts = this.apiService.getFacts();
+    this.listFacts = this.apiService.getFacts("Faradel");
   }
 }

@@ -31,7 +31,7 @@ export class UniverseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listFacts = this.apiService.getFacts();
+    this.listFacts = this.apiService.getFacts("Univers");
     this.resizeMap();
     window.onresize = this.resizeMap;
   }

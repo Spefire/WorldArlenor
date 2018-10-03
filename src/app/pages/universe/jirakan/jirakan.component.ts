@@ -18,6 +18,6 @@ export class JirakanComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listFacts = this.apiService.getFacts();
+    this.listFacts = this.apiService.getFacts("Jirakan");
   }
 }
