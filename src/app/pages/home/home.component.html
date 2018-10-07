@@ -1,4 +1,4 @@
-<div [ngClass]="{'active': selection == 0 }" class="head-container">
+<div [ngClass]="{'active': selection == 0 }" class="head-container container01">
   <div class="title-container">
     <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
     <p>{{ 'PAGE.HOME.TITLE' | translate | uppercase }}</p>
@@ -14,7 +14,7 @@
     <img src="assets/images/glyphe_map_05.png" class="glyphe glyphe05 map" alt=""/>
   </div>
 </div>
-<div [ngClass]="{'active': selection == 1 }" class="head-container">
+<div [ngClass]="{'active': selection == 1 }" class="head-container container02">
   <div class="glyphe-container inversed-container">
     <img src="assets/images/glyphe_dices_01.png" class="glyphe glyphe01" alt=""/>
     <img src="assets/images/glyphe_dices_02.png" class="glyphe glyphe02" alt=""/>
@@ -29,7 +29,7 @@
     <button routerLink="roleplay">{{ 'HOME.ROLEPLAY.SEEMORE' | translate | uppercase }}</button>
   </div>
 </div>
-<div [ngClass]="{'active': selection == 2 }" class="head-container">
+<div [ngClass]="{'active': selection == 2 }" class="head-container container03">
   <div class="title-container">
     <p>{{ 'PAGE.HOME.TITLE' | translate | uppercase }}</p>
     <h1>{{ 'HOME.CHARACTERS.TITLE' | translate | uppercase }}</h1>
