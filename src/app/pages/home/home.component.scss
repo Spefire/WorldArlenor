@@ -2,10 +2,11 @@
 
 :host {
   .selection-container {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 50%;
+    position: absolute;
+		top: 50%;
+		left: 5%;
     transform: translateY(-50%);
 
 		.dot {
@@ -33,13 +34,18 @@
 			visibility: hidden;
 			transition: 1.0s ease;
 
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
 			&::after {
 				content: "";
 				position: absolute;
 				opacity: 1.0;
 				top: 50px;
 				left: 0;
-				bottom: 70px;
+				bottom: 51px;
 				right: 0;
 				z-index: -1;
 
@@ -62,11 +68,6 @@
 				url("/assets/images/home_03.png");
 			}
 
-			&.active {
-					opacity: 1;
-					visibility: visible;
-			}
-
 			.title-background {
 					position: absolute;
 					height: 100%;
@@ -83,15 +84,15 @@
 					position: absolute;
 					top: 50%;
 					left: 25%;
-					width: 25%;
+					width: 35%;
 					text-align: left;
-					transform: translateX(-50%) translateY(-50%);
+					transform: translateX(-25%) translateY(-50%);
 
 					&.inversed-container {
 							left: auto;
 							right: 25%;
 							text-align: right;
-							transform: translateX(50%) translateY(-50%);
+							transform: translateX(35%) translateY(-50%);
 					}
 
 					.logo-image {
@@ -99,29 +100,35 @@
 							width: 250px;
 							border: 1px solid $dark-color;
 					}
+
+					.subtitle {
+						margin: 0;
+						font-weight: bold;
+					}
+
+					.title {
+						margin: 0;
+						font-size: 50px;
+					}
 			}
 	}
 
 	.glyphe-container {
+			//TODO : Re-use somewhere
+			display: none;
 			position: absolute;
 			top: 50%;
 			right: 25%;
 			transform: translateX(50%) translateY(-50%);
 
-			height: 300px;
-			width: 300px;
-			perspective: 600px;
+			height: 100px;
+			width: 100px;
+			perspective: 200px;
 
 			&.inversed-container {
 					right: 0%;
 					left: 25%;
-					transform: translateX(-50%) translateY(-50%);
-			}
-
-			&.little-container {
-					perspective: 500px;
-					height: 250px;
-					width: 250px;
+					transform: translateX(-40%) translateY(-50%);
 			}
 	}
 
@@ -132,7 +139,7 @@
 			height: 100%;
 			width: 100%;
 			border-radius: 50%;
-			box-shadow: 0px 0px 5px $primary-color, inset 0px 0px 5px $light-primary-color;
+			box-shadow: 0px 0px 5px $secondary-color, inset 0px 0px 5px $light-secondary-color;
 	}
 
 	.head-container:hover .glyphe01 {

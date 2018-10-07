@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this.selection = 0;
-		this.sub = interval(10000).subscribe((val) => {
+		/*this.sub = interval(10000).subscribe((val) => {
 			this.changeSelection();
-		});
+		});*/
 	}
 
 	changeSelection() {
@@ -33,13 +33,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   setSelection(newSelection:number) {
 		this.selection = newSelection;
-		this.sub.unsubscribe();
+		/*this.sub.unsubscribe();
 		this.sub = interval(10000).subscribe((val) => {
 			this.changeSelection();
-		});
+		});*/
 	}
 
 	ngOnDestroy() {
-    this.sub.unsubscribe();
+    //this.sub.unsubscribe();
   }
 }
