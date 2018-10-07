@@ -3,7 +3,9 @@
 :host {
   .selection-container {
     display: flex;
-    flex-direction: column;
+		flex-direction: column;
+		align-items: center;
+
     position: absolute;
 		top: 50%;
 		left: 5%;
@@ -13,7 +15,7 @@
 			display: inline-block;
 			height: 15px;
 			width: 15px;
-			margin: 25px 0;
+			margin: 0;
 			padding: 3px;
 			cursor: pointer;
 
@@ -26,6 +28,12 @@
 				background-clip: content-box;
 				background-color: $light-secondary-color;
 			}
+		}
+
+		.dotline {
+			height: 50px;
+			width: 1px;
+			background-color: $light-color;
 		}
   }
 

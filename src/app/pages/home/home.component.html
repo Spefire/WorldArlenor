@@ -45,7 +45,11 @@
   </div>
 </div>
 <ul class="selection-container">
-  <li [ngClass]="{'active': selection == 0 }" class="dot" (click)="setSelection(0)"></li>
-  <li [ngClass]="{'active': selection == 1 }" class="dot" (click)="setSelection(1)"></li>
-  <li [ngClass]="{'active': selection == 2 }" class="dot" (click)="setSelection(2)"></li>
+	<div class="dotline"></div>
+	<li [ngClass]="{'active': selection == 0 }" class="dot" (click)="setSelection(0)"></li>
+	<div class="dotline"></div>
+	<li [ngClass]="{'active': selection == 1 }" class="dot" (click)="setSelection(1)"></li>
+	<div class="dotline"></div>
+	<li [ngClass]="{'active': selection == 2 }" class="dot" (click)="setSelection(2)"></li>
+	<div class="dotline"></div>
 </ul>
