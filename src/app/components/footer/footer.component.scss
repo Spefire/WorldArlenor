@@ -4,56 +4,37 @@
     display: block;
     background-color: $dark-color;
 
-    .footer-infos {
+    .footer-navigation {
         display: flex;
-        height: 250px;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 70px;
         border-top: 1px solid $dark-secondary-color;
 
-        .footer-left {
-            position: relative;
-            width: 50%;
-            margin: auto 0;
+        a {
+          display: inline-block;
+          position: relative;
+          height: 50px;
+          line-height: 50px;
+          padding: 0 25px;
+          color: $light-color;
 
-            .footer-container {
-                width: 70%;
-                padding: 0 15%;
+          &:hover {
+            color: $light-secondary-color;
+          }
 
-                .logo-image {
-                    height: 50px;
-                    width: 125px;
-                    border: 1px solid $dark-color;
-                }
-
-                span {
-                    color: $light-secondary-color;
-                    cursor: pointer;
-
-                    i {
-                        transition: 0.5s;
-                        width: 0px;
-                        margin-right: 0;
-                        transform: scaleX(0);
-                    }
-
-                    &:hover i {
-                        width: 16px;
-                        margin-right: 4px;
-                        transform: scaleX(1);
-                    }
-                }
-            }
+          &.active {
+            color: $light-secondary-color;
+          }
         }
 
-        .footer-right {
-            position: relative;
-            width: 50%;
-            margin: 25px 0;
-            border-left: 1px solid $dark-secondary-color;
-        }
+        .footer-section {
+          position: relative;
+          width: 250px;
 
-        ul {
+          ul {
             display: flex;
-
             position: absolute;
             top: 50%;
             left: 50%;
@@ -63,125 +44,89 @@
             padding: 0;
 
             li {
-                list-style: none;
+              list-style: none;
 
-                a {
-                    display: block;
-                    position: relative;
-                    height: 80px;
-                    width: 80px;
-                    margin: 0 20px;
+              a {
+                display: block;
+                position: relative;
+                height: 40px;
+                width: 40px;
+                margin: 0 20px;
+                padding: 0;
 
-                    line-height: 80px;
-                    font-size: 40px;
-                    text-align: center;
-                    transition: 0.5s;
+                line-height: 40px;
+                font-size: 20px;
+                text-align: center;
+                transition: 0.5s;
 
-                    span {
-                        position: absolute;
-                        transition: transform 0.5s;
-                        background-color: $dark-secondary-color;
-                    }
-
-                    span:nth-child(1), span:nth-child(3) {
-                        height: 1px;
-                        width: 100%;
-                    }
-
-                    span:nth-child(1) {
-                        top: 0;
-                        left: 0;
-                        transform-origin: right;
-                    }
-
-                    &:hover span:nth-child(1) {
-                        transform: scaleX(0);
-                        transform-origin: left;
-                        transition: transform 0.5s;
-                    }
-
-                    span:nth-child(3) {
-                        bottom: 0;
-                        right: 0;
-                        transform-origin: left;
-                    }
-
-                    &:hover span:nth-child(3) {
-                        transform: scaleX(0);
-                        transform-origin: right;
-                        transition: transform 0.5s;
-                    }
-
-                    span:nth-child(2), span:nth-child(4) {
-                        height: 100%;
-                        width: 1px;
-                    }
-
-                    span:nth-child(2) {
-                        top: 0;
-                        left: 0;
-                        transform: scaleY(0);
-                        transform-origin: bottom;
-                    }
-
-                    &:hover span:nth-child(2) {
-                        transform: scaleY(1);
-                        transform-origin: top;
-                        transition: transform 0.5s;
-                    }
-
-                    span:nth-child(4) {
-                        top: 0;
-                        right: 0;
-                        transform: scaleY(0);
-                        transform-origin: top;
-                    }
-
-                    &:hover span:nth-child(4) {
-                        transform: scaleY(1);
-                        transform-origin: bottom;
-                        transition: transform 0.5s;
-                    }
+                span {
+                  position: absolute;
+                  transition: transform 0.5s;
+                  background-color: $dark-secondary-color;
                 }
+
+                span:nth-child(1), span:nth-child(3) {
+                  height: 1px;
+                  width: 100%;
+                }
+
+                span:nth-child(1) {
+                  top: 0;
+                  left: 0;
+                  transform-origin: right;
+                }
+
+                &:hover span:nth-child(1) {
+                  transform: scaleX(0);
+                  transform-origin: left;
+                  transition: transform 0.5s;
+                }
+
+                span:nth-child(3) {
+                  bottom: 0;
+                  right: 0;
+                  transform-origin: left;
+                }
+
+                &:hover span:nth-child(3) {
+                  transform: scaleX(0);
+                  transform-origin: right;
+                  transition: transform 0.5s;
+                }
+
+                span:nth-child(2), span:nth-child(4) {
+                  height: 100%;
+                  width: 1px;
+                }
+
+                span:nth-child(2) {
+                  top: 0;
+                  left: 0;
+                  transform: scaleY(0);
+                  transform-origin: bottom;
+                }
+
+                &:hover span:nth-child(2) {
+                  transform: scaleY(1);
+                  transform-origin: top;
+                  transition: transform 0.5s;
+                }
+
+                span:nth-child(4) {
+                  top: 0;
+                  right: 0;
+                  transform: scaleY(0);
+                  transform-origin: top;
+                }
+
+                &:hover span:nth-child(4) {
+                  transform: scaleY(1);
+                  transform-origin: bottom;
+                  transition: transform 0.5s;
+                }
+              }
             }
-        }
-    }
-
-    .footer-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        height: 50px;
-        border-top: 1px solid $dark-secondary-color;
-
-        a {
-            display: inline-block;
-            position: relative;
-            height: 50px;
-            line-height: 50px;
-            padding: 0 25px;
-
-            color: $light-secondary-color;
-        }
-
-        .footer-logo {
-            cursor: pointer;
-        }
-
-        .footer-title {
-            color: $light-secondary-color;
-        }
-
-        .footer-section {
-            display: flex;
-            align-items: center;
-            min-width: 25%;
-
-            &.section-right {
-                display: inline-block;
-                text-align: right;
-            }
+          }
         }
     }
 }
