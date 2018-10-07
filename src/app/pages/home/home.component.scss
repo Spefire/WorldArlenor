@@ -1,145 +1,167 @@
 @import "../../../styles/variables.scss";
 
 :host {
-  .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  .selection-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+
+		.dot {
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			margin: 10px 0;
+			cursor: pointer;
+
+			background-color: none;
+			border-radius: 50%;
+			border: 1px solid $light-color;
+			transition: 1.0s ease;
+
+			&.active {
+				background-color: $light-color;
+			}
+		}
   }
 
-    .head-container {
-        .title-background {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            margin-left: auto;
-            margin-right: auto;
-        }
+	.head-container {
+			opacity: 0;
+			transition: 1.0s ease;
 
-        .title-container {
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            width: 25%;
-            text-align: left;
-            transform: translateX(-50%) translateY(-50%);
+			&.active {
+					opacity: 1;
+			}
 
-            &.inversed-container {
-                left: auto;
-                right: 25%;
-                text-align: right;
-                transform: translateX(50%) translateY(-50%);
-            }
+			.title-background {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					right: 0;
+					z-index: -1;
+					margin-left: auto;
+					margin-right: auto;
+			}
 
-            .logo-image {
-                height: 100px;
-                width: 250px;
-                border: 1px solid $dark-color;
-            }
-        }
-    }
+			.title-container {
+					position: absolute;
+					top: 50%;
+					left: 25%;
+					width: 25%;
+					text-align: left;
+					transform: translateX(-50%) translateY(-50%);
 
-    .glyphe-container {
-        position: absolute;
-        top: 50%;
-        right: 25%;
-        transform: translateX(50%) translateY(-50%);
+					&.inversed-container {
+							left: auto;
+							right: 25%;
+							text-align: right;
+							transform: translateX(50%) translateY(-50%);
+					}
 
-        height: 300px;
-        width: 300px;
-        perspective: 600px;
+					.logo-image {
+							height: 100px;
+							width: 250px;
+							border: 1px solid $dark-color;
+					}
+			}
+	}
 
-        &.inversed-container {
-            right: 0%;
-            left: 25%;
-            transform: translateX(-50%) translateY(-50%);
-        }
+	.glyphe-container {
+			position: absolute;
+			top: 50%;
+			right: 25%;
+			transform: translateX(50%) translateY(-50%);
 
-        &.little-container {
-            perspective: 500px;
-            height: 250px;
-            width: 250px;
-        }
-    }
+			height: 300px;
+			width: 300px;
+			perspective: 600px;
 
-    .glyphe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        box-shadow: 0px 0px 5px $primary-color, inset 0px 0px 5px $light-primary-color;
-    }
+			&.inversed-container {
+					right: 0%;
+					left: 25%;
+					transform: translateX(-50%) translateY(-50%);
+			}
 
-    .head-container:hover .glyphe01 {
-        animation: anim01 4s infinite ease-in-out;
+			&.little-container {
+					perspective: 500px;
+					height: 250px;
+					width: 250px;
+			}
+	}
 
-        @keyframes anim01 {
-            0% { transform: rotateY(0deg); }
-            100% { transform: rotateY(360deg); }
-        }
-    }
+	.glyphe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			box-shadow: 0px 0px 5px $primary-color, inset 0px 0px 5px $light-primary-color;
+	}
 
-    .head-container:hover .glyphe02 {
-        animation: anim02 4s infinite ease-in-out;
+	.head-container:hover .glyphe01 {
+			animation: anim01 4s infinite ease-in-out;
 
-        @keyframes anim02 {
-            0% { transform: rotateY(0deg) rotateX(0deg) }
-            100% { transform: rotateY(360deg) rotateX(360deg) }
-        }
-    }
+			@keyframes anim01 {
+					0% { transform: rotateY(0deg); }
+					100% { transform: rotateY(360deg); }
+			}
+	}
 
-    .head-container:hover .glyphe03 {
-        animation: anim03 4s infinite ease-in-out;
+	.head-container:hover .glyphe02 {
+			animation: anim02 4s infinite ease-in-out;
 
-        @keyframes anim03 {
-            0% { transform: rotateY(0deg) rotateX(360deg) }
-            100% { transform: rotateY(360deg) rotateX(0deg) }
-        }
-    }
+			@keyframes anim02 {
+					0% { transform: rotateY(0deg) rotateX(0deg) }
+					100% { transform: rotateY(360deg) rotateX(360deg) }
+			}
+	}
 
-    .head-container:hover .glyphe04 {
-        animation: anim04 4s infinite ease-in-out;
+	.head-container:hover .glyphe03 {
+			animation: anim03 4s infinite ease-in-out;
 
-        @keyframes anim04 {
-            0% { transform: rotateY(360deg); }
-            100% { transform: rotateY(0deg); }
-        }
-    }
+			@keyframes anim03 {
+					0% { transform: rotateY(0deg) rotateX(360deg) }
+					100% { transform: rotateY(360deg) rotateX(0deg) }
+			}
+	}
 
-    .head-container:hover .glyphe05.map {
-        animation: anim05map 4s infinite ease-in-out;
+	.head-container:hover .glyphe04 {
+			animation: anim04 4s infinite ease-in-out;
 
-        @keyframes anim05map {
-            0% { transform: rotateX(360deg); }
-            100% { transform: rotateX(0deg); }
-        }
-    }
+			@keyframes anim04 {
+					0% { transform: rotateY(360deg); }
+					100% { transform: rotateY(0deg); }
+			}
+	}
 
-    .head-container:hover .glyphe05.dices {
-        animation: anim05dices 4s infinite ease-in-out;
+	.head-container:hover .glyphe05.map {
+			animation: anim05map 4s infinite ease-in-out;
 
-        @keyframes anim05dices {
-            0% { transform: rotateY(360deg) }
-            100% { transform: rotateY(0deg) }
-        }
-    }
+			@keyframes anim05map {
+					0% { transform: rotateX(360deg); }
+					100% { transform: rotateX(0deg); }
+			}
+	}
 
-    .head-container:hover .glyphe05.book {
-        animation: anim05book 4s infinite ease-in-out;
+	.head-container:hover .glyphe05.dices {
+			animation: anim05dices 4s infinite ease-in-out;
 
-        @keyframes anim05book {
-            0% { transform: rotateY(360deg); }
-            100% { transform: rotateY(0deg); }
-        }
-    }
+			@keyframes anim05dices {
+					0% { transform: rotateY(360deg) }
+					100% { transform: rotateY(0deg) }
+			}
+	}
+
+	.head-container:hover .glyphe05.book {
+			animation: anim05book 4s infinite ease-in-out;
+
+			@keyframes anim05book {
+					0% { transform: rotateY(360deg); }
+					100% { transform: rotateY(0deg); }
+			}
+	}
 }
