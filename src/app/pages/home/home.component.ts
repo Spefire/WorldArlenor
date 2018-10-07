@@ -19,5 +19,4 @@ export class HomeComponent {
   changeSelection(newSelection:string) {
     this.selection = newSelection;
   }
-
 }

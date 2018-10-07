@@ -1,5 +1,4 @@
-<div *ngIf="selection == 'universe'" container class="head-container">
-  <!--img class="title-background" src="https://via.placeholder.com/1000x550" alt=""-->
+<div *ngIf="selection == 'universe'" class="head-container">
   <div class="title-container">
     <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
     <p>{{ 'PAGE.HOME.TITLE' | translate | uppercase }}</p>
@@ -15,8 +14,7 @@
     <img src="assets/images/glyphe_map_05.png" class="glyphe glyphe05 map" alt=""/>
   </div>
 </div>
-<div *ngIf="selection == 'roleplay'" container class="head-container">
-  <!--img class="title-background" src="https://via.placeholder.com/1000x400" alt=""-->
+<div *ngIf="selection == 'roleplay'" class="head-container">
   <div class="glyphe-container inversed-container">
     <img src="assets/images/glyphe_dices_01.png" class="glyphe glyphe01" alt=""/>
     <img src="assets/images/glyphe_dices_02.png" class="glyphe glyphe02" alt=""/>
@@ -31,8 +29,7 @@
     <button routerLink="roleplay">{{ 'HOME.ROLEPLAY.SEEMORE' | translate | uppercase }}</button>
   </div>
 </div>
-<div *ngIf="selection == 'characters'" container class="head-container">
-  <!--img class="title-background" src="https://via.placeholder.com/1000x400" alt=""-->
+<div *ngIf="selection == 'characters'" class="head-container">
   <div class="title-container">
     <p>{{ 'PAGE.HOME.TITLE' | translate | uppercase }}</p>
     <h1>{{ 'HOME.CHARACTERS.TITLE' | translate | uppercase }}</h1>
@@ -47,3 +44,8 @@
     <img src="assets/images/glyphe_book_05.png" class="glyphe glyphe05 book" alt=""/>
   </div>
 </div>
+<ul style="text-align:center">
+  <li class="dot" (click)="changeSelection('universe')"></li>
+  <li class="dot" (click)="changeSelection('roleplay')"></li>
+  <li class="dot" (click)="changeSelection('characters')"></li>
+</ul>
