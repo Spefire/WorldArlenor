@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RoutesService } from '../../services/routes.service';
 
 @Component({
@@ -7,13 +7,17 @@ import { RoutesService } from '../../services/routes.service';
   styleUrls: ['./home.component.scss'],
   providers: [RoutesService]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+
+  private selection:string;
 
   constructor(private routesService: RoutesService) {
     this.routesService.setTitleMetas("HOME");
+    this.selection = "universe";
   }
 
-  ngOnInit() {
+  changeSelection(newSelection:string) {
+    this.selection = newSelection;
   }
 
 }

@@ -1,17 +1,7 @@
 @import "../../../styles/variables.scss";
 
 :host {
-
-    text-align: center;
-
     .head-container {
-        position: relative;
-        height: 250px;
-
-        &.big-head {
-            height: 400px;
-        }
-
         .title-background {
             position: absolute;
             height: 100%;
@@ -43,34 +33,6 @@
                 height: 100px;
                 width: 250px;
                 border: 1px solid $dark-color;
-            }
-        }
-    }
-
-    .list-facts-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        justify-content: center;
-
-        .fact-container {
-            width: 250px;
-            height: 300px;
-            border: 1px solid rgba(0,0,0, 0.2);
-            border-radius: 10px;
-            box-shadow: 5px 5px rgba(0,0,0, 0.2);
-
-            margin: 10px;
-            overflow: hidden;
-            cursor: pointer;
-
-            &:hover {
-                background-color: rgba(0,0,0, 0.1);
-            }
-
-            .fact-image {
-                height: 100px;
-                width: 250px;
             }
         }
     }
