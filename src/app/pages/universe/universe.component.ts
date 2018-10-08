@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Fact } from '../../models/fact.model';
+import { interval } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 import { RoutesService } from '../../services/routes.service';
 
@@ -24,18 +24,22 @@ export class UniverseComponent implements OnInit {
 	public logoSrc:string;
   public listFacts:any[];
 
+	private sub:any;
   private selection:string;
 
   constructor(private apiService: ApiService, private routesService: RoutesService) {
     this.routesService.setTitleMetas("UNIVERSE");
-		this.selection = "faradel";
 		this.listFacts = this.apiService.getFacts("Faradel");
   }
 
   ngOnInit() {
+		this.selection = "faradel";
+		this.sub = interval(8000).subscribe((val) => {
+			this.changeSelection();
+		});
 		this.logoSrc = "https://via.placeholder.com/200x200";
     this.resizeMap();
-    window.onresize = this.resizeMap;
+		window.onresize = this.resizeMap;
   }
 
   resizeMap() {
@@ -84,9 +88,26 @@ export class UniverseComponent implements OnInit {
       }
       areas[index].coords = element.join(',');
     });
+	}
+
+	changeSelection() {
+		if (this.selection == "faradel") {
+			this.selection = "jirakan";
+			this.listFacts = this.apiService.getFacts("Jirakan");
+		} else if (this.selection == "jirakan") {
+			this.selection = "celestia";
+			this.listFacts = this.apiService.getFacts("Celestia");
+		} else if (this.selection == "celestia") {
+			this.selection = "zones";
+			this.listFacts = this.apiService.getFacts("Zones");
+		} else {
+			this.selection = "faradel";
+			this.listFacts = this.apiService.getFacts("Faradel");
+		}
+		document.images['map-arlenor'].src='assets/images/map_'+this.selection+'.png';
   }
 
-  changeSelection(select:string) {
+  setSelection(select:string) {
     document.images['map-arlenor'].src='assets/images/map_'+select+'.png';
 		this.selection = select;
 		if (this.selection == "faradel") {
@@ -98,5 +119,13 @@ export class UniverseComponent implements OnInit {
 		} else {
 			this.listFacts = this.apiService.getFacts("Zones");
 		}
+		this.sub.unsubscribe();
+		this.sub = interval(8000).subscribe((val) => {
+			this.changeSelection();
+		});
+	}
+
+	ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }

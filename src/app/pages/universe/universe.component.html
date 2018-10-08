@@ -1,13 +1,14 @@
 <div padding-vert class="head-container">
 	<div class="map-left">
 		<img class="logo-image" src="https://via.placeholder.com/100x100" alt="">
-		<h1 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
-		<div *ngFor="let fact of listFacts" class="fact-container" routerLink="/universe/{{fact.id}}">
-			<div class="fact-text">
+		<h1 class="fact-zone" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-zone" *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-zone" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-zone" *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-zone" *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
+		<div *ngFor="let fact of listFacts; let i=index" class="fact-container" routerLink="/universe/{{fact.id}}">
+			<div *ngIf="i < 2" class="fact-text">
+				<h1 class="fact-title">{{ 'UNIVERSE.POINTS' | translate | uppercase }}</h1>
 				<h2 class="fact-title">{{ fact.title | uppercase }}</h2>
 				<p>{{ fact.description }} {{ fact.description }}</p>
 			</div>
@@ -16,24 +17,24 @@
 	<div class="map-right">
 		<img id="map-arlenor" class="map-background" src="assets/images/map_faradel.png" alt="" usemap="#map-areas">
 		<map name="map-areas" id="map-areas">
-			<area shape='poly' [coords]='coords_faradel' (click)="changeSelection('faradel')"/>
-			<area shape='poly' [coords]='coords_jirakan' (click)="changeSelection('jirakan')"/>
-			<area shape='poly' [coords]='coords_celestia' (click)="changeSelection('celestia')">
-			<area shape='poly' [coords]='coords_ne' (click)="changeSelection('zones')"/>
-			<area shape='poly' [coords]='coords_se' (click)="changeSelection('zones')"/>
-			<area shape='poly' [coords]='coords_no' (click)="changeSelection('zones')"/>
-			<area shape='poly' [coords]='coords_so' (click)="changeSelection('zones')"/>
+			<area shape='poly' [coords]='coords_faradel' (click)="setSelection('faradel')"/>
+			<area shape='poly' [coords]='coords_jirakan' (click)="setSelection('jirakan')"/>
+			<area shape='poly' [coords]='coords_celestia' (click)="setSelection('celestia')">
+			<area shape='poly' [coords]='coords_ne' (click)="setSelection('zones')"/>
+			<area shape='poly' [coords]='coords_se' (click)="setSelection('zones')"/>
+			<area shape='poly' [coords]='coords_no' (click)="setSelection('zones')"/>
+			<area shape='poly' [coords]='coords_so' (click)="setSelection('zones')"/>
 		</map>
 	</div>
 	<ul class="map-selection">
 		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'faradel' }" class="dot" (click)="changeSelection('faradel')"></li>
+		<li [ngClass]="{'active': selection == 'faradel' }" class="dot" (click)="setSelection('faradel')"></li>
 		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'jirakan' }" class="dot" (click)="changeSelection('jirakan')"></li>
+		<li [ngClass]="{'active': selection == 'jirakan' }" class="dot" (click)="setSelection('jirakan')"></li>
 		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'celestia' }" class="dot" (click)="changeSelection('celestia')"></li>
+		<li [ngClass]="{'active': selection == 'celestia' }" class="dot" (click)="setSelection('celestia')"></li>
 		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'zones' }" class="dot" (click)="changeSelection('zones')"></li>
+		<li [ngClass]="{'active': selection == 'zones' }" class="dot" (click)="setSelection('zones')"></li>
 		<div class="dotline"></div>
 	</ul>
 </div>

@@ -4,7 +4,33 @@
 		.head-container {
         display: flex;
 				position: relative;
-        box-shadow: 0 -150px 200px $dark-color inset;
+				box-shadow: 0 -150px 200px $dark-color inset;
+
+				h1 {
+					font-size: 18px;
+					color: $light-color;
+				}
+
+				h2 {
+					font-size: 26px;
+					color: $dark-secondary-color;
+					margin: 4px 0;
+				}
+
+				p {
+					font-size: 14px;
+					color: $secondary-color;
+					margin: 4px 0;
+					font-style: italic;
+				}
+
+				.fact-zone {
+					font-size: 26px;
+				}
+
+				.fact-text {
+					margin: 25px 0;
+				}
 
         .map-left {
           width: 35%;
@@ -21,8 +47,8 @@
 
         .map-right {
           width: 60%;
-          padding-right: 5%;
-          position: relative;
+					position: relative;
+					margin: auto 0;
 
           .map-background {
             height: auto;
@@ -35,6 +61,7 @@
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+          padding-right: 5%;
 
 					width: 5%;
 					margin: auto 0;
@@ -109,7 +136,8 @@
             height: 200px;
             top: 100px;
             background-color: $dark-color;
-            transition: .5s;
+						transition: .5s;
+						margin: 10px 0;
 
             .fact-title {
               color: $light-secondary-color;

@@ -19,13 +19,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this.selection = 0;
-		/*this.sub = interval(10000).subscribe((val) => {
+		this.sub = interval(8000).subscribe((val) => {
 			this.changeSelection();
-		});*/
+		});
 	}
 
 	changeSelection() {
-		console.log("CHANGE");
 		if (this.selection == 0) this.selection = 1;
 		else if (this.selection == 1) this.selection = 2;
 		else if (this.selection == 2) this.selection = 0;
@@ -33,13 +32,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   setSelection(newSelection:number) {
 		this.selection = newSelection;
-		/*this.sub.unsubscribe();
-		this.sub = interval(10000).subscribe((val) => {
+		this.sub.unsubscribe();
+		this.sub = interval(8000).subscribe((val) => {
 			this.changeSelection();
-		});*/
+		});
 	}
 
 	ngOnDestroy() {
-    //this.sub.unsubscribe();
+    this.sub.unsubscribe();
   }
 }
