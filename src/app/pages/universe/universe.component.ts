@@ -20,34 +20,20 @@ export class UniverseComponent implements OnInit {
   public coords_ne:any;
   public coords_se:any;
   public coords_no:any;
-  public coords_so:any;
-  public listMainFacts:any[];
+	public coords_so:any;
+	public logoSrc:string;
+  public listFacts:any[];
 
   private selection:string;
 
   constructor(private apiService: ApiService, private routesService: RoutesService) {
     this.routesService.setTitleMetas("UNIVERSE");
-    this.selection = "arlenor";
+		this.selection = "faradel";
+		this.listFacts = this.apiService.getFacts("Faradel");
   }
 
   ngOnInit() {
-    this.listMainFacts = [
-      {
-        "route": "religion",
-        "title": "La Religion",
-        "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-      },
-      {
-        "route": "crystals",
-        "title": "La Magie des Cristaux",
-        "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
-      },
-      {
-        "route": "population",
-        "title": "Les Peuples",
-        "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-      }
-    ];
+		this.logoSrc = "https://via.placeholder.com/200x200";
     this.resizeMap();
     window.onresize = this.resizeMap;
   }
@@ -102,6 +88,15 @@ export class UniverseComponent implements OnInit {
 
   changeSelection(select:string) {
     document.images['map-arlenor'].src='assets/images/map_'+select+'.png';
-    this.selection = select;
+		this.selection = select;
+		if (this.selection == "faradel") {
+			this.listFacts = this.apiService.getFacts("Faradel");
+		} else if (this.selection == "jirakan") {
+			this.listFacts = this.apiService.getFacts("Jirakan");
+		} else if (this.selection == "celestia") {
+			this.listFacts = this.apiService.getFacts("Celestia");
+		} else {
+			this.listFacts = this.apiService.getFacts("Zones");
+		}
   }
 }

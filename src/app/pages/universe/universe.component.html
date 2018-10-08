@@ -1,53 +1,39 @@
-<div style="text-align:center">
-  <div padding-vert class="head-container">
-    <div class="map-left">
-      <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-      <h1 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
-      <h1 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
-      <h1 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
-      <h1 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
-      <h1 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
-      <p *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.DESCRIPTION' | translate }}</p>
-      <p *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.DESCRIPTION' | translate }}</p>
-      <p *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.DESCRIPTION' | translate }}</p>
-      <p *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.DESCRIPTION' | translate }}</p>
-      <p *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.DESCRIPTION' | translate }}</p>
-    </div>
-    <div class="map-right">
-      <img id="map-arlenor" class="map-background" src="assets/images/map_arlenor.png" alt="" usemap="#map-areas">
-      <map name="map-areas" id="map-areas">
-        <area shape='poly' [coords]='coords_faradel' routerLink="/universe/faradel"
-        (mouseover)="changeSelection('faradel')"
-        (mouseout)="changeSelection('arlenor')"/>
-        <area shape='poly' [coords]='coords_jirakan' routerLink="/universe/jirakan"
-        (mouseover)="changeSelection('jirakan')"
-        (mouseout)="changeSelection('arlenor')"/>
-        <area shape='poly' [coords]='coords_celestia' routerLink="/universe/celestia"
-        (mouseover)="changeSelection('celestia')"
-        (mouseout)="changeSelection('arlenor')">
-        <area shape='poly' [coords]='coords_ne' routerLink="/universe/zones"
-        (mouseover)="changeSelection('zones')"
-        (mouseout)="changeSelection('arlenor')"/>
-        <area shape='poly' [coords]='coords_se' routerLink="/universe/zones"
-        (mouseover)="changeSelection('zones')"
-        (mouseout)="changeSelection('arlenor')"/>
-        <area shape='poly' [coords]='coords_no' routerLink="/universe/zones"
-        (mouseover)="changeSelection('zones')"
-        (mouseout)="changeSelection('arlenor')"/>
-        <area shape='poly' [coords]='coords_so' routerLink="/universe/zones"
-        (mouseover)="changeSelection('zones')"
-        (mouseout)="changeSelection('arlenor')"/>
-      </map>
-    </div>
-  </div>
-  <div separator></div>
-  <div container padding-vert class="list-facts-container">
-    <div *ngFor="let mainFact of listMainFacts" class="fact-container" routerLink="/universe/{{mainFact.route}}">
-      <img class="fact-image" src="https://via.placeholder.com/500x300" alt="">
-      <div class="fact-text">
-        <h2 class="fact-title">{{ mainFact.title | uppercase }}</h2>
-        <p>{{ mainFact.description }}</p>
-      </div>
-    </div>
-  </div>
+<div padding-vert class="head-container">
+	<div class="map-left">
+		<img class="logo-image" src="https://via.placeholder.com/100x100" alt="">
+		<h1 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
+		<h1 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
+		<h1 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
+		<h1 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
+		<h1 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
+		<div *ngFor="let fact of listFacts" class="fact-container" routerLink="/universe/{{fact.route}}">
+			<div class="fact-text">
+				<h2 class="fact-title">{{ fact.title | uppercase }}</h2>
+				<p>{{ fact.description }} {{ fact.description }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="map-right">
+		<img id="map-arlenor" class="map-background" src="assets/images/map_faradel.png" alt="" usemap="#map-areas">
+		<map name="map-areas" id="map-areas">
+			<area shape='poly' [coords]='coords_faradel' (click)="changeSelection('faradel')"/>
+			<area shape='poly' [coords]='coords_jirakan' (click)="changeSelection('jirakan')"/>
+			<area shape='poly' [coords]='coords_celestia' (click)="changeSelection('celestia')">
+			<area shape='poly' [coords]='coords_ne' (click)="changeSelection('zones')"/>
+			<area shape='poly' [coords]='coords_se' (click)="changeSelection('zones')"/>
+			<area shape='poly' [coords]='coords_no' (click)="changeSelection('zones')"/>
+			<area shape='poly' [coords]='coords_so' (click)="changeSelection('zones')"/>
+		</map>
+	</div>
+	<ul class="map-selection">
+		<div class="dotline"></div>
+		<li [ngClass]="{'active': selection == 'faradel' }" class="dot" (click)="changeSelection('faradel')"></li>
+		<div class="dotline"></div>
+		<li [ngClass]="{'active': selection == 'jirakan' }" class="dot" (click)="changeSelection('jirakan')"></li>
+		<div class="dotline"></div>
+		<li [ngClass]="{'active': selection == 'celestia' }" class="dot" (click)="changeSelection('celestia')"></li>
+		<div class="dotline"></div>
+		<li [ngClass]="{'active': selection == 'zones' }" class="dot" (click)="changeSelection('zones')"></li>
+		<div class="dotline"></div>
+	</ul>
 </div>

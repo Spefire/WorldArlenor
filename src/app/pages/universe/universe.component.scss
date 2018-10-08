@@ -1,28 +1,26 @@
 @import "../../../styles/variables.scss";
 
 :host {
-
-    .head-container {
+		.head-container {
         display: flex;
-        position: relative;
+				position: relative;
         box-shadow: 0 -150px 200px $dark-color inset;
 
         .map-left {
-          min-height: 350px;
-          width: 30%;
+          width: 35%;
           text-align: left;
           padding-left: 5%;
           margin: auto 0;
 
           .logo-image {
             height: 100px;
-            width: 250px;
+            width: 100px;
             border: 1px solid $dark-color;
           }
         }
 
         .map-right {
-          width: 70%;
+          width: 60%;
           padding-right: 5%;
           position: relative;
 
@@ -31,7 +29,41 @@
             width: 100%;
             margin: auto 0;
           }
-        }
+				}
+
+				.map-selection {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					width: 5%;
+					margin: auto 0;
+
+					.dot {
+						display: inline-block;
+						height: 15px;
+						width: 15px;
+						margin: 0;
+						padding: 3px;
+						cursor: pointer;
+
+						background-color: none;
+						border-radius: 50%;
+						border: 1px solid $light-color;
+						transition: 1.0s ease;
+
+						&.active {
+							background-clip: content-box;
+							background-color: $light-secondary-color;
+						}
+					}
+
+					.dotline {
+						height: 50px;
+						width: 1px;
+						background-color: $light-color;
+					}
+				}
     }
 
     .list-facts-container {

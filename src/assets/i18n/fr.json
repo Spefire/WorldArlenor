@@ -3,11 +3,10 @@
     "HOME": "Le Monde d'Arlénor",
     "UNIVERSE": {
       "MAIN": "Univers",
-      "SECTION00": "Monde",
-      "SECTION01": "Empire Faradélien",
-      "SECTION02": "Régime Jirakanien",
-      "SECTION03": "Célestia",
-      "SECTION04": "Zones inexplorées"
+      "SECTION00": "Le Monde",
+      "SECTION01": "La Religion",
+      "SECTION02": "La Magie des cristaux",
+      "SECTION03": "Les Peuples"
     },
     "ROLEPLAY": "Jeu de rôles",
     "CHARACTERS": "Personnages",
