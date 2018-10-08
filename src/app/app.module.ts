@@ -14,7 +14,6 @@ import { UniverseComponent } from './pages/universe/universe.component';
 import { ReligionComponent } from './pages/universe/religion/religion.component';
 import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
 import { PopulationComponent } from './pages/universe/population/population.component';
-import { ZonesComponent } from './pages/universe/zones/zones.component';
 import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -31,7 +30,6 @@ import { FooterComponent } from './components/footer/footer.component';
     ReligionComponent,
     CrystalsComponent,
     PopulationComponent,
-    ZonesComponent,
     FactComponent,
     RoleplayComponent,
     CharactersComponent,

@@ -2,7 +2,9 @@ export class Fact {
 
   public id: number;
   public title?: string;
-  public zone?: string;
+	public zone?: string;
+	public logoSrc?:string;
+	public backgroundSrc?:string;
 
   constructor(jsonStr: string) {
     let jsonObj: any = JSON.parse(jsonStr);

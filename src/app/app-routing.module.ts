@@ -6,7 +6,6 @@ import { UniverseComponent } from './pages/universe/universe.component';
 import { ReligionComponent } from './pages/universe/religion/religion.component';
 import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
 import { PopulationComponent } from './pages/universe/population/population.component';
-import { ZonesComponent } from './pages/universe/zones/zones.component';
 import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -19,14 +18,7 @@ const appRoutes: Routes = [
   { path: 'universe/religion', component: ReligionComponent },
   { path: 'universe/crystals', component: CrystalsComponent },
   { path: 'universe/population', component: PopulationComponent },
-  { path: 'universe/faradel', component: ZonesComponent },
-  { path: 'universe/faradel/:id', component: FactComponent },
-  { path: 'universe/jirakan', component: ZonesComponent },
-  { path: 'universe/jirakan/:id', component: FactComponent },
-  { path: 'universe/celestia', component: ZonesComponent },
-  { path: 'universe/celestia/:id', component: FactComponent },
-  { path: 'universe/zones', component: ZonesComponent },
-  { path: 'universe/zones/:id', component: FactComponent },
+  { path: 'universe/:id', component: FactComponent },
   { path: 'roleplay', component: RoleplayComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'about', component: AboutComponent },
