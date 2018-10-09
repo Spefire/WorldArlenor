@@ -5,6 +5,7 @@
         display: flex;
 				position: relative;
 				box-shadow: 0 -150px 200px $dark-color inset;
+				height: 600px;
 
 				h1 {
 					font-size: 18px;
@@ -46,7 +47,8 @@
         }
 
         .map-right {
-          width: 60%;
+					width: 60%;
+					max-width: 900px;
 					position: relative;
 					margin: auto 0;
 
@@ -99,6 +101,7 @@
       align-content: space-between;
       justify-content: center;
       max-width: 1260px;
+			height: 550px;
 
       .fact-container {
           position: relative;
