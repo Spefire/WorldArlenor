@@ -6,7 +6,7 @@
 		<h1 class="fact-zone" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
 		<h1 class="fact-zone" *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
 		<h1 class="fact-zone" *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
-		<div *ngFor="let fact of listFacts; let i=index" class="fact-container" routerLink="/universe/{{fact.id}}">
+		<div *ngFor="let fact of listFacts; let i=index" class="fact-container">
 			<div *ngIf="i < 2" class="fact-text">
 				<h1 class="fact-title">{{ 'UNIVERSE.POINTS' | translate | uppercase }}</h1>
 				<h2 class="fact-title">{{ fact.title | uppercase }}</h2>
@@ -38,4 +38,13 @@
 		<div class="dotline"></div>
 	</ul>
 </div>
-<div class="list-facts-container"></div>
+<div separator></div>
+<div padding-vert container class="list-facts-container">
+	<div *ngFor="let fact of listFacts" class="fact-container" routerLink="/universe/{{fact.id}}">
+		<img class="fact-image" src="https://via.placeholder.com/500x300" alt="">
+		<div class="fact-text">
+			<h2 class="fact-title">{{ fact.title | uppercase }}</h2>
+			<p>{{ fact.description }}</p>
+		</div>
+	</div>
+</div>
