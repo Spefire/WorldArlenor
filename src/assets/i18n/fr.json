@@ -7,7 +7,7 @@
       "SECTION01": "La Religion",
       "SECTION02": "La Magie des cristaux",
       "SECTION03": "Les Peuples",
-      "SECTION04": "L'île Célestia",
+      "SECTION04": "L'Île Célestia",
       "SECTION05": "Le Cercle des mages"
     },
     "ROLEPLAY": "Jeu de rôles",
@@ -75,28 +75,25 @@
     }
   },
   "UNIVERSE": {
-		"POINTS": "Point d'Intérêt",
-    "TITLE": "Univers",
-    "ARLENOR": {
-      "TITLE": "Le Monde d'Arlénor",
-      "DESCRIPTION": "Découvrez sur cette page, les principaux aspects du Monde d'Arlénor : sa religion, sa magie et ses peuples..."
-    },
+		"POINTS": "Point d'intérêt",
     "FARADEL": {
-      "TITLE": "L'Empire Faradelien",
-      "DESCRIPTION": "Cliquez sur la zone pour découvrir la cité des Elfes et des Humains, Faradel, ainsi que ses alentours..."
+      "TITLE": "L'Empire Faradelien"
     },
     "JIRAKAN": {
-      "TITLE": "Le Régime Jirakanien",
-      "DESCRIPTION": "Cliquez sur la zone pour découvir la cité des esclaves, Jirakan, ainsi que ses alentours..."
-    },
+			"TITLE": "Le Régime Jirakanien"
+		},
+    "IMERYS": {
+			"TITLE": "La Forêt d'Imerys"
+		},
+    "KAZADOR": {
+			"TITLE": "Les Montagnes de Kazador"
+		},
+    "LUMECK": {
+			"TITLE": "L'Île de Lumeck"
+		},
     "ZONES": {
-      "TITLE": "Les Zones Inexplorées",
-      "DESCRIPTION": "Cliquez sur l'une de ces zones pour essayer d'en découvrir leurs mystères..."
-    },
-    "CELESTIA": {
-      "TITLE": "L'Ile de Célestia",
-      "DESCRIPTION": "Cliquez sur l'île céleste pour découvrir... une recette de gâteau au chocolat, une nouvelle race de chatons, la vie ?"
-    }
+			"TITLE": "Les Zones Inexplorées"
+		}
   },
   "ROLEPLAY": {
     "TITLE": "Jeu de rôles"

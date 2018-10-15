@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { RoutesService } from '../../services/routes.service';
 
-import { coords_faradel, coords_jirakan, coords_ne, coords_se, coords_no, coords_so } from '../../models/map.model';
+import { coords_faradel, coords_jirakan, coords_imerys, coords_kazador, coords_lumeck, coords_zones } from '../../models/map.model';
 
 @Component({
   selector: 'app-universe',
@@ -14,10 +14,10 @@ export class UniverseComponent implements OnInit {
 
   public coords_faradel:any;
   public coords_jirakan:any;
-  public coords_ne:any;
-  public coords_se:any;
-  public coords_no:any;
-	public coords_so:any;
+	public coords_imerys:any;
+  public coords_kazador:any;
+  public coords_lumeck:any;
+  public coords_zones:any;
 	public logoSrc:string;
   public listFacts:any[];
 
@@ -56,22 +56,22 @@ export class UniverseComponent implements OnInit {
 
     this.coords_faradel = getCoords(coords_faradel).split(',');
     this.coords_jirakan = getCoords(coords_jirakan).split(',');
-    this.coords_ne = getCoords(coords_ne).split(',');
-    this.coords_se = getCoords(coords_se).split(',');
-    this.coords_no = getCoords(coords_no).split(',');
-    this.coords_so = getCoords(coords_so).split(',');
+    this.coords_imerys = getCoords(coords_imerys).split(',');
+    this.coords_kazador = getCoords(coords_kazador).split(',');
+    this.coords_lumeck = getCoords(coords_lumeck).split(',');
+    this.coords_zones = getCoords(coords_zones).split(',');
 
     var coords = [
       this.coords_faradel,
       this.coords_jirakan,
-      this.coords_ne,
-      this.coords_se,
-      this.coords_no,
-      this.coords_so
+      this.coords_imerys,
+      this.coords_kazador,
+      this.coords_lumeck,
+      this.coords_zones
     ]
 
     var areas = document.getElementById('map-areas').getElementsByTagName('area');
-    var coeff = document.getElementById('map-arlenor').clientWidth / 1800;
+    var coeff = document.getElementById('map-arlenor').clientWidth / 1600;
     coords.forEach((element, index) => {
       var clen = element.length;
       for (var n = 0; n < clen; n++) {
@@ -88,6 +88,12 @@ export class UniverseComponent implements OnInit {
 			this.listFacts = this.apiService.getFacts("Faradel");
 		} else if (this.selection == "jirakan") {
 			this.listFacts = this.apiService.getFacts("Jirakan");
+		} else if (this.selection == "imerys") {
+			this.listFacts = this.apiService.getFacts("Imerys");
+		} else if (this.selection == "kazador") {
+			this.listFacts = this.apiService.getFacts("Kazador");
+		} else if (this.selection == "lumeck") {
+			this.listFacts = this.apiService.getFacts("Lumeck");
 		} else {
 			this.listFacts = this.apiService.getFacts("Zones");
 		}

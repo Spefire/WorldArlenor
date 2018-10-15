@@ -1,112 +1,78 @@
 @import "../../../styles/variables.scss";
 
 :host {
-		.head-container {
-        display: flex;
-				height: 600px;
+	.head-container {
+		display: flex;
 
-				&::after {
-					content: "";
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 1.0;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			box-shadow: 0 -150px 200px $dark-color inset;
+		}
+
+		.map-left {
+			width: 35%;
+			text-align: left;
+			padding-left: 5%;
+			margin: auto 0;
+
+			.zone-image {
+				height: 100px;
+				width: 100px;
+				border: 1px solid $dark-color;
+			}
+
+			.zone-title {
+				font-size: 38px;
+				color: $light-color;
+				margin-top: 25px;
+			}
+
+			.fact-container {
+				position: relative;
+				margin: 25px 0;
+
+				.fact-description {
+					font-size: 14px;
+					color: $secondary-color;
+					margin: 0;
+					padding: 4px 30px 4px 0;
+					font-style: italic;
+				}
+
+				.fact-link {
 					position: absolute;
-					opacity: 1.0;
-					top: 90px;
-					left: 0;
-					bottom: 51px;
+					bottom: 0;
 					right: 0;
-					z-index: -1;
 
-					box-shadow: 0 -150px 200px $dark-color inset;
+					font-size: 20px;
+					font-weight: bold;
+					border-radius: 50%;
+					padding: 2px 8px;
 				}
+			}
+		}
 
-				.fact-container {
-					position: relative;
-					margin: 25px 0;
+		.map-right {
+			width: 65%;
+			max-width: 800px;
+			position: relative;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin: auto 0;
 
-					.fact-title-map {
-						font-size: 38px;
-					}
-
-					.fact-description {
-						font-size: 14px;
-						color: $secondary-color;
-						margin: 0;
-						padding: 4px 30px 4px 0;
-						font-style: italic;
-					}
-
-					.fact-link {
-						position: absolute;
-						bottom: 0;
-						right: 0;
-
-						font-size: 20px;
-						font-weight: bold;
-						border-radius: 50%;
-						padding: 2px 8px;
-					}
-				}
-
-        .map-left {
-          width: 35%;
-          text-align: left;
-          padding-left: 5%;
-          margin: auto 0;
-
-          .logo-image {
-            height: 100px;
-            width: 100px;
-            border: 1px solid $dark-color;
-          }
-        }
-
-        .map-right {
-					width: 65%;
-					max-width: 900px;
-					position: relative;
-					padding-left: 5%;
-					padding-right: 5%;
-					margin: auto 0;
-
-          .map-background {
-            height: auto;
-            width: 100%;
-            margin: auto 0;
-          }
-				}
-
-				.map-selection {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-          padding-right: 5%;
-
-					width: 5%;
-					margin: auto 0;
-
-					.dot {
-						display: inline-block;
-						height: 15px;
-						width: 15px;
-						margin: 0;
-						padding: 3px;
-						cursor: pointer;
-
-						background-color: none;
-						border-radius: 50%;
-						border: 1px solid $light-color;
-						transition: 1.0s ease;
-
-						&.active {
-							background-clip: content-box;
-							background-color: $light-secondary-color;
-						}
-					}
-
-					.dotline {
-						height: 50px;
-						width: 1px;
-						background-color: $light-color;
-					}
-				}
+			.map-background {
+				height: auto;
+				width: 100%;
+				margin: auto 0;
+			}
+		}
   }
 }
