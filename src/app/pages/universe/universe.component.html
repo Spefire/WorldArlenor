@@ -1,15 +1,16 @@
 <div class="head-container">
 	<div class="map-left">
 		<img class="logo-image" src="https://via.placeholder.com/100x100" alt="">
-		<h1 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-title-map" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-title-map" *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-title-map" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
+		<h1 class="fact-title-map" *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
 		<div *ngFor="let fact of listFacts; let i=index">
 			<div *ngIf="i < 2" class="fact-container">
 				<h4>{{ 'UNIVERSE.POINTS' | translate | uppercase }}</h4>
 				<h2>{{ fact.title | uppercase }}</h2>
-				<p>"{{ fact.description }}"<br>{{ fact.title }}</p>
+				<p class="fact-description">"{{ fact.description }}"<br>{{ fact.title }}</p>
+				<button class="fact-link" routerLink="/universe/{{fact.id}}">+</button>
 			</div>
 		</div>
 	</div>

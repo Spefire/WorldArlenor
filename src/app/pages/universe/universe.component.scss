@@ -18,19 +18,32 @@
 					box-shadow: 0 -150px 200px $dark-color inset;
 				}
 
-				h1 {
-					font-size: 38px;
-				}
-
-				p {
-					font-size: 14px;
-					color: $secondary-color;
-					margin: 4px 0;
-					font-style: italic;
-				}
-
 				.fact-container {
+					position: relative;
 					margin: 25px 0;
+
+					.fact-title-map {
+						font-size: 38px;
+					}
+
+					.fact-description {
+						font-size: 14px;
+						color: $secondary-color;
+						margin: 0;
+						padding: 4px 30px 4px 0;
+						font-style: italic;
+					}
+
+					.fact-link {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+
+						font-size: 20px;
+						font-weight: bold;
+						border-radius: 50%;
+						padding: 2px 8px;
+					}
 				}
 
         .map-left {
