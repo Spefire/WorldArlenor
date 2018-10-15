@@ -4,7 +4,6 @@
 		<h1 *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
 		<h1 *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
 		<h1 *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
-		<h1 *ngIf="selection=='celestia'">{{ 'UNIVERSE.CELESTIA.TITLE' | translate | uppercase }}</h1>
 		<h1 *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
 		<div *ngFor="let fact of listFacts; let i=index">
 			<div *ngIf="i < 2" class="fact-container">
@@ -19,7 +18,6 @@
 		<map name="map-areas" id="map-areas">
 			<area shape='poly' [coords]='coords_faradel' (click)="setSelection('faradel')"/>
 			<area shape='poly' [coords]='coords_jirakan' (click)="setSelection('jirakan')"/>
-			<area shape='poly' [coords]='coords_celestia' (click)="setSelection('celestia')">
 			<area shape='poly' [coords]='coords_ne' (click)="setSelection('zones')"/>
 			<area shape='poly' [coords]='coords_se' (click)="setSelection('zones')"/>
 			<area shape='poly' [coords]='coords_no' (click)="setSelection('zones')"/>

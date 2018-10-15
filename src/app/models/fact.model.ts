@@ -41,30 +41,18 @@ export const facts = [
   },
   {
     "id": 4,
-    "title": "La Guerre contre l'En-Bas",
-    "zone": "Celestia",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  },
-  {
-    "id": 5,
-    "title": "Le Cercle des Mages Evanell",
-    "zone": "Celestia",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  },
-  {
-    "id": 6,
     "title": "Les Montagnes de Kazador",
     "zone": "Zones",
     "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
   },
   {
-    "id": 7,
+    "id": 5,
     "title": "La Fôrêt d'Imerys",
     "zone": "Zones",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
-    "id": 8,
+    "id": 6,
     "title": "L'Ile de Lumeck",
     "zone": "Zones",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."

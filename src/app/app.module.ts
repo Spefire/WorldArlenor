@@ -11,6 +11,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UniverseComponent } from './pages/universe/universe.component';
+import { EvanellComponent } from './pages/universe/evanell/evanell.component';
+import { CelestiaComponent } from './pages/universe/celestia/celestia.component';
 import { ReligionComponent } from './pages/universe/religion/religion.component';
 import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
 import { PopulationComponent } from './pages/universe/population/population.component';
@@ -26,7 +28,9 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    UniverseComponent,
+		UniverseComponent,
+		EvanellComponent,
+		CelestiaComponent,
     ReligionComponent,
     CrystalsComponent,
     PopulationComponent,

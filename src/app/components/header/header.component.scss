@@ -102,10 +102,9 @@
       width: 100%;
 
       .header-subtitle {
-        margin-right: 10px;
-        color: $light-secondary-color;
+				border-left: 1px solid $dark-secondary-color;
         border-right: 1px solid $dark-secondary-color;
-      }
+			}
     }
   }
 }

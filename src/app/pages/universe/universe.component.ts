@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { RoutesService } from '../../services/routes.service';
 
-import { coords_faradel, coords_jirakan, coords_celestia,
-  coords_ne, coords_se, coords_no, coords_so } from '../../models/map.model';
+import { coords_faradel, coords_jirakan, coords_ne, coords_se, coords_no, coords_so } from '../../models/map.model';
 
 @Component({
   selector: 'app-universe',
@@ -15,7 +14,6 @@ export class UniverseComponent implements OnInit {
 
   public coords_faradel:any;
   public coords_jirakan:any;
-  public coords_celestia:any;
   public coords_ne:any;
   public coords_se:any;
   public coords_no:any;
@@ -58,7 +56,6 @@ export class UniverseComponent implements OnInit {
 
     this.coords_faradel = getCoords(coords_faradel).split(',');
     this.coords_jirakan = getCoords(coords_jirakan).split(',');
-    this.coords_celestia = getCoords(coords_celestia).split(',');
     this.coords_ne = getCoords(coords_ne).split(',');
     this.coords_se = getCoords(coords_se).split(',');
     this.coords_no = getCoords(coords_no).split(',');
@@ -67,7 +64,6 @@ export class UniverseComponent implements OnInit {
     var coords = [
       this.coords_faradel,
       this.coords_jirakan,
-      this.coords_celestia,
       this.coords_ne,
       this.coords_se,
       this.coords_no,
@@ -92,8 +88,6 @@ export class UniverseComponent implements OnInit {
 			this.listFacts = this.apiService.getFacts("Faradel");
 		} else if (this.selection == "jirakan") {
 			this.listFacts = this.apiService.getFacts("Jirakan");
-		} else if (this.selection == "celestia") {
-			this.listFacts = this.apiService.getFacts("Celestia");
 		} else {
 			this.listFacts = this.apiService.getFacts("Zones");
 		}
