@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 import { RoutesService } from '../../services/routes.service';
 
@@ -24,7 +23,6 @@ export class UniverseComponent implements OnInit {
 	public logoSrc:string;
   public listFacts:any[];
 
-	private sub:any;
   private selection:string;
 
   constructor(private apiService: ApiService, private routesService: RoutesService) {
@@ -34,9 +32,6 @@ export class UniverseComponent implements OnInit {
 
   ngOnInit() {
 		this.selection = "faradel";
-		this.sub = interval(8000).subscribe((val) => {
-			this.changeSelection();
-		});
 		this.logoSrc = "https://via.placeholder.com/200x200";
     this.resizeMap();
 		window.onresize = this.resizeMap;
@@ -90,23 +85,6 @@ export class UniverseComponent implements OnInit {
     });
 	}
 
-	changeSelection() {
-		if (this.selection == "faradel") {
-			this.selection = "jirakan";
-			this.listFacts = this.apiService.getFacts("Jirakan");
-		} else if (this.selection == "jirakan") {
-			this.selection = "celestia";
-			this.listFacts = this.apiService.getFacts("Celestia");
-		} else if (this.selection == "celestia") {
-			this.selection = "zones";
-			this.listFacts = this.apiService.getFacts("Zones");
-		} else {
-			this.selection = "faradel";
-			this.listFacts = this.apiService.getFacts("Faradel");
-		}
-		document.images['map-arlenor'].src='assets/images/map_'+this.selection+'.png';
-  }
-
   setSelection(select:string) {
     document.images['map-arlenor'].src='assets/images/map_'+select+'.png';
 		this.selection = select;
@@ -119,13 +97,5 @@ export class UniverseComponent implements OnInit {
 		} else {
 			this.listFacts = this.apiService.getFacts("Zones");
 		}
-		this.sub.unsubscribe();
-		this.sub = interval(8000).subscribe((val) => {
-			this.changeSelection();
-		});
 	}
-
-	ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
 }

@@ -1,4 +1,4 @@
-<div padding-vert class="head-container">
+<div class="head-container">
 	<div class="map-left">
 		<img class="logo-image" src="https://via.placeholder.com/100x100" alt="">
 		<h1 class="fact-zone" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
@@ -10,7 +10,7 @@
 			<div *ngIf="i < 2" class="fact-text">
 				<h1 class="fact-title">{{ 'UNIVERSE.POINTS' | translate | uppercase }}</h1>
 				<h2 class="fact-title">{{ fact.title | uppercase }}</h2>
-				<p>{{ fact.description }} {{ fact.description }}</p>
+				<p>"{{ fact.description }}"<br>{{ fact.title }}</p>
 			</div>
 		</div>
 	</div>
@@ -25,26 +25,5 @@
 			<area shape='poly' [coords]='coords_no' (click)="setSelection('zones')"/>
 			<area shape='poly' [coords]='coords_so' (click)="setSelection('zones')"/>
 		</map>
-	</div>
-	<ul class="map-selection">
-		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'faradel' }" class="dot" (click)="setSelection('faradel')"></li>
-		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'jirakan' }" class="dot" (click)="setSelection('jirakan')"></li>
-		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'celestia' }" class="dot" (click)="setSelection('celestia')"></li>
-		<div class="dotline"></div>
-		<li [ngClass]="{'active': selection == 'zones' }" class="dot" (click)="setSelection('zones')"></li>
-		<div class="dotline"></div>
-	</ul>
-</div>
-<div separator></div>
-<div padding-vert container class="list-facts-container">
-	<div *ngFor="let fact of listFacts" class="fact-container" routerLink="/universe/{{fact.id}}">
-		<img class="fact-image" src="https://via.placeholder.com/500x300" alt="">
-		<div class="fact-text">
-			<h2 class="fact-title">{{ fact.title | uppercase }}</h2>
-			<p>{{ fact.description }}</p>
-		</div>
 	</div>
 </div>

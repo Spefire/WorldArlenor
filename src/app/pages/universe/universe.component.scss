@@ -3,9 +3,20 @@
 :host {
 		.head-container {
         display: flex;
-				position: relative;
-				box-shadow: 0 -150px 200px $dark-color inset;
 				height: 600px;
+
+				&::after {
+					content: "";
+					position: absolute;
+					opacity: 1.0;
+					top: 90px;
+					left: 0;
+					bottom: 51px;
+					right: 0;
+					z-index: -1;
+
+					box-shadow: 0 -150px 200px $dark-color inset;
+				}
 
 				h1 {
 					font-size: 18px;
@@ -47,9 +58,11 @@
         }
 
         .map-right {
-					width: 60%;
+					width: 65%;
 					max-width: 900px;
 					position: relative;
+					padding-left: 5%;
+					padding-right: 5%;
 					margin: auto 0;
 
           .map-background {
@@ -93,59 +106,5 @@
 						background-color: $light-color;
 					}
 				}
-    }
-
-    .list-facts-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: space-between;
-			justify-content: center;
-			text-align: center;
-      max-width: 1260px;
-
-      .fact-container {
-          position: relative;
-          height: 300px;
-          width: 250px;
-          border: 1px solid $light-secondary-color;
-          color: $secondary-color;
-					background-color: $dark-color;
-
-          margin: 10px;
-          overflow: hidden;
-          cursor: pointer;
-          transition: .5s;
-
-          &:hover {
-            margin-top: 0;
-            margin-bottom: 0;
-            height: 320px;
-            box-shadow: 0px 0px 0px 2px $light-secondary-color;
-          }
-
-          &:hover .fact-text {
-            top: 150px;
-          }
-
-          .fact-image {
-            position: absolute;
-            width: 250px;
-            top: 0;
-            left: 0;
-          }
-
-          .fact-text {
-            position: absolute;
-            height: 200px;
-            top: 100px;
-            background-color: $dark-color;
-						transition: .5s;
-						margin: 10px 0;
-
-            .fact-title {
-              color: $light-secondary-color;
-            }
-          }
-      }
   }
 }
