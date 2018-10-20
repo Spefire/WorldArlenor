@@ -8,12 +8,6 @@ body {
   z-index: 1;
   color: $light-color;
   background-color: $dark-primary-color;
-  background-image: linear-gradient(to right,
-  rgba($dark-color,1),
-  rgba($dark-color,0),
-  rgba($dark-color,0),
-  rgba($dark-color,0),
-  rgba($dark-color,1));
 }
 
 h1 {

@@ -1,0 +1,75 @@
+@import "../../../../styles/variables.scss";
+
+:host {
+	.head-container {
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 500px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 1.0;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			background-position: center;
+			background-size: cover;
+			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8)), url("/assets/images/home_01.png");
+		}
+
+		.head-text {
+			width: 50%;
+			margin: 0;
+			text-align:center;
+		}
+	}
+
+	.light-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 500px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 1.0;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			background-position: center;
+			background-size: cover;
+			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
+		}
+
+		.light-angels {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin: auto 0;
+
+			img {
+				width: 7.5%;
+				height: 100%;
+				cursor: pointer;
+			}
+		}
+
+		.light-text {
+			width: 100%;
+			margin: 0;
+			text-align:center;
+		}
+	}
+}
