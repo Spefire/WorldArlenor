@@ -23,9 +23,12 @@
 			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8)), url("/assets/images/home_01.png");
 		}
 
+		img {
+			height: 400px;
+		}
+
 		.head-text {
 			width: 50%;
-			margin: 0;
 			text-align:center;
 		}
 	}
@@ -67,9 +70,15 @@
 		}
 
 		.light-text {
-			width: 100%;
-			margin: 0;
-			text-align:center;
+			text-align: left;
+
+			p {
+				font-size: 14px;
+				color: $secondary-color;
+				margin: 0;
+				padding: 4px 30px 4px 0;
+				font-style: italic;
+			}
 		}
 	}
 }
