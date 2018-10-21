@@ -1,45 +1,57 @@
 html, body {
   height: 100%;
-  margin: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: 'Noto Serif', serif;
 }
 
 body {
-  margin: 0;
   z-index: 1;
   color: $light-color;
-  background-color: $dark-primary-color;
+	background-color: $dark-primary-color;
 }
 
 h1 {
-	font-size: 50px;
-  color: $light-secondary-color;
+	font-size: 65px;
+	line-height: 65px;
+	font-weight: normal;
+
 	text-transform: uppercase;
+  color: $light-secondary-color;
 	margin: 0;
 }
 
 h2 {
 	font-size: 26px;
-  color: $light-secondary-color;
+	font-weight: normal;
+
 	text-transform: uppercase;
+  color: $light-secondary-color;
 	margin: 0;
 }
 
 h3 {
 	font-size: 20px;
-  color: $light-color;
+	font-family: 'Montserrat', sans-serif;
+
 	text-transform: uppercase;
+  color: $light-color;
 	margin: 0;
 }
 
 h4 {
 	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+
   color: $light-color;
 	margin: 0;
 }
 
 a {
+	font-family: 'Montserrat', sans-serif;
+
+	text-decoration: none;
   color: $light-color;
-  text-decoration: none;
 }
 
 button {

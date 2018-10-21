@@ -1,13 +1,13 @@
 <div class="head-container">
 	<div class="map-left">
 		<img class="zone-image" src="https://via.placeholder.com/100x100" alt="">
-		<h1 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h1>
-		<h1 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h1>
-		<h1 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h1>
-		<h1 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.IMERYS.TITLE' | translate | uppercase }}</h1>
-		<h1 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.KAZADOR.TITLE' | translate | uppercase }}</h1>
-		<h1 class="zone-title" *ngIf="selection=='lumeck'">{{ 'UNIVERSE.LUMECK.TITLE' | translate | uppercase }}</h1>
-		<h1 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h1>
+		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.IMERYS.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.KAZADOR.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='lumeck'">{{ 'UNIVERSE.LUMECK.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h4>
 		<div *ngFor="let fact of listFacts; let i=index">
 			<div *ngIf="i < 2" class="fact-container">
 				<h4>{{ 'UNIVERSE.POINTS' | translate | uppercase }}</h4>
