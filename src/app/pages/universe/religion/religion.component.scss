@@ -33,7 +33,7 @@
 		}
 	}
 
-	.light-container {
+	.entity-container {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -56,7 +56,7 @@
 			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
 		}
 
-		.light-angels {
+		.entity-list {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
@@ -69,7 +69,7 @@
 			}
 		}
 
-		.light-text {
+		.entity-text {
 			text-align: left;
 
 			p {

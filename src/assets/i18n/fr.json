@@ -13,33 +13,7 @@
     "ROLEPLAY": "Jeu de rôles",
     "CHARACTERS": "Personnages",
     "ABOUT": "A Propos"
-  },
-  "BODY": {
-    "WAIT": "Page en cours de construction !"
-  },
-  "FOOTER": {
-    "RESUME": "Le Monde d'Arlénor a été créé en Janvier 2015, et je ne sais pas quoi dire plus... Voici une autre phrase en attendant.",
-    "SEEMORE": "En savoir plus",
-    "LEGACY": "Mentions légales",
-    "ABOUT": "A Propos"
-  },
-  "HOME": {
-    "UNIVERSE": {
-      "TITLE": "L'Univers",
-      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
-      "SEEMORE": "Découvrir"
-    },
-    "ROLEPLAY": {
-      "TITLE": "Le Jeu de rôle",
-      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
-      "SEEMORE": "Oser l'aventure"
-    },
-    "CHARACTERS": {
-      "TITLE": "Les Personnages",
-      "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
-      "SEEMORE": "Vivre leur passé"
-    }
-  },
+	},
   "PAGE": {
     "HOME": {
       "TITLE": "Le Monde d'Arlénor",
@@ -74,27 +48,112 @@
       "DESCRIPTION": "Mentions Légales"
     }
   },
-  "UNIVERSE": {
-		"POINTS": "Point d'intérêt",
-    "FARADEL": {
-      "TITLE": "L'Empire Faradelien"
-    },
-    "JIRAKAN": {
-			"TITLE": "Le Régime Jirakanien"
-		},
-    "IMERYS": {
-			"TITLE": "La Forêt d'Imerys"
-		},
-    "KAZADOR": {
-			"TITLE": "Les Montagnes de Kazador"
-		},
-    "LUMECK": {
-			"TITLE": "L'Île de Lumeck"
-		},
-    "ZONES": {
-			"TITLE": "Les Zones Inexplorées"
-		}
+  "BODY": {
+    "WAIT": "Page en cours de construction !"
   },
+  "FOOTER": {
+    "RESUME": "Le Monde d'Arlénor a été créé en Janvier 2015, et je ne sais pas quoi dire plus... Voici une autre phrase en attendant.",
+    "SEEMORE": "En savoir plus",
+    "LEGACY": "Mentions légales",
+    "ABOUT": "A Propos"
+  },
+  "HOME": {
+    "UNIVERSE": {
+      "TITLE": "L'Univers",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "SEEMORE": "Découvrir"
+    },
+    "ROLEPLAY": {
+      "TITLE": "Le Jeu de rôle",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "SEEMORE": "Oser l'aventure"
+    },
+    "CHARACTERS": {
+      "TITLE": "Les Personnages",
+      "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
+      "SEEMORE": "Vivre leur passé"
+    }
+  },
+  "UNIVERSE": {
+		"WORLD": {
+			"POINTS": "Point d'intérêt",
+			"FARADEL": {
+				"TITLE": "L'Empire Faradelien"
+			},
+			"JIRAKAN": {
+				"TITLE": "Le Régime Jirakanien"
+			},
+			"IMERYS": {
+				"TITLE": "La Forêt d'Imerys"
+			},
+			"KAZADOR": {
+				"TITLE": "Les Montagnes de Kazador"
+			},
+			"LUMECK": {
+				"TITLE": "L'Île de Lumeck"
+			},
+			"ZONES": {
+				"TITLE": "Les Zones Inexplorées"
+			}
+		},
+		"RELIGION": {
+			"SECTION01": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde en y instaurant un équilibre. Pour se faire, Arlénor créa 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
+			"SECTION02": "Quand les anges et démons ont aidé Arlénor lors de la Création, ils laissèrent des résidus de leurs pouvoirs : des cristaux. Et on dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde.",
+			"SECTION03": "Aujourd'hui, des temples d'Arlénor existent un peu partout. Les peuples vénèrent dans chaque temple, la divinité Arlénor et un de ses anges ou démons. La religion se base sur le maintien d'un équilibre entre le Bien et le Mal, et appuie sur le fait qu'il faut autant vénérer les anges que les démons.",
+			"LIGHTKABAL": "La Sainte Cabale",
+			"DARKKABAL": "La Cabale Inversée",
+			"ENTITY1": {
+				"TITLE": "METATRON, l'Ange de l'Unité",
+				"COMMENT": "Chez les good guys, c'est un peu lui le patron.",
+				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
+			},
+			"ENTITY2": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY3": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY4": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY5": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY6": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY7": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY8": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY9": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY10": {
+				"TITLE": "",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			}
+		}
+	},
   "ROLEPLAY": {
     "TITLE": "Jeu de rôles"
   },
