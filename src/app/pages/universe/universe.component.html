@@ -1,16 +1,16 @@
 <div class="head-container">
 	<div class="map-left">
 		<img class="zone-image" src="https://via.placeholder.com/100x100" alt="">
-		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.ARLENOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.FARADEL.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.JIRAKAN.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.IMERYS.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.KAZADOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='lumeck'">{{ 'UNIVERSE.LUMECK.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.ZONES.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.WORLD.ARLENOR.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='lumeck'">{{ 'UNIVERSE.WORLD.LUMECK.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
 		<div *ngFor="let fact of listFacts; let i=index">
 			<div *ngIf="i < 2" class="fact-container">
-				<h4>{{ 'UNIVERSE.POINTS' | translate | uppercase }}</h4>
+				<h4>{{ 'UNIVERSE.WORLD.POINTS' | translate | uppercase }}</h4>
 				<h2>{{ fact.title | uppercase }}</h2>
 				<p class="fact-description">"{{ fact.description }}"<br>{{ fact.title }}</p>
 				<button class="fact-link" routerLink="/universe/{{fact.id}}">+</button>

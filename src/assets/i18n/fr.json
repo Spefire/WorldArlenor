@@ -104,51 +104,101 @@
 			"DARKKABAL": "La Cabale Inversée",
 			"ENTITY1": {
 				"TITLE": "METATRON, l'Ange de l'Unité",
-				"COMMENT": "Chez les good guys, c'est un peu lui le patron.",
+				"COMMENT": "Chez les good guys, c'est un peu lui le patron. FAUT PAS le chercher ! ...mais il est sympa quand même.",
 				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
 			},
 			"ENTITY2": {
-				"TITLE": "",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "RAZIEL, Ange de la Sagesse",
+				"COMMENT": "Chercher la pomme tombée, tu ne dois pas. Trouver le pommier, il faut.",
+				"COMMENTNAME": "Renerald, Ancien fermier de Faradel"
 			},
 			"ENTITY3": {
-				"TITLE": "",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "ZAPHKIEL, Ange de la Connaissance",
+				"COMMENT": "Pokoi diton aboir soaf de con nessence ? Sa n'ydratationne poa sa !",
+				"COMMENTNAME": "Nain random à la sortie d'un bar"
 			},
 			"ENTITY4": {
-				"TITLE": "",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "TSADOKIEL, Ange de la Miséricorde",
+				"COMMENT": "Tsadokiel disait 'Aide ton prochain avec volonté', alors... VIENS M'AIDER A FAIRE LA VAISSELLE, BERNARD !!!",
+				"COMMENTNAME": "Humaine songeant à divorcer"
 			},
 			"ENTITY5": {
-				"TITLE": "",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "SAMAEL, Ange de la Justice",
+				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procés.",
+				"COMMENTNAME": "Quistis, Avocate de Faradel"
 			},
 			"ENTITY6": {
-				"TITLE": "",
+				"TITLE": "MIKAEL, Ange de la Nature",
 				"COMMENT": "",
 				"COMMENTNAME": ""
 			},
 			"ENTITY7": {
-				"TITLE": "",
+				"TITLE": "HANIEL, Ange de la Passion",
 				"COMMENT": "",
 				"COMMENTNAME": ""
 			},
 			"ENTITY8": {
-				"TITLE": "",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "RAPHAEL, Ange du Partage",
+				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire. Cela vous fera 50 crédits la nuit.",
+				"COMMENTNAME": "Bob, Tavernier de Kiranof"
 			},
 			"ENTITY9": {
-				"TITLE": "",
+				"TITLE": "GABRIEL, Ange de la Protection",
 				"COMMENT": "",
 				"COMMENTNAME": ""
 			},
 			"ENTITY10": {
-				"TITLE": "",
+				"TITLE": "SADALFONE, Ange de la Création",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY11": {
+				"TITLE": "SATAN, Démon du Néant",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY12": {
+				"TITLE": "BELZEBTUH, Démon de la Vengeance",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY13": {
+				"TITLE": "LUCIFUGUS, Démon de la Stupidité",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY14": {
+				"TITLE": "ASTAROTH, Démon du Indifférence",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY15": {
+				"TITLE": "ASMODEE, Démon du Cruauté",
+				"COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
+				"COMMENTNAME": "Jeune femme perturbée par une prêtresse"
+			},
+			"ENTITY16": {
+				"TITLE": "BELPHEGOR, Démon du Laideur",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY17": {
+				"TITLE": "BA'AL, Démon du Luxure",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY18": {
+				"TITLE": "ADRAMALEC, Démon du Discorde",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY19": {
+				"TITLE": "LILITH, Démon du Instabilité",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY20": {
+				"TITLE": "NAHEMAR, Démon du Rêverie",
 				"COMMENT": "",
 				"COMMENTNAME": ""
 			}

@@ -26,12 +26,21 @@ export class ReligionComponent {
 		this.select = newSelection;
 		if (this.select <= 10) {
 			this.translate.get('UNIVERSE.RELIGION.LIGHTKABAL').subscribe((res: string) => {
-				this.entityKabal = this.translate.instant(res);
+				this.entityKabal = res;
 			});
 		} else {
 			this.translate.get('UNIVERSE.RELIGION.DARKKABAL').subscribe((res: string) => {
-				this.entityKabal = this.translate.instant(res);
+				this.entityKabal = res;
 			});
 		}
+		this.translate.get('UNIVERSE.RELIGION.ENTITY'+this.select+'.TITLE').subscribe((res: string) => {
+			this.entityTitle = res;
+		});
+		this.translate.get('UNIVERSE.RELIGION.ENTITY'+this.select+'.COMMENT').subscribe((res: string) => {
+			this.entityComment = res;
+		});
+		this.translate.get('UNIVERSE.RELIGION.ENTITY'+this.select+'.COMMENTNAME').subscribe((res: string) => {
+			this.entityCommentName = res;
+		});
 	}
 }

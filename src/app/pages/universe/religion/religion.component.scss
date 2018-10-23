@@ -6,7 +6,7 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		height: 500px;
+		height: 550px;
 
 		&::after {
 			content: "";
@@ -39,7 +39,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		height: 500px;
+		height: 550px;
 
 		&::after {
 			content: "";
@@ -71,6 +71,7 @@
 
 		.entity-text {
 			text-align: left;
+			max-width: 50%;
 
 			p {
 				font-size: 14px;
