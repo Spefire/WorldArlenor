@@ -19,8 +19,6 @@ export class FooterComponent {
 			var currentLocation = location.path();
 			this.route = currentLocation.split("/")[1];
 			this.subroute = currentLocation.split("/")[2];
-			console.log(this.route);
-			console.log(this.subroute);
 			this.bigfooter = true;
 			if (this.route == undefined) this.bigfooter = false;
 			if (this.route == "universe" && this.subroute == undefined) this.bigfooter = false;

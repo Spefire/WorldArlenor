@@ -10,7 +10,14 @@ import { RoutesService } from '../../../services/routes.service';
 })
 export class ReligionComponent {
 
+	public select:number;
+
   constructor(private routesService: RoutesService, private route: ActivatedRoute) {
-    this.routesService.setTitleMetas("RELIGION");
-  }
+		this.routesService.setTitleMetas("RELIGION");
+		this.select = 1;
+	}
+
+	changeSelection(newSelection:number) {
+		this.select = newSelection;
+	}
 }
