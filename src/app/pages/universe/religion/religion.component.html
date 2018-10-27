@@ -1,11 +1,11 @@
-<div class="head-container">
-	<img src="assets/images/symboles/angel.png" alt="">
-	<div class="head-text">
-		<h1>{{ 'PAGE.RELIGION.TITLE' | translate | uppercase }}</h1>
-		<p>{{ 'UNIVERSE.RELIGION.SECTION01' | translate }}<br><br>{{ 'UNIVERSE.RELIGION.SECTION02' | translate }}<br><br>{{ 'UNIVERSE.RELIGION.SECTION03' | translate }}</p>
-	</div>
-	<img src="assets/images/symboles/demon.png" alt="">
-</div>
+<head-universe
+	title="{{ 'PAGE.RELIGION.TITLE' | translate | uppercase }}"
+	section01="{{ 'UNIVERSE.RELIGION.SECTION01' | translate }}"
+	section02="{{ 'UNIVERSE.RELIGION.SECTION02' | translate }}"
+	section03="{{ 'UNIVERSE.RELIGION.SECTION03' | translate }}"
+	imgLeft="assets/images/symboles/angel.png"
+	imgRight="assets/images/symboles/demon.png">
+</head-universe>
 <div class="entity-container">
 	<div class="entity-list">
 		<img *ngIf="select != 1" src="assets/images/symboles/angel_01.png" alt="" (click)="changeSelection(1)">

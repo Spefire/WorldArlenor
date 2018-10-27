@@ -26,6 +26,10 @@
     "RELIGION": {
       "TITLE": "La Religion",
       "DESCRIPTION": "La Religion"
+		},
+		"CRYSTALS": {
+      "TITLE": "La Magie des Cristaux",
+      "DESCRIPTION": "La Magie des Cristaux"
     },
     "FACT": {
       "TITLE": "L'Article",
@@ -201,6 +205,23 @@
 				"TITLE": "NAHEMAR, Démon du Rêverie",
 				"COMMENT": "",
 				"COMMENTNAME": ""
+			}
+		},
+		"CRYSTALS": {
+			"SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et Démons lors de la création du monde.",
+			"SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux.",
+			"SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant une certaine quantité de leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
+			"PROPERTIES": {
+				"SUBTITLE": "Le cristal arlénien",
+				"TITLE": "Propriétés connues par tous",
+				"01": "Ils mesurent entre 1 cm et 2 m.",
+				"02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
+				"03": "Un cristal est très solide, résistant.",
+				"04": "Un cristal est caractérisé par un rang S, A, B, C ou D en fonction de la puissance, et de l'énergie vitale demandée.",
+				"05": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
+				"06": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
+				"07": "Seuls les cristalliens (métier de haut rang) peuvent les retravailler en leur donnant une forme précise.",
+				"08": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
 			}
 		}
 	},

@@ -21,6 +21,7 @@ import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LegacyComponent } from './pages/legacy/legacy.component';
+import { HeadUniverseComponent } from './components/head-universe/head-universe.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -38,7 +39,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RoleplayComponent,
     CharactersComponent,
     AboutComponent,
-    LegacyComponent,
+		LegacyComponent,
+		HeadUniverseComponent,
     HeaderComponent,
     FooterComponent
   ],
