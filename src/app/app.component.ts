@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '../../node_modules/@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,11 @@ import { TranslateService } from '../../node_modules/@ngx-translate/core';
 })
 export class AppComponent {
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('fr');
+    this.translate.use('fr');
+  }
+
+  onDeactivate() {
+    window.scroll(0, 0);
   }
 }

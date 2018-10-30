@@ -1,7 +1,10 @@
 export class Fact {
 
   public id: number;
-  public name?: string;
+  public title?: string;
+	public zone?: string;
+	public logoSrc?:string;
+	public backgroundSrc?:string;
 
   constructor(jsonStr: string) {
     let jsonObj: any = JSON.parse(jsonStr);
@@ -14,50 +17,32 @@ export class Fact {
 export const facts = [
   {
     "id": 0,
-    "title": "La Création",
-    "type": "Religion",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
+    "title": "La Cité de Faradel",
+    "zone": "Faradel",
+    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
     "id": 1,
-    "title": "La Magie des cristaux",
-    "type": "Technologie",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+    "title": "La Tour du Savoir",
+    "zone": "Faradel",
+    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
   },
   {
     "id": 2,
-    "title": "La Création",
-    "type": "Religion",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
+    "title": "Le Commerce de Jirakan",
+    "zone": "Jirakan",
+    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
     "id": 3,
-    "title": "La Magie des cristaux",
-    "type": "Technologie",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+    "title": "Le Grand Massacre",
+    "zone": "Jirakan",
+    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
   },
   {
     "id": 4,
-    "title": "La Création",
-    "type": "Religion",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
-  },
-  {
-    "id": 5,
-    "title": "La Magie des cristaux",
-    "type": "Technologie",
+    "title": "L'Ile de Lumeck",
+    "zone": "Shivazen",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  },
-  {
-    "id": 6,
-    "title": "La Création",
-    "type": "Religion",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
-  },
-  {
-    "id": 7,
-    "title": "La Magie des cristaux",
-    "type": "Technologie",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  }
+	}
 ]

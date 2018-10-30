@@ -1,51 +1,93 @@
+@import "../../../styles/variables.scss";
+
 :host {
+  .header-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     height: 50px;
-    background-color: lightgrey;
+    background-color: $dark-color;
 
     a {
-        display: inline-block;
-        position: relative;
-        height: 50px;
-        line-height: 50px;
-        padding: 0 25px;
+      display: inline-block;
+      position: relative;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 15px;
+			transition: .5s;
 
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            width: 100%;
-            background: black;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: $dark-secondary-color;
 
-            transform: scaleX(0);
+        transform: scaleX(0);
+        transition: transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);
+      }
 
-            transition: transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);;
-        }
-
-        &.active {
-            &:after {
-                transform: scaleX(1);
-            }
-        }
+      &.active &:after {
+				transform: scaleX(1);
+      }
     }
 
-    .header-logo {
+    .header-main {
+      display: flex;
+      align-items: center;
+
+      .header-logo {
         cursor: pointer;
+      }
+
+      .header-title {
+        color: $light-secondary-color;
+      }
+    }
+  }
+
+  .header-subsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    height: 40px;
+    background-color: $dark-color;
+
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
+
+    &.active {
+      transform: translateY(0%) scaleY(1);
     }
 
-    .header-section {
-        display: flex;
-        align-items: center;
-        min-width: 25%;
-
-        &.section-right {
-            display: inline-block;
-            text-align: right;
-        }
+    a {
+      display: inline-block;
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
     }
+
+    .header-subnav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      text-align: center;
+      font-size: 14px;
+      width: 100%;
+
+      .header-subtitle {
+				border-left: 1px solid $dark-secondary-color;
+        border-right: 1px solid $dark-secondary-color;
+			}
+    }
+  }
 }

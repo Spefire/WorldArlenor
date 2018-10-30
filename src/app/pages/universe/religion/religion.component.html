@@ -1,0 +1,59 @@
+<head-universe
+	title="{{ 'PAGE.RELIGION.TITLE' | translate | uppercase }}"
+	section01="{{ 'UNIVERSE.RELIGION.SECTION01' | translate }}"
+	section02="{{ 'UNIVERSE.RELIGION.SECTION02' | translate }}"
+	section03="{{ 'UNIVERSE.RELIGION.SECTION03' | translate }}"
+	imgLeft="assets/images/symboles/angel.png"
+	imgRight="assets/images/symboles/demon.png">
+</head-universe>
+<div class="entity-container">
+	<div class="entity-list">
+		<img *ngIf="select != 1" src="assets/images/symboles/angel_01.png" alt="" (click)="changeSelection(1)">
+		<img *ngIf="select == 1" src="assets/images/symboles/angel_01_selected.png" alt="">
+		<img *ngIf="select != 2" src="assets/images/symboles/angel_02.png" alt="" (click)="changeSelection(2)">
+		<img *ngIf="select == 2" src="assets/images/symboles/angel_02_selected.png" alt="">
+		<img *ngIf="select != 3" src="assets/images/symboles/angel_03.png" alt="" (click)="changeSelection(3)">
+		<img *ngIf="select == 3" src="assets/images/symboles/angel_03_selected.png" alt="">
+		<img *ngIf="select != 4" src="assets/images/symboles/angel_04.png" alt="" (click)="changeSelection(4)">
+		<img *ngIf="select == 4" src="assets/images/symboles/angel_04_selected.png" alt="">
+		<img *ngIf="select != 5" src="assets/images/symboles/angel_05.png" alt="" (click)="changeSelection(5)">
+		<img *ngIf="select == 5" src="assets/images/symboles/angel_05_selected.png" alt="">
+		<img *ngIf="select != 6" src="assets/images/symboles/angel_06.png" alt="" (click)="changeSelection(6)">
+		<img *ngIf="select == 6" src="assets/images/symboles/angel_06_selected.png" alt="">
+		<img *ngIf="select != 7" src="assets/images/symboles/angel_07.png" alt="" (click)="changeSelection(7)">
+		<img *ngIf="select == 7" src="assets/images/symboles/angel_07_selected.png" alt="">
+		<img *ngIf="select != 8" src="assets/images/symboles/angel_08.png" alt="" (click)="changeSelection(8)">
+		<img *ngIf="select == 8" src="assets/images/symboles/angel_08_selected.png" alt="">
+		<img *ngIf="select != 9" src="assets/images/symboles/angel_09.png" alt="" (click)="changeSelection(9)">
+		<img *ngIf="select == 9" src="assets/images/symboles/angel_09_selected.png" alt="">
+		<img *ngIf="select != 10" src="assets/images/symboles/angel_10.png" alt="" (click)="changeSelection(10)">
+		<img *ngIf="select == 10" src="assets/images/symboles/angel_10_selected.png" alt="">
+	</div>
+	<div class="entity-text">
+		<h4>{{ entityKabal | uppercase }}</h4>
+		<h2>{{ entityTitle }}</h2>
+		<p>"{{ entityComment }}"<br>{{ entityCommentName }}</p>
+	</div>
+	<div class="entity-list">
+		<img *ngIf="select != 11" src="assets/images/symboles/demon_01.png" alt="" (click)="changeSelection(11)">
+		<img *ngIf="select == 11" src="assets/images/symboles/demon_01_selected.png" alt="">
+		<img *ngIf="select != 12" src="assets/images/symboles/demon_02.png" alt="" (click)="changeSelection(12)">
+		<img *ngIf="select == 12" src="assets/images/symboles/demon_02_selected.png" alt="">
+		<img *ngIf="select != 13" src="assets/images/symboles/demon_03.png" alt="" (click)="changeSelection(13)">
+		<img *ngIf="select == 13" src="assets/images/symboles/demon_03_selected.png" alt="">
+		<img *ngIf="select != 14" src="assets/images/symboles/demon_04.png" alt="" (click)="changeSelection(14)">
+		<img *ngIf="select == 14" src="assets/images/symboles/demon_04_selected.png" alt="">
+		<img *ngIf="select != 15" src="assets/images/symboles/demon_05.png" alt="" (click)="changeSelection(15)">
+		<img *ngIf="select == 15" src="assets/images/symboles/demon_05_selected.png" alt="">
+		<img *ngIf="select != 16" src="assets/images/symboles/demon_06.png" alt="" (click)="changeSelection(16)">
+		<img *ngIf="select == 16" src="assets/images/symboles/demon_06_selected.png" alt="">
+		<img *ngIf="select != 17" src="assets/images/symboles/demon_07.png" alt="" (click)="changeSelection(17)">
+		<img *ngIf="select == 17" src="assets/images/symboles/demon_07_selected.png" alt="">
+		<img *ngIf="select != 18" src="assets/images/symboles/demon_08.png" alt="" (click)="changeSelection(18)">
+		<img *ngIf="select == 18" src="assets/images/symboles/demon_08_selected.png" alt="">
+		<img *ngIf="select != 19" src="assets/images/symboles/demon_09.png" alt="" (click)="changeSelection(19)">
+		<img *ngIf="select == 19" src="assets/images/symboles/demon_09_selected.png" alt="">
+		<img *ngIf="select != 20" src="assets/images/symboles/demon_10.png" alt="" (click)="changeSelection(20)">
+		<img *ngIf="select == 20" src="assets/images/symboles/demon_10_selected.png" alt="">
+	</div>
+</div>

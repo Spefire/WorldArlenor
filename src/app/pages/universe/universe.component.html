@@ -1,20 +1,34 @@
-<div style="text-align:center">
-  <div container padding-vert class="head-container">
-    <img class="title-background" src="https://via.placeholder.com/1000x400" alt="">
-    <div class="title-container">
-        <img class="logo-image" src="https://via.placeholder.com/500x200" alt="">
-        <h2>{{ listFacts[0].title | translate }}</h2>
-        <p>{{ listFacts[0].description | translate }}</p>
-        <button routerLink="/universe/{{listFacts[0].id}}">{{ 'UNIVERSE.SEEMORE' | translate | uppercase }}</button>
-    </div>
-  </div>
-  <div separator></div>
-  <div container padding-vert class="list-facts-container">
-    <div *ngFor="let fact of listFacts | slice:1" class="fact-container" routerLink="/universe/{{fact.id}}">
-      <img class="fact-image" src="https://via.placeholder.com/500x200" alt="">
-      <h2>{{ fact.title }}</h2>
-      <h3>{{ fact.type }}</h3>
-      <p>{{ fact.description }}</p>
-    </div>
-  </div>
+<div class="main-container">
+	<div class="map-left">
+		<img *ngIf="listFacts.length > 0" class="zone-image" src="https://via.placeholder.com/100x100" alt="">
+		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.WORLD.ARLENOR.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
+		<div *ngIf="listFacts.length == 0" class="fact-container">
+			<h2>{{ 'UNIVERSE.WORLD.NOTFOUND' | translate | uppercase }}</h2>
+		</div>
+		<div *ngFor="let fact of listFacts; let i=index">
+			<div *ngIf="i < 2" class="fact-container">
+				<h4>{{ 'UNIVERSE.WORLD.POINTS' | translate | uppercase }}</h4>
+				<h2>{{ fact.title | uppercase }}</h2>
+				<p class="fact-description">"{{ fact.description }}"<br>{{ fact.title }}</p>
+				<button class="fact-link" routerLink="/universe/{{fact.id}}">+</button>
+			</div>
+		</div>
+	</div>
+	<div class="map-right">
+		<img id="map-arlenor" class="map-background" src="assets/images/map_faradel.png" alt="" usemap="#map-areas">
+		<map name="map-areas" id="map-areas">
+			<area shape='poly' [coords]='coords_faradel' (click)="setSelection('faradel')"/>
+			<area shape='poly' [coords]='coords_jirakan' (click)="setSelection('jirakan')"/>
+			<area shape='poly' [coords]='coords_imerys' (click)="setSelection('imerys')"/>
+			<area shape='poly' [coords]='coords_kazador' (click)="setSelection('kazador')"/>
+			<area shape='poly' [coords]='coords_shivazen' (click)="setSelection('shivazen')"/>
+			<area shape='poly' [coords]='coords_zones' (click)="setSelection('zones')"/>
+		</map>
+	</div>
 </div>

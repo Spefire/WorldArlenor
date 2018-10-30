@@ -1,74 +1,113 @@
+@import "../../../styles/variables.scss";
+
 :host {
+  .selection-container {
+    display: flex;
+		flex-direction: column;
+		align-items: center;
 
-    .head-container {
-        position: relative;
-        height: 250px;
+    position: absolute;
+		top: 50%;
+		right: 5%;
+    transform: translateY(-50%);
 
-        &.big-head {
-            height: 400px;
-        }
+		.dot {
+			display: inline-block;
+			height: 15px;
+			width: 15px;
+			margin: 0;
+			padding: 3px;
+			cursor: pointer;
 
-        .title-background {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            //max-width: 600px;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            margin-left: auto;
-            margin-right: auto;
-        }
+			background-color: none;
+			border-radius: 50%;
+			border: 1px solid $light-color;
+			transition: 1.0s ease;
 
-        .title-container {
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            width: 25%;
-            text-align: left;
-            transform: translateX(-50%) translateY(-50%);
+			&.active {
+				background-clip: content-box;
+				background-color: $light-secondary-color;
+			}
+		}
 
-            &.inverse-container {
-                left: auto;
-                right: 25%;
-                text-align: right;
-                transform: translateX(50%) translateY(-50%);
-            }
+		.dotline {
+			height: 50px;
+			width: 1px;
+			background-color: $light-color;
+		}
+  }
 
-            .logo-image {
-                height: 100px;
-                width: 250px;
-                border: 1px solid black;
-            }
-        }
-    }
+	.head-container {
+			opacity: 0;
+			visibility: hidden;
+			transition: 1.0s ease;
 
-    .list-facts-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        justify-content: center;
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
 
-        .fact-container {
-            width: 250px;
-            height: 300px;
-            border: 1px solid rgba(0,0,0, 0.2);
-            border-radius: 10px;
-            box-shadow: 5px 5px rgba(0,0,0, 0.2);
+			&::after {
+				content: "";
+				position: absolute;
+				opacity: 1.0;
+				top: 50px;
+				left: 0;
+				bottom: 51px;
+				right: 0;
+				z-index: -1;
 
-            margin: 10px;
-            overflow: hidden;
-            cursor: pointer;
+				background-position: center;
+				background-size: cover;
+			}
 
-            &:hover {
-                background-color: rgba(0,0,0, 0.1);
-            }
+			&.container01::after {
+				background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+				url("/assets/images/home_01.png");
+			}
 
-            .fact-image {
-                height: 100px;
-                width: 250px;
-            }
-        }
-    }
+			&.container02::after {
+				background-image: linear-gradient(-45deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+				url("/assets/images/home_02.png");
+			}
+
+			&.container03::after {
+				background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+				url("/assets/images/home_03.png");
+			}
+
+			.title-background {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					right: 0;
+					z-index: -1;
+					margin-left: auto;
+					margin-right: auto;
+			}
+
+			.title-container {
+					position: absolute;
+					top: 50%;
+					left: 25%;
+					width: 35%;
+					text-align: left;
+					transform: translateX(-35%) translateY(-50%);
+
+					&.inversed-container {
+							left: auto;
+							right: 25%;
+							text-align: right;
+							transform: translateX(35%) translateY(-50%);
+					}
+
+					.logo-image {
+							height: 100px;
+							width: 250px;
+							border: 1px solid $dark-color;
+					}
+			}
+	}
 }

@@ -1,63 +1,79 @@
+@import "../../../styles/variables.scss";
+
 :host {
+	.main-container {
+		display: flex;
 
-    .head-container {
-        position: relative;
-        height: 250px;
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 1.0;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
 
-        .title-background {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            //max-width: 600px;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            margin-left: auto;
-            margin-right: auto;
-        }
+			background-position: center;
+			background-size: cover;
+			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
+		}
 
-        .title-container {
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            width: 25%;
-            text-align: left;
-            transform: translateX(-50%) translateY(-50%);
+		.map-left {
+			width: 35%;
+			text-align: left;
+			padding-left: 5%;
+			margin: auto 0;
 
-            .logo-image {
-                height: 100px;
-                width: 250px;
-                border: 1px solid black;
-            }
-        }
-    }
+			.zone-image {
+				height: 100px;
+				width: 100px;
+				border: 1px solid $dark-color;
+			}
 
-    .list-facts-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        justify-content: center;
+			.zone-title {
+				font-size: 32px;
+				line-height: 32px;
+			}
 
-        .fact-container {
-            width: 250px;
-            height: 300px;
-            border: 1px solid rgba(0,0,0, 0.2);
-            border-radius: 10px;
-            box-shadow: 5px 5px rgba(0,0,0, 0.2);
+			.fact-container {
+				position: relative;
+				margin: 25px 0;
 
-            margin: 10px;
-            overflow: hidden;
-            cursor: pointer;
+				.fact-description {
+					font-size: 14px;
+					color: $secondary-color;
+					margin: 0;
+					padding: 4px 30px 4px 0;
+					font-style: italic;
+				}
 
-            &:hover {
-                background-color: rgba(0,0,0, 0.1);
-            }
+				.fact-link {
+					position: absolute;
+					bottom: 0;
+					right: 0;
 
-            .fact-image {
-                height: 100px;
-                width: 250px;
-            }
-        }
-    }
+					font-size: 20px;
+					font-weight: bold;
+					border-radius: 50%;
+					padding: 2px 8px;
+				}
+			}
+		}
+
+		.map-right {
+			width: 65%;
+			max-width: 800px;
+			position: relative;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin: auto 0;
+
+			.map-background {
+				height: auto;
+				width: 100%;
+				margin: auto 0;
+			}
+		}
+  }
 }

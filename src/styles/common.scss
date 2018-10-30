@@ -1,6 +1,7 @@
 [separator] {
-    height: 1px;
-    background-color: black;
+  height: 6px;
+  border-top : 5px solid $dark-secondary-color;
+  border-bottom: 1px solid $light-secondary-color;
 }
 
 [container] {
@@ -10,11 +11,6 @@
 }
 
 [padding-vert] {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.imgWait {
-    height: 400px;
-    width: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

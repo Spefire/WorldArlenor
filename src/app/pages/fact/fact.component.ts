@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { Title, Meta } from '@angular/platform-browser';
-import { ApiService } from '../../services/api.service';
 import { Fact } from '../../models/fact.model';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../../services/api.service';
+import { RoutesService } from '../../services/routes.service';
 
 @Component({
   selector: 'app-fact',
   templateUrl: './fact.component.html',
   styleUrls: ['./fact.component.scss'],
-  providers: [ApiService]
+  providers: [ApiService, RoutesService]
 })
 export class FactComponent implements OnInit {
 
   public fact:Fact;
 
-  constructor(private titleService: Title, private meta: Meta, translate: TranslateService, private apiService: ApiService, private route: ActivatedRoute) {
-    this.titleService.setTitle(translate.instant('PAGE.FACT.TITLE'));
-    this.meta.updateTag({ name: 'description', content: translate.instant('PAGE.FACT.DESCRIPTION') });
+  constructor(private apiService: ApiService, private routesService: RoutesService, private route: ActivatedRoute) {
+    this.routesService.setTitleMetas("FACT");
   }
 
   ngOnInit() {
@@ -26,7 +24,9 @@ export class FactComponent implements OnInit {
 
   getFact(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.fact = this.apiService.getFact(id);
+		this.fact = this.apiService.getFact(id);
+		this.fact.logoSrc = "https://via.placeholder.com/200x200";
+		this.fact.backgroundSrc = "https://via.placeholder.com/1000x400";
   }
 
 }

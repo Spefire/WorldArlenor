@@ -1,63 +1,231 @@
 {
   "HEADER": {
-    "TITLE": "Le Monde d'Arlénor",
-    "NAV": {
-      "HOME": "Univers",
-      "ROLEPLAY": "Jeu de rôles",
-      "CHARACTERS": "Personnages",
-      "ABOUT" : "A propos"
-    }
-  },
-  "BODY": {
-    "WAIT": "Page en cours de construction !"
-  },
-  "HOME": {
+    "HOME": "Le Monde d'Arlénor",
     "UNIVERSE": {
-      "TITLE": "L'univers du Monde d'Arlénor",
-      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
-      "SEEMORE": "En lire davantage"
+      "MAIN": "Univers",
+      "SECTION00": "Le Monde",
+      "SECTION01": "La Religion",
+      "SECTION02": "La Magie des cristaux",
+      "SECTION03": "Les Peuples",
+      "SECTION04": "L'Île Célestia",
+      "SECTION05": "Le Cercle des mages"
     },
-    "ROLEPLAY": {
-      "TITLE": "Le jeu de rôle",
-      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
-      "SEEMORE": "Oser l'aventure"
-    },
-    "CHARACTERS": {
-      "TITLE": "Les personnages",
-      "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
-      "SEEMORE": "Vivre leur passé"
-    }
-  },
+    "ROLEPLAY": "Jeu de rôles",
+    "CHARACTERS": "Personnages",
+    "ABOUT": "A Propos"
+	},
   "PAGE": {
     "HOME": {
       "TITLE": "Le Monde d'Arlénor",
       "DESCRIPTION": "Le Monde d'Arlénor"
     },
     "UNIVERSE": {
-      "TITLE": "L'univers",
-      "DESCRIPTION": "L'univers'"
+      "TITLE": "L'Univers",
+      "DESCRIPTION": "L'Univers"
+    },
+    "RELIGION": {
+      "TITLE": "La Religion",
+      "DESCRIPTION": "La Religion"
+		},
+		"CRYSTALS": {
+      "TITLE": "La Magie des Cristaux",
+      "DESCRIPTION": "La Magie des Cristaux"
     },
     "FACT": {
-      "TITLE": "Un article",
-      "DESCRIPTION": "Un article"
+      "TITLE": "L'Article",
+      "DESCRIPTION": "L'Article"
     },
     "ROLEPLAY": {
-      "TITLE": "Le jeu de rôle",
-      "DESCRIPTION": "Le jeu de rôle"
+      "TITLE": "Le Jeu de rôle",
+      "DESCRIPTION": "Le Jeu de rôle"
     },
     "CHARACTERS": {
-      "TITLE": "Les personnages",
-      "DESCRIPTION": "Les personnages"
+      "TITLE": "Les Personnages",
+      "DESCRIPTION": "Les Personnages"
     },
     "ABOUT": {
-      "TITLE": "A propos",
-      "DESCRIPTION": "A propos"
+      "TITLE": "A Propos",
+      "DESCRIPTION": "A Propos"
+    },
+    "LEGACY": {
+      "TITLE": "Mentions Légales",
+      "DESCRIPTION": "Mentions Légales"
+    }
+  },
+  "BODY": {
+    "WAIT": "Page en cours de construction !"
+  },
+  "FOOTER": {
+    "RESUME": "Le Monde d'Arlénor a été créé en Janvier 2015, et je ne sais pas quoi dire plus... Voici une autre phrase en attendant.",
+    "SEEMORE": "En savoir plus",
+    "LEGACY": "Mentions légales",
+    "ABOUT": "A Propos"
+  },
+  "HOME": {
+    "UNIVERSE": {
+      "TITLE": "L'Univers",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "SEEMORE": "Découvrir"
+    },
+    "ROLEPLAY": {
+      "TITLE": "Le Jeu de rôle",
+      "RESUME": "Vivez l'aventure de jeunes personnes, découvrant la notion du Destin et de l'effet papillon...",
+      "SEEMORE": "Momentanément indisponible"
+    },
+    "CHARACTERS": {
+      "TITLE": "Les Personnages",
+      "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
+      "SEEMORE": "Momentanément indisponible"
     }
   },
   "UNIVERSE": {
-    "TITLE": "Univers",
-    "SEEMORE": "En savoir plus"
-  },
+		"WORLD": {
+			"POINTS": "Point d'intérêt",
+			"NOTFOUND": "Données encore inconnues",
+			"FARADEL": {
+				"TITLE": "L'Empire Faradelien"
+			},
+			"JIRAKAN": {
+				"TITLE": "Le Régime Jirakanien"
+			},
+			"IMERYS": {
+				"TITLE": "La Forêt d'Imerys"
+			},
+			"KAZADOR": {
+				"TITLE": "Les Montagnes de Kazador"
+			},
+			"SHIVAZEN": {
+				"TITLE": "La Mer de Shivazen"
+			},
+			"ZONES": {
+				"TITLE": "Les Zones Inexplorées"
+			}
+		},
+		"RELIGION": {
+			"SECTION01": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde en y instaurant un équilibre. Pour se faire, Arlénor créa 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
+			"SECTION02": "Quand les anges et démons ont aidé Arlénor lors de la Création, ils laissèrent des résidus de leurs pouvoirs : des cristaux. Et on dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde.",
+			"SECTION03": "Aujourd'hui, des temples d'Arlénor existent un peu partout. Les peuples vénèrent dans chaque temple, la divinité Arlénor et un de ses anges ou démons. La religion se base sur le maintien d'un équilibre entre le Bien et le Mal, et appuie sur le fait qu'il faut autant vénérer les anges que les démons.",
+			"LIGHTKABAL": "La Sainte Cabale",
+			"DARKKABAL": "La Cabale Inversée",
+			"ENTITY1": {
+				"TITLE": "METATRON, l'Ange de l'Unité",
+				"COMMENT": "Chez les good guys, c'est un peu lui le patron. FAUT PAS le chercher ! ...mais il est sympa quand même.",
+				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
+			},
+			"ENTITY2": {
+				"TITLE": "RAZIEL, Ange de la Sagesse",
+				"COMMENT": "Chercher la pomme tombée, tu ne dois pas. Trouver le pommier, il faut.",
+				"COMMENTNAME": "Renerald, Ancien fermier de Faradel"
+			},
+			"ENTITY3": {
+				"TITLE": "ZAPHKIEL, Ange de la Connaissance",
+				"COMMENT": "Pokoi diton aboir soaf de con nessence ? Sa n'ydratationne poa sa !",
+				"COMMENTNAME": "Nain random à la sortie d'un bar"
+			},
+			"ENTITY4": {
+				"TITLE": "TSADOKIEL, Ange de la Miséricorde",
+				"COMMENT": "Tsadokiel disait 'Aide ton prochain avec volonté', alors... VIENS M'AIDER A FAIRE LA VAISSELLE, BERNARD !!!",
+				"COMMENTNAME": "Humaine songeant à divorcer"
+			},
+			"ENTITY5": {
+				"TITLE": "SAMAEL, Ange de la Justice",
+				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procés.",
+				"COMMENTNAME": "Quistis, Avocate de Faradel"
+			},
+			"ENTITY6": {
+				"TITLE": "MIKAEL, Ange de la Nature",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY7": {
+				"TITLE": "HANIEL, Ange de la Passion",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY8": {
+				"TITLE": "RAPHAEL, Ange du Partage",
+				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire. Cela vous fera 50 crédits la nuit.",
+				"COMMENTNAME": "Bob, Tavernier de Kiranof"
+			},
+			"ENTITY9": {
+				"TITLE": "GABRIEL, Ange de la Protection",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY10": {
+				"TITLE": "SADALFONE, Ange de la Création",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY11": {
+				"TITLE": "SATAN, Démon du Néant",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY12": {
+				"TITLE": "BELZEBTUH, Démon de la Vengeance",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY13": {
+				"TITLE": "LUCIFUGUS, Démon de la Stupidité",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY14": {
+				"TITLE": "ASTAROTH, Démon du Indifférence",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY15": {
+				"TITLE": "ASMODEE, Démon du Cruauté",
+				"COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
+				"COMMENTNAME": "Jeune femme perturbée par une prêtresse"
+			},
+			"ENTITY16": {
+				"TITLE": "BELPHEGOR, Démon du Laideur",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY17": {
+				"TITLE": "BA'AL, Démon du Luxure",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY18": {
+				"TITLE": "ADRAMALEC, Démon du Discorde",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY19": {
+				"TITLE": "LILITH, Démon du Instabilité",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			},
+			"ENTITY20": {
+				"TITLE": "NAHEMAR, Démon du Rêverie",
+				"COMMENT": "",
+				"COMMENTNAME": ""
+			}
+		},
+		"CRYSTALS": {
+			"SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et Démons lors de la création du monde.",
+			"SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux.",
+			"SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant une certaine quantité de leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
+			"PROPERTIES": {
+				"SUBTITLE": "Le cristal arlénien",
+				"TITLE": "Propriétés connues par tous",
+				"01": "Ils mesurent entre 1 cm et 2 m.",
+				"02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
+				"03": "Un cristal est très solide, résistant.",
+				"04": "Un cristal est caractérisé par un rang S, A, B, C ou D en fonction de la puissance, et de l'énergie vitale demandée.",
+				"05": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
+				"06": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
+				"07": "Seuls les cristalliens (métier de haut rang) peuvent les retravailler en leur donnant une forme précise.",
+				"08": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
+			}
+		}
+	},
   "ROLEPLAY": {
     "TITLE": "Jeu de rôles"
   },
@@ -65,6 +233,12 @@
     "TITLE": "Personnages"
   },
   "ABOUT": {
-    "TITLE": "A propos"
+    "TITLE": "A Propos"
+  },
+  "LEGACY": {
+    "TITLE": "Mentions Légales",
+    "STATUT": "Statut du propriétaire : <strong>Particulier</strong>",
+    "HOST": "<strong>Hébergeur OVH<br/>2 rue Kellermann<br/>59100 ROUBAIX – France</strong>",
+    "CONTACT": "Pour contacter cet hébergeur, rendez-vous à l’adresse suivante :"
   }
 }

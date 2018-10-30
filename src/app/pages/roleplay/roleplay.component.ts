@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { Title, Meta } from '@angular/platform-browser';
+import { RoutesService } from '../../services/routes.service';
 
 @Component({
   selector: 'app-roleplay',
   templateUrl: './roleplay.component.html',
-  styleUrls: ['./roleplay.component.scss']
+  styleUrls: ['./roleplay.component.scss'],
+  providers: [RoutesService]
 })
 export class RoleplayComponent implements OnInit {
 
-  constructor(private titleService: Title, private meta: Meta, translate: TranslateService) {
-    this.titleService.setTitle(translate.instant('PAGE.ROLEPLAY.TITLE'));
-    this.meta.updateTag({ name: 'description', content: translate.instant('PAGE.ROLEPLAY.DESCRIPTION') });
+  constructor(private routesService: RoutesService) {
+    this.routesService.setTitleMetas("ROLEPLAY");
   }
 
   ngOnInit() {

@@ -1,4 +1,8 @@
-<div style="text-align:center">
-  <h1>{{ fact.title }}</h1>
-  <p>{{ fact.description }}</p>
+<div padding-vert class="head-container">
+	<img class="title-background" src="{{ fact.backgroundSrc }}" alt="">
+	<img class="title-logo" src="{{ fact.logoSrc }}" alt="">
+	<h1 class="title-container">{{ fact.title | uppercase }}</h1>
 </div>
+<div separator></div>
+<p style="text-align: center">{{ fact.description }}</p>
+<div style="height: 450px;"></div>

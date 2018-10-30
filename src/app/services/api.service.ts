@@ -17,11 +17,13 @@ export class ApiService {
     return theFact;
   }
 
-  public getFacts(): Fact[] {
+  public getFacts(zone: string): Fact[] {
     var listFacts:Fact[] = [];
     facts.forEach(element => {
-      let fact = new Fact(JSON.stringify(element));
-      listFacts.push(fact);
+      if (zone == element.zone) {
+        let fact = new Fact(JSON.stringify(element));
+        listFacts.push(fact);
+      }
     });
     return listFacts;
   }
