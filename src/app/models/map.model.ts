@@ -64,7 +64,7 @@ export const coords_kazador = [
   {x: 1295, y: 1075}
 ];
 
-export const coords_lumeck = [
+export const coords_shivazen = [
   {x: 220, y: 660},
   {x: 40, y: 440},
   {x: 150, y: 435},

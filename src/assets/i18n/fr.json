@@ -81,6 +81,7 @@
   "UNIVERSE": {
 		"WORLD": {
 			"POINTS": "Point d'intérêt",
+			"NOTFOUND": "Données encore inconnues",
 			"FARADEL": {
 				"TITLE": "L'Empire Faradelien"
 			},
@@ -93,8 +94,8 @@
 			"KAZADOR": {
 				"TITLE": "Les Montagnes de Kazador"
 			},
-			"LUMECK": {
-				"TITLE": "L'Île de Lumeck"
+			"SHIVAZEN": {
+				"TITLE": "La Mer de Shivazen"
 			},
 			"ZONES": {
 				"TITLE": "Les Zones Inexplorées"
