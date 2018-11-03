@@ -1,13 +1,16 @@
 <div class="main-container">
 	<div class="map-left">
-		<img class="zone-image" src="https://via.placeholder.com/100x100" alt="">
+		<img *ngIf="listFacts.length > 0" class="zone-image" src="https://via.placeholder.com/100x100" alt="">
 		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.WORLD.ARLENOR.TITLE' | translate | uppercase }}</h4>
 		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
 		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
 		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
 		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='lumeck'">{{ 'UNIVERSE.WORLD.LUMECK.TITLE' | translate | uppercase }}</h4>
+		<h4 class="zone-title" *ngIf="selection=='shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
 		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
+		<div *ngIf="listFacts.length == 0" class="fact-container">
+			<h2>{{ 'UNIVERSE.WORLD.NOTFOUND' | translate | uppercase }}</h2>
+		</div>
 		<div *ngFor="let fact of listFacts; let i=index">
 			<div *ngIf="i < 2" class="fact-container">
 				<h4>{{ 'UNIVERSE.WORLD.POINTS' | translate | uppercase }}</h4>
@@ -24,7 +27,7 @@
 			<area shape='poly' [coords]='coords_jirakan' (click)="setSelection('jirakan')"/>
 			<area shape='poly' [coords]='coords_imerys' (click)="setSelection('imerys')"/>
 			<area shape='poly' [coords]='coords_kazador' (click)="setSelection('kazador')"/>
-			<area shape='poly' [coords]='coords_lumeck' (click)="setSelection('lumeck')"/>
+			<area shape='poly' [coords]='coords_shivazen' (click)="setSelection('shivazen')"/>
 			<area shape='poly' [coords]='coords_zones' (click)="setSelection('zones')"/>
 		</map>
 	</div>

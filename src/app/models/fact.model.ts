@@ -41,20 +41,8 @@ export const facts = [
   },
   {
     "id": 4,
-    "title": "Dakaros",
-    "zone": "Kazador",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
-  },
-  {
-    "id": 5,
-    "title": "La Fôrêt d'Imerys",
-    "zone": "Imerys",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  },
-  {
-    "id": 6,
     "title": "L'Ile de Lumeck",
-    "zone": "Lumeck",
+    "zone": "Shivazen",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-  }
+	}
 ]

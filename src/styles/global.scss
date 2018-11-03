@@ -51,7 +51,24 @@ a {
 	font-family: 'Montserrat', sans-serif;
 
 	text-decoration: none;
-  color: $light-color;
+	color: $light-color;
+
+
+	&.disabled {
+		cursor: default;
+
+		&:hover {
+			color: $light-color;
+		}
+	}
+
+	&:hover {
+		color: $light-secondary-color;
+	}
+
+	&.active {
+		color: $light-secondary-color;
+	}
 }
 
 button {
