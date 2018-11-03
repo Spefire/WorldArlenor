@@ -11,6 +11,6 @@ import { RoutesService } from '../../../services/routes.service';
 export class CrystalsComponent {
 
   constructor(private routesService: RoutesService, private route: ActivatedRoute) {
-    this.routesService.setTitleMetas("FACT");
+    this.routesService.setTitleMetas("CRYSTALS");
   }
 }
