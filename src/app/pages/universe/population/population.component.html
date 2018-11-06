@@ -8,13 +8,30 @@
 </head-universe>
 <div class="population-container">
 	<div>
-		<img class="population-img" src="assets/images/population/p_arlenien.png" alt="">
-		<img class="population-img main" src="assets/images/population/p_humain.png" alt="">
-		<img class="population-img" src="assets/images/population/p_elfe.png" alt="">
+		<img *ngIf="select == 2" (click)="previousSelection()" class="population-img" src="assets/images/population/p_humain.png" alt="">
+		<img *ngIf="select == 3" (click)="previousSelection()" class="population-img" src="assets/images/population/p_elfe.png" alt="">
+		<img *ngIf="select == 4" (click)="previousSelection()" class="population-img" src="assets/images/population/p_nain.png" alt="">
+		<img *ngIf="select == 5" (click)="previousSelection()" class="population-img" src="assets/images/population/p_mutant.png" alt="">
+		<img *ngIf="select == 6" (click)="previousSelection()" class="population-img" src="assets/images/population/p_pan.png" alt="">
+		<img *ngIf="select == 1" (click)="previousSelection()" class="population-img" src="assets/images/population/p_arlenien.png" alt="">
+
+		<img *ngIf="select == 1" class="population-img main" src="assets/images/population/p_humain.png" alt="">
+		<img *ngIf="select == 2" class="population-img main" src="assets/images/population/p_elfe.png" alt="">
+		<img *ngIf="select == 3" class="population-img main" src="assets/images/population/p_nain.png" alt="">
+		<img *ngIf="select == 4" class="population-img main" src="assets/images/population/p_mutant.png" alt="">
+		<img *ngIf="select == 5" class="population-img main" src="assets/images/population/p_pan.png" alt="">
+		<img *ngIf="select == 6" class="population-img main" src="assets/images/population/p_arlenien.png" alt="">
+
+		<img *ngIf="select == 6" (click)="nextSelection()" class="population-img" src="assets/images/population/p_humain.png" alt="">
+		<img *ngIf="select == 1" (click)="nextSelection()" class="population-img" src="assets/images/population/p_elfe.png" alt="">
+		<img *ngIf="select == 2" (click)="nextSelection()" class="population-img" src="assets/images/population/p_nain.png" alt="">
+		<img *ngIf="select == 3" (click)="nextSelection()" class="population-img" src="assets/images/population/p_mutant.png" alt="">
+		<img *ngIf="select == 4" (click)="nextSelection()" class="population-img" src="assets/images/population/p_pan.png" alt="">
+		<img *ngIf="select == 5" (click)="nextSelection()" class="population-img" src="assets/images/population/p_arlenien.png" alt="">
 	</div>
 	<div class="population-text">
-		<h2>{{ 'UNIVERSE.POPULATION.HUMAIN.TITLE' | translate | uppercase }}</h2>
-		<p>{{ 'UNIVERSE.POPULATION.HUMAIN.TEXT01' | translate }}<br><br>{{ 'UNIVERSE.POPULATION.HUMAIN.TEXT02' | translate }}<br><br></p>
-		<h4>{{ 'UNIVERSE.POPULATION.LOCATION' | translate | uppercase }} : {{ 'UNIVERSE.POPULATION.HUMAIN.LOCATION' | translate }}</h4>
+		<h2>{{ peopleTitle | uppercase }}</h2>
+		<p>{{ peopleText01 }}<br><br>{{ peopleText02 }}<br><br></p>
+		<h4>{{ 'UNIVERSE.POPULATION.LOCATION' | translate | uppercase }} : {{ peopleLocation | translate }}</h4>
 	</div>
 </div>
