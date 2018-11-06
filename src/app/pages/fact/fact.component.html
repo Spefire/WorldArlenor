@@ -1,5 +1,7 @@
-<div padding-vert class="head-container">
-	<img class="title-background" src="{{ fact.backgroundSrc }}" alt="">
+<div padding-vert class="head-container"
+	[ngStyle]="{	'background-image': 'url(' + fact.backgroundSrc + ')' }"
+	[style.backgroundSize]="'cover'"
+	[style.backgroundPosition]="'center'">
 	<img class="title-logo" src="{{ fact.logoSrc }}" alt="">
 	<h1 class="title-container">{{ fact.title | uppercase }}</h1>
 </div>
