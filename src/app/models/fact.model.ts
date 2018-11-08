@@ -52,7 +52,7 @@ export const facts = [
     "title": "L'Ile de Lumeck",
 		"zone": "Shivazen",
 		"logoSrc": "assets/images/facts/icon.png",
-		"backgroundSrc": "assets/images/facts/faradel.jpg",
+		"backgroundSrc": "assets/images/facts/lumeck.jpg",
     "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
 	}
 ]
