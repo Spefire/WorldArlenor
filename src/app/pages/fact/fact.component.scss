@@ -2,31 +2,23 @@
 
 :host {
 
+		background-color: $dark-color;
+
     .head-container {
         position: relative;
-        height: 400px;
-        box-shadow: 0 -150px 200px $dark-color inset;
-
-        .title-background {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        height: 600px;
+				box-shadow: 0 -250px 350px $dark-color inset;
 
         .title-container {
             position: absolute;
-            bottom: 10%;
+            bottom: 20px;
             left: 50%;
             width: 100%;
-            font-size: 70px;
-            text-align: center;
-            transform: translateX(-50%) translateY(100%);
+						text-align: center;
+						font-size: 100px;
+						line-height: 100px;
+						letter-spacing: 5px;
+            transform: translateX(-50%);
             color: $light-secondary-color;
         }
 
@@ -34,10 +26,9 @@
           position: absolute;
           bottom: 150px;
           left: 50%;
-          height: 200px;
-          width: 200px;
+          height: 150px;
+          width: 150px;
           transform: translateX(-50%);
-          border: 1px solid $dark-color;
       }
 		}
 }

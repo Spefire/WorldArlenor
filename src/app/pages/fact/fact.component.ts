@@ -25,8 +25,6 @@ export class FactComponent implements OnInit {
   getFact(): void {
     const id = +this.route.snapshot.paramMap.get('id');
 		this.fact = this.apiService.getFact(id);
-		this.fact.logoSrc = "https://via.placeholder.com/200x200";
-		this.fact.backgroundSrc = "https://via.placeholder.com/1000x400";
   }
 
 }
