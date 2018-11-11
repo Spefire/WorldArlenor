@@ -34,6 +34,43 @@
 				position: absolute;
 				height: 450px;
 			}
+
+			.img-main {
+				animation: 3s infinite alternate animMain;
+			}
+
+			.img-data01 {
+				opacity: 0;
+				animation: 3s infinite alternate animMain, 6s infinite alternate animData;
+			}
+
+			.img-data02 {
+				opacity: 0;
+				animation: 3s infinite alternate animMain, 4s 2s infinite alternate animData;
+			}
+
+			.img-data03 {
+				opacity: 0;
+				animation: 3s infinite alternate animMain, 6s 4s infinite alternate animData;
+			}
+
+			@keyframes animMain {
+				from {
+					transform: translateY(0);
+				}
+				to {
+					transform: translateY(-50px);
+				}
+			}
+
+			@keyframes animData {
+				0% { opacity: 0; }
+				20% {	opacity: 0;	}
+				40% {	opacity: 0;	}
+				60% {	opacity: 1;	}
+				80% {	opacity: 1;	}
+				100% { opacity: 1; }
+			}
 		}
 
 		.crystal-text {
