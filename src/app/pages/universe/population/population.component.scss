@@ -24,6 +24,22 @@
 			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
 		}
 
+		.population-imgs {
+			display: flex;
+			align-items: center;
+			height: 275px;
+		}
+
+		.population-selectimg {
+			height: 50px;
+			width: 50px;
+
+			margin: 0 25px;
+			border-radius: 50%;
+			border: 2px solid $dark-secondary-color;
+			cursor: pointer;
+		}
+
 		.population-img {
 			height: 150px;
 			width: 150px;
@@ -45,7 +61,8 @@
 
 		.population-text {
 			text-align: center;
-			max-width: 50%;
+			max-width: 75%;
+			height: 275px;
 
 			p {
 				font-size: 14px;
