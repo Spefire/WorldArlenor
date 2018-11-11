@@ -5,6 +5,9 @@ export class Fact {
 	public zone?: string;
 	public logoSrc?:string;
 	public backgroundSrc?:string;
+	public imageSrc?:string;
+	public texte01?:string;
+	public texte02?:string;
 
   constructor(jsonStr: string) {
     let jsonObj: any = JSON.parse(jsonStr);
@@ -21,7 +24,10 @@ export const facts = [
 		"zone": "Faradel",
 		"logoSrc": "assets/images/facts/icon.png",
 		"backgroundSrc": "assets/images/facts/faradel.jpg",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+		"description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"imageSrc": "",
+		"texte01": "Cette cité est située dans les Plaines de Terfil aux bords du fleuve Laloran. Elle est considérée comme l'une des plus grandes cités du Monde d'Arlénor. Sa construction se base sur le principe suivant :",
+		"texte02": "- Le souterain : Faradel possède un souterain, habité par les habitants les plus pauvres, les clandestins, les mutants... toutes les personnes ne voulant pas être retrouvées. Un marché noir y est aussi très développé, et aucune milice n'ose s'y interposer.</p><p>- La partie basse : Faisant trois quarts de la surface de Faradel, elle contient la majorité des habitations. Comme c'est un vrai labyrinthe de constructions, de bâtiments, de petits magasins, il est très facile de s'y perdre.</p><p>- La partie haute : La bourgeoisie, et les marchands les plus riches y vivent. Il y a des grands jardins, ainsi qu'une place des fêtes. Une section de la partie haute est aussi réservée à l'aspect militaire de Faradel."
   },
   {
     "id": 1,
@@ -29,7 +35,10 @@ export const facts = [
 		"zone": "Faradel",
 		"logoSrc": "assets/images/facts/icon.png",
 		"backgroundSrc": "assets/images/facts/tour.jpg",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
+    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde...",
+		"imageSrc": "",
+		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
     "id": 2,
@@ -37,7 +46,10 @@ export const facts = [
 		"zone": "Jirakan",
 		"logoSrc": "assets/images/facts/icon.png",
 		"backgroundSrc": "assets/images/facts/jirakan.jpg",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"imageSrc": "",
+		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
     "id": 3,
@@ -45,7 +57,10 @@ export const facts = [
 		"zone": "Jirakan",
 		"logoSrc": "assets/images/facts/icon.png",
 		"backgroundSrc": "assets/images/facts/massacre.jpg",
-    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde..."
+    "description": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde...",
+		"imageSrc": "",
+		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
   },
   {
     "id": 4,
@@ -53,6 +68,9 @@ export const facts = [
 		"zone": "Shivazen",
 		"logoSrc": "assets/images/facts/icon.png",
 		"backgroundSrc": "assets/images/facts/lumeck.jpg",
-    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
-	}
+    "description": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"imageSrc": "",
+		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
+		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+  }
 ]
