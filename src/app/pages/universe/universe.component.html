@@ -1,23 +1,23 @@
 <div class="main-container">
 	<div class="map-left">
-		<img *ngIf="listFacts.length > 0" class="zone-image" src="https://via.placeholder.com/100x100" alt="">
-		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.WORLD.ARLENOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
-		<div *ngIf="listFacts.length == 0" class="fact-container">
-			<h2>{{ 'UNIVERSE.WORLD.NOTFOUND' | translate | uppercase }}</h2>
+		<div class="fact-image">
+			<img class="zone-image" src="{{ listFacts[0].backgroundSrc }}" alt="">
 		</div>
-		<div *ngFor="let fact of listFacts; let i=index">
-			<div *ngIf="i < 2" class="fact-container">
-				<h4>{{ 'UNIVERSE.WORLD.POINTS' | translate | uppercase }}</h4>
-				<h2>{{ fact.title | uppercase }}</h2>
-				<p class="fact-description">"{{ fact.description }}"<br>{{ fact.title }}</p>
-				<button class="fact-link" routerLink="/universe/{{fact.id}}">+</button>
-			</div>
+		<div class="fact-container">
+			<h2 class="zone-title">{{ listFacts[0].title | uppercase }}</h2>
+			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
+			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
+			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
+			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
+			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
+		</div>
+		<div class="fact-texts">
+			<p class="fact-description" innerHtml="{{ listFacts[0].texte01 }}"></p>
+			<p class="fact-description" innerHtml="{{ listFacts[0].texte02 }}"></p>
+		</div>
+		<div class="fact-comments">
+			<p class="zone-title" innerHtml="{{ listFacts[0].description }}"></p>
 		</div>
 	</div>
 	<div class="map-right">

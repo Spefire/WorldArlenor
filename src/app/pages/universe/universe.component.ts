@@ -19,13 +19,15 @@ export class UniverseComponent implements OnInit {
   public coords_shivazen:any;
   public coords_zones:any;
 	public logoSrc:string;
-  public listFacts:any[];
+	public listFacts:any[];
+	public selectedFact:any;
 
   private selection:string;
 
   constructor(private apiService: ApiService, private routesService: RoutesService) {
     this.routesService.setTitleMetas("UNIVERSE");
 		this.listFacts = this.apiService.getFacts("Faradel");
+		this.selectedFact = this.listFacts[0];
   }
 
   ngOnInit() {
@@ -97,5 +99,6 @@ export class UniverseComponent implements OnInit {
 		} else {
 			this.listFacts = this.apiService.getFacts("Zones");
 		}
+		this.selectedFact = this.listFacts[0];
 	}
 }

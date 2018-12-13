@@ -3,60 +3,58 @@
 :host {
 	.main-container {
 		display: flex;
-
-		&::after {
-			content: "";
-			position: absolute;
-			opacity: 1.0;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			z-index: -1;
-
-			background-position: center;
-			background-size: cover;
-			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
-		}
+		height: 800px;
+    background-position: center;
+		background-size: cover;
+		background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
 
 		.map-left {
+			position : relative;
 			width: 35%;
+			padding: 20px;
+			margin: 50px 5%;
+
 			text-align: left;
-			padding-left: 5%;
-			margin: auto 0;
+			background-color: $dark-color;
+			border: 1px solid $secondary-color;
 
-			.zone-image {
-				height: 100px;
-				width: 100px;
-				border: 1px solid $dark-color;
-			}
+			.fact-image {
+				height: 200px;
 
-			.zone-title {
-				font-size: 32px;
-				line-height: 32px;
+				.zone-image {
+					height: 100%;
+					width: 100%;
+				}
 			}
 
 			.fact-container {
-				position: relative;
-				margin: 25px 0;
+				height: 60px;
+				margin: 5px 0;
+    		padding: 5px 0;
+				border-top: 1px solid $secondary-color;
+				border-bottom: 1px solid $secondary-color;
 
-				.fact-description {
+				.zone-title {
+					text-align: center;
+				}
+			}
+
+			.fact-texts {
+				height: 300px;
+    		overflow-y: auto;
+			}
+
+			.fact-comments {
+				height: 60px;
+				margin: 5px 0;
+    		padding: 5px 0;
+				border-top: 1px solid $secondary-color;
+
+				.zone-title {
 					font-size: 14px;
 					color: $secondary-color;
-					margin: 0;
-					padding: 4px 30px 4px 0;
+					text-align: center;
 					font-style: italic;
-				}
-
-				.fact-link {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-
-					font-size: 20px;
-					font-weight: bold;
-					border-radius: 50%;
-					padding: 2px 8px;
 				}
 			}
 		}
@@ -64,8 +62,7 @@
 		.map-right {
 			width: 65%;
 			position: relative;
-			padding-right: 5%;
-			padding-left: 5%;
+			margin: auto 5% auto 0;
 
 			.map-background {
 				height: auto;
