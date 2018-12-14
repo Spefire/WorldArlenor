@@ -8,7 +8,6 @@ import { CelestiaComponent } from './pages/universe/celestia/celestia.component'
 import { ReligionComponent } from './pages/universe/religion/religion.component';
 import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
 import { PopulationComponent } from './pages/universe/population/population.component';
-import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -22,7 +21,6 @@ const appRoutes: Routes = [
   { path: 'universe/religion', component: ReligionComponent },
   { path: 'universe/crystals', component: CrystalsComponent },
   { path: 'universe/population', component: PopulationComponent },
-  { path: 'universe/:id', component: FactComponent },
   { path: 'roleplay', component: RoleplayComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'about', component: AboutComponent },

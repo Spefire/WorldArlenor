@@ -1,34 +1,27 @@
 <div class="main-container">
 	<div class="map-left">
-		<div class="fact-image">
-			<img class="zone-image" src="{{ listFacts[0].backgroundSrc }}" alt="">
+		<div class="fact-header">
+			<img class="fact-image" src="{{ selectedFact.backgroundSrc }}" alt="">
 		</div>
 		<div class="fact-container">
-			<h2 class="zone-title">{{ listFacts[0].title | uppercase }}</h2>
-			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
-			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
-			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
-			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
-			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
-			<h4 class="zone-title" *ngIf="listFacts[0].zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
+			<h2 class="fact-text">{{ selectedFact.title | uppercase }}</h2>
+			<h4 class="fact-text" *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
+			<h4 class="fact-text" *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+			<h4 class="fact-text" *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
+			<h4 class="fact-text" *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
+			<h4 class="fact-text" *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
+			<h4 class="fact-text" *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
 		</div>
-		<div class="fact-texts">
-			<p class="fact-description" innerHtml="{{ listFacts[0].texte01 }}"></p>
-			<p class="fact-description" innerHtml="{{ listFacts[0].texte02 }}"></p>
+		<div class="fact-description">
+			<p class="fact-text" innerHtml="{{ selectedFact.texte01 }}"></p>
+			<p class="fact-text" innerHtml="{{ selectedFact.texte02 }}"></p>
 		</div>
-		<div class="fact-comments">
-			<p class="zone-title" innerHtml="{{ listFacts[0].description }}"></p>
+		<div class="fact-footer">
+			<p class="fact-text" innerHtml="{{ selectedFact.comments }}"></p>
 		</div>
 	</div>
 	<div class="map-right">
-		<img id="map-arlenor" class="map-background" src="assets/images/map.png" alt="" usemap="#map-areas">
-		<map name="map-areas" id="map-areas">
-			<area shape='poly' [coords]='coords_faradel' (click)="setSelection('faradel')"/>
-			<area shape='poly' [coords]='coords_jirakan' (click)="setSelection('jirakan')"/>
-			<area shape='poly' [coords]='coords_imerys' (click)="setSelection('imerys')"/>
-			<area shape='poly' [coords]='coords_kazador' (click)="setSelection('kazador')"/>
-			<area shape='poly' [coords]='coords_shivazen' (click)="setSelection('shivazen')"/>
-			<area shape='poly' [coords]='coords_zones' (click)="setSelection('zones')"/>
-		</map>
+		<img id="map-arlenor" class="map-background" src="assets/images/map_zones.png" alt="">
+		<img id="icon-arlenor" class="map-icon" src="assets/images/icon_map.png" alt="">
 	</div>
 </div>
