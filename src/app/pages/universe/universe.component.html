@@ -21,7 +21,23 @@
 		</div>
 	</div>
 	<div class="map-right">
-		<img id="map-arlenor" class="map-background" src="assets/images/map_zones.png" alt="">
-		<img id="icon-arlenor" class="map-icon" src="assets/images/icon_map.png" alt="">
+		<div class="map-icons">
+			<img *ngIf="selectedFact.zone=='Faradel'" class="map-background" src="assets/images/map_faradel.png" alt="">
+			<img *ngIf="selectedFact.zone=='Jirakan'" class="map-background" src="assets/images/map_jirakan.png" alt="">
+			<img *ngIf="selectedFact.zone=='Imerys'" class="map-background" src="assets/images/map_imerys.png" alt="">
+			<img *ngIf="selectedFact.zone=='Kazador'" class="map-background" src="assets/images/map_kazador.png" alt="">
+			<img *ngIf="selectedFact.zone=='Shivazen'" class="map-background" src="assets/images/map_shivazen.png" alt="">
+			<img *ngIf="selectedFact.zone=='Zones'" class="map-background" src="assets/images/map_zones.png" alt="">
+			<img *ngIf="select != 0" class="map-icon map-icon-00" src="assets/images/icon_map.png" alt="" (click)="setSelection(0)">
+			<img *ngIf="select == 0" class="map-icon map-icon-00" src="assets/images/icon_map_selected.png" alt="">
+			<img *ngIf="select != 1" class="map-icon map-icon-01" src="assets/images/icon_map.png" alt="" (click)="setSelection(1)">
+			<img *ngIf="select == 1" class="map-icon map-icon-01" src="assets/images/icon_map_selected.png" alt="">
+			<img *ngIf="select != 2" class="map-icon map-icon-02" src="assets/images/icon_map.png" alt="" (click)="setSelection(2)">
+			<img *ngIf="select == 2" class="map-icon map-icon-02" src="assets/images/icon_map_selected.png" alt="">
+			<img *ngIf="select != 3" class="map-icon map-icon-03" src="assets/images/icon_map.png" alt="" (click)="setSelection(3)">
+			<img *ngIf="select == 3" class="map-icon map-icon-03" src="assets/images/icon_map_selected.png" alt="">
+			<img *ngIf="select != 4" class="map-icon map-icon-04" src="assets/images/icon_map.png" alt="" (click)="setSelection(4)">
+			<img *ngIf="select == 4" class="map-icon map-icon-04" src="assets/images/icon_map_selected.png" alt="">
+		</div>
 	</div>
 </div>

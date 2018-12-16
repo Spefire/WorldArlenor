@@ -16,15 +16,4 @@ export class ApiService {
     });
     return theFact;
   }
-
-  public getFacts(zone: string): Fact[] {
-    var listFacts:Fact[] = [];
-    facts.forEach(element => {
-      if (zone == element.zone) {
-        let fact = new Fact(JSON.stringify(element));
-        listFacts.push(fact);
-      }
-    });
-    return listFacts;
-  }
 }
