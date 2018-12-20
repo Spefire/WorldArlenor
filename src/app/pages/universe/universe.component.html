@@ -21,6 +21,10 @@
 		</div>
 	</div>
 	<div class="map-right">
+		<div class="map-title">
+			<h2>{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Faradel'">Niveau de danger : ***** / Climat : Tempéré</h4>
+		</div>
 		<div class="map-icons">
 			<img *ngIf="selectedFact.zone=='Faradel'" class="map-background" src="assets/images/map_faradel.png" alt="">
 			<img *ngIf="selectedFact.zone=='Jirakan'" class="map-background" src="assets/images/map_jirakan.png" alt="">

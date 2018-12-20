@@ -58,8 +58,8 @@ export const facts = [
     "title": "L'Ile de Lumeck",
 		"zone": "Shivazen",
 		"backgroundSrc": "assets/images/facts/lumeck.jpg",
-		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-    "comments": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+		"texte01": "L'Ile de Lumeck est considérée comme une zone maudite : les marins qui s'aventurent dans la mer de Shivazen sont rares à survivre... mais ceux qui essayent de mettre un pied à terre sur cette île, n'en sont pas ressortis vivants. La faune et ainsi que la flore y sont des dangers permanents.",
+		"texte02": "De plus, que ce soit les voies aériennes ou maritimes, la météo et les récifs empêchent toute procédure d'atterrissage ou d'amarrage impossible. Certains disent que l'île est vivante, avalant tout âme pour se nourrir...</p><p>Des cartographes ont quand même pu délimiter cette zone au bout de quelques années et aujourd'hui, seuls les fous continuent d'essayer de percer le mystère de l'île.",
+    "comments": "\"Douloureux... Affreux... Puant... Effrayant...<br>La mort la plus belle ne se trouve pas en ces lieux.\"<br>- Cartographe, poète dans l'âme"
   }
 ]

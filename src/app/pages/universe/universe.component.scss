@@ -40,8 +40,8 @@
 				}
 			}
 
-			.fatc-description .fact-text {
-				height: 300px;
+			.fact-description {
+				max-height: 350px;
     		overflow-y: auto;
 			}
 
@@ -63,13 +63,19 @@
 		.map-right {
 			display: flex;
   		flex-direction: column;
-  		justify-content: center;
+			justify-content: space-between;
+			align-items: center;
 			height: 700px;
 			width: 65%;
 			margin: auto 2.5%;
 
+			.map-title {
+				height: 60px;
+				text-align: center;
+			}
+
 			.map-background {
-				width: 100%;
+				height: 620px;
 			}
 
 			.map-icons{
