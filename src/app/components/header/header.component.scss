@@ -56,13 +56,14 @@
     justify-content: space-between;
     position: relative;
 
-    height: 40px;
+    height: 0px;
     background-color: $dark-color;
 
     transform: translateY(-50%) scaleY(0);
     transition: .5s;
 
     &.active {
+			height: 40px;
       transform: translateY(0%) scaleY(1);
     }
 
