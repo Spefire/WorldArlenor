@@ -1,0 +1,26 @@
+@import "../../../styles/variables.scss";
+
+:host {
+	.about-container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		height: 700px;
+
+		.about-left {
+			width: 50%;
+			text-align: center;
+			margin: auto 0;
+
+			img {
+				height: 550px;
+			}
+		}
+
+		.about-right {
+			width: 40%;
+			text-align: left;
+			margin: auto 0;
+		}
+	}
+}
