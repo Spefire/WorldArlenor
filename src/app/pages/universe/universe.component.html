@@ -22,8 +22,18 @@
 	</div>
 	<div class="map-right">
 		<div class="map-title">
-			<h2>{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Faradel'">Niveau de danger : ***** / Climat : Tempéré</h4>
+			<h2 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.CLIMATE' | translate }}</h4>
 		</div>
 		<div class="map-icons">
 			<img *ngIf="selectedFact.zone=='Faradel'" class="map-background" src="assets/images/map_faradel.png" alt="">

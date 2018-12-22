@@ -81,6 +81,22 @@ button {
   color: $light-secondary-color;
 }
 
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $light-secondary-color;
+}
+
 .imgWait {
   height: 400px;
   width: 200px;

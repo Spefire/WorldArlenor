@@ -84,25 +84,37 @@
   },
   "UNIVERSE": {
 		"WORLD": {
-			"POINTS": "Point d'intérêt",
-			"NOTFOUND": "Données encore inconnues",
+			"DANGER": "Niveau de danger",
+			"CLIMATE": "Climat",
 			"FARADEL": {
-				"TITLE": "L'Empire Faradelien"
+				"TITLE": "L'Empire Faradelien",
+				"DANGER": "Paisible",
+				"CLIMATE": "Tempéré"
 			},
 			"JIRAKAN": {
-				"TITLE": "Le Régime Jirakanien"
+				"TITLE": "Le Régime Jirakanien",
+				"DANGER": "Risqué",
+				"CLIMATE": "Désertique"
 			},
 			"IMERYS": {
-				"TITLE": "La Forêt d'Imerys"
+				"TITLE": "La Forêt d'Imerys",
+				"DANGER": "Risqué",
+				"CLIMATE": "Tempéré"
 			},
 			"KAZADOR": {
-				"TITLE": "Les Montagnes de Kazador"
+				"TITLE": "Les Montagnes de Kazador",
+				"DANGER": "Mortel",
+				"CLIMATE": "Montagnard"
 			},
 			"SHIVAZEN": {
-				"TITLE": "La Mer de Shivazen"
+				"TITLE": "La Mer de Shivazen",
+				"DANGER": "Infernal",
+				"CLIMATE": "Tropical"
 			},
 			"ZONES": {
-				"TITLE": "Les Zones Inexplorées"
+				"TITLE": "Les Zones Inexplorées",
+				"DANGER": "Mortel",
+				"CLIMATE": "Tropical"
 			}
 		},
 		"RELIGION": {
