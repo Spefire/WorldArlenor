@@ -22,27 +22,27 @@ export const facts = [
 		"title": "La Cité de Faradel",
 		"zone": "Faradel",
 		"backgroundSrc": "assets/images/facts/faradel.jpg",
-		"texte01": "Cette cité est située dans les Plaines de Terfil aux bords du fleuve Laloran. Elle est considérée comme l'une des plus grandes cités du Monde d'Arlénor. Sa construction se base sur le principe suivant :",
-		"texte02": "- Le souterain : Faradel possède un souterain, habité par les habitants les plus pauvres, les clandestins, les mutants... toutes les personnes ne voulant pas être retrouvées. Un marché noir y est aussi très développé, et aucune milice n'ose s'y interposer.</p><p>- La partie basse : Faisant trois quarts de la surface de Faradel, elle contient la majorité des habitations. Comme c'est un vrai labyrinthe de constructions, de bâtiments, de petits magasins, il est très facile de s'y perdre.</p><p>- La partie haute : La bourgeoisie, et les marchands les plus riches y vivent. Il y a des grands jardins, ainsi qu'une place des fêtes. Une section de la partie haute est aussi réservée à l'aspect militaire de Faradel.",
-		"comments": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+		"texte01": "Située dans la zone paisible des Plaines de Terfil, Faradel fait partie des trois plus grandes cités du Monde d'Arlénor. Les elfes et les humains la considèrent comme la capitale du monde d'Arlénor, fortement développée militairement et technologiquement.</p><p>Sa construction se base sur le principe suivant :",
+		"texte02": "- Le souterain : Faradel possède un souterain difficile d'accès, habité par les habitants les plus pauvres, les clandestins, les mutants... toutes les personnes ne voulant pas être retrouvées ou tuées. Un marché noir y est aussi très développé, et aucune milice n'ose s'y interposer.</p><p>- La partie basse : Faisant trois quarts de la surface de Faradel, elle contient la majorité des habitations et des temples d'Arlénor. Comme c'est un vrai labyrinthe de constructions, de bâtiments, de petits magasins, il est très facile de s'y perdre.</p><p>- La partie haute : La bourgeoisie, les 7 nobles familles de Faradel et les marchands les plus riches y vivent. Il y a des grands jardins, ainsi qu'une place des fêtes. De plus, une section de la partie haute est réservée à l'aspect militaire de Faradel et on y retrouve la Tour du Savoir en son centre.",
+		"comments": "\"Dans notre monde, il y a ceux qui savent utiliser la magie, et ceux qui ne peuvent pas. Il y a les êtres civilisés, et il y a les bêtes...\"<br>- Humain faradélien, mettant son habit de garde"
 	},
   {
     "id": 1,
     "title": "La Tour du Savoir",
 		"zone": "Faradel",
 		"backgroundSrc": "assets/images/facts/tour.jpg",
-    "comments": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le monde...",
-		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+		"texte01": "La Tour du Savoir est l'emblème de l'Empire Faradélien. Situé en son centre, c'est aussi le centre des opérations économiques et politiques ainsi que le centre de recherche des meilleurs mages et artisans du monde.</p><p>La Tour du Savoir est découpée en plusieurs étages et sous-sols. Les sous-sols comportent principalement les laboratoires, les premiers étages comportent les salles d'opérations avec quelques appartements, et les derniers étages contiennent la plus grande Bibliothèque de mon d'Arlénor !",
+		"texte02": "Au sommet de la Tour, il y a le cristal surnommé l'Eclat inifini : son nom est dû à la quantité d'énergie inépuisable qu'il fournit. Ce fut Xendel Eresles qui apporta ce cristal étrange et unique, dans la cité de Faradel.</p><p>Grâce à cette source d'énergie illimitée, les Faradeliens ont pu développer leur ville et leur technologie très rapidement : ce qui transforma complétement leur quotidien... Xendel Eresles est alors vu depuis, comme l'Esprit Veilleur de Faradel.",
+		"comments": "\"Oui, l'Eclat infini a transformé notre cité et c'est fabuleux !<br>Comment fonctionne-t-il ? Euh... A coup de ta gueule c'est magique.\"<br>- Elfe faradélien, interrogé près de la Tour du Savoir"
   },
   {
     "id": 2,
     "title": "Le Commerce de Jirakan",
 		"zone": "Jirakan",
 		"backgroundSrc": "assets/images/facts/jirakan.jpg",
-		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-    "comments": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+		"texte01": "Jirakan est la principale ville marchande du monde d'Arlénor. On y trouve en majorité des cristaux de tout genre, d'autres ressources minières, mais aussi de la location de main d'oeuvre voire même de la vente d'esclaves.</p><p>Ici les mutants et les nains sont tolérés, mais en tant qu'êtres dits 'inférieurs', ils servent d'esclaves aux maitres elfes / humains du monde entier...",
+		"texte02": "Située dans la partie sud de Jirakan, la Minitation est gérée d'une organisation milimétrée : ce n'est pas une mine, mais la résidence de tous les esclaves, creusée dans la ville...</p><p>La Minitation est découpées en plusieurs niveaux représentant le rang social des esclaves : les familles 'aisées' sont plus proches de la surface que les moins 'aisées'. Les familles d'esclaves ont alors un maitre, appelé aussi Superviseur, qui va gérer leur temps de travail et influencer sur leur rang social.</p><p>La vie d'un Jirakanien esclave n'est alors pas facile, et se concentre autour de la Minitation et des mines aux alentours de Jirakan.",
+    "comments": "\"Ici c'est la règle des trois M qui domine : Miner, Miner et Miner.<br>Il n'existe rien d'autre. On n'existe pas.\"<br>- Adolescent mutant partant aux mines"
   },
   {
     "id": 3,
