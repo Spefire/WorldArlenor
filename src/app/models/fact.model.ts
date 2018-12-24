@@ -46,9 +46,9 @@ export const facts = [
   },
   {
     "id": 3,
-    "title": "Le Grand Massacre",
+    "title": "La Grande Révolte",
 		"zone": "Jirakan",
-		"backgroundSrc": "assets/images/facts/massacre.jpg",
+		"backgroundSrc": "assets/images/facts/revolte.jpg",
 		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
 		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
     "comments": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
