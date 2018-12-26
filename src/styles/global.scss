@@ -74,7 +74,8 @@ a {
 button {
   padding: 5px 15px;
   border-radius: 5px;
-  cursor: pointer;
+	cursor: pointer;
+	outline : none;
 
   background: none;
   border: 1px solid $dark-secondary-color;
