@@ -81,6 +81,11 @@ button {
   color: $light-secondary-color;
 }
 
+img {
+	outline : none;
+}
+
+
 ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -95,9 +100,4 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: $light-secondary-color;
-}
-
-.imgWait {
-  height: 400px;
-  width: 200px;
 }

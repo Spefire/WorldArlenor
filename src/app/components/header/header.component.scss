@@ -41,7 +41,16 @@
       align-items: center;
 
       .header-logo {
-        cursor: pointer;
+				height: 46px;
+				width: 46px;
+				padding: 2px;
+				cursor: pointer;
+				background-size: cover;
+				background-image: url("/assets/images/little_logo.png");
+
+				&:hover {
+					background-image: url("/assets/images/little_hover_logo.png");
+				}
       }
 
       .header-title {
