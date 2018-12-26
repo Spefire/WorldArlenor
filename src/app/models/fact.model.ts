@@ -49,9 +49,9 @@ export const facts = [
     "title": "La Grande Révolte",
 		"zone": "Jirakan",
 		"backgroundSrc": "assets/images/facts/revolte.jpg",
-		"texte01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-		"texte02": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création...",
-    "comments": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et les Démons lors de la Création..."
+		"texte01": "En l'An 666 du calendrier arlénien, un groupe d'esclaves et de partisans pour leur libération, ont monté une révolte contre les Superviseurs. Et, une nuit, ils sont passés à l'action en exterminant la majorité de leurs maitres.</p><p>Cependant, l'armée de Faradel est arrivée le lendemain pour soutenir les Superviseurs et les marchands de Jirakan... Pour contrer à cela, les esclaves se sont alors réfugiés dans les mines du Sud, près des montagnes de Kazador : les connaissant comme leur poche, ils en tiraient donc un grand avantage.",
+		"texte02": "Au bout de quelques jours de batailles dans les mines, certains ont commencé à avoir des hallucinations, entendre des grognements et sentir de légères secousses... La folie a alors atteint les deux camps et beaucoup ont fuit le combat dans les mines.</p><p>Puis le jour fatal arriva. Un dernier grondement, audible par tous, a déclenché l'effrondrement de la mine alors qu'une bataille y faisait rage. Les peu de personnes ayant survécu, ont perdu toute magie et disaient qu'une entité les avait touchés.</p><p>Aujourd'hui, ces mines sont inaccessibles et définies comme étant maudites...",
+    "comments": "\"C'était terrifiant. Le genre de moment où il n'y avait plus de camps : juste des personnes essayant de survivre... Quand nos cristaux n'ont plus fonctionné, on a su alors ce qu'était l'Impuissance.\"<br>- Survivant de la Grande Révolte"
   },
   {
     "id": 4,
