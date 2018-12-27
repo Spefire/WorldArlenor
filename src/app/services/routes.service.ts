@@ -9,12 +9,25 @@ export class RoutesService {
 
   public setTitleMetas(pageName: string) {
     this.translate.get('PAGE.' + pageName + '.TITLE').subscribe((res: string) => {
-      this.titleService.setTitle(this.translate.instant(res));
+			this.titleService.setTitle(this.translate.instant(res));
+			this.meta.updateTag({
+        property: 'og:title',
+        content: res
+			});
     });
-    this.translate.get('PAGE.' + pageName + '.DESCRIPTION').subscribe((res: string) => {
+    this.translate.get('PAGE.' + pageName + '.META').subscribe((res: any) => {
+			console.log(res);
       this.meta.updateTag({
         name: 'description',
-        content: res
+        content: res.DESCRIPTION
+			});
+			this.meta.updateTag({
+        property: 'og:description',
+        content: res.DESCRIPTION
+			});
+			this.meta.updateTag({
+        property: 'og:url',
+        content: res.URL
       });
     });
   }
