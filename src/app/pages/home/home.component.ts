@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 		this.selection = 0;
 		this.scrollValue = 0;
 		this.sub = interval(10000).subscribe((val) => {
-			this.increaseSelection();
+			this.changeSelection();
 		});
 	}
 
