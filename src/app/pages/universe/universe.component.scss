@@ -1,7 +1,7 @@
 @import "../../../styles/variables.scss";
 
 :host {
-	.main-container {
+	.world-container {
 		display: flex;
 		height: 800px;
     background-position: center;
@@ -11,16 +11,14 @@
 		::-webkit-scrollbar {
 			width: 6px;
 		}
-
 		::-webkit-scrollbar-track {
 			background: none;
 		}
-
 		::-webkit-scrollbar-thumb {
 			border-radius: 5px;
 		}
 
-		.map-left {
+		.world-left {
 			position : relative;
 			height: 700px;
 			width: 35%;
@@ -28,26 +26,23 @@
 			margin: auto 0% auto 5%;
 			text-align: left;
 
-			.fact-header {
+			.fact-image {
 				height: 200px;
 
-				.fact-image {
+				img {
 					height: 100%;
 					width: 100%;
 					mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
 				}
 			}
 
-			.fact-container {
+			.fact-title {
 				height: 60px;
 				margin: 5px 0;
     		padding: 5px 0;
 				border-top: 1px solid $secondary-color;
 				border-bottom: 1px solid $secondary-color;
-
-				.fact-text {
-					text-align: center;
-				}
+				text-align: center;
 			}
 
 			.fact-description {
@@ -55,13 +50,13 @@
     		overflow-y: auto;
 			}
 
-			.fact-footer {
+			.fact-comment {
 				height: 60px;
 				margin: 5px 0;
     		padding: 5px 0;
 				border-top: 1px solid $secondary-color;
 
-				.fact-text {
+				p {
 					font-size: 14px;
 					color: $secondary-color;
 					text-align: center;
@@ -70,7 +65,7 @@
 			}
 		}
 
-		.map-right {
+		.world-right {
 			display: flex;
   		flex-direction: column;
 			justify-content: space-between;

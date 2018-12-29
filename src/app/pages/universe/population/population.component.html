@@ -8,7 +8,7 @@
 </head-universe>
 <div class="population-container">
 	<div class="population-imgs">
-		<img (click)="previousSelection()" class="population-selectimg" src="assets/images/population/select_previous.png" alt="">
+		<img (click)="previousSelection()" class="population-selection" src="assets/images/population/select_previous.png" alt="">
 
 		<img *ngIf="select == 2" (click)="previousSelection()" class="population-img" src="assets/images/population/p_humain.png" alt="">
 		<img *ngIf="select == 3" (click)="previousSelection()" class="population-img" src="assets/images/population/p_elfe.png" alt="">
@@ -31,11 +31,11 @@
 		<img *ngIf="select == 4" (click)="nextSelection()" class="population-img" src="assets/images/population/p_pan.png" alt="">
 		<img *ngIf="select == 5" (click)="nextSelection()" class="population-img" src="assets/images/population/p_arlenien.png" alt="">
 
-		<img (click)="nextSelection()" class="population-selectimg" src="assets/images/population/select_next.png" alt="">
+		<img (click)="nextSelection()" class="population-selection" src="assets/images/population/select_next.png" alt="">
 	</div>
-	<div class="population-text">
+	<div class="population-description">
 		<h2>{{ peopleTitle | uppercase }}</h2>
-		<p class="population-description">{{ peopleText01 }}<br><br>{{ peopleText02 }}<br><br></p>
+		<p class="population-text">{{ peopleText01 }}<br><br>{{ peopleText02 }}<br><br></p>
 		<p class="population-location">{{ 'UNIVERSE.POPULATION.LOCATION' | translate | uppercase }} : {{ peopleLocation | translate }}</p>
 	</div>
 </div>

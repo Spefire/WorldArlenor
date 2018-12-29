@@ -6,8 +6,8 @@
 	imgLeft="assets/images/symboles/angel.png"
 	imgRight="assets/images/symboles/demon.png">
 </head-universe>
-<div class="entity-container">
-	<div class="entity-list">
+<div class="religion-container">
+	<div class="religion-list">
 		<img *ngIf="select != 1" src="assets/images/symboles/angel_01.png" alt="" (click)="changeSelection(1)">
 		<img *ngIf="select == 1" src="assets/images/symboles/angel_01_selected.png" alt="">
 		<img *ngIf="select != 2" src="assets/images/symboles/angel_02.png" alt="" (click)="changeSelection(2)">
@@ -29,12 +29,12 @@
 		<img *ngIf="select != 10" src="assets/images/symboles/angel_10.png" alt="" (click)="changeSelection(10)">
 		<img *ngIf="select == 10" src="assets/images/symboles/angel_10_selected.png" alt="">
 	</div>
-	<div class="entity-text">
+	<div class="religion-description">
 		<h4>{{ entityKabal | uppercase }}</h4>
 		<h2>{{ entityTitle }}</h2>
 		<p>"{{ entityComment }}"<br>- {{ entityCommentName }}</p>
 	</div>
-	<div class="entity-list">
+	<div class="religion-list">
 		<img *ngIf="select != 11" src="assets/images/symboles/demon_01.png" alt="" (click)="changeSelection(11)">
 		<img *ngIf="select == 11" src="assets/images/symboles/demon_01_selected.png" alt="">
 		<img *ngIf="select != 12" src="assets/images/symboles/demon_02.png" alt="" (click)="changeSelection(12)">

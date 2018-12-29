@@ -1,26 +1,26 @@
-<div class="main-container">
-	<div class="map-left">
-		<div class="fact-header">
-			<img class="fact-image" src="{{ selectedFact.backgroundSrc }}" alt="">
+<div class="world-container">
+	<div class="world-left">
+		<div class="fact-image">
+			<img src="{{ selectedFact.backgroundSrc }}" alt="">
 		</div>
-		<div class="fact-container">
-			<h2 class="fact-text">{{ selectedFact.title | uppercase }}</h2>
-			<h4 class="fact-text" *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
-			<h4 class="fact-text" *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
-			<h4 class="fact-text" *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
-			<h4 class="fact-text" *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
-			<h4 class="fact-text" *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
-			<h4 class="fact-text" *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
+		<div class="fact-title">
+			<h2>{{ selectedFact.title | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
 		</div>
 		<div class="fact-description">
-			<p class="fact-text" innerHtml="{{ selectedFact.texte01 }}"></p>
-			<p class="fact-text" innerHtml="{{ selectedFact.texte02 }}"></p>
+			<p innerHtml="{{ selectedFact.texte01 }}"></p>
+			<p innerHtml="{{ selectedFact.texte02 }}"></p>
 		</div>
-		<div class="fact-footer">
-			<p class="fact-text" innerHtml="{{ selectedFact.comments }}"></p>
+		<div class="fact-comment">
+			<p innerHtml="{{ selectedFact.comments }}"></p>
 		</div>
 	</div>
-	<div class="map-right">
+	<div class="world-right">
 		<div class="map-title">
 			<h2 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h2>
 			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.CLIMATE' | translate }}</h4>

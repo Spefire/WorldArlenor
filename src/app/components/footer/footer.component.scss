@@ -19,7 +19,7 @@
 					padding: 0 5%;
 					margin: auto;
 
-					.logo-image {
+					img {
 						width: 100%;
 						cursor: pointer;
 					}
@@ -49,102 +49,103 @@
 				width: 50%;
 				margin: 25px 0;
 				border-left: 1px solid $dark-secondary-color;
-			}
 
-			ul {
-				display: flex;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+				ul {
+					display: flex;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
 
-				margin: 0;
-				padding: 0;
+					margin: 0;
+					padding: 0;
 
-				li {
-					list-style: none;
+					li {
+						list-style: none;
 
-					a {
-						display: block;
-						position: relative;
-						height: 80px;
-						width: 80px;
-						margin: 0 20px;
+						a {
+							display: block;
+							position: relative;
+							height: 80px;
+							width: 80px;
+							margin: 0 20px;
 
-						line-height: 80px;
-						font-size: 40px;
-						text-align: center;
-						transition: 0.5s;
+							line-height: 80px;
+							font-size: 40px;
+							text-align: center;
+							transition: 0.5s;
 
-						&:hover {
-							color: $light-secondary-color;
+							&:hover {
+								color: $light-secondary-color;
+							}
+
+							span {
+								position: absolute;
+								transition: transform 0.5s;
+								background-color: $dark-secondary-color;
+							}
+
+							span:nth-child(1), span:nth-child(3) {
+								height: 1px;
+								width: 100%;
+							}
+
+							span:nth-child(1) {
+								top: 0;
+								left: 0;
+								transform-origin: right;
+							}
+
+							&:hover span:nth-child(1) {
+								transform: scaleX(0);
+								transform-origin: left;
+								transition: transform 0.5s;
+							}
+
+							span:nth-child(3) {
+								bottom: 0;
+								right: 0;
+								transform-origin: left;
+							}
+
+							&:hover span:nth-child(3) {
+								transform: scaleX(0);
+								transform-origin: right;
+								transition: transform 0.5s;
+							}
+
+							span:nth-child(2), span:nth-child(4) {
+								height: 100%;
+								width: 1px;
+							}
+
+							span:nth-child(2) {
+								top: 0;
+								left: 0;
+								transform: scaleY(0);
+								transform-origin: bottom;
+							}
+
+							&:hover span:nth-child(2) {
+								transform: scaleY(1);
+								transform-origin: top;
+								transition: transform 0.5s;
+							}
+
+							span:nth-child(4) {
+								top: 0;
+								right: 0;
+								transform: scaleY(0);
+								transform-origin: top;
+							}
+
+							&:hover span:nth-child(4) {
+								transform: scaleY(1);
+								transform-origin: bottom;
+								transition: transform 0.5s;
+							}
 						}
 
-						span {
-							position: absolute;
-							transition: transform 0.5s;
-							background-color: $dark-secondary-color;
-						}
-
-						span:nth-child(1), span:nth-child(3) {
-							height: 1px;
-							width: 100%;
-						}
-
-						span:nth-child(1) {
-							top: 0;
-							left: 0;
-							transform-origin: right;
-						}
-
-						&:hover span:nth-child(1) {
-							transform: scaleX(0);
-							transform-origin: left;
-							transition: transform 0.5s;
-						}
-
-						span:nth-child(3) {
-							bottom: 0;
-							right: 0;
-							transform-origin: left;
-						}
-
-						&:hover span:nth-child(3) {
-							transform: scaleX(0);
-							transform-origin: right;
-							transition: transform 0.5s;
-						}
-
-						span:nth-child(2), span:nth-child(4) {
-							height: 100%;
-							width: 1px;
-						}
-
-						span:nth-child(2) {
-							top: 0;
-							left: 0;
-							transform: scaleY(0);
-							transform-origin: bottom;
-						}
-
-						&:hover span:nth-child(2) {
-							transform: scaleY(1);
-							transform-origin: top;
-							transition: transform 0.5s;
-						}
-
-						span:nth-child(4) {
-							top: 0;
-							right: 0;
-							transform: scaleY(0);
-							transform-origin: top;
-						}
-
-						&:hover span:nth-child(4) {
-							transform: scaleY(1);
-							transform-origin: bottom;
-							transition: transform 0.5s;
-						}
 					}
 				}
 			}
@@ -158,13 +159,7 @@
         height: 50px;
         border-top: 1px solid $dark-secondary-color;
 
-				.bigfooter-nav {
-					display: flex;
-					justify-content: space-between;
-					width: 100%;
-				}
-
-        a {
+				a {
           display: inline-block;
           position: relative;
           height: 50px;
@@ -180,6 +175,12 @@
             color: $light-secondary-color;
           }
         }
+
+				.bigfooter-section {
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+				}
 
         .footer-section {
           position: relative;

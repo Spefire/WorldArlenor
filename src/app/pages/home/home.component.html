@@ -1,22 +1,22 @@
-<div [ngClass]="{'active': selection == 0 }" class="head-container container01">
-  <div class="title-container">
-    <img class="logo-image" src="assets/images/logo.png" alt="">
+<div [ngClass]="{'active': selection == 0 }" class="home-container container01">
+  <div class="home-subcontainer">
+    <img src="assets/images/logo.png" alt="">
     <h4>{{ 'PAGE.HOME' | translate | uppercase }}</h4>
     <h1>{{ 'PAGE.UNIVERSE' | translate | uppercase }}</h1>
     <p>{{ 'HOME.UNIVERSE.RESUME' | translate }}</p>
     <button routerLink="universe">{{ 'HOME.UNIVERSE.SEEMORE' | translate | uppercase }}</button>
   </div>
 </div>
-<div [ngClass]="{'active': selection == 1 }" class="head-container container02">
-  <div class="title-container inversed-container">
+<div [ngClass]="{'active': selection == 1 }" class="home-container container02">
+  <div class="home-subcontainer inversed-container">
     <h4>{{ 'PAGE.HOME' | translate | uppercase }}</h4>
     <h1>{{ 'PAGE.ROLEPLAY' | translate | uppercase }}</h1>
     <p>{{ 'HOME.ROLEPLAY.RESUME' | translate }}</p>
     <button>{{ 'HOME.ROLEPLAY.SEEMORE' | translate | uppercase }}</button>
   </div>
 </div>
-<div [ngClass]="{'active': selection == 2 }" class="head-container container03">
-  <div class="title-container">
+<div [ngClass]="{'active': selection == 2 }" class="home-container container03">
+  <div class="home-subcontainer">
     <h4>{{ 'PAGE.HOME' | translate | uppercase }}</h4>
     <h1>{{ 'PAGE.CHARACTERS' | translate | uppercase }}</h1>
     <p>{{ 'HOME.CHARACTERS.RESUME' | translate }}</p>
