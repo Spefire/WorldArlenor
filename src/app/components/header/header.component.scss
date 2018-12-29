@@ -24,7 +24,7 @@
         left: 0;
         height: 2px;
         width: 100%;
-        background: $dark-secondary-color;
+        background: $secondary-color;
 
         transform: scaleX(0);
         transition: transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -94,8 +94,8 @@
       width: 100%;
 
       .header-subtitle {
-				border-left: 1px solid $dark-secondary-color;
-        border-right: 1px solid $dark-secondary-color;
+				border-left: 1px solid $secondary-color;
+        border-right: 1px solid $secondary-color;
 			}
     }
   }

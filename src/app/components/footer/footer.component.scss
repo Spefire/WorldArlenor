@@ -7,7 +7,7 @@
 		.footer-infos {
 			display: flex;
 			height: 250px;
-			border-top: 1px solid $dark-secondary-color;
+			border-top: 1px solid $secondary-color;
 
 			.footer-left {
 				display: flex;
@@ -48,7 +48,7 @@
 				position: relative;
 				width: 50%;
 				margin: 25px 0;
-				border-left: 1px solid $dark-secondary-color;
+				border-left: 1px solid $secondary-color;
 
 				ul {
 					display: flex;
@@ -82,7 +82,7 @@
 							span {
 								position: absolute;
 								transition: transform 0.5s;
-								background-color: $dark-secondary-color;
+								background-color: $secondary-color;
 							}
 
 							span:nth-child(1), span:nth-child(3) {
@@ -157,7 +157,7 @@
         justify-content: space-between;
 
         height: 50px;
-        border-top: 1px solid $dark-secondary-color;
+        border-top: 1px solid $secondary-color;
 
 				a {
           display: inline-block;
