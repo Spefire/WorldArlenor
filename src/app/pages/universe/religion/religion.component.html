@@ -32,7 +32,7 @@
 	<div class="entity-text">
 		<h4>{{ entityKabal | uppercase }}</h4>
 		<h2>{{ entityTitle }}</h2>
-		<p>"{{ entityComment }}"<br>{{ entityCommentName }}</p>
+		<p>"{{ entityComment }}"<br>- {{ entityCommentName }}</p>
 	</div>
 	<div class="entity-list">
 		<img *ngIf="select != 11" src="assets/images/symboles/demon_01.png" alt="" (click)="changeSelection(11)">

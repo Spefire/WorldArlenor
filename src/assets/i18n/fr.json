@@ -109,7 +109,7 @@
 			"DARKKABAL": "La Cabale Inversée",
 			"ENTITY1": {
 				"TITLE": "METATRON, l'Ange de l'Unité",
-				"COMMENT": "Chez les good guys, c'est un peu lui le patron. FAUT PAS le chercher ! ...mais il est sympa quand même.",
+				"COMMENT": "Chez les good guys d'Arlénor, c'est un peu lui le patron. FAUT PAS le chercher !... Mais il est sympa quand même.",
 				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
 			},
 			"ENTITY2": {
@@ -139,43 +139,43 @@
 			},
 			"ENTITY7": {
 				"TITLE": "HANIEL, Ange de la Passion",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Réveilles mon âme, allumes ma flamme, et fais moi rêver s'il te plait...",
+				"COMMENTNAME": "Humaine priant dans son lit à côté de sa nouvelle femme"
 			},
 			"ENTITY8": {
 				"TITLE": "RAPHAEL, Ange du Partage",
-				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire. Cela vous fera 50 crédits la nuit.",
+				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire... Cela vous fera donc 50 crédits la nuit.",
 				"COMMENTNAME": "Bob, Tavernier de Kiranof"
 			},
 			"ENTITY9": {
 				"TITLE": "GABRIEL, Ange de la Protection",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Accorde-moi Gabriel, une main ferme et un regard vigilant. Abrite durant mon voyage, Ô bel Ange, ceux qui m'accompagnent des maux du feu et de toutes les calamités. Protège-moi et conduis-moi en toute sécurité à ma destination.",
+				"COMMENTNAME": "Commerçant partant traverser le désert de Sanderten"
 			},
 			"ENTITY10": {
 				"TITLE": "SADALFONE, Ange de la Création",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Ce que vous avez à retenir de ce cours, c'est que l'imagination n'a pas de limite hormis celles que vous vous fixez.",
+				"COMMENTNAME": "L'un des meilleurs professeurs de Célestia"
 			},
 			"ENTITY11": {
 				"TITLE": "SATAN, Démon du Néant",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Au début, il n'y avait rien. Enfin... le rien n'existe pas. Au début, il y avait la déesse Arlénor...",
+				"COMMENTNAME": "Ancien prêtre reconverti en conteur pour enfants"
 			},
 			"ENTITY12": {
 				"TITLE": "BELZEBTUH, Démon de la Vengeance",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "La vengeance est un plat qui se mange froid... ça tombe bien, j'en suis au dessert.",
+				"COMMENTNAME": "Romain, s'étant transformé en loup"
 			},
 			"ENTITY13": {
 				"TITLE": "LUCIFUGUS, Démon de la Stupidité",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Je te jure, les licornes ça existe maman ! Quand elles sautent en faisant PROUT, il y a un arc-en-ciel !",
+				"COMMENTNAME": "L'innocence d'un enfant de 8 ans"
 			},
 			"ENTITY14": {
 				"TITLE": "ASTAROTH, Démon du Indifférence",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Par mes cartes, montre moi ton passé, ton présent et ton futur... Et maintenant... Subis le châtiment de ta vie insipide !",
+				"COMMENTNAME": "Diana, dans un état second"
 			},
 			"ENTITY15": {
 				"TITLE": "ASMODEE, Démon du Cruauté",
@@ -184,28 +184,28 @@
 			},
 			"ENTITY16": {
 				"TITLE": "BELPHEGOR, Démon du Laideur",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Miroir miroir, mon beau miroir, dis moi qui est le plus beau... -CRACK (bruit d'un miroir qui se brise)-",
+				"COMMENTNAME": "Personne atteinte de narcissisme"
 			},
 			"ENTITY17": {
 				"TITLE": "BA'AL, Démon du Luxure",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Le bâton et les pierres peuvent me briser les os, mais les chaines et les cordes, elles, m'excitent.",
+				"COMMENTNAME": "Chanteuse célebre dans les bars faradéliens"
 			},
 			"ENTITY18": {
 				"TITLE": "ADRAMALEC, Démon du Discorde",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Excusez moi madame. Je crois que votre boulanger a fait une erreur sur l'un de ses produits... C'est 'chocolatine' et non 'pain au chocolat'.",
+				"COMMENTNAME": "Client de la boulangerie Obonpin"
 			},
 			"ENTITY19": {
 				"TITLE": "LILITH, Démon du Instabilité",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Moi ? Je suis folle ? Haha. Attendez de voir ma soeur !",
+				"COMMENTNAME": "Personnage venant d'un autre monde"
 			},
 			"ENTITY20": {
 				"TITLE": "NAHEMAR, Démon du Rêverie",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Comment déterminer ce qui est réel, et ce qui ne l'est pas ?... C'est simple. Fais toi tuer, et si tu meurs c'est que cela n'était pas un rêve.",
+				"COMMENTNAME": "Philosophe du temps moderne"
 			}
 		},
 		"CRYSTALS": {
