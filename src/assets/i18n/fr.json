@@ -1,67 +1,32 @@
 {
-  "HEADER": {
-    "HOME": "Le Monde d'Arlénor",
-    "UNIVERSE": {
-      "MAIN": "Univers",
-      "SECTION00": "Le Monde",
-      "SECTION01": "La Religion",
-      "SECTION02": "La Magie des cristaux",
-      "SECTION03": "Les Peuples",
-      "SECTION04": "L'Île Célestia",
-      "SECTION05": "Le Cercle des mages"
-    },
-    "ROLEPLAY": "Jeu de rôles",
-    "CHARACTERS": "Personnages",
-    "ABOUT": "A Propos"
-	},
   "PAGE": {
-    "HOME": {
-			"TITLE": "Le Monde d'Arlénor"
-    },
-    "UNIVERSE": {
-      "TITLE": "L'Univers"
-    },
-    "RELIGION": {
-      "TITLE": "La Religion"
-		},
-		"CRYSTALS": {
-      "TITLE": "La Magie des Cristaux"
-    },
-		"POPULATION": {
-      "TITLE": "Les Peuples"
-    },
-    "ROLEPLAY": {
-      "TITLE": "Le Jeu de rôle"
-    },
-    "CHARACTERS": {
-      "TITLE": "Les Personnages"
-    },
-    "ABOUT": {
-      "TITLE": "A Propos"
-    },
-    "LEGACY": {
-      "TITLE": "Mentions Légales"
-    }
+    "HOME": "Le Monde d'Arlénor",
+		"UNIVERSE": "L'Univers",
+		"CELESTIA": "L'Île Célestia",
+		"EVANELL": "Le Cercle des mages",
+		"WORLD": "Le Monde",
+    "RELIGION": "La Religion",
+		"CRYSTALS": "La Magie des Cristaux",
+		"POPULATION": "Les Peuples",
+    "ROLEPLAY": "Le Jeu de rôle",
+    "CHARACTERS": "Les Personnages",
+    "ABOUT": "A Propos",
+    "LEGACY": "Mentions Légales"
   },
   "FOOTER": {
     "RESUME": "Le Monde d'Arlénor a été créé en Janvier 2015, et je ne sais pas quoi dire plus... Voici une autre phrase en attendant.",
-    "SEEMORE": "En savoir plus",
-    "LEGACY": "Mentions légales",
-    "ABOUT": "A Propos"
+    "SEEMORE": "En savoir plus"
   },
   "HOME": {
     "UNIVERSE": {
-      "TITLE": "L'Univers",
       "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "Découvrir"
     },
     "ROLEPLAY": {
-      "TITLE": "Le Jeu de rôle",
       "RESUME": "Vivez l'aventure de jeunes personnes, découvrant la notion du Destin et de l'effet papillon...",
       "SEEMORE": "Prochainement disponible"
     },
     "CHARACTERS": {
-      "TITLE": "Les Personnages",
       "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
       "SEEMORE": "Prochainement disponible"
     }
@@ -275,7 +240,6 @@
     "TITLE": "Personnages"
   },
   "ABOUT": {
-		"TITLE": "A Propos",
 		"INTRODUCTION": "Présentation",
 		"INTRODUCTIONTEXT": "Je suis Spefire, j'ai 24 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
 		"CONTACT": "Contact / Questions",
@@ -289,7 +253,6 @@
 		}
   },
   "LEGACY": {
-    "TITLE": "Mentions Légales",
     "STATUT": "Statut du propriétaire : <strong>Particulier</strong>",
     "HOST": "<strong>Hébergeur OVH<br>2 rue Kellermann<br>59100 ROUBAIX – France</strong>",
     "CONTACT": "Pour contacter cet hébergeur, rendez-vous à l’adresse suivante :"

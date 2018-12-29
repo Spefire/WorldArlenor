@@ -43,8 +43,8 @@
 
 <div class="footer-navigation">
   <nav [ngClass]="{ 'bigfooter-nav' : bigfooter }">
-    <a routerLinkActive="active" routerLink="legacy" [innerHtml]="'FOOTER.LEGACY' | translate | uppercase"></a>
-    <a routerLinkActive="active" routerLink="about" [innerHtml]="'FOOTER.ABOUT' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="legacy" [innerHtml]="'PAGE.LEGACY' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="about" [innerHtml]="'PAGE.ABOUT' | translate | uppercase"></a>
   </nav>
   <div *ngIf="!bigfooter" class="footer-section">
     <ul>
