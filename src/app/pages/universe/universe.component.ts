@@ -23,4 +23,12 @@ export class UniverseComponent {
 		this.select = id;
 		this.selectedFact = this.apiService.getFact(this.select);
 	}
+
+	hoverIcon(id:number) {
+		document.getElementsByClassName("map-icon-0"+id.toString())[0].setAttribute('src', './assets/images/world/icon_map_hover.svg');
+	}
+
+	unhoverIcon(id:number) {
+		document.getElementsByClassName("map-icon-0"+id.toString())[0].setAttribute('src', './assets/images/world/icon_map.svg');
+	}
 }
