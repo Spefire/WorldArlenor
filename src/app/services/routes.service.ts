@@ -15,20 +15,5 @@ export class RoutesService {
         content: res
 			});
     });
-    this.translate.get('PAGE.' + pageName + '.META').subscribe((res: any) => {
-			console.log(res);
-      this.meta.updateTag({
-        name: 'description',
-        content: res.DESCRIPTION
-			});
-			this.meta.updateTag({
-        property: 'og:description',
-        content: res.DESCRIPTION
-			});
-			this.meta.updateTag({
-        property: 'og:url',
-        content: res.URL
-      });
-    });
   }
 }

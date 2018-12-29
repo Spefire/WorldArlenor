@@ -16,67 +16,31 @@
 	},
   "PAGE": {
     "HOME": {
-			"TITLE": "Le Monde d'Arlénor",
-			"META": {
-				"DESCRIPTION": "Univers, créé principalement pour le jeu de rôles, mais où sont racontées les histoires de...",
-				"URL": "www.arlenor.com"
-			}
+			"TITLE": "Le Monde d'Arlénor"
     },
     "UNIVERSE": {
-      "TITLE": "L'Univers",
-      "META": {
-				"DESCRIPTION": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
-				"URL": "www.arlenor.com/universe"
-			}
+      "TITLE": "L'Univers"
     },
     "RELIGION": {
-      "TITLE": "La Religion",
-      "META": {
-				"DESCRIPTION": "Selon la légende connue par tous, la divinité de la Vie et de la Mort, Arlénor, a façonné le...",
-				"URL": "www.arlenor.com/universe/religion"
-			}
+      "TITLE": "La Religion"
 		},
 		"CRYSTALS": {
-      "TITLE": "La Magie des Cristaux",
-      "META": {
-				"DESCRIPTION": "La magie du Monde d'Arlénor provient des cristaux laissés par les...",
-				"URL": "www.arlenor.com/universe/crystals"
-			}
+      "TITLE": "La Magie des Cristaux"
     },
 		"POPULATION": {
-      "TITLE": "Les Peuples",
-      "META": {
-				"DESCRIPTION": "Le premier peuple à être apparu sur le Monde d'Arlénor, est le peuple des...",
-				"URL": "www.arlenor.com/universe/population"
-			}
+      "TITLE": "Les Peuples"
     },
     "ROLEPLAY": {
-      "TITLE": "Le Jeu de rôle",
-      "META": {
-				"DESCRIPTION": "Vivez l'aventure de jeunes personnes, découvrant la notion du Destin et de l'effet papillon...",
-				"URL": "www.arlenor.com/roleplay"
-			}
+      "TITLE": "Le Jeu de rôle"
     },
     "CHARACTERS": {
-      "TITLE": "Les Personnages",
-      "META": {
-				"DESCRIPTION": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy...",
-				"URL": "www.arlenor.com/characters"
-			}
+      "TITLE": "Les Personnages"
     },
     "ABOUT": {
-      "TITLE": "A Propos",
-      "META": {
-				"DESCRIPTION": "Ce projet est né avec ma découverte du jeu de rôles en 2014. J'avais envie de contrôler le monde dans lequel vivrait mes joueurs et créer mes propres...",
-				"URL": "www.arlenor.com/about"
-			}
+      "TITLE": "A Propos"
     },
     "LEGACY": {
-      "TITLE": "Mentions Légales",
-      "META": {
-				"DESCRIPTION": "",
-				"URL": "www.arlenor.com/legacy"
-			}
+      "TITLE": "Mentions Légales"
     }
   },
   "FOOTER": {
