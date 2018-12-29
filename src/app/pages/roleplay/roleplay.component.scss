@@ -1,0 +1,124 @@
+@import "../../../styles/variables.scss";
+
+:host {
+    .roleplay-container {
+        position: relative;
+				height: 400px;
+
+				&.little {
+					height: 300px;
+				}
+
+        .title-container {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 25%;
+            text-align: left;
+            transform: translateX(-50%) translateY(-50%);
+
+            &.inversed-container {
+                left: auto;
+                right: 25%;
+                text-align: right;
+                transform: translateX(50%) translateY(-50%);
+            }
+				}
+
+				.glyphe-container {
+					position: absolute;
+					top: 50%;
+					right: 25%;
+					transform: translateX(50%) translateY(-50%);
+
+					height: 300px;
+					width: 300px;
+					perspective: 600px;
+
+					&.little {
+            height: 250px;
+						width: 250px;
+						perspective: 500px;
+					}
+
+					&.inversed-container {
+							right: 0%;
+							left: 25%;
+							transform: translateX(-50%) translateY(-50%);
+					}
+			}
+    }
+
+    .glyphe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px $primary-color, inset 0px 0px 5px $primary-color;
+    }
+
+    .roleplay-container:hover .glyphe01 {
+        animation: anim01 4s infinite ease-in-out;
+
+        @keyframes anim01 {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+    }
+
+    .roleplay-container:hover .glyphe02 {
+        animation: anim02 4s infinite ease-in-out;
+
+        @keyframes anim02 {
+            0% { transform: rotateY(0deg) rotateX(0deg) }
+            100% { transform: rotateY(360deg) rotateX(360deg) }
+        }
+    }
+
+    .roleplay-container:hover .glyphe03 {
+        animation: anim03 4s infinite ease-in-out;
+
+        @keyframes anim03 {
+            0% { transform: rotateY(0deg) rotateX(360deg) }
+            100% { transform: rotateY(360deg) rotateX(0deg) }
+        }
+    }
+
+    .roleplay-container:hover .glyphe04 {
+        animation: anim04 4s infinite ease-in-out;
+
+        @keyframes anim04 {
+            0% { transform: rotateY(360deg); }
+            100% { transform: rotateY(0deg); }
+        }
+    }
+
+    .roleplay-container:hover .glyphe05.map {
+        animation: anim05map 4s infinite ease-in-out;
+
+        @keyframes anim05map {
+            0% { transform: rotateX(360deg); }
+            100% { transform: rotateX(0deg); }
+        }
+    }
+
+    .roleplay-container:hover .glyphe05.perso {
+        animation: anim05perso 4s infinite ease-in-out;
+
+        @keyframes anim05perso {
+            0% { transform: rotateY(360deg) }
+            100% { transform: rotateY(0deg) }
+        }
+    }
+
+    .roleplay-container:hover .glyphe05.book {
+        animation: anim05book 4s infinite ease-in-out;
+
+        @keyframes anim05book {
+            0% { transform: rotateY(360deg); }
+            100% { transform: rotateY(0deg); }
+        }
+    }
+}

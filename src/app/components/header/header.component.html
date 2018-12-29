@@ -5,11 +5,11 @@
   </div>
   <nav>
     <a routerLinkActive="active" routerLink="universe" [innerHtml]="'PAGE.UNIVERSE' | translate | uppercase"></a>
-    <a class="disabled" [innerHtml]="'PAGE.ROLEPLAY' | translate | uppercase"></a>
+    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'PAGE.ROLEPLAY' | translate | uppercase"></a>
     <a class="disabled" [innerHtml]="'PAGE.CHARACTERS' | translate | uppercase"></a>
   </nav>
 </div>
-<div class="header-subsection" [ngClass]="{'active': route == 'universe' || route == 'roleplay' || route == 'characters'}">
+<div class="header-subsection" [ngClass]="{'active': route == 'universe'}">
   <nav class="header-subnav" *ngIf="route == 'universe'">
 		<a class="disabled" [innerHtml]="'PAGE.EVANELL' | translate | uppercase"></a>
 		<a class="disabled" [innerHtml]="'PAGE.CELESTIA' | translate | uppercase"></a>
@@ -17,11 +17,5 @@
     <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/religion" [innerHtml]="'PAGE.RELIGION' | translate | uppercase"></a>
     <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/crystals" [innerHtml]="'PAGE.CRYSTALS' | translate | uppercase"></a>
     <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/population" [innerHtml]="'PAGE.POPULATION' | translate | uppercase"></a>
-  </nav>
-  <nav class="header-subnav" *ngIf="route == 'roleplay'">
-    <a routerLinkActive="active" routerLink="roleplay" [innerHtml]="'PAGE.ROLEPLAY' | translate | uppercase"></a>
-  </nav>
-  <nav class="header-subnav" *ngIf="route == 'characters'">
-    <a routerLinkActive="active" routerLink="characters" [innerHtml]="'PAGE.CHARACTERS' | translate | uppercase"></a>
   </nav>
 </div>
