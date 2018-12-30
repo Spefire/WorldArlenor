@@ -46,11 +46,11 @@
 				cursor: pointer;
 				background-size: cover;
 				background-image: url("/assets/images/icon_logo.svg");
+			}
 
-				&:hover {
-					background-image: url("/assets/images/icon_logo_hover.svg");
-				}
-      }
+			&:hover .header-logo {
+				background-image: url("/assets/images/icon_logo_hover.svg");
+			}
 
       .header-title {
         color: $light-secondary-color;
