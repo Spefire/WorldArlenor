@@ -19,7 +19,7 @@
   },
   "HOME": {
     "UNIVERSE": {
-      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion dominante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "Découvrir"
     },
     "ROLEPLAY": {
@@ -94,7 +94,7 @@
 			},
 			"ENTITY5": {
 				"TITLE": "SAMAEL, Ange de la Justice",
-				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procés.",
+				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procès.",
 				"COMMENTNAME": "Quistis, Avocate de Faradel"
 			},
 			"ENTITY6": {
@@ -138,37 +138,37 @@
 				"COMMENTNAME": "L'innocence d'un enfant de 8 ans"
 			},
 			"ENTITY14": {
-				"TITLE": "ASTAROTH, Démon du Indifférence",
+				"TITLE": "ASTAROTH, Démon de l'Indifférence",
 				"COMMENT": "Par mes cartes, montre moi ton passé, ton présent et ton futur... Et maintenant... Subis le châtiment de ta vie insipide !",
 				"COMMENTNAME": "Diana, dans un état second"
 			},
 			"ENTITY15": {
-				"TITLE": "ASMODEE, Démon du Cruauté",
+				"TITLE": "ASMODEE, Démon de la Cruauté",
 				"COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
 				"COMMENTNAME": "Jeune femme perturbée par une prêtresse"
 			},
 			"ENTITY16": {
-				"TITLE": "BELPHEGOR, Démon du Laideur",
+				"TITLE": "BELPHEGOR, Démon de la Laideur",
 				"COMMENT": "Miroir miroir, mon beau miroir, dis moi qui est le plus beau... -CRACK (bruit d'un miroir qui se brise)-",
 				"COMMENTNAME": "Personne atteinte de narcissisme"
 			},
 			"ENTITY17": {
-				"TITLE": "BA'AL, Démon du Luxure",
+				"TITLE": "BA'AL, Démon de la Luxure",
 				"COMMENT": "Le bâton et les pierres peuvent me briser les os, mais les chaines et les cordes, elles, m'excitent.",
 				"COMMENTNAME": "Chanteuse célebre dans les bars faradéliens"
 			},
 			"ENTITY18": {
-				"TITLE": "ADRAMALEC, Démon du Discorde",
+				"TITLE": "ADRAMALEC, Démon de la Discorde",
 				"COMMENT": "Excusez moi madame. Je crois que votre boulanger a fait une erreur sur l'un de ses produits... C'est 'chocolatine' et non 'pain au chocolat'.",
 				"COMMENTNAME": "Client de la boulangerie Obonpin"
 			},
 			"ENTITY19": {
-				"TITLE": "LILITH, Démon du Instabilité",
+				"TITLE": "LILITH, Démon de l'Instabilité",
 				"COMMENT": "Moi ? Je suis folle ? Haha. Attendez de voir ma soeur !",
 				"COMMENTNAME": "Personnage venant d'un autre monde"
 			},
 			"ENTITY20": {
-				"TITLE": "NAHEMAR, Démon du Rêverie",
+				"TITLE": "NAHEMAR, Démon de la Rêverie",
 				"COMMENT": "Comment déterminer ce qui est réel, et ce qui ne l'est pas ?... C'est simple. Fais toi tuer, et si tu meurs c'est que cela n'était pas un rêve.",
 				"COMMENTNAME": "Philosophe du temps moderne"
 			}
@@ -236,7 +236,7 @@
 	"ROLEPLAY": {
     "UNIVERSE": {
 			"TITLE": "La carte du monde et ses habitants",
-      "RESUME": "Avant de créer son personnage, ou même de lire les règles du jeu de rôles... découvrez l'univers du Monde d'Arlénor : la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "RESUME": "Avant de créer son personnage, ou même de lire les règles du jeu de rôles... découvrez l'univers du Monde d'Arlénor : la religion dominante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "Voir le monde"
     },
     "PERSO": {
