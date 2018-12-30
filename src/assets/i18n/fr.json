@@ -99,8 +99,8 @@
 			},
 			"ENTITY6": {
 				"TITLE": "MIKAEL, Ange de la Nature",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "La nature a voulu créer les humains, puis des êtres plus évolués, les elfes, à travers les cristaux. Les autres mutations ne sont que des erreurs, dû au fait qu'ils voulaient nous ressembler...",
+				"COMMENTNAME": "Xendel Eresles, lors de l'inauguration de l'Eclat infini"
 			},
 			"ENTITY7": {
 				"TITLE": "HANIEL, Ange de la Passion",
@@ -191,9 +191,9 @@
 			}
 		},
 		"POPULATION": {
-			"SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les Anges et Démons lors de la création du monde.",
-			"SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux.",
-			"SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant une certaine quantité de leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
+			"SECTION01": "Lors de la Création, seuls les humains étaient présents dans le Monde d'Arlénor.",
+			"SECTION02": "Cependant, à l'An 0, les humains ont découvert ce qui allait changer radicalement leur vie : les cristaux.<br>La manipulation et la présence de ces derniers aux côtés des humains, ont altéré au fil du temps leur code génétique, donnant vie à de nouvelles races.",
+			"SECTION03": "Des relations se sont créées alors entre les différences races, certaines amicales, neutres, et d'autres... meurtrières.<br>Les elfes et les humains vivent en toute liberté alors que les nains et les mutants essayent de survivre du mieux qu'ils le peuvent. Les pans et les arléniens restent cachés, observant le monde de loin...",
 			"LOCATION": "Localisation",
 			"PEOPLE1": {
 				"TITLE": "Les Humains",

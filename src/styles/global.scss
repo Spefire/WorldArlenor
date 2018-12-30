@@ -80,7 +80,11 @@ button {
 
   background: none;
   border: 1px solid $secondary-color;
-  color: $light-secondary-color;
+	color: $light-secondary-color;
+
+	&:hover {
+		background-color: rgba($light-color, 0.1);
+	}
 }
 
 img {
