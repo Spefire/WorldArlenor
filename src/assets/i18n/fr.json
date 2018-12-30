@@ -241,14 +241,14 @@
     },
     "PERSO": {
 			"TITLE": "La création de personnage",
-      "RESUME": "Créez ici votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... Pour ensuite télécharger la fiche de personnage en PDF.",
-      "SEEMORE": "Prochainement disponible"
+      "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... (bientôt la création de perso en ligne)",
+      "SEEMORE": "Télécharger la fiche de perso V1.0"
     },
     "FILES": {
 			"TITLE": "Les règles du jeu",
-      "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu avec les dés.",
+      "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu et des propositions de pouvoirs.",
 			"SEEMORE01": "Télécharger le Manuel du Joueur V1.0",
-			"RESUME02": "Pour les Maitres du Jeu seulement :",
+			"RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
 			"SEEMORE02": "Télécharger le Manuel du MJ V1.0"
     }
   },
