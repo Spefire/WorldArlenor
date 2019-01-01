@@ -7,7 +7,20 @@
     justify-content: space-between;
     position: relative;
     height: 50px;
-    background-color: $dark-color;
+		background-color: $dark-color;
+
+		@media screen and (max-width: 700px) {
+			flex-direction: column;
+			justify-content: normal;
+			height: 200px;
+			border-bottom: 1px solid $secondary-color;
+
+			nav {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+		}
 
     a {
       display: inline-block;
@@ -33,7 +46,7 @@
       &.active &:after {
 				transform: scaleX(1);
       }
-    }
+		}
 
     .header-main {
       display: flex;

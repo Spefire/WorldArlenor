@@ -21,6 +21,11 @@
 				right: 0;
 				z-index: -1;
 
+				@media screen and (max-width: 700px) {
+					top: 201px;
+					bottom: 101px;
+				}
+
 				background-position: center;
 				background-size: cover;
 			}
@@ -43,22 +48,39 @@
 			.home-subcontainer {
 					position: absolute;
 					top: 50%;
-					left: 25%;
+					left: 0;
 					width: 35%;
 					text-align: left;
-					transform: translateX(-35%) translateY(-50%);
+					transform: translateX(40%) translateY(-50%);
+
+					@media screen and (max-width: 700px) {
+						left: 0;
+						width: 50%;
+						transform: translateX(20%) translateY(-50%);
+					}
 
 					&.inversed-container {
 							left: auto;
-							right: 25%;
+							right: 0;
 							text-align: right;
-							transform: translateX(35%) translateY(-50%);
+							transform: translateX(-25%) translateY(-50%);
+
+							@media screen and (max-width: 700px) {
+								right: 0;
+								transform: translateX(-35%) translateY(-50%);
+							}
 					}
 
 					img {
 							height: 200px;
 							width: 375px;
 							margin-left: -30px;
+
+							@media screen and (max-width: 700px) {
+								height: 125px;
+								width: 250px;
+								margin-left: -20px;
+							}
 					}
 			}
 	}
