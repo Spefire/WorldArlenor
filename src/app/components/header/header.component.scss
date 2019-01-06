@@ -10,16 +10,7 @@
 		background-color: $dark-color;
 
 		@media screen and (max-width: 700px) {
-			flex-direction: column;
-			justify-content: normal;
-			height: 200px;
-			border-bottom: 1px solid $secondary-color;
-
-			nav {
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-			}
+			display: none;
 		}
 
     a {
@@ -55,7 +46,8 @@
       .header-logo {
 				height: 46px;
 				width: 46px;
-				padding: 2px;
+				padding: 0;
+				margin: 2px;
 				cursor: pointer;
 				background-size: cover;
 				background-image: url("/assets/images/icon_logo.svg");
@@ -81,7 +73,11 @@
     background-color: $dark-color;
 
     transform: translateY(-50%) scaleY(0);
-    transition: .5s;
+		transition: .5s;
+
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
 
     &.active {
 			height: 40px;
@@ -110,6 +106,84 @@
 				border-left: 1px solid $secondary-color;
         border-right: 1px solid $secondary-color;
 			}
+    }
+	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	.header-mobile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+		background-color: $dark-color;
+
+		@media screen and (min-width: 700px) {
+			display: none;
+		}
+
+    a {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 15px;
+		}
+
+    .header-main {
+      display: flex;
+			justify-content: space-between;
+			width: 100%;
+			border-bottom: 1px solid $secondary-color;
+
+      .header-logo {
+				height: 46px;
+				width: 46px;
+				padding: 0;
+				margin: 2px;
+				background-size: cover;
+				background-image: url("/assets/images/icon_logo.svg");
+			}
+
+			&:hover .header-logo {
+				background-image: url("/assets/images/icon_logo_hover.svg");
+			}
+
+			.header-list {
+				height: 46px;
+				width: 46px;
+				padding: 0;
+				margin: 2px;
+				background-size: cover;
+				background-image: url("/assets/images/icon_list.png");
+			}
+
+			&:hover .header-list {
+				background-image: url("/assets/images/icon_list_hover.png");
+			}
+    }
+  }
+
+  .header-mobile-subsection {
+		position: relative;
+    top: 1px;
+    bottom: 0;
+    z-index: 1;
+    background-color: $dark-color;
+
+		@media screen and (min-width: 700px) {
+			display: none;
+		}
+
+    a {
+      display: inline-block;
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+    }
+
+    nav {
+			border-bottom: 1px solid $secondary-color;
     }
   }
 }
