@@ -9,7 +9,7 @@
     height: 50px;
 		background-color: $dark-color;
 
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 1000px) {
 			display: none;
 		}
 
@@ -75,7 +75,7 @@
     transform: translateY(-50%) scaleY(0);
 		transition: .5s;
 
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 1000px) {
 			display: none;
 		}
 

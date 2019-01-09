@@ -1,68 +1,78 @@
-<div *ngIf="bigfooter" class="footer-infos">
-	<div class="footer-left">
-		<div class="footer-container">
-			<img src="/assets/images/logo.png" alt="" routerLink="">
+<div *ngIf="bigfooter">
+	<div class="bigfooter-infos">
+		<div class="bigfooter-left">
+			<div class="bigfooter-container">
+				<img src="/assets/images/logo.png" alt="" routerLink="">
+			</div>
+			<div class="bigfooter-container">
+				<p>{{ 'FOOTER.RESUME' | translate }}</p>
+				<span routerLink="about"><i class="fas fa-chevron-right"></i>{{ 'FOOTER.SEEMORE' | translate | uppercase }}</span>
+			</div>
 		</div>
-		<div class="footer-container">
-			<p>{{ 'FOOTER.RESUME' | translate }}</p>
-			<span routerLink="about"><i class="fas fa-chevron-right"></i>{{ 'FOOTER.SEEMORE' | translate | uppercase }}</span>
+		<div class="bigfooter-right">
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/spefire" target="_blank">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<i class="fab fa-facebook-f"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/spefire" target="_blank">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<i class="fab fa-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/spefireflies" target="_blank">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<i class="fab fa-instagram"></i>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<div class="footer-right">
-		<ul>
-			<li>
-				<a href="https://www.facebook.com/spefire" target="_blank">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<i class="fab fa-facebook-f"></i>
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/spefire" target="_blank">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<i class="fab fa-twitter"></i>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.instagram.com/spefireflies" target="_blank">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<i class="fab fa-instagram"></i>
-				</a>
-			</li>
-		</ul>
+	<div class="bigfooter-navigation">
+		<nav>
+			<a routerLinkActive="active" routerLink="legacy" [innerHtml]="'PAGE.LEGACY' | translate | uppercase"></a>
+			<a routerLinkActive="active" routerLink="about" [innerHtml]="'PAGE.ABOUT' | translate | uppercase"></a>
+		</nav>
 	</div>
 </div>
 
-<div class="footer-navigation">
-  <nav [ngClass]="{ 'bigfooter-section' : bigfooter }">
-    <a routerLinkActive="active" routerLink="legacy" [innerHtml]="'PAGE.LEGACY' | translate | uppercase"></a>
-    <a routerLinkActive="active" routerLink="about" [innerHtml]="'PAGE.ABOUT' | translate | uppercase"></a>
-  </nav>
-  <div *ngIf="!bigfooter" class="footer-section">
-    <ul>
-      <li>
-        <a href="https://www.facebook.com/spefire" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/spefire" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/spefireflies" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+<div *ngIf="!bigfooter">
+	<div class="footer-navigation">
+		<nav>
+			<a routerLinkActive="active" routerLink="legacy" [innerHtml]="'PAGE.LEGACY' | translate | uppercase"></a>
+			<a routerLinkActive="active" routerLink="about" [innerHtml]="'PAGE.ABOUT' | translate | uppercase"></a>
+		</nav>
+		<div class="footer-section">
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/spefire" target="_blank">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/spefire" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/spefireflies" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>
