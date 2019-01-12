@@ -1,34 +1,62 @@
-<div class="main-container">
-	<div class="map-left">
-		<img *ngIf="listFacts.length > 0" class="zone-image" src="https://via.placeholder.com/100x100" alt="">
-		<h4 class="zone-title" *ngIf="selection=='arlenor'">{{ 'UNIVERSE.WORLD.ARLENOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
-		<h4 class="zone-title" *ngIf="selection=='zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
-		<div *ngIf="listFacts.length == 0" class="fact-container">
-			<h2>{{ 'UNIVERSE.WORLD.NOTFOUND' | translate | uppercase }}</h2>
+<div class="world-container">
+	<div class="world-left">
+		<div class="fact-image">
+			<img src="{{ selectedFact.backgroundSrc }}" alt="">
 		</div>
-		<div *ngFor="let fact of listFacts; let i=index">
-			<div *ngIf="i < 2" class="fact-container">
-				<h4>{{ 'UNIVERSE.WORLD.POINTS' | translate | uppercase }}</h4>
-				<h2>{{ fact.title | uppercase }}</h2>
-				<p class="fact-description">"{{ fact.description }}"<br>{{ fact.title }}</p>
-				<button class="fact-link" routerLink="/universe/{{fact.id}}">+</button>
-			</div>
+		<div class="fact-title">
+			<h2>{{ selectedFact.title | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h4>
+		</div>
+		<div class="fact-description">
+			<p innerHtml="{{ selectedFact.texte01 }}"></p>
+			<p innerHtml="{{ selectedFact.texte02 }}"></p>
+		</div>
+		<div class="fact-comment">
+			<p innerHtml="{{ selectedFact.comments }}"></p>
 		</div>
 	</div>
-	<div class="map-right">
-		<img id="map-arlenor" class="map-background" src="assets/images/map_faradel.png" alt="" usemap="#map-areas">
-		<map name="map-areas" id="map-areas">
-			<area shape='poly' [coords]='coords_faradel' (click)="setSelection('faradel')"/>
-			<area shape='poly' [coords]='coords_jirakan' (click)="setSelection('jirakan')"/>
-			<area shape='poly' [coords]='coords_imerys' (click)="setSelection('imerys')"/>
-			<area shape='poly' [coords]='coords_kazador' (click)="setSelection('kazador')"/>
-			<area shape='poly' [coords]='coords_shivazen' (click)="setSelection('shivazen')"/>
-			<area shape='poly' [coords]='coords_zones' (click)="setSelection('zones')"/>
-		</map>
+	<div class="world-right">
+		<div class="map-title">
+			<h2 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.CLIMATE' | translate }}</h4>
+			<h2 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h2>
+			<h4 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.CLIMATE' | translate }}</h4>
+		</div>
+		<div class="map-icons">
+			<img *ngIf="selectedFact.zone=='Faradel'" class="map-background" src="assets/images/world/map_faradel.png" alt="">
+			<img *ngIf="selectedFact.zone=='Jirakan'" class="map-background" src="assets/images/world/map_jirakan.png" alt="">
+			<img *ngIf="selectedFact.zone=='Imerys'" class="map-background" src="assets/images/world/map_imerys.png" alt="">
+			<img *ngIf="selectedFact.zone=='Kazador'" class="map-background" src="assets/images/world/map_kazador.png" alt="">
+			<img *ngIf="selectedFact.zone=='Shivazen'" class="map-background" src="assets/images/world/map_shivazen.png" alt="">
+			<img *ngIf="selectedFact.zone=='Zones'" class="map-background" src="assets/images/world/map_zones.png" alt="">
+			<img *ngIf="select == 0" class="map-icon map-icon-00" src="assets/images/world/icon_map_selected.svg" alt="">
+			<img *ngIf="select != 0" class="map-icon map-icon-00" src="assets/images/world/icon_map.svg" alt=""
+			(click)="setSelection(0)" (mouseover)="hoverIcon(0)" (mouseout)="unhoverIcon(0)">
+			<img *ngIf="select == 1" class="map-icon map-icon-01" src="assets/images/world/icon_map_selected.svg" alt="">
+			<img *ngIf="select != 1" class="map-icon map-icon-01" src="assets/images/world/icon_map.svg" alt=""
+			(click)="setSelection(1)" (mouseover)="hoverIcon(1)" (mouseout)="unhoverIcon(1)">
+			<img *ngIf="select == 2" class="map-icon map-icon-02" src="assets/images/world/icon_map_selected.svg" alt="">
+			<img *ngIf="select != 2" class="map-icon map-icon-02" src="assets/images/world/icon_map.svg" alt=""
+			(click)="setSelection(2)" (mouseover)="hoverIcon(2)" (mouseout)="unhoverIcon(2)">
+			<img *ngIf="select == 3" class="map-icon map-icon-03" src="assets/images/world/icon_map_selected.svg" alt="">
+			<img *ngIf="select != 3" class="map-icon map-icon-03" src="assets/images/world/icon_map.svg" alt=""
+			(click)="setSelection(3)" (mouseover)="hoverIcon(3)" (mouseout)="unhoverIcon(3)">
+			<img *ngIf="select == 4" class="map-icon map-icon-04" src="assets/images/world/icon_map_selected.svg" alt="">
+			<img *ngIf="select != 4" class="map-icon map-icon-04" src="assets/images/world/icon_map.svg" alt=""
+			(click)="setSelection(4)" (mouseover)="hoverIcon(4)" (mouseout)="unhoverIcon(4)">
+		</div>
 	</div>
 </div>

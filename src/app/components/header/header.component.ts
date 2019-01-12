@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  public route:string;
+	public route:string;
+	public listDisplayed:boolean;
 
   constructor(location: Location, router: Router) {
     router.events.subscribe((val) => {
@@ -19,6 +20,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+	}
+
+	toggleList() {
+		this.listDisplayed = !this.listDisplayed;
+	}
 
 }

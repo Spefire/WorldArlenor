@@ -1,104 +1,69 @@
 {
-  "HEADER": {
-    "HOME": "Le Monde d'Arlénor",
-    "UNIVERSE": {
-      "MAIN": "Univers",
-      "SECTION00": "Le Monde",
-      "SECTION01": "La Religion",
-      "SECTION02": "La Magie des cristaux",
-      "SECTION03": "Les Peuples",
-      "SECTION04": "L'Île Célestia",
-      "SECTION05": "Le Cercle des mages"
-    },
-    "ROLEPLAY": "Jeu de rôles",
-    "CHARACTERS": "Personnages",
-    "ABOUT": "A Propos"
-	},
   "PAGE": {
-    "HOME": {
-      "TITLE": "Le Monde d'Arlénor",
-      "DESCRIPTION": "Le Monde d'Arlénor"
-    },
-    "UNIVERSE": {
-      "TITLE": "L'Univers",
-      "DESCRIPTION": "L'Univers"
-    },
-    "RELIGION": {
-      "TITLE": "La Religion",
-      "DESCRIPTION": "La Religion"
-		},
-		"CRYSTALS": {
-      "TITLE": "La Magie des Cristaux",
-      "DESCRIPTION": "La Magie des Cristaux"
-    },
-    "FACT": {
-      "TITLE": "L'Article",
-      "DESCRIPTION": "L'Article"
-    },
-    "ROLEPLAY": {
-      "TITLE": "Le Jeu de rôle",
-      "DESCRIPTION": "Le Jeu de rôle"
-    },
-    "CHARACTERS": {
-      "TITLE": "Les Personnages",
-      "DESCRIPTION": "Les Personnages"
-    },
-    "ABOUT": {
-      "TITLE": "A Propos",
-      "DESCRIPTION": "A Propos"
-    },
-    "LEGACY": {
-      "TITLE": "Mentions Légales",
-      "DESCRIPTION": "Mentions Légales"
-    }
-  },
-  "BODY": {
-    "WAIT": "Page en cours de construction !"
+    "HOME": "Le Monde d'Arlénor",
+		"UNIVERSE": "L'Univers",
+		"CELESTIA": "L'Île Célestia",
+		"EVANELL": "Le Cercle des mages",
+		"WORLD": "Le Monde",
+    "RELIGION": "La Religion",
+		"CRYSTALS": "La Magie des Cristaux",
+		"POPULATION": "Les Peuples",
+    "ROLEPLAY": "Le Jeu de rôle",
+    "CHARACTERS": "Les Personnages",
+    "ABOUT": "A Propos",
+    "LEGACY": "Mentions Légales"
   },
   "FOOTER": {
     "RESUME": "Le Monde d'Arlénor a été créé en Janvier 2015, et je ne sais pas quoi dire plus... Voici une autre phrase en attendant.",
-    "SEEMORE": "En savoir plus",
-    "LEGACY": "Mentions légales",
-    "ABOUT": "A Propos"
+    "SEEMORE": "En savoir plus"
   },
   "HOME": {
     "UNIVERSE": {
-      "TITLE": "L'Univers",
-      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion domninante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "RESUME": "Découvrez l'univers du Monde d'Arlénor, la religion dominante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "Découvrir"
     },
     "ROLEPLAY": {
-      "TITLE": "Le Jeu de rôle",
-      "RESUME": "Vivez l'aventure de jeunes personnes, découvrant la notion du Destin et de l'effet papillon...",
-      "SEEMORE": "Momentanément indisponible"
+      "RESUME": "Vivez une histoire épique à travers de jeunes héros, découvrant la notion du Destin et de l'effet papillon...",
+      "SEEMORE": "Oser l'aventure"
     },
     "CHARACTERS": {
-      "TITLE": "Les Personnages",
       "RESUME": "Chaque personnage a une histoire. Découvrez celles de Romain, Elisa, Jérémy... et de tous les autres, sur l'île de Célestia.",
-      "SEEMORE": "Momentanément indisponible"
+      "SEEMORE": "Prochainement disponible"
     }
   },
   "UNIVERSE": {
 		"WORLD": {
-			"POINTS": "Point d'intérêt",
-			"NOTFOUND": "Données encore inconnues",
+			"DANGER": "Niveau de danger",
+			"CLIMATE": "Climat",
 			"FARADEL": {
-				"TITLE": "L'Empire Faradelien"
+				"TITLE": "L'Empire Faradelien",
+				"DANGER": "Paisible",
+				"CLIMATE": "Tempéré"
 			},
 			"JIRAKAN": {
-				"TITLE": "Le Régime Jirakanien"
+				"TITLE": "Le Régime Jirakanien",
+				"DANGER": "Risqué",
+				"CLIMATE": "Désertique"
 			},
 			"IMERYS": {
-				"TITLE": "La Forêt d'Imerys"
+				"TITLE": "La Forêt d'Imerys",
+				"DANGER": "Risqué",
+				"CLIMATE": "Tempéré"
 			},
 			"KAZADOR": {
-				"TITLE": "Les Montagnes de Kazador"
+				"TITLE": "Les Montagnes de Kazador",
+				"DANGER": "Mortel",
+				"CLIMATE": "Montagnard"
 			},
 			"SHIVAZEN": {
-				"TITLE": "La Mer de Shivazen"
+				"TITLE": "La Mer de Shivazen",
+				"DANGER": "Infernal",
+				"CLIMATE": "Tropical"
 			},
 			"ZONES": {
-				"TITLE": "Les Zones Inexplorées"
+				"TITLE": "Les Zones Inexplorées",
+				"DANGER": "Mortel",
+				"CLIMATE": "Tropical"
 			}
 		},
 		"RELIGION": {
@@ -109,7 +74,7 @@
 			"DARKKABAL": "La Cabale Inversée",
 			"ENTITY1": {
 				"TITLE": "METATRON, l'Ange de l'Unité",
-				"COMMENT": "Chez les good guys, c'est un peu lui le patron. FAUT PAS le chercher ! ...mais il est sympa quand même.",
+				"COMMENT": "Chez les good guys d'Arlénor, c'est un peu lui le patron. FAUT PAS le chercher !... Mais il est sympa quand même.",
 				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
 			},
 			"ENTITY2": {
@@ -129,83 +94,83 @@
 			},
 			"ENTITY5": {
 				"TITLE": "SAMAEL, Ange de la Justice",
-				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procés.",
+				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procès.",
 				"COMMENTNAME": "Quistis, Avocate de Faradel"
 			},
 			"ENTITY6": {
 				"TITLE": "MIKAEL, Ange de la Nature",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "La nature a voulu créer les humains, puis des êtres plus évolués, les elfes, à travers les cristaux. Les autres mutations ne sont que des erreurs, dû au fait qu'ils voulaient nous ressembler...",
+				"COMMENTNAME": "Xendel Eresles, lors de l'inauguration de l'Eclat infini"
 			},
 			"ENTITY7": {
 				"TITLE": "HANIEL, Ange de la Passion",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Réveilles mon âme, allumes ma flamme, et fais moi rêver s'il te plait...",
+				"COMMENTNAME": "Humaine priant dans son lit à côté de sa nouvelle femme"
 			},
 			"ENTITY8": {
 				"TITLE": "RAPHAEL, Ange du Partage",
-				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire. Cela vous fera 50 crédits la nuit.",
+				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire... Cela vous fera donc 50 crédits la nuit.",
 				"COMMENTNAME": "Bob, Tavernier de Kiranof"
 			},
 			"ENTITY9": {
 				"TITLE": "GABRIEL, Ange de la Protection",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Accorde-moi Gabriel, une main ferme et un regard vigilant. Abrite durant mon voyage, Ô bel Ange, ceux qui m'accompagnent des maux du feu et de toutes les calamités. Protège-moi et conduis-moi en toute sécurité à ma destination.",
+				"COMMENTNAME": "Commerçant partant traverser le désert de Sanderten"
 			},
 			"ENTITY10": {
 				"TITLE": "SADALFONE, Ange de la Création",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Ce que vous avez à retenir de ce cours, c'est que l'imagination n'a pas de limite hormis celles que vous vous fixez.",
+				"COMMENTNAME": "L'un des meilleurs professeurs de Célestia"
 			},
 			"ENTITY11": {
 				"TITLE": "SATAN, Démon du Néant",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Au début, il n'y avait rien. Enfin... le rien n'existe pas. Au début, il y avait la déesse Arlénor...",
+				"COMMENTNAME": "Ancien prêtre reconverti en conteur pour enfants"
 			},
 			"ENTITY12": {
 				"TITLE": "BELZEBTUH, Démon de la Vengeance",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "La vengeance est un plat qui se mange froid... ça tombe bien, j'en suis au dessert.",
+				"COMMENTNAME": "Romain, s'étant transformé en loup"
 			},
 			"ENTITY13": {
 				"TITLE": "LUCIFUGUS, Démon de la Stupidité",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"COMMENT": "Je te jure, les licornes ça existe maman ! Quand elles sautent en faisant PROUT, il y a un arc-en-ciel !",
+				"COMMENTNAME": "L'innocence d'un enfant de 8 ans"
 			},
 			"ENTITY14": {
-				"TITLE": "ASTAROTH, Démon du Indifférence",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "ASTAROTH, Démon de l'Indifférence",
+				"COMMENT": "Par mes cartes, montre moi ton passé, ton présent et ton futur... Et maintenant... Subis le châtiment de ta vie insipide !",
+				"COMMENTNAME": "Diana, dans un état second"
 			},
 			"ENTITY15": {
-				"TITLE": "ASMODEE, Démon du Cruauté",
+				"TITLE": "ASMODEE, Démon de la Cruauté",
 				"COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
 				"COMMENTNAME": "Jeune femme perturbée par une prêtresse"
 			},
 			"ENTITY16": {
-				"TITLE": "BELPHEGOR, Démon du Laideur",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "BELPHEGOR, Démon de la Laideur",
+				"COMMENT": "Miroir miroir, mon beau miroir, dis moi qui est le plus beau... -CRACK (bruit d'un miroir qui se brise)-",
+				"COMMENTNAME": "Personne atteinte de narcissisme"
 			},
 			"ENTITY17": {
-				"TITLE": "BA'AL, Démon du Luxure",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "BA'AL, Démon de la Luxure",
+				"COMMENT": "Le bâton et les pierres peuvent me briser les os, mais les chaines et les cordes, elles, m'excitent.",
+				"COMMENTNAME": "Chanteuse célebre dans les bars faradéliens"
 			},
 			"ENTITY18": {
-				"TITLE": "ADRAMALEC, Démon du Discorde",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "ADRAMALEC, Démon de la Discorde",
+				"COMMENT": "Excusez moi madame. Je crois que votre boulanger a fait une erreur sur l'un de ses produits... C'est 'chocolatine' et non 'pain au chocolat'.",
+				"COMMENTNAME": "Client de la boulangerie Obonpin"
 			},
 			"ENTITY19": {
-				"TITLE": "LILITH, Démon du Instabilité",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "LILITH, Démon de l'Instabilité",
+				"COMMENT": "Moi ? Je suis folle ? Haha. Attendez de voir ma soeur !",
+				"COMMENTNAME": "Personnage venant d'un autre monde"
 			},
 			"ENTITY20": {
-				"TITLE": "NAHEMAR, Démon du Rêverie",
-				"COMMENT": "",
-				"COMMENTNAME": ""
+				"TITLE": "NAHEMAR, Démon de la Rêverie",
+				"COMMENT": "Comment déterminer ce qui est réel, et ce qui ne l'est pas ?... C'est simple. Fais toi tuer, et si tu meurs c'est que cela n'était pas un rêve.",
+				"COMMENTNAME": "Philosophe du temps moderne"
 			}
 		},
 		"CRYSTALS": {
@@ -224,21 +189,85 @@
 				"07": "Seuls les cristalliens (métier de haut rang) peuvent les retravailler en leur donnant une forme précise.",
 				"08": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
 			}
+		},
+		"POPULATION": {
+			"SECTION01": "Lors de la Création, seuls les humains étaient présents dans le Monde d'Arlénor.",
+			"SECTION02": "Cependant, à l'An 0, les humains ont découvert ce qui allait changer radicalement leur vie : les cristaux.<br>La manipulation et la présence de ces derniers aux côtés des humains, ont altéré au fil du temps leur code génétique, donnant vie à de nouvelles races.",
+			"SECTION03": "Des relations se sont créées alors entre les différences races, certaines amicales, neutres, et d'autres... meurtrières.<br>Les elfes et les humains vivent en toute liberté alors que les nains et les mutants essayent de survivre du mieux qu'ils le peuvent. Les pans et les arléniens restent cachés, observant le monde de loin...",
+			"LOCATION": "Localisation",
+			"PEOPLE1": {
+				"TITLE": "Les Humains",
+				"TEXT01": "Les humains étaient les premiers à vivre sur le monde d'Arlénor. Les autres races sont des humains ayant subit des mutations au fil des générations, dû à l'exposition et utilisation quotidienne des cristaux. L'humain aime construire autant que détruire, est aussi savant qu'ignorant...",
+				"TEXT02": "La polyvalence des humains font qu'ils n'ont pas d'affiliation spécifique avec les cristaux, et rares sont ceux qui parviennent à utiliser des cristaux de haut-niveau. Les humains se sont concentrés dans les plaines de Terfil, et vivent principalement dans la cité de Faradel.",
+				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien"
+			},
+			"PEOPLE2": {
+				"TITLE": "Les Elfes",
+				"TEXT01": "Les elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux humains.",
+				"TEXT02": "Les elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
+				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien"
+			},
+			"PEOPLE3": {
+				"TITLE": "Les Nains",
+				"TEXT01": "Les nains furent les premiers à être discriminés, par leur taille, par leur pilosité abondante... Cependant, ils sont aussi craints car les nains peuvent très vite être dangereux. Ils possèdent en eux une force, une soif de sang, et une envie de... de manger de la viande crue, fraîchement découpée.",
+				"TEXT02": "Les nains, rejetés et discriminés, se sont alors regroupés dans les hautes montagnes de Kazador. La rumeur dit qu'ils y cachent un grand secret... Il n'est pas rare de voir des nains dans la cité de Jirakan, mais le plus souvent, les quelques nains qui naissent en dehors des montagnes, les rejoignent souvent en étant adulte... et rares sont ceux qui souhaitent ensuite les quitter.",
+				"LOCATION" : "Le Régime Jirakanien, Les Montagnes de Kazador"
+			},
+			"PEOPLE4": {
+				"TITLE": "Les Mutants",
+				"TEXT01": "Le peuple des mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les humains et les elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamne leur existence.",
+				"TEXT02": "Les mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
+				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys"
+			},
+			"PEOPLE5": {
+				"TITLE": "Les Pans",
+				"TEXT01": "Les pans sont aussi petits que les nains mais ce sont des enfants humains qui n'ont pas grandi et dont la couleur de peau est devenue bleutée au fil du temps : elle emprunterait le ciel, devenant plus foncée la nuit, et plus claire le jour. Après un certain âge, quand leur peau eut fini de se transformer, les pans disparaissent dans un endroit encore inconnu. Il est alors rare d'en apercevoir, et restent très mystérieux sur leur peuple.",
+				"TEXT02": "Du peu que l'on sait sur les pans et cet endroit inconnu, c'est que les pans seraient secrètement appelés par un grand arbre qu'ils ont nommé Nebulys. Et leur devoir serait de protéger l'énergie vitale de la faune et la flore.",
+				"LOCATION" : "Inconnue"
+			},
+			"PEOPLE6": {
+				"TITLE": "Les Arléniens",
+				"TEXT01": "Les arléniens sont un autre peuple caché dans le Monde d'Arlénor, et considère eux aussi la Nature offerte par Arlénor comme sacrée. C'est un peuple très uni, fondé sur l’honnêteté, la liberté d'expression et le respect de chacun. Toutefois, les arléniens éprouvent un profond dégoût pour les autres races, les considérant comme des souilleurs, un poison pour le Monde d'Arlénor... Ils espèrent un jour y mettre un terme en les éliminant.",
+				"TEXT02": "Les arléniens sont les meilleurs adeptes de la magie des cristaux. Cependant, ils n'arrivent pas à les utiliser dans leur état solide. Les arléniens ont alors un rituel, prenant une semaine au minimum, pour transformer un cristal en encre puis en tatouage. Les arléniens possédant le plus de tatouages sont considérés comme les plus puissants.",
+				"LOCATION" : "Inconnue"
+			}
 		}
 	},
-  "ROLEPLAY": {
-    "TITLE": "Jeu de rôles"
-  },
-  "CHARACTERS": {
-    "TITLE": "Personnages"
+	"ROLEPLAY": {
+    "UNIVERSE": {
+			"TITLE": "La carte du monde et ses habitants",
+      "RESUME": "Avant de créer son personnage, ou même de lire les règles du jeu de rôles... découvrez l'univers du Monde d'Arlénor : la religion dominante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
+      "SEEMORE": "Voir le monde"
+    },
+    "PERSO": {
+			"TITLE": "La création de personnage",
+      "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... (bientôt la création de perso en ligne)",
+      "SEEMORE": "Télécharger la fiche de perso V1.0"
+    },
+    "FILES": {
+			"TITLE": "Les règles du jeu",
+      "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu et des propositions de pouvoirs.",
+			"SEEMORE01": "Télécharger le Manuel du Joueur V1.0",
+			"RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
+			"SEEMORE02": "Télécharger le Manuel du MJ V1.0"
+    }
   },
   "ABOUT": {
-    "TITLE": "A Propos"
+		"INTRODUCTION": "Présentation",
+		"INTRODUCTIONTEXT": "Je suis Spefire, j'ai 24 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
+		"CONTACT": "Contact / Questions",
+		"CONTACTTEXT": "Vous pouvez me contacter sur ",
+		"PROJECTS": "Projets",
+		"PROJECTSTEXT": {
+			"PROJECT01": "Le Monde d'Arlénor",
+			"PROJECT01TEXT": "Ce projet est né avec ma découverte du jeu de rôles en 2014. J'avais envie de contrôler le monde dans lequel vivrait mes joueurs et créer mes propres scénarios très rapidement. En janvier 2015, le Monde d'Arlénor est né. Mes premiers joueurs ont vécu une première campagne de 8 scénarios. Seulement, je souhaitais partager cet univers au delà du jeu de rôles... d'où ce site !",
+			"PROJECT02": "Célestia et le cercle des mages Evanell",
+			"PROJECT02TEXT": "Célestia est une sorte d'extension du Monde d'Arlénor : une île céleste encore inexplorée par les joueurs. Je l'ai créé pour y faire vivre mes OCs (mes propres personnages) et partager leurs histoires."
+		}
   },
   "LEGACY": {
-    "TITLE": "Mentions Légales",
     "STATUT": "Statut du propriétaire : <strong>Particulier</strong>",
-    "HOST": "<strong>Hébergeur OVH<br/>2 rue Kellermann<br/>59100 ROUBAIX – France</strong>",
+    "HOST": "<strong>Hébergeur OVH<br>2 rue Kellermann<br>59100 ROUBAIX – France</strong>",
     "CONTACT": "Pour contacter cet hébergeur, rendez-vous à l’adresse suivante :"
   }
 }

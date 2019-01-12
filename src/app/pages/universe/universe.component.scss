@@ -1,78 +1,176 @@
 @import "../../../styles/variables.scss";
 
 :host {
-	.main-container {
+	.world-container {
 		display: flex;
+		height: 800px;
+    background-position: center;
+		background-size: cover;
+		background-image: linear-gradient(135deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
 
-		&::after {
-			content: "";
-			position: absolute;
-			opacity: 1.0;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			z-index: -1;
-
-			background-position: center;
-			background-size: cover;
-			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
+		@media screen and (max-width: 1200px) {
+			height: auto;
+			flex-direction: column-reverse;
+    	align-items: center;
 		}
 
-		.map-left {
+		::-webkit-scrollbar {
+			width: 6px;
+		}
+		::-webkit-scrollbar-track {
+			background: none;
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+		}
+
+		.world-left {
+			position : relative;
+			height: 700px;
 			width: 35%;
+			padding: 20px;
+			margin: auto 0% auto 5%;
 			text-align: left;
-			padding-left: 5%;
-			margin: auto 0;
 
-			.zone-image {
-				height: 100px;
-				width: 100px;
-				border: 1px solid $dark-color;
+			@media screen and (min-width: 1200px) and (max-width: 1500px) {
+				width: 50%;
 			}
 
-			.zone-title {
-				font-size: 32px;
-				line-height: 32px;
+			@media screen and (max-width: 1200px) {
+				height: auto;
+				width: 90%;
+				margin: 0;
 			}
 
-			.fact-container {
-				position: relative;
-				margin: 25px 0;
+			.fact-image {
+				height: 200px;
 
-				.fact-description {
+				img {
+					height: 100%;
+					width: 100%;
+					border-top: 1px solid $secondary-color;
+					mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+				}
+			}
+
+			.fact-title {
+				height: 60px;
+				margin: 5px 0;
+    		padding: 5px 0;
+				border-top: 1px solid $secondary-color;
+				border-bottom: 1px solid $secondary-color;
+				text-align: center;
+			}
+
+			.fact-description {
+				max-height: 350px;
+    		overflow-y: auto;
+			}
+
+			.fact-comment {
+				height: 60px;
+				margin: 5px 0;
+    		padding: 5px 0;
+				border-top: 1px solid $secondary-color;
+
+				@media screen and (max-width: 1200px) {
+					height: auto;
+				}
+
+				p {
+					margin: 0;
 					font-size: 14px;
 					color: $secondary-color;
-					margin: 0;
-					padding: 4px 30px 4px 0;
+					text-align: center;
 					font-style: italic;
-				}
-
-				.fact-link {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-
-					font-size: 20px;
-					font-weight: bold;
-					border-radius: 50%;
-					padding: 2px 8px;
 				}
 			}
 		}
 
-		.map-right {
+		.world-right {
+			display: flex;
+  		flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			height: 700px;
 			width: 65%;
-			max-width: 800px;
-			position: relative;
-			padding-left: 5%;
-			padding-right: 5%;
-			margin: auto 0;
+			margin: auto 2.5%;
+
+			@media screen and (min-width: 1200px) and (max-width: 1500px) {
+				width: 50%;
+			}
+
+			@media screen and (max-width: 1200px) {
+				height: auto;
+				width: 90%;
+				margin: 0;
+			}
+
+			.map-title {
+				height: 60px;
+				text-align: center;
+
+				@media screen and (max-width: 1200px) {
+					margin: 20px 0;
+				}
+			}
 
 			.map-background {
-				height: auto;
-				width: 100%;
-				margin: auto 0;
+				height: 620px;
+
+				@media screen and (min-width: 1200px) and (max-width: 1500px) {
+					height: 500px;
+				}
+
+				@media screen and (max-width: 1200px) {
+					height: auto;
+					width: 100%;
+				}
+			}
+
+			.map-icons{
+				position: relative;
+			}
+
+			.map-icon {
+				position: absolute;
+				height: 50px;
+				width: 50px;
+				margin-top: -25px;
+				margin-left: -25px;
+				cursor: pointer;
+
+				@media screen and (max-width: 700px) {
+					height: 30px;
+					width: 30px;
+					margin-top: -15px;
+					margin-left: -15px;
+				}
+			}
+
+			.map-icon-00 {
+				top: 45%;
+				left: 76%;
+			}
+
+			.map-icon-01 {
+				top: 42%;
+				left: 72%;
+			}
+
+			.map-icon-02 {
+				top: 69%;
+				left: 73%;
+			}
+
+			.map-icon-03 {
+				top: 76%;
+				left: 76%;
+			}
+
+			.map-icon-04 {
+				top: 20%;
+				left: 20%;
 			}
 		}
   }

@@ -1,13 +1,17 @@
 @import "../../../../styles/variables.scss";
 
 :host {
-	.entity-container {
+	.religion-container {
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		height: 550px;
+
+		@media screen and (max-width: 700px) {
+			height: 450px;
+		}
 
 		&::after {
 			content: "";
@@ -24,7 +28,7 @@
 			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
 		}
 
-		.entity-list {
+		.religion-list {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
@@ -34,19 +38,32 @@
 				width: 8%;
 				height: 100%;
 				cursor: pointer;
+
+				@media screen and (max-width: 700px) {
+					width: 9%;
+				}
 			}
 		}
 
-		.entity-text {
+		.religion-description {
 			text-align: left;
 			max-width: 50%;
 
+			@media screen and (max-width: 700px) {
+				max-width: 80%;
+			}
+
 			p {
+				margin: 0;
 				font-size: 14px;
 				color: $secondary-color;
-				margin: 0;
 				padding: 4px 30px 4px 0;
 				font-style: italic;
+
+				@media screen and (max-width: 700px) {
+					padding: 0;
+					margin: auto;
+				}
 			}
 		}
 	}

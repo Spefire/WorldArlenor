@@ -1,0 +1,105 @@
+@import "../../../../styles/variables.scss";
+
+:host {
+	.population-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 550px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 1.0;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			background-position: center;
+			background-size: cover;
+			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
+		}
+
+		.population-imgs {
+			display: flex;
+			align-items: center;
+			height: 275px;
+
+			@media screen and (max-width: 800px) {
+				height: auto;
+				justify-content: center;
+				margin: 20px 0;
+			}
+		}
+
+		.population-selection {
+			height: 50px;
+			width: 50px;
+			margin: 0 10px;
+			cursor: pointer;
+
+			@media screen and (max-width: 800px) {
+				height: 25px;
+				width: 25px;
+			}
+		}
+
+		.population-img {
+			height: 150px;
+			width: 150px;
+
+			margin: 0;
+			border-radius: 50%;
+			border: 2px solid $light-color;
+			background-color: rgba($dark-color, 0.2);
+			cursor: pointer;
+
+			@media screen and (max-width: 800px) {
+				height: auto;
+				width: 15%;
+			}
+
+			&.main {
+				height: 200px;
+				width: 200px;
+
+				margin: 0 50px;
+				border: 6px double $secondary-color;
+				cursor: default;
+
+				@media screen and (max-width: 800px) {
+					height: auto;
+					width: 25%;
+					margin: 0 5%;
+				}
+			}
+		}
+
+		.population-description {
+			text-align: center;
+			height: 275px;
+
+			@media screen and (max-width: 1000px) {
+				height: auto;
+			}
+
+			.population-text {
+				width: 60%;
+				margin: auto;
+
+				@media screen and (max-width: 1000px) {
+					width: 80%;
+				}
+			}
+
+			.population-location {
+				color: $secondary-color;
+				font-style: italic;
+			}
+		}
+	}
+}

@@ -16,7 +16,6 @@ import { CelestiaComponent } from './pages/universe/celestia/celestia.component'
 import { ReligionComponent } from './pages/universe/religion/religion.component';
 import { CrystalsComponent } from './pages/universe/crystals/crystals.component';
 import { PopulationComponent } from './pages/universe/population/population.component';
-import { FactComponent } from './pages/fact/fact.component';
 import { RoleplayComponent } from './pages/roleplay/roleplay.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -35,7 +34,6 @@ import { FooterComponent } from './components/footer/footer.component';
     ReligionComponent,
     CrystalsComponent,
     PopulationComponent,
-    FactComponent,
     RoleplayComponent,
     CharactersComponent,
     AboutComponent,

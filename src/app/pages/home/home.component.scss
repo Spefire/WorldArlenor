@@ -1,7 +1,96 @@
 @import "../../../styles/variables.scss";
 
 :host {
-  .selection-container {
+	.home-container {
+			opacity: 0;
+			visibility: hidden;
+			transition: 1.0s ease;
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				opacity: 1.0;
+				top: 50px;
+				left: 0;
+				bottom: 51px;
+				right: 0;
+				z-index: -1;
+
+				@media screen and (max-width: 700px) {
+					top: 51px;
+					bottom: 101px;
+				}
+
+				background-position: center;
+				background-size: cover;
+			}
+
+			&.container01::after {
+				background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+				url("/assets/images/home_01.png");
+			}
+
+			&.container02::after {
+				background-image: linear-gradient(-45deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+				url("/assets/images/home_02.png");
+			}
+
+			&.container03::after {
+				background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+				url("/assets/images/home_03.png");
+			}
+
+			.home-subcontainer {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 35%;
+					text-align: left;
+					transform: translateX(40%) translateY(-50%);
+
+					@media screen and (max-width: 700px) {
+						left: 0;
+						width: 50%;
+						transform: translateX(20%) translateY(-50%);
+
+						p {
+							margin-top: 10px;
+							margin-bottom: 10px;
+						}
+					}
+
+					&.inversed-container {
+							left: auto;
+							right: 0;
+							text-align: right;
+							transform: translateX(-25%) translateY(-50%);
+
+							@media screen and (max-width: 700px) {
+								right: 0;
+								transform: translateX(-35%) translateY(-50%);
+							}
+					}
+
+					img {
+							height: 200px;
+							width: 375px;
+							margin-left: -30px;
+
+							@media screen and (max-width: 700px) {
+								height: 125px;
+								width: 250px;
+								margin-left: -20px;
+							}
+					}
+			}
+	}
+
+	.selection-container {
     display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -36,78 +125,4 @@
 			background-color: $light-color;
 		}
   }
-
-	.head-container {
-			opacity: 0;
-			visibility: hidden;
-			transition: 1.0s ease;
-
-			&.active {
-				opacity: 1;
-				visibility: visible;
-			}
-
-			&::after {
-				content: "";
-				position: absolute;
-				opacity: 1.0;
-				top: 50px;
-				left: 0;
-				bottom: 51px;
-				right: 0;
-				z-index: -1;
-
-				background-position: center;
-				background-size: cover;
-			}
-
-			&.container01::after {
-				background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
-				url("/assets/images/home_01.png");
-			}
-
-			&.container02::after {
-				background-image: linear-gradient(-45deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
-				url("/assets/images/home_02.png");
-			}
-
-			&.container03::after {
-				background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
-				url("/assets/images/home_03.png");
-			}
-
-			.title-background {
-					position: absolute;
-					height: 100%;
-					width: 100%;
-					top: 0;
-					left: 0;
-					right: 0;
-					z-index: -1;
-					margin-left: auto;
-					margin-right: auto;
-			}
-
-			.title-container {
-					position: absolute;
-					top: 50%;
-					left: 25%;
-					width: 35%;
-					text-align: left;
-					transform: translateX(-35%) translateY(-50%);
-
-					&.inversed-container {
-							left: auto;
-							right: 25%;
-							text-align: right;
-							transform: translateX(35%) translateY(-50%);
-					}
-
-					.logo-image {
-							height: 100px;
-							width: 250px;
-							border: 1px solid $dark-color;
-					}
-			}
-	}
 }
