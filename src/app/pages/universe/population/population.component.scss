@@ -28,6 +28,12 @@
 			display: flex;
 			align-items: center;
 			height: 275px;
+
+			@media screen and (max-width: 800px) {
+				height: auto;
+				justify-content: center;
+				margin: 20px 0;
+			}
 		}
 
 		.population-selection {
@@ -35,6 +41,11 @@
 			width: 50px;
 			margin: 0 10px;
 			cursor: pointer;
+
+			@media screen and (max-width: 800px) {
+				height: 25px;
+				width: 25px;
+			}
 		}
 
 		.population-img {
@@ -47,6 +58,11 @@
 			background-color: rgba($dark-color, 0.2);
 			cursor: pointer;
 
+			@media screen and (max-width: 800px) {
+				height: auto;
+				width: 15%;
+			}
+
 			&.main {
 				height: 200px;
 				width: 200px;
@@ -54,6 +70,12 @@
 				margin: 0 50px;
 				border: 6px double $secondary-color;
 				cursor: default;
+
+				@media screen and (max-width: 800px) {
+					height: auto;
+					width: 25%;
+					margin: 0 5%;
+				}
 			}
 		}
 
@@ -61,9 +83,17 @@
 			text-align: center;
 			height: 275px;
 
+			@media screen and (max-width: 1000px) {
+				height: auto;
+			}
+
 			.population-text {
 				width: 60%;
-    		margin: auto;
+				margin: auto;
+
+				@media screen and (max-width: 1000px) {
+					width: 80%;
+				}
 			}
 
 			.population-location {
