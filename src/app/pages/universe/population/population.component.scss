@@ -9,6 +9,10 @@
 		align-items: center;
 		height: 550px;
 
+		@media screen and (max-width: 800px) {
+			height: auto;
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
