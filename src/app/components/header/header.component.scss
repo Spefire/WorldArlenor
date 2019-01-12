@@ -142,10 +142,10 @@
 				margin: 2px;
 				background-size: cover;
 				background-image: url("/assets/images/icon_logo.svg");
-			}
 
-			&:hover .header-logo {
-				background-image: url("/assets/images/icon_logo_hover.svg");
+				&:hover {
+					background-image: url("/assets/images/icon_logo_hover.svg");
+				}
 			}
 
 			.header-list {
@@ -155,10 +155,10 @@
 				margin: 2px;
 				background-size: cover;
 				background-image: url("/assets/images/icon_list.png");
-			}
 
-			&:hover .header-list {
-				background-image: url("/assets/images/icon_list_hover.png");
+				&:hover {
+					background-image: url("/assets/images/icon_list_hover.png");
+				}
 			}
     }
   }
