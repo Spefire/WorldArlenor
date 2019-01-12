@@ -63,15 +63,18 @@
 			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8)), url("/assets/images/home_01.png");
 		}
 
-		img {
-			height: 200px;
-		}
-
 		.head-title {
 			display: flex;
 			align-items: center;
-			justify-content: space-around;
-			text-align: center;
+
+			img {
+				width: 25%;
+			}
+
+			h1 {
+				width: 50%;
+				text-align: center;
+			}
 		}
 
 		.head-text {
