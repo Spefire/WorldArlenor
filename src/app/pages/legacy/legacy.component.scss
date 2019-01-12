@@ -5,12 +5,18 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		height: 550px;
+		height: 700px;
+		background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+		url("/assets/images/home_00.png");
 
 		.legacy-description {
 			width: 50%;
 			text-align: center;
 			margin: auto;
+
+			@media screen and (max-width: 700px) {
+				width: 80%;
+			}
 		}
 	}
 }

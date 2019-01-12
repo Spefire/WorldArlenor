@@ -2,18 +2,33 @@
 
 :host {
 	.about-container {
-		position: relative;
 		display: flex;
-		flex-direction: row;
 		height: 700px;
+		background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
+		url("/assets/images/home_00.png");
+
+		@media screen and (max-width: 1000px) {
+			flex-direction: column;
+			height: 1000px;
+			width: 100%;
+			align-items: center;
+		}
 
 		.about-left {
 			width: 50%;
 			text-align: center;
 			margin: auto 0;
 
+			@media screen and (max-width: 1000px) {
+				width: 80%;
+			}
+
 			img {
 				height: 550px;
+
+				@media screen and (max-width: 1000px) {
+					height: 350px;
+				}
 			}
 		}
 
@@ -21,6 +36,11 @@
 			width: 40%;
 			text-align: left;
 			margin: auto 0;
+
+			@media screen and (max-width: 1000px) {
+				width: 80%;
+				text-align: center;
+			}
 		}
 	}
 }
