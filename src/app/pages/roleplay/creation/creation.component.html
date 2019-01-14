@@ -1,3 +1,37 @@
 <div class="creation-container">
 	<span (click)="downloadPDF()">CREATION</span>
+	<div>
+		<span>Caractéristiques</span>
+		<span>Points restants : {{ leftPointsCaracteristics }}</span>
+	</div>
+	<div>
+		<span>Vigueur : {{ caracteristics.vigueur }}</span>
+		<span>Faible (1)</span>
+		<input type="range" min="1" max="5" value="{{ caracteristics.vigueur }}" (change)="test('vigueur', $event.target.value)"/>
+		<span>Fort (5)</span>
+	</div>
+	<div>
+		<span>Habileté : {{ caracteristics.habilete }}</span>
+		<span>Faible (1)</span>
+		<input type="range" min="1" max="5" value="{{ caracteristics.habilete }}" (change)="test('habilete', $event.target.value)"/>
+		<span>Fort (5)</span>
+	</div>
+	<div>
+		<span>Intellect : {{ caracteristics.intellect }}</span>
+		<span>Faible (1)</span>
+		<input type="range" min="1" max="5" value="{{ caracteristics.intellect }}" (change)="test('intellect', $event.target.value)"/>
+		<span>Fort (5)</span>
+	</div>
+	<div>
+		<span>Présence : {{ caracteristics.presence }}</span>
+		<span>Faible (1)</span>
+		<input type="range" min="1" max="5" value="{{ caracteristics.presence }}" (change)="test('presence', $event.target.value)"/>
+		<span>Fort (5)</span>
+	</div>
+	<div>
+		<span>Pouvoir : {{ caracteristics.pouvoir }}</span>
+		<span>Faible (1)</span>
+		<input type="range" min="1" max="5" value="{{ caracteristics.pouvoir }}" (change)="test('pouvoir', $event.target.value)"/>
+		<span>Fort (5)</span>
+	</div>
 </div>
