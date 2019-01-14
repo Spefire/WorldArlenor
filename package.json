@@ -23,6 +23,7 @@
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^2.0.1",
     "core-js": "^2.5.4",
+    "jspdf": "^1.5.3",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.3.2",
     "zone.js": "~0.8.26"
