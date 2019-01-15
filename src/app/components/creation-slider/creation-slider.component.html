@@ -1,0 +1,6 @@
+<div>
+	<span>{{ name }} : {{ value }}</span>
+	<span>{{ min }}</span>
+	<input type="range" min="{{ min }}" max="{{ max }}" value="{{ value }}" (change)="valueChanged($event.target.value)"/>
+	<span>{{ max }}</span>
+</div>

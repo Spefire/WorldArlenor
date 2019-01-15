@@ -22,6 +22,7 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LegacyComponent } from './pages/legacy/legacy.component';
 import { HeadUniverseComponent } from './components/head-universe/head-universe.component';
+import { CreationSliderComponent } from './components/creation-slider/creation-slider.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -40,7 +41,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CharactersComponent,
     AboutComponent,
 		LegacyComponent,
-		HeadUniverseComponent,
+    HeadUniverseComponent,
+    CreationSliderComponent,
     HeaderComponent,
     FooterComponent
   ],

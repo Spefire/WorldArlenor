@@ -29,37 +29,47 @@ export class CreationComponent {
 			pouvoir : 1,
 		};
 		this.mainSkills = {
-			animaux : 1,
-			art : 1,
-			artisanat : 1,
-			athletisme : 1,
-			combat : 1,
-			etiquette : 1,
-			furtivite : 1,
-			information : 1,
-			intuition : 1,
-			investigation : 1,
-			larcin : 1,
-			manipulation : 1,
-			medecine : 1,
-			persuasion : 1,
-			pilotage : 1,
-			savoir : 1,
-			survie : 1
+			animaux : 0,
+			art : 0,
+			artisanat : 0,
+			athletisme : 0,
+			combat : 0,
+			etiquette : 0,
+			furtivite : 0,
+			information : 0,
+			intuition : 0,
+			investigation : 0,
+			larcin : 0,
+			manipulation : 0,
+			medecine : 0,
+			persuasion : 0,
+			pilotage : 0,
+			savoir : 0,
+			survie : 0
 		};
 		this.crystalSkills = {
-			elementaires : 1,
-			invocations : 1,
-			mentaux : 1,
-			transformation : 1,
-			spatiauxtemporels : 1,
-			speciaux : 1
+			elementaires : 0,
+			invocations : 0,
+			mentaux : 0,
+			transformation : 0,
+			spatiauxtemporels : 0,
+			speciaux : 0
 		};
 		this.refreshPoints();
 	}
 	
-	test(type, value) {
-		this.caracteristics[type] = parseInt(value);
+	changeCaracteristics(event) {
+		this.caracteristics[event.type] = parseInt(event.value);
+		this.refreshPoints();
+	}
+
+	changeMainSkills(event) {
+		this.caracteristics[event.type] = parseInt(event.value);
+		this.refreshPoints();
+	}
+
+	changeCrystalSkills(event) {
+		this.caracteristics[event.type] = parseInt(event.value);
 		this.refreshPoints();
 	}
 
@@ -69,6 +79,15 @@ export class CreationComponent {
 			totalCaracteristics += this.caracteristics[key];
 		}
 		this.leftPointsCaracteristics = 15 - totalCaracteristics;
+
+		var totalSkills = 0;
+		for (var key in this.mainSkills) {
+			totalSkills += this.mainSkills[key];
+		}
+		for (var key in this.crystalSkills) {
+			totalSkills += this.crystalSkills[key];
+		}
+		this.leftPointsSkills = 50 - totalSkills;
 	}
 
 	downloadPDF() {
