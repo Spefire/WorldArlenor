@@ -1,11 +1,7 @@
 <div class="creation-container">
-	<div>
-		<h1>Fiche de personnage</h1>
-	</div>
-	<div>
-		<span>Caractéristiques</span>
-		<span>Points restants : {{ leftPointsCaracteristics }}</span>
-	</div>
+	<h1>Fiche de personnage</h1>
+	<h2>Caractéristiques</h2>
+	<p>Points restants : {{ leftPointsCaracteristics }}</p>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" help="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="vigueur" value="{{ caracteristics.vigueur }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.HABILETE.NAME' | translate }}" help="{{ 'CREATION.HABILETE.HELP' | translate }}" type="habilete" value="{{ caracteristics.habilete }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.INTELLECT.NAME' | translate }}" help="{{ 'CREATION.INTELLECT.HELP' | translate }}" type="intellect" value="{{ caracteristics.intellect }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
@@ -13,10 +9,8 @@
 	<creation-slider min="1" max="5" name="{{ 'CREATION.POUVOIR.NAME' | translate }}" help="{{ 'CREATION.POUVOIR.HELP' | translate }}" type="pouvoir" value="{{ caracteristics.pouvoir }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 </div>
 <div class="creation-container">
-	<div>
-		<span>Compétences</span>
-		<span>Points restants : {{ leftPointsSkills }}</span>
-	</div>
+	<h2>Compétences</h2>
+	<p>Points restants : {{ leftPointsSkills }}</p>
 	<creation-slider min="0" max="10" name="{{ 'CREATION.ANIMAUX.NAME' | translate }}" help="{{ 'CREATION.ANIMAUX.HELP' | translate }}" type="animaux" value="{{ mainSkills.animaux }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
 	<creation-slider min="0" max="10" name="{{ 'CREATION.ART.NAME' | translate }}" help="{{ 'CREATION.ART.HELP' | translate }}" type="art" value="{{ mainSkills.art }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
 	<creation-slider min="0" max="10" name="{{ 'CREATION.ARTISANAT.NAME' | translate }}" help="{{ 'CREATION.ARTISANAT.HELP' | translate }}" type="artisanat" value="{{ mainSkills.artisanat }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>

@@ -64,12 +64,12 @@ export class CreationComponent {
 	}
 
 	changeMainSkills(event) {
-		this.caracteristics[event.type] = parseInt(event.value);
+		this.mainSkills[event.type] = parseInt(event.value);
 		this.refreshPoints();
 	}
 
 	changeCrystalSkills(event) {
-		this.caracteristics[event.type] = parseInt(event.value);
+		this.crystalSkills[event.type] = parseInt(event.value);
 		this.refreshPoints();
 	}
 
