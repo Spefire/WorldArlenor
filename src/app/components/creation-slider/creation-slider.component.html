@@ -1,5 +1,5 @@
 <div>
-	<span>{{ name }} : {{ value }}</span><div (click)="toogleHelp()">AIDE</div>
+	<span>{{ name }} : {{ value }}</span><div (click)="toogleHelp()">?</div>
 	<span>{{ min }}</span>
 	<input type="range" min="{{ min }}" max="{{ max }}" value="{{ value }}" (change)="valueChanged($event.target.value)"/>
 	<span>{{ max }}</span>

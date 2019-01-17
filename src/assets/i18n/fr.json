@@ -274,48 +274,94 @@
 			"NAME": "Pouvoir",
 			"HELP": "Pouvoir Help"
 		},
-		"ANIMAUX": "Animaux",
-		"ANIMAUXHELP": "Animaux Help",
-		"ART": "Art",
-		"ARTHELP": "Art Help",
-		"ARTISNAT": "Artisanat",
-		"ARTISANATHELP": "Artisanat Help",
-		"ATHLETISME": "Athlétisme",
-		"ATHLETISMEHELP": "Athlétisme Help",
-		"COMBAT": "Combat",
-		"COMBATHELP": "Combat Help",
-		"ETIQUETTE": "Etiquette",
-		"ETIQUETTEHELP": "Etiquette Help",
-		"FURTIVITE": "Furtivité",
-		"FURTIVITEHELP": "Furtivité Help",
-		"INFORMATION": "Information",
-		"INFORMATIONHELP": "Information Help",
-		"INTUITION": "Intuition",
-		"INTUITIONHELP": "Intuition Help",
-		"INVESTIGATION": "Investigation",
-		"INVESTIGATIONHELP": "Investigation Help",
-		"LARCIN": "Larcin",
-		"LARCINHELP": "Larcin Help",
-		"MANIPULATION": "Manipulation",
-		"MANIPULATIONHELP": "Manipulation Help",
-		"MEDECINE": "Médecine",
-		"MEDECINEHELP": "Médecine Help",
-		"PERSUASION": "Persuasion",
-		"PERSUASIONHELP": "Persuasion Help",
-		"PILOTAGE": "Pilotage",
-		"PILOTAGEHELP": "Pilotage Help",
-		"SAVOIR": "Savoir",
-		"SAVOIRHELP": "Savoir Help",
-		"ELEMENTAIRES": "Cristaux de type Elémentaires",
-		"ELEMENTAIRESHELP": "Cristaux de type Elémentaires Help",
-		"INVOCATIONS": "Cristaux de type Invocations",
-		"INVOCATIONSHELP": "Cristaux de type Invocations Help",
-		"MENTAUX": "Cristaux de type Mentaux",
-		"MENTAUXHELP": "Cristaux de type Mentaux Help",
-		"SPATIAUXTEMPORELS": "Cristaux de type Spatiaux-temporels",
-		"SPATIAUXTEMPORELSHELP": "Cristaux de type Spatiaux-temporels Help",
-		"SPECIAUX": "Cristaux de type Spéciaux",
-		"SPECIAUXHELP": "Cristaux de type Spéciaux Help"
+		"ANIMAUX": {
+			"NAME": "Présence",
+			"HELP": "Présence Help"
+		},
+		"ART": {
+			"NAME": "Art",
+			"HELP": "Art Help" 	
+		},
+		"ARTISANAT": { 		
+			"NAME": "Artisanat",
+			"HELP": "Artisanat Help"
+		},
+		"ATHLETISME": {
+			"NAME": "Athlétisme",
+			"HELP": "Athlétisme Help"
+		},
+		"COMBAT": {
+			"NAME": "Combat",
+			"HELP": "Combat Help"
+		},
+		"ETIQUETTE": {
+			"NAME": "Etiquette",
+			"HELP": "Etiquette Help"
+		},
+		"FURTIVITE": {
+			"NAME": "Furtivité",
+			"HELP": "Furtivité Help"
+		},
+		"INFORMATION": {
+			"NAME": "Information",
+			"HELP": "Information Help"
+		},
+		"INTUITION": {
+			"NAME": "Intuition",
+			"HELP": "Intuition Help"
+		},
+		"INVESTIGATION": {
+			"NAME": "Investigation",
+			"HELP": "Investigation Help"
+		},
+		"LARCIN": {
+			"NAME": "Larcin",
+			"HELP": "Larcin Help"
+		},
+		"MANIPULATION": {
+			"NAME": "Manipulation",
+			"HELP": "Manipulation Help"
+		},
+		"MEDECINE": {
+			"NAME": "Médecine",
+			"HELP": "Médecine Help"
+		},
+		"PERSUASION": {
+			"NAME": "Persuasion",
+			"HELP": "Persuasion Help"
+		},
+		"PILOTAGE": {
+			"NAME": "Pilotage",
+			"HELP": "Pilotage Help"
+		},
+		"SAVOIR": {
+			"NAME": "Savoir",
+			"HELP": "Savoir Help"
+		},
+		"SURVIE": {
+			"NAME": "Survie",
+			"HELP": "Survie Help"
+		},
+		"ELEMENTAIRES": {
+			"NAME": "Cristaux de type Elémentaires",
+			"HELP": "Cristaux de type Elémentaires Help"
+		},
+		"INVOCATIONS": {
+			"NAME": "Cristaux de type Invocations",
+			"HELP": "Cristaux de type Invocations Help"
+		},
+		"MENTAUX": {
+			"NAME": "Cristaux de type Mentaux",
+			"HELP": "Cristaux de type Mentaux Help"
+		},
+		"SPATIAUXTEMPORELS": {
+			"NAME": "Cristaux de type Spatiaux-temporels",
+			"HELP": "Cristaux de type Spatiaux-temporels Help"
+		},
+		"SPECIAUX": {
+			"NAME": "Cristaux de type Spéciaux",
+			"HELP": "Cristaux de type Spéciaux Help"
+		}
 	},
 	"ABOUT": {
 		"INTRODUCTION": "Présentation",

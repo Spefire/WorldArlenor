@@ -6,37 +6,37 @@
 		<span>Caractéristiques</span>
 		<span>Points restants : {{ leftPointsCaracteristics }}</span>
 	</div>
-	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" name="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="vigueur" value="{{ caracteristics.vigueur }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
-	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" name="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="habilete" value="{{ caracteristics.habilete }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
-	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" name="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="intellect" value="{{ caracteristics.intellect }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
-	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" name="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="presence" value="{{ caracteristics.presence }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
-	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" name="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="pouvoir" value="{{ caracteristics.pouvoir }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
+	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" help="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="vigueur" value="{{ caracteristics.vigueur }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
+	<creation-slider min="1" max="5" name="{{ 'CREATION.HABILETE.NAME' | translate }}" help="{{ 'CREATION.HABILETE.HELP' | translate }}" type="habilete" value="{{ caracteristics.habilete }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
+	<creation-slider min="1" max="5" name="{{ 'CREATION.INTELLECT.NAME' | translate }}" help="{{ 'CREATION.INTELLECT.HELP' | translate }}" type="intellect" value="{{ caracteristics.intellect }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
+	<creation-slider min="1" max="5" name="{{ 'CREATION.PRESENCE.NAME' | translate }}" help="{{ 'CREATION.PRESENCE.HELP' | translate }}" type="presence" value="{{ caracteristics.presence }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
+	<creation-slider min="1" max="5" name="{{ 'CREATION.POUVOIR.NAME' | translate }}" help="{{ 'CREATION.POUVOIR.HELP' | translate }}" type="pouvoir" value="{{ caracteristics.pouvoir }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 </div>
 <div class="creation-container">
 	<div>
 		<span>Compétences</span>
 		<span>Points restants : {{ leftPointsSkills }}</span>
 	</div>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="animaux" value="{{ mainSkills.animaux }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="art" value="{{ mainSkills.art }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="artisanat" value="{{ mainSkills.artisanat }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="athletisme" value="{{ mainSkills.athletisme }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="combat" value="{{ mainSkills.combat }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="etiquette" value="{{ mainSkills.etiquette }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="furtivite" value="{{ mainSkills.furtivite }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="information" value="{{ mainSkills.information }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="intuition" value="{{ mainSkills.intuition }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="investigation" value="{{ mainSkills.investigation }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="larcin" value="{{ mainSkills.larcin }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="manipulation" value="{{ mainSkills.manipulation }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="medecine" value="{{ mainSkills.medecine }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="persuasion" value="{{ mainSkills.persuasion }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="pilotage" value="{{ mainSkills.pilotage }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="savoir" value="{{ mainSkills.savoir }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="survie" value="{{ mainSkills.survie }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="elementaires" value="{{ crystalSkills.elementaires }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="invocations" value="{{ crystalSkills.invocations }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="mentaux" value="{{ crystalSkills.mentaux }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="spatiauxtemporels" value="{{ crystalSkills.spatiauxtemporels }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
-	<creation-slider min="0" max="10" name="{{ 'CREATION.VIGUEUR' | translate }}" type="speciaux" value="{{ crystalSkills.speciaux }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.ANIMAUX.NAME' | translate }}" help="{{ 'CREATION.ANIMAUX.HELP' | translate }}" type="animaux" value="{{ mainSkills.animaux }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.ART.NAME' | translate }}" help="{{ 'CREATION.ART.HELP' | translate }}" type="art" value="{{ mainSkills.art }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.ARTISANAT.NAME' | translate }}" help="{{ 'CREATION.ARTISANAT.HELP' | translate }}" type="artisanat" value="{{ mainSkills.artisanat }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.ATHLETISME.NAME' | translate }}" help="{{ 'CREATION.ATHLETISME.HELP' | translate }}" type="athletisme" value="{{ mainSkills.athletisme }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.COMBAT.NAME' | translate }}" help="{{ 'CREATION.COMBAT.HELP' | translate }}" type="combat" value="{{ mainSkills.combat }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.ETIQUETTE.NAME' | translate }}" help="{{ 'CREATION.ETIQUETTE.HELP' | translate }}" type="etiquette" value="{{ mainSkills.etiquette }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.FURTIVITE.NAME' | translate }}" help="{{ 'CREATION.FURTIVITE.HELP' | translate }}" type="furtivite" value="{{ mainSkills.furtivite }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.INFORMATION.NAME' | translate }}" help="{{ 'CREATION.INFORMATION.HELP' | translate }}" type="information" value="{{ mainSkills.information }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.INTUITION.NAME' | translate }}" help="{{ 'CREATION.INTUITION.HELP' | translate }}" type="intuition" value="{{ mainSkills.intuition }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.INVESTIGATION.NAME' | translate }}" help="{{ 'CREATION.INVESTIGATION.HELP' | translate }}" type="investigation" value="{{ mainSkills.investigation }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.LARCIN.NAME' | translate }}" help="{{ 'CREATION.LARCIN.HELP' | translate }}" type="larcin" value="{{ mainSkills.larcin }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.MANIPULATION.NAME' | translate }}" help="{{ 'CREATION.MANIPULATION.HELP' | translate }}" type="manipulation" value="{{ mainSkills.manipulation }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.MEDECINE.NAME' | translate }}" help="{{ 'CREATION.MEDECINE.HELP' | translate }}" type="medecine" value="{{ mainSkills.medecine }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.PERSUASION.NAME' | translate }}" help="{{ 'CREATION.PERSUASION.HELP' | translate }}" type="persuasion" value="{{ mainSkills.persuasion }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.PILOTAGE.NAME' | translate }}" help="{{ 'CREATION.PILOTAGE.HELP' | translate }}" type="pilotage" value="{{ mainSkills.pilotage }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.SAVOIR.NAME' | translate }}" help="{{ 'CREATION.SAVOIR.HELP' | translate }}" type="savoir" value="{{ mainSkills.savoir }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.SURVIE.NAME' | translate }}" help="{{ 'CREATION.SURVIE.HELP' | translate }}" type="survie" value="{{ mainSkills.survie }}" (pointsValueChange)="changeMainSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.ELEMENTAIRES.NAME' | translate }}" help="{{ 'CREATION.ELEMENTAIRES.HELP' | translate }}" type="elementaires" value="{{ crystalSkills.elementaires }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.INVOCATIONS.NAME' | translate }}" help="{{ 'CREATION.INVOCATIONS.HELP' | translate }}" type="invocations" value="{{ crystalSkills.invocations }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.MENTAUX.NAME' | translate }}" help="{{ 'CREATION.MENTAUX.HELP' | translate }}" type="mentaux" value="{{ crystalSkills.mentaux }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.SPATIAUXTEMPORELS.NAME' | translate }}" help="{{ 'CREATION.SPATIAUXTEMPORELS.HELP' | translate }}" type="spatiauxtemporels" value="{{ crystalSkills.spatiauxtemporels }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
+	<creation-slider min="0" max="10" name="{{ 'CREATION.SPECIAUX.NAME' | translate }}" help="{{ 'CREATION.SPECIAUX.HELP' | translate }}" type="speciaux" value="{{ crystalSkills.speciaux }}" (pointsValueChange)="changeCrystalSkills($event)"></creation-slider>
 </div>
