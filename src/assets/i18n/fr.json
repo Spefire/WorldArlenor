@@ -263,7 +263,9 @@
 			"PROJECT01TEXT": "Ce projet est né avec ma découverte du jeu de rôles en 2014. J'avais envie de contrôler le monde dans lequel vivrait mes joueurs et créer mes propres scénarios très rapidement. En janvier 2015, le Monde d'Arlénor est né. Mes premiers joueurs ont vécu une première campagne de 8 scénarios. Seulement, je souhaitais partager cet univers au delà du jeu de rôles... d'où ce site !",
 			"PROJECT02": "Célestia et le cercle des mages Evanell",
 			"PROJECT02TEXT": "Célestia est une sorte d'extension du Monde d'Arlénor : une île céleste encore inexplorée par les joueurs. Je l'ai créé pour y faire vivre mes OCs (mes propres personnages) et partager leurs histoires."
-		}
+		},
+		"THANKS": "Remerciements",
+		"THANKSTEXT": "Merci à mes joueurs Laetitia, Jérôme, Jonathan et Sylvain qui m'ont accompagné lors de la création d'Arlénor.<br>Merci à mes MJs d'autres univers qui m'ont énormément apporté en terme de conseils et de soutien.<br>Et puis merci à ce qui m'ont soutenu durant ce projet et ce site : Estelle, Alice, Audrey et mes amis testeurs... et puis merci à toi de t'intéresser au Monde d'Arlénor !"
   },
   "LEGACY": {
     "STATUT": "Statut du propriétaire : <strong>Particulier</strong>",
