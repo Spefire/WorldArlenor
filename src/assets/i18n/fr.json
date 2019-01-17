@@ -252,8 +252,72 @@
 			"RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
 			"SEEMORE02": "Télécharger le Manuel du MJ V1.0"
     }
-  },
-  "ABOUT": {
+	},
+	"CREATION": {
+		"VIGUEUR": {
+			"NAME": "Vigueur",
+			"HELP": "Vigueur Help"
+		},
+		"HABILETE": {
+			"NAME": "Habileté",
+			"HELP": "Habileté Help"
+		},
+		"INTELLECT": {
+			"NAME": "Intellect",
+			"HELP": "Intellect Help"
+		},
+		"PRESENCE": {
+			"NAME": "Présence",
+			"HELP": "Présence Help"
+		},
+		"POUVOIR": {
+			"NAME": "Pouvoir",
+			"HELP": "Pouvoir Help"
+		},
+		"ANIMAUX": "Animaux",
+		"ANIMAUXHELP": "Animaux Help",
+		"ART": "Art",
+		"ARTHELP": "Art Help",
+		"ARTISNAT": "Artisanat",
+		"ARTISANATHELP": "Artisanat Help",
+		"ATHLETISME": "Athlétisme",
+		"ATHLETISMEHELP": "Athlétisme Help",
+		"COMBAT": "Combat",
+		"COMBATHELP": "Combat Help",
+		"ETIQUETTE": "Etiquette",
+		"ETIQUETTEHELP": "Etiquette Help",
+		"FURTIVITE": "Furtivité",
+		"FURTIVITEHELP": "Furtivité Help",
+		"INFORMATION": "Information",
+		"INFORMATIONHELP": "Information Help",
+		"INTUITION": "Intuition",
+		"INTUITIONHELP": "Intuition Help",
+		"INVESTIGATION": "Investigation",
+		"INVESTIGATIONHELP": "Investigation Help",
+		"LARCIN": "Larcin",
+		"LARCINHELP": "Larcin Help",
+		"MANIPULATION": "Manipulation",
+		"MANIPULATIONHELP": "Manipulation Help",
+		"MEDECINE": "Médecine",
+		"MEDECINEHELP": "Médecine Help",
+		"PERSUASION": "Persuasion",
+		"PERSUASIONHELP": "Persuasion Help",
+		"PILOTAGE": "Pilotage",
+		"PILOTAGEHELP": "Pilotage Help",
+		"SAVOIR": "Savoir",
+		"SAVOIRHELP": "Savoir Help",
+		"ELEMENTAIRES": "Cristaux de type Elémentaires",
+		"ELEMENTAIRESHELP": "Cristaux de type Elémentaires Help",
+		"INVOCATIONS": "Cristaux de type Invocations",
+		"INVOCATIONSHELP": "Cristaux de type Invocations Help",
+		"MENTAUX": "Cristaux de type Mentaux",
+		"MENTAUXHELP": "Cristaux de type Mentaux Help",
+		"SPATIAUXTEMPORELS": "Cristaux de type Spatiaux-temporels",
+		"SPATIAUXTEMPORELSHELP": "Cristaux de type Spatiaux-temporels Help",
+		"SPECIAUX": "Cristaux de type Spéciaux",
+		"SPECIAUXHELP": "Cristaux de type Spéciaux Help"
+	},
+	"ABOUT": {
 		"INTRODUCTION": "Présentation",
 		"INTRODUCTIONTEXT": "Je suis Spefire, j'ai 24 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
 		"CONTACT": "Contact / Questions",
