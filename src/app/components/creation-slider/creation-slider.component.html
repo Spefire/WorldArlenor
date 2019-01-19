@@ -1,6 +1,12 @@
 <div class="creation-slider-container">
-	<span>{{ name }} : {{ value }}</span>
-	<input class="creation-slider-input" type="range" min="{{ min }}" max="{{ max }}" value="{{ value }}" (change)="valueChanged($event.target.value)"/>
-	<span (click)="toogleHelp()">(?)</span>
+	<span>{{ name }}</span>
+	<span id="rs-bullet" class="rs-label">{{ value }}</span>
+	<div>
+		<input id="rs-range-line" class="rs-range" type="range" value="{{ value }}" min="{{ min }}" max="{{ max }}">
+		<div class="box-minmax">
+			<span>{{ min }}</span><span>{{ max }}</span>
+		</div>
+	</div>
+	<span class="creation-slider-help" (click)="toogleHelp()">?</span>
 </div>
 <p *ngIf="displayHelp" innerHtml="{{ help }}"></p>
