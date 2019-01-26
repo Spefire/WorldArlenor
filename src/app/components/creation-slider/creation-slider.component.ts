@@ -17,14 +17,12 @@ export class CreationSliderComponent implements AfterViewInit {
 
 	public displayHelp: boolean;
 	public rangeSlider: any;
-	public rangeBullet: any;
 
 	constructor(private elementRef:ElementRef) {
 	}
 
 	ngAfterViewInit() {
-		this.rangeSlider = this.elementRef.nativeElement.querySelector("#rs-range-line");
-		this.rangeBullet = this.elementRef.nativeElement.querySelector("#rs-bullet");
+		this.rangeSlider = this.elementRef.nativeElement.querySelector("#cs-range-line");
 		this.rangeSlider.addEventListener("input", this.valueChange.bind(this));
 	}
 
