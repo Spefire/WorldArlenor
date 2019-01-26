@@ -9,7 +9,7 @@ html, body {
 body {
   z-index: 1;
   color: $light-color;
-	background: linear-gradient(45deg, $dark-color, $dark-color, $primary-color);
+	background: $dark-color;
 }
 
 h1 {
