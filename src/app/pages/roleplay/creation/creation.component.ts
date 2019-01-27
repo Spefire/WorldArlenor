@@ -78,7 +78,7 @@ export class CreationComponent {
 		for (var key in this.caracteristics) {
 			totalCaracteristics += this.caracteristics[key];
 		}
-		this.leftPointsCaracteristics = 15 - totalCaracteristics;
+		this.leftPointsCaracteristics = 13 - totalCaracteristics;
 
 		var totalSkills = 0;
 		for (var key in this.mainSkills) {

@@ -8,6 +8,17 @@
 	height: 50px;
 	width: 100%;
 
+	.cs-popup {
+		position: absolute;
+		top: 50px;
+		z-index: 1;
+		width: 60%;
+		padding: 25px;
+		border-radius: 5px;
+		border: 2px solid $secondary-color;
+		background: $dark-color;
+	}
+
 	.cs-name {
 		min-width: 100px;
 		max-width: 250px;

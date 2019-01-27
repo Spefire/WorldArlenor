@@ -15,7 +15,8 @@ export class CreationSliderComponent implements AfterViewInit {
 	@Input() public max:number;
 	@Output() pointsValueChange = new EventEmitter();
 
-	public displayHelp: boolean;
+	public displayHelpClick: boolean;
+	public displayHelpHover: boolean;
 	public rangeSlider: any;
 
 	constructor(private elementRef:ElementRef) {
@@ -27,7 +28,7 @@ export class CreationSliderComponent implements AfterViewInit {
 	}
 
 	toogleHelp() {
-		this.displayHelp = !this.displayHelp;
+		this.displayHelpClick = !this.displayHelpClick;
 	}
 
 	valueChange() {

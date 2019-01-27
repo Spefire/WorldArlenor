@@ -254,29 +254,32 @@
     }
 	},
 	"CREATION": {
+		"HEROS": "Un personnage est défini par deux séries de chiffres : ses <b>caractéristiques</b> et ses <b>compétences</b>. Les caractéristiques définissent ce qu’est le personnage, et les compétences ce qu’il sait. Votre personnage sera plus ou moins fort, plus ou moins intelligent, plus ou moins adroit. Et c’est vous qui choisirez si, au cours de sa vie, il a appris à se battre ou s'il a préféré se tourner vers l'érudition, la médecine...",
+		"CARACTS01": "Toute personne est dotée de capacités de base qui lui sont inhérentes et qu’il peut utiliser de bien des manières. Ces aptitudes naturelles sont définies par cinq caractéristiques distinctes, chacune évaluée sur une échelle allant de <b>1 à 5</b>.",
+		"CARACTS02": "Un score de 1 dans une caractéristique indique une vraie faiblesse dans le domaine concerné, tandis qu’un 2 place le personnage dans la moyenne, ni plus ni moins. A partir de 3, la personne dispose d’une facilité particulière dans la caractéristique concernée, et un 4 indique des facultés exceptionnelles. Enfin, un score de 5 représente le maximum des capacités : seuls quelques très rares individus atteignent ce score.",
 		"VIGUEUR": {
 			"NAME": "Vigueur",
-			"HELP": "Vigueur Help"
+			"HELP": "Mélange de résistance physique et de puissance brute, la <b>Vigueur</b> évalue la forme physique de votre personnage. Cette caractéristique est importante pour les personnages combattants, les sportifs et tous ceux qui aiment se sortir de situations dangereuses.<br><br>1 : Fragile. Force et endurance limitées, vous vous fatiguez vite.<br>2 : Moyen. Vous n’avez de problèmes qu’avec des tours de force inhabituels.<br>3 : Costaud. Vous fatiguez rarement et réalisez des tours de force.<br>4 : Fort comme un bœuf. Peu de choses ou de personnes peuvent vous résister.<br>5 : Herculéen. Vous résistez à tout et rivalisez de puissance avec les ours."
 		},
 		"HABILETE": {
 			"NAME": "Habileté",
-			"HELP": "Habileté Help"
+			"HELP": "L’<b>Habileté</b> représente la capacité du personnage à s’acquitter de tâches de précision, sa finesse, sa dextérité, son talent pour viser ainsi que sa rapidité de réaction. C’est une aptitude inestimable pour les artisans, les voleurs, les danseurs et les tireurs de tout calibre.<br><br>1 : Maladroit. Vous êtes un véritable éléphant dans un magasin de porcelaine.<br>2 : Moyen. Au moins, vous ne provoquez que rarement des catastrophes.<br>3 : Agile. Vous êtes doué de vos mains, et votre agilité vous sert dans bien des situations.<br>4 : Félin. Vos réflexes et votre souplesse tiennent davantage de l’animal que de l’humain.<br>5 : Gracieux. Vos mouvements sont tellement fluides qu’ils semblent irréels."
 		},
 		"INTELLECT": {
 			"NAME": "Intellect",
-			"HELP": "Intellect Help"
+			"HELP": "Les capacités intellectuelles de votre personnage, sa capacité à analyser, retenir les informations et les réutiliser en temps utile. L'<b>Intellect</b> est utile aux tacticiens, aux érudits, aux scientifiques et aux enquêteurs.<br><br>1 : Simplet. Vous comprenez l’essentiel, mais toutes les subtilités vous échappent.<br>2 : Moyen. Vous ne faites pas de miracles, mais vous vous en sortez honorablement.<br>3 : Vif. Vous comprenez vite, analysez de manière pertinente et savez vous adapter.<br>4 : Brillant. Vous comprenez rapidement ce que certains mettent des années à apprendre.<br>5 : Génie. Vous maniez facilement des notions que la majorité des gens sont incapables d’appréhender."
 		},
 		"PRESENCE": {
 			"NAME": "Présence",
-			"HELP": "Présence Help"
+			"HELP": "La capacité à s’imposer aux autres, à leur inspirer de la confiance, du respect ou de la crainte, ainsi qu’à les manipuler. La <b>Présence</b> comprend bien plus que la beauté physique, et est l’atout principal des dirigeants, des séducteurs et de tous les menteurs invétérés.<br><br>1 : Fade. Vous n’inspirez pas les autres et semblez parfois transparent à leurs yeux.<br>2 : Moyen. Vous vous faites des amis, comme tout le monde.<br>3 : Intéressant. Vous ne laissez pas les gens indifférents, et beaucoup vous apprécient.<br>4 : Captivant. Leader-né, votre personnalité attire les autres à vous.<br>5 : Fascinant. Vous pourriez amener n’importe qui à faire n’importe quoi pour vous."
 		},
 		"POUVOIR": {
 			"NAME": "Pouvoir",
-			"HELP": "Pouvoir Help"
+			"HELP": "Le <b>Pouvoir</b> est la caractéristique déterminant le niveau de facilité à utiliser la magie des cristaux du Monde d'Arlénor. Les mages et sorciers ont généralement un bon niveau dans cette caractéristique.<br><br>1 : Débutant. L'utilisation de ton énergie vitale est encore un mystère pour vous.<br>5 : Master. La magie n'a plus (ou très peu) de secrets pour vous."
 		},
 		"ANIMAUX": {
-			"NAME": "Présence",
-			"HELP": "Présence Help"
+			"NAME": "Animaux",
+			"HELP": "Animaux Help"
 		},
 		"ART": {
 			"NAME": "Art",

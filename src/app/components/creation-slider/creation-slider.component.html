@@ -1,5 +1,5 @@
 <span class="cs-name">{{ name }}</span>
-<span class="cs-help" (click)="toogleHelp()">?</span>
+<span class="cs-help" (click)="toogleHelp()" (mouseover)="displayHelpHover=true" (mouseout)="displayHelpHover=false">?</span>
 <input id="cs-range-line" class="cs-range" type="range" value="{{ value }}" min="{{ min }}" max="{{ max }}">
 <span class="cs-value">{{ value }}</span>
-<p *ngIf="displayHelp" innerHtml="{{ help }}"></p>
+<span *ngIf="displayHelpClick || displayHelpHover" class="cs-popup" innerHtml="{{ help }}"></span>

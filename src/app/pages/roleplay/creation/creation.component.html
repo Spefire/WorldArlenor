@@ -1,13 +1,15 @@
 <div class="creation-container">
 	<h1>Fiche de personnage</h1>
+	<p innerHtml="{{ 'CREATION.HEROS' | translate }}"></p>
 	<h2>Caractéristiques</h2>
+	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
 	<p>Points restants : {{ leftPointsCaracteristics }}</p>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.VIGUEUR.NAME' | translate }}" help="{{ 'CREATION.VIGUEUR.HELP' | translate }}" type="vigueur" value="{{ caracteristics.vigueur }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.HABILETE.NAME' | translate }}" help="{{ 'CREATION.HABILETE.HELP' | translate }}" type="habilete" value="{{ caracteristics.habilete }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.INTELLECT.NAME' | translate }}" help="{{ 'CREATION.INTELLECT.HELP' | translate }}" type="intellect" value="{{ caracteristics.intellect }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.PRESENCE.NAME' | translate }}" help="{{ 'CREATION.PRESENCE.HELP' | translate }}" type="presence" value="{{ caracteristics.presence }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.POUVOIR.NAME' | translate }}" help="{{ 'CREATION.POUVOIR.HELP' | translate }}" type="pouvoir" value="{{ caracteristics.pouvoir }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
-</div>
+	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p></div>
 <div class="creation-container">
 	<h2>Compétences</h2>
 	<p>Points restants : {{ leftPointsSkills }}</p>
