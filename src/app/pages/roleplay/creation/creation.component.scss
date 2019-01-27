@@ -12,4 +12,44 @@
 		background-image: linear-gradient(-45deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
 		url("/assets/images/home_02.png");
 	}
+
+	.creation-race {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.creation-race-img {
+		height: 200px;
+		width: 200px;
+		margin: 0 10px;
+		border: 2px solid $light-secondary-color;
+	}
+
+	.creation-race-text {
+		display: flex;
+		flex-direction: column;
+		width: 550px;
+	}
+
+	.creation-race-list {
+		margin-top: 10px;
+	}
+
+	.creation-race-seemore {
+		color: $light-secondary-color;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.creation-value {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		margin: 0 10px;
+		text-align: center;
+		border-radius: 50%;
+		border: 2px solid #EEEEEE;
+	}
 }

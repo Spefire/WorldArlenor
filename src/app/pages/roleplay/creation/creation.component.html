@@ -1,6 +1,31 @@
 <div class="creation-container">
 	<h1>Fiche de personnage</h1>
 	<p innerHtml="{{ 'CREATION.HEROS' | translate }}"></p>
+	<h2>Peuple / Race</h2>
+	<div class="creation-race">
+		<img *ngIf="race == 1" class="creation-race-img" src="assets/images/population/p_humain.png" alt="">
+		<img *ngIf="race == 2" class="creation-race-img" src="assets/images/population/p_elfe.png" alt="">
+		<img *ngIf="race == 3" class="creation-race-img" src="assets/images/population/p_nain.png" alt="">
+		<img *ngIf="race == 4" class="creation-race-img" src="assets/images/population/p_mutant.png" alt="">
+		<img *ngIf="race == 5" class="creation-race-img" src="assets/images/population/p_pan.png" alt="">
+		<img *ngIf="race == 6" class="creation-race-img" src="assets/images/population/p_arlenien.png" alt="">
+		<div class="creation-race-text">
+			<div class="creation-race-list">
+				<span>Race :</span>
+				<select (change)="changeRace($event.target)">
+					<option value="1">{{ 'UNIVERSE.POPULATION.PEOPLE1.NAME' | translate }}</option>
+					<option value="2">{{ 'UNIVERSE.POPULATION.PEOPLE2.NAME' | translate }}</option>
+					<option value="3">{{ 'UNIVERSE.POPULATION.PEOPLE3.NAME' | translate }}</option>
+					<option value="4">{{ 'UNIVERSE.POPULATION.PEOPLE4.NAME' | translate }}</option>
+					<option value="5">{{ 'UNIVERSE.POPULATION.PEOPLE5.NAME' | translate }}</option>
+					<option value="6">{{ 'UNIVERSE.POPULATION.PEOPLE6.NAME' | translate }}</option>
+				</select>
+				<a class="creation-race-seemore" href="./universe/population" target="_blank">En savoir plus</a>
+			</div>
+			<span class="creation-race-list">Avantages :</span><span innerHtml="{{ avantages }}"></span>
+			<span class="creation-race-list">Inconvénients :</span><span innerHtml="{{ inconvenients }}"></span>
+		</div>
+	</div>
 	<h2>Caractéristiques</h2>
 	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
 	<p>Points restants : {{ leftPointsCaracteristics }}</p>
@@ -9,7 +34,14 @@
 	<creation-slider min="1" max="5" name="{{ 'CREATION.INTELLECT.NAME' | translate }}" help="{{ 'CREATION.INTELLECT.HELP' | translate }}" type="intellect" value="{{ caracteristics.intellect }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.PRESENCE.NAME' | translate }}" help="{{ 'CREATION.PRESENCE.HELP' | translate }}" type="presence" value="{{ caracteristics.presence }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
 	<creation-slider min="1" max="5" name="{{ 'CREATION.POUVOIR.NAME' | translate }}" help="{{ 'CREATION.POUVOIR.HELP' | translate }}" type="pouvoir" value="{{ caracteristics.pouvoir }}" (pointsValueChange)="changeCaracteristics($event)"></creation-slider>
-	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p></div>
+	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
+	<h2>Valeurs en découlant</h2>
+	<div>
+		<span>Initiative :</span><span class="creation-value">{{ initiative }}</span>
+		<span>Points de Vie :</span><span class="creation-value">{{ pv }}</span>
+		<span>Points d'Energie Vitale :</span><span class="creation-value">{{ pe }}</span>
+	</div>
+</div>
 <div class="creation-container">
 	<h2>Compétences</h2>
 	<p>Points restants : {{ leftPointsSkills }}</p>

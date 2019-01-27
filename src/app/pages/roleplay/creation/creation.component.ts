@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { RoutesService } from '../../../services/routes.service';
 import jsPDF from 'jspdf';
 
@@ -11,16 +13,31 @@ import jsPDF from 'jspdf';
 export class CreationComponent {
 
 	public name:string;
-	public race:string;
+
+	public race:number;
+	public avantages:string;
+	public inconvenients:string;
+
 	public caracteristics:any;
 	public mainSkills:any;
 	public crystalSkills:any;
 
+	public initiative:number;
+	public pv:number;
+	public pe:number;
+
 	public leftPointsCaracteristics:number;
 	public leftPointsSkills:number;
 
-  constructor(private routesService: RoutesService) {
+  constructor(private routesService: RoutesService, private route: ActivatedRoute, private translate: TranslateService) {
 		this.routesService.setTitleMetas("CREATION");
+		this.race = 1;
+		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.AVANTAGES').subscribe((res: string) => {
+			this.avantages = res;
+		});
+		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.INCONVENIENTS').subscribe((res: string) => {
+			this.inconvenients = res;
+		});
 		this.caracteristics = {
 			vigueur : 1,
 			habilete : 1,
@@ -58,6 +75,16 @@ export class CreationComponent {
 		this.refreshPoints();
 	}
 	
+	changeRace(event) {
+		this.race = event.value;
+		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.AVANTAGES').subscribe((res: string) => {
+			this.avantages = res;
+		});
+		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.INCONVENIENTS').subscribe((res: string) => {
+			this.inconvenients = res;
+		});
+	}
+
 	changeCaracteristics(event) {
 		this.caracteristics[event.type] = parseInt(event.value);
 		this.refreshPoints();
@@ -88,6 +115,10 @@ export class CreationComponent {
 			totalSkills += this.crystalSkills[key];
 		}
 		this.leftPointsSkills = 50 - totalSkills;
+
+		this.initiative = this.caracteristics.habilete + this.caracteristics.intellect;
+		this.pv = 10 + 3 * this.caracteristics.vigueur;
+		this.pe = 0;
 	}
 
 	downloadPDF() {
