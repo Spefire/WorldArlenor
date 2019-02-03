@@ -31,7 +31,6 @@ export class CreationComponent {
 
   constructor(private routesService: RoutesService, private route: ActivatedRoute, private translate: TranslateService) {
 		this.routesService.setTitleMetas("CREATION");
-		this.race = 1;
 		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.AVANTAGES').subscribe((res: string) => {
 			this.avantages = res;
 		});
@@ -72,17 +71,56 @@ export class CreationComponent {
 			spatiauxtemporels : 0,
 			speciaux : 0
 		};
+		this.changeRace({value : 1});
 		this.refreshPoints();
 	}
 	
 	changeRace(event) {
-		this.race = event.value;
+		this.race = parseInt(event.value);
 		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.AVANTAGES').subscribe((res: string) => {
 			this.avantages = res;
 		});
 		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.INCONVENIENTS').subscribe((res: string) => {
 			this.inconvenients = res;
 		});
+		switch (this.race) {
+			case 1:
+			this.pe = 6;
+			this.mainSkills.athletisme = 1;
+				break;
+		
+			case 2:
+			this.pe = 8;
+				break;
+
+			case 3:
+			this.pe = 8;
+			this.mainSkills.animaux = 1;
+			this.mainSkills.combat = 1;
+				break;
+
+			case 4:
+			this.pe = 8;
+			this.mainSkills.furtivite = 1;
+			this.mainSkills.manipulation = 1;
+				break;
+
+			case 5:
+			this.pe = 12;
+			this.mainSkills.intuition = 1;
+			this.mainSkills.medecine = 1;
+				break;
+
+			case 6:
+			this.pe = 10;
+			this.mainSkills.combat = 1;
+			this.mainSkills.intuition = 1;
+			this.mainSkills.survie = 1;
+				break;
+
+			default:
+				break;
+		}
 	}
 
 	changeCaracteristics(event) {
@@ -118,7 +156,6 @@ export class CreationComponent {
 
 		this.initiative = this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
-		this.pe = 0;
 	}
 
 	downloadPDF() {
