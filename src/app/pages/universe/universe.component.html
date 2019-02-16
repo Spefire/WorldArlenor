@@ -23,17 +23,22 @@
 	<div class="world-right">
 		<div class="map-title">
 			<h2 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.FARADEL.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.CLIMATE' | translate }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Faradel'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate |
+				uppercase }} : {{ 'UNIVERSE.WORLD.FARADEL.CLIMATE' | translate }}</h4>
 			<h2 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.JIRAKAN.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.CLIMATE' | translate }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Jirakan'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate |
+				uppercase }} : {{ 'UNIVERSE.WORLD.JIRAKAN.CLIMATE' | translate }}</h4>
 			<h2 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.IMERYS.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.CLIMATE' | translate }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Imerys'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate |
+				uppercase }} : {{ 'UNIVERSE.WORLD.IMERYS.CLIMATE' | translate }}</h4>
 			<h2 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.KAZADOR.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.CLIMATE' | translate }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Kazador'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate |
+				uppercase }} : {{ 'UNIVERSE.WORLD.KAZADOR.CLIMATE' | translate }}</h4>
 			<h2 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.SHIVAZEN.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.CLIMATE' | translate }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Shivazen'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate |
+				uppercase }} : {{ 'UNIVERSE.WORLD.SHIVAZEN.CLIMATE' | translate }}</h4>
 			<h2 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.ZONES.TITLE' | translate | uppercase }}</h2>
-			<h4 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.CLIMATE' | translate }}</h4>
+			<h4 *ngIf="selectedFact.zone=='Zones'">{{ 'UNIVERSE.WORLD.DANGER' | translate | uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.DANGER' | translate }} / {{ 'UNIVERSE.WORLD.CLIMATE' | translate | 					uppercase }} : {{ 'UNIVERSE.WORLD.ZONES.CLIMATE' | translate }}</h4>
 		</div>
 		<div class="map-icons">
 			<img *ngIf="selectedFact.zone=='Faradel'" class="map-background" src="assets/images/world/map_faradel.png" alt="">
@@ -44,19 +49,19 @@
 			<img *ngIf="selectedFact.zone=='Zones'" class="map-background" src="assets/images/world/map_zones.png" alt="">
 			<img *ngIf="select == 0" class="map-icon map-icon-00" src="assets/images/world/icon_map_selected.svg" alt="">
 			<img *ngIf="select != 0" class="map-icon map-icon-00" src="assets/images/world/icon_map.svg" alt=""
-			(click)="setSelection(0)" (mouseover)="hoverIcon(0)" (mouseout)="unhoverIcon(0)">
+				(click)="setSelection(0)" (mouseover)="hoverIcon(0)" (mouseout)="unhoverIcon(0)">
 			<img *ngIf="select == 1" class="map-icon map-icon-01" src="assets/images/world/icon_map_selected.svg" alt="">
 			<img *ngIf="select != 1" class="map-icon map-icon-01" src="assets/images/world/icon_map.svg" alt=""
-			(click)="setSelection(1)" (mouseover)="hoverIcon(1)" (mouseout)="unhoverIcon(1)">
+				(click)="setSelection(1)" (mouseover)="hoverIcon(1)" (mouseout)="unhoverIcon(1)">
 			<img *ngIf="select == 2" class="map-icon map-icon-02" src="assets/images/world/icon_map_selected.svg" alt="">
 			<img *ngIf="select != 2" class="map-icon map-icon-02" src="assets/images/world/icon_map.svg" alt=""
-			(click)="setSelection(2)" (mouseover)="hoverIcon(2)" (mouseout)="unhoverIcon(2)">
+				(click)="setSelection(2)" (mouseover)="hoverIcon(2)" (mouseout)="unhoverIcon(2)">
 			<img *ngIf="select == 3" class="map-icon map-icon-03" src="assets/images/world/icon_map_selected.svg" alt="">
 			<img *ngIf="select != 3" class="map-icon map-icon-03" src="assets/images/world/icon_map.svg" alt=""
-			(click)="setSelection(3)" (mouseover)="hoverIcon(3)" (mouseout)="unhoverIcon(3)">
+				(click)="setSelection(3)" (mouseover)="hoverIcon(3)" (mouseout)="unhoverIcon(3)">
 			<img *ngIf="select == 4" class="map-icon map-icon-04" src="assets/images/world/icon_map_selected.svg" alt="">
 			<img *ngIf="select != 4" class="map-icon map-icon-04" src="assets/images/world/icon_map.svg" alt=""
-			(click)="setSelection(4)" (mouseover)="hoverIcon(4)" (mouseout)="unhoverIcon(4)">
+				(click)="setSelection(4)" (mouseover)="hoverIcon(4)" (mouseout)="unhoverIcon(4)">
 		</div>
 	</div>
 </div>

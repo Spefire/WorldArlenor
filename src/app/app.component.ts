@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: "app-root",
+	templateUrl: "./app.component.html",
+	styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('fr');
-    this.translate.use('fr');
-  }
+	constructor(private translate: TranslateService) {
+		this.translate.setDefaultLang("fr");
+		this.translate.use("fr");
+	}
 
-  onDeactivate() {
-    window.scroll(0, 0);
-  }
+	onDeactivate() {
+		window.scroll(0, 0);
+	}
 }

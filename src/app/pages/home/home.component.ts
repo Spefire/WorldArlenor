@@ -3,18 +3,18 @@ import { interval } from 'rxjs';
 import { RoutesService } from '../../services/routes.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  providers: [RoutesService]
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.scss'],
+	providers: [RoutesService]
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-	private sub:any;
-	private selection:number;
-	private scrollValue:number;
+	private sub: any;
+	private selection: number;
+	private scrollValue: number;
 
-  constructor(private routesService: RoutesService) {
+	constructor(private routesService: RoutesService) {
 		this.routesService.setTitleMetas("HOME");
 		window.addEventListener('mousewheel', this.mouseWheelEvent.bind(this));
 		window.addEventListener('DOMMouseScroll', this.mouseWheelEvent.bind(this));
@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 		else if (this.selection == 2) this.selection = 1;
 	}
 
-  setSelection(newSelection:number) {
+	setSelection(newSelection: number) {
 		this.selection = newSelection;
 		this.sub.unsubscribe();
 		this.sub = interval(10000).subscribe((val) => {
@@ -72,6 +72,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
+		this.sub.unsubscribe();
+	}
 }

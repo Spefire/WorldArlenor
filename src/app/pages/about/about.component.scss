@@ -4,8 +4,15 @@
 	.about-container {
 		display: flex;
 		height: 700px;
-		background-image: linear-gradient(135deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
-		url("/assets/images/home_00.png");
+		background-image: linear-gradient(
+				135deg,
+				rgba($dark-color, 1),
+				rgba($dark-color, 0.75),
+				rgba($dark-color, 0.5),
+				rgba($primary-color, 0.5),
+				rgba($primary-color, 0.5)
+			),
+			url("/assets/images/home_00.png");
 
 		@media screen and (max-width: 1000px) {
 			flex-direction: column;
