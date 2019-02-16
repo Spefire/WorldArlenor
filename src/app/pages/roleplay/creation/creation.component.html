@@ -158,6 +158,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.ART.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ART.NAME' | translate }}"
@@ -168,6 +169,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.ARTISANAT.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ARTISANAT.NAME' | translate }}"
@@ -178,6 +180,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.ATHLETISME.SPECIALISTICS' | translate }}"
 				min="{{ race === 1 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.ATHLETISME.NAME' | translate }}"
@@ -188,6 +191,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.COMBAT.SPECIALISTICS' | translate }}"
 				min="{{ race === 3 || race === 6 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.COMBAT.NAME' | translate }}"
@@ -198,6 +202,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.ETIQUETTE.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ETIQUETTE.NAME' | translate }}"
@@ -208,6 +213,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.FURTIVITE.SPECIALISTICS' | translate }}"
 				min="{{ race === 4 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.FURTIVITE.NAME' | translate }}"
@@ -218,6 +224,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.INFORMATION.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.INFORMATION.NAME' | translate }}"
@@ -228,6 +235,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.INTUITION.SPECIALISTICS' | translate }}"
 				min="{{ race === 5 || race === 6 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.INTUITION.NAME' | translate }}"
@@ -238,6 +246,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.INVESTIGATION.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.INVESTIGATION.NAME' | translate }}"
@@ -248,6 +257,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.LARCIN.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.LARCIN.NAME' | translate }}"
@@ -256,10 +266,9 @@
 				value="{{ mainSkills.larcin.value }}"
 				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
-		</div>
-		<div class="creation-section-right">
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.MANIPULATION.SPECIALISTICS' | translate }}"
 				min="{{ race === 4 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.MANIPULATION.NAME' | translate }}"
@@ -268,8 +277,11 @@
 				value="{{ mainSkills.manipulation.value }}"
 				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
+		</div>
+		<div class="creation-section-right">
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.MEDECINE.SPECIALISTICS' | translate }}"
 				min="{{ race === 5 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.MEDECINE.NAME' | translate }}"
@@ -280,6 +292,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.PERSUASION.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.PERSUASION.NAME' | translate }}"
@@ -290,6 +303,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.PILOTAGE.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.PILOTAGE.NAME' | translate }}"
@@ -300,6 +314,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.SAVOIR.SPECIALISTICS' | translate }}"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.SAVOIR.NAME' | translate }}"
@@ -310,6 +325,7 @@
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.SURVIE.SPECIALISTICS' | translate }}"
 				min="{{ race === 6 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.SURVIE.NAME' | translate }}"
@@ -346,6 +362,16 @@
 				help="{{ 'CREATION.MENTAUX.HELP' | translate }}"
 				type="mentaux"
 				value="{{ crystalSkills.mentaux.value }}"
+				(onValueChange)="changeCrystalSkills($event)"
+			></creation-slider>
+			<creation-slider
+				hasCristalSpecialistic="true"
+				min="0"
+				max="10"
+				name="{{ 'CREATION.TRANSFORMATIONS.NAME' | translate }}"
+				help="{{ 'CREATION.TRANSFORMATIONS.HELP' | translate }}"
+				type="transformations"
+				value="{{ crystalSkills.transformations.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider

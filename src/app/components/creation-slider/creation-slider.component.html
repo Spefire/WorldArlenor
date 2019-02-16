@@ -8,5 +8,5 @@
 			specialistic
 	}}</option>
 </select>
-<input *ngIf="hasCristalSpecialistic" type="text"/>
+<input *ngIf="hasCristalSpecialistic" type="text" (change)="speChange($event.target.value)"/>
 <span *ngIf="displayHelpClick || displayHelpHover" class="cs-popup" innerHtml="{{ help }}"></span>

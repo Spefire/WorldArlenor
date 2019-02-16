@@ -76,7 +76,7 @@ export class CreationComponent {
 			elementaires: { value: 0, spe: "" },
 			invocations: { value: 0, spe: "" },
 			mentaux: { value: 0, spe: "" },
-			transformation: { value: 0, spe: "" },
+			transformations: { value: 0, spe: "" },
 			spatiauxtemporels: { value: 0, spe: "" },
 			speciaux: { value: 0, spe: "" }
 		};
@@ -189,7 +189,6 @@ export class CreationComponent {
 		this.initiative =
 			this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
-		console.log(this.mainSkills);
 	}
 
 	downloadPDF() {
