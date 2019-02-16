@@ -4,14 +4,21 @@
 	.world-container {
 		display: flex;
 		height: 800px;
-    background-position: center;
+		background-position: center;
 		background-size: cover;
-		background-image: linear-gradient(135deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
+		background-image: linear-gradient(
+				135deg,
+				rgba($dark-color, 0.8),
+				rgba($dark-color, 0.8),
+				rgba($dark-primary-color, 0.8),
+				rgba($dark-primary-color, 1)
+			),
+			url("/assets/images/home_01.png");
 
 		@media screen and (max-width: 1200px) {
 			height: auto;
 			flex-direction: column-reverse;
-    	align-items: center;
+			align-items: center;
 		}
 
 		::-webkit-scrollbar {
@@ -25,7 +32,7 @@
 		}
 
 		.world-left {
-			position : relative;
+			position: relative;
 			height: 700px;
 			width: 35%;
 			padding: 20px;
@@ -49,14 +56,19 @@
 					height: 100%;
 					width: 100%;
 					border-top: 1px solid $secondary-color;
-					mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+					mask-image: linear-gradient(
+						to bottom,
+						rgba(0, 0, 0, 1),
+						rgba(0, 0, 0, 1),
+						rgba(0, 0, 0, 0)
+					);
 				}
 			}
 
 			.fact-title {
 				height: 60px;
 				margin: 5px 0;
-    		padding: 5px 0;
+				padding: 5px 0;
 				border-top: 1px solid $secondary-color;
 				border-bottom: 1px solid $secondary-color;
 				text-align: center;
@@ -64,13 +76,13 @@
 
 			.fact-description {
 				max-height: 350px;
-    		overflow-y: auto;
+				overflow-y: auto;
 			}
 
 			.fact-comment {
 				height: 60px;
 				margin: 5px 0;
-    		padding: 5px 0;
+				padding: 5px 0;
 				border-top: 1px solid $secondary-color;
 
 				@media screen and (max-width: 1200px) {
@@ -89,7 +101,7 @@
 
 		.world-right {
 			display: flex;
-  		flex-direction: column;
+			flex-direction: column;
 			justify-content: space-evenly;
 			align-items: center;
 			height: 700px;
@@ -128,7 +140,7 @@
 				}
 			}
 
-			.map-icons{
+			.map-icons {
 				position: relative;
 			}
 
@@ -173,5 +185,5 @@
 				left: 20%;
 			}
 		}
-  }
+	}
 }

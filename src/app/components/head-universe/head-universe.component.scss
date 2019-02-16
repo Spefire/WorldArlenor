@@ -15,7 +15,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			opacity: 1.0;
+			opacity: 1;
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -24,7 +24,12 @@
 
 			background-position: center;
 			background-size: cover;
-			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8)), url("/assets/images/home_01.png");
+			background-image: linear-gradient(
+					0deg,
+					rgba($dark-color, 0.8),
+					rgba($dark-color, 0.8)
+				),
+				url("/assets/images/home_01.png");
 		}
 
 		img {
@@ -33,15 +38,15 @@
 
 		.head-text {
 			width: 50%;
-			text-align:center;
+			text-align: center;
 		}
 	}
 
 	.head-mobile-container {
 		position: relative;
 		display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+		flex-direction: column;
+		justify-content: space-evenly;
 		height: 650px;
 
 		@media screen and (min-width: 1000px) {
@@ -51,7 +56,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			opacity: 1.0;
+			opacity: 1;
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -60,7 +65,12 @@
 
 			background-position: center;
 			background-size: cover;
-			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8)), url("/assets/images/home_01.png");
+			background-image: linear-gradient(
+					0deg,
+					rgba($dark-color, 0.8),
+					rgba($dark-color, 0.8)
+				),
+				url("/assets/images/home_01.png");
 		}
 
 		.head-title {

@@ -1,14 +1,15 @@
-html, body {
+html,
+body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
 	font-size: 14px;
-	font-family: 'Noto Serif', serif;
+	font-family: "Noto Serif", serif;
 }
 
 body {
-  z-index: 1;
-  color: $light-color;
+	z-index: 1;
+	color: $light-color;
 	background: linear-gradient(45deg, $dark-color, $dark-color, $primary-color);
 }
 
@@ -18,7 +19,7 @@ h1 {
 	font-weight: normal;
 
 	text-transform: uppercase;
-  color: $light-secondary-color;
+	color: $light-secondary-color;
 	margin: 0;
 
 	@media screen and (max-width: 700px) {
@@ -32,33 +33,32 @@ h2 {
 	font-weight: normal;
 
 	text-transform: uppercase;
-  color: $light-secondary-color;
+	color: $light-secondary-color;
 	margin: 0;
 }
 
 h3 {
 	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 
 	text-transform: uppercase;
-  color: $light-color;
+	color: $light-color;
 	margin: 0;
 }
 
 h4 {
 	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 
-  color: $light-color;
+	color: $light-color;
 	margin: 0;
 }
 
 a {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 
 	text-decoration: none;
 	color: $light-color;
-
 
 	&.disabled {
 		cursor: default;
@@ -78,13 +78,13 @@ a {
 }
 
 button {
-  padding: 5px 15px;
-  border-radius: 5px;
+	padding: 5px 15px;
+	border-radius: 5px;
 	cursor: pointer;
-	outline : none;
+	outline: none;
 
-  background: none;
-  border: 1px solid $secondary-color;
+	background: none;
+	border: 1px solid $secondary-color;
 	color: $light-secondary-color;
 
 	&:hover {
@@ -93,7 +93,7 @@ button {
 }
 
 img {
-	outline : none;
+	outline: none;
 }
 
 ::-webkit-scrollbar {
@@ -101,13 +101,13 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: $dark-color;
+	background: $dark-color;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $light-color;
+	background: $light-color;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $light-secondary-color;
+	background: $light-secondary-color;
 }

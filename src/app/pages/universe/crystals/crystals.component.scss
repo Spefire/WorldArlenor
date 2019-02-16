@@ -18,7 +18,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			opacity: 1.0;
+			opacity: 1;
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -27,7 +27,14 @@
 
 			background-position: center;
 			background-size: cover;
-			background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8), rgba($dark-primary-color, 0.8), rgba($dark-primary-color, 1.0)), url("/assets/images/home_01.png");
+			background-image: linear-gradient(
+					0deg,
+					rgba($dark-color, 0.8),
+					rgba($dark-color, 0.8),
+					rgba($dark-primary-color, 0.8),
+					rgba($dark-primary-color, 1)
+				),
+				url("/assets/images/home_01.png");
 		}
 
 		.crystal-imgs {
@@ -57,17 +64,20 @@
 
 			.crystal-data01 {
 				opacity: 0;
-				animation: 3s infinite alternate animMain, 6s infinite alternate animData;
+				animation: 3s infinite alternate animMain,
+					6s infinite alternate animData;
 			}
 
 			.crystal-data02 {
 				opacity: 0;
-				animation: 3s infinite alternate animMain, 4s 2s infinite alternate animData;
+				animation: 3s infinite alternate animMain,
+					4s 2s infinite alternate animData;
 			}
 
 			.crystal-data03 {
 				opacity: 0;
-				animation: 3s infinite alternate animMain, 6s 4s infinite alternate animData;
+				animation: 3s infinite alternate animMain,
+					6s 4s infinite alternate animData;
 			}
 
 			@keyframes animMain {
@@ -80,12 +90,24 @@
 			}
 
 			@keyframes animData {
-				0% { opacity: 0; }
-				20% {	opacity: 0;	}
-				40% {	opacity: 0;	}
-				60% {	opacity: 1;	}
-				80% {	opacity: 1;	}
-				100% { opacity: 1; }
+				0% {
+					opacity: 0;
+				}
+				20% {
+					opacity: 0;
+				}
+				40% {
+					opacity: 0;
+				}
+				60% {
+					opacity: 1;
+				}
+				80% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 1;
+				}
 			}
 		}
 
