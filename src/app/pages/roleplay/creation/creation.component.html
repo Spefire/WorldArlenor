@@ -62,10 +62,8 @@
 	</div>
 	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE6.TEXT01' | translate }}"></p>
 	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE6.TEXT02' | translate }}"></p>
-	<span>Avantages :</span><br />
-	<span innerHtml="{{ avantages }}"></span><br />
-	<span>Inconvénients :</span><br />
-	<span innerHtml="{{ inconvenients }}"></span>
+	<p innerHtml="Avantages : <br/>{{ avantages }}"></p>
+	<p innerHtml="Inconvénients :<br/>{{ inconvenients }}"></p>
 	<h2>II - Caractéristiques</h2>
 	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
 	<p>Points restants : {{ leftPointsCaracteristics }}</p>
@@ -115,11 +113,9 @@
 		(onValueChange)="changeCaracteristics($event)"
 	></creation-slider>
 	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
-	<span>Initiative : {{ initiative }}</span
-	><br />
-	<span>Points de Vie : {{ pv }}</span
-	><br />
-	<span>Points d'Energie Vitale : {{ pe }}</span>
+	<p innerHtml="Initiative : {{ initiative }}"></p>
+	<p innerHtml="Points de Vie : {{ pv }}"></p>
+	<p innerHtml="Points d'Energie Vitale : {{ pe }}"></p>
 	<h2>III - Compétences</h2>
 	<p>Points restants : {{ leftPointsSkills }}</p>
 	<creation-slider
