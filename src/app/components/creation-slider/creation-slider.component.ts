@@ -30,7 +30,7 @@ export class CreationSliderComponent implements OnInit {
 	@Input()
 	set specialistics(list: string) {
 		list = list.replace(', ', ',');
-		this.listSpecialistics = [''].concat(list.split(','));
+		this.listSpecialistics = list.split(',');
 	}
 
 	public valueMin: number;
