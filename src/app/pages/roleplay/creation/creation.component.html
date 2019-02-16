@@ -1,7 +1,7 @@
 <div class="creation-container">
 	<h1>Fiche de personnage</h1>
 	<p innerHtml="{{ 'CREATION.HEROS' | translate }}"></p>
-	<h2>Peuple / Race</h2>
+	<h2>I - Peuple / Race</h2>
 	<div class="creation-sections">
 		<div class="creation-section-left">
 			<img
@@ -43,7 +43,6 @@
 		</div>
 		<div class="creation-section-right">
 			<div class="creation-race-list">
-				<span>Race :</span>
 				<select (change)="changeRace($event.target)">
 					<option value="1">{{
 						"UNIVERSE.POPULATION.PEOPLE1.NAME" | translate
@@ -64,12 +63,6 @@
 						"UNIVERSE.POPULATION.PEOPLE6.NAME" | translate
 					}}</option>
 				</select>
-				<a
-					class="creation-race-seemore"
-					href="./universe/population"
-					target="_blank"
-					>En savoir plus</a
-				>
 			</div>
 			<span class="creation-race-list">Avantages :</span><br />
 			<span innerHtml="{{ avantages }}"></span><br />
@@ -77,7 +70,7 @@
 			<span innerHtml="{{ inconvenients }}"></span>
 		</div>
 	</div>
-	<h2>Caractéristiques</h2>
+	<h2>II - Caractéristiques</h2>
 	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
 	<p>Points restants : {{ leftPointsCaracteristics }}</p>
 	<div class="creation-sections">
@@ -130,17 +123,12 @@
 		</div>
 		<div class="creation-section-left">
 			<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
+			<span>Initiative : {{ initiative }}</span><br>
+			<span>Points de Vie : {{ pv }}</span><br>
+			<span>Points d'Energie Vitale : {{ pe }}</span>
 		</div>
 	</div>
-	<h2>Valeurs en découlant</h2>
-	<div class="creation-sections">
-		<span>Initiative :</span
-		><span class="creation-value">{{ initiative }}</span>
-		<span>Points de Vie :</span><span class="creation-value">{{ pv }}</span>
-		<span>Points d'Energie Vitale :</span
-		><span class="creation-value">{{ pe }}</span>
-	</div>
-	<h2>Compétences</h2>
+	<h2>III - Compétences</h2>
 	<p>Points restants : {{ leftPointsSkills }}</p>
 	<div class="creation-sections">
 		<div class="creation-section-left">

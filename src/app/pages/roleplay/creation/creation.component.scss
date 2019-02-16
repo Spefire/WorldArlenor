@@ -22,41 +22,21 @@
 		.creation-section-left {
 			width: 25%;
 		}
-	
+
 		.creation-section-right {
 			width: 25%;
 		}
 	}
 
-	///////////////////////////////////////////////////////////
-
 	.creation-race-img {
 		height: 200px;
 		width: 200px;
 		margin: 0 10px;
+		border-radius: 50%;
 		border: 2px solid $light-secondary-color;
 	}
 
 	.creation-race-list {
 		margin-top: 10px;
-	}
-
-	.creation-race-seemore {
-		color: $light-secondary-color;
-		text-decoration: underline;
-		cursor: pointer;
-	}
-
-	///////////////////////////////////////////////////////////
-
-	.creation-value {
-		display: inline-block;
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
-		margin: 0 10px;
-		text-align: center;
-		border-radius: 50%;
-		border: 2px solid #EEEEEE;
 	}
 }
