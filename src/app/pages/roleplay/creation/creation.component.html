@@ -89,7 +89,7 @@
 				help="{{ 'CREATION.VIGUEUR.HELP' | translate }}"
 				type="vigueur"
 				value="{{ caracteristics.vigueur }}"
-				(pointsValueChange)="changeCaracteristics($event)"
+				(onValueChange)="changeCaracteristics($event)"
 			></creation-slider>
 			<creation-slider
 				min="1"
@@ -98,7 +98,7 @@
 				help="{{ 'CREATION.HABILETE.HELP' | translate }}"
 				type="habilete"
 				value="{{ caracteristics.habilete }}"
-				(pointsValueChange)="changeCaracteristics($event)"
+				(onValueChange)="changeCaracteristics($event)"
 			></creation-slider>
 			<creation-slider
 				min="1"
@@ -107,7 +107,7 @@
 				help="{{ 'CREATION.INTELLECT.HELP' | translate }}"
 				type="intellect"
 				value="{{ caracteristics.intellect }}"
-				(pointsValueChange)="changeCaracteristics($event)"
+				(onValueChange)="changeCaracteristics($event)"
 			></creation-slider>
 			<creation-slider
 				min="1"
@@ -116,7 +116,7 @@
 				help="{{ 'CREATION.PRESENCE.HELP' | translate }}"
 				type="presence"
 				value="{{ caracteristics.presence }}"
-				(pointsValueChange)="changeCaracteristics($event)"
+				(onValueChange)="changeCaracteristics($event)"
 			></creation-slider>
 			<creation-slider
 				min="1"
@@ -125,7 +125,7 @@
 				help="{{ 'CREATION.POUVOIR.HELP' | translate }}"
 				type="pouvoir"
 				value="{{ caracteristics.pouvoir }}"
-				(pointsValueChange)="changeCaracteristics($event)"
+				(onValueChange)="changeCaracteristics($event)"
 			></creation-slider>
 		</div>
 		<div class="creation-section-left">
@@ -145,204 +145,228 @@
 	<div class="creation-sections">
 		<div class="creation-section-left">
 			<creation-slider
+				hasSpecialistic="true"
+				specialistics="{{ 'CREATION.ANIMAUX.SPECIALISTICS' | translate }}"
 				min="{{ race === 3 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.ANIMAUX.NAME' | translate }}"
 				help="{{ 'CREATION.ANIMAUX.HELP' | translate }}"
 				type="animaux"
-				value="{{ mainSkills.animaux }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.animaux.value }}"
+				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ART.NAME' | translate }}"
 				help="{{ 'CREATION.ART.HELP' | translate }}"
 				type="art"
-				value="{{ mainSkills.art }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.art.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ARTISANAT.NAME' | translate }}"
 				help="{{ 'CREATION.ARTISANAT.HELP' | translate }}"
 				type="artisanat"
-				value="{{ mainSkills.artisanat }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.artisanat.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 1 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.ATHLETISME.NAME' | translate }}"
 				help="{{ 'CREATION.ATHLETISME.HELP' | translate }}"
 				type="athletisme"
-				value="{{ mainSkills.athletisme }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.athletisme.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 3 || race === 6 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.COMBAT.NAME' | translate }}"
 				help="{{ 'CREATION.COMBAT.HELP' | translate }}"
 				type="combat"
-				value="{{ mainSkills.combat }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.combat.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ETIQUETTE.NAME' | translate }}"
 				help="{{ 'CREATION.ETIQUETTE.HELP' | translate }}"
 				type="etiquette"
-				value="{{ mainSkills.etiquette }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.etiquette.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 4 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.FURTIVITE.NAME' | translate }}"
 				help="{{ 'CREATION.FURTIVITE.HELP' | translate }}"
 				type="furtivite"
-				value="{{ mainSkills.furtivite }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.furtivite.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.INFORMATION.NAME' | translate }}"
 				help="{{ 'CREATION.INFORMATION.HELP' | translate }}"
 				type="information"
-				value="{{ mainSkills.information }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.information.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 5 || race === 6 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.INTUITION.NAME' | translate }}"
 				help="{{ 'CREATION.INTUITION.HELP' | translate }}"
 				type="intuition"
-				value="{{ mainSkills.intuition }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.intuition.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.INVESTIGATION.NAME' | translate }}"
 				help="{{ 'CREATION.INVESTIGATION.HELP' | translate }}"
 				type="investigation"
-				value="{{ mainSkills.investigation }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.investigation.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.LARCIN.NAME' | translate }}"
 				help="{{ 'CREATION.LARCIN.HELP' | translate }}"
 				type="larcin"
-				value="{{ mainSkills.larcin }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.larcin.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 		</div>
 		<div class="creation-section-right">
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 4 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.MANIPULATION.NAME' | translate }}"
 				help="{{ 'CREATION.MANIPULATION.HELP' | translate }}"
 				type="manipulation"
-				value="{{ mainSkills.manipulation }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.manipulation.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 5 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.MEDECINE.NAME' | translate }}"
 				help="{{ 'CREATION.MEDECINE.HELP' | translate }}"
 				type="medecine"
-				value="{{ mainSkills.medecine }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.medecine.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.PERSUASION.NAME' | translate }}"
 				help="{{ 'CREATION.PERSUASION.HELP' | translate }}"
 				type="persuasion"
-				value="{{ mainSkills.persuasion }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.persuasion.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.PILOTAGE.NAME' | translate }}"
 				help="{{ 'CREATION.PILOTAGE.HELP' | translate }}"
 				type="pilotage"
-				value="{{ mainSkills.pilotage }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.pilotage.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.SAVOIR.NAME' | translate }}"
 				help="{{ 'CREATION.SAVOIR.HELP' | translate }}"
 				type="savoir"
-				value="{{ mainSkills.savoir }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.savoir.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasSpecialistic="true"
 				min="{{ race === 6 ? 1 : 0 }}"
 				max="10"
 				name="{{ 'CREATION.SURVIE.NAME' | translate }}"
 				help="{{ 'CREATION.SURVIE.HELP' | translate }}"
 				type="survie"
-				value="{{ mainSkills.survie }}"
-				(pointsValueChange)="changeMainSkills($event)"
+				value="{{ mainSkills.survie.value }}"
+				(onValueChange)="changeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasCristalSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.ELEMENTAIRES.NAME' | translate }}"
 				help="{{ 'CREATION.ELEMENTAIRES.HELP' | translate }}"
 				type="elementaires"
-				value="{{ crystalSkills.elementaires }}"
-				(pointsValueChange)="changeCrystalSkills($event)"
+				value="{{ crystalSkills.elementaires.value }}"
+				(onValueChange)="changeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasCristalSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.INVOCATIONS.NAME' | translate }}"
 				help="{{ 'CREATION.INVOCATIONS.HELP' | translate }}"
 				type="invocations"
-				value="{{ crystalSkills.invocations }}"
-				(pointsValueChange)="changeCrystalSkills($event)"
+				value="{{ crystalSkills.invocations.value }}"
+				(onValueChange)="changeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasCristalSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.MENTAUX.NAME' | translate }}"
 				help="{{ 'CREATION.MENTAUX.HELP' | translate }}"
 				type="mentaux"
-				value="{{ crystalSkills.mentaux }}"
-				(pointsValueChange)="changeCrystalSkills($event)"
+				value="{{ crystalSkills.mentaux.value }}"
+				(onValueChange)="changeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasCristalSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.SPATIAUXTEMPORELS.NAME' | translate }}"
 				help="{{ 'CREATION.SPATIAUXTEMPORELS.HELP' | translate }}"
 				type="spatiauxtemporels"
-				value="{{ crystalSkills.spatiauxtemporels }}"
-				(pointsValueChange)="changeCrystalSkills($event)"
+				value="{{ crystalSkills.spatiauxtemporels.value }}"
+				(onValueChange)="changeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
+				hasCristalSpecialistic="true"
 				min="0"
 				max="10"
 				name="{{ 'CREATION.SPECIAUX.NAME' | translate }}"
 				help="{{ 'CREATION.SPECIAUX.HELP' | translate }}"
 				type="speciaux"
-				value="{{ crystalSkills.speciaux }}"
-				(pointsValueChange)="changeCrystalSkills($event)"
+				value="{{ crystalSkills.speciaux.value }}"
+				(onValueChange)="changeCrystalSkills($event)"
 			></creation-slider>
 		</div>
 	</div>

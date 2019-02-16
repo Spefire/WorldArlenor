@@ -297,13 +297,14 @@
 		},
 		"ANIMAUX": {
 			"NAME": "Animaux",
-			"HELP": "Animaux Help"
+			"HELP": "Animaux Help",
+			"SPECIALISTICS": "AnimauxSpe01, AnimauxSpe02"
 		},
 		"ART": {
 			"NAME": "Art",
-			"HELP": "Art Help" 	
+			"HELP": "Art Help"
 		},
-		"ARTISANAT": { 		
+		"ARTISANAT": {
 			"NAME": "Artisanat",
 			"HELP": "Artisanat Help"
 		},

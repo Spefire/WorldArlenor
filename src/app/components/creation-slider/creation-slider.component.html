@@ -3,4 +3,10 @@
 <span class="cs-value">{{ value }}</span>
 <button [ngClass]="{'disabled': !canUp }" (click)="upValue()">+</button>
 <span class="cs-help" (click)="toogleHelp()" (mouseover)="displayHelpHover=true" (mouseout)="displayHelpHover=false">?</span>
+<select *ngIf="hasSpecialistic" (change)="speChange($event.target.value)">
+	<option *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">{{
+			specialistic
+	}}</option>
+</select>
+<input *ngIf="hasCristalSpecialistic" type="text"/>
 <span *ngIf="displayHelpClick || displayHelpHover" class="cs-popup" innerHtml="{{ help }}"></span>
