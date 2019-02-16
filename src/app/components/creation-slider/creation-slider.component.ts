@@ -1,34 +1,43 @@
-import { Component, Input, Output, EventEmitter, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
 
 @Component({
-	selector: 'creation-slider',
-	templateUrl: './creation-slider.component.html',
-	styleUrls: ['./creation-slider.component.scss']
+	selector: "creation-slider",
+	templateUrl: "./creation-slider.component.html",
+	styleUrls: ["./creation-slider.component.scss"]
 })
-export class CreationSliderComponent implements AfterViewInit {
-
+export class CreationSliderComponent implements OnInit {
 	@Input() public name: string;
 	@Input() public help: string;
 	@Input() public type: string;
 	@Input() public value: number;
-	@Input() public min: number;
-	@Input() public max: number;
 	@Output() pointsValueChange = new EventEmitter();
 
+	@Input()
+	set min(minValue: number) {
+		this.valueMin = minValue;
+		this.checkButtons();
+	}
+
+	@Input()
+	set max(maxValue: number) {
+		this.valueMax = maxValue;
+		this.checkButtons();
+	}
+
+	public valueMin: number;
+	public valueMax: number;
 	public canUp: boolean;
 	public canDown: boolean;
 	public displayHelpClick: boolean;
 	public displayHelpHover: boolean;
-	public rangeSlider: any;
 
-	constructor(private elementRef: ElementRef) {
-		this.canUp = true;
-		this.canDown = false;
+	ngOnInit() {
+		this.checkButtons();
 	}
 
-	ngAfterViewInit() {
-		this.rangeSlider = this.elementRef.nativeElement.querySelector("#cs-range-line");
-		this.rangeSlider.addEventListener("input", this.valueChange.bind(this));
+	checkButtons() {
+		this.canDown = this.value > this.valueMin;
+		this.canUp = this.value < this.valueMax;
 	}
 
 	toogleHelp() {
@@ -38,8 +47,7 @@ export class CreationSliderComponent implements AfterViewInit {
 	downValue() {
 		if (this.canDown) {
 			this.value--;
-			this.canUp = true;
-			if (this.value <= this.min) this.canDown = false;
+			this.checkButtons();
 			this.valueChange();
 		}
 	}
@@ -47,8 +55,7 @@ export class CreationSliderComponent implements AfterViewInit {
 	upValue() {
 		if (this.canUp) {
 			this.value++;
-			this.canDown = true;
-			if (this.value >= this.max) this.canUp = false;
+			this.checkButtons();
 			this.valueChange();
 		}
 	}

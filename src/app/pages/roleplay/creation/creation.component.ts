@@ -26,6 +26,8 @@ export class CreationComponent {
 	public pv:number;
 	public pe:number;
 
+	public nbPointsCaracteristics:number;
+	public nbPointsSkills:number;
 	public leftPointsCaracteristics:number;
 	public leftPointsSkills:number;
 
@@ -71,10 +73,11 @@ export class CreationComponent {
 			spatiauxtemporels : 0,
 			speciaux : 0
 		};
+		this.nbPointsCaracteristics = 13;
 		this.changeRace({value : 1});
 		this.refreshPoints();
 	}
-	
+
 	changeRace(event) {
 		this.race = parseInt(event.value);
 		this.translate.get('UNIVERSE.POPULATION.PEOPLE'+this.race+'.AVANTAGES').subscribe((res: string) => {
@@ -87,28 +90,33 @@ export class CreationComponent {
 			case 1:
 			this.pe = 6;
 			this.mainSkills.athletisme = 1;
+			this.nbPointsSkills = 51;
 				break;
-		
+
 			case 2:
 			this.pe = 8;
+			this.nbPointsSkills = 50;
 				break;
 
 			case 3:
 			this.pe = 8;
 			this.mainSkills.animaux = 1;
 			this.mainSkills.combat = 1;
+			this.nbPointsSkills = 52;
 				break;
 
 			case 4:
 			this.pe = 8;
 			this.mainSkills.furtivite = 1;
 			this.mainSkills.manipulation = 1;
+			this.nbPointsSkills = 52;
 				break;
 
 			case 5:
 			this.pe = 12;
 			this.mainSkills.intuition = 1;
 			this.mainSkills.medecine = 1;
+			this.nbPointsSkills = 52;
 				break;
 
 			case 6:
@@ -116,11 +124,13 @@ export class CreationComponent {
 			this.mainSkills.combat = 1;
 			this.mainSkills.intuition = 1;
 			this.mainSkills.survie = 1;
+			this.nbPointsSkills = 53;
 				break;
 
 			default:
 				break;
 		}
+		this.refreshPoints();
 	}
 
 	changeCaracteristics(event) {
@@ -143,7 +153,7 @@ export class CreationComponent {
 		for (var key in this.caracteristics) {
 			totalCaracteristics += this.caracteristics[key];
 		}
-		this.leftPointsCaracteristics = 13 - totalCaracteristics;
+		this.leftPointsCaracteristics = this.nbPointsCaracteristics - totalCaracteristics;
 
 		var totalSkills = 0;
 		for (var key in this.mainSkills) {
@@ -152,7 +162,7 @@ export class CreationComponent {
 		for (var key in this.crystalSkills) {
 			totalSkills += this.crystalSkills[key];
 		}
-		this.leftPointsSkills = 50 - totalSkills;
+		this.leftPointsSkills = this.nbPointsSkills - totalSkills;
 
 		this.initiative = this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
