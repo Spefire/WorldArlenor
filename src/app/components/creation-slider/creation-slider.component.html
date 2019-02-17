@@ -1,15 +1,23 @@
-<span class="cs-name">{{ name }}</span>
-<button class="cs-button" [ngClass]="{'disabled': !canDown }" (click)="downValue()">&#8249;</button>
-<span class="cs-value">{{ value }}</span>
-<button class="cs-button" [ngClass]="{'disabled': !canUp }" (click)="upValue()">&#8250;</button>
-<div *ngIf="hasSpecialistic" class="dropdown cs-spe">
-	<select class="dropdown-select" (change)="speChange($event.target.value)">
-		<option value=""></option>
-		<option *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">{{
-				specialistic
-		}}</option>
-	</select>
-</div>
-<input class="cs-spe" *ngIf="hasCristalSpecialistic" type="text" (change)="speChange($event.target.value)"/>
-<span class="help" (click)="toogleHelp()" (mouseover)="displayHelpHover=true" (mouseout)="displayHelpHover=false">?</span>
-<span *ngIf="displayHelpClick || displayHelpHover" class="popup" innerHtml="{{ help }}"></span>
+<tr>
+	<td class="cs-name">{{ name }}</td>
+	<td>
+		<button class="cs-button" [ngClass]="{'disabled': !canDown }" (click)="downValue()">&#8249;</button>
+		<span class="cs-value">{{ value }}</span>
+		<button class="cs-button" [ngClass]="{'disabled': !canUp }" (click)="upValue()">&#8250;</button>
+	</td>
+	<td *ngIf="hasSpecialistic || hasCristalSpecialistic" class="cs-spe">
+		<div *ngIf="hasSpecialistic" class="dropdown">
+			<select class="dropdown-select" (change)="speChange($event.target.value)">
+				<option value=""></option>
+				<option *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">{{
+						specialistic
+				}}</option>
+			</select>
+		</div>
+		<input *ngIf="hasCristalSpecialistic" type="text" (change)="speChange($event.target.value)"/>
+	</td>
+	<td>
+		<span class="help" (click)="toogleHelp()" (mouseover)="displayHelpHover=true" (mouseout)="displayHelpHover=false">?</span>
+		<span *ngIf="displayHelpClick || displayHelpHover" class="popup" innerHtml="{{ help }}"></span>
+	</td>
+</tr>

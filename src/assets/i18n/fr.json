@@ -283,6 +283,8 @@
 		},
 		"INDICS": {
 			"LEFTPOINTS": "Points restants",
+			"AVANTAGES": "Avantages",
+			"INCONVENIENTS": "Inconvénients",
 			"INITIATIVE": "Initiative",
 			"PV": "Points de Vie",
 			"PE": "Points d'Energie Vitale",
@@ -429,8 +431,19 @@
 			"NAME": "Cristaux de type Spéciaux",
 			"HELP": "<b>Spéciaux</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « spéciaux », des cristaux qui n'entrent pas dans les autres catégories, et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Entraver une personne (Pou. + Spéciaux, Diff. 9).<br>- Voler de la vie (Pou. + Spéciaux, Diff. 17).<br>- Transférer les blessures et la douleur (Pou. + Spéciaux, Diff. 22)."
 		},
+		"CRYSTALS": {
+			"TEXT": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne. En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. Faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible : pour activer le pouvoir d’une cristal, le personnage doit puiser dans son énergie vitale, et essayer de contrôler ce pouvoir pour obtenir l'effet voulu.<br>Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.",
+			"INDICS": {
+				"RANK": "Rang",
+				"RARITY": "Rareté",
+				"POWER": "Puissance",
+				"EV": "Coût en EV",
+				"PV": "Retrait de PV (pour les arléniens)",
+				"DEMIEV": "Coût en EV (pour les arléniens)"
+			}
+		},
 		"EQUIPEMENT": {
-			"TEXT": "Equipement physique :<br />Les cristaux coûtent en Energie Vitale : pour certains personnages il est alors vital d'avoir un équipement adéquat en cas de panne d'énergie.<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement.",
+			"TEXT": "Pour certains personnages il est vital d'avoir un équipement adéquat en cas de panne d'Energie Vitale. L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement.",
 			"HELP": "<b>Indicateurs</b><br><br><i>Attaque :</i><br>Bonus accordé au test de Combat pour l'utilisateur de l'arme.<br><br><i>Défense :</i><br>Bonus accordé à la Défense pour l'utilisateur de l'arme.<br><br><i>Catégories :</i><br>Les armes légères demandent un test d’Habileté + Combat pour être employées, les armes moyennes et lourdes un test de Vigueur + Combat. Les armes lourdes demandent les deux mains pour être utilisées.<br><br><i>Chargeur :</i><br>La quantité d’attaques pouvant être réalisées avec l’arme sans avoir besoin de la recharger.<br><br><i>Rechargement :</i><br>Le temps de rechargement nécessaire.<br>Rapide : l’arme se recharge sans perdre de temps.<br>Action : Recharger l’arme prend l’action du tour du personnage, ne lui laissant que la possibilité de se déplacer et d’effectuer des actions rapides lorsqu’il recharge.<br><br><i>Portée efficace :</i><br>Chaque fois que cette portée est dépassée, le personnage subit un malus cumulatif de -2 à son test de Combat. Ainsi, un archer tirant sur une cible à 100m tire à 4 fois sa portée efficace, subissant un malus de -8 à son test."
 		}
 	},

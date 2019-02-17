@@ -112,13 +112,36 @@ img {
 	background: $light-secondary-color;
 }
 
+table {
+	&.full-table {
+		border: 1px solid;
+		border-radius: 5px;
+		background: $dark-color;
+		border-color: $secondary-color;
+
+		thead > tr > th {
+			border-bottom: 1px solid $secondary-color;
+		}
+	}
+
+	tr {
+		vertical-align: middle;
+	}
+
+	th,
+	td {
+		padding: 5px;
+	}
+}
+
 input[type="text"] {
-	position: relative;
 	overflow: hidden;
 	height: 30px;
+	padding: 0 10px;
 	border: 1px solid;
 	border-radius: 5px;
 
+	color: $light-color;
 	background: $dark-color;
 	border-color: $secondary-color;
 }
@@ -154,7 +177,7 @@ input[type="text"] {
 }
 
 .dropdown:after {
-	content: '';
+	content: "";
 	position: absolute;
 	z-index: 2;
 	top: 10px;

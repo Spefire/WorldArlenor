@@ -30,6 +30,8 @@ export class CreationComponent {
 	public leftPointsCaracteristics: number;
 	public leftPointsSkills: number;
 
+	public listCrystals: Array<any>;
+
 	public armor: any;
 	public weapon01: any;
 	public weapon02: any;
@@ -91,6 +93,13 @@ export class CreationComponent {
 		this.nbPointsCaracteristics = 13;
 		this.changeRace({ value: 1 });
 		this.refreshPoints();
+		this.listCrystals = [
+			{ id: 1, rank: 'S', rarity: "Unique", power: 'Extrême', EV: 5, PV: 10, demiEV: 3 },
+			{ id: 2, rank: 'A', rarity: "Rare", power: 'Forte', EV: 3, PV: 5, demiEV: 2 },
+			{ id: 3, rank: 'B', rarity: "Peu rare", power: 'Moyenne', EV: 2, PV: 3, demiEV: 1 },
+			{ id: 4, rank: 'C', rarity: "Commune", power: 'Faible', EV: 1, PV: 1, demiEV: 0 },
+			{ id: 5, rank: 'D', rarity: "Très commune", power: 'Nulle', EV: 0, PV: 0, demiEV: 0 }
+		];
 		this.listArmors = [
 			{ id: 1, name: 'Vêtements renforcés', defenceBonus: 2, mobility: 'Normale', actionsMalus: 0 },
 			{ id: 2, name: 'Armure lègère (cuir, cottes de mailles)', defenceBonus: 4, mobility: 'Normale', actionsMalus: -2 },

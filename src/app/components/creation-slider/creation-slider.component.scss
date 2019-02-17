@@ -15,6 +15,7 @@
 		line-height: 20px;
 		border-radius: 50%;
 		padding: 0;
+		margin: 0 10px;
 		border: 1px solid $light-secondary-color;
 		background: $dark-color;
 
@@ -27,21 +28,22 @@
 	}
 
 	.cs-name {
-		margin-right: 20px;
-		text-align: right;
+		width: 150px;
+		text-align: center;
+		font-weight: bold;
 	}
 
 	.cs-value {
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
-		margin: 0 5px;
 		text-align: center;
 		font-weight: bold;
+		margin: 0 10px;
 	}
 
 	.cs-spe {
-		margin-left: 20px;
+		width: 200px;
+		text-align: center;
 	}
-
 }
