@@ -61,6 +61,9 @@ export class CreationComponent {
 			.subscribe((res: string) => {
 				this.inconvenients = res;
 			});
+		this.name = "";
+		this.description = "";
+		this.avatar = "";
 		this.caracteristics = {
 			vigueur: 1,
 			habilete: 1,
@@ -396,29 +399,53 @@ export class CreationComponent {
 		if (!isOk) return;
 
 		var doc = new jsPDF('p', 'px', 'a4');
-		//doc.setFontSize(30);
-		//doc.text(35, 25, "Fiche de personnage");
-
 		var width = doc.internal.pageSize.getWidth();
 		var height = doc.internal.pageSize.getHeight();
 
-		this.toDataURL("./assets/images/creation/emptyFile.jpg", function(dataUrl) {
-			doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
+		function toDataURL(url, callback) {
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function() {
+				var reader = new FileReader();
+				reader.onloadend = function() {
+					callback(reader.result);
+				};
+				reader.readAsDataURL(xhr.response);
+			};
+			xhr.open("GET", url);
+			xhr.responseType = "blob";
+			xhr.send();
+		}
+
+		const promise = new Promise(function(resolve, reject){
+			toDataURL("./assets/images/creation/emptyFile.jpg", function(dataUrl) {
+				doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
+				doc.setFontSize(10);
+				return resolve(true);
+			});
+		});
+
+		Promise.all([promise]).then(() => {
+			doc.text(125, 90.5, ""+this.name);
+
+			var i = 217.2;
+			for (var key in this.caracteristics) {
+				doc.text(131, i, ""+ this.caracteristics[key]);
+				i += 21.2;
+			}
+
+			i = 90.4;
+			for (var key in this.mainSkills) {
+				doc.text(325, i, ""+ this.mainSkills[key].value);
+				i += 21.2;
+			}
+
+			i = 470.6;
+			for (var key in this.crystalSkills) {
+				doc.text(325, i, ""+ this.crystalSkills[key].value);
+				i += 21.2;
+			}
+
 			doc.save("a4.pdf");
 		});
-	}
-
-	toDataURL(url, callback) {
-		var xhr = new XMLHttpRequest();
-		xhr.onload = function() {
-			var reader = new FileReader();
-			reader.onloadend = function() {
-				callback(reader.result);
-			};
-			reader.readAsDataURL(xhr.response);
-		};
-		xhr.open("GET", url);
-		xhr.responseType = "blob";
-		xhr.send();
 	}
 }
