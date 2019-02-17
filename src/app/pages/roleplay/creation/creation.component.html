@@ -366,4 +366,97 @@
 		value="{{ crystalSkills.speciaux.value }}"
 		(onValueChange)="changeCrystalSkills($event)"
 	></creation-slider>
+	<h2>V - Equipement</h2>
+	<p>
+		Equipement physique :<br />Les cristaux coûtent en Energie Vitale : pour
+		certains personnages il est alors vital d'avoir un équipement adéquat en cas
+		de panne d'énergie.<br />L'équipement est limité à trois slots pour ce qui
+		est armes et armures : cela correspond aussi bien à la capacité physique
+		d'une personne à transporter des choses sur elle, quotidiennement.
+	</p>
+	<p>
+		Attaque :<br />
+		Bonus accordé au test de Combat pour l'utilisateur de l'arme.
+		<br />
+		Défense :<br />
+		Bonus accordé à la Défense pour l'utilisateur de l'arme.
+		<br />
+		Catégories :<br />
+		Les armes légères demandent un test d’Habileté + Combat pour être employées,
+		les armes moyennes et lourdes un test de Vigueur + Combat. Les armes lourdes
+		demandent les deux mains pour être utilisées.
+		<br />
+		Chargeur :<br />
+		La quantité d’attaques pouvant être réalisées avec l’arme sans avoir besoin
+		de la recharger.
+		<br />
+		Rechargement :<br />
+		Le temps de rechargement nécessaire. Rapide : l’arme se recharge sans perdre
+		de temps. Action : Recharger l’arme prend l’action du tour du personnage, ne
+		lui laissant que la possibilité de se déplacer et d’effectuer des actions
+		rapides lorsqu’il recharge.
+		<br />
+		Portée efficace :<br />
+		Chaque fois que cette portée est dépassée, le personnage subit un malus
+		cumulatif de -2 à son test de Combat. Ainsi, un archer tirant sur une cible
+		à 100m tire à 4 fois sa portée efficace, subissant un malus de -8 à son
+		test.
+	</p>
+	<div>
+		<span>Armure : </span>
+		<div class="dropdown">
+			<select class="dropdown-select" (change)="changeArmor($event.target)">
+				<option *ngFor="let a of listArmors" value="{{ a.id }}">{{
+					a.name
+				}}</option>
+			</select>
+		</div>
+		<p>
+			Défense : {{ armor.defenceBonus }}<br />
+			Mobilité : {{ armor.mobility }}<br />
+			Malus aux actions (hors Défense) : {{ armor.actionsMalus }}
+		</p>
+	</div>
+	<div>
+		<span>Arme (optionnel) : </span>
+		<div class="dropdown">
+			<select class="dropdown-select" (change)="changeWeapon01($event.target)">
+				<option value="0"></option>
+				<option *ngFor="let w of listWeapons" value="{{ w.id }}">{{
+					w.name
+				}}</option>
+			</select>
+		</div>
+		<p>
+			Attaque : {{ weapon01.attackBonus || '-' }}<br />
+			Défense : {{ weapon01.attackBonus || '-' }}<br />
+			Mobilité : {{ weapon01.mobility || '-' }}<br />
+			Malus aux actions (hors Défense) : {{ weapon01.actionsMalus || '-' }}<br />
+			Catégorie : {{ weapon01.category || '-' }}<br />
+			Chargeur : {{ weapon01.count || '-' }}<br />
+			Rechargement : {{ weapon01.cooldown || '-' }}<br />
+			Portée efficace : {{ weapon01.zone || '-' }}
+		</p>
+	</div>
+	<div>
+		<span>Arme (optionnel) : </span>
+		<div class="dropdown">
+			<select class="dropdown-select" (change)="changeWeapon02($event.target)">
+				<option value="0"></option>
+				<option *ngFor="let weapon of listWeapons" value="{{ weapon.id }}">{{
+					weapon.name
+				}}</option>
+			</select>
+		</div>
+		<p>
+				Attaque : {{ weapon02.attackBonus || '-' }}<br />
+				Défense : {{ weapon02.attackBonus || '-' }}<br />
+				Mobilité : {{ weapon02.mobility || '-' }}<br />
+				Malus aux actions (hors Défense) : {{ weapon02.actionsMalus || '-' }}<br />
+				Catégorie : {{ weapon02.category || '-' }}<br />
+				Chargeur : {{ weapon02.count || '-' }}<br />
+				Rechargement : {{ weapon02.cooldown || '-' }}<br />
+				Portée efficace : {{ weapon02.zone || '-' }}
+			</p>
+	</div>
 </div>

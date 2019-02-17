@@ -30,6 +30,12 @@ export class CreationComponent {
 	public leftPointsCaracteristics: number;
 	public leftPointsSkills: number;
 
+	public armor: any;
+	public weapon01: any;
+	public weapon02: any;
+	public listArmors: Array<any>;
+	public listWeapons: Array<any>;
+
 	constructor(
 		private routesService: RoutesService,
 		private route: ActivatedRoute,
@@ -83,6 +89,28 @@ export class CreationComponent {
 		this.nbPointsCaracteristics = 13;
 		this.changeRace({ value: 1 });
 		this.refreshPoints();
+		this.listArmors = [
+			{ id: 1, name: 'Vêtements renforcés', defenceBonus: 2, mobility: 'Normale', actionsMalus: 0 },
+			{ id: 2, name: 'Armure lègère (cuir, cottes de mailles)', defenceBonus: 4, mobility: 'Normale', actionsMalus: -2 },
+			{ id: 3, name: 'Armure lourde (cuirasse, armure complète)', defenceBonus: 6, mobility: 'Réduite', actionsMalus: -4 }
+		];
+		this.listWeapons = [
+			{ id: 1, name: 'Lame courte (dague)', attackBonus: 2, defenceBonus: 2, category: 'Légère' },
+			{ id: 2, name: 'Arme à une main (épée longue, hache)', attackBonus: 4, defenceBonus: 0, category: 'Moyenne' },
+			{ id: 3, name: 'Arme à deux mains (espadon, grande hache)', attackBonus: 6, defenceBonus: -2, category: 'Lourde' },
+			{ id: 4, name: 'Arme d\'hast (lance, hallebarde)', attackBonus: 3, defenceBonus: 1, category: 'Lourde' },
+			{ id: 5, name: 'Arme contondante (matraque, bâton)', attackBonus: 1, defenceBonus: 2, category: 'Légère ou Moyenne' },
+			{ id: 6, name: 'Arc', attackBonus: 2, count: 1, cooldown: 'Rapide', zone: 25 },
+			{ id: 7, name: 'Arbalète', attackBonus: 4, count: 1, cooldown: 'Action', zone: 35 },
+			{ id: 8, name: 'Fronde', attackBonus: 0, count: 1, cooldown: 'Rapide', zone: 10 },
+			{ id: 9, name: 'Armes de lancer (couteaux)', attackBonus: 2, count: 1, cooldown: 'Rapide', zone: 5 },
+			{ id: 10, name: 'Armes à feu lègere (pistolet)', attackBonus: 4, count: 4, cooldown: 'Action', zone: 20 },
+			{ id: 11, name: 'Armes à feu lourde (fusil)', attackBonus: 6, count: 2, cooldown: 'Action', zone: 150 },
+			{ id: 12, name: 'Bouclier', defenceBonus: 2, mobility: 'Normale', actionsMalus: -2 }
+		];
+		this.armor = this.listArmors[0];
+		this.weapon01 = {};
+		this.weapon02 = {};
 	}
 
 	changeRace(event) {
@@ -189,6 +217,27 @@ export class CreationComponent {
 		this.initiative =
 			this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
+	}
+
+	changeArmor(event) {
+		this.armor = this.listArmors[0];
+		this.listArmors.forEach(element => {
+			if (element.id === parseInt(event.value)) this.armor = element;
+		});
+	}
+
+	changeWeapon01(event) {
+		this.weapon01 = {};
+		this.listWeapons.forEach(element => {
+			if (element.id === parseInt(event.value)) this.weapon01 = element;
+		});
+	}
+
+	changeWeapon02(event) {
+		this.weapon02 = {};
+		this.listWeapons.forEach(element => {
+			if (element.id === parseInt(event.value)) this.weapon02 = element;
+		});
 	}
 
 	downloadPDF() {
