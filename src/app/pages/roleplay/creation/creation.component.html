@@ -1,7 +1,7 @@
 <div class="creation-container">
-	<h1>Fiche de personnage</h1>
+	<h1>{{ "CREATION.MENU.TITLE" | translate }}</h1>
 	<p innerHtml="{{ 'CREATION.HEROS' | translate }}"></p>
-	<h2>I - Peuple / Race</h2>
+	<h2>{{ "CREATION.MENU.TITLE01" | translate }}</h2>
 	<img
 		*ngIf="race == 1"
 		class="creation-race-img"
@@ -64,9 +64,12 @@
 	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE6.TEXT02' | translate }}"></p>
 	<p innerHtml="Avantages : <br/>{{ avantages }}"></p>
 	<p innerHtml="Inconvénients :<br/>{{ inconvenients }}"></p>
-	<h2>II - Caractéristiques</h2>
+	<h2>{{ "CREATION.MENU.TITLE02" | translate }}</h2>
 	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
-	<p>Points restants : {{ leftPointsCaracteristics }}</p>
+	<p>
+		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
+		{{ leftPointsCaracteristics }}
+	</p>
 	<creation-slider
 		min="1"
 		max="5"
@@ -113,11 +116,15 @@
 		(onValueChange)="changeCaracteristics($event)"
 	></creation-slider>
 	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
-	<p innerHtml="Initiative : {{ initiative }}"></p>
-	<p innerHtml="Points de Vie : {{ pv }}"></p>
-	<p innerHtml="Points d'Energie Vitale : {{ pe }}"></p>
-	<h2>III - Compétences</h2>
-	<p>Points restants : {{ leftPointsSkills }}</p>
+	<p
+		innerHtml="{{ 'CREATION.INDICS.INITIATIVE' | translate }} : {{
+			initiative
+		}}"
+	></p>
+	<p innerHtml="{{ 'CREATION.INDICS.PV' | translate }} : {{ pv }}"></p>
+	<p innerHtml="{{ 'CREATION.INDICS.PE' | translate }} : {{ pe }}"></p>
+	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
+	<p>{{ "CREATION.INDICS.LEFTPOINTS" | translate }} : {{ leftPointsSkills }}</p>
 	<creation-slider
 		hasSpecialistic="true"
 		specialistics="{{ 'CREATION.ANIMAUX.SPECIALISTICS' | translate }}"
@@ -366,44 +373,12 @@
 		value="{{ crystalSkills.speciaux.value }}"
 		(onValueChange)="changeCrystalSkills($event)"
 	></creation-slider>
-	<h2>V - Equipement</h2>
-	<p>
-		Equipement physique :<br />Les cristaux coûtent en Energie Vitale : pour
-		certains personnages il est alors vital d'avoir un équipement adéquat en cas
-		de panne d'énergie.<br />L'équipement est limité à trois slots pour ce qui
-		est armes et armures : cela correspond aussi bien à la capacité physique
-		d'une personne à transporter des choses sur elle, quotidiennement.
-	</p>
-	<p>
-		Attaque :<br />
-		Bonus accordé au test de Combat pour l'utilisateur de l'arme.
-		<br />
-		Défense :<br />
-		Bonus accordé à la Défense pour l'utilisateur de l'arme.
-		<br />
-		Catégories :<br />
-		Les armes légères demandent un test d’Habileté + Combat pour être employées,
-		les armes moyennes et lourdes un test de Vigueur + Combat. Les armes lourdes
-		demandent les deux mains pour être utilisées.
-		<br />
-		Chargeur :<br />
-		La quantité d’attaques pouvant être réalisées avec l’arme sans avoir besoin
-		de la recharger.
-		<br />
-		Rechargement :<br />
-		Le temps de rechargement nécessaire. Rapide : l’arme se recharge sans perdre
-		de temps. Action : Recharger l’arme prend l’action du tour du personnage, ne
-		lui laissant que la possibilité de se déplacer et d’effectuer des actions
-		rapides lorsqu’il recharge.
-		<br />
-		Portée efficace :<br />
-		Chaque fois que cette portée est dépassée, le personnage subit un malus
-		cumulatif de -2 à son test de Combat. Ainsi, un archer tirant sur une cible
-		à 100m tire à 4 fois sa portée efficace, subissant un malus de -8 à son
-		test.
-	</p>
+	<h2>{{ "CREATION.MENU.TITLE05" | translate }}</h2>
+	<p innerHtml="{{ 'CREATION.EQUIPEMENT.TEXT' | translate }}"></p>
+	<span class="help" (click)="toogleHelpEquip()" (mouseover)="displayHelpEquipHover=true" (mouseout)="displayHelpEquipHover=false">?</span>
+	<p *ngIf="displayHelpEquipClick || displayHelpEquipHover" class="popup" innerHtml="{{ 'CREATION.EQUIPEMENT.HELP' | translate }}"></p>
 	<div>
-		<span>Armure : </span>
+		<span>{{ "CREATION.INDICS.ARMOR" | translate }} : </span>
 		<div class="dropdown">
 			<select class="dropdown-select" (change)="changeArmor($event.target)">
 				<option *ngFor="let a of listArmors" value="{{ a.id }}">{{
@@ -411,14 +386,18 @@
 				}}</option>
 			</select>
 		</div>
-		<p>
-			Défense : {{ armor.defenceBonus }}<br />
-			Mobilité : {{ armor.mobility }}<br />
-			Malus aux actions (hors Défense) : {{ armor.actionsMalus }}
-		</p>
+		<p
+			innerHtml="{{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{
+				armor.defenceBonus
+			}}<br>{{ 'CREATION.INDICS.MOBILITY' | translate }} : {{
+				armor.mobility
+			}}<br>{{ 'CREATION.INDICS.ACTIONSMALUS' | translate }} : {{
+				armor.actionsMalus
+			}}"
+		></p>
 	</div>
 	<div>
-		<span>Arme (optionnel) : </span>
+		<span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
 		<div class="dropdown">
 			<select class="dropdown-select" (change)="changeWeapon01($event.target)">
 				<option value="0"></option>
@@ -427,16 +406,25 @@
 				}}</option>
 			</select>
 		</div>
-		<p>
-			Attaque : {{ weapon01.attackBonus || '-' }}<br />
-			Défense : {{ weapon01.attackBonus || '-' }}<br />
-			Mobilité : {{ weapon01.mobility || '-' }}<br />
-			Malus aux actions (hors Défense) : {{ weapon01.actionsMalus || '-' }}<br />
-			Catégorie : {{ weapon01.category || '-' }}<br />
-			Chargeur : {{ weapon01.count || '-' }}<br />
-			Rechargement : {{ weapon01.cooldown || '-' }}<br />
-			Portée efficace : {{ weapon01.zone || '-' }}
-		</p>
+		<p
+			innerHtml="{{ 'CREATION.INDICS.ATTACKBONUS' | translate }} : {{
+				weapon01.attackBonus || '-'
+			}}<br>{{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{
+				weapon01.attackBonus || '-'
+			}}<br>{{ 'CREATION.INDICS.MOBILITY' | translate }} : {{
+				weapon01.mobility || '-'
+			}}<br>{{ 'CREATION.INDICS.ACTIONSMALUS' | translate }} : {{
+				weapon01.actionsMalus || '-'
+			}}<br>{{ 'CREATION.INDICS.CATEGORY' | translate }} : {{
+				weapon01.category || '-'
+			}}<br>{{ 'CREATION.INDICS.COUNT' | translate }} : {{
+				weapon01.count || '-'
+			}}<br>{{ 'CREATION.INDICS.COOLDOWN' | translate }} : {{
+				weapon01.cooldown || '-'
+			}}<br>{{ 'CREATION.INDICS.ZONE' | translate }} : {{
+				weapon01.zone || '-'
+			}}"
+		></p>
 	</div>
 	<div>
 		<span>Arme (optionnel) : </span>
@@ -448,15 +436,24 @@
 				}}</option>
 			</select>
 		</div>
-		<p>
-				Attaque : {{ weapon02.attackBonus || '-' }}<br />
-				Défense : {{ weapon02.attackBonus || '-' }}<br />
-				Mobilité : {{ weapon02.mobility || '-' }}<br />
-				Malus aux actions (hors Défense) : {{ weapon02.actionsMalus || '-' }}<br />
-				Catégorie : {{ weapon02.category || '-' }}<br />
-				Chargeur : {{ weapon02.count || '-' }}<br />
-				Rechargement : {{ weapon02.cooldown || '-' }}<br />
-				Portée efficace : {{ weapon02.zone || '-' }}
-			</p>
+		<p
+			innerHtml="{{ 'CREATION.INDICS.ATTACKBONUS' | translate }} : {{
+				weapon01.attackBonus || '-'
+			}}<br>{{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{
+				weapon01.attackBonus || '-'
+			}}<br>{{ 'CREATION.INDICS.MOBILITY' | translate }} : {{
+				weapon01.mobility || '-'
+			}}<br>{{ 'CREATION.INDICS.ACTIONSMALUS' | translate }} : {{
+				weapon01.actionsMalus || '-'
+			}}<br>{{ 'CREATION.INDICS.CATEGORY' | translate }} : {{
+				weapon01.category || '-'
+			}}<br>{{ 'CREATION.INDICS.COUNT' | translate }} : {{
+				weapon01.count || '-'
+			}}<br>{{ 'CREATION.INDICS.COOLDOWN' | translate }} : {{
+				weapon01.cooldown || '-'
+			}}<br>{{ 'CREATION.INDICS.ZONE' | translate }} : {{
+				weapon01.zone || '-'
+			}}"
+		></p>
 	</div>
 </div>

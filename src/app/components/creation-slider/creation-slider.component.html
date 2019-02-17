@@ -11,5 +11,5 @@
 	</select>
 </div>
 <input class="cs-spe" *ngIf="hasCristalSpecialistic" type="text" (change)="speChange($event.target.value)"/>
-<span class="cs-help" (click)="toogleHelp()" (mouseover)="displayHelpHover=true" (mouseout)="displayHelpHover=false">?</span>
-<span *ngIf="displayHelpClick || displayHelpHover" class="cs-popup" innerHtml="{{ help }}"></span>
+<span class="help" (click)="toogleHelp()" (mouseover)="displayHelpHover=true" (mouseout)="displayHelpHover=false">?</span>
+<span *ngIf="displayHelpClick || displayHelpHover" class="popup" innerHtml="{{ help }}"></span>

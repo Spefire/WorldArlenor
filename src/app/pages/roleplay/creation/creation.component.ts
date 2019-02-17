@@ -35,6 +35,8 @@ export class CreationComponent {
 	public weapon02: any;
 	public listArmors: Array<any>;
 	public listWeapons: Array<any>;
+	public displayHelpEquipClick: boolean;
+	public displayHelpEquipHover: boolean;
 
 	constructor(
 		private routesService: RoutesService,
@@ -238,6 +240,10 @@ export class CreationComponent {
 		this.listWeapons.forEach(element => {
 			if (element.id === parseInt(event.value)) this.weapon02 = element;
 		});
+	}
+
+	toogleHelpEquip() {
+		this.displayHelpEquipClick = !this.displayHelpEquipClick;
 	}
 
 	downloadPDF() {
