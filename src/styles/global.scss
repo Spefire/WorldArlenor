@@ -134,10 +134,24 @@ table {
 	}
 }
 
+input[type="file"] {
+	display: none;
+}
+
 input[type="text"] {
 	overflow: hidden;
 	height: 30px;
 	padding: 0 10px;
+	border: 1px solid;
+	border-radius: 5px;
+
+	color: $light-color;
+	background: $dark-color;
+	border-color: $secondary-color;
+}
+
+textarea {
+	padding: 10px;
 	border: 1px solid;
 	border-radius: 5px;
 

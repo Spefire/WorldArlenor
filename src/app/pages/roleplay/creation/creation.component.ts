@@ -12,6 +12,8 @@ import jsPDF from "jspdf";
 })
 export class CreationComponent {
 	public name: string;
+	public description: string;
+	public avatar: string;
 
 	public race: number;
 	public avantages: string;
@@ -345,6 +347,38 @@ export class CreationComponent {
 
 	toogleHelpEquip() {
 		this.displayHelpEquipClick = !this.displayHelpEquipClick;
+	}
+
+	changeName(event) {
+		this.name = event.value;
+	}
+
+	changeDescription(event) {
+		this.description = event.value;
+	}
+
+	changeAvatar(event) {
+		var file = event.files[0];
+		if (!file) return;
+		if (file.size > 2000000) {
+			alert("Warning (Max size : 2 Mo)");
+		} else {
+			var image64;
+			const promiseGetImage64 = new Promise(function(resolve, reject){
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+					image64 = reader.result;
+					return resolve(true);
+				};
+				reader.onerror = function (error) {
+					console.log(error);
+				};
+			});
+			Promise.all([promiseGetImage64]).then(() => {
+				this.avatar = image64;
+			})
+		}
 	}
 
 	downloadPDF() {

@@ -1,7 +1,7 @@
 @import "../../../../styles/variables.scss";
 
 :host {
-    .creation-container {
+	.creation-container {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -9,8 +9,15 @@
 		align-items: center;
 		background-position: center;
 		background-size: cover;
-		background-image: linear-gradient(-45deg, rgba($dark-color, 1.0), rgba($dark-color, 0.75), rgba($dark-color, 0.5), rgba($primary-color, 0.5), rgba($primary-color, 0.5)),
-		url("/assets/images/home_02.png");
+		background-image: linear-gradient(
+				-45deg,
+				rgba($dark-color, 1),
+				rgba($dark-color, 0.75),
+				rgba($dark-color, 0.5),
+				rgba($primary-color, 0.5),
+				rgba($primary-color, 0.5)
+			),
+			url("/assets/images/home_02.png");
 	}
 
 	.creation-race-img {
@@ -19,5 +26,21 @@
 		margin: 0 10px;
 		border-radius: 50%;
 		border: 2px solid $light-secondary-color;
+	}
+
+	.creation-avatar {
+		height: 250px;
+		width: 250px;
+		border: 1px solid $secondary-color;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		cursor: pointer;
+
+		img {
+			height: 250px;
+			width: 250px;
+		}
 	}
 }

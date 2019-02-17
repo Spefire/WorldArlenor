@@ -684,6 +684,17 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE06" | translate }}</h2>
-	<p innerHtml="{{ 'CREATION.EQUIPEMENT.TEXT' | translate }}"></p>
-	<span (click)="downloadPDF()">Télécharger la fiche de personnage</span>
+	<p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
+	<span>Nom du personnage</span>
+	<input type="text" (change)="changeName($event.target)" />
+	<span>Description du personnage</span>
+	<textarea (change)="changeDescription($event.target)"></textarea>
+	<span>Avatar du personnage</span>
+	<label for="avatar" class="creation-avatar">
+		<span *ngIf="!avatar">Importer une image<br>(ratio 1:1 | JPG, PNG | max 2Mo)</span>
+		<img *ngIf="avatar" alt="" [src]="avatar"/>
+	</label>
+	<input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg" (change)="changeAvatar($event.target)" /><!--------------------------------------------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------------------------------------------->
+	<button (click)="downloadPDF()">Télécharger la fiche de personnage</button>
 </div>
