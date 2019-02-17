@@ -155,6 +155,7 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
+	<p innerHtml="{{ 'CREATION.SKILLS.TEXT01' | translate }}"></p>
 	<p>
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 		<b>{{ leftPointsSkills }}</b>
@@ -183,6 +184,7 @@
 				type="art"
 				value="{{ mainSkills.art.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -194,6 +196,7 @@
 				type="artisanat"
 				value="{{ mainSkills.artisanat.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -205,6 +208,7 @@
 				type="athletisme"
 				value="{{ mainSkills.athletisme.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -216,6 +220,7 @@
 				type="combat"
 				value="{{ mainSkills.combat.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -227,6 +232,7 @@
 				type="etiquette"
 				value="{{ mainSkills.etiquette.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -238,6 +244,7 @@
 				type="furtivite"
 				value="{{ mainSkills.furtivite.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -249,6 +256,7 @@
 				type="information"
 				value="{{ mainSkills.information.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -260,6 +268,7 @@
 				type="intuition"
 				value="{{ mainSkills.intuition.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -271,6 +280,7 @@
 				type="investigation"
 				value="{{ mainSkills.investigation.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -282,6 +292,7 @@
 				type="larcin"
 				value="{{ mainSkills.larcin.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -293,6 +304,7 @@
 				type="manipulation"
 				value="{{ mainSkills.manipulation.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -304,6 +316,7 @@
 				type="medecine"
 				value="{{ mainSkills.medecine.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -315,6 +328,7 @@
 				type="persuasion"
 				value="{{ mainSkills.persuasion.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -326,6 +340,7 @@
 				type="pilotage"
 				value="{{ mainSkills.pilotage.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -337,6 +352,7 @@
 				type="savoir"
 				value="{{ mainSkills.savoir.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasSpecialistic="true"
@@ -348,7 +364,13 @@
 				type="survie"
 				value="{{ mainSkills.survie.value }}"
 				(onValueChange)="changeMainSkills($event)"
+				(onSpeChange)="changeSpeMainSkills($event)"
 			></creation-slider>
+		</tbody>
+	</table>
+	<p innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
+	<table>
+		<tbody>
 			<creation-slider
 				hasCristalSpecialistic="true"
 				min="0"
@@ -358,6 +380,7 @@
 				type="elementaires"
 				value="{{ crystalSkills.elementaires.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
+				(onSpeChange)="changeSpeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasCristalSpecialistic="true"
@@ -368,6 +391,7 @@
 				type="invocations"
 				value="{{ crystalSkills.invocations.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
+				(onSpeChange)="changeSpeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasCristalSpecialistic="true"
@@ -378,6 +402,7 @@
 				type="mentaux"
 				value="{{ crystalSkills.mentaux.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
+				(onSpeChange)="changeSpeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasCristalSpecialistic="true"
@@ -388,6 +413,7 @@
 				type="transformations"
 				value="{{ crystalSkills.transformations.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
+				(onSpeChange)="changeSpeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasCristalSpecialistic="true"
@@ -398,6 +424,7 @@
 				type="spatiauxtemporels"
 				value="{{ crystalSkills.spatiauxtemporels.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
+				(onSpeChange)="changeSpeCrystalSkills($event)"
 			></creation-slider>
 			<creation-slider
 				hasCristalSpecialistic="true"
@@ -408,6 +435,7 @@
 				type="speciaux"
 				value="{{ crystalSkills.speciaux.value }}"
 				(onValueChange)="changeCrystalSkills($event)"
+				(onSpeChange)="changeSpeCrystalSkills($event)"
 			></creation-slider>
 		</tbody>
 	</table>

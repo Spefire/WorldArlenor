@@ -225,9 +225,11 @@ export class CreationComponent {
 		var totalSkills = 0;
 		for (var key in this.mainSkills) {
 			totalSkills += this.mainSkills[key].value;
+			if (this.mainSkills[key].spe) totalSkills += 2;
 		}
 		for (var key in this.crystalSkills) {
 			totalSkills += this.crystalSkills[key].value;
+			if (this.crystalSkills[key].spe) totalSkills += 2;
 		}
 		this.leftPointsSkills = this.nbPointsSkills - totalSkills;
 
