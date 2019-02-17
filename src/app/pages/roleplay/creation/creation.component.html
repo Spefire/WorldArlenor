@@ -67,8 +67,8 @@
 	<table class="full-table">
 		<thead>
 			<tr>
-				<th>{{ 'CREATION.INDICS.AVANTAGES' | translate }}</th>
-				<th>{{ 'CREATION.INDICS.INCONVENIENTS' | translate }}</th>
+				<th>{{ "CREATION.INDICS.AVANTAGES" | translate }}</th>
+				<th>{{ "CREATION.INDICS.INCONVENIENTS" | translate }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -84,7 +84,7 @@
 	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
 	<p>
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
-		{{ leftPointsCaracteristics }}
+		<b>{{ leftPointsCaracteristics }}</b>
 	</p>
 	<table>
 		<tbody>
@@ -139,9 +139,9 @@
 	<table class="full-table">
 		<thead>
 			<tr>
-				<th>{{ 'CREATION.INDICS.INITIATIVE' | translate }}</th>
-				<th>{{ 'CREATION.INDICS.PV' | translate }}</th>
-				<th>{{ 'CREATION.INDICS.PE' | translate }}</th>
+				<th>{{ "CREATION.INDICS.INITIATIVE" | translate }}</th>
+				<th>{{ "CREATION.INDICS.PV" | translate }}</th>
+				<th>{{ "CREATION.INDICS.PE" | translate }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -155,7 +155,10 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
-	<p>{{ "CREATION.INDICS.LEFTPOINTS" | translate }} : {{ leftPointsSkills }}</p>
+	<p>
+		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
+		<b>{{ leftPointsSkills }}</b>
+	</p>
 	<table>
 		<tbody>
 			<creation-slider
@@ -411,16 +414,16 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
-	<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT' | translate }}"></p>
+	<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
 	<table class="full-table">
 		<thead>
 			<tr>
-				<th>{{ "CREATION.CRYSTALS.INDICS.RANK" | translate }}</th>
-				<th>{{ "CREATION.CRYSTALS.INDICS.RARITY" | translate }}</th>
-				<th>{{ "CREATION.CRYSTALS.INDICS.POWER" | translate }}</th>
-				<th>{{ "CREATION.CRYSTALS.INDICS.EV" | translate }}</th>
-				<th>{{ "CREATION.CRYSTALS.INDICS.PV" | translate }}</th>
-				<th>{{ "CREATION.CRYSTALS.INDICS.DEMIEV" | translate }}</th>
+				<th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+				<th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
+				<th>{{ "CREATION.INDICS.POWER" | translate }}</th>
+				<th>{{ "CREATION.INDICS.EV" | translate }}</th>
+				<th>{{ "CREATION.INDICS.DEMIPV" | translate }}</th>
+				<th>{{ "CREATION.INDICS.DEMIEV" | translate }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -429,8 +432,129 @@
 				<td>{{ c.rarity }}</td>
 				<td>{{ c.power }}</td>
 				<td>{{ c.EV }}</td>
-				<td>{{ c.PV }}</td>
+				<td>{{ c.demiPV }}</td>
 				<td>{{ c.demiEV }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
+	<table>
+		<thead>
+			<tr>
+				<th>{{ "CREATION.INDICS.CRYSTAL" | translate }}</th>
+				<th>{{ "CREATION.INDICS.TYPE" | translate }}</th>
+				<th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+				<th>{{ "CREATION.INDICS.EV" | translate }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<input type="text" (change)="changeCrystalName(1, $event.target)" />
+				</td>
+				<td>
+					<div class="dropdown">
+						<select
+							class="dropdown-select"
+							(change)="changeCrystalType(1, $event.target)"
+						>
+							<option value=""></option>
+							<option value="ELE">Elémentaire</option>
+							<option value="INV">Invocation</option>
+							<option value="MEN">Mental</option>
+							<option value="TRA">Transformation</option>
+							<option value="SPA">Spatio-temporel</option>
+							<option value="SPE">Spécial</option>
+						</select>
+					</div>
+				</td>
+				<td>
+					<div class="dropdown">
+						<select
+							class="dropdown-select"
+							(change)="changeCrystalRank(1, $event.target)"
+							>
+							<option value=""></option>
+							<option value="S">S</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+					</div>
+				</td>
+				<td>{{ race === 6 ? crystal01.demiEV : crystal01.EV }}</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" (change)="changeCrystalName(2, $event.target)" />
+				</td>
+				<td>
+					<div class="dropdown">
+						<select
+							class="dropdown-select"
+							(change)="changeCrystalType(2, $event.target)"
+						>
+							<option value=""></option>
+							<option value="ELE">Elémentaire</option>
+							<option value="INV">Invocation</option>
+							<option value="MEN">Mental</option>
+							<option value="TRA">Transformation</option>
+							<option value="SPA">Spatio-temporel</option>
+							<option value="SPE">Spécial</option>
+						</select>
+					</div>
+				</td>
+				<td>
+					<div class="dropdown">
+						<select
+							class="dropdown-select"
+							(change)="changeCrystalRank(2, $event.target)"
+						>
+							<option value=""></option>
+							<option value="S">S</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+					</div>
+				</td>
+				<td>{{ race === 6 ? crystal02.demiEV : crystal02.EV }}</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" (change)="changeCrystalName(3, $event.target)" />
+				</td>
+				<td>
+					<div class="dropdown">
+						<select
+							class="dropdown-select"
+							(change)="changeCrystalType(3, $event.target)"
+						>
+							<option value=""></option>
+							<option value="ELE">Elémentaire</option>
+							<option value="INV">Invocation</option>
+							<option value="MEN">Mental</option>
+							<option value="TRA">Transformation</option>
+							<option value="SPA">Spatio-temporel</option>
+							<option value="SPE">Spécial</option>
+						</select>
+					</div>
+				</td>
+				<td>
+					<div class="dropdown">
+						<select
+							class="dropdown-select"
+							(change)="changeCrystalRank(3, $event.target)"
+						>
+							<option value=""></option>
+							<option value="S">S</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+					</div>
+				</td>
+				<td>{{ race === 6 ? crystal03.demiEV : crystal03.EV }}</td>
 			</tr>
 		</tbody>
 	</table>

@@ -288,6 +288,14 @@
 			"INITIATIVE": "Initiative",
 			"PV": "Points de Vie",
 			"PE": "Points d'Energie Vitale",
+			"CRYSTAL": "Nom du cristal",
+			"TYPE": "Type",
+			"RANK": "Rang",
+			"RARITY": "Rareté",
+			"POWER": "Puissance",
+			"EV": "Coût en EV",
+			"DEMIPV": "Retrait de PV (pour les arléniens)",
+			"DEMIEV": "Coût en EV (pour les arléniens)",
 			"ARMOR": "Armure",
 			"WEAPON": "Arme (optionnel)",
 			"ATTACKBONUS": "Attaque",
@@ -432,15 +440,8 @@
 			"HELP": "<b>Spéciaux</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « spéciaux », des cristaux qui n'entrent pas dans les autres catégories, et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Entraver une personne (Pou. + Spéciaux, Diff. 9).<br>- Voler de la vie (Pou. + Spéciaux, Diff. 17).<br>- Transférer les blessures et la douleur (Pou. + Spéciaux, Diff. 22)."
 		},
 		"CRYSTALS": {
-			"TEXT": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne. En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. Faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible : pour activer le pouvoir d’une cristal, le personnage doit puiser dans son énergie vitale, et essayer de contrôler ce pouvoir pour obtenir l'effet voulu.<br>Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.",
-			"INDICS": {
-				"RANK": "Rang",
-				"RARITY": "Rareté",
-				"POWER": "Puissance",
-				"EV": "Coût en EV",
-				"PV": "Retrait de PV (pour les arléniens)",
-				"DEMIEV": "Coût en EV (pour les arléniens)"
-			}
+			"TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne. En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. Faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible : pour activer le pouvoir d’une cristal, le personnage doit puiser dans son énergie vitale, et essayer de contrôler ce pouvoir pour obtenir l'effet voulu.",
+			"TEXT02": "Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.<br>De plus, au début, un personnage ne devrait avoir <b>au maximum, un cristal de rang A ou deux cristaux de rang B</b> et aucun de rang S ! Les personnages ne peuvent porter que 3 cristaux de rangs supérieurs à D, car porter plus de cristaux sur soi entrainerait des perturbations physiques et psychiques...<br>Conseil : Il est inutile d'avoir beaucoup de cristaux puissants si l'on n'a pas l'Energie Vitale pour les utiliser."
 		},
 		"EQUIPEMENT": {
 			"TEXT": "Pour certains personnages il est vital d'avoir un équipement adéquat en cas de panne d'Energie Vitale. L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement.",

@@ -30,6 +30,9 @@ export class CreationComponent {
 	public leftPointsCaracteristics: number;
 	public leftPointsSkills: number;
 
+	public crystal01: any;
+	public crystal02: any;
+	public crystal03: any;
 	public listCrystals: Array<any>;
 
 	public armor: any;
@@ -94,12 +97,15 @@ export class CreationComponent {
 		this.changeRace({ value: 1 });
 		this.refreshPoints();
 		this.listCrystals = [
-			{ id: 1, rank: 'S', rarity: "Unique", power: 'Extrême', EV: 5, PV: 10, demiEV: 3 },
-			{ id: 2, rank: 'A', rarity: "Rare", power: 'Forte', EV: 3, PV: 5, demiEV: 2 },
-			{ id: 3, rank: 'B', rarity: "Peu rare", power: 'Moyenne', EV: 2, PV: 3, demiEV: 1 },
-			{ id: 4, rank: 'C', rarity: "Commune", power: 'Faible', EV: 1, PV: 1, demiEV: 0 },
-			{ id: 5, rank: 'D', rarity: "Très commune", power: 'Nulle', EV: 0, PV: 0, demiEV: 0 }
+			{ id: 1, rank: 'S', rarity: "Unique", power: 'Extrême', EV: 5, demiPV: 10, demiEV: 3 },
+			{ id: 2, rank: 'A', rarity: "Rare", power: 'Forte', EV: 3, demiPV: 5, demiEV: 2 },
+			{ id: 3, rank: 'B', rarity: "Peu rare", power: 'Moyenne', EV: 2, demiPV: 3, demiEV: 1 },
+			{ id: 4, rank: 'C', rarity: "Commune", power: 'Faible', EV: 1, demiPV: 1, demiEV: 0 },
+			{ id: 5, rank: 'D', rarity: "Très commune", power: 'Nulle', EV: 0, demiPV: 0, demiEV: 0 }
 		];
+		this.crystal01 = {};
+		this.crystal02 = {};
+		this.crystal03 = {};
 		this.listArmors = [
 			{ id: 1, name: 'Vêtements renforcés', defenceBonus: 2, mobility: 'Normale', actionsMalus: 0 },
 			{ id: 2, name: 'Armure lègère (cuir, cottes de mailles)', defenceBonus: 4, mobility: 'Normale', actionsMalus: -2 },
@@ -228,6 +234,90 @@ export class CreationComponent {
 		this.initiative =
 			this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
+
+		if (this.race === 6) {
+			if (this.crystal01.name && this.crystal01.type) this.pv = this.pv - this.crystal01.demiPV;
+			if (this.crystal02.name && this.crystal02.type) this.pv = this.pv - this.crystal02.demiPV;
+			if (this.crystal03.name && this.crystal03.type) this.pv = this.pv - this.crystal03.demiPV;
+		}
+	}
+
+	changeCrystalName(number, event) {
+		if (number === 1) {
+			this.crystal01.name = event.value;
+		} else if (number === 2) {
+			this.crystal02.name = event.value;
+		} else if (number === 3) {
+			this.crystal03.name = event.value;
+		}
+		this.refreshPoints();
+	}
+
+	changeCrystalType(number, event) {
+		if (number === 1) {
+			this.crystal01.type = event.value;
+		} else if (number === 2) {
+			this.crystal02.type = event.value;
+		} else if (number === 3) {
+			this.crystal03.type = event.value;
+		}
+		this.refreshPoints();
+	}
+
+	changeCrystalRank(number, event) {
+		if (number === 1) {
+			let change = false;
+			this.listCrystals.forEach(element => {
+				if (element.rank === event.value) {
+					change = true;
+					this.crystal01.rank = element.rank;
+					this.crystal01.EV = element.EV;
+					this.crystal01.demiPV = element.demiPV;
+					this.crystal01.demiEV = element.demiEV;
+				}
+			});
+			if (!change) {
+				this.crystal01.rank = undefined;
+				this.crystal01.EV = undefined;
+				this.crystal01.demiPV = undefined;
+				this.crystal01.demiEV = undefined;
+			}
+		} else if (number === 2) {
+			let change = false;
+			this.listCrystals.forEach(element => {
+				if (element.rank === event.value) {
+					change = true;
+					this.crystal02.rank = element.rank;
+					this.crystal02.EV = element.EV;
+					this.crystal02.demiPV = element.demiPV;
+					this.crystal02.demiEV = element.demiEV;
+				}
+			});
+			if (!change) {
+				this.crystal02.rank = undefined;
+				this.crystal02.EV = undefined;
+				this.crystal02.demiPV = undefined;
+				this.crystal02.demiEV = undefined;
+			}
+		} else if (number === 3) {
+			let change = false;
+			this.listCrystals.forEach(element => {
+				if (element.rank === event.value) {
+					change = true;
+					this.crystal03.rank = element.rank;
+					this.crystal03.EV = element.EV;
+					this.crystal03.demiPV = element.demiPV;
+					this.crystal03.demiEV = element.demiEV;
+				}
+			});
+			if (!change) {
+				this.crystal03.rank = undefined;
+				this.crystal03.EV = undefined;
+				this.crystal03.demiPV = undefined;
+				this.crystal03.demiEV = undefined;
+			}
+		}
+		this.refreshPoints();
 	}
 
 	changeArmor(event) {
