@@ -348,13 +348,28 @@ export class CreationComponent {
 	}
 
 	downloadPDF() {
-		var doc = new jsPDF();
-		doc.setFontSize(30);
-		doc.text(35, 25, "Fiche de personnage");
+		var isOk = true;
+		if (this.leftPointsCaracteristics < 0) {
+			if (!confirm('Vous avez trop de points dans les Caractéristiques : votre personnage a eu de l\'expérience ?\n\nOK pour continuer quand même, Annuler pour retourner à la création.')) {
+				isOk = false;
+			}
+		}
+		if (this.leftPointsSkills < 0) {
+			if (!confirm('Vous avez trop de points dans les Compétences : votre personnage a eu de l\'expérience ?\n\nOK pour continuer quand même, Annuler pour retourner à la création.')) {
+				isOk = false;
+			}
+		}
+		if (!isOk) return;
 
-		this.toDataURL("./assets/images/creation/Fond.png", function(dataUrl) {
-			console.log("RESULT:", dataUrl);
-			doc.addImage(dataUrl, "JPEG", 15, 40, 180, 160);
+		var doc = new jsPDF('p', 'px', 'a4');
+		//doc.setFontSize(30);
+		//doc.text(35, 25, "Fiche de personnage");
+
+		var width = doc.internal.pageSize.getWidth();
+		var height = doc.internal.pageSize.getHeight();
+
+		this.toDataURL("./assets/images/creation/emptyFile.jpg", function(dataUrl) {
+			doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
 			doc.save("a4.pdf");
 		});
 	}

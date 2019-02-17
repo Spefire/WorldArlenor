@@ -685,16 +685,5 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE06" | translate }}</h2>
 	<p innerHtml="{{ 'CREATION.EQUIPEMENT.TEXT' | translate }}"></p>
-	<span
-		class="help"
-		(click)="toogleHelpEquip()"
-		(mouseover)="displayHelpEquipHover = true"
-		(mouseout)="displayHelpEquipHover = false"
-		>?</span
-	>
-	<p
-		*ngIf="displayHelpEquipClick || displayHelpEquipHover"
-		class="popup"
-		innerHtml="{{ 'CREATION.EQUIPEMENT.HELP' | translate }}"
-	></p>
+	<span (click)="downloadPDF()">Télécharger la fiche de personnage</span>
 </div>
