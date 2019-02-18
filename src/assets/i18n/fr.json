@@ -279,7 +279,8 @@
 			"TITLE03": "III - Compétences",
 			"TITLE04": "IV - Cristaux",
 			"TITLE05": "V - Equipement",
-			"TITLE06": "VI - Identité"
+			"TITLE06": "VI - Identité",
+			"CONCLUSION": "Téléchargement"
 		},
 		"INDICS": {
 			"LEFTPOINTS": "Points restants",

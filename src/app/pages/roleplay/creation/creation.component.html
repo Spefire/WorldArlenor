@@ -696,5 +696,7 @@
 	</label>
 	<input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg" (change)="changeAvatar($event.target)" /><!--------------------------------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------------------------------->
+	<h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
+	<p innerHtml="{{ listWarnings }}"></p>
 	<button (click)="downloadPDF()">Télécharger la fiche de personnage</button>
 </div>

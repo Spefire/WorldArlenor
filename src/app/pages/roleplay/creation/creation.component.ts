@@ -45,6 +45,9 @@ export class CreationComponent {
 	public displayHelpEquipClick: boolean;
 	public displayHelpEquipHover: boolean;
 
+	public warning:boolean;
+	public listWarnings:string;
+
 	constructor(
 		private routesService: RoutesService,
 		private route: ActivatedRoute,
@@ -101,34 +104,172 @@ export class CreationComponent {
 		this.nbPointsCaracteristics = 13;
 		this.changeRace({ value: 1 });
 		this.refreshPoints();
+		//TODO : Traduction (a day)
 		this.listCrystals = [
-			{ id: 1, rank: 'S', rarity: "Unique", power: 'Extrême', EV: 5, demiPV: 10, demiEV: 3 },
-			{ id: 2, rank: 'A', rarity: "Rare", power: 'Forte', EV: 3, demiPV: 5, demiEV: 2 },
-			{ id: 3, rank: 'B', rarity: "Peu rare", power: 'Moyenne', EV: 2, demiPV: 3, demiEV: 1 },
-			{ id: 4, rank: 'C', rarity: "Commune", power: 'Faible', EV: 1, demiPV: 1, demiEV: 0 },
-			{ id: 5, rank: 'D', rarity: "Très commune", power: 'Nulle', EV: 0, demiPV: 0, demiEV: 0 }
+			{
+				id: 1,
+				rank: "S",
+				rarity: "Unique",
+				power: "Extrême",
+				EV: 5,
+				demiPV: 10,
+				demiEV: 3
+			},
+			{
+				id: 2,
+				rank: "A",
+				rarity: "Rare",
+				power: "Forte",
+				EV: 3,
+				demiPV: 5,
+				demiEV: 2
+			},
+			{
+				id: 3,
+				rank: "B",
+				rarity: "Peu rare",
+				power: "Moyenne",
+				EV: 2,
+				demiPV: 3,
+				demiEV: 1
+			},
+			{
+				id: 4,
+				rank: "C",
+				rarity: "Commune",
+				power: "Faible",
+				EV: 1,
+				demiPV: 1,
+				demiEV: 0
+			},
+			{
+				id: 5,
+				rank: "D",
+				rarity: "Très commune",
+				power: "Nulle",
+				EV: 0,
+				demiPV: 0,
+				demiEV: 0
+			}
 		];
 		this.crystal01 = {};
 		this.crystal02 = {};
 		this.crystal03 = {};
+		//TODO : Traduction (a day)
 		this.listArmors = [
-			{ id: 1, name: 'Vêtements renforcés', defenceBonus: 2, mobility: 'Normale', actionsMalus: 0 },
-			{ id: 2, name: 'Armure lègère (cuir, cottes de mailles)', defenceBonus: 4, mobility: 'Normale', actionsMalus: -2 },
-			{ id: 3, name: 'Armure lourde (cuirasse, armure complète)', defenceBonus: 6, mobility: 'Réduite', actionsMalus: -4 }
+			{
+				id: 1,
+				name: "Vêtements renforcés",
+				defenceBonus: 2,
+				mobility: "Normale",
+				actionsMalus: 0
+			},
+			{
+				id: 2,
+				name: "Armure lègère (cuir, cottes de mailles)",
+				defenceBonus: 4,
+				mobility: "Normale",
+				actionsMalus: -2
+			},
+			{
+				id: 3,
+				name: "Armure lourde (cuirasse, armure complète)",
+				defenceBonus: 6,
+				mobility: "Réduite",
+				actionsMalus: -4
+			}
 		];
 		this.listWeapons = [
-			{ id: 1, name: 'Lame courte (dague)', attackBonus: 2, defenceBonus: 2, category: 'Légère' },
-			{ id: 2, name: 'Arme à une main (épée longue, hache)', attackBonus: 4, defenceBonus: 0, category: 'Moyenne' },
-			{ id: 3, name: 'Arme à deux mains (espadon, grande hache)', attackBonus: 6, defenceBonus: -2, category: 'Lourde' },
-			{ id: 4, name: 'Arme d\'hast (lance, hallebarde)', attackBonus: 3, defenceBonus: 1, category: 'Lourde' },
-			{ id: 5, name: 'Arme contondante (matraque, bâton)', attackBonus: 1, defenceBonus: 2, category: 'Légère ou Moyenne' },
-			{ id: 6, name: 'Arc', attackBonus: 2, count: 1, cooldown: 'Rapide', zone: 25 },
-			{ id: 7, name: 'Arbalète', attackBonus: 4, count: 1, cooldown: 'Action', zone: 35 },
-			{ id: 8, name: 'Fronde', attackBonus: 0, count: 1, cooldown: 'Rapide', zone: 10 },
-			{ id: 9, name: 'Armes de lancer (couteaux)', attackBonus: 2, count: 1, cooldown: 'Rapide', zone: 5 },
-			{ id: 10, name: 'Armes à feu lègere (pistolet)', attackBonus: 4, count: 4, cooldown: 'Action', zone: 20 },
-			{ id: 11, name: 'Armes à feu lourde (fusil)', attackBonus: 6, count: 2, cooldown: 'Action', zone: 150 },
-			{ id: 12, name: 'Bouclier', defenceBonus: 2, mobility: 'Normale', actionsMalus: -2 }
+			{
+				id: 1,
+				name: "Lame courte (dague)",
+				attackBonus: 2,
+				defenceBonus: 2,
+				category: "Légère"
+			},
+			{
+				id: 2,
+				name: "Arme à une main (épée longue, hache)",
+				attackBonus: 4,
+				defenceBonus: 0,
+				category: "Moyenne"
+			},
+			{
+				id: 3,
+				name: "Arme à deux mains (espadon, grande hache)",
+				attackBonus: 6,
+				defenceBonus: -2,
+				category: "Lourde"
+			},
+			{
+				id: 4,
+				name: "Arme d'hast (lance, hallebarde)",
+				attackBonus: 3,
+				defenceBonus: 1,
+				category: "Lourde"
+			},
+			{
+				id: 5,
+				name: "Arme contondante (matraque, bâton)",
+				attackBonus: 1,
+				defenceBonus: 2,
+				category: "Légère ou Moyenne"
+			},
+			{
+				id: 6,
+				name: "Arc",
+				attackBonus: 2,
+				count: 1,
+				cooldown: "Rapide",
+				zone: 25
+			},
+			{
+				id: 7,
+				name: "Arbalète",
+				attackBonus: 4,
+				count: 1,
+				cooldown: "Action",
+				zone: 35
+			},
+			{
+				id: 8,
+				name: "Fronde",
+				attackBonus: 0,
+				count: 1,
+				cooldown: "Rapide",
+				zone: 10
+			},
+			{
+				id: 9,
+				name: "Armes de lancer (couteaux)",
+				attackBonus: 2,
+				count: 1,
+				cooldown: "Rapide",
+				zone: 5
+			},
+			{
+				id: 10,
+				name: "Armes à feu lègere (pistolet)",
+				attackBonus: 4,
+				count: 4,
+				cooldown: "Action",
+				zone: 20
+			},
+			{
+				id: 11,
+				name: "Armes à feu lourde (fusil)",
+				attackBonus: 6,
+				count: 2,
+				cooldown: "Action",
+				zone: 150
+			},
+			{
+				id: 12,
+				name: "Bouclier",
+				defenceBonus: 2,
+				mobility: "Normale",
+				actionsMalus: -2
+			}
 		];
 		this.armor = this.listArmors[0];
 		this.weapon01 = {};
@@ -219,36 +360,6 @@ export class CreationComponent {
 		this.refreshPoints();
 	}
 
-	refreshPoints() {
-		var totalCaracteristics = 0;
-		for (var key in this.caracteristics) {
-			totalCaracteristics += this.caracteristics[key];
-		}
-		this.leftPointsCaracteristics =
-			this.nbPointsCaracteristics - totalCaracteristics;
-
-		var totalSkills = 0;
-		for (var key in this.mainSkills) {
-			totalSkills += this.mainSkills[key].value;
-			if (this.mainSkills[key].spe) totalSkills += 2;
-		}
-		for (var key in this.crystalSkills) {
-			totalSkills += this.crystalSkills[key].value;
-			if (this.crystalSkills[key].spe) totalSkills += 2;
-		}
-		this.leftPointsSkills = this.nbPointsSkills - totalSkills;
-
-		this.initiative =
-			this.caracteristics.habilete + this.caracteristics.intellect;
-		this.pv = 10 + 3 * this.caracteristics.vigueur;
-
-		if (this.race === 6) {
-			if (this.crystal01.name && this.crystal01.type) this.pv = this.pv - this.crystal01.demiPV;
-			if (this.crystal02.name && this.crystal02.type) this.pv = this.pv - this.crystal02.demiPV;
-			if (this.crystal03.name && this.crystal03.type) this.pv = this.pv - this.crystal03.demiPV;
-		}
-	}
-
 	changeCrystalName(number, event) {
 		if (number === 1) {
 			this.crystal01.name = event.value;
@@ -327,11 +438,46 @@ export class CreationComponent {
 		this.refreshPoints();
 	}
 
+	refreshPoints() {
+		var totalCaracteristics = 0;
+		for (var key in this.caracteristics) {
+			totalCaracteristics += this.caracteristics[key];
+		}
+		this.leftPointsCaracteristics =
+			this.nbPointsCaracteristics - totalCaracteristics;
+
+		var totalSkills = 0;
+		for (var key in this.mainSkills) {
+			totalSkills += this.mainSkills[key].value;
+			if (this.mainSkills[key].spe) totalSkills += 2;
+		}
+		for (var key in this.crystalSkills) {
+			totalSkills += this.crystalSkills[key].value;
+			if (this.crystalSkills[key].spe) totalSkills += 2;
+		}
+		this.leftPointsSkills = this.nbPointsSkills - totalSkills;
+
+		this.initiative =
+			this.caracteristics.habilete + this.caracteristics.intellect;
+		this.pv = 10 + 3 * this.caracteristics.vigueur;
+
+		if (this.race === 6) {
+			if (this.crystal01.name && this.crystal01.type)
+				this.pv = this.pv - this.crystal01.demiPV;
+			if (this.crystal02.name && this.crystal02.type)
+				this.pv = this.pv - this.crystal02.demiPV;
+			if (this.crystal03.name && this.crystal03.type)
+				this.pv = this.pv - this.crystal03.demiPV;
+		}
+		this.checkWarnings();
+	}
+
 	changeArmor(event) {
 		this.armor = this.listArmors[0];
 		this.listArmors.forEach(element => {
 			if (element.id === parseInt(event.value)) this.armor = element;
 		});
+		this.checkWarnings();
 	}
 
 	changeWeapon01(event) {
@@ -339,6 +485,7 @@ export class CreationComponent {
 		this.listWeapons.forEach(element => {
 			if (element.id === parseInt(event.value)) this.weapon01 = element;
 		});
+		this.checkWarnings();
 	}
 
 	changeWeapon02(event) {
@@ -346,6 +493,7 @@ export class CreationComponent {
 		this.listWeapons.forEach(element => {
 			if (element.id === parseInt(event.value)) this.weapon02 = element;
 		});
+		this.checkWarnings();
 	}
 
 	toogleHelpEquip() {
@@ -354,10 +502,12 @@ export class CreationComponent {
 
 	changeName(event) {
 		this.name = event.value;
+		this.checkWarnings();
 	}
 
 	changeDescription(event) {
 		this.description = event.value;
+		this.checkWarnings();
 	}
 
 	changeAvatar(event) {
@@ -367,38 +517,53 @@ export class CreationComponent {
 			alert("Warning (Max size : 2 Mo)");
 		} else {
 			var image64;
-			const promiseGetImage64 = new Promise(function(resolve, reject){
+			const promiseGetImage64 = new Promise(function(resolve, reject) {
 				var reader = new FileReader();
 				reader.readAsDataURL(file);
-				reader.onload = function () {
+				reader.onload = function() {
 					image64 = reader.result;
 					return resolve(true);
 				};
-				reader.onerror = function (error) {
+				reader.onerror = function(error) {
 					console.log(error);
 				};
 			});
 			Promise.all([promiseGetImage64]).then(() => {
 				this.avatar = image64;
-			})
+				this.checkWarnings();
+			});
 		}
 	}
 
-	downloadPDF() {
-		var isOk = true;
+	checkWarnings() {
+		var infos = "";
+		if (this.leftPointsCaracteristics > 0) {
+			infos += "Il reste des points de caractéristiques à dépenser.<br>";
+		}
 		if (this.leftPointsCaracteristics < 0) {
-			if (!confirm('Vous avez trop de points dans les Caractéristiques : votre personnage a eu de l\'expérience ?\n\nOK pour continuer quand même, Annuler pour retourner à la création.')) {
-				isOk = false;
-			}
+			infos += "Vous avez dépensé trop de points de caractéristiques (votre personnage a de l'expérience ?).<br>";
+		}
+		if (this.leftPointsSkills > 0) {
+			infos += "Il reste des points de compétences à dépenser.<br>";
 		}
 		if (this.leftPointsSkills < 0) {
-			if (!confirm('Vous avez trop de points dans les Compétences : votre personnage a eu de l\'expérience ?\n\nOK pour continuer quand même, Annuler pour retourner à la création.')) {
-				isOk = false;
+			infos += "Vous avez dépensé trop de points de compétences (votre personnage a de l'expérience ?).<br>";
+		}
+		this.warning = (infos.length > 0);
+		this.listWarnings = infos;
+	}
+
+	downloadPDF() {
+		//TODO : Traduction (a day)
+		if (this.warning) {
+			if (
+				!confirm("Attention : Votre fiche de personnage n'est pas complète, ou avec des erreurs.")
+			) {
+				return;
 			}
 		}
-		if (!isOk) return;
 
-		var doc = new jsPDF('p', 'px', 'a4');
+		var doc = new jsPDF("p", "px", "a4");
 		var width = doc.internal.pageSize.getWidth();
 		var height = doc.internal.pageSize.getHeight();
 
@@ -416,7 +581,7 @@ export class CreationComponent {
 			xhr.send();
 		}
 
-		const promise = new Promise(function(resolve, reject){
+		const promise = new Promise(function(resolve, reject) {
 			toDataURL("./assets/images/creation/emptyFile.jpg", function(dataUrl) {
 				doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
 				doc.setFontSize(10);
@@ -425,27 +590,116 @@ export class CreationComponent {
 		});
 
 		Promise.all([promise]).then(() => {
-			doc.text(125, 90.5, ""+this.name);
+			doc.text(122, 90.5, "" + this.name);
+			if (this.avatar) doc.addImage(this.avatar, "JPEG", 25, 20, 81.5, 73);
+			doc.text(29.3, 134, "" + this.description, {
+				align: "justify",
+				maxWidth: 181
+			});
+
+			//TODO : Traduction (a day)
+			switch (this.race) {
+				case 1:
+					doc.text(122, 175, "Humain");
+					break;
+				case 2:
+					doc.text(122, 175, "Elfe");
+					break;
+				case 3:
+					doc.text(122, 175, "Nain");
+					break;
+				case 4:
+					doc.text(122, 175, "Mutant");
+					break;
+				case 5:
+					doc.text(122, 175, "Pan");
+					break;
+				case 6:
+					doc.text(122, 175, "Arlénien");
+					break;
+			}
 
 			var i = 217.2;
 			for (var key in this.caracteristics) {
-				doc.text(131, i, ""+ this.caracteristics[key]);
+				doc.text(132.5, i, "" + this.caracteristics[key], { align: "center" });
 				i += 21.2;
+			}
+
+			i = 365.6;
+			doc.text(132.5, i, "" + this.initiative, { align: "center" });
+			i += 21.2;
+			doc.text(132.5, i, "" + this.pv, { align: "center" });
+			i += 21.2;
+			doc.text(132.5, i, "" + this.pe, { align: "center" });
+
+			i = 513.2;
+			if (this.armor.name) {
+				let res = (this.armor.name.indexOf(" (") > 0) ? this.armor.name.substring(0, this.armor.name.indexOf(" (")) : this.armor.name;
+				doc.text(29.3, i, "" + res);
+			}
+			if (this.armor.attackBonus) doc.text(132.5, i, "" + this.armor.attackBonus, { align: "center" });
+			if (this.armor.defenceBonus) doc.text(199, i, "" + this.armor.defenceBonus, { align: "center" });
+			i += 10.6;
+			if (this.weapon01.name) {
+				let res =  (this.weapon01.name.indexOf(" (") > 0) ? this.weapon01.name.substring(0, this.weapon01.name.indexOf(" (")) : this.weapon01.name;
+				doc.text(29.3, i, "" + res);
+			}
+			if (this.weapon01.attackBonus) doc.text(132.5, i, "" + this.weapon01.attackBonus, { align: "center" });
+			if (this.weapon01.defenceBonus) doc.text(199, i, "" + this.weapon01.defenceBonus, { align: "center" });
+			i += 10.6;
+			if (this.weapon02.name) {
+				let res = (this.weapon02.name.indexOf(" (") > 0) ? this.weapon02.name.substring(0, this.weapon02.name.indexOf(" (")) : this.weapon02.name;
+				doc.text(29.3, i, "" + res);
+			}
+			if (this.weapon02.attackBonus) doc.text(132.5, i, "" + this.weapon02.attackBonus, { align: "center" });
+			if (this.weapon02.defenceBonus) doc.text(199, i, "" + this.weapon02.defenceBonus, { align: "center" });
+
+			i = 587.6;
+			if (this.crystal01.name && this.crystal01.type && this.crystal01.rank) {
+				doc.text(29.3, i, "" + this.crystal01.name);
+				doc.text(132.5, i, "" + this.crystal01.type, { align: "center" });
+				doc.text(165.7, i, "" + this.crystal01.rank, { align: "center" });
+				if (this.race !== 6) doc.text(199, i, "" + this.crystal01.EV, { align: "center" });
+				if (this.race === 6) doc.text(199, i, "" + this.crystal01.demiEV, { align: "center" });
+			}
+			i += 10.6;
+			if (this.crystal02.name && this.crystal02.type && this.crystal02.rank) {
+				doc.text(29.3, i, "" + this.crystal02.name);
+				doc.text(132.5, i, "" + this.crystal02.type, { align: "center" });
+				doc.text(165.7, i, "" + this.crystal02.rank, { align: "center" });
+				if (this.race !== 6) doc.text(199, i, "" + this.crystal02.EV, { align: "center" });
+				if (this.race === 6) doc.text(199, i, "" + this.crystal02.demiEV, { align: "center" });
+			}
+			i += 10.6;
+			if (this.crystal03.name && this.crystal03.type && this.crystal03.rank) {
+				doc.text(29.3, i, "" + this.crystal03.name);
+				doc.text(132.5, i, "" + this.crystal03.type, { align: "center" });
+				doc.text(165.7, i, "" + this.crystal03.rank, { align: "center" });
+				if (this.race !== 6) doc.text(199, i, "" + this.crystal03.EV, { align: "center" });
+				if (this.race === 6) doc.text(199, i, "" + this.crystal03.demiEV, { align: "center" });
 			}
 
 			i = 90.4;
 			for (var key in this.mainSkills) {
-				doc.text(325, i, ""+ this.mainSkills[key].value);
+				doc.text(326.5, i, "" + this.mainSkills[key].value, {	align: "center"	});
+				doc.setFontSize(8);
+				let res = (this.mainSkills[key].spe.length > 18) ? this.mainSkills[key].spe.slice(0, 17)+"." : this.mainSkills[key].spe;
+				doc.text(391.2, i, "" + res, {align: "center" });
+				doc.setFontSize(10);
 				i += 21.2;
 			}
 
 			i = 470.6;
 			for (var key in this.crystalSkills) {
-				doc.text(325, i, ""+ this.crystalSkills[key].value);
+				doc.text(326.5, i, "" + this.crystalSkills[key].value, {align: "center" });
+				doc.setFontSize(8);
+				let res = (this.crystalSkills[key].spe.length > 18) ? this.crystalSkills[key].spe.slice(0, 17)+"." : this.crystalSkills[key].spe;
+				doc.text(391.2, i, "" + res, {align: "center" });
+				doc.setFontSize(10);
 				i += 21.2;
 			}
 
-			doc.save("a4.pdf");
+			doc.save(this.name+"_ARLENOR.pdf");
 		});
 	}
 }
