@@ -4,7 +4,7 @@ import { TranslateService } from "@ngx-translate/core";
 import { RoutesService } from "../../../services/routes.service";
 import jsPDF from "jspdf";
 
-import { LIST_ARMORS, LIST_WEAPONS, LIST_CRYSTALS } from "src/app/models/creation.model";
+import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS } from "src/app/models/creation.model";
 
 @Component({
 	selector: "app-creation",
@@ -533,7 +533,7 @@ export class CreationComponent {
 				i += 21.2;
 			}
 
-			doc.save(this.name+"_ARLENOR.pdf");
+			doc.save("Arlenor_" + this.name + ".pdf");
 		});
 	}
 }
