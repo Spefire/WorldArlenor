@@ -4,7 +4,7 @@ import { TranslateService } from "@ngx-translate/core";
 import { RoutesService } from "../../../services/routes.service";
 import jsPDF from "jspdf";
 
-import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS } from "src/app/models/creation.model";
+import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS } from "./../../../models/creation.model";
 
 @Component({
 	selector: "app-creation",
@@ -45,6 +45,11 @@ export class CreationComponent {
 
 	public warning: boolean;
 	public listWarnings: string;
+
+	public listRaces: any = LIST_RACES;
+	public listCrystals: any = LIST_CRYSTALS;
+	public listArmors: any = LIST_ARMORS;
+	public listWeapons: any = LIST_WEAPONS;
 
 	constructor(
 		private routesService: RoutesService,
@@ -103,7 +108,6 @@ export class CreationComponent {
 		};
 
 		this.nbPointsCaracteristics = 13;
-		this.changeRace({ value: 1 });
 
 		this.crystal01 = {};
 		this.crystal02 = {};
@@ -116,6 +120,8 @@ export class CreationComponent {
 		this.name = "";
 		this.description = "";
 		this.avatar = "";
+
+		this.changeRace({ value: 1 });
 	}
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -407,11 +413,11 @@ export class CreationComponent {
 		}
 
 		if (!this.crystal01.name && !this.crystal02.name && !this.crystal03.name) {
-			infos += "Votre personnage n'a pas de cristal, (est-ce voulu ?).<br>";
+			infos += "Votre personnage n'a pas de cristal. (Est-ce voulu ?)<br>";
 		}
 
-		if (!this.weapon01 && !this.weapon02) {
-			infos += "Votre personnage n'a pas d'armes, (est-ce voulu ?).<br>";
+		if (!this.weapon01.name && !this.weapon02.name) {
+			infos += "Votre personnage n'a pas d'armes. (Est-ce voulu ?).<br>";
 		}
 
 		if (this.name.length <= 0) {
