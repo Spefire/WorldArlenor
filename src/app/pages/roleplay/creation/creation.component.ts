@@ -393,13 +393,35 @@ export class CreationComponent {
 			infos += "Il reste des points de caractéristiques à dépenser.<br>";
 		}
 		if (this.leftPointsCaracteristics < 0) {
-			infos += "Vous avez dépensé trop de points de caractéristiques (votre personnage a de l'expérience ?).<br>";
+			infos += "Vous avez dépensé trop de points de caractéristiques (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
 		}
+		if (this.pv <= 0) {
+			infos += "Votre personne n'a plus de points de Vie... Attention lors que vous êtes arlénien, vous perdez des PV à chaque cristal tatoué sur le corps.<br>";
+		}
+
 		if (this.leftPointsSkills > 0) {
 			infos += "Il reste des points de compétences à dépenser.<br>";
 		}
 		if (this.leftPointsSkills < 0) {
-			infos += "Vous avez dépensé trop de points de compétences (votre personnage a de l'expérience ?).<br>";
+			infos += "Vous avez dépensé trop de points de compétences (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
+		}
+
+		if (!this.crystal01.name && !this.crystal02.name && !this.crystal03.name) {
+			infos += "Votre personnage n'a pas de cristal, (est-ce voulu ?).<br>";
+		}
+
+		if (!this.weapon01 && !this.weapon02) {
+			infos += "Votre personnage n'a pas d'armes, (est-ce voulu ?).<br>";
+		}
+
+		if (this.name.length <= 0) {
+			infos += "Votre personnage n'a pas de nom.<br>";
+		}
+		if (this.description.length <= 0) {
+			infos += "Votre personnage n'a pas de description.<br>";
+		}
+		if (this.avatar.length <= 0) {
+			infos += "Votre personnage n'a pas d'avatar.<br>";
 		}
 		this.warning = infos.length > 0;
 		this.listWarnings = infos;
@@ -408,7 +430,7 @@ export class CreationComponent {
 	downloadPDF() {
 
 		if (this.warning) {
-			if (!confirm("Attention : Votre fiche de personnage n'est pas complète, ou avec des incohérences. Voulez-vous quand même télécharger cette fiche ?")) {
+			if (!confirm("Attention : Votre fiche de personnage contient des avertissements. Voulez-vous quand même télécharger cette fiche ?")) {
 				return;
 			}
 		}
