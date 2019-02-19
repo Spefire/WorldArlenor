@@ -4,6 +4,8 @@ import { TranslateService } from "@ngx-translate/core";
 import { RoutesService } from "../../../services/routes.service";
 import jsPDF from "jspdf";
 
+import { LIST_ARMORS, LIST_WEAPONS, LIST_CRYSTALS } from "src/app/models/creation.model";
+
 @Component({
 	selector: "app-creation",
 	templateUrl: "./creation.component.html",
@@ -40,8 +42,6 @@ export class CreationComponent {
 	public armor: any;
 	public weapon01: any;
 	public weapon02: any;
-	public listArmors: Array<any>;
-	public listWeapons: Array<any>;
 	public displayHelpEquipClick: boolean;
 	public displayHelpEquipHover: boolean;
 
@@ -103,178 +103,18 @@ export class CreationComponent {
 		};
 		this.nbPointsCaracteristics = 13;
 		this.changeRace({ value: 1 });
-		this.refreshPoints();
-		//TODO : Traduction (a day)
-		this.listCrystals = [
-			{
-				id: 1,
-				rank: "S",
-				rarity: "Unique",
-				power: "Extrême",
-				EV: 5,
-				demiPV: 10,
-				demiEV: 3
-			},
-			{
-				id: 2,
-				rank: "A",
-				rarity: "Rare",
-				power: "Forte",
-				EV: 3,
-				demiPV: 5,
-				demiEV: 2
-			},
-			{
-				id: 3,
-				rank: "B",
-				rarity: "Peu rare",
-				power: "Moyenne",
-				EV: 2,
-				demiPV: 3,
-				demiEV: 1
-			},
-			{
-				id: 4,
-				rank: "C",
-				rarity: "Commune",
-				power: "Faible",
-				EV: 1,
-				demiPV: 1,
-				demiEV: 0
-			},
-			{
-				id: 5,
-				rank: "D",
-				rarity: "Très commune",
-				power: "Nulle",
-				EV: 0,
-				demiPV: 0,
-				demiEV: 0
-			}
-		];
 		this.crystal01 = {};
 		this.crystal02 = {};
 		this.crystal03 = {};
-		//TODO : Traduction (a day)
-		this.listArmors = [
-			{
-				id: 1,
-				name: "Vêtements renforcés",
-				defenceBonus: 2,
-				mobility: "Normale",
-				actionsMalus: 0
-			},
-			{
-				id: 2,
-				name: "Armure lègère (cuir, cottes de mailles)",
-				defenceBonus: 4,
-				mobility: "Normale",
-				actionsMalus: -2
-			},
-			{
-				id: 3,
-				name: "Armure lourde (cuirasse, armure complète)",
-				defenceBonus: 6,
-				mobility: "Réduite",
-				actionsMalus: -4
-			}
-		];
-		this.listWeapons = [
-			{
-				id: 1,
-				name: "Lame courte (dague)",
-				attackBonus: 2,
-				defenceBonus: 2,
-				category: "Légère"
-			},
-			{
-				id: 2,
-				name: "Arme à une main (épée longue, hache)",
-				attackBonus: 4,
-				defenceBonus: 0,
-				category: "Moyenne"
-			},
-			{
-				id: 3,
-				name: "Arme à deux mains (espadon, grande hache)",
-				attackBonus: 6,
-				defenceBonus: -2,
-				category: "Lourde"
-			},
-			{
-				id: 4,
-				name: "Arme d'hast (lance, hallebarde)",
-				attackBonus: 3,
-				defenceBonus: 1,
-				category: "Lourde"
-			},
-			{
-				id: 5,
-				name: "Arme contondante (matraque, bâton)",
-				attackBonus: 1,
-				defenceBonus: 2,
-				category: "Légère ou Moyenne"
-			},
-			{
-				id: 6,
-				name: "Arc",
-				attackBonus: 2,
-				count: 1,
-				cooldown: "Rapide",
-				zone: 25
-			},
-			{
-				id: 7,
-				name: "Arbalète",
-				attackBonus: 4,
-				count: 1,
-				cooldown: "Action",
-				zone: 35
-			},
-			{
-				id: 8,
-				name: "Fronde",
-				attackBonus: 0,
-				count: 1,
-				cooldown: "Rapide",
-				zone: 10
-			},
-			{
-				id: 9,
-				name: "Armes de lancer (couteaux)",
-				attackBonus: 2,
-				count: 1,
-				cooldown: "Rapide",
-				zone: 5
-			},
-			{
-				id: 10,
-				name: "Armes à feu lègere (pistolet)",
-				attackBonus: 4,
-				count: 4,
-				cooldown: "Action",
-				zone: 20
-			},
-			{
-				id: 11,
-				name: "Armes à feu lourde (fusil)",
-				attackBonus: 6,
-				count: 2,
-				cooldown: "Action",
-				zone: 150
-			},
-			{
-				id: 12,
-				name: "Bouclier",
-				defenceBonus: 2,
-				mobility: "Normale",
-				actionsMalus: -2
-			}
-		];
-		this.armor = this.listArmors[0];
+		this.armor = LIST_ARMORS[0];
 		this.weapon01 = {};
 		this.weapon02 = {};
+		this.refreshPoints();
 	}
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                           PART I : RACE                                  ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	changeRace(event) {
 		this.race = parseInt(event.value);
@@ -335,106 +175,12 @@ export class CreationComponent {
 		this.refreshPoints();
 	}
 
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                           PART II : CARACTERISTICS                       ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	changeCaracteristics(event) {
 		this.caracteristics[event.type] = parseInt(event.value);
-		this.refreshPoints();
-	}
-
-	changeMainSkills(event) {
-		this.mainSkills[event.type].value = parseInt(event.value);
-		this.refreshPoints();
-	}
-
-	changeSpeMainSkills(event) {
-		this.mainSkills[event.type].spe = event.spe;
-		this.refreshPoints();
-	}
-
-	changeCrystalSkills(event) {
-		this.crystalSkills[event.type].value = parseInt(event.value);
-		this.refreshPoints();
-	}
-
-	changeSpeCrystalSkills(event) {
-		this.crystalSkills[event.type].spe = event.spe;
-		this.refreshPoints();
-	}
-
-	changeCrystalName(number, event) {
-		if (number === 1) {
-			this.crystal01.name = event.value;
-		} else if (number === 2) {
-			this.crystal02.name = event.value;
-		} else if (number === 3) {
-			this.crystal03.name = event.value;
-		}
-		this.refreshPoints();
-	}
-
-	changeCrystalType(number, event) {
-		if (number === 1) {
-			this.crystal01.type = event.value;
-		} else if (number === 2) {
-			this.crystal02.type = event.value;
-		} else if (number === 3) {
-			this.crystal03.type = event.value;
-		}
-		this.refreshPoints();
-	}
-
-	changeCrystalRank(number, event) {
-		if (number === 1) {
-			let change = false;
-			this.listCrystals.forEach(element => {
-				if (element.rank === event.value) {
-					change = true;
-					this.crystal01.rank = element.rank;
-					this.crystal01.EV = element.EV;
-					this.crystal01.demiPV = element.demiPV;
-					this.crystal01.demiEV = element.demiEV;
-				}
-			});
-			if (!change) {
-				this.crystal01.rank = undefined;
-				this.crystal01.EV = undefined;
-				this.crystal01.demiPV = undefined;
-				this.crystal01.demiEV = undefined;
-			}
-		} else if (number === 2) {
-			let change = false;
-			this.listCrystals.forEach(element => {
-				if (element.rank === event.value) {
-					change = true;
-					this.crystal02.rank = element.rank;
-					this.crystal02.EV = element.EV;
-					this.crystal02.demiPV = element.demiPV;
-					this.crystal02.demiEV = element.demiEV;
-				}
-			});
-			if (!change) {
-				this.crystal02.rank = undefined;
-				this.crystal02.EV = undefined;
-				this.crystal02.demiPV = undefined;
-				this.crystal02.demiEV = undefined;
-			}
-		} else if (number === 3) {
-			let change = false;
-			this.listCrystals.forEach(element => {
-				if (element.rank === event.value) {
-					change = true;
-					this.crystal03.rank = element.rank;
-					this.crystal03.EV = element.EV;
-					this.crystal03.demiPV = element.demiPV;
-					this.crystal03.demiEV = element.demiEV;
-				}
-			});
-			if (!change) {
-				this.crystal03.rank = undefined;
-				this.crystal03.EV = undefined;
-				this.crystal03.demiPV = undefined;
-				this.crystal03.demiEV = undefined;
-			}
-		}
 		this.refreshPoints();
 	}
 
@@ -472,9 +218,119 @@ export class CreationComponent {
 		this.checkWarnings();
 	}
 
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                           PART III : SKILLS                              ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	changeMainSkills(event) {
+		this.mainSkills[event.type].value = parseInt(event.value);
+		this.refreshPoints();
+	}
+
+	changeSpeMainSkills(event) {
+		this.mainSkills[event.type].spe = event.spe;
+		this.refreshPoints();
+	}
+
+	changeCrystalSkills(event) {
+		this.crystalSkills[event.type].value = parseInt(event.value);
+		this.refreshPoints();
+	}
+
+	changeSpeCrystalSkills(event) {
+		this.crystalSkills[event.type].spe = event.spe;
+		this.refreshPoints();
+	}
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                           PART IV : CRYSTALS                             ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	changeCrystalName(number, event) {
+		if (number === 1) {
+			this.crystal01.name = event.value;
+		} else if (number === 2) {
+			this.crystal02.name = event.value;
+		} else if (number === 3) {
+			this.crystal03.name = event.value;
+		}
+		this.refreshPoints();
+	}
+
+	changeCrystalType(number, event) {
+		if (number === 1) {
+			this.crystal01.type = event.value;
+		} else if (number === 2) {
+			this.crystal02.type = event.value;
+		} else if (number === 3) {
+			this.crystal03.type = event.value;
+		}
+		this.refreshPoints();
+	}
+
+	changeCrystalRank(number, event) {
+		if (number === 1) {
+			let change = false;
+			LIST_CRYSTALS.forEach(element => {
+				if (element.rank === event.value) {
+					change = true;
+					this.crystal01.rank = element.rank;
+					this.crystal01.EV = element.EV;
+					this.crystal01.demiPV = element.demiPV;
+					this.crystal01.demiEV = element.demiEV;
+				}
+			});
+			if (!change) {
+				this.crystal01.rank = undefined;
+				this.crystal01.EV = undefined;
+				this.crystal01.demiPV = undefined;
+				this.crystal01.demiEV = undefined;
+			}
+		} else if (number === 2) {
+			let change = false;
+			LIST_CRYSTALS.forEach(element => {
+				if (element.rank === event.value) {
+					change = true;
+					this.crystal02.rank = element.rank;
+					this.crystal02.EV = element.EV;
+					this.crystal02.demiPV = element.demiPV;
+					this.crystal02.demiEV = element.demiEV;
+				}
+			});
+			if (!change) {
+				this.crystal02.rank = undefined;
+				this.crystal02.EV = undefined;
+				this.crystal02.demiPV = undefined;
+				this.crystal02.demiEV = undefined;
+			}
+		} else if (number === 3) {
+			let change = false;
+			LIST_CRYSTALS.forEach(element => {
+				if (element.rank === event.value) {
+					change = true;
+					this.crystal03.rank = element.rank;
+					this.crystal03.EV = element.EV;
+					this.crystal03.demiPV = element.demiPV;
+					this.crystal03.demiEV = element.demiEV;
+				}
+			});
+			if (!change) {
+				this.crystal03.rank = undefined;
+				this.crystal03.EV = undefined;
+				this.crystal03.demiPV = undefined;
+				this.crystal03.demiEV = undefined;
+			}
+		}
+		this.refreshPoints();
+	}
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                           PART V : EQUIPMENT                             ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	changeArmor(event) {
-		this.armor = this.listArmors[0];
-		this.listArmors.forEach(element => {
+		this.armor = LIST_ARMORS[0];
+		LIST_ARMORS.forEach(element => {
 			if (element.id === parseInt(event.value)) this.armor = element;
 		});
 		this.checkWarnings();
@@ -482,7 +338,7 @@ export class CreationComponent {
 
 	changeWeapon01(event) {
 		this.weapon01 = {};
-		this.listWeapons.forEach(element => {
+		LIST_WEAPONS.forEach(element => {
 			if (element.id === parseInt(event.value)) this.weapon01 = element;
 		});
 		this.checkWarnings();
@@ -490,7 +346,7 @@ export class CreationComponent {
 
 	changeWeapon02(event) {
 		this.weapon02 = {};
-		this.listWeapons.forEach(element => {
+		LIST_WEAPONS.forEach(element => {
 			if (element.id === parseInt(event.value)) this.weapon02 = element;
 		});
 		this.checkWarnings();
@@ -499,6 +355,10 @@ export class CreationComponent {
 	toogleHelpEquip() {
 		this.displayHelpEquipClick = !this.displayHelpEquipClick;
 	}
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                           PART VI : IDENTITY                             ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	changeName(event) {
 		this.name = event.value;
@@ -535,6 +395,10 @@ export class CreationComponent {
 		}
 	}
 
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////                                CONCLUSION                                ////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	checkWarnings() {
 		var infos = "";
 		if (this.leftPointsCaracteristics > 0) {
@@ -554,10 +418,9 @@ export class CreationComponent {
 	}
 
 	downloadPDF() {
-		//TODO : Traduction (a day)
 		if (this.warning) {
 			if (
-				!confirm("Attention : Votre fiche de personnage n'est pas complète, ou avec des erreurs.")
+				!confirm("Attention : Votre fiche de personnage n'est pas complète, ou avec des incohérences. Voulez-vous quand même télécharger cette fiche ?")
 			) {
 				return;
 			}
@@ -597,7 +460,6 @@ export class CreationComponent {
 				maxWidth: 181
 			});
 
-			//TODO : Traduction (a day)
 			switch (this.race) {
 				case 1:
 					doc.text(122, 175, "Humain");
