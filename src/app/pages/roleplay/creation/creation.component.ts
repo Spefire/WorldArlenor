@@ -13,31 +13,25 @@ import { LIST_ARMORS, LIST_WEAPONS, LIST_CRYSTALS } from "src/app/models/creatio
 	providers: [RoutesService]
 })
 export class CreationComponent {
-	public name: string;
-	public description: string;
-	public avatar: string;
-
 	public race: number;
 	public avantages: string;
 	public inconvenients: string;
 
 	public caracteristics: any;
-	public mainSkills: any;
-	public crystalSkills: any;
-
+	public nbPointsCaracteristics: number;
+	public leftPointsCaracteristics: number;
 	public initiative: number;
 	public pv: number;
 	public pe: number;
 
-	public nbPointsCaracteristics: number;
+	public mainSkills: any;
+	public crystalSkills: any;
 	public nbPointsSkills: number;
-	public leftPointsCaracteristics: number;
 	public leftPointsSkills: number;
 
 	public crystal01: any;
 	public crystal02: any;
 	public crystal03: any;
-	public listCrystals: Array<any>;
 
 	public armor: any;
 	public weapon01: any;
@@ -45,8 +39,12 @@ export class CreationComponent {
 	public displayHelpEquipClick: boolean;
 	public displayHelpEquipHover: boolean;
 
-	public warning:boolean;
-	public listWarnings:string;
+	public name: string;
+	public description: string;
+	public avatar: string;
+
+	public warning: boolean;
+	public listWarnings: string;
 
 	constructor(
 		private routesService: RoutesService,
@@ -64,9 +62,11 @@ export class CreationComponent {
 			.subscribe((res: string) => {
 				this.inconvenients = res;
 			});
-		this.name = "";
-		this.description = "";
-		this.avatar = "";
+		this.initValues();
+		this.refreshPoints();
+	}
+
+	initValues() {
 		this.caracteristics = {
 			vigueur: 1,
 			habilete: 1,
@@ -101,15 +101,21 @@ export class CreationComponent {
 			spatiauxtemporels: { value: 0, spe: "" },
 			speciaux: { value: 0, spe: "" }
 		};
+
 		this.nbPointsCaracteristics = 13;
 		this.changeRace({ value: 1 });
+
 		this.crystal01 = {};
 		this.crystal02 = {};
 		this.crystal03 = {};
+
 		this.armor = LIST_ARMORS[0];
 		this.weapon01 = {};
 		this.weapon02 = {};
-		this.refreshPoints();
+
+		this.name = "";
+		this.description = "";
+		this.avatar = "";
 	}
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -118,6 +124,7 @@ export class CreationComponent {
 
 	changeRace(event) {
 		this.race = parseInt(event.value);
+
 		this.translate
 			.get("UNIVERSE.POPULATION.PEOPLE" + this.race + ".AVANTAGES")
 			.subscribe((res: string) => {
@@ -128,50 +135,31 @@ export class CreationComponent {
 			.subscribe((res: string) => {
 				this.inconvenients = res;
 			});
-		switch (this.race) {
-			case 1:
-				this.pe = 6;
-				this.mainSkills.athletisme.value = 1;
-				this.nbPointsSkills = 51;
-				break;
 
-			case 2:
-				this.pe = 8;
-				this.nbPointsSkills = 50;
-				break;
+		LIST_RACES.forEach(element => {
+			if (this.race === element.id) {
+				this.pe = element.pe;
+				this.nbPointsSkills = element.nbPointsSkills;
+			}
+		});
 
-			case 3:
-				this.pe = 8;
-				this.mainSkills.animaux.value = 1;
-				this.mainSkills.combat.value = 1;
-				this.nbPointsSkills = 52;
-				break;
-
-			case 4:
-				this.pe = 8;
-				this.mainSkills.furtivite.value = 1;
-				this.mainSkills.manipulation.value = 1;
-				this.nbPointsSkills = 52;
-				break;
-
-			case 5:
-				this.pe = 12;
-				this.mainSkills.intuition.value = 1;
-				this.mainSkills.medecine.value = 1;
-				this.nbPointsSkills = 52;
-				break;
-
-			case 6:
-				this.pe = 10;
-				this.mainSkills.combat.value = 1;
-				this.mainSkills.intuition.value = 1;
-				this.mainSkills.survie.value = 1;
-				this.nbPointsSkills = 53;
-				break;
-
-			default:
-				break;
+		if (this.race == 1) {
+			this.mainSkills.athletisme.value = 1;
+		} else if (this.race == 3) {
+			this.mainSkills.animaux.value = 1;
+			this.mainSkills.combat.value = 1;
+		} else if (this.race == 4) {
+			this.mainSkills.furtivite.value = 1;
+			this.mainSkills.manipulation.value = 1;
+		} else if (this.race == 5) {
+			this.mainSkills.intuition.value = 1;
+			this.mainSkills.medecine.value = 1;
+		} else if (this.race == 6) {
+			this.mainSkills.combat.value = 1;
+			this.mainSkills.intuition.value = 1;
+			this.mainSkills.survie.value = 1;
 		}
+
 		this.refreshPoints();
 	}
 
@@ -413,15 +401,14 @@ export class CreationComponent {
 		if (this.leftPointsSkills < 0) {
 			infos += "Vous avez dépensé trop de points de compétences (votre personnage a de l'expérience ?).<br>";
 		}
-		this.warning = (infos.length > 0);
+		this.warning = infos.length > 0;
 		this.listWarnings = infos;
 	}
 
 	downloadPDF() {
+
 		if (this.warning) {
-			if (
-				!confirm("Attention : Votre fiche de personnage n'est pas complète, ou avec des incohérences. Voulez-vous quand même télécharger cette fiche ?")
-			) {
+			if (!confirm("Attention : Votre fiche de personnage n'est pas complète, ou avec des incohérences. Voulez-vous quand même télécharger cette fiche ?")) {
 				return;
 			}
 		}
@@ -460,26 +447,11 @@ export class CreationComponent {
 				maxWidth: 181
 			});
 
-			switch (this.race) {
-				case 1:
-					doc.text(122, 175, "Humain");
-					break;
-				case 2:
-					doc.text(122, 175, "Elfe");
-					break;
-				case 3:
-					doc.text(122, 175, "Nain");
-					break;
-				case 4:
-					doc.text(122, 175, "Mutant");
-					break;
-				case 5:
-					doc.text(122, 175, "Pan");
-					break;
-				case 6:
-					doc.text(122, 175, "Arlénien");
-					break;
-			}
+			LIST_RACES.forEach(element => {
+				if (this.race === element.id) {
+					doc.text(122, 175, element.name);
+				}
+			});
 
 			var i = 217.2;
 			for (var key in this.caracteristics) {

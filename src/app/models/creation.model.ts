@@ -1,3 +1,42 @@
+export const LIST_RACES = [
+	{
+		id: 1,
+		name: "Humain",
+		pe: 6,
+		nbPointsSkills: 51
+	},
+	{
+		id: 2,
+		name: "Elfe",
+		pe: 8,
+		nbPointsSkills: 50
+	},
+	{
+		id: 3,
+		name: "Nain",
+		pe: 8,
+		nbPointsSkills: 52
+	},
+	{
+		id: 4,
+		name: "Mutant",
+		pe: 8,
+		nbPointsSkills: 52
+	},
+	{
+		id: 5,
+		name: "Pan",
+		pe: 12,
+		nbPointsSkills: 52
+	},
+	{
+		id: 6,
+		name: "Arlénien",
+		pe: 10,
+		nbPointsSkills: 53
+	}
+];
+
 export const LIST_ARMORS = [
 	{
 		id: 1,
