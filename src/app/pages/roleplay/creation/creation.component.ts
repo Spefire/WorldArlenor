@@ -416,6 +416,10 @@ export class CreationComponent {
 			infos += "Votre personnage n'a pas de cristal. (Est-ce voulu ?)<br>";
 		}
 
+		if ((this.crystal01.name && this.crystal01.rank === "S") || (this.crystal02.name && this.crystal02.rank === "S") || (this.crystal03.name && this.crystal03.rank === "S")) {
+			infos += "Votre personnage a un cristal de rang S (votre personnage l'a obtenu via l'eXPérience ?).<br>";
+		}
+
 		if (!this.weapon01.name && !this.weapon02.name) {
 			infos += "Votre personnage n'a pas d'armes. (Est-ce voulu ?).<br>";
 		}
@@ -430,7 +434,7 @@ export class CreationComponent {
 			infos += "Votre personnage n'a pas d'avatar.<br>";
 		}
 		this.warning = infos.length > 0;
-		this.listWarnings = infos;
+		if (this.warning)	this.listWarnings = "<b>Vous avez des éléments manquants ou des incohérences dans votre fiche :</b><br><br>" + infos;
 	}
 
 	downloadPDF() {

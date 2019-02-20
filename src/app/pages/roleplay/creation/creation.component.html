@@ -63,8 +63,8 @@
 			}}</option>
 		</select>
 	</div>
-	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE6.TEXT01' | translate }}"></p>
-	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE6.TEXT02' | translate }}"></p>
+	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE'+race+'.TEXT01' | translate }}"></p>
+	<p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE'+race+'.TEXT02' | translate }}"></p>
 	<table class="full-table">
 		<thead>
 			<tr>
@@ -84,7 +84,8 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE02" | translate }}</h2>
 	<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
-	<p>
+	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
+	<p [ngClass]="{'warning': leftPointsCaracteristics < 0 }">
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 		<b>{{ leftPointsCaracteristics }}</b>
 	</p>
@@ -137,7 +138,6 @@
 			></creation-slider>
 		</tbody>
 	</table>
-	<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
 	<table class="full-table">
 		<thead>
 			<tr>
@@ -159,7 +159,8 @@
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
 	<p innerHtml="{{ 'CREATION.SKILLS.TEXT01' | translate }}"></p>
-	<p>
+	<p innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
+	<p [ngClass]="{'warning': leftPointsSkills < 0 }">
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 		<b>{{ leftPointsSkills }}</b>
 	</p>
@@ -371,7 +372,6 @@
 			></creation-slider>
 		</tbody>
 	</table>
-	<p innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
 	<table>
 		<tbody>
 			<creation-slider
@@ -469,8 +469,8 @@
 			</tr>
 		</tbody>
 	</table>
-	<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
 	<button><a href="./assets/files/Annexe_Cristaux.pdf" download>{{ 'ROLEPLAY.FILES.LISTPOWERS' | translate | uppercase }}</a></button>
+	<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
 	<table>
 		<thead>
 			<tr>
@@ -508,7 +508,7 @@
 							(change)="changeCrystalRank(1, $event.target)"
 							>
 							<option value=""></option>
-							<option value="S">S</option>
+							<option value="S" class="warning">S</option>
 							<option value="A">A</option>
 							<option value="B">B</option>
 							<option value="C">C</option>
@@ -544,7 +544,7 @@
 							(change)="changeCrystalRank(2, $event.target)"
 						>
 							<option value=""></option>
-							<option value="S">S</option>
+							<option value="S" class="warning">S</option>
 							<option value="A">A</option>
 							<option value="B">B</option>
 							<option value="C">C</option>
@@ -580,7 +580,7 @@
 							(change)="changeCrystalRank(3, $event.target)"
 						>
 							<option value=""></option>
-							<option value="S">S</option>
+							<option value="S" class="warning">S</option>
 							<option value="A">A</option>
 							<option value="B">B</option>
 							<option value="C">C</option>
@@ -706,6 +706,6 @@
 	<!------------                              CONCLUSION                                              ------------->
 	<!--------------------------------------------------------------------------------------------------------------->
 	<h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
-	<p innerHtml="{{ listWarnings }}"></p>
+	<p class="warning" innerHtml="{{ listWarnings }}"></p>
 	<button (click)="downloadPDF()">Télécharger la fiche de personnage</button>
 </div>

@@ -96,6 +96,10 @@ img {
 	outline: none;
 }
 
+.warning {
+	color: $warning-color;
+}
+
 ::-webkit-scrollbar {
 	width: 12px;
 }
