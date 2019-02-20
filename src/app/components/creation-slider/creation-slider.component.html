@@ -6,6 +6,7 @@
 		<button class="cs-button" [ngClass]="{'disabled': !canUp }" (click)="upValue()">&#8250;</button>
 	</td>
 	<td *ngIf="hasSpecialistic || hasCristalSpecialistic" class="cs-spe">
+		<span>Spécialité (option) :</span>
 		<div *ngIf="hasSpecialistic" class="dropdown">
 			<select class="dropdown-select" (change)="speChange($event.target.value)">
 				<option value=""></option>
