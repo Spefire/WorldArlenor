@@ -212,7 +212,7 @@
 				"TEXT02": "Les elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
 				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
 				"AVANTAGES": "- Personnage très respecté globalement par les humains et les autres elfes.<br>- (Stat) Quantité d'énergie vitale : 8",
-				"INCONVENIENTS": "- Personnage craint ou hait globalement par les nains et les mutants<br>- Addiction : En cours de rédaction."
+				"INCONVENIENTS": "- Personnage craint ou hait globalement par les nains et les mutants<br>- Addiction : Irrésistible envie (obligation) d'utiliser la magie en combat."
 			},
 			"PEOPLE3": {
 				"NAME": "Nain",
@@ -261,14 +261,15 @@
     "PERSO": {
 			"TITLE": "La création de personnage",
       "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... (bientôt la création de perso en ligne)",
-      "SEEMORE": "Télécharger la fiche de perso V1.0"
+      "SEEMORE": "Passer à la création"
     },
     "FILES": {
 			"TITLE": "Les règles du jeu",
       "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu et des propositions de pouvoirs.",
 			"SEEMORE01": "Télécharger le Manuel du Joueur V1.0",
 			"RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
-			"SEEMORE02": "Télécharger le Manuel du MJ V1.0"
+			"SEEMORE02": "Télécharger le Manuel du MJ V1.0",
+			"LISTPOWERS": "Télécharger la liste non-exhaustive de pouvoirs (cristaux)"
     }
 	},
 	"CREATION": {
