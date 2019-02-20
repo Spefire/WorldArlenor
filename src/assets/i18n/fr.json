@@ -290,6 +290,7 @@
 			"INITIATIVE": "Initiative",
 			"PV": "Points de Vie",
 			"PE": "Points d'Energie Vitale",
+			"SPE": "Spécialité (option)",
 			"CRYSTAL": "Nom du cristal",
 			"TYPE": "Type",
 			"RANK": "Rang",
