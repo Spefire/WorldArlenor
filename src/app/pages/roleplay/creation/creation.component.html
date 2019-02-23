@@ -10,7 +10,7 @@
 
 <popup *ngIf="help" text="{{ help }}" (onClosePopup)="closePopup()"></popup>
 
-<div class="flex-container">
+<div class="creation-flex">
 	<div class="creation-container left">
 		<!--------------------------------------------------------------------------------------------------------------->
 		<!------------                             PART I : RACE                                            ------------->
@@ -106,7 +106,10 @@
 		<h2>{{ "CREATION.MENU.TITLE02" | translate }}</h2>
 		<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
 		<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
-		<p [ngClass]="{ warning: leftPointsCaracteristics < 0 }">
+		<p
+			[ngClass]="{ warning: leftPointsCaracteristics < 0 }"
+			class="creation-points"
+		>
 			{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 			<b>{{ leftPointsCaracteristics }}</b>
 		</p>
@@ -189,14 +192,12 @@
 	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
 	<p innerHtml="{{ 'CREATION.SKILLS.TEXT01' | translate }}"></p>
 	<p innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
-	<p [ngClass]="{ warning: leftPointsSkills < 0 }">
+	<p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 		<b>{{ leftPointsSkills }}</b>
 	</p>
-	<div class="flex-container">
-		<div
-			style="width : 50%; display: flex; flex-direction: column; align-items: center;"
-		>
+	<div class="creation-flex">
+		<div class="creation-skills">
 			<table>
 				<tbody>
 					<creation-slider
@@ -366,9 +367,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div
-			style="width : 50%; display: flex; flex-direction: column; align-items: center;"
-		>
+		<div class="creation-skills">
 			<table>
 				<tbody>
 					<creation-slider
@@ -518,7 +517,7 @@
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                           PART IV : CRYSTALS                                         ------------->
 <!--------------------------------------------------------------------------------------------------------------->
-<div class="flex-container">
+<div class="creation-flex">
 	<div class="creation-container left">
 		<h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
 		<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
@@ -677,7 +676,7 @@
 	<div class="creation-container right">
 		<h2>{{ "CREATION.MENU.TITLE05" | translate }}</h2>
 		<p innerHtml="{{ 'CREATION.EQUIPEMENT.TEXT' | translate }}"></p>
-		<button	(click)="openPopup()">?</button>
+		<button (click)="openPopup()">?</button>
 		<div>
 			<span>{{ "CREATION.INDICS.ARMOR" | translate }} : </span>
 			<div class="dropdown">
@@ -770,34 +769,40 @@
 <!--------------------------------------------------------------------------------------------------------------->
 <div class="creation-container big">
 	<h2>{{ "CREATION.MENU.TITLE06" | translate }}</h2>
-	<p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
-	<span>Nom du personnage</span>
-	<input type="text" (change)="changeName($event.target)" />
-	<span>Description rapide du personnage (max : 130 caract.)</span>
-	<textarea
-		maxlength="130"
-		(change)="changeDescription($event.target)"
-	></textarea>
-	<span>Avatar du personnage</span>
-	<label for="avatar" class="creation-avatar">
-		<span *ngIf="!avatar"
-			>Importer une image<br />(ratio 1:1 | JPG, PNG | max 2Mo)</span
-		>
-		<img *ngIf="avatar" alt="" [src]="avatar" />
-	</label>
-	<input
-		type="file"
-		name="avatar"
-		id="avatar"
-		accept="image/png, image/jpeg"
-		(change)="changeAvatar($event.target)"
-	/>
+	<div class="creation-flex">
+		<div class="creation-identity left">
+			<p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
+			<span>Nom du personnage</span>
+			<input type="text" (change)="changeName($event.target)" />
+			<span>Description rapide du personnage (max : 130 caract.)</span>
+			<textarea
+				maxlength="130"
+				(change)="changeDescription($event.target)"
+			></textarea>
+		</div>
+		<div class="creation-identity right">
+			<span>Avatar du personnage</span>
+			<label for="avatar" class="creation-avatar">
+				<span *ngIf="!avatar"
+					>Importer une image<br />(ratio 1:1 | JPG, PNG | max 2Mo)</span
+				>
+				<img *ngIf="avatar" alt="" [src]="avatar" />
+			</label>
+			<input
+				type="file"
+				name="avatar"
+				id="avatar"
+				accept="image/png, image/jpeg"
+				(change)="changeAvatar($event.target)"
+			/>
+		</div>
+	</div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                              CONCLUSION                                              ------------->
 <!--------------------------------------------------------------------------------------------------------------->
-<div class="creation-container big">
+<div class="creation-container big final">
 	<h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
-	<p class="warning" innerHtml="{{ listWarnings }}"></p>
+	<p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
 	<button (click)="downloadPDF()">Télécharger la fiche de personnage</button>
 </div>
