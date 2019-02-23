@@ -154,6 +154,10 @@ input[type="text"] {
 	border-color: $secondary-color;
 }
 
+::placeholder {
+	color: $grey-color;
+}
+
 textarea {
 	width: 400px;
 	height: 50px;
@@ -164,16 +168,6 @@ textarea {
 	color: $light-color;
 	background: $dark-color;
 	border-color: $secondary-color;
-}
-
-.popup {
-	position: absolute;
-	top: 50px;
-	z-index: 1;
-	padding: 25px;
-	border-radius: 5px;
-	border: 2px solid $secondary-color;
-	background: $dark-color;
 }
 
 .help {

@@ -1,12 +1,30 @@
 @import "../../../../styles/variables.scss";
 
 :host {
+
+	h2 {
+		margin: 10px 0;
+	}
+
+	p {
+		width: 90%;
+		text-align: justify;
+	}
+
+	.flex-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+
 	.creation-container {
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
+		width: 50%;
+		border-top: 6px solid $secondary-color;
 		background-position: center;
 		background-size: cover;
 		background-image: linear-gradient(
@@ -18,6 +36,18 @@
 				rgba($primary-color, 0.5)
 			),
 			url("/assets/images/home_02.png");
+
+		&.big {
+			width: 100%;
+		}
+
+		&.left {
+			border-right: 2px solid $secondary-color;
+		}
+
+		&.right {
+			border-left: 2px solid $secondary-color;
+		}
 	}
 
 	.creation-race-img {

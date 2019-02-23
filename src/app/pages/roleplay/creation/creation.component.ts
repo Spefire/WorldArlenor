@@ -51,6 +51,8 @@ export class CreationComponent {
 	public listArmors: any = LIST_ARMORS;
 	public listWeapons: any = LIST_WEAPONS;
 
+	public help: string;
+
 	constructor(
 		private routesService: RoutesService,
 		private route: ActivatedRoute,
@@ -69,6 +71,7 @@ export class CreationComponent {
 			});
 		this.initValues();
 		this.refreshPoints();
+		this.closePopup();
 	}
 
 	initValues() {
@@ -122,6 +125,22 @@ export class CreationComponent {
 		this.avatar = "";
 
 		this.changeRace({ value: 1 });
+	}
+
+	openPopup(event: any) {
+		if (event) {
+			this.help = event.value;
+		}	else {
+			this.translate
+			.get("CREATION.EQUIPEMENT.HELP")
+			.subscribe((res: string) => {
+				this.help = res;
+			});
+		}
+	}
+
+	closePopup() {
+		this.help = "";
 	}
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////

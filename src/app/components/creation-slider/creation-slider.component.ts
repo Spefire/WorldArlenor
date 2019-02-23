@@ -12,6 +12,7 @@ export class CreationSliderComponent implements OnInit {
 	@Input() public value: number;
 	@Input() public hasSpecialistic: boolean;
 	@Input() public hasCristalSpecialistic: boolean;
+	@Output() onOpenPopup = new EventEmitter();
 	@Output() onValueChange = new EventEmitter();
 	@Output() onSpeChange = new EventEmitter();
 
@@ -35,10 +36,9 @@ export class CreationSliderComponent implements OnInit {
 
 	public valueMin: number;
 	public valueMax: number;
+	public spe;
 	public canUp: boolean;
 	public canDown: boolean;
-	public displayHelpClick: boolean;
-	public displayHelpHover: boolean;
 	public listSpecialistics: Array<string>;
 
 	ngOnInit() {
@@ -48,10 +48,6 @@ export class CreationSliderComponent implements OnInit {
 	checkButtons() {
 		this.canDown = this.value > this.valueMin;
 		this.canUp = this.value < this.valueMax;
-	}
-
-	toogleHelp() {
-		this.displayHelpClick = !this.displayHelpClick;
 	}
 
 	downValue() {
@@ -75,6 +71,11 @@ export class CreationSliderComponent implements OnInit {
 	}
 
 	speChange(spe: string) {
-		this.onSpeChange.emit({ type: this.type, spe: spe });
+		this.spe = spe;
+		this.onSpeChange.emit({ type: this.type, spe: this.spe });
+	}
+
+	openPopup() {
+		this.onOpenPopup.emit({ value: this.help });
 	}
 }
