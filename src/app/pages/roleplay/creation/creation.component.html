@@ -191,7 +191,8 @@
 <div class="creation-container big">
 	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
 	<p innerHtml="{{ 'CREATION.SKILLS.TEXT01' | translate }}"></p>
-	<p innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
+	<p class="creation-points" innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
+	<p innerHtml="{{ 'CREATION.SKILLS.TEXT03' | translate }}"></p>
 	<p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 		<b>{{ leftPointsSkills }}</b>
