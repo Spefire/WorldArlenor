@@ -456,6 +456,67 @@ export class CreationComponent {
 		if (this.warning)	this.listWarnings = "<b>Vous avez des éléments manquants ou des incohérences dans votre fiche :</b><br><br>" + infos;
 	}
 
+	loadJSON(event) {
+		var file = event.files[0];
+		if (!file) return;
+		if (file.size > 2000000) {
+			alert("Warning (Max size : 2 Mo)");
+		} else {
+			var parameters;
+			const promiseGetParameters = new Promise(function(resolve, reject) {
+				var reader = new FileReader();
+				reader.readAsText(file);
+				reader.onload = function() {
+					parameters = JSON.parse( reader.result.toString() );
+					return resolve(true);
+				};
+				reader.onerror = function(error) {
+					console.log(error);
+				};
+			});
+			Promise.all([promiseGetParameters]).then(() => {
+				this.caracteristics = parameters.caracteristics;
+				this.mainSkills = parameters.mainSkills;
+				this.crystalSkills = parameters.crystalSkills;
+				this.nbPointsCaracteristics = parameters.nbPointsCaracteristics;
+				this.crystal01 = parameters.crystal01;
+				this.crystal02 = parameters.crystal02;
+				this.crystal03 = parameters.crystal03;
+				this.armor = parameters.armor;
+				this.weapon01 = parameters.weapon01;
+				this.weapon02 = parameters.weapon02;
+				this.name = parameters.name;
+				this.description = parameters.description;
+				this.avatar = parameters.avatar;
+				this.changeRace({ value: parameters.race });
+				this.checkWarnings();
+			});
+		}
+	}
+
+	downloadJSON() {
+		var parameters = {
+			caracteristics: this.caracteristics,
+			mainSkills: this.mainSkills,
+			crystalSkills: this.crystalSkills,
+			nbPointsCaracteristics: this.nbPointsCaracteristics,
+			crystal01: this.crystal01,
+			crystal02: this.crystal02,
+			crystal03: this.crystal03,
+			armor: this.armor,
+			weapon01: this.weapon01,
+			weapon02: this.weapon02,
+			name: this.name,
+			description: this.description,
+			avatar: this.avatar,
+			race: this.race
+		}
+		var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parameters));
+		var dlAnchorElem = document.getElementById('creation-save-parameters');
+		dlAnchorElem.setAttribute("href", dataStr);
+		dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.name + ".json");
+	}
+
 	downloadPDF() {
 
 		if (this.warning) {
