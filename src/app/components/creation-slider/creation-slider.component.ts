@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
 	selector: "creation-slider",
 	templateUrl: "./creation-slider.component.html",
 	styleUrls: ["./creation-slider.component.scss"]
 })
-export class CreationSliderComponent implements OnInit {
+export class CreationSliderComponent {
 	@Input() public name: string;
 	@Input() public help: string;
 	@Input() public type: string;
