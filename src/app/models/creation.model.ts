@@ -32,7 +32,7 @@ export const LIST_RACES = [
 	{
 		id: 6,
 		name: "Arlénien",
-		pe: 10,
+		pe: 8,
 		nbPointsSkills: 33
 	}
 ];

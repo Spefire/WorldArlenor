@@ -432,6 +432,7 @@
 			</table>
 		</div>
 	</div>
+	<p innerHtml="{{ 'CREATION.SKILLS.TEXT04' | translate }}"></p>
 	<p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
 		<b>{{ leftPointsCrystalSkills }}</b>
@@ -824,10 +825,10 @@
 			<p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
 			<span>Nom du personnage</span>
 			<input type="text" value="{{ name }}" (change)="changeName($event.target)" />
-			<span>Description rapide du personnage (max : 130 caract.)</span>
+			<span>Description / histoire du personnage (max : 580 caract.)</span>
 			<textarea
 				value="{{ description }}"
-				maxlength="130"
+				maxlength="580"
 				(change)="changeDescription($event.target)"
 			></textarea>
 		</div>

@@ -413,11 +413,18 @@ export class CreationComponent {
 			infos += "Votre personne n'a plus de points de Vie... Attention lors que vous êtes arlénien, vous perdez des PV à chaque cristal tatoué sur le corps.<br>";
 		}
 
-		if (this.leftPointsSkills > 0) {
+		if (this.leftPointsMainSkills > 0) {
 			infos += "Il reste des points de compétences à dépenser.<br>";
 		}
-		if (this.leftPointsSkills < 0) {
+		if (this.leftPointsMainSkills < 0) {
 			infos += "Vous avez dépensé trop de points de compétences (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
+		}
+
+		if (this.leftPointsCrystalSkills > 0) {
+			infos += "Il reste des points de compétences de cristaux à dépenser.<br>";
+		}
+		if (this.leftPointsCrystalSkills < 0) {
+			infos += "Vous avez dépensé trop de points de compétences de cristaux (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
 		}
 
 		if (!this.crystal01.name && !this.crystal02.name && !this.crystal03.name) {
@@ -467,7 +474,6 @@ export class CreationComponent {
 				this.caracteristics = parameters.caracteristics;
 				this.mainSkills = parameters.mainSkills;
 				this.crystalSkills = parameters.crystalSkills;
-				this.nbPointsCaracteristics = parameters.nbPointsCaracteristics;
 				this.crystal01 = parameters.crystal01;
 				this.crystal02 = parameters.crystal02;
 				this.crystal03 = parameters.crystal03;
@@ -489,7 +495,6 @@ export class CreationComponent {
 			caracteristics: this.caracteristics,
 			mainSkills: this.mainSkills,
 			crystalSkills: this.crystalSkills,
-			nbPointsCaracteristics: this.nbPointsCaracteristics,
 			crystal01: this.crystal01,
 			crystal02: this.crystal02,
 			crystal03: this.crystal03,
@@ -542,16 +547,17 @@ export class CreationComponent {
 		});
 
 		Promise.all([promise]).then(() => {
-			doc.text(122, 90.5, "" + this.name);
 			if (this.avatar) doc.addImage(this.avatar, "JPEG", 25, 20, 81.5, 73);
-			doc.text(29.3, 134, "" + this.description, {
+			doc.text(122, 59, "" + this.description, {
 				align: "justify",
-				maxWidth: 181
+				maxWidth: 290
 			});
+
+			doc.text(122, 132.9, "" + this.name);
 
 			LIST_RACES.forEach(element => {
 				if (this.race === element.id) {
-					doc.text(122, 175, element.name);
+					doc.text(122, 154.1, element.name);
 				}
 			});
 
@@ -615,7 +621,7 @@ export class CreationComponent {
 				if (this.race === 6) doc.text(199, i, "" + this.crystal03.demiEV, { align: "center" });
 			}
 
-			i = 90.4;
+			i = 154.0;
 			for (var key in this.mainSkills) {
 				doc.text(326.5, i, "" + this.mainSkills[key].value, {	align: "center"	});
 				doc.setFontSize(8);
