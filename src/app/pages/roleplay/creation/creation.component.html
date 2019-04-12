@@ -210,7 +210,7 @@
 	<p innerHtml="{{ 'CREATION.SKILLS.TEXT03' | translate }}"></p>
 	<p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
 		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
-		<b>{{ leftPointsSkills }}</b>
+		<b>{{ leftPointsMainSkills }}</b>
 	</p>
 	<div class="creation-flex">
 		<div class="creation-skills">
@@ -318,6 +318,12 @@
 						(onValueChange)="changeMainSkills($event)"
 						(onSpeChange)="changeSpeMainSkills($event)"
 					></creation-slider>
+				</tbody>
+			</table>
+		</div>
+		<div class="creation-skills">
+			<table>
+				<tbody>
 					<creation-slider
 						hasSpecialistic="true"
 						specialistics="{{
@@ -364,12 +370,6 @@
 						(onValueChange)="changeMainSkills($event)"
 						(onSpeChange)="changeSpeMainSkills($event)"
 					></creation-slider>
-				</tbody>
-			</table>
-		</div>
-		<div class="creation-skills">
-			<table>
-				<tbody>
 					<creation-slider
 						hasSpecialistic="true"
 						specialistics="{{ 'CREATION.MEDECINE.SPECIALISTICS' | translate }}"
@@ -428,86 +428,106 @@
 						(onValueChange)="changeMainSkills($event)"
 						(onSpeChange)="changeSpeMainSkills($event)"
 					></creation-slider>
-					<creation-slider
-						hasCristalSpecialistic="true"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.ELEMENTAIRES.NAME' | translate }}"
-						help="{{ 'CREATION.ELEMENTAIRES.HELP' | translate }}"
-						type="elementaires"
-						value="{{ crystalSkills.elementaires.value }}"
-						spe="{{ crystalSkills.elementaires.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeCrystalSkills($event)"
-						(onSpeChange)="changeSpeCrystalSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasCristalSpecialistic="true"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.INVOCATIONS.NAME' | translate }}"
-						help="{{ 'CREATION.INVOCATIONS.HELP' | translate }}"
-						type="invocations"
-						value="{{ crystalSkills.invocations.value }}"
-						spe="{{ crystalSkills.invocations.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeCrystalSkills($event)"
-						(onSpeChange)="changeSpeCrystalSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasCristalSpecialistic="true"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.MENTAUX.NAME' | translate }}"
-						help="{{ 'CREATION.MENTAUX.HELP' | translate }}"
-						type="mentaux"
-						value="{{ crystalSkills.mentaux.value }}"
-						spe="{{ crystalSkills.mentaux.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeCrystalSkills($event)"
-						(onSpeChange)="changeSpeCrystalSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasCristalSpecialistic="true"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.TRANSFORMATIONS.NAME' | translate }}"
-						help="{{ 'CREATION.TRANSFORMATIONS.HELP' | translate }}"
-						type="transformations"
-						value="{{ crystalSkills.transformations.value }}"
-						spe="{{ crystalSkills.transformations.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeCrystalSkills($event)"
-						(onSpeChange)="changeSpeCrystalSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasCristalSpecialistic="true"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.SPATIAUXTEMPORELS.NAME' | translate }}"
-						help="{{ 'CREATION.SPATIAUXTEMPORELS.HELP' | translate }}"
-						type="spatiauxtemporels"
-						value="{{ crystalSkills.spatiauxtemporels.value }}"
-						spe="{{ crystalSkills.spatiauxtemporels.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeCrystalSkills($event)"
-						(onSpeChange)="changeSpeCrystalSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasCristalSpecialistic="true"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.SPECIAUX.NAME' | translate }}"
-						help="{{ 'CREATION.SPECIAUX.HELP' | translate }}"
-						type="speciaux"
-						value="{{ crystalSkills.speciaux.value }}"
-						spe="{{ crystalSkills.speciaux.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeCrystalSkills($event)"
-						(onSpeChange)="changeSpeCrystalSkills($event)"
-					></creation-slider>
 				</tbody>
 			</table>
+		</div>
+	</div>
+	<p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
+		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
+		<b>{{ leftPointsCrystalSkills }}</b>
+	</p>
+	<div class="creation-flex">
+		<div class="creation-flex">
+			<div class="creation-skills">
+				<table>
+					<tbody>
+						<creation-slider
+							hasCristalSpecialistic="true"
+							min="0"
+							max="10"
+							name="{{ 'CREATION.ELEMENTAIRES.NAME' | translate }}"
+							help="{{ 'CREATION.ELEMENTAIRES.HELP' | translate }}"
+							type="elementaires"
+							value="{{ crystalSkills.elementaires.value }}"
+							spe="{{ crystalSkills.elementaires.spe }}"
+							(onOpenPopup)="openPopup($event)"
+							(onValueChange)="changeCrystalSkills($event)"
+							(onSpeChange)="changeSpeCrystalSkills($event)"
+						></creation-slider>
+						<creation-slider
+							hasCristalSpecialistic="true"
+							min="0"
+							max="10"
+							name="{{ 'CREATION.INVOCATIONS.NAME' | translate }}"
+							help="{{ 'CREATION.INVOCATIONS.HELP' | translate }}"
+							type="invocations"
+							value="{{ crystalSkills.invocations.value }}"
+							spe="{{ crystalSkills.invocations.spe }}"
+							(onOpenPopup)="openPopup($event)"
+							(onValueChange)="changeCrystalSkills($event)"
+							(onSpeChange)="changeSpeCrystalSkills($event)"
+						></creation-slider>
+						<creation-slider
+							hasCristalSpecialistic="true"
+							min="0"
+							max="10"
+							name="{{ 'CREATION.MENTAUX.NAME' | translate }}"
+							help="{{ 'CREATION.MENTAUX.HELP' | translate }}"
+							type="mentaux"
+							value="{{ crystalSkills.mentaux.value }}"
+							spe="{{ crystalSkills.mentaux.spe }}"
+							(onOpenPopup)="openPopup($event)"
+							(onValueChange)="changeCrystalSkills($event)"
+							(onSpeChange)="changeSpeCrystalSkills($event)"
+						></creation-slider>
+					</tbody>
+				</table>
+			</div>
+			<div class="creation-skills">
+				<table>
+					<tbody>
+						<creation-slider
+							hasCristalSpecialistic="true"
+							min="0"
+							max="10"
+							name="{{ 'CREATION.TRANSFORMATIONS.NAME' | translate }}"
+							help="{{ 'CREATION.TRANSFORMATIONS.HELP' | translate }}"
+							type="transformations"
+							value="{{ crystalSkills.transformations.value }}"
+							spe="{{ crystalSkills.transformations.spe }}"
+							(onOpenPopup)="openPopup($event)"
+							(onValueChange)="changeCrystalSkills($event)"
+							(onSpeChange)="changeSpeCrystalSkills($event)"
+						></creation-slider>
+						<creation-slider
+							hasCristalSpecialistic="true"
+							min="0"
+							max="10"
+							name="{{ 'CREATION.SPATIAUXTEMPORELS.NAME' | translate }}"
+							help="{{ 'CREATION.SPATIAUXTEMPORELS.HELP' | translate }}"
+							type="spatiauxtemporels"
+							value="{{ crystalSkills.spatiauxtemporels.value }}"
+							spe="{{ crystalSkills.spatiauxtemporels.spe }}"
+							(onOpenPopup)="openPopup($event)"
+							(onValueChange)="changeCrystalSkills($event)"
+							(onSpeChange)="changeSpeCrystalSkills($event)"
+						></creation-slider>
+						<creation-slider
+							hasCristalSpecialistic="true"
+							min="0"
+							max="10"
+							name="{{ 'CREATION.SPECIAUX.NAME' | translate }}"
+							help="{{ 'CREATION.SPECIAUX.HELP' | translate }}"
+							type="speciaux"
+							value="{{ crystalSkills.speciaux.value }}"
+							spe="{{ crystalSkills.speciaux.spe }}"
+							(onOpenPopup)="openPopup($event)"
+							(onValueChange)="changeCrystalSkills($event)"
+							(onSpeChange)="changeSpeCrystalSkills($event)"
+						></creation-slider>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>
