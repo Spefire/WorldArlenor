@@ -79,16 +79,14 @@ export class CreationComponent {
 			vigueur: 1,
 			habilete: 1,
 			intellect: 1,
-			presence: 1,
+			charisme: 1,
 			pouvoir: 1
 		};
 		this.mainSkills = {
 			animaux: { value: 0, spe: "" },
 			art: { value: 0, spe: "" },
-			artisanat: { value: 0, spe: "" },
 			athletisme: { value: 0, spe: "" },
 			combat: { value: 0, spe: "" },
-			etiquette: { value: 0, spe: "" },
 			furtivite: { value: 0, spe: "" },
 			information: { value: 0, spe: "" },
 			intuition: { value: 0, spe: "" },
@@ -97,7 +95,6 @@ export class CreationComponent {
 			manipulation: { value: 0, spe: "" },
 			medecine: { value: 0, spe: "" },
 			persuasion: { value: 0, spe: "" },
-			pilotage: { value: 0, spe: "" },
 			savoir: { value: 0, spe: "" },
 			survie: { value: 0, spe: "" }
 		};

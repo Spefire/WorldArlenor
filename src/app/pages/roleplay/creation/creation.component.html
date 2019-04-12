@@ -163,10 +163,10 @@
 				<creation-slider
 					min="1"
 					max="5"
-					name="{{ 'CREATION.PRESENCE.NAME' | translate }}"
-					help="{{ 'CREATION.PRESENCE.HELP' | translate }}"
-					type="presence"
-					value="{{ caracteristics.presence }}"
+					name="{{ 'CREATION.CHARISME.NAME' | translate }}"
+					help="{{ 'CREATION.CHARISME.HELP' | translate }}"
+					type="charisme"
+					value="{{ caracteristics.charisme }}"
 					(onOpenPopup)="openPopup($event)"
 					(onValueChange)="changeCaracteristics($event)"
 				></creation-slider>
@@ -246,20 +246,6 @@
 					></creation-slider>
 					<creation-slider
 						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.ARTISANAT.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.ARTISANAT.NAME' | translate }}"
-						help="{{ 'CREATION.ARTISANAT.HELP' | translate }}"
-						type="artisanat"
-						value="{{ mainSkills.artisanat.value }}"
-						spe="{{ mainSkills.artisanat.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
 						specialistics="{{
 							'CREATION.ATHLETISME.SPECIALISTICS' | translate
 						}}"
@@ -284,20 +270,6 @@
 						type="combat"
 						value="{{ mainSkills.combat.value }}"
 						spe="{{ mainSkills.combat.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.ETIQUETTE.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.ETIQUETTE.NAME' | translate }}"
-						help="{{ 'CREATION.ETIQUETTE.HELP' | translate }}"
-						type="etiquette"
-						value="{{ mainSkills.etiquette.value }}"
-						spe="{{ mainSkills.etiquette.spe }}"
 						(onOpenPopup)="openPopup($event)"
 						(onValueChange)="changeMainSkills($event)"
 						(onSpeChange)="changeSpeMainSkills($event)"
@@ -424,20 +396,6 @@
 						type="persuasion"
 						value="{{ mainSkills.persuasion.value }}"
 						spe="{{ mainSkills.persuasion.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.PILOTAGE.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.PILOTAGE.NAME' | translate }}"
-						help="{{ 'CREATION.PILOTAGE.HELP' | translate }}"
-						type="pilotage"
-						value="{{ mainSkills.pilotage.value }}"
-						spe="{{ mainSkills.pilotage.spe }}"
 						(onOpenPopup)="openPopup($event)"
 						(onValueChange)="changeMainSkills($event)"
 						(onSpeChange)="changeSpeMainSkills($event)"
