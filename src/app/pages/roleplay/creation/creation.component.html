@@ -525,7 +525,6 @@
 					<th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
 					<th>{{ "CREATION.INDICS.POWER" | translate }}</th>
 					<th>{{ "CREATION.INDICS.EV" | translate }}</th>
-					<th>{{ "CREATION.INDICS.DEMIPV" | translate }}</th>
 					<th>{{ "CREATION.INDICS.DEMIEV" | translate }}</th>
 				</tr>
 			</thead>
@@ -535,7 +534,6 @@
 					<td>{{ c.rarity }}</td>
 					<td>{{ c.power }}</td>
 					<td>{{ c.EV }}</td>
-					<td>{{ c.demiPV }}</td>
 					<td>{{ c.demiEV }}</td>
 				</tr>
 			</tbody>
@@ -560,14 +558,12 @@
 			<thead>
 				<tr>
 					<th>{{ "CREATION.INDICS.EV" | translate }}</th>
-					<th>{{ "CREATION.INDICS.DEMIPV" | translate }}</th>
 					<th>{{ "CREATION.INDICS.DEMIEV" | translate }}</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr *ngFor="let c of listCrystals">
 					<td>{{ c.EV }}</td>
-					<td>{{ c.demiPV }}</td>
 					<td>{{ c.demiEV }}</td>
 				</tr>
 			</tbody>
@@ -620,7 +616,6 @@
 								<option value="S" class="warning">S</option>
 								<option value="A">A</option>
 								<option value="B">B</option>
-								<option value="C">C</option>
 							</select>
 						</div>
 					</td>
@@ -658,7 +653,6 @@
 								<option value="S" class="warning">S</option>
 								<option value="A">A</option>
 								<option value="B">B</option>
-								<option value="C">C</option>
 							</select>
 						</div>
 					</td>
@@ -696,7 +690,6 @@
 								<option value="S" class="warning">S</option>
 								<option value="A">A</option>
 								<option value="B">B</option>
-								<option value="C">C</option>
 							</select>
 						</div>
 					</td>

@@ -217,14 +217,6 @@ export class CreationComponent {
 			this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
 
-		if (this.race === 6) {
-			if (this.crystal01.name && this.crystal01.type)
-				this.pv = this.pv - this.crystal01.demiPV;
-			if (this.crystal02.name && this.crystal02.type)
-				this.pv = this.pv - this.crystal02.demiPV;
-			if (this.crystal03.name && this.crystal03.type)
-				this.pv = this.pv - this.crystal03.demiPV;
-		}
 		this.checkWarnings();
 	}
 
@@ -286,14 +278,12 @@ export class CreationComponent {
 					change = true;
 					this.crystal01.rank = element.rank;
 					this.crystal01.EV = element.EV;
-					this.crystal01.demiPV = element.demiPV;
 					this.crystal01.demiEV = element.demiEV;
 				}
 			});
 			if (!change) {
 				this.crystal01.rank = undefined;
 				this.crystal01.EV = undefined;
-				this.crystal01.demiPV = undefined;
 				this.crystal01.demiEV = undefined;
 			}
 		} else if (number === 2) {
@@ -303,14 +293,12 @@ export class CreationComponent {
 					change = true;
 					this.crystal02.rank = element.rank;
 					this.crystal02.EV = element.EV;
-					this.crystal02.demiPV = element.demiPV;
 					this.crystal02.demiEV = element.demiEV;
 				}
 			});
 			if (!change) {
 				this.crystal02.rank = undefined;
 				this.crystal02.EV = undefined;
-				this.crystal02.demiPV = undefined;
 				this.crystal02.demiEV = undefined;
 			}
 		} else if (number === 3) {
@@ -320,14 +308,12 @@ export class CreationComponent {
 					change = true;
 					this.crystal03.rank = element.rank;
 					this.crystal03.EV = element.EV;
-					this.crystal03.demiPV = element.demiPV;
 					this.crystal03.demiEV = element.demiEV;
 				}
 			});
 			if (!change) {
 				this.crystal03.rank = undefined;
 				this.crystal03.EV = undefined;
-				this.crystal03.demiPV = undefined;
 				this.crystal03.demiEV = undefined;
 			}
 		}
