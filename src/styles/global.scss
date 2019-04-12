@@ -10,7 +10,7 @@ body {
 body {
 	z-index: 1;
 	color: $light-color;
-	background: linear-gradient(45deg, $dark-color, $dark-color, $primary-color);
+	background: $dark-color;
 }
 
 h1 {
@@ -23,8 +23,8 @@ h1 {
 	margin: 0;
 
 	@media screen and (max-width: 700px) {
-		font-size: 35px;
-		line-height: 35px;
+		font-size: 30px;
+		line-height: 30px;
 	}
 }
 
@@ -56,7 +56,6 @@ h4 {
 
 a {
 	font-family: "Montserrat", sans-serif;
-
 	text-decoration: none;
 	color: $light-color;
 
@@ -96,6 +95,10 @@ img {
 	outline: none;
 }
 
+.warning {
+	color: $warning-color;
+}
+
 ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -110,4 +113,134 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: $light-secondary-color;
+}
+
+table {
+	&.full-table {
+		border: 1px solid;
+		border-radius: 5px;
+		background: $dark-color;
+		border-color: $secondary-color;
+
+		thead > tr > th {
+			border-bottom: 1px solid $secondary-color;
+		}
+	}
+
+	tr {
+		vertical-align: middle;
+	}
+
+	th,
+	td {
+		padding: 5px;
+	}
+}
+
+input[type="file"] {
+	display: none;
+}
+
+input[type="text"] {
+	overflow: hidden;
+	height: 30px;
+	padding: 0 10px;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+
+	color: $light-color;
+	background: $dark-color;
+	border-color: $secondary-color;
+}
+
+::placeholder {
+	color: $grey-color;
+}
+
+textarea {
+	width: 400px;
+	height: 50px;
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+
+	color: $light-color;
+	background: $dark-color;
+	border-color: $secondary-color;
+
+	@media screen and (max-width: 700px) {
+		width : 85%;
+	}
+}
+
+.help {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	margin: 0 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.dropdown {
+	position: relative;
+	overflow: hidden;
+	height: 30px;
+	border: 1px solid;
+	border-radius: 5px;
+
+	background: $dark-color;
+	border-color: $secondary-color;
+}
+
+.dropdown:after {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 5px dashed;
+	border-color: $dark-color transparent;
+	pointer-events: none;
+}
+
+.dropdown:after {
+	margin-top: 2px;
+	border-bottom: none;
+	border-top-style: solid;
+	border-top-color: $secondary-color;
+}
+
+.dropdown-select {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0px 30px 0px 10px;
+	height: 30px;
+	line-height: 15px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	cursor: pointer;
+
+	color: white;
+	background: rgba(0, 0, 0, 0) !important;
+}
+
+.dropdown-select:focus {
+	outline: none;
+}
+
+.dropdown-select > option {
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	background: $dark-color;
 }

@@ -1,37 +1,38 @@
 {
-  "name": "world-arlenor",
-  "version": "0.1.1",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve --port 4400",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^7.2.5",
-    "@angular/common": "^7.2.5",
-    "@angular/compiler": "^7.2.5",
-    "@angular/core": "^7.2.5",
-    "@angular/forms": "^7.2.5",
-    "@angular/http": "^7.2.5",
-    "@angular/platform-browser": "^7.2.5",
-    "@angular/platform-browser-dynamic": "^7.2.5",
-    "@angular/router": "^7.2.5",
-    "@ngx-translate/core": "^9.1.1",
-    "@ngx-translate/http-loader": "^2.0.1",
-    "core-js": "^2.6.5",
-    "rxjs": "^6.4.0",
-    "rxjs-compat": "^6.4.0",
-    "zone.js": "~0.8.29"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.7.0",
-    "@angular/cli": "~6.1.5",
-    "@angular/compiler-cli": "^7.2.5",
-    "@angular/language-service": "^6.1.0",
-    "typescript": "^3.1.1"
-  }
+	"name": "world-arlenor",
+	"version": "0.1.1",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve --port 4400",
+		"build": "ng build",
+		"test": "ng test",
+		"lint": "ng lint",
+		"e2e": "ng e2e"
+	},
+	"private": true,
+	"dependencies": {
+		"@angular/animations": "^7.2.5",
+		"@angular/common": "^7.2.5",
+		"@angular/compiler": "^7.2.5",
+		"@angular/core": "^7.2.5",
+		"@angular/forms": "^7.2.5",
+		"@angular/http": "^7.2.5",
+		"@angular/platform-browser": "^7.2.5",
+		"@angular/platform-browser-dynamic": "^7.2.5",
+		"@angular/router": "^7.2.5",
+		"@ngx-translate/core": "^9.1.1",
+		"@ngx-translate/http-loader": "^2.0.1",
+		"core-js": "^2.6.5",
+		"jspdf": "^1.5.3",
+		"rxjs": "^6.4.0",
+		"rxjs-compat": "^6.4.0",
+		"zone.js": "~0.8.29"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "~0.7.0",
+		"@angular/cli": "~6.1.5",
+		"@angular/compiler-cli": "^7.2.5",
+		"@angular/language-service": "^6.1.0",
+		"typescript": "^3.1.1"
+	}
 }

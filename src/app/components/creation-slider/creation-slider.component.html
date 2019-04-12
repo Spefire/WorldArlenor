@@ -1,0 +1,43 @@
+<tr class="cs-line">
+	<td class="cs-name">{{ name }}</td>
+	<td>
+		<button class="cs-button" [ngClass]="{'disabled': value === valueMin }" (click)="downValue()">&#8249;</button>
+		<span class="cs-value">{{ value }}</span>
+		<button class="cs-button" [ngClass]="{'disabled': value === valueMax }" (click)="upValue()">&#8250;</button>
+	</td>
+	<td *ngIf="hasSpecialistic || hasCristalSpecialistic" class="cs-spe">
+		<div *ngIf="hasSpecialistic" class="dropdown">
+			<select class="dropdown-select" [ngClass]="{'cs-option-default': !spe }" value="{{ spe }}" (change)="speChange($event.target.value)">
+				<option class="cs-option-default" value="">{{ "CREATION.INDICS.SPE" | translate }}</option>
+				<option class="cs-option" *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">{{
+						specialistic
+				}}</option>
+			</select>
+		</div>
+		<input *ngIf="hasCristalSpecialistic" type="text" placeholder="{{ 'CREATION.INDICS.SPE' | translate }}" value="{{ spe }}" (change)="speChange($event.target.value)"/>
+	</td>
+	<td>
+		<button (click)="openPopup()">?</button>
+	</td>
+</tr>
+<tr class="cs-mobile-line">
+	<td class="cs-name">{{ name }}</td>
+	<td>
+		<button class="cs-button" [ngClass]="{'disabled': value === valueMin }" (click)="downValue()">&#8249;</button>
+		<span class="cs-value">{{ value }}</span>
+		<button class="cs-button" [ngClass]="{'disabled': value === valueMax }" (click)="upValue()">&#8250;</button>
+	</td>
+</tr>
+<tr class="cs-mobile-line">
+	<td *ngIf="hasSpecialistic || hasCristalSpecialistic" class="cs-spe">
+		<div *ngIf="hasSpecialistic" class="dropdown">
+			<select class="dropdown-select" [ngClass]="{'cs-option-default': !spe }" value="{{ spe }}" (change)="speChange($event.target.value)">
+				<option class="cs-option-default" value="">{{ "CREATION.INDICS.SPE" | translate }}</option>
+				<option class="cs-option" *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">{{
+						specialistic
+				}}</option>
+			</select>
+		</div>
+		<input *ngIf="hasCristalSpecialistic" type="text" placeholder="{{ 'CREATION.INDICS.SPE' | translate }}" value="{{ spe }}" (change)="speChange($event.target.value)"/>
+	</td>
+</tr>

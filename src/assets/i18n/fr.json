@@ -8,7 +8,8 @@
     "RELIGION": "La Religion",
 		"CRYSTALS": "La Magie des Cristaux",
 		"POPULATION": "Les Peuples",
-    "ROLEPLAY": "Le Jeu de rôle",
+		"ROLEPLAY": "Le Jeu de rôle",
+		"CREATION": "La Création du Personnage",
     "CHARACTERS": "Les Personnages",
     "ABOUT": "A Propos",
     "LEGACY": "Mentions Légales"
@@ -196,40 +197,58 @@
 			"SECTION03": "Des relations se sont créées alors entre les différences races, certaines amicales, neutres, et d'autres... meurtrières.<br>Les elfes et les humains vivent en toute liberté alors que les nains et les mutants essayent de survivre du mieux qu'ils le peuvent. Les pans et les arléniens restent cachés, observant le monde de loin...",
 			"LOCATION": "Localisation",
 			"PEOPLE1": {
+				"NAME": "Humain",
 				"TITLE": "Les Humains",
 				"TEXT01": "Les humains étaient les premiers à vivre sur le monde d'Arlénor. Les autres races sont des humains ayant subit des mutations au fil des générations, dû à l'exposition et utilisation quotidienne des cristaux. L'humain aime construire autant que détruire, est aussi savant qu'ignorant...",
 				"TEXT02": "La polyvalence des humains font qu'ils n'ont pas d'affiliation spécifique avec les cristaux, et rares sont ceux qui parviennent à utiliser des cristaux de haut-niveau. Les humains se sont concentrés dans les plaines de Terfil, et vivent principalement dans la cité de Faradel.",
-				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien"
+				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
+				"AVANTAGES": "- Polyvalence et simplicité du personnage<br>- (Stat) Base de compétence : Athlétisme à 1",
+				"INCONVENIENTS": "- (Stat) Quantité d'énergie vitale : 6"
 			},
 			"PEOPLE2": {
+				"NAME": "Elfe",
 				"TITLE": "Les Elfes",
 				"TEXT01": "Les elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux humains.",
 				"TEXT02": "Les elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
-				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien"
+				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
+				"AVANTAGES": "- Personnage très respecté globalement par les humains et les autres elfes.<br>- (Stat) Quantité d'énergie vitale : 8",
+				"INCONVENIENTS": "- Personnage craint ou hait globalement par les nains et les mutants<br>- Addiction : Irrésistible envie (obligation) d'utiliser la magie en combat."
 			},
 			"PEOPLE3": {
+				"NAME": "Nain",
 				"TITLE": "Les Nains",
 				"TEXT01": "Les nains furent les premiers à être discriminés, par leur taille, par leur pilosité abondante... Cependant, ils sont aussi craints car les nains peuvent très vite être dangereux. Ils possèdent en eux une force, une soif de sang, et une envie de... de manger de la viande crue, fraîchement découpée.",
 				"TEXT02": "Les nains, rejetés et discriminés, se sont alors regroupés dans les hautes montagnes de Kazador. La rumeur dit qu'ils y cachent un grand secret... Il n'est pas rare de voir des nains dans la cité de Jirakan, mais le plus souvent, les quelques nains qui naissent en dehors des montagnes, les rejoignent souvent en étant adulte... et rares sont ceux qui souhaitent ensuite les quitter.",
-				"LOCATION" : "Le Régime Jirakanien, Les Montagnes de Kazador"
+				"LOCATION" : "Le Régime Jirakanien, Les Montagnes de Kazador",
+				"AVANTAGES": "- Sang très chaud, immunité au froid<br>- (Stat) Base de compétence : Animaux et Combat à 1<br>- (Stat) Quantité d'énergie vitale : 8",
+				"INCONVENIENTS": "- Besoin quasi permanent de chasser, de tuer, et de manger de la viande crue."
 			},
 			"PEOPLE4": {
+				"NAME": "Mutant",
 				"TITLE": "Les Mutants",
 				"TEXT01": "Le peuple des mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les humains et les elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamne leur existence.",
 				"TEXT02": "Les mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
-				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys"
+				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys",
+				"AVANTAGES": "- Le personnage possède une partie animale et ses propriétés.<br>- (Stat) Base de compétence : Furtivité et Manipulation à 1<br>- (Stat) Quantité d'énergie vitale : 8",
+				"INCONVENIENTS": "- Menacé d'être exécuté si l'on découvre sa partie animale.<br>- Le personnage possède un comportement de l'animal en question, selon le degré de la mutation"
 			},
 			"PEOPLE5": {
+				"NAME": "Pan",
 				"TITLE": "Les Pans",
 				"TEXT01": "Les pans sont aussi petits que les nains mais ce sont des enfants humains qui n'ont pas grandi et dont la couleur de peau est devenue bleutée au fil du temps : elle emprunterait le ciel, devenant plus foncée la nuit, et plus claire le jour. Après un certain âge, quand leur peau eut fini de se transformer, les pans disparaissent dans un endroit encore inconnu. Il est alors rare d'en apercevoir, et restent très mystérieux sur leur peuple.",
 				"TEXT02": "Du peu que l'on sait sur les pans et cet endroit inconnu, c'est que les pans seraient secrètement appelés par un grand arbre qu'ils ont nommé Nebulys. Et leur devoir serait de protéger l'énergie vitale de la faune et la flore.",
-				"LOCATION" : "Inconnue"
+				"LOCATION" : "Inconnue",
+				"AVANTAGES": "- Peut manipuler l'énergie vitale végétale et animale, voire même l'utiliser...<br>- (Stat) Base de compétence : Intuition et Médecine à 1<br>- (Stat) Quantité d'énergie vitale : 12",
+				"INCONVENIENTS": "- N'apprécie pas l'utilisation inutile des cristaux et protège la vie.<br>- Fort dégoût pour les cités et la technologie.<br>- Anxiété sociale, peur des foules."
 			},
 			"PEOPLE6": {
+				"NAME": "Arlénien",
 				"TITLE": "Les Arléniens",
 				"TEXT01": "Les arléniens sont un autre peuple caché dans le Monde d'Arlénor, et considère eux aussi la Nature offerte par Arlénor comme sacrée. C'est un peuple très uni, fondé sur l’honnêteté, la liberté d'expression et le respect de chacun. Toutefois, les arléniens éprouvent un profond dégoût pour les autres races, les considérant comme des souilleurs, un poison pour le Monde d'Arlénor... Ils espèrent un jour y mettre un terme en les éliminant.",
 				"TEXT02": "Les arléniens sont les meilleurs adeptes de la magie des cristaux. Cependant, ils n'arrivent pas à les utiliser dans leur état solide. Les arléniens ont alors un rituel, prenant une semaine au minimum, pour transformer un cristal en encre puis en tatouage. Les arléniens possédant le plus de tatouages sont considérés comme les plus puissants.",
-				"LOCATION" : "Inconnue"
+				"LOCATION" : "Inconnue",
+				"AVANTAGES": "- Un tatouage demande moins d'énergie vitale qu'un cristal.<br>- (Stat) Base de compétence : Combat, Intuition et Survie à 1<br>- (Stat) Quantité d'énergie vitale : 10",
+				"INCONVENIENTS": "- Difficulté à faire confiance aux autres peuples.<br>- Ne peut pas utiliser de cristal, autrement que par ses tatouages.<br>- Pour chaque tatouage acquis, il faut retirer des points de Santé maximum."
 			}
 		}
 	},
@@ -242,17 +261,209 @@
     "PERSO": {
 			"TITLE": "La création de personnage",
       "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... (bientôt la création de perso en ligne)",
-      "SEEMORE": "Télécharger la fiche de perso V1.0"
+      "SEEMORE": "Activité : Passer à la création !"
     },
     "FILES": {
 			"TITLE": "Les règles du jeu",
       "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu et des propositions de pouvoirs.",
 			"SEEMORE01": "Télécharger le Manuel du Joueur V1.0",
 			"RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
-			"SEEMORE02": "Télécharger le Manuel du MJ V1.0"
+			"SEEMORE02": "Télécharger le Manuel du MJ V1.0",
+			"LISTPOWERS": "Télécharger la liste non-exhaustive de pouvoirs (cristaux)"
     }
-  },
-  "ABOUT": {
+	},
+	"CREATION": {
+		"MENU": {
+			"IMPORT": "Importation d'un ancien personnage",
+			"TITLE": "Fiche de personnage",
+			"TITLE01": "I - Peuple / Race",
+			"TITLE02": "II - Caractéristiques",
+			"TITLE03": "III - Compétences",
+			"TITLE04": "IV - Cristaux",
+			"TITLE05": "V - Equipement",
+			"TITLE06": "VI - Identité",
+			"CONCLUSION": "Téléchargement de la fiche"
+		},
+		"INDICS": {
+			"LEFTPOINTS": "Points restants",
+			"AVANTAGES": "Avantages",
+			"INCONVENIENTS": "Inconvénients",
+			"INITIATIVE": "Initiative",
+			"PV": "Points de Vie",
+			"PE": "Points d'Energie Vitale",
+			"SPE": "Spécialité (option)",
+			"CRYSTAL": "Nom du cristal",
+			"TYPE": "Type",
+			"RANK": "Rang",
+			"RARITY": "Rareté",
+			"POWER": "Puissance",
+			"EV": "Coût en EV",
+			"DEMIPV": "Retrait de PV (pour les arléniens)",
+			"DEMIEV": "Coût en EV (pour les arléniens)",
+			"ARMOR": "Armure",
+			"WEAPON": "Arme (optionnel)",
+			"ATTACKBONUS": "Attaque",
+			"DEFENCEBONUS": "Défense",
+			"MOBILITY": "Mobilité",
+			"ACTIONSMALUS": "Malus aux actions (hors Défense)",
+			"CATEGORY": "Catégorie",
+			"COUNT": "Chargeur",
+			"COOLDOWN": "Rechargement",
+			"ZONE": "Portée efficace"
+		},
+		"HEROS01": "Un personnage est défini par deux séries de chiffres : ses <b>caractéristiques</b> et ses <b>compétences</b>.<br>Les caractéristiques définissent ce qu’est le personnage, et les compétences ce qu’il sait. Votre personnage sera plus ou moins fort, plus ou moins intelligent, plus ou moins adroit. Et c’est vous qui choisirez si, au cours de sa vie, il a appris à se battre ou s'il a préféré se tourner vers l'érudition, la médecine...",
+		"HEROS02": "Dans ce monde, hormis les stats, les principaux choix qui orienteront votre personnage seront sa race / peuple, mais aussi les cristaux qu'il utilisera. Cependant, malgré toutes les nombres et les textes notés sur la fiche de perso, c'est VOUS qui ferez vivre votre personnage via ses actions : on choisit ce que l'on est par nos actions !",
+		"HEROS03": "Créez alors ici un nouveau personnage du Monde d'Arlénor, ou mettez à jour la fiche du vôtre !",
+		"IMPORT": "Si vous avez sauvegardé les paramètres d'un personnage, vous pouvez l'importer (fichier JSON) et le modifier ensuite sur cette page.",
+		"CARACTS01": "Toute personne est dotée de capacités de base qui lui sont inhérentes et qu’il peut utiliser de bien des manières. Ces aptitudes naturelles sont définies par cinq caractéristiques distinctes, chacune évaluée sur une échelle allant de <b>1 à 5</b>.",
+		"CARACTS02": "Un score de 1 dans une caractéristique indique une vraie faiblesse dans le domaine concerné, tandis qu’un 2 place le personnage dans la moyenne, ni plus ni moins. A partir de 3, la personne dispose d’une facilité particulière dans la caractéristique concernée, et un 4 indique des facultés exceptionnelles. Enfin, un score de 5 représente le maximum des capacités : seuls quelques très rares individus atteignent ce score.",
+		"VIGUEUR": {
+			"NAME": "Vigueur",
+			"HELP": "<b>Vigueur</b><br><br>Mélange de résistance physique et de puissance brute, la <b>Vigueur</b> évalue la forme physique de votre personnage. Cette caractéristique est importante pour les personnages combattants, les sportifs et tous ceux qui aiment se sortir de situations dangereuses.<br><br>1 : Fragile. Force et endurance limitées, vous vous fatiguez vite.<br>2 : Moyen. Vous n’avez de problèmes qu’avec des tours de force inhabituels.<br>3 : Costaud. Vous fatiguez rarement et réalisez des tours de force.<br>4 : Fort comme un bœuf. Peu de choses ou de personnes peuvent vous résister.<br>5 : Herculéen. Vous résistez à tout et rivalisez de puissance avec les ours."
+		},
+		"HABILETE": {
+			"NAME": "Habileté",
+			"HELP": "<b>Habileté</b><br><br>L’<b>Habileté</b> représente la capacité du personnage à s’acquitter de tâches de précision, sa finesse, sa dextérité, son talent pour viser ainsi que sa rapidité de réaction. C’est une aptitude inestimable pour les artisans, les voleurs, les danseurs et les tireurs de tout calibre.<br><br>1 : Maladroit. Vous êtes un véritable éléphant dans un magasin de porcelaine.<br>2 : Moyen. Au moins, vous ne provoquez que rarement des catastrophes.<br>3 : Agile. Vous êtes doué de vos mains, et votre agilité vous sert dans bien des situations.<br>4 : Félin. Vos réflexes et votre souplesse tiennent davantage de l’animal que de l’humain.<br>5 : Gracieux. Vos mouvements sont tellement fluides qu’ils semblent irréels."
+		},
+		"INTELLECT": {
+			"NAME": "Intellect",
+			"HELP": "<b>Intellect</b><br><br>Les capacités intellectuelles de votre personnage, sa capacité à analyser, retenir les informations et les réutiliser en temps utile. L'<b>Intellect</b> est utile aux tacticiens, aux érudits, aux scientifiques et aux enquêteurs.<br><br>1 : Simplet. Vous comprenez l’essentiel, mais toutes les subtilités vous échappent.<br>2 : Moyen. Vous ne faites pas de miracles, mais vous vous en sortez honorablement.<br>3 : Vif. Vous comprenez vite, analysez de manière pertinente et savez vous adapter.<br>4 : Brillant. Vous comprenez rapidement ce que certains mettent des années à apprendre.<br>5 : Génie. Vous maniez facilement des notions que la majorité des gens sont incapables d’appréhender."
+		},
+		"PRESENCE": {
+			"NAME": "Présence",
+			"HELP": "<b>Présence</b><br><br>La capacité à s’imposer aux autres, à leur inspirer de la confiance, du respect ou de la crainte, ainsi qu’à les manipuler. La <b>Présence</b> comprend bien plus que la beauté physique, et est l’atout principal des dirigeants, des séducteurs et de tous les menteurs invétérés.<br><br>1 : Fade. Vous n’inspirez pas les autres et semblez parfois transparent à leurs yeux.<br>2 : Moyen. Vous vous faites des amis, comme tout le monde.<br>3 : Intéressant. Vous ne laissez pas les gens indifférents, et beaucoup vous apprécient.<br>4 : Captivant. Leader-né, votre personnalité attire les autres à vous.<br>5 : Fascinant. Vous pourriez amener n’importe qui à faire n’importe quoi pour vous."
+		},
+		"POUVOIR": {
+			"NAME": "Pouvoir",
+			"HELP": "<b>Pouvoir</b><br><br>Le <b>Pouvoir</b> est la caractéristique déterminant le niveau de facilité à utiliser la magie des cristaux du Monde d'Arlénor. Les mages et sorciers ont généralement un bon niveau dans cette caractéristique.<br><br>1 : Débutant. L'utilisation de ton énergie vitale est encore un mystère pour vous.<br>5 : Master. La magie n'a plus (ou très peu) de secrets pour vous."
+		},
+		"SKILLS": {
+			"TEXT01": "Survivre en milieu hostile. Mentir. Utiliser un pouvoir élémentaire. Autant de savoir-faire qu’un personnage peut, ou non, développer au cours de sa vie. Cette section s’intéresse à ces compétences que les personnages apprennent ou non à utiliser et qui les différencient les uns des autres.<br>Le test classique qui détermine si un personnage réussit ou non une action se réalise de la façon suivante. Le MJ détermine quelle caractéristique de base du personnage est concernée (Vigueur, Habileté, Intellect, Présence, Pouvoir), ainsi que la compétence mise en jeu si nécessaire. Il annonce cette combinaison au joueur, qui lance autant de dés à 6 faces qu’il a de points dans la caractéristique concernée, additionne les résultats puis rajoute son score de compétence. Il compare ensuite le total à la difficulté fixée par le MJ. Si le résultat de son test est supérieur ou égal à cette difficulté, il l’emporte.<br>Conseil : Votre personnage sera très souvent mené à se battre, donc n'oubliez pas de mettre des points dans la compétence 'Combat' en ce qui concerne l'utilisation des armes, et dans les compétences de 'Cristaux' pour l'utilisation de la magie.",
+			"TEXT02": "Le jet de compétence est réussie si :<br><b>Test(Caractéristique) + Valeur(Compétence) + Bonus(Spécialité) >= Difficulté (donnée par le MJ)</b><br><br>Soit :<br><b>Caractéristique x 1D6 + Compétence + 4 (si Spécialité) - 4 (si 0 dans la Compétence) >= Difficulté</b>",
+			"TEXT03": "Vous pouvez décider de sacrifier deux points de création pour acheter une Spécialité dans l’une de vos compétences. Il s’agit d’un bonus de +4 qui ne s’applique qu’à une utilisation précise de la compétence. Par exemple, un personnage possédant la compétence Combat à +4 et une Spécialité (Épée) aura un bonus de +8 chaque fois qu’il combattra à l’épée, mais seulement de +4 pour toute autre forme de combat.<br>Par contre, avoir une compétence à 0, donne un malus -4 lors de son utilisation !<br>Augmenter une compétence de cristal, permet de donner un bonus dans l'utilisation de tous les cristaux de ce type seulement.<br>Concernant la spécialité d'un cristal, vous pouvez ajouter le nom d'un cristal en particulier : par exemple, une spécialité 'Manipulation de l'Eau' dans les cristaux de type Elémentaires permet un bonus +4 lors de l'utilisation de ce cristal."
+		},
+		"ANIMAUX": {
+			"NAME": "Animaux",
+			"HELP": "<b>Animaux</b><br><br>Cette compétence mesure le degré d’affinité du personnage avec les animaux, qu’ils soient sauvages ou domestiques. Elle permet de comprendre leur langage corporel, de deviner leurs intentions, de s’adapter à leur comportement et même de les dresser.<br><br><i>Exemples :</i><br>- Comprendre le comportement d’un animal domestique (Int. + Animaux, Diff. 8).<br>- Avoir le comportement adéquat devant un animal sauvage en colère (Pré. + Animaux, Diff. 14).<br>- Élever un animal sauvage intelligent (Test étendu, Pré. + Animaux, Diff. 18, Objectif 50).<br><br><i>Temps d’action :</i><br>Variable. Comprendre un comportement est une action instantanée, mais pour ce qui est d’élever un animal, il faut une semaine d’action complète pour effectuer un test.<br><br><i>Spécialités :</i><br>Animaux domestiques, Animaux sauvages, Comportement, Dressage.",
+			"SPECIALISTICS": "Animaux domestiques, Animaux sauvages, Comportement, Dressage"
+		},
+		"ART": {
+			"NAME": "Art",
+			"HELP": "<b>Art</b><br><br>La capacité artistique pure et simple. Les grands peintres, les musiciens, les chanteurs, sculpteurs et comédiens ont tous en commun l’utilisation de cette compétence. Elle permet de gagner sa vie et de se faire apprécier de ceux que l’on rencontre.<br><br><i>Exemples :</i><br>- Gagner quelques piécettes dans la rue (Pré. + Art, Diff. 6).<br>- Impressionner la foule locale d’une taverne en arrivant sur les lieux (Pré. + Art, Diff. 12).<br>- Peindre un chef d’œuvre à la gloire de la princesse (Test étendu, Hab. + Art, Diff. 22, Objectif 20).<br><br><i>Temps d'action :</i><br>Variable. Faire un concert ou une représentation de comédie dure environ une heure, tandis que composer une œuvre prend une journée par test. <br><br><i>Spécialités :</i><br>Comédie, Écriture, Musique, Peinture, Sculpture.",
+			"SPECIALISTICS": "Comédie, Écriture, Musique, Peinture, Sculpture"
+		},
+		"ARTISANAT": {
+			"NAME": "Artisanat",
+			"HELP": "<b>Artisanat</b><br><br>Cette compétence est celle que partagent tous les bricoleurs, jusqu’aux grands maîtres artisans créant des pièces uniques. Fonctionnant surtout sur le principe du test étendu, l’Artisanat permet aux personnages de créer seuls ce qu’ils ne trouvent pas ailleurs.<br><br><i>Exemples :</i><br>- Gagner sa vie en tant qu’artisan (Hab. + Artisanat, Diff. 12).<br>- Expertiser un objet ancien redécouvert récemment (Int. + Artisanat, Diff. 16).<br>- Construire un objet de maître (Hab. + Artisanat, Diff. 20 et plus, Objectif de 10 à 100 et plus selon la taille de l’objet).<br><br><i>Temps d'action :</i><br>Le plus souvent, une journée par test. <br><br><i>Spécialités :</i><br>Architecture, Armurerie, Archéologie, Artisanat naval, Couture, Ébénisterie.",
+			"SPECIALISTICS": "Architecture, Armurerie, Archéologie, Artisanat naval, Couture, Ébénisterie"
+		},
+		"ATHLETISME": {
+			"NAME": "Athlétisme",
+			"HELP": "<b>Athlétisme</b><br><br>Cette compétence regroupe les capacités sportives. Un personnage avec un haut niveau d’Athlétisme peut courir vite et longtemps, escalader des parois difficiles d’accès, nager sur de longues distances et tenir en équilibre sur un fil.<br><br><i>Exemples :</i><br>- Courir après quelqu’un (test en opposition étendu de Vig. + Athlétisme, Difficulté et Objectif variable selon la distance entre les personnages).<br>- Tenir en équilibre tout en avançant sur une corniche étroite (Hab. + Athlétisme, Diff. 14).<br>- Nager au beau milieu d’une mer démontée (Vig. + Athlétisme, Diff. 20).<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Course, Équilibre, Escalade, Lancer, Natation, Saut.",
+			"SPECIALISTICS": "Course, Équilibre, Escalade, Lancer, Natation, Saut"
+		},
+		"COMBAT": {
+			"NAME": "Combat",
+			"HELP": "<b>Combat</b><br><br>L’aptitude du personnage à manier les armes et à se défendre en situation d’affrontement physique. Cette compétence regroupe la maîtrise de tous les types d’armes ainsi que du combat à mains nues. Cependant, elle ne gère absolument pas ce qui concerne le combat avec les cristaux !<br><br><i>Exemples :</i><br>Voir les règles de bases.<br><br><i>Temps d'action :</i><br>Généralement, un tour de combat. <br><br><i>Spécialités :</i><br>Arcs, Épées, Dagues, Esquive, Parade.",
+			"SPECIALISTICS": "Arcs, Épées, Dagues, Esquive, Parade"
+		},
+		"ETIQUETTE": {
+			"NAME": "Etiquette",
+			"HELP": "<b>Etiquette</b><br><br>Cette compétence évalue la capacité du personnage à évoluer au sein de la société, à se montrer élégant, raffiné mais également à comprendre les rouages du monde dans lequel il vit. Un haut niveau d’Étiquette devient un véritable atout dès lors qu’il s’agit de repérer les personnalités influentes, de demander quelque chose ou lorsqu’il faut simplement savoir à qui on s’adresse.<br><br><i>Exemples :</i><br>- Tenir un rang lors d’une réception de la haute société (Pré. + Etiquette, Diff. 10).<br>- Identifier le titre ou le rôle politique d’une personne (Int. + Etiquette, Diff. 12).<br>- Solliciter et obtenir une entrevue avec une personne haut placée (Pré. + Etiquette, Diff. 18).<br><br><i>Temps d'action :</i><br>Instantané au moment de la rencontre, la plupart du temps. Dès lors qu’il s’agit de faire jouer ses relations ou d’obtenir une faveur, un jour entier de travail est nécessaire pour réaliser un test. <br><br><i>Spécialités :</i><br>Héraldique, Influence, Personnalités, Relations politiques.",
+			"SPECIALISTICS": "Héraldique, Influence, Personnalités, Relations politiques"
+		},
+		"FURTIVITE": {
+			"NAME": "Furtivité",
+			"HELP": "<b>Furtivité</b><br><br>Cette compétence est celle des criminels, des espions et des enquêteurs. Elle permet de se cacher en toutes circonstances, qu’il s’agisse de se faire discret dans une forêt ou de paraître anonyme au milieu de la foule.<br><br><i>Exemples :</i><br>Le test d’Habileté + Furtivité du personnage est toujours un test en opposition avec un test d’Intellect + Investigation de celui ou ceux qui auraient intérêt à le repérer. Si le personnage échoue à ce test, il est repéré.<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Anonymat, Camouflage, Filature.",
+			"SPECIALISTICS": "Anonymat, Camouflage, Filature"
+		},
+		"INFORMATION": {
+			"NAME": "Information",
+			"HELP": "<b>Information</b><br><br>Cette compétence permet d’obtenir rapidement des informations sur tout un tas de sujets. Les experts dans ce domaine savent délier les langues rapidement, fouiller aux bons endroits et connaissent les endroits appropriés pour obtenir ce qu’ils cherchent, même si cela signifie prendre des risques. Ainsi, échouer à un test d’Information peut parfois poser de sérieux problèmes.<br><br><i>Exemples :</i><br>- Obtenir des informations sur la situation locale (Pré. + Information Diff. 9).<br>- Trouver un receleur dans une grande ville (Int. + Information Diff. 15).<br>- Obtenir des informations classées secret défense (Int. + Information Diff. 25).<br><br><i>Temps d'action :</i><br>Une journée de recherche par test. <br><br><i>Spécialités :</i><br>Discussions de comptoir, Légendes urbaines, Réseaux criminels, Bibliothèque.",
+			"SPECIALISTICS": "Discussions de comptoir, Légendes urbaines, Réseaux criminels, Bibliothèque"
+		},
+		"INTUITION": {
+			"NAME": "Intuition",
+			"HELP": "<b>Intuition</b><br><br>Sens aigu de la psychologie ou capacité à remarquer ce qui ne va pas, l’intuition permet au personnage de remarquer les détails chez les autres sans y réfléchir, de discerner l’état émotionnel de ses interlocuteurs ou de comprendre quand on lui ment.<br><br><i>Exemples :</i><br>- Comprendre l’émotion principale d’une personne qui ne ment pas (Int. + Intuition Diff. 10).<br>- Percer à jour un mensonge (Test en opposition Int. + Intuition contre Pré. + Manipulation).<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Comportement, Motivations secrètes, Intuition magique.",
+			"SPECIALISTICS": "Comportement, Motivations secrètes, Intuition magique"
+		},
+		"INVESTIGATION": {
+			"NAME": "Investigation",
+			"HELP": "<b>Investigation</b><br><br>L’Investigation est la compétence qui permet au personnage de trouver des indices, d’établir des relations entre différents éléments et de remarquer les détails de son environnement, ce qui comprend les personnes ou objets cachés.<br><br><i>Exemples :</i><br>- Trouver un indice sur une scène de crime (Int. + Investigation Diff. 10).<br>- Établir un lien entre plusieurs éléments (Int. + Investigation Diff. 16).<br>- Repérer un détective en filature (Int. + Investigation contre Hab. + Furtivité).<br><br><i>Temps d'action :</i><br>Une heure de recherche par test environ. Repérer quelqu’un est un test instantané. <br><br><i>Spécialités :</i><br>Audition, Déduction, Chercher objets, Odorat, Toucher, Cryptographie.",
+			"SPECIALISTICS": "Audition, Déduction, Chercher objets, Odorat, Toucher, Cryptographie"
+		},
+		"LARCIN": {
+			"NAME": "Larcin",
+			"HELP": "<b>Larcin</b><br><br>Toutes les capacités des filous, trafiquants, voleurs à la tire et amateurs de contrefaçon sont regroupées dans cette compétence. Ses usages sont divers et variés, et peuvent même servir à accomplir des choses en toute légalité.<br><br><i>Exemples :</i><br>- Voler un objet dans la poche de son propriétaire (Hab. + Larcin contre Int. + Investigation de la victime).<br>- Créer une contrefaçon d’un document officiel (test étendu, Hab. + Larcin Diff. 15, Objectif 10).<br>- Crocheter une serrure de bonne qualité (Hab. + Larcin Diff. 16).<br><br><i>Temps d'action :</i><br>Un tour de combat ou instantané, le plus souvent. Réaliser une contrefaçon prend une heure par test. <br><br><i>Spécialités :</i><br>Contrefaçon, Sabotage, Serrurerie, Vol à la tire.",
+			"SPECIALISTICS": "Contrefaçon, Sabotage, Serrurerie, Vol à la tire"
+		},
+		"MANIPULATION": {
+			"NAME": "Manipulation",
+			"HELP": "<b>Manipulation</b><br><br>Cette compétence est celle qui permet d’obtenir ce que l’on veut des autres. Elle sert à mentir, tricher et lancer des rumeurs sans se faire prendre, ainsi qu’à dissimuler ses véritables émotions et objectifs aux yeux des autres.<br><br><i>Exemples :</i><br>La Manipulation fonctionne principalement sur un test en opposition de Pré. + Manipulation contre Int. + Intuition.<br><br><i>Temps d'action :</i><br>Instantané pour camoufler ses intentions. Mentir à quelqu’un et obtenir ce que l’on veut de lui peut prendre plus de temps, voire demander un test étendu. <br><br><i>Spécialités :</i><br>Camouflage, Mensonge, Messages cachés, Séduction.",
+			"SPECIALISTICS": "Camouflage, Mensonge, Messages cachés, Séduction"
+		},
+		"MEDECINE": {
+			"NAME": "Médecine",
+			"HELP": "<b>Médecine</b><br><br>La médecine est la compétence qui permet au personnage de comprendre les causes des maladies, de soigner les blessures et de guérir une personne empoisonnée. Elle comprend la fabrication des médicaments et remèdes, mais également celle des poisons.<br><br><i>Exemples :</i><br>- Diagnostiquer une maladie simple (Int. + Médecine Diff. 9).<br>- Fabriquer un antidote à un poison courant (Test étendu, Int. + Médecine Diff. 14, Objectif 10).<br>- Traiter une maladie inconnue et mortelle (Test étendu, Int. + Médecine Diff. 25, Objectif 30 et plus).<br><br><i>Temps d'action :</i><br>Variable. Le plus souvent, une heure est requise pour tenter un diagnostic ou faire un test pour fabriquer un médicament. Pour soigner les blessures ou traiter une maladie, il faut une journée par test. <br><br><i>Spécialités :</i><br>Apothicaire, Chirurgie, Diagnostic, Poisons, Maladies, Secourisme.",
+			"SPECIALISTICS": "Apothicaire, Chirurgie, Diagnostic, Poisons, Maladies, Secourisme"
+		},
+		"PERSUASION": {
+			"NAME": "Persuasion",
+			"HELP": "<b>Persuasion</b><br><br>Capacité à convaincre les autres par la force de vos arguments ou par la crainte, la Persuasion est l’instrument préféré des diplomates, des vendeurs et de tous les professionnels de la négociation. Elle permet d’obtenir un prix sur un objet autant que de captiver les foules.<br><br><i>Exemples :</i><br>Que ce soit pour faire avouer un secret à quelqu’un en le menaçant ou pour convaincre quelqu’un, la Persuasion se joue par un test opposé (Pré. + Persuasion contre Int. + Intuition).<br>Si plusieurs orateurs cherchent à se convaincre, un test opposé de Pré. + Persuasion a lieu, et le plus haut score l’emporte.<br><br><i>Temps d'action :</i><br>Variable. <br><br><i>Spécialités :</i><br>Discours, Interrogatoire, Marchandage.",
+			"SPECIALISTICS": "Discours, Interrogatoire, Marchandage"
+		},
+		"PILOTAGE": {
+			"NAME": "Pilotage",
+			"HELP": "<b>Pilotage</b><br><br>L’aptitude à monter à cheval et à guider et conduire toute sorte de véhicules, depuis la diligence jusqu’aux hélicoptères. La plupart des gens peuvent effectuer des tâches de ce genre, mais seuls les vrais pilotes s’en sortent lorsque la situation devient urgente ou complexe.<br><br><i>Exemples :</i><br>- Conduire un véhicule à allure lente sur un terrain plat (Hab. + Pilotage Diff. 4).<br>- Piloter un vaisseau de tourisme (Hab. + Pilotage Diff. 14).<br>- Négocier en véhicule un virage serré à toute allure par temps de pluie (Hab. + Pilotage Diff. 18).<br><br><i>Temps d'action :</i><br>Instantané lorsqu’un danger inhabituel se présente. Dans des conditions de déplacement normales, un seul test est suffisant. <br><br><i>Spécialités :</i><br>Vaisseau, Conduite, Équitation, Motos, Navires.",
+			"SPECIALISTICS": "Vaisseau, Conduite, Équitation, Motos, Navires"
+		},
+		"SAVOIR": {
+			"NAME": "Savoir",
+			"HELP": "<b>Savoir</b><br><br>Cette compétence évalue l’érudition du personnage. Elle représente un savoir général dans tous les domaines, de l’histoire aux sciences de la vie, et celui qui la maîtrise à un haut niveau peut être considéré comme un véritable puits de science. De plus, celui qui maîtrise cette compétence peut identifier des sorts, connaît les créatures magiques et la science des potions et philtres en tous genres.<br><br><i>Exemples :</i><br>Selon la rareté de l’information et sa précision, la Difficulté varie.<br><br><i>Temps d'action :</i><br>Instantané. Le personnage sait ou ne sait pas, mais régler une énigme mystique particulièrement longue peut demander plus de temps, et un test étendu. <br><br><i>Spécialités :</i><br>Astronomie, Histoire et Géographie, Informatique, Ingénierie, Théologie, Occultisme, Entités mystérieuses, Identification.",
+			"SPECIALISTICS": "Astronomie, Histoire et Géographie, Informatique, Ingénierie, Théologie, Occultisme, Entités mystérieuses, Identification"
+		},
+		"SURVIE": {
+			"NAME": "Survie",
+			"HELP": "<b>Survie</b><br><br>Survivre en milieu hostile n’est pas donné à tout le monde. Avec cette compétence, le personnage a appris à se débrouiller pour trouver un abri, sait comment chasser et éviter les plantes toxiques et peut éviter de mourir de froid, de soif ou dans un piège naturel.<br><br><i>Exemples :</i><br>- Trouver quelques fruits comestibles à la bonne saison (Int. + Survie Diff. 8).<br>- Reconnaître un danger naturel comme des sables mouvants (Int. + Survie Diff. 14).<br>- Survivre sans matériel au cœur d’une montagne enneigée (Int. + Survie Diff. 20).<br><br><i>Temps d'action :</i><br>Variable. Reconnaître un danger est instantané, mais un test pour survivre doit être réalisé chaque jour que le personnage passe dans un environnement sauvage. <br><br><i>Spécialités :</i><br>Chasse, Pister, Désert, Flore, Montagne.",
+			"SPECIALISTICS": "Chasse, Pister, Désert, Flore, Montagne"
+		},
+		"ELEMENTAIRES": {
+			"NAME": "Cristaux de type Elémentaires",
+			"HELP": "<b>Elémentaires</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « élémentaires » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Créer une flamme sur du bois de camp (Pou. + Élémentaires, Diff. 7).<br>- Inonder une petite pièce (Pou. + Élémentaires, Diff. 14).<br>- Créer une tornade dévastatrice (Pou. + Élémentaires, Diff. 25)."
+		},
+		"INVOCATIONS": {
+			"NAME": "Cristaux de type Invocations",
+			"HELP": "<b>Invocations</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « invocations » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Invoquer une souris (Pou. + Invocations, Diff. 6).<br>- Invoquer un goule (Pou. + Invocations, Diff. 22).<br>- Invoquer un dragon (Pou. + Invocations, Diff. 30)."
+		},
+		"MENTAUX": {
+			"NAME": "Cristaux de type Mentaux",
+			"HELP": "<b>Mentaux</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « mentaux » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Créer une amnésie temporaire (Pou. + Mentaux, Diff. 7).<br>- Communiquer avec un mort (Pou. + Mentaux, Diff. 16).<br>- Donner un ordre absolu (Pou. + Mentaux, Diff. 27)."
+		},
+		"TRANSFORMATIONS": {
+			"NAME": "Cristaux de type Transformations",
+			"HELP": "<b>Transformations</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « transformation » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Améliorer sa vision (Pou. + Transformation, Diff. 7).<br>- Se camoufler comme un caméléon (Pou. + Transformation, Diff. 15).<br>- Se métamorphoser en une autre personne (Pou. + Transformation, Diff. 28)."
+		},
+		"SPATIAUXTEMPORELS": {
+			"NAME": "Cristaux de type Spatiaux-temporels",
+			"HELP": "<b>Spatiaux-temporels</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « spatiauxtemporels » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Créer un champ de force (Pou. + Spatiaux-temporels, Diff. 10).<br>- Annuler la magie des cristaux dans une pièce (Pou. + Spatiaux-temporels, Diff. 18).<br>- Arrêt sur image (Pou. + Spatiaux-temporels, Diff. 26)."
+		},
+		"SPECIAUX": {
+			"NAME": "Cristaux de type Spéciaux",
+			"HELP": "<b>Spéciaux</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « spéciaux », des cristaux qui n'entrent pas dans les autres catégories, et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Entraver une personne (Pou. + Spéciaux, Diff. 9).<br>- Voler de la vie (Pou. + Spéciaux, Diff. 17).<br>- Transférer les blessures et la douleur (Pou. + Spéciaux, Diff. 22)."
+		},
+		"CRYSTALS": {
+			"TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne. En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible.",
+			"TEXT02": "Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.<br>Dans la logique, au début un personnage ne devrait avoir <b>au maximum, un cristal de rang A ou deux cristaux de rang B</b> et aucun de rang S ! Les personnages ne peuvent porter que 3 cristaux de rangs supérieurs ou égaux à C, car porter plus de cristaux sur soi entrainerait des perturbations physiques et psychiques...<br>Conseil : Il est inutile d'avoir beaucoup de cristaux puissants si l'on n'a pas l'Energie Vitale pour les utiliser."
+		},
+		"EQUIPEMENT": {
+			"TEXT": "La magie du monde d'Arlénor est puissante et quasi primordiale pour combattre. Cependant, pour certains personnages, il est aussi vital d'avoir un équipement adéquat en cas de panne d'Energie Vitale. Dans le Monde d'Arlénor, il existe toute sorte d'armes, cependant les armes non magiques ne sont pas très bien vues par les gens de la société adeptes des cristaux (notamment la société Faradélienne).<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement.",
+			"HELP": "<b>Indicateurs</b><br><br><i>Attaque :</i><br>Bonus accordé au test de Combat pour l'utilisateur de l'arme.<br><br><i>Défense :</i><br>Bonus accordé à la Défense pour l'utilisateur de l'arme.<br><br><i>Catégories :</i><br>Les armes légères demandent un test d’Habileté + Combat pour être employées, les armes moyennes et lourdes un test de Vigueur + Combat. Les armes lourdes demandent les deux mains pour être utilisées.<br><br><i>Chargeur :</i><br>La quantité d’attaques pouvant être réalisées avec l’arme sans avoir besoin de la recharger.<br><br><i>Rechargement :</i><br>Le temps de rechargement nécessaire.<br>Rapide : l’arme se recharge sans perdre de temps.<br>Action : Recharger l’arme prend l’action du tour du personnage, ne lui laissant que la possibilité de se déplacer et d’effectuer des actions rapides lorsqu’il recharge.<br><br><i>Portée efficace :</i><br>Chaque fois que cette portée est dépassée, le personnage subit un malus cumulatif de -2 à son test de Combat. Ainsi, un archer tirant sur une cible à 100m tire à 4 fois sa portée efficace, subissant un malus de -8 à son test."
+		},
+		"IDENTITY": {
+			"TEXT": "Pour l'instant, votre personnage est une série de chiffres sur un formulaire... pour lui insuffler un peu de vie, il faut lui remplir son 'état civil'. Le choix d'un nom est toujours délicat, mais une fois baptisé, il vous restera à lui donner un peu de relief avec une description (physique, ou historique personnel) et finir par lui donner une apparence."
+		}
+	},
+	"ABOUT": {
 		"INTRODUCTION": "Présentation",
 		"INTRODUCTIONTEXT": "Je suis Spefire, j'ai 24 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
 		"CONTACT": "Contact / Questions",
