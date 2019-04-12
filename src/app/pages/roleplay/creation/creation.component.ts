@@ -490,6 +490,7 @@ export class CreationComponent {
 				this.avatar = parameters.avatar;
 				this.changeRace({ value: parameters.race });
 				this.checkWarnings();
+				alert("Importation du personnage réussie !");
 			});
 		}
 	}

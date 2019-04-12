@@ -10,6 +10,21 @@
 
 <popup *ngIf="help" text="{{ help }}" (onClosePopup)="closePopup()"></popup>
 
+<!--------------------------------------------------------------------------------------------------------------->
+<!------------                                IMPORT                                                ------------->
+<!--------------------------------------------------------------------------------------------------------------->
+<div class="creation-container big import">
+	<h2>{{ "CREATION.MENU.IMPORT" | translate }}</h2>
+	<p innerHtml="{{ 'CREATION.IMPORT' | translate }}"></p>
+	<label for="creation-load-parameters">Importer les paramètres du personnage</label>
+	<input
+		type="file"
+		id="creation-load-parameters"
+		accept=".json, application/json"
+		(change)="loadJSON($event.target)"
+	/>
+</div>
+
 <div class="creation-flex">
 	<div class="creation-container left">
 		<!--------------------------------------------------------------------------------------------------------------->
@@ -869,13 +884,6 @@
 <div class="creation-container big final">
 	<h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
 	<p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
-	<button (click)="downloadPDF()">Télécharger la fiche de personnage</button>
-	<label for="creation-load-parameters">Importer les paramètres du personnage</label>
-	<input
-		type="file"
-		id="creation-load-parameters"
-		accept=".json, application/json"
-		(change)="loadJSON($event.target)"
-	/>
+	<a id="creation-save-pdf" (click)="downloadPDF()">Télécharger la fiche de personnage</a>
 	<a id ="creation-save-parameters" (click)="downloadJSON()">Sauvegarder les paramètres du personnage</a>
 </div>

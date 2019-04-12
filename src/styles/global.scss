@@ -56,7 +56,6 @@ h4 {
 
 a {
 	font-family: "Montserrat", sans-serif;
-
 	text-decoration: none;
 	color: $light-color;
 
@@ -148,6 +147,8 @@ input[type="text"] {
 	padding: 0 10px;
 	border: 1px solid;
 	border-radius: 5px;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
 
 	color: $light-color;
 	background: $dark-color;
@@ -164,6 +165,8 @@ textarea {
 	padding: 10px;
 	border: 1px solid;
 	border-radius: 5px;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
 
 	color: $light-color;
 	background: $dark-color;

@@ -45,7 +45,8 @@
 			border-right: 2px solid $secondary-color;
 
 			@media screen and (max-width: 1200px) {
-				border: none;
+				border-left: none;
+				border-top: 6px solid $secondary-color;
 			}
 		}
 
@@ -53,7 +54,31 @@
 			border-left: 2px solid $secondary-color;
 
 			@media screen and (max-width: 1200px) {
-				border: none;
+				border-left: none;
+				border-top: 6px solid $secondary-color;
+			}
+		}
+
+		&.import {
+			background-image: linear-gradient(
+				0deg,
+				rgba($dark-color, 0.8),
+				rgba($dark-color, 0.8)
+			),
+			url("/assets/images/home_02.png");
+
+			p {
+				text-align: center;
+			}
+
+			label {
+				padding: 5px 15px;
+				border-radius: 5px;
+				cursor: pointer;
+				outline: none;
+				background: none;
+				border: 1px solid #dad090;
+				color: #fcf8b0;
 			}
 		}
 
@@ -70,7 +95,7 @@
 	.creation-race-img {
 		height: 200px;
 		width: 200px;
-		margin: 0 10px;
+		margin: 10px;
 		border-radius: 50%;
 		border: 2px solid $light-secondary-color;
 	}
@@ -146,6 +171,18 @@
 			height: 250px;
 			width: 250px;
 		}
+	}
+
+	#creation-save-pdf, #creation-save-parameters {
+		margin: 10px 0;
+		padding: 5px 15px;
+		border-radius: 5px;
+		cursor: pointer;
+		outline: none;
+		background: none;
+		border: 1px solid #dad090;
+		color: #fcf8b0;
+		font-family: "Noto Serif", serif;
 	}
 
 	h2 {
