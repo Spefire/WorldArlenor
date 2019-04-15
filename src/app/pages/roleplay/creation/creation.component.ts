@@ -539,7 +539,7 @@ export class CreationComponent {
 		}
 
 		const promise = new Promise(function(resolve, reject) {
-			toDataURL("./assets/images/creation/emptyFile.jpg", function(dataUrl) {
+			toDataURL("./assets/files/Fiche_PersoVide.jpg", function(dataUrl) {
 				doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
 				doc.setFontSize(10);
 				return resolve(true);
@@ -547,11 +547,13 @@ export class CreationComponent {
 		});
 
 		Promise.all([promise]).then(() => {
-			if (this.avatar) doc.addImage(this.avatar, "JPEG", 25, 20, 81.5, 73);
-			doc.text(122, 59, "" + this.description, {
+			if (this.avatar) doc.addImage(this.avatar, "JPEG", 9.5, 10.5, 95.5, 82.25);
+			doc.setFontSize(8);
+			doc.text(176, 54, "" + this.description, {
 				align: "justify",
-				maxWidth: 290
+				maxWidth: 182
 			});
+			doc.setFontSize(10);
 
 			doc.text(122, 132.9, "" + this.name);
 

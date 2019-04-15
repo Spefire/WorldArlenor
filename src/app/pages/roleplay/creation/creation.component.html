@@ -825,10 +825,10 @@
 			<p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
 			<span>Nom du personnage</span>
 			<input type="text" value="{{ name }}" (change)="changeName($event.target)" />
-			<span>Description / histoire du personnage (max : 580 caract.)</span>
+			<span>Description / histoire du personnage (max : 440 caract.)</span>
 			<textarea
 				value="{{ description }}"
-				maxlength="580"
+				maxlength="440"
 				(change)="changeDescription($event.target)"
 			></textarea>
 		</div>
