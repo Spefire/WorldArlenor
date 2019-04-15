@@ -226,7 +226,7 @@
 			"PEOPLE4": {
 				"NAME": "Mutant",
 				"TITLE": "Les Mutants",
-				"TEXT01": "Le peuple des mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les humains et les elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamne leur existence.",
+				"TEXT01": "Le peuple des mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les humains et les elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamnent leur existence.",
 				"TEXT02": "Les mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
 				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys",
 				"AVANTAGES": "- Le personnage possède une partie animale et ses propriétés.<br>- (Stat) Base de compétence : Furtivité et Manipulation à 1<br>- (Stat) Quantité d'énergie vitale : 8",
@@ -260,7 +260,7 @@
     },
     "PERSO": {
 			"TITLE": "La création de personnage",
-      "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... (bientôt la création de perso en ligne)",
+      "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... Accédez dès maintenant à la naissance de votre personnage !",
       "SEEMORE": "Activité : Passer à la création !"
     },
     "FILES": {
