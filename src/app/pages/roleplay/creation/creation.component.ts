@@ -28,7 +28,6 @@ export class CreationComponent {
 	public crystalSkills: any;
 	public nbPointsMainSkills: number;
 	public leftPointsMainSkills: number;
-	public nbPointsCrystalSkills: number;
 	public leftPointsCrystalSkills: number;
 
 	public crystal01: any;
@@ -110,7 +109,6 @@ export class CreationComponent {
 		};
 
 		this.nbPointsCaracteristics = 13;
-		this.nbPointsCrystalSkills = this.caracteristics.pouvoir * 2;
 
 		this.crystal01 = {};
 		this.crystal02 = {};
@@ -194,7 +192,6 @@ export class CreationComponent {
 
 	changeCaracteristics(event) {
 		this.caracteristics[event.type] = parseInt(event.value);
-		this.nbPointsCrystalSkills = this.caracteristics.pouvoir * 2;
 		this.refreshPoints();
 	}
 
@@ -217,7 +214,7 @@ export class CreationComponent {
 			totalCrystalSkills += this.crystalSkills[key].value;
 			if (this.crystalSkills[key].spe) totalCrystalSkills += 2;
 		}
-		this.leftPointsCrystalSkills = this.nbPointsCrystalSkills - totalCrystalSkills;
+		this.leftPointsCrystalSkills = this.caracteristics.pouvoir * 2 - totalCrystalSkills;
 
 		this.initiative =
 			this.caracteristics.habilete + this.caracteristics.intellect;
@@ -449,7 +446,11 @@ export class CreationComponent {
 			infos += "Votre personnage n'a pas d'avatar.<br>";
 		}
 		this.warning = infos.length > 0;
-		if (this.warning)	this.listWarnings = "<b>Vous avez des éléments manquants ou des incohérences dans votre fiche :</b><br><br>" + infos;
+		if (this.warning)	{
+			this.listWarnings = "<b>Vous avez des éléments manquants ou des incohérences dans votre fiche :</b><br><br>" + infos;
+		} else {
+			this.listWarnings = "";
+		}
 	}
 
 	loadJSON(event) {
@@ -472,6 +473,7 @@ export class CreationComponent {
 			});
 			Promise.all([promiseGetParameters]).then(() => {
 				this.caracteristics = parameters.caracteristics;
+				this.changeRace({ value: parameters.race });
 				this.mainSkills = parameters.mainSkills;
 				this.crystalSkills = parameters.crystalSkills;
 				this.crystal01 = parameters.crystal01;
@@ -483,7 +485,7 @@ export class CreationComponent {
 				this.name = parameters.name;
 				this.description = parameters.description;
 				this.avatar = parameters.avatar;
-				this.changeRace({ value: parameters.race });
+				this.refreshPoints();
 				this.checkWarnings();
 				alert("Importation du personnage réussie !");
 			});

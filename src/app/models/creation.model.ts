@@ -3,37 +3,37 @@ export const LIST_RACES = [
 		id: 1,
 		name: "Humain",
 		pe: 6,
-		nbPointsSkills: 31
+		nbPointsSkills: 26
 	},
 	{
 		id: 2,
 		name: "Elfe",
 		pe: 8,
-		nbPointsSkills: 30
+		nbPointsSkills: 25
 	},
 	{
 		id: 3,
 		name: "Nain",
 		pe: 8,
-		nbPointsSkills: 32
+		nbPointsSkills: 27
 	},
 	{
 		id: 4,
 		name: "Mutant",
 		pe: 8,
-		nbPointsSkills: 32
+		nbPointsSkills: 27
 	},
 	{
 		id: 5,
 		name: "Pan",
 		pe: 12,
-		nbPointsSkills: 32
+		nbPointsSkills: 27
 	},
 	{
 		id: 6,
 		name: "Arlénien",
 		pe: 8,
-		nbPointsSkills: 33
+		nbPointsSkills: 28
 	}
 ];
 
