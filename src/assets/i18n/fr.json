@@ -199,8 +199,8 @@
 			"PEOPLE1": {
 				"NAME": "Humain",
 				"TITLE": "Les Humains",
-				"TEXT01": "Les humains étaient les premiers à vivre sur le monde d'Arlénor. Les autres races sont des humains ayant subit des mutations au fil des générations, dû à l'exposition et utilisation quotidienne des cristaux. L'humain aime construire autant que détruire, est aussi savant qu'ignorant...",
-				"TEXT02": "La polyvalence des humains font qu'ils n'ont pas d'affiliation spécifique avec les cristaux, et rares sont ceux qui parviennent à utiliser des cristaux de haut-niveau. Les humains se sont concentrés dans les plaines de Terfil, et vivent principalement dans la cité de Faradel.",
+				"TEXT01": "Les Humains étaient les premiers à vivre sur le monde d'Arlénor. Les autres races sont des humains ayant subit des mutations au fil des générations, dû à l'exposition et utilisation quotidienne des cristaux. L'Humain aime construire autant que détruire, est aussi savant qu'ignorant...",
+				"TEXT02": "La polyvalence des Humains font qu'ils n'ont pas d'affiliation spécifique avec les cristaux, et rares sont ceux qui parviennent à utiliser des cristaux de haut-niveau. Les Humains se sont concentrés dans les plaines de Terfil, et vivent principalement dans la cité de Faradel.",
 				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
 				"AVANTAGES": "- Polyvalence et simplicité du personnage<br>- (Stat) Base de compétence : Athlétisme à 1",
 				"INCONVENIENTS": "- (Stat) Quantité d'énergie vitale : 6"
@@ -208,8 +208,8 @@
 			"PEOPLE2": {
 				"NAME": "Elfe",
 				"TITLE": "Les Elfes",
-				"TEXT01": "Les elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux humains.",
-				"TEXT02": "Les elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
+				"TEXT01": "Les Elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux Humains.",
+				"TEXT02": "Les Elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction, leur esprit ne supportant plus l'absence d'Energie Vitale... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
 				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
 				"AVANTAGES": "- Personnage très respecté globalement par les humains et les autres elfes.<br>- (Stat) Quantité d'énergie vitale : 8",
 				"INCONVENIENTS": "- Personnage craint ou hait globalement par les nains et les mutants<br>- Addiction : Si l'elfe se retrouve à court d'Energie Vitale, il tombe dans un coma à durée indéterminée."
@@ -217,8 +217,8 @@
 			"PEOPLE3": {
 				"NAME": "Nain",
 				"TITLE": "Les Nains",
-				"TEXT01": "Les nains furent les premiers à être discriminés, par leur taille, par leur pilosité abondante... Cependant, ils sont aussi craints car les nains peuvent très vite être dangereux. Ils possèdent en eux une force, une soif de sang, et une envie de... de manger de la viande crue, fraîchement découpée.",
-				"TEXT02": "Les nains, rejetés et discriminés, se sont alors regroupés dans les hautes montagnes de Kazador. La rumeur dit qu'ils y cachent un grand secret... Il n'est pas rare de voir des nains dans la cité de Jirakan, mais le plus souvent, les quelques nains qui naissent en dehors des montagnes, les rejoignent souvent en étant adulte... et rares sont ceux qui souhaitent ensuite les quitter.",
+				"TEXT01": "Les Nains furent les premiers à être discriminés, par leur taille, par leur pilosité abondante... Cependant, ils sont aussi craints car les nains peuvent très vite être dangereux. Ils possèdent en eux une force, une soif de sang, et une envie de... de manger de la viande crue, fraîchement découpée.",
+				"TEXT02": "Les Nains, rejetés et discriminés, se sont alors regroupés dans les hautes montagnes de Kazador. La rumeur dit qu'ils y cachent un grand secret... Il n'est pas rare de voir des Nains dans la cité de Jirakan, mais le plus souvent, les quelques Nains qui naissent en dehors des montagnes, les rejoignent souvent en étant adulte... et rares sont ceux qui souhaitent ensuite les quitter.",
 				"LOCATION" : "Le Régime Jirakanien, Les Montagnes de Kazador",
 				"AVANTAGES": "- Sang très chaud, immunité au froid<br>- (Stat) Base de compétence : Animaux et Combat à 1<br>- (Stat) Quantité d'énergie vitale : 8",
 				"INCONVENIENTS": "- Besoin quasi permanent de chasser, de tuer, et de manger de la viande crue."
@@ -226,8 +226,8 @@
 			"PEOPLE4": {
 				"NAME": "Mutant",
 				"TITLE": "Les Mutants",
-				"TEXT01": "Le peuple des mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les humains et les elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamnent leur existence.",
-				"TEXT02": "Les mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
+				"TEXT01": "Le peuple des Mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les Humains et les Elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamnent leur existence.",
+				"TEXT02": "Les Mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
 				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys",
 				"AVANTAGES": "- Le personnage possède une partie animale et ses propriétés.<br>- (Stat) Base de compétence : Furtivité et Manipulation à 1<br>- (Stat) Quantité d'énergie vitale : 8",
 				"INCONVENIENTS": "- Menacé d'être exécuté si l'on découvre sa partie animale.<br>- Le personnage possède un comportement de l'animal en question, selon le degré de la mutation"
@@ -235,8 +235,8 @@
 			"PEOPLE5": {
 				"NAME": "Pan",
 				"TITLE": "Les Pans",
-				"TEXT01": "Les pans sont aussi petits que les nains mais ce sont des enfants humains qui n'ont pas grandi et dont la couleur de peau devient bleutée la nuit : elle emprunterait le ciel, devenant plus claire en pleine lune, et plus sombre la nouvelle lune. Après un certain âge, quand ils ne grandissent plus, les pans disparaissent dans un endroit encore inconnu. Il est alors rare d'en apercevoir, et restent très mystérieux sur leur peuple.",
-				"TEXT02": "Du peu que l'on sait sur les pans et cet endroit inconnu, c'est que les pans seraient secrètement appelés par une entité nommée Nebulys, liée à la Lune et au Soleil. Leur mission selon elle, serait de protéger l'énergie vitale de la faune et la flore.",
+				"TEXT01": "Les Pans sont des enfants humains choisis et appelés dans la forêt de Miryden par une puissante entité magique nommée Nebulys. Contrairement aux peuples, ils subissent leur mutation génétique lorsqu'ils entrent dans cette forêt et deviennent des Pans à part entière. Par ce processus, Nebulys les a lié à la nuit : le soir leur peau prend la couleur du ciel, plus claire lors de pleines lunes et plus sombre lors de nouvelles lunes.",
+				"TEXT02": " Les Pans accordent respect et protection de la faune et de la flore. De plus, dans la forêt de Miryden, les Pans sont comme connectés entre eux via Nebulys : résultant une intelligence collective. Le fait de s'éloigner de la forêt, sans oublier la nature craintive et technophobe des Pans, les déconnecterait et rendrait certains vulnérables, déprimés, voire fous.",
 				"LOCATION" : "Inconnue",
 				"AVANTAGES": "- Peut manipuler l'énergie vitale végétale et animale, voire même l'utiliser...<br>- (Stat) Base de compétence : Intuition et Médecine à 1<br>- (Stat) Quantité d'énergie vitale : 12",
 				"INCONVENIENTS": "- N'apprécie pas l'utilisation inutile des cristaux et protège la vie.<br>- Fort dégoût pour les cités et la technologie.<br>- Anxiété sociale, peur des foules."
@@ -244,8 +244,8 @@
 			"PEOPLE6": {
 				"NAME": "Arlénien",
 				"TITLE": "Les Arléniens",
-				"TEXT01": "Les arléniens sont un autre peuple caché dans le Monde d'Arlénor, et considère eux aussi la Nature offerte par Arlénor comme sacrée. C'est un peuple très uni, fondé sur l’honnêteté, la liberté d'expression et le respect de chacun. Toutefois, les arléniens éprouvent un profond dégoût pour les autres races, les considérant comme des souilleurs, un poison pour le Monde d'Arlénor... Ils espèrent un jour y mettre un terme en les éliminant.",
-				"TEXT02": "Les arléniens sont généralement grands et tatoués : ils n'arrivent pas à utiliser les cristaux dans leur état solide... Ils ont alors un rituel, sur une semaine au minimum, qui transforme un cristal en encre puis en tatouage. Ces tatouages sont étrangement liés à la présence du soleil, les rendant moins côuteux en énergie vitale le jour.",
+				"TEXT01": "Les Arléniens sont un autre peuple caché dans le Monde d'Arlénor. Ce sont des humains qui ont été choisis à une époque lointaine, par l'entité Nebulys. Mais contrairement aux Pans, les Arléniens peuvent se reproduire car ils grandissent. De ce fait, le peuple s'auto-suffit, et Nébulys n'en transforme plus. De leur côté, ils sont liés au jour : leur utilisation de la magie est moins coûteuse en présence du Soleil, et dans des rares cas, plus puissante., et considère eux aussi la Nature offerte par Arlénor comme sacrée.",
+				"TEXT02": "Les Arléniens sont généralement grands et tatoués : ils n'arrivent pas à utiliser les cristaux dans leur état solide... Ils ont alors un rituel, sur une semaine au minimum, qui transforme un cristal en encre puis en tatouage. Et de leur côté, les Arléniens n'ont pas de liens mentaux entre eux, mais un lien direct avec Nebulys : ils ressentent le besoin et le devoir de rester dans la forêt pour protéger leur créateur.",
 				"LOCATION" : "Inconnue",
 				"AVANTAGES": "- Un tatouage demande moins d'énergie vitale qu'un cristal lorsque le soleil est présent dans le ciel.<br>- (Stat) Base de compétence : Combat, Intuition et Survie à 1<br>- (Stat) Quantité d'énergie vitale : 8",
 				"INCONVENIENTS": "- Difficulté à faire confiance aux autres peuples.<br>- Ne peut pas utiliser de cristal, autrement que par ses tatouages.<br>- Dépend de la présence de soleil pour la magie.<br>"
