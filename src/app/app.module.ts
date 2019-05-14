@@ -21,8 +21,9 @@ import { CreationComponent } from "./pages/roleplay/creation/creation.component"
 import { CharactersComponent } from "./pages/characters/characters.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { LegacyComponent } from "./pages/legacy/legacy.component";
-import { HeadUniverseComponent } from "./components/head-universe/head-universe.component";
+import { HeadCelestiaComponent } from "./components/head-celestia/head-celestia.component";
 import { HeadCreationComponent } from "./components/head-creation/head-creation.component";
+import { HeadUniverseComponent } from "./components/head-universe/head-universe.component";
 import { CreationSliderComponent } from "./components/creation-slider/creation-slider.component";
 import { PopupComponent } from "./components/popup/popup.component";
 import { HeaderComponent } from "./components/header/header.component";
@@ -43,8 +44,9 @@ import { FooterComponent } from "./components/footer/footer.component";
 		CharactersComponent,
 		AboutComponent,
 		LegacyComponent,
-		HeadUniverseComponent,
+		HeadCelestiaComponent,
 		HeadCreationComponent,
+		HeadUniverseComponent,
 		CreationSliderComponent,
 		PopupComponent,
 		HeaderComponent,

@@ -11,8 +11,8 @@
 </div>
 <div class="header-subsection" [ngClass]="{'active': route == 'universe'}">
 	<nav class="header-subnav" *ngIf="route == 'universe'">
-		<a class="disabled" [innerHtml]="'PAGE.EVANELL' | translate | uppercase"></a>
-		<a class="disabled" [innerHtml]="'PAGE.CELESTIA' | translate | uppercase"></a>
+		<a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/evanell" [innerHtml]="'PAGE.EVANELL' | translate | uppercase"></a>
+		<a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/celestia" [innerHtml]="'PAGE.CELESTIA' | translate | uppercase"></a>
 		<a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe" class="header-subtitle" [innerHtml]="'PAGE.WORLD' | translate | uppercase"></a>
 		<a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/religion" [innerHtml]="'PAGE.RELIGION' | translate | uppercase"></a>
 		<a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="universe/crystals" [innerHtml]="'PAGE.CRYSTALS' | translate | uppercase"></a>

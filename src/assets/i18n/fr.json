@@ -250,6 +250,23 @@
 				"AVANTAGES": "- Un tatouage demande moins d'énergie vitale qu'un cristal lorsque le soleil est présent dans le ciel.<br>- (Stat) Base de compétence : Combat, Intuition et Survie à 1<br>- (Stat) Quantité d'énergie vitale : 8",
 				"INCONVENIENTS": "- Difficulté à faire confiance aux autres peuples.<br>- Ne peut pas utiliser de cristal, autrement que par ses tatouages.<br>- Dépend de la présence de soleil pour la magie.<br>"
 			}
+		},
+		"CELESTIA": {
+			"SECTION01": "Dans le Monde d'Arlénor, il existe un continent perdu, appelé Célestia.",
+			"SECTION02": "Il fut appelé ainsi car le continent n'a pas d'attache terrestre. Célestia est une île flottant dans le ciel, entièrement entourée de nuages... ce qui ne permet pas aux célestiens de voir ce qu'il y a en-desous d'eux.",
+			"SECTION03": "Lîle céleste ne contient qu'un seul peuple contrairement au continent terrestre : un peuple entièrement humain. Du fait qu'il n'existe pas de cristaux sur Célestia, les célestiens n'y ont pas été exposés et n'a pas permis à leur génome de subir des mutations.",
+			"PROPERTIES": {
+				"SUBTITLE": "Le cristal arlénien",
+				"TITLE": "Propriétés connues par tous",
+				"01": "Ils mesurent entre 1 cm et 2 m.",
+				"02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
+				"03": "Un cristal est très solide, résistant.",
+				"04": "Un cristal est caractérisé par un rang S, A, B, C ou D en fonction de la puissance, et de l'énergie vitale demandée.",
+				"05": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
+				"06": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
+				"07": "Seuls les cristalliens (métier de haut rang) peuvent les retravailler en leur donnant une forme précise.",
+				"08": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
+			}
 		}
 	},
 	"ROLEPLAY": {
