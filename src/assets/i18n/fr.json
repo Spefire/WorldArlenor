@@ -252,20 +252,25 @@
 			}
 		},
 		"CELESTIA": {
-			"SECTION01": "Dans le Monde d'Arlénor, il existe un continent perdu, appelé Célestia.",
-			"SECTION02": "Il fut appelé ainsi car le continent n'a pas d'attache terrestre. Célestia est une île flottant dans le ciel, entièrement entourée de nuages... ce qui ne permet pas aux célestiens de voir ce qu'il y a en-desous d'eux.",
-			"SECTION03": "Lîle céleste ne contient qu'un seul peuple contrairement au continent terrestre : un peuple entièrement humain. Du fait qu'il n'existe pas de cristaux sur Célestia, les célestiens n'y ont pas été exposés et n'a pas permis à leur génome de subir des mutations.",
-			"PROPERTIES": {
-				"SUBTITLE": "Le cristal arlénien",
-				"TITLE": "Propriétés connues par tous",
-				"01": "Ils mesurent entre 1 cm et 2 m.",
-				"02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
-				"03": "Un cristal est très solide, résistant.",
-				"04": "Un cristal est caractérisé par un rang S, A, B, C ou D en fonction de la puissance, et de l'énergie vitale demandée.",
-				"05": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
-				"06": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
-				"07": "Seuls les cristalliens (métier de haut rang) peuvent les retravailler en leur donnant une forme précise.",
-				"08": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
+			"SECTION01": "Au dessus des nuages, en dessous du ciel du Monde d'Arlénor, se trouve une île flottant dans le ciel : Célestia. Et sur cette île invisible pour ceux d'En-Bas, vit un peuple humain nommé : les célestiens.",
+			"SECTION02": "Ce peuple, contrairement à ceux d'En-Bas, ne possèdent pas les cristaux du Monde d'Arlénor et n'ont donc pas accès à leur magie.<br>C'est seulement à partir de l'An -4 du calendrier Célestien, qu'apparaissent les Mages : des humains possédant un pouvoir élémentaire (Lumière, Feu, Air, ...) sans avoir recours à des cristaux.",
+			"SECTION03": "Ce changement fut soudain, qu'il transforma Célestia pour toujours.",
+			"POPULATION": {
+				"TITLE": "Carte et population",
+				"TEXT01": "L'île de Célestia est 5 fois plus petite que le continent du Monde d'Arlénor. Les ressources y sont alors moins nombreuses, que ce soit en terme de minerais ou d'alimentation.<br>Pour réguler donc la population avant l'An -4, les familles ne pouvaient compter qu'un seul enfant par couple. Si un couple avait le malheur d'avoir plusieurs, en plus d'être taxés, ils étaient mal vus, voire exclus d'une partie de la société.",
+				"TEXT02": "L'île possède des champs agricoles, une petite chaîne de montagne, ainsi qu'une capitale où vivent la majorité des célestiens : Mires.<br>Dû à l'absence de cristaux et de magie, Mires s'est moins développée que la cité de Faradel, restant à la révolution informatique jusqu'en l'An -4. Mais avec l'arrivée des Mages et le Grand Massacre, le niveau technologique tend à changer : devenant axé sur la magie et la guerre."
+			},
+			"CALENDAR": {
+				"TITLE": "Calendrier célestien et histoire",
+				"SUBTITLE01": "An -4 / Le Grand Massacre",
+				"TEXT01": "La paix règne globalement entre ses habitants. Cependant, en l'An -4, les célestiens virent tout à coup le ciel s'assombrir : sans crier gare, un Wendigo d'une cinquantaine de mètre se tenait au dessus d'eux.<br>Le cri qu'il poussa, annonça une suite mortelle...<br>Le Wendigo dévora tous les célestiens se trouvant sur son passage... détruisant maisons, villages et forêt. Et après avoir avalé suffisant de corps, il s'arrêta... Des oeufs naissaient alors de son dos, et en sortit d'autres monstres aux formes humanoïdes, auxquels s'ajoute une substance noire et visqueuse.",
+				"TEXT02": "Les célestiens présents à l'Est de l’île furent exterminés.<br>La petite armée célestienne fut impuissante contre ces entités venues d'ailleurs.<br>Mais c'est alors que sont nés les Mages : une capacité à contrôler les éléments s'est réveillée chez certains célestiens, et celle ci s’avérait être très efficace contre eux.<br>Cependant ces derniers étaient à la fois terrifiés par le Wendigo, ses sbires, ainsi que par eux-même et leur nouveau pouvoir.<br>Après une journée de douleur, plus de la moitié de l'ile fut décimée... Le Wendigo s'écroula, et tomba en poussière, comme par épuisement.<br>Rien n'avait préparé les célestiens à un tel combat, à une telle boucherie...",
+				"SUBTITLE02": "An 0 / La Bataille de l'Espérance",
+				"TEXT03": "Les célestiens ayant des capacités magiques, furent rejetés, discriminés, accusés d'être à l'origine du Wendigo. Les Mages se cachèrent, voyant leur pouvoir comme une malédiction...<br>Mais... quatre ans après, à l'An 0, le cauchemar recommença.<br>Les Célestiens ont alors vu deux Wendigos escalader les falaises de Célestia : ils venaient d'En-Bas ! Surpris par la présence d'un second titan, et toujours affaiblis par la première, le massacre à l'Est de Célestia fut total.",
+				"TEXT04": "Les mages sortirent alors de l'ombre pour défendre ce qu'il restait, pour les arrêter avant qu'ils n'atteignent la capitale.<br>A la fin, ils périrent tous. Sauf un.<br>Ce combat fut appelé la Bataille de l’Espérance. Et le mage survivant décida alors qu'un ordre magique devait être mis en place pour repousser les éventuelles prochaines attaques, au fil des années.<br>Cet ordre se baptisa en l'honneur de son fondateur : le Cercle des Mages Evanell.",
+				"SUBTITLE03": "An 30 / L'Histoire commence",
+				"TEXT05": "Aujourd'hui, les attaques de l'En-Bas continuent, à intervalles plus longues, mais à un nombre de Wendigo plus élevé.<br>Les Mages ont découvert que les Wendigos arrivaient sur Célestia à l'Est, par l'intermédiaire d'un arbre au bois mort, poussant 1h avant leur arrivée. De plus, cet arbre ainsi que les Wendigos disparaissaient naturellement 12 heures après, dans un amas de poussière.",
+				"TEXT06": "En 30 années, le Cercle recruta vers la vingtaine, l'âge où se développe la magie, les célestiens ayant des capacités élémentaires. Il s'agrandit rapidement et se solidifia à chaque période de pause... dans l'espoir, qu'un jour, cette guerre s'arrête."
 			}
 		}
 	},

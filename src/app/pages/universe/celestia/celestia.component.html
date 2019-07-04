@@ -6,22 +6,67 @@
 	imgLeft="assets/images/crystals/crystals_left.png"
 	imgRight="assets/images/crystals/crystals_right.png">
 </head-celestia>
-<div class="crystal-container">
-	<div class="crystal-imgs">
+<div class="celestia-map-container">
+	<div class="celestia-imgs">
 		<img src="assets/images/crystals/crystal.png" alt="">
 	</div>
-	<div class="crystal-text">
-		<h4>{{ 'UNIVERSE.CRYSTALS.PROPERTIES.SUBTITLE' | translate | uppercase }}</h4>
-		<h2>{{ 'UNIVERSE.CRYSTALS.PROPERTIES.TITLE' | translate | uppercase }}</h2>
-		<p>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.01' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.02' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.03' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.04' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.05' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.06' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.07' | translate }}<br>
-			- {{ 'UNIVERSE.CRYSTALS.PROPERTIES.08' | translate }}
-		</p>
+	<div class="celestia-text">
+		<h2>{{ 'UNIVERSE.CELESTIA.POPULATION.TITLE' | translate | uppercase }}</h2>
+		<p innerHtml="{{ 'UNIVERSE.CELESTIA.POPULATION.TEXT01' | translate }}<br><br>{{ 'UNIVERSE.CELESTIA.POPULATION.TEXT02' | translate }}"></p>
 	</div>
+</div>
+<div class="celestia-history-container">
+	<div class="celestia-history">
+		<h2>{{ 'UNIVERSE.CELESTIA.CALENDAR.TITLE' | translate | uppercase }}</h2>
+		<div class="celestia-history-title"><h4>{{ 'UNIVERSE.CELESTIA.CALENDAR.SUBTITLE01' | translate | uppercase }}</h4></div>
+		<p innerHtml="{{ 'UNIVERSE.CELESTIA.CALENDAR.TEXT01' | translate }}<br>{{ 'UNIVERSE.CELESTIA.CALENDAR.TEXT02' | translate }}"></p>
+		<div class="celestia-history-title"><h4>{{ 'UNIVERSE.CELESTIA.CALENDAR.SUBTITLE02' | translate | uppercase }}</h4></div>
+		<p innerHtml="{{ 'UNIVERSE.CELESTIA.CALENDAR.TEXT03' | translate }}<br>{{ 'UNIVERSE.CELESTIA.CALENDAR.TEXT04' | translate }}"></p>
+		<div class="celestia-history-title"><h4>{{ 'UNIVERSE.CELESTIA.CALENDAR.SUBTITLE03' | translate | uppercase }}</h4></div>
+		<p innerHtml="{{ 'UNIVERSE.CELESTIA.CALENDAR.TEXT05' | translate }}<br>{{ 'UNIVERSE.CELESTIA.CALENDAR.TEXT06' | translate }}"></p>
+	</div>
+	<table class="celestia-history-table">
+		<thead>
+			<tr>
+				<td>Ligne du temps Célestien</td>
+				<td></td>
+				<td></td>
+				<td>Ligne du temps Arlénien</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="dotted"><td></td><td></td><td></td><td></td></tr>
+			<tr>
+				<td>Création du monde</td>
+				<td>-???</td>
+				<td>-???</td>
+				<td>Création du monde</td>
+			</tr>
+			<tr class="dotted"><td></td><td></td><td></td><td></td></tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>0</td>
+				<td>Découverte du cristal</td>
+			</tr>
+			<tr>
+				<td>Le Grand Massacre</td>
+				<td>-4</td>
+				<td>666</td>
+				<td>La Grande Révolte</td>
+			</tr>
+			<tr>
+				<td>La Bataille de l'Espérance</td>
+				<td>0</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Début du récit...</td>
+				<td>30</td>
+				<td>700</td>
+				<td>Début de l'aventure...</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
