@@ -8,6 +8,25 @@
 	height: 50px;
 	width: 100%;
 
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.cs-line {
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+	}
+
+	.cs-mobile-line {
+		display: none;
+
+		@media screen and (max-width: 700px) {
+			display: block;
+		}
+	}
+
 	.cs-button {
 		height: 30px;
 		width: 30px;

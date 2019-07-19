@@ -26,8 +26,9 @@ export class CreationComponent {
 
 	public mainSkills: any;
 	public crystalSkills: any;
-	public nbPointsSkills: number;
-	public leftPointsSkills: number;
+	public nbPointsMainSkills: number;
+	public leftPointsMainSkills: number;
+	public leftPointsCrystalSkills: number;
 
 	public crystal01: any;
 	public crystal02: any;
@@ -79,16 +80,14 @@ export class CreationComponent {
 			vigueur: 1,
 			habilete: 1,
 			intellect: 1,
-			presence: 1,
+			charisme: 1,
 			pouvoir: 1
 		};
 		this.mainSkills = {
 			animaux: { value: 0, spe: "" },
 			art: { value: 0, spe: "" },
-			artisanat: { value: 0, spe: "" },
 			athletisme: { value: 0, spe: "" },
 			combat: { value: 0, spe: "" },
-			etiquette: { value: 0, spe: "" },
 			furtivite: { value: 0, spe: "" },
 			information: { value: 0, spe: "" },
 			intuition: { value: 0, spe: "" },
@@ -97,7 +96,6 @@ export class CreationComponent {
 			manipulation: { value: 0, spe: "" },
 			medecine: { value: 0, spe: "" },
 			persuasion: { value: 0, spe: "" },
-			pilotage: { value: 0, spe: "" },
 			savoir: { value: 0, spe: "" },
 			survie: { value: 0, spe: "" }
 		};
@@ -164,7 +162,7 @@ export class CreationComponent {
 		LIST_RACES.forEach(element => {
 			if (this.race === element.id) {
 				this.pe = element.pe;
-				this.nbPointsSkills = element.nbPointsSkills;
+				this.nbPointsMainSkills = element.nbPointsSkills;
 			}
 		});
 
@@ -202,32 +200,26 @@ export class CreationComponent {
 		for (var key in this.caracteristics) {
 			totalCaracteristics += this.caracteristics[key];
 		}
-		this.leftPointsCaracteristics =
-			this.nbPointsCaracteristics - totalCaracteristics;
+		this.leftPointsCaracteristics =	this.nbPointsCaracteristics - totalCaracteristics;
 
-		var totalSkills = 0;
+		var totalMainSkills = 0;
 		for (var key in this.mainSkills) {
-			totalSkills += this.mainSkills[key].value;
-			if (this.mainSkills[key].spe) totalSkills += 2;
+			totalMainSkills += this.mainSkills[key].value;
+			if (this.mainSkills[key].spe) totalMainSkills += 2;
 		}
+		this.leftPointsMainSkills = this.nbPointsMainSkills - totalMainSkills;
+
+		var totalCrystalSkills = 0;
 		for (var key in this.crystalSkills) {
-			totalSkills += this.crystalSkills[key].value;
-			if (this.crystalSkills[key].spe) totalSkills += 2;
+			totalCrystalSkills += this.crystalSkills[key].value;
+			if (this.crystalSkills[key].spe) totalCrystalSkills += 2;
 		}
-		this.leftPointsSkills = this.nbPointsSkills - totalSkills;
+		this.leftPointsCrystalSkills = this.caracteristics.pouvoir * 2 - totalCrystalSkills;
 
 		this.initiative =
 			this.caracteristics.habilete + this.caracteristics.intellect;
 		this.pv = 10 + 3 * this.caracteristics.vigueur;
 
-		if (this.race === 6) {
-			if (this.crystal01.name && this.crystal01.type)
-				this.pv = this.pv - this.crystal01.demiPV;
-			if (this.crystal02.name && this.crystal02.type)
-				this.pv = this.pv - this.crystal02.demiPV;
-			if (this.crystal03.name && this.crystal03.type)
-				this.pv = this.pv - this.crystal03.demiPV;
-		}
 		this.checkWarnings();
 	}
 
@@ -289,14 +281,12 @@ export class CreationComponent {
 					change = true;
 					this.crystal01.rank = element.rank;
 					this.crystal01.EV = element.EV;
-					this.crystal01.demiPV = element.demiPV;
 					this.crystal01.demiEV = element.demiEV;
 				}
 			});
 			if (!change) {
 				this.crystal01.rank = undefined;
 				this.crystal01.EV = undefined;
-				this.crystal01.demiPV = undefined;
 				this.crystal01.demiEV = undefined;
 			}
 		} else if (number === 2) {
@@ -306,14 +296,12 @@ export class CreationComponent {
 					change = true;
 					this.crystal02.rank = element.rank;
 					this.crystal02.EV = element.EV;
-					this.crystal02.demiPV = element.demiPV;
 					this.crystal02.demiEV = element.demiEV;
 				}
 			});
 			if (!change) {
 				this.crystal02.rank = undefined;
 				this.crystal02.EV = undefined;
-				this.crystal02.demiPV = undefined;
 				this.crystal02.demiEV = undefined;
 			}
 		} else if (number === 3) {
@@ -323,14 +311,12 @@ export class CreationComponent {
 					change = true;
 					this.crystal03.rank = element.rank;
 					this.crystal03.EV = element.EV;
-					this.crystal03.demiPV = element.demiPV;
 					this.crystal03.demiEV = element.demiEV;
 				}
 			});
 			if (!change) {
 				this.crystal03.rank = undefined;
 				this.crystal03.EV = undefined;
-				this.crystal03.demiPV = undefined;
 				this.crystal03.demiEV = undefined;
 			}
 		}
@@ -424,11 +410,18 @@ export class CreationComponent {
 			infos += "Votre personne n'a plus de points de Vie... Attention lors que vous êtes arlénien, vous perdez des PV à chaque cristal tatoué sur le corps.<br>";
 		}
 
-		if (this.leftPointsSkills > 0) {
+		if (this.leftPointsMainSkills > 0) {
 			infos += "Il reste des points de compétences à dépenser.<br>";
 		}
-		if (this.leftPointsSkills < 0) {
+		if (this.leftPointsMainSkills < 0) {
 			infos += "Vous avez dépensé trop de points de compétences (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
+		}
+
+		if (this.leftPointsCrystalSkills > 0) {
+			infos += "Il reste des points de compétences de cristaux à dépenser.<br>";
+		}
+		if (this.leftPointsCrystalSkills < 0) {
+			infos += "Vous avez dépensé trop de points de compétences de cristaux (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
 		}
 
 		if (!this.crystal01.name && !this.crystal02.name && !this.crystal03.name) {
@@ -453,7 +446,72 @@ export class CreationComponent {
 			infos += "Votre personnage n'a pas d'avatar.<br>";
 		}
 		this.warning = infos.length > 0;
-		if (this.warning)	this.listWarnings = "<b>Vous avez des éléments manquants ou des incohérences dans votre fiche :</b><br><br>" + infos;
+		if (this.warning)	{
+			this.listWarnings = "<b>Vous avez des éléments manquants ou des incohérences dans votre fiche :</b><br><br>" + infos;
+		} else {
+			this.listWarnings = "";
+		}
+	}
+
+	loadJSON(event) {
+		var file = event.files[0];
+		if (!file) return;
+		if (file.size > 2000000) {
+			alert("Warning (Max size : 2 Mo)");
+		} else {
+			var parameters;
+			const promiseGetParameters = new Promise(function(resolve, reject) {
+				var reader = new FileReader();
+				reader.readAsText(file);
+				reader.onload = function() {
+					parameters = JSON.parse( reader.result.toString() );
+					return resolve(true);
+				};
+				reader.onerror = function(error) {
+					console.log(error);
+				};
+			});
+			Promise.all([promiseGetParameters]).then(() => {
+				this.caracteristics = parameters.caracteristics;
+				this.changeRace({ value: parameters.race });
+				this.mainSkills = parameters.mainSkills;
+				this.crystalSkills = parameters.crystalSkills;
+				this.crystal01 = parameters.crystal01;
+				this.crystal02 = parameters.crystal02;
+				this.crystal03 = parameters.crystal03;
+				this.armor = parameters.armor;
+				this.weapon01 = parameters.weapon01;
+				this.weapon02 = parameters.weapon02;
+				this.name = parameters.name;
+				this.description = parameters.description;
+				this.avatar = parameters.avatar;
+				this.refreshPoints();
+				this.checkWarnings();
+				alert("Importation du personnage réussie !");
+			});
+		}
+	}
+
+	downloadJSON() {
+		var parameters = {
+			caracteristics: this.caracteristics,
+			mainSkills: this.mainSkills,
+			crystalSkills: this.crystalSkills,
+			crystal01: this.crystal01,
+			crystal02: this.crystal02,
+			crystal03: this.crystal03,
+			armor: this.armor,
+			weapon01: this.weapon01,
+			weapon02: this.weapon02,
+			name: this.name,
+			description: this.description,
+			avatar: this.avatar,
+			race: this.race
+		}
+		var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parameters));
+		var dlAnchorElem = document.getElementById('creation-save-parameters');
+		dlAnchorElem.setAttribute("href", dataStr);
+		dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.name + ".json");
 	}
 
 	downloadPDF() {
@@ -483,7 +541,7 @@ export class CreationComponent {
 		}
 
 		const promise = new Promise(function(resolve, reject) {
-			toDataURL("./assets/images/creation/emptyFile.jpg", function(dataUrl) {
+			toDataURL("./assets/files/Fiche_PersoVide.jpg", function(dataUrl) {
 				doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
 				doc.setFontSize(10);
 				return resolve(true);
@@ -491,16 +549,19 @@ export class CreationComponent {
 		});
 
 		Promise.all([promise]).then(() => {
-			doc.text(122, 90.5, "" + this.name);
-			if (this.avatar) doc.addImage(this.avatar, "JPEG", 25, 20, 81.5, 73);
-			doc.text(29.3, 134, "" + this.description, {
+			if (this.avatar) doc.addImage(this.avatar, "JPEG", 9.5, 10.5, 95.5, 82.25);
+			doc.setFontSize(8);
+			doc.text(176, 54, "" + this.description, {
 				align: "justify",
-				maxWidth: 181
+				maxWidth: 182
 			});
+			doc.setFontSize(10);
+
+			doc.text(122, 132.9, "" + this.name);
 
 			LIST_RACES.forEach(element => {
 				if (this.race === element.id) {
-					doc.text(122, 175, element.name);
+					doc.text(122, 154.1, element.name);
 				}
 			});
 
@@ -564,7 +625,7 @@ export class CreationComponent {
 				if (this.race === 6) doc.text(199, i, "" + this.crystal03.demiEV, { align: "center" });
 			}
 
-			i = 90.4;
+			i = 154.0;
 			for (var key in this.mainSkills) {
 				doc.text(326.5, i, "" + this.mainSkills[key].value, {	align: "center"	});
 				doc.setFontSize(8);

@@ -1,15 +1,16 @@
-import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
 	selector: "creation-slider",
 	templateUrl: "./creation-slider.component.html",
 	styleUrls: ["./creation-slider.component.scss"]
 })
-export class CreationSliderComponent implements OnInit {
+export class CreationSliderComponent {
 	@Input() public name: string;
 	@Input() public help: string;
 	@Input() public type: string;
 	@Input() public value: number;
+	@Input() public spe: string;
 	@Input() public hasSpecialistic: boolean;
 	@Input() public hasCristalSpecialistic: boolean;
 	@Output() onOpenPopup = new EventEmitter();
@@ -19,13 +20,11 @@ export class CreationSliderComponent implements OnInit {
 	@Input()
 	set min(minValue: number) {
 		this.valueMin = minValue;
-		this.checkButtons();
 	}
 
 	@Input()
 	set max(maxValue: number) {
 		this.valueMax = maxValue;
-		this.checkButtons();
 	}
 
 	@Input()
@@ -36,32 +35,18 @@ export class CreationSliderComponent implements OnInit {
 
 	public valueMin: number;
 	public valueMax: number;
-	public spe;
-	public canUp: boolean;
-	public canDown: boolean;
 	public listSpecialistics: Array<string>;
 
-	ngOnInit() {
-		this.checkButtons();
-	}
-
-	checkButtons() {
-		this.canDown = this.value > this.valueMin;
-		this.canUp = this.value < this.valueMax;
-	}
-
 	downValue() {
-		if (this.canDown) {
+		if (parseInt(this.value.toString()) > parseInt(this.valueMin.toString())) {
 			this.value--;
-			this.checkButtons();
 			this.valueChange();
 		}
 	}
 
 	upValue() {
-		if (this.canUp) {
+		if (parseInt(this.value.toString()) < parseInt(this.valueMax.toString())) {
 			this.value++;
-			this.checkButtons();
 			this.valueChange();
 		}
 	}
@@ -71,8 +56,7 @@ export class CreationSliderComponent implements OnInit {
 	}
 
 	speChange(spe: string) {
-		this.spe = spe;
-		this.onSpeChange.emit({ type: this.type, spe: this.spe });
+		this.onSpeChange.emit({ type: this.type, spe: spe });
 	}
 
 	openPopup() {
