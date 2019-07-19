@@ -1,10 +1,28 @@
-.webgl-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+@import "../../../styles/variables.scss";
 
-#gameContainer {
-	width: 100%;
-	height: auto;
+:host {
+
+	.game-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		background: black;
+
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+
+		#gameContainerNotStart {
+			height: auto;
+			width: 80%;
+		}
+
+		#gameContainer {
+			height: auto;
+			width: 80%;
+			background: none !important;
+		}
+	}
 }

@@ -1,6 +1,4 @@
-<div class="webgl-content">
+<div class="game-container">
 	<div id="gameContainer"></div>
-	<div class="footer">
-		<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-	</div>
+	<div *ngIf="!isLaunched" id="gameContainerNotStart" (click)="launchGame()">START</div>
 </div>
