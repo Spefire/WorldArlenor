@@ -257,7 +257,7 @@
 
 		.footer-section {
 			position: relative;
-			width: 250px;
+			width: 320px;
 
 			@media screen and (max-width: 700px) {
 				height: 50px;
@@ -274,6 +274,8 @@
 				padding: 0;
 
 				li {
+					display: flex;
+					align-items: center;
 					list-style: none;
 
 					a {
@@ -286,6 +288,20 @@
 						line-height: 40px;
 						font-size: 20px;
 						text-align: center;
+					}
+
+					.footer-arenart {
+						height: 30px;
+						width: 30px;
+						margin: 0 25px;
+						padding: 0;
+						background-size: cover;
+						background-image: url("/assets/images/arenart/icon.png");
+						cursor: pointer;
+
+						&:hover {
+							background-image: url("/assets/images/arenart/icon_hover.png");
+						}
 					}
 				}
 			}
