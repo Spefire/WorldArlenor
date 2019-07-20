@@ -1,6 +1,11 @@
 @import "../../../styles/variables.scss";
 
 :host {
+
+	a {
+		font-family: "Montserrat", sans-serif;
+	}
+
 	.header-section {
 		display: flex;
 		align-items: center;

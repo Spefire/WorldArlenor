@@ -3,6 +3,10 @@
 :host {
 	background-color: $dark-color;
 
+	a {
+		font-family: "Montserrat", sans-serif;
+	}
+
 	.bigfooter-infos {
 		display: flex;
 		height: 250px;

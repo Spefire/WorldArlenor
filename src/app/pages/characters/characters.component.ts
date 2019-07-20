@@ -20,7 +20,13 @@ export class CharactersComponent {
 	}
 
 	launchGame() {
-		this.gameInstance = UnityLoader.instantiate("gameContainer", "../../../assets/unity/Build/HTML.json", {onProgress: UnityProgress});
+		var unityContainer = document.getElementById("unityContainer");
+		if (window.innerWidth > 1200) {
+			unityContainer.style.width = "80%";
+		} else {
+			unityContainer.style.width = "100%";
+		}
+		this.gameInstance = UnityLoader.instantiate("unityContainer", "../../../assets/unity/Build/HTML.json", {onProgress: UnityProgress});
 		this.isLaunched = true;
 	}
 }

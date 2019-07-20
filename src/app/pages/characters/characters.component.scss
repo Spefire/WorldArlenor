@@ -2,27 +2,156 @@
 
 :host {
 
+	.nogame-container {
+		display: none;
+
+		@media screen and (max-width: 700px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			text-align: center;
+
+			img {
+				width: 100%;
+				padding: 20px;
+			}
+
+			p {
+				margin: 0;
+				padding-bottom: 20px;
+				text-align: center;
+
+				a {
+					text-decoration: underline;
+				}
+			}
+
+			.nolaunch {
+				margin-top: 20px;
+				padding-bottom: 0;
+			}
+		}
+	}
+
 	.game-container {
 		position: relative;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 20px;
-		background: black;
 
 		@media screen and (max-width: 700px) {
 			display: none;
 		}
 
-		#gameContainerNotStart {
-			height: auto;
-			width: 80%;
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			background-position: center;
+			background-size: cover;
+			background-image: linear-gradient(
+					0deg,
+					rgba($dark-color, 0),
+					rgba($dark-color, 0.2),
+					rgba($dark-color, 0.2),
+					rgba($dark-color, 0.4)
+				),
+				url("/assets/images/arenart/background.png");
 		}
 
-		#gameContainer {
-			height: auto;
-			width: 80%;
-			background: none !important;
+		.game-sections {
+			display: flex;
+			width: 100%;
+
+			@media screen and (max-width: 1200px) {
+				flex-direction: column;
+			}
+
+			#unityContainer {
+				height: auto;
+				width: 0%;
+				background: none !important;
+			}
+
+			#unityContainerNotStart {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 80%;
+
+				@media screen and (max-width: 1200px) {
+					width: 100%;
+				}
+
+				img {
+					height: 100px;
+					padding: 20px;
+				}
+
+				p {
+					width: 50%;
+					margin: 0;
+					padding-bottom: 20px;
+					text-align: center;
+
+					a {
+						text-decoration: underline;
+					}
+				}
+
+				button {
+					margin: 20px;
+					padding: 20px 60px;
+				}
+			}
+
+			#helpContainer {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				width: 20%;
+				padding-left: 20px;
+
+				@media screen and (max-width: 1200px) {
+					flex-direction: row;
+					width: 100%;
+					padding: 20px 0 0 0;
+				}
+
+				table {
+					width: 100%;
+
+					@media screen and (max-width: 1200px) {
+						width: 45%;
+					}
+
+					&:nth-child(1) {
+						margin-bottom: 20px;
+					}
+
+					th {
+						border-bottom: 1px solid $secondary-color;
+
+						&.first-player {
+							color: #f11d1d;
+						}
+
+						&.second-player {
+							color: #1e55c5;
+						}
+					}
+				}
+			}
 		}
 	}
 }
