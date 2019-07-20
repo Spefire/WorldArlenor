@@ -19,6 +19,7 @@ import { PopulationComponent } from "./pages/universe/population/population.comp
 import { RoleplayComponent } from "./pages/roleplay/roleplay.component";
 import { CreationComponent } from "./pages/roleplay/creation/creation.component";
 import { CharactersComponent } from "./pages/characters/characters.component";
+import { ArenartComponent } from "./pages/arenart/arenart.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { LegacyComponent } from "./pages/legacy/legacy.component";
 import { HeadUniverseComponent } from "./components/head-universe/head-universe.component";
@@ -41,6 +42,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 		RoleplayComponent,
 		CreationComponent,
 		CharactersComponent,
+		ArenartComponent,
 		AboutComponent,
 		LegacyComponent,
 		HeadUniverseComponent,
