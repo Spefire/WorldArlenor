@@ -13,6 +13,7 @@ export class ReligionComponent {
 
 	public entityKabal: string;
 	public entityTitle: string;
+	public entitySubtitle: string;
 	public entityComment: string;
 	public entityCommentName: string;
 	public select: number;
@@ -35,6 +36,9 @@ export class ReligionComponent {
 		}
 		this.translate.get('UNIVERSE.RELIGION.ENTITY' + this.select + '.TITLE').subscribe((res: string) => {
 			this.entityTitle = res;
+		});
+		this.translate.get('UNIVERSE.RELIGION.ENTITY' + this.select + '.SUBTITLE').subscribe((res: string) => {
+			this.entitySubtitle = res;
 		});
 		this.translate.get('UNIVERSE.RELIGION.ENTITY' + this.select + '.COMMENT').subscribe((res: string) => {
 			this.entityComment = res;
