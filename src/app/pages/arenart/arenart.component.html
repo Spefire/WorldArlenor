@@ -1,0 +1,93 @@
+<div class="nogame-container">
+	<img src="/assets/images/arenart/title.png" alt=""/>
+	<p>
+			L'Arenart est un jeu de combat sur plateformes, entre deux joueurs sur un seul et même ordinateur.<br/>
+			Chaque joueur incarne un personnage ou l'avatar d'un artiste, en fonction des pouvoirs qu'il veut utiliser, ainsi que l'univers où se battre et le combat commence !
+	</p><p>
+			Le but est d'être le premier à atteindre le score de 3 points : lorsqu'un joueur n'a plus de vie, le joueur adverse gagne 1 point. Et pour infliger plus de dégats, il faut diminuer la résistance de l'adversaire !
+	</p><p>
+			Vous pouvez incarner mon avatar, celui de <a href="https://www.facebook.com/CDunklayth">Dunklayth</a> ou de <a href="https://www.facebook.com/krizaliedart">Kriza Lied</a>, le personnage Apkareru de Belvelyn, ou encore Ilana d'<a href="https://www.facebook.com/AethelArts">Aethel</a>.
+	</p>
+	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope" src="https://www.youtube.com/embed/9u3umbVtPOw" allowfullscreen></iframe>
+	<p class="nolaunch">Désolé, le jeu est indisponible pour cette résolution d'écran.</p>
+</div>
+<div class="game-container">
+	<div class="game-sections">
+		<div id="unityContainer"></div>
+		<div *ngIf="!isLaunched" id="unityContainerNotStart">
+			<img src="/assets/images/arenart/title.png" alt=""/>
+			<p>
+					L'Arenart est un jeu de combat sur plateformes, entre deux joueurs sur un seul et même ordinateur.<br/>
+					Chaque joueur incarne un personnage ou l'avatar d'un artiste, en fonction des pouvoirs qu'il veut utiliser, et le combat commence !
+			</p><p>
+					Le but est d'être le premier à atteindre le score de 3 points : lorsqu'un joueur n'a plus de vie, le joueur adverse gagne 1 point. Et pour infliger plus de dégats, il faut diminuer la résistance de l'adversaire !
+			</p><p>
+					Vous pouvez incarner mon avatar, celui de <a href="https://www.facebook.com/CDunklayth" target="_blank">Dunklayth</a> ou de <a href="https://www.facebook.com/krizaliedart" target="_blank">Kriza Lied</a>, le personnage Apkareru de Belvelyn, ou encore Ilana d'<a href="https://www.facebook.com/AethelArts" target="_blank">Aethel</a>.
+			</p><p>
+				<em>L'Arenart (Arène-Art) a été crée durant deux étés (2016 et 2017) sur Unity, pour mettre en valeur<br/>les artistes et leur univers tout en s'amusant !</em>
+			</p>
+			<iframe height="360" width="640" allow="accelerometer; autoplay; encrypted-media; gyroscope" src="https://www.youtube.com/embed/9u3umbVtPOw" allowfullscreen></iframe>
+			<button (click)="launchGame()">JOUER</button>
+		</div>
+		<div id="helpContainer">
+			<table class="full-table">
+				<tr>
+					<th colspan="2" class="first-player">Touches pour le Joueur 1</th>
+				</tr>
+				<tr>
+					<td>Déplacement</td>
+					<td>ZQSD</td>
+				</tr>
+				<tr>
+					<td>Attaque de base</td>
+					<td>F</td>
+				</tr>
+				<tr>
+					<td>Pouvoir normal</td>
+					<td>G</td>
+				</tr>
+				<tr>
+					<td>Pouvoir spécial</td>
+					<td>H</td>
+				</tr>
+				<tr>
+					<td>Valider (menu)</td>
+					<td>Entrée</td>
+				</tr>
+				<tr>
+					<td>Retour (menu)</td>
+					<td>Echap</td>
+				</tr>
+			</table>
+			<table class="full-table">
+				<tr>
+					<th colspan="2" class="second-player">Touches pour le Joueur 2</th>
+				</tr>
+				<tr>
+					<td>Déplacement</td>
+					<td>Flèches directionnelles</td>
+				</tr>
+				<tr>
+					<td>Attaque de base</td>
+					<td>Num Pad 1</td>
+				</tr>
+				<tr>
+					<td>Pouvoir normal</td>
+					<td>Num Pad 2</td>
+				</tr>
+				<tr>
+					<td>Pouvoir spécial</td>
+					<td>Num Pad 3</td>
+				</tr>
+				<tr>
+					<td>Valider (menu)</td>
+					<td>Entrée</td>
+				</tr>
+				<tr>
+					<td>Retour (menu)</td>
+					<td>Echap</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
