@@ -70,127 +70,127 @@
 		},
 		"RELIGION": {
 			"SECTION01": "Selon la légende connue par tous, la Divinité de l'Existance et du Destin, Arlénor, a façonné le monde en y instaurant un équilibre entre le Bien et le Mal. Pour se faire, Arlénor enfanta 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
-			"SECTION02": "Ces entités de l'équilibre ont aidé Arlénor lors de la Création du Monde, et ont alors acquis le statut divin dans leur domaine respectif... On dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde : un endroit où seules les âmes pures peuvent entrer à leur mort. Les âmes qui sont jugées encore impures, subissent la réincarnation.",
+			"SECTION02": "Ces entités de l'équilibre ont aidé Arlénor lors de la Création du Monde, et sont devenu un symbole dans leur domaine respectif... On dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde : un endroit où seules les âmes pures peuvent entrer à leur mort. Les âmes qui sont jugées encore impures, subissent la réincarnation.",
 			"SECTION03": "Aujourd'hui, des temples d'Arlénor existent un peu partout. Les peuples vénèrent dans chaque temple : Arlénor et l'un de ses enfants. La religion se base sur le maintien d'un équilibre entre le Bien et le Mal, et appuie sur le fait qu'il faut autant vénérer les anges que les démons.",
 			"LIGHTKABAL": "La Sainte Cabale",
 			"DARKKABAL": "La Cabale Inversée",
 			"ENTITY1": {
 				"TITLE": "METATRON, l'Ange de l'Unité",
-				"SUBTITLE": "Divinité du Soleil et de la Lumière",
+				"SUBTITLE": "Symbole du Soleil et de la Lumière",
 				"COMMENT": "Chez les good guys d'Arlénor, c'est un peu lui le patron. FAUT PAS le chercher !... Mais il est sympa quand même.",
 				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
 			},
 			"ENTITY2": {
 				"TITLE": "RATZIEL, Ange de la Sagesse",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de l'Âme et de la Prudence",
 				"COMMENT": "Chercher la pomme tombée, tu ne dois pas. Trouver le pommier, il faut.",
 				"COMMENTNAME": "Renerald, Ancien fermier de Faradel"
 			},
 			"ENTITY3": {
 				"TITLE": "ZAFKIEL, Ange de la Connaissance",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole du Savoir et de l'Enseignement",
 				"COMMENT": "Pokoi diton aboir soaf de con nessence ? Sa n'ydratationne poa sa !",
 				"COMMENTNAME": "Nain random à la sortie d'un bar"
 			},
 			"ENTITY4": {
 				"TITLE": "TZADOKIEL, Ange de la Pitié",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Santé et du Voyage",
 				"COMMENT": "Tsadokiel disait 'Aide ton prochain avec volonté', alors... VIENS M'AIDER A FAIRE LA VAISSELLE, BERNARD !!!",
 				"COMMENTNAME": "Humaine songeant à divorcer"
 			},
 			"ENTITY5": {
 				"TITLE": "SAMAEL, Ange de la Justice",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Loi et des Choix",
 				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procès.",
 				"COMMENTNAME": "Quistis, Avocate de Faradel"
 			},
 			"ENTITY6": {
 				"TITLE": "MICHAEL, Ange de la Beauté",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole des Eaux et des Océans",
 				"COMMENT": "La nature a voulu créer les humains, puis des êtres plus évolués, les elfes, à travers les cristaux. Les autres mutations ne sont que des erreurs, dû au fait qu'ils voulaient nous ressembler...",
 				"COMMENTNAME": "Xendel Eresles, lors de l'inauguration de l'Eclat infini"
 			},
 			"ENTITY7": {
 				"TITLE": "HANIEL, Ange de la Passion",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Musique et des Arts",
 				"COMMENT": "Réveilles mon âme, allumes ma flamme, et fais moi rêver s'il te plait...",
 				"COMMENTNAME": "Humaine priant dans son lit à côté de sa nouvelle femme"
 			},
 			"ENTITY8": {
 				"TITLE": "RAPHAEL, Ange du Partage",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Fertilité et de la Famille",
 				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire... Cela vous fera donc 50 crédits la nuit.",
 				"COMMENTNAME": "Bob, Tavernier de Kiranof"
 			},
 			"ENTITY9": {
 				"TITLE": "GABRIEL, Ange de la Protection",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de l'Abondance et de la Sécurité",
 				"COMMENT": "Accorde-moi Gabriel, une main ferme et un regard vigilant. Abrite durant mon voyage, Ô bel Ange, ceux qui m'accompagnent des maux du feu et de toutes les calamités. Protège-moi et conduis-moi en toute sécurité à ma destination.",
 				"COMMENTNAME": "Commerçant partant traverser le désert de Sanderten"
 			},
 			"ENTITY10": {
 				"TITLE": "SANDALFONE, Ange du Matérialisme",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole des Terres et des Montagnes",
 				"COMMENT": "Ce que vous avez à retenir de ce cours, c'est que l'imagination n'a pas de limite hormis celles que vous vous fixez.",
 				"COMMENTNAME": "L'un des meilleurs professeurs de Célestia"
 			},
 			"ENTITY11": {
 				"TITLE": "SATAN, Démon du Néant",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole du Feu et des Pertes",
 				"COMMENT": "Au début, il n'y avait rien. Enfin... le rien n'existe pas. Au début, il y avait la déesse Arlénor...",
 				"COMMENTNAME": "Ancien prêtre reconverti en conteur pour enfants"
 			},
 			"ENTITY12": {
 				"TITLE": "BELZEBTUH, Démon de la Vengeance",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Guerre et de la Stratégie",
 				"COMMENT": "La vengeance est un plat qui se mange froid... ça tombe bien, j'en suis au dessert.",
 				"COMMENTNAME": "Romain, s'étant transformé en loup"
 			},
 			"ENTITY13": {
 				"TITLE": "LUCIFUGUS, Démon de la Stupidité",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de l'Ivresse et des Fêtes",
 				"COMMENT": "Je te jure, les licornes ça existe maman ! Quand elles sautent en faisant PROUT, il y a un arc-en-ciel !",
 				"COMMENTNAME": "L'innocence d'un enfant de 8 ans"
 			},
 			"ENTITY14": {
 				"TITLE": "ASTAROTH, Démon de l'Indifférence",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole des Serments et des Pactes",
 				"COMMENT": "Par mes cartes, montre moi ton passé, ton présent et ton futur... Et maintenant... Subis le châtiment de ta vie insipide !",
 				"COMMENTNAME": "Diana, dans un état second"
 			},
 			"ENTITY15": {
 				"TITLE": "ASMODEE, Démon de la Cruauté",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole des Remords et des Regrets",
 				"COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
 				"COMMENTNAME": "Jeune femme perturbée par une prêtresse"
 			},
 			"ENTITY16": {
 				"TITLE": "BELPHEGOR, Démon de la Laideur",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Faune et de la Flore",
 				"COMMENT": "Miroir miroir, mon beau miroir, dis moi qui est le plus beau... -CRACK (bruit d'un miroir qui se brise)-",
 				"COMMENTNAME": "Personne atteinte de narcissisme"
 			},
 			"ENTITY17": {
 				"TITLE": "BA'AL, Démon de la Luxure",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de l'Amour et du Sexe",
 				"COMMENT": "Le bâton et les pierres peuvent me briser les os, mais les chaines et les cordes, elles, m'excitent.",
 				"COMMENTNAME": "Chanteuse célebre dans les bars faradéliens"
 			},
 			"ENTITY18": {
 				"TITLE": "ADRAMALEC, Démon de l'Avarice",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de la Ruse et des Richesses",
 				"COMMENT": "Excusez moi madame. Je crois que vous avez fait une erreur sur l'un de vos produits... C'est 'chocolatine' et non 'pain au chocolat'... Vous me le faites gratis du coup ?",
 				"COMMENTNAME": "Client de la boulangerie Obonpin"
 			},
 			"ENTITY19": {
 				"TITLE": "LILITH, Démon de l'Instabilité",
-				"SUBTITLE": "Divinité",
+				"SUBTITLE": "Symbole de l'Air et de la Météo",
 				"COMMENT": "Moi ? Je suis folle ? Haha. Attendez de voir ma soeur !",
 				"COMMENTNAME": "Personnage venant d'un autre monde"
 			},
 			"ENTITY20": {
 				"TITLE": "NAHEMAR, Démon de la Rêverie",
-				"SUBTITLE": "Divinité de la Lune et de l'Obscurité",
+				"SUBTITLE": "Symbole de la Lune et de l'Obscurité",
 				"COMMENT": "Comment déterminer ce qui est réel, et ce qui ne l'est pas ?... C'est simple. Fais toi tuer, et si tu meurs c'est que cela n'était pas un rêve.",
 				"COMMENTNAME": "Philosophe du temps moderne"
 			}
