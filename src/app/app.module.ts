@@ -18,7 +18,6 @@ import { CrystalsComponent } from "./pages/universe/crystals/crystals.component"
 import { PopulationComponent } from "./pages/universe/population/population.component";
 import { RoleplayComponent } from "./pages/roleplay/roleplay.component";
 import { CreationComponent } from "./pages/roleplay/creation/creation.component";
-import { CharactersComponent } from "./pages/characters/characters.component";
 import { ArenartComponent } from "./pages/arenart/arenart.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { LegacyComponent } from "./pages/legacy/legacy.component";
@@ -30,45 +29,44 @@ import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HomeComponent,
-		UniverseComponent,
-		EvanellComponent,
-		CelestiaComponent,
-		ReligionComponent,
-		CrystalsComponent,
-		PopulationComponent,
-		RoleplayComponent,
-		CreationComponent,
-		CharactersComponent,
-		ArenartComponent,
-		AboutComponent,
-		LegacyComponent,
-		HeadUniverseComponent,
-		HeadCreationComponent,
-		CreationSliderComponent,
-		PopupComponent,
-		HeaderComponent,
-		FooterComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		HttpClientModule,
-		TranslateModule.forRoot({
-			loader: {
-				provide: TranslateLoader,
-				useFactory: HttpLoaderFactory,
-				deps: [HttpClient]
-			}
-		})
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    UniverseComponent,
+    EvanellComponent,
+    CelestiaComponent,
+    ReligionComponent,
+    CrystalsComponent,
+    PopulationComponent,
+    RoleplayComponent,
+    CreationComponent,
+    ArenartComponent,
+    AboutComponent,
+    LegacyComponent,
+    HeadUniverseComponent,
+    HeadCreationComponent,
+    CreationSliderComponent,
+    PopupComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
 
 export function HttpLoaderFactory(http: HttpClient) {
-	return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
