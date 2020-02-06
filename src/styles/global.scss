@@ -1,243 +1,244 @@
 html,
 body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	font-size: 14px;
-	font-family: "Noto Serif", serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Noto Serif", serif;
 }
 
 body {
-	z-index: 1;
-	color: $light-color;
-	background: $dark-color;
+  z-index: 1;
+  color: $light-color;
+  background: $dark-color;
 }
 
 h1 {
-	font-size: 65px;
-	line-height: 65px;
-	font-weight: normal;
+  font-size: 65px;
+  line-height: 65px;
+  font-weight: normal;
 
-	text-transform: uppercase;
-	color: $light-secondary-color;
-	margin: 0;
+  text-transform: uppercase;
+  color: $light-secondary-color;
+  margin: 0;
 
-	@media screen and (max-width: 700px) {
-		font-size: 30px;
-		line-height: 30px;
-	}
+  @media screen and (max-width: 700px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 h2 {
-	font-size: 26px;
-	font-weight: normal;
+  font-size: 26px;
+  font-weight: normal;
 
-	text-transform: uppercase;
-	color: $light-secondary-color;
-	margin: 0;
+  text-transform: uppercase;
+  color: $light-secondary-color;
+  margin: 0;
 }
 
 h3 {
-	font-size: 20px;
-	font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 
-	text-transform: uppercase;
-	color: $light-color;
-	margin: 0;
+  text-transform: uppercase;
+  color: $light-color;
+  margin: 0;
 }
 
 h4 {
-	font-size: 14px;
-	font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 
-	color: $light-color;
-	margin: 0;
+  color: $light-color;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
-	color: $light-color;
+  text-decoration: none;
+  color: $light-color;
 
-	&.disabled {
-		cursor: default;
+  &.disabled {
+    cursor: default;
 
-		&:hover {
-			color: $light-color;
-		}
-	}
+    &:hover {
+      color: $light-color;
+    }
+  }
 
-	&:hover {
-		color: $light-secondary-color;
-	}
+  &:hover {
+    color: $light-secondary-color;
+  }
 
-	&.active {
-		color: $light-secondary-color;
-	}
+  &.active {
+    color: $light-secondary-color;
+  }
 }
 
 button {
-	padding: 5px 15px;
-	border-radius: 5px;
-	cursor: pointer;
-	outline: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
 
-	background: none;
-	border: 1px solid $secondary-color;
-	color: $light-secondary-color;
+  background: none;
+  border: 1px solid $secondary-color;
+  color: $light-secondary-color;
 
-	&:hover {
-		background-color: rgba($light-color, 0.1);
-	}
+  &:hover {
+    background-color: rgba($light-color, 0.1);
+  }
 }
 
 img {
-	outline: none;
+  outline: none;
 }
 
 .warning {
-	color: $warning-color;
+  color: $warning-color;
 }
 
 ::-webkit-scrollbar {
-	width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-	background: $dark-color;
+  background: $dark-color;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $light-color;
+  background: $light-color;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $light-secondary-color;
+  background: $light-secondary-color;
 }
 
 table {
-	&.full-table {
-		border: 1px solid;
-		border-radius: 5px;
-		background: $dark-color;
-		border-color: $secondary-color;
+  &.full-table {
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: $dark-color;
+    border-color: $secondary-color;
 
-		thead > tr > th {
-			border-bottom: 1px solid $secondary-color;
-		}
-	}
+    thead > tr > th {
+      border-bottom: 1px solid $secondary-color;
+    }
+  }
 
-	tr {
-		vertical-align: middle;
-	}
+  tr {
+    vertical-align: middle;
+  }
 
-	th,
-	td {
-		padding: 5px;
-	}
+  th,
+  td {
+    padding: 5px;
+  }
 }
 
 input[type="file"] {
-	display: none;
+  display: none;
 }
 
 input[type="text"] {
-	overflow: hidden;
-	height: 30px;
-	padding: 0 10px;
-	border: 1px solid;
-	border-radius: 5px;
-	font-size: 12px;
+  overflow: hidden;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
 
-	color: $light-color;
-	background: $dark-color;
-	border-color: $secondary-color;
+  color: $light-color;
+  background: $dark-color;
+  border-color: $secondary-color;
 }
 
 ::placeholder {
-	color: $grey-color;
+  color: $grey-color;
 }
 
 textarea {
-	width: 400px;
-	height: 50px;
-	padding: 10px;
-	border: 1px solid;
-	border-radius: 5px;
-	font-size: 12px;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
 
-	color: $light-color;
-	background: $dark-color;
-	border-color: $secondary-color;
+  color: $light-color;
+  background: $dark-color;
+  border-color: $secondary-color;
 
-	@media screen and (max-width: 700px) {
-		width : 85%;
-	}
+  @media screen and (max-width: 700px) {
+    width: 85%;
+  }
 }
 
 .help {
-	width: 25px;
-	height: 25px;
-	line-height: 25px;
-	margin: 0 20px;
-	text-align: center;
-	cursor: pointer;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .dropdown {
-	position: relative;
-	overflow: hidden;
-	height: 30px;
-	border: 1px solid;
-	border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
 
-	background: $dark-color;
-	border-color: $secondary-color;
+  background: $dark-color;
+  border-color: $secondary-color;
 }
 
 .dropdown:after {
-	content: "";
-	position: absolute;
-	z-index: 2;
-	top: 10px;
-	right: 10px;
-	width: 0;
-	height: 0;
-	border: 5px dashed;
-	border-color: $dark-color transparent;
-	pointer-events: none;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 5px dashed;
+  border-color: $dark-color transparent;
+  pointer-events: none;
 }
 
 .dropdown:after {
-	margin-top: 2px;
-	border-bottom: none;
-	border-top-style: solid;
-	border-top-color: $secondary-color;
+  margin-top: 2px;
+  border-bottom: none;
+  border-top-style: solid;
+  border-top-color: $secondary-color;
 }
 
 .dropdown-select {
-	position: relative;
-	width: 100%;
-	margin: 0;
-	padding: 0px 30px 0px 10px;
-	height: 30px;
-	line-height: 15px;
-	font-size: 15px;
-	border: 0;
-	border-radius: 0;
-	-webkit-appearance: none;
-	cursor: pointer;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0px 30px 0px 10px;
+  height: 30px;
+  line-height: 15px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
 
-	color: white;
-	background: rgba(0, 0, 0, 0) !important;
+  color: white;
+  background: rgba(0, 0, 0, 0) !important;
 }
 
 .dropdown-select:focus {
-	outline: none;
+  outline: none;
 }
 
 .dropdown-select > option {
-	padding: 10px;
-	border-radius: 5px;
-	cursor: pointer;
-	background: $dark-color;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: $dark-color;
 }

@@ -1,17 +1,17 @@
 {
   "PAGE": {
     "HOME": "Le Monde d'Arlénor",
-		"UNIVERSE": "L'Univers",
-		"CELESTIA": "L'Île Célestia",
-		"EVANELL": "Le Cercle des mages",
-		"WORLD": "Le Monde",
+    "UNIVERSE": "L'Univers",
+    "CELESTIA": "L'Île Célestia",
+    "EVANELL": "Le Cercle des mages",
+    "WORLD": "Le Monde",
     "RELIGION": "La Religion",
-		"CRYSTALS": "La Magie des Cristaux",
-		"POPULATION": "Les Peuples",
-		"ROLEPLAY": "Le Jeu de rôle",
-		"CREATION": "La Création du Personnage",
+    "CRYSTALS": "La Magie des Cristaux",
+    "POPULATION": "Les Peuples",
+    "ROLEPLAY": "Le Jeu de rôle",
+    "CREATION": "La Création du Personnage",
     "CHARACTERS": "Les Personnages",
-		"ARENART": "L'Arenart",
+    "ARENART": "L'Arenart",
     "ABOUT": "A Propos",
     "LEGACY": "Mentions Légales"
   },
@@ -34,464 +34,403 @@
     }
   },
   "UNIVERSE": {
-		"WORLD": {
-			"DANGER": "Niveau de danger",
-			"CLIMATE": "Climat",
-			"FARADEL": {
-				"TITLE": "L'Empire Faradelien",
-				"DANGER": "Paisible",
-				"CLIMATE": "Tempéré"
-			},
-			"JIRAKAN": {
-				"TITLE": "Le Régime Jirakanien",
-				"DANGER": "Risqué",
-				"CLIMATE": "Désertique"
-			},
-			"IMERYS": {
-				"TITLE": "La Forêt d'Imerys",
-				"DANGER": "Risqué",
-				"CLIMATE": "Tempéré"
-			},
-			"KAZADOR": {
-				"TITLE": "Les Montagnes de Kazador",
-				"DANGER": "Mortel",
-				"CLIMATE": "Montagnard"
-			},
-			"SHIVAZEN": {
-				"TITLE": "La Mer de Shivazen",
-				"DANGER": "Infernal",
-				"CLIMATE": "Tropical"
-			},
-			"ZONES": {
-				"TITLE": "Les Zones Inexplorées",
-				"DANGER": "Mortel",
-				"CLIMATE": "Tropical"
-			}
-		},
-		"RELIGION": {
-			"SECTION01": "Selon la légende connue par tous, la Divinité de l'Existance et du Destin, Arlénor, a façonné le monde en y instaurant un équilibre entre le Bien et le Mal. Pour se faire, Arlénor enfanta 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
-			"SECTION02": "Ces entités de l'équilibre ont aidé Arlénor lors de la Création du Monde, et sont devenu un symbole dans leur domaine respectif... On dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde : un endroit où seules les âmes pures peuvent entrer à leur mort. Les âmes qui sont jugées encore impures, subissent la réincarnation.",
-			"SECTION03": "Aujourd'hui, des temples d'Arlénor existent un peu partout. Les peuples vénèrent dans chaque temple : Arlénor et l'un de ses enfants. La religion se base sur le maintien d'un équilibre entre le Bien et le Mal, et appuie sur le fait qu'il faut autant vénérer les anges que les démons.",
-			"LIGHTKABAL": "La Sainte Cabale",
-			"DARKKABAL": "La Cabale Inversée",
-			"ENTITY1": {
-				"TITLE": "METATRON, l'Ange de l'Unité",
-				"SUBTITLE": "Symbole du Soleil et de la Lumière",
-				"COMMENT": "Chez les good guys d'Arlénor, c'est un peu lui le patron. FAUT PAS le chercher !... Mais il est sympa quand même.",
-				"COMMENTNAME": "Lulu, Némésis de l'Humanité"
-			},
-			"ENTITY2": {
-				"TITLE": "RATZIEL, Ange de la Sagesse",
-				"SUBTITLE": "Symbole de l'Âme et de la Prudence",
-				"COMMENT": "Chercher la pomme tombée, tu ne dois pas. Trouver le pommier, il faut.",
-				"COMMENTNAME": "Renerald, Ancien fermier de Faradel"
-			},
-			"ENTITY3": {
-				"TITLE": "ZAFKIEL, Ange de la Connaissance",
-				"SUBTITLE": "Symbole du Savoir et de l'Enseignement",
-				"COMMENT": "Pokoi diton aboir soaf de con nessence ? Sa n'ydratationne poa sa !",
-				"COMMENTNAME": "Nain random à la sortie d'un bar"
-			},
-			"ENTITY4": {
-				"TITLE": "TZADOKIEL, Ange de la Pitié",
-				"SUBTITLE": "Symbole de la Santé et du Voyage",
-				"COMMENT": "Tsadokiel disait 'Aide ton prochain avec volonté', alors... VIENS M'AIDER A FAIRE LA VAISSELLE, BERNARD !!!",
-				"COMMENTNAME": "Humaine songeant à divorcer"
-			},
-			"ENTITY5": {
-				"TITLE": "SAMAEL, Ange de la Justice",
-				"SUBTITLE": "Symbole de la Loi et des Choix",
-				"COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procès.",
-				"COMMENTNAME": "Quistis, Avocate de Faradel"
-			},
-			"ENTITY6": {
-				"TITLE": "MICHAEL, Ange de la Beauté",
-				"SUBTITLE": "Symbole des Eaux et des Océans",
-				"COMMENT": "La nature a voulu créer les humains, puis des êtres plus évolués, les elfes, à travers les cristaux. Les autres mutations ne sont que des erreurs, dû au fait qu'ils voulaient nous ressembler...",
-				"COMMENTNAME": "Xendel Eresles, lors de l'inauguration de l'Eclat infini"
-			},
-			"ENTITY7": {
-				"TITLE": "HANIEL, Ange de la Passion",
-				"SUBTITLE": "Symbole de la Musique et des Arts",
-				"COMMENT": "Réveilles mon âme, allumes ma flamme, et fais moi rêver s'il te plait...",
-				"COMMENTNAME": "Humaine priant dans son lit à côté de sa nouvelle femme"
-			},
-			"ENTITY8": {
-				"TITLE": "RAPHAEL, Ange du Partage",
-				"SUBTITLE": "Symbole de la Fertilité et de la Famille",
-				"COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire... Cela vous fera donc 50 crédits la nuit.",
-				"COMMENTNAME": "Bob, Tavernier de Kiranof"
-			},
-			"ENTITY9": {
-				"TITLE": "GABRIEL, Ange de la Protection",
-				"SUBTITLE": "Symbole de l'Abondance et de la Sécurité",
-				"COMMENT": "Accorde-moi Gabriel, une main ferme et un regard vigilant. Abrite durant mon voyage, Ô bel Ange, ceux qui m'accompagnent des maux du feu et de toutes les calamités. Protège-moi et conduis-moi en toute sécurité à ma destination.",
-				"COMMENTNAME": "Commerçant partant traverser le désert de Sanderten"
-			},
-			"ENTITY10": {
-				"TITLE": "SANDALFONE, Ange du Matérialisme",
-				"SUBTITLE": "Symbole des Terres et des Montagnes",
-				"COMMENT": "Ce que vous avez à retenir de ce cours, c'est que l'imagination n'a pas de limite hormis celles que vous vous fixez.",
-				"COMMENTNAME": "L'un des meilleurs professeurs de Célestia"
-			},
-			"ENTITY11": {
-				"TITLE": "SATAN, Démon du Néant",
-				"SUBTITLE": "Symbole du Feu et des Pertes",
-				"COMMENT": "Au début, il n'y avait rien. Enfin... le rien n'existe pas. Au début, il y avait la déesse Arlénor...",
-				"COMMENTNAME": "Ancien prêtre reconverti en conteur pour enfants"
-			},
-			"ENTITY12": {
-				"TITLE": "BELZEBTUH, Démon de la Vengeance",
-				"SUBTITLE": "Symbole de la Guerre et de la Stratégie",
-				"COMMENT": "La vengeance est un plat qui se mange froid... ça tombe bien, j'en suis au dessert.",
-				"COMMENTNAME": "Romain, s'étant transformé en loup"
-			},
-			"ENTITY13": {
-				"TITLE": "LUCIFUGUS, Démon de la Stupidité",
-				"SUBTITLE": "Symbole de l'Ivresse et des Fêtes",
-				"COMMENT": "Je te jure, les licornes ça existe maman ! Quand elles sautent en faisant PROUT, il y a un arc-en-ciel !",
-				"COMMENTNAME": "L'innocence d'un enfant de 8 ans"
-			},
-			"ENTITY14": {
-				"TITLE": "ASTAROTH, Démon de l'Indifférence",
-				"SUBTITLE": "Symbole des Serments et des Pactes",
-				"COMMENT": "Par mes cartes, montre moi ton passé, ton présent et ton futur... Et maintenant... Subis le châtiment de ta vie insipide !",
-				"COMMENTNAME": "Diana, dans un état second"
-			},
-			"ENTITY15": {
-				"TITLE": "ASMODEE, Démon de la Cruauté",
-				"SUBTITLE": "Symbole des Remords et des Regrets",
-				"COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
-				"COMMENTNAME": "Jeune femme perturbée par une prêtresse"
-			},
-			"ENTITY16": {
-				"TITLE": "BELPHEGOR, Démon de la Laideur",
-				"SUBTITLE": "Symbole de la Faune et de la Flore",
-				"COMMENT": "Miroir miroir, mon beau miroir, dis moi qui est le plus beau... -CRACK (bruit d'un miroir qui se brise)-",
-				"COMMENTNAME": "Personne atteinte de narcissisme"
-			},
-			"ENTITY17": {
-				"TITLE": "BA'AL, Démon de la Luxure",
-				"SUBTITLE": "Symbole de l'Amour et du Sexe",
-				"COMMENT": "Le bâton et les pierres peuvent me briser les os, mais les chaines et les cordes, elles, m'excitent.",
-				"COMMENTNAME": "Chanteuse célebre dans les bars faradéliens"
-			},
-			"ENTITY18": {
-				"TITLE": "ADRAMALEC, Démon de l'Avarice",
-				"SUBTITLE": "Symbole de la Ruse et des Richesses",
-				"COMMENT": "Excusez moi madame. Je crois que vous avez fait une erreur sur l'un de vos produits... C'est 'chocolatine' et non 'pain au chocolat'... Vous me le faites gratis du coup ?",
-				"COMMENTNAME": "Client de la boulangerie Obonpin"
-			},
-			"ENTITY19": {
-				"TITLE": "LILITH, Démon de l'Instabilité",
-				"SUBTITLE": "Symbole de l'Air et de la Météo",
-				"COMMENT": "Moi ? Je suis folle ? Haha. Attendez de voir ma soeur !",
-				"COMMENTNAME": "Personnage venant d'un autre monde"
-			},
-			"ENTITY20": {
-				"TITLE": "NAHEMAR, Démon de la Rêverie",
-				"SUBTITLE": "Symbole de la Lune et de l'Obscurité",
-				"COMMENT": "Comment déterminer ce qui est réel, et ce qui ne l'est pas ?... C'est simple. Fais toi tuer, et si tu meurs c'est que cela n'était pas un rêve.",
-				"COMMENTNAME": "Philosophe du temps moderne"
-			}
-		},
-		"CRYSTALS": {
-			"SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les anges et démons lors de la création du monde, des fragments de leurs pouvoirs.",
-			"SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux.",
-			"SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant une certaine quantité de leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
-			"PROPERTIES": {
-				"SUBTITLE": "Le cristal arlénien",
-				"TITLE": "Propriétés connues par tous",
-				"01": "Ils mesurent entre 1 cm et 2 m.",
-				"02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
-				"03": "Un cristal est très solide, résistant.",
-				"04": "Un cristal est caractérisé par un rang S, A, B, O en fonction de la puissance, et de l'énergie vitale demandée.",
-				"05": "Les cristaux de rang S sont uniques au monde, il y en a très peu et leur puissance est légendaire.",
-				"06": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
-				"07": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
-				"08": "Seuls les cristalliens (métier complexe) peuvent les retravailler en leur donnant une forme précise.",
-				"09": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
-			}
-		},
-		"POPULATION": {
-			"SECTION01": "Lors de la Création, seuls les humains étaient présents dans le Monde d'Arlénor.",
-			"SECTION02": "Cependant, à l'An 0, les humains ont découvert ce qui allait changer radicalement leur vie : les cristaux.<br>La manipulation et la présence de ces derniers aux côtés des humains, ont altéré au fil du temps leur code génétique, donnant vie à de nouvelles races.",
-			"SECTION03": "Des relations se sont créées alors entre les différences races, certaines amicales, neutres, et d'autres... meurtrières.<br>Les elfes et les humains vivent en toute liberté alors que les nains et les mutants essayent de survivre du mieux qu'ils le peuvent. Les pans et les arléniens restent cachés, observant le monde de loin...",
-			"LOCATION": "Localisation",
-			"PEOPLE1": {
-				"NAME": "Humain",
-				"TITLE": "Les Humains",
-				"TEXT01": "Les Humains étaient les premiers à vivre sur le monde d'Arlénor. Les autres races sont des humains ayant subit des mutations au fil des générations, dû à l'exposition et utilisation quotidienne des cristaux. L'Humain aime construire autant que détruire, est aussi savant qu'ignorant...",
-				"TEXT02": "La polyvalence des Humains font qu'ils n'ont pas d'affiliation spécifique avec les cristaux, et rares sont ceux qui parviennent à utiliser des cristaux de haut-niveau. Les Humains se sont concentrés dans les plaines de Terfil, et vivent principalement dans la cité de Faradel.",
-				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
-				"AVANTAGES": "- Polyvalence et simplicité du personnage<br>- (Stat) Base de compétence : Athlétisme à 1",
-				"INCONVENIENTS": "- (Stat) Quantité d'énergie vitale : 6"
-			},
-			"PEOPLE2": {
-				"NAME": "Elfe",
-				"TITLE": "Les Elfes",
-				"TEXT01": "Les Elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux Humains.",
-				"TEXT02": "Les Elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction, leur esprit ne supportant plus l'absence d'Energie Vitale... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
-				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien",
-				"AVANTAGES": "- Personnage très respecté globalement par les humains et les autres elfes.<br>- (Stat) Quantité d'énergie vitale : 8",
-				"INCONVENIENTS": "- Personnage craint ou hait globalement par les nains et les mutants<br>- Addiction : Si l'elfe se retrouve à court d'Energie Vitale, il tombe dans un coma à durée indéterminée."
-			},
-			"PEOPLE3": {
-				"NAME": "Nain",
-				"TITLE": "Les Nains",
-				"TEXT01": "Les Nains furent les premiers à être discriminés, par leur taille, par leur pilosité abondante... Cependant, ils sont aussi craints car les nains peuvent très vite être dangereux. Ils possèdent en eux une force, une soif de sang, et une envie de... de manger de la viande crue, fraîchement découpée.",
-				"TEXT02": "Les Nains, rejetés et discriminés, se sont alors regroupés dans les hautes montagnes de Kazador. La rumeur dit qu'ils y cachent un grand secret... Il n'est pas rare de voir des Nains dans la cité de Jirakan, mais le plus souvent, les quelques Nains qui naissent en dehors des montagnes, les rejoignent souvent en étant adulte... et rares sont ceux qui souhaitent ensuite les quitter.",
-				"LOCATION" : "Le Régime Jirakanien, Les Montagnes de Kazador",
-				"AVANTAGES": "- Sang très chaud, immunité au froid<br>- (Stat) Base de compétence : Animaux et Combat à 1<br>- (Stat) Quantité d'énergie vitale : 8",
-				"INCONVENIENTS": "- Besoin quasi permanent de chasser, de tuer, et de manger de la viande crue."
-			},
-			"PEOPLE4": {
-				"NAME": "Mutant",
-				"TITLE": "Les Mutants",
-				"TEXT01": "Le peuple des Mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les Humains et les Elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamnent leur existence.",
-				"TEXT02": "Les Mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
-				"LOCATION" : "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys",
-				"AVANTAGES": "- Le personnage possède une partie animale et ses propriétés.<br>- (Stat) Base de compétence : Furtivité et Manipulation à 1<br>- (Stat) Quantité d'énergie vitale : 8",
-				"INCONVENIENTS": "- Menacé d'être exécuté si l'on découvre sa partie animale.<br>- Le personnage possède un comportement de l'animal en question, selon le degré de la mutation"
-			},
-			"PEOPLE5": {
-				"NAME": "Pan",
-				"TITLE": "Les Pans",
-				"TEXT01": "Les Pans sont des enfants humains choisis et appelés dans la forêt de Miryden par une puissante entité magique nommée Nebulys. Contrairement aux peuples, ils subissent leur mutation génétique lorsqu'ils entrent dans cette forêt et deviennent des Pans à part entière. Par ce processus, Nebulys les a lié à la nuit : le soir leur peau prend la couleur du ciel, plus claire lors de pleines lunes et plus sombre lors de nouvelles lunes.",
-				"TEXT02": " Les Pans accordent respect et protection de la faune et de la flore. De plus, dans la forêt de Miryden, les Pans sont comme connectés entre eux via Nebulys : résultant une intelligence collective. Le fait de s'éloigner de la forêt, sans oublier la nature craintive et technophobe des Pans, les déconnecterait et rendrait certains vulnérables, déprimés, voire fous.",
-				"LOCATION" : "Inconnue",
-				"AVANTAGES": "- Peut manipuler l'énergie vitale végétale et animale, voire même l'utiliser...<br>- (Stat) Base de compétence : Intuition et Médecine à 1<br>- (Stat) Quantité d'énergie vitale : 12",
-				"INCONVENIENTS": "- N'apprécie pas l'utilisation inutile des cristaux et protège la vie.<br>- Fort dégoût pour les cités et la technologie.<br>- Anxiété sociale, peur des foules."
-			},
-			"PEOPLE6": {
-				"NAME": "Arlénien",
-				"TITLE": "Les Arléniens",
-				"TEXT01": "Les Arléniens sont un autre peuple caché dans le Monde d'Arlénor. Ce sont des humains qui ont été choisis à une époque lointaine, par l'entité Nebulys. Mais contrairement aux Pans, les Arléniens peuvent se reproduire car ils grandissent. De ce fait, le peuple s'auto-suffit, et Nébulys n'en transforme plus. De leur côté, ils sont liés au jour : leur utilisation de la magie est moins coûteuse en présence du Soleil, et dans des rares cas, plus puissante., et considère eux aussi la Nature offerte par Arlénor comme sacrée.",
-				"TEXT02": "Les Arléniens sont généralement grands et tatoués : ils n'arrivent pas à utiliser les cristaux dans leur état solide... Ils ont alors un rituel, sur une semaine au minimum, qui transforme un cristal en encre puis en tatouage. Et de leur côté, les Arléniens n'ont pas de liens mentaux entre eux, mais un lien direct avec Nebulys : ils ressentent le besoin et le devoir de rester dans la forêt pour protéger leur créateur.",
-				"LOCATION" : "Inconnue",
-				"AVANTAGES": "- Un tatouage demande moins d'énergie vitale qu'un cristal lorsque le soleil est présent dans le ciel.<br>- (Stat) Base de compétence : Combat, Intuition et Survie à 1<br>- (Stat) Quantité d'énergie vitale : 8",
-				"INCONVENIENTS": "- Difficulté à faire confiance aux autres peuples.<br>- Ne peut pas utiliser de cristal, autrement que par ses tatouages.<br>- Dépend de la présence de soleil pour la magie.<br>"
-			}
-		}
-	},
-	"ROLEPLAY": {
+    "WORLD": {
+      "DANGER": "Niveau de danger",
+      "CLIMATE": "Climat",
+      "FARADEL": {
+        "TITLE": "L'Empire Faradelien",
+        "DANGER": "Paisible",
+        "CLIMATE": "Tempéré"
+      },
+      "JIRAKAN": {
+        "TITLE": "Le Régime Jirakanien",
+        "DANGER": "Risqué",
+        "CLIMATE": "Désertique"
+      },
+      "IMERYS": {
+        "TITLE": "La Forêt d'Imerys",
+        "DANGER": "Risqué",
+        "CLIMATE": "Tempéré"
+      },
+      "KAZADOR": {
+        "TITLE": "Les Montagnes de Kazador",
+        "DANGER": "Mortel",
+        "CLIMATE": "Montagnard"
+      },
+      "SHIVAZEN": {
+        "TITLE": "La Mer de Shivazen",
+        "DANGER": "Infernal",
+        "CLIMATE": "Tropical"
+      },
+      "ZONES": {
+        "TITLE": "Les Zones Inexplorées",
+        "DANGER": "Mortel",
+        "CLIMATE": "Tropical"
+      }
+    },
+    "RELIGION": {
+      "SECTION01": "Selon la légende connue par tous, la Divinité de l'Existance et du Destin, Arlénor, a façonné le monde en y instaurant un équilibre entre le Bien et le Mal. Pour se faire, Arlénor enfanta 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
+      "SECTION02": "Ces entités de l'équilibre ont aidé Arlénor lors de la Création du Monde, et sont devenu un symbole dans leur domaine respectif... On dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde : un endroit où seules les âmes pures peuvent entrer à leur mort. Les âmes qui sont jugées encore impures, subissent la réincarnation.",
+      "SECTION03": "Aujourd'hui, des temples d'Arlénor existent un peu partout. Les peuples vénèrent dans chaque temple : Arlénor et l'un de ses enfants. La religion se base sur le maintien d'un équilibre entre le Bien et le Mal, et appuie sur le fait qu'il faut autant vénérer les anges que les démons.",
+      "LIGHTKABAL": "La Sainte Cabale",
+      "DARKKABAL": "La Cabale Inversée",
+      "ENTITY1": {
+        "TITLE": "METATRON, l'Ange de l'Unité",
+        "SUBTITLE": "Symbole du Soleil et de la Lumière",
+        "COMMENT": "Chez les good guys d'Arlénor, c'est un peu lui le patron. FAUT PAS le chercher !... Mais il est sympa quand même.",
+        "COMMENTNAME": "Lulu, Némésis de l'Humanité"
+      },
+      "ENTITY2": {
+        "TITLE": "RATZIEL, Ange de la Sagesse",
+        "SUBTITLE": "Symbole de l'Âme et de la Prudence",
+        "COMMENT": "Chercher la pomme tombée, tu ne dois pas. Trouver le pommier, il faut.",
+        "COMMENTNAME": "Renerald, Ancien fermier de Faradel"
+      },
+      "ENTITY3": {
+        "TITLE": "ZAFKIEL, Ange de la Connaissance",
+        "SUBTITLE": "Symbole du Savoir et de l'Enseignement",
+        "COMMENT": "Pokoi diton aboir soaf de con nessence ? Sa n'ydratationne poa sa !",
+        "COMMENTNAME": "Nain random à la sortie d'un bar"
+      },
+      "ENTITY4": {
+        "TITLE": "TZADOKIEL, Ange de la Pitié",
+        "SUBTITLE": "Symbole de la Santé et du Voyage",
+        "COMMENT": "Tsadokiel disait 'Aide ton prochain avec volonté', alors... VIENS M'AIDER A FAIRE LA VAISSELLE, BERNARD !!!",
+        "COMMENTNAME": "Humaine songeant à divorcer"
+      },
+      "ENTITY5": {
+        "TITLE": "SAMAEL, Ange de la Justice",
+        "SUBTITLE": "Symbole de la Loi et des Choix",
+        "COMMENT": "Samael disait que l'on pouvait lire l'âme des gens dans leurs yeux. Beaucoup de criminels se sont alors rendu aveugles avant un procès.",
+        "COMMENTNAME": "Quistis, Avocate de Faradel"
+      },
+      "ENTITY6": {
+        "TITLE": "MICHAEL, Ange de la Beauté",
+        "SUBTITLE": "Symbole des Eaux et des Océans",
+        "COMMENT": "La nature a voulu créer les humains, puis des êtres plus évolués, les elfes, à travers les cristaux. Les autres mutations ne sont que des erreurs, dû au fait qu'ils voulaient nous ressembler...",
+        "COMMENTNAME": "Xendel Eresles, lors de l'inauguration de l'Eclat infini"
+      },
+      "ENTITY7": {
+        "TITLE": "HANIEL, Ange de la Passion",
+        "SUBTITLE": "Symbole de la Musique et des Arts",
+        "COMMENT": "Réveilles mon âme, allumes ma flamme, et fais moi rêver s'il te plait...",
+        "COMMENTNAME": "Humaine priant dans son lit à côté de sa nouvelle femme"
+      },
+      "ENTITY8": {
+        "TITLE": "RAPHAEL, Ange du Partage",
+        "SUBTITLE": "Symbole de la Fertilité et de la Famille",
+        "COMMENT": "Comme dirait l'ange Raphael, un parfait échange est un échange riche et égalitaire... Cela vous fera donc 50 crédits la nuit.",
+        "COMMENTNAME": "Bob, Tavernier de Kiranof"
+      },
+      "ENTITY9": {
+        "TITLE": "GABRIEL, Ange de la Protection",
+        "SUBTITLE": "Symbole de l'Abondance et de la Sécurité",
+        "COMMENT": "Accorde-moi Gabriel, une main ferme et un regard vigilant. Abrite durant mon voyage, Ô bel Ange, ceux qui m'accompagnent des maux du feu et de toutes les calamités. Protège-moi et conduis-moi en toute sécurité à ma destination.",
+        "COMMENTNAME": "Commerçant partant traverser le désert de Sanderten"
+      },
+      "ENTITY10": {
+        "TITLE": "SANDALFONE, Ange du Matérialisme",
+        "SUBTITLE": "Symbole des Terres et des Montagnes",
+        "COMMENT": "Ce que vous avez à retenir de ce cours, c'est que l'imagination n'a pas de limite hormis celles que vous vous fixez.",
+        "COMMENTNAME": "L'un des meilleurs professeurs de Célestia"
+      },
+      "ENTITY11": {
+        "TITLE": "SATAN, Démon du Néant",
+        "SUBTITLE": "Symbole du Feu et des Pertes",
+        "COMMENT": "Au début, il n'y avait rien. Enfin... le rien n'existe pas. Au début, il y avait la déesse Arlénor...",
+        "COMMENTNAME": "Ancien prêtre reconverti en conteur pour enfants"
+      },
+      "ENTITY12": {
+        "TITLE": "BELZEBTUH, Démon de la Vengeance",
+        "SUBTITLE": "Symbole de la Guerre et de la Stratégie",
+        "COMMENT": "La vengeance est un plat qui se mange froid... ça tombe bien, j'en suis au dessert.",
+        "COMMENTNAME": "Romain, s'étant transformé en loup"
+      },
+      "ENTITY13": {
+        "TITLE": "LUCIFUGUS, Démon de la Stupidité",
+        "SUBTITLE": "Symbole de l'Ivresse et des Fêtes",
+        "COMMENT": "Je te jure, les licornes ça existe maman ! Quand elles sautent en faisant PROUT, il y a un arc-en-ciel !",
+        "COMMENTNAME": "L'innocence d'un enfant de 8 ans"
+      },
+      "ENTITY14": {
+        "TITLE": "ASTAROTH, Démon de l'Indifférence",
+        "SUBTITLE": "Symbole des Serments et des Pactes",
+        "COMMENT": "Par mes cartes, montre moi ton passé, ton présent et ton futur... Et maintenant... Subis le châtiment de ta vie insipide !",
+        "COMMENTNAME": "Diana, dans un état second"
+      },
+      "ENTITY15": {
+        "TITLE": "ASMODEE, Démon de la Cruauté",
+        "SUBTITLE": "Symbole des Remords et des Regrets",
+        "COMMENT": "C’est la première fois que je suis attirée par une femme, et il fallait que je tombe sur une cinglée qui trimballe un contrat, une cravache et des tas d'objets coupants...",
+        "COMMENTNAME": "Jeune femme perturbée par une prêtresse"
+      },
+      "ENTITY16": {
+        "TITLE": "BELPHEGOR, Démon de la Laideur",
+        "SUBTITLE": "Symbole de la Faune et de la Flore",
+        "COMMENT": "Miroir miroir, mon beau miroir, dis moi qui est le plus beau... -CRACK (bruit d'un miroir qui se brise)-",
+        "COMMENTNAME": "Personne atteinte de narcissisme"
+      },
+      "ENTITY17": {
+        "TITLE": "BA'AL, Démon de la Luxure",
+        "SUBTITLE": "Symbole de l'Amour et du Sexe",
+        "COMMENT": "Le bâton et les pierres peuvent me briser les os, mais les chaines et les cordes, elles, m'excitent.",
+        "COMMENTNAME": "Chanteuse célebre dans les bars faradéliens"
+      },
+      "ENTITY18": {
+        "TITLE": "ADRAMALEC, Démon de l'Avarice",
+        "SUBTITLE": "Symbole de la Ruse et des Richesses",
+        "COMMENT": "Excusez moi madame. Je crois que vous avez fait une erreur sur l'un de vos produits... C'est 'chocolatine' et non 'pain au chocolat'... Vous me le faites gratis du coup ?",
+        "COMMENTNAME": "Client de la boulangerie Obonpin"
+      },
+      "ENTITY19": {
+        "TITLE": "LILITH, Démon de l'Instabilité",
+        "SUBTITLE": "Symbole de l'Air et de la Météo",
+        "COMMENT": "Moi ? Je suis folle ? Haha. Attendez de voir ma soeur !",
+        "COMMENTNAME": "Personnage venant d'un autre monde"
+      },
+      "ENTITY20": {
+        "TITLE": "NAHEMAR, Démon de la Rêverie",
+        "SUBTITLE": "Symbole de la Lune et de l'Obscurité",
+        "COMMENT": "Comment déterminer ce qui est réel, et ce qui ne l'est pas ?... C'est simple. Fais toi tuer, et si tu meurs c'est que cela n'était pas un rêve.",
+        "COMMENTNAME": "Philosophe du temps moderne"
+      }
+    },
+    "CRYSTALS": {
+      "SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les anges et démons lors de la création du monde, des fragments de leurs pouvoirs.",
+      "SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux.",
+      "SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant une certaine quantité de leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
+      "PROPERTIES": {
+        "SUBTITLE": "Le cristal arlénien",
+        "TITLE": "Propriétés connues par tous",
+        "01": "Ils mesurent entre 1 cm et 2 m.",
+        "02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
+        "03": "Un cristal est très solide, résistant.",
+        "04": "Un cristal est caractérisé par un rang S, A, B, O en fonction de la puissance, et de l'énergie vitale demandée.",
+        "05": "Les cristaux de rang S sont uniques au monde, il y en a très peu et leur puissance est légendaire.",
+        "06": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
+        "07": "Plus l'utilisateur est en contact avec son cristal, plus un lien, encore inconnu, se tisse entre eux.",
+        "08": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
+        "09": "Seuls les cristalliens (métier complexe) peuvent les retravailler en leur donnant une forme précise.",
+        "10": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
+      }
+    },
+    "POPULATION": {
+      "SECTION01": "Lors de la Création, seuls les humains étaient présents dans le Monde d'Arlénor.",
+      "SECTION02": "Cependant, à l'An 0, les humains ont découvert ce qui allait changer radicalement leur vie : les cristaux.<br>La manipulation et la présence de ces derniers aux côtés des humains, ont altéré au fil du temps leur code génétique, donnant vie à de nouvelles races.",
+      "SECTION03": "Des relations se sont créées alors entre les différences races, certaines amicales, neutres, et d'autres... meurtrières.<br>Les elfes et les humains vivent en toute liberté alors que les nains et les mutants essayent de survivre du mieux qu'ils le peuvent. Les pans et les arléniens restent cachés, observant le monde de loin...",
+      "LOCATION": "Localisation",
+      "PEOPLE1": {
+        "NAME": "Humain",
+        "TITLE": "Les Humains",
+        "TEXT01": "Les Humains étaient les premiers à vivre sur le monde d'Arlénor. Les autres races sont des humains ayant subit des mutations au fil des générations, dû à l'exposition et utilisation quotidienne des cristaux. L'Humain aime construire autant que détruire, est aussi savant qu'ignorant...",
+        "TEXT02": "Les humains ne sont ni aimés, ni détestés des autres peuples : ils se sont concentrés dans les plaines de Terfil, et vivent principalement dans la cité de Faradel",
+        "LOCATION": "L'Empire Faradélien, Le Régime Jirakanien",
+        "AVANTAGES": "- Polyvalence et simplicité du personnage",
+        "INCONVENIENTS": ""
+      },
+      "PEOPLE2": {
+        "NAME": "Elfe",
+        "TITLE": "Les Elfes",
+        "TEXT01": "Les Elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux Humains.",
+        "TEXT02": "Les Elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction, leur esprit ne supportant plus l'absence d'Energie Vitale... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
+        "LOCATION": "L'Empire Faradélien, Le Régime Jirakanien",
+        "AVANTAGES": "- Personnage très respecté globalement par les humains et les autres elfes",
+        "INCONVENIENTS": "- Niveau « gravement atteint » de blessure : 1 case<br>- Personnage craint ou hait globalement par les nains et les mutants<br>- Dû à son addiction, la magie de l'elfe se lie intensément aux premiers cristaux que l'elfe tente de maîtriser. Si bien qu'il ne pourra se concentrer que sur trois cristaux dans toute sa vie."
+      },
+      "PEOPLE3": {
+        "NAME": "Nain",
+        "TITLE": "Les Nains",
+        "TEXT01": "Les Nains furent les premiers à être discriminés, par leur taille, par leur pilosité abondante... Cependant, ils sont aussi craints car les nains peuvent très vite être dangereux. Ils possèdent en eux une force, une soif de sang, et une envie de... de manger de la viande crue, fraîchement découpée.",
+        "TEXT02": "Les Nains, rejetés et discriminés, se sont alors regroupés dans les hautes montagnes de Kazador. La rumeur dit qu'ils y cachent un grand secret... Il n'est pas rare de voir des Nains dans la cité de Jirakan, mais le plus souvent, les quelques Nains qui naissent en dehors des montagnes, les rejoignent souvent en étant adulte... et rares sont ceux qui souhaitent ensuite les quitter.",
+        "LOCATION": "Le Régime Jirakanien, Les Montagnes de Kazador",
+        "AVANTAGES": "- Niveau « gravement atteint » de blessure : 3 cases<br>- Sang très chaud, immunité au froid",
+        "INCONVENIENTS": "- Besoin quasi permanent de chasser, de tuer, et de manger de la viande crue."
+      },
+      "PEOPLE4": {
+        "NAME": "Mutant",
+        "TITLE": "Les Mutants",
+        "TEXT01": "Le peuple des Mutants, lui, n’est pas reconnu officiellement. C’est le seul peuple où la mutation physique n’est pas clairement définie : une ou plusieurs parties de leur corps sont confondues avec celle d’un animal. Les Humains et les Elfes les considèrent comme des bêtes, des sauvages, et la loi même... condamnent leur existence.",
+        "TEXT02": "Les Mutants ont peu souvent confiance en eux, et finissent par vivre cachés, seuls, camouflant du mieux qu’ils le peuvent leur partie animale... Cependant un groupe de résistants a commencé à se fonder dans les souterrains de la cité de Faradel, ce qui leur redonne espoir.",
+        "LOCATION": "L'Empire Faradélien, Le Régime Jirakanien, La Forêt d'Imerys",
+        "AVANTAGES": "- Le personnage possède une partie animale et ses propriétés",
+        "INCONVENIENTS": "- Menacé d'être exécuté si l'on découvre sa partie animale<br>- Le mutant possède un comportement de l'animal en question, selon le degré de la mutation"
+      },
+      "PEOPLE5": {
+        "NAME": "Pan",
+        "TITLE": "Les Pans",
+        "TEXT01": "Les Pans sont des enfants humains choisis et appelés dans la forêt de Miryden par une puissante entité magique nommée Nebulys. Contrairement aux autres peuples, ils subissent leur mutation génétique lorsqu'ils entrent dans cette forêt et deviennent des Pans à part entière. Par ce processus, Nebulys les a lié à la nuit : le soir leur peau prend la couleur du ciel, plus claire lors de pleines lunes et plus sombre lors de nouvelles lunes.",
+        "TEXT02": " Les Pans accordent respect et protection de la faune et de la flore. De plus, dans la forêt de Miryden, les Pans sont comme connectés entre eux via Nebulys : résultant une intelligence collective. Le fait de s'éloigner de la forêt, sans oublier la nature craintive et technophobe des Pans, les déconnecterait et rendrait certains vulnérables, déprimés, voire fous.",
+        "LOCATION": "Inconnue",
+        "AVANTAGES": "- Peut manipuler l'énergie vitale végétale et animale, voire même l'utiliser...",
+        "INCONVENIENTS": "- Niveau « gravement atteint » de blessure : 1 case<br>- N'apprécie pas l'utilisation inutile des cristaux et protège la vie.<br>- Fort dégoût pour les cités et la technologie.<br>- Anxiété sociale, peur des foules."
+      },
+      "PEOPLE6": {
+        "NAME": "Arlénien",
+        "TITLE": "Les Arléniens",
+        "TEXT01": "Les Arléniens sont un autre peuple caché dans le Monde d'Arlénor. Ce sont des humains qui ont été choisis à une époque lointaine, par l'entité Nebulys. Mais contrairement aux Pans, les Arléniens peuvent se reproduire car ils grandissent. De ce fait, le peuple s'auto-suffit, et Nébulys n'en transforme plus. De leur côté, ils sont liés au Soleil : on dit que lors d'une éclipse solaire, leur utilisation de la magie en devient décuplée.",
+        "TEXT02": "Les Arléniens sont généralement grands et tatoués : ils n'arrivent pas à utiliser les cristaux dans leur état solide... Ils ont alors un rituel, sur une semaine au minimum, qui transforme un cristal en encre puis en tatouage. Et de leur côté, les Arléniens n'ont pas de liens mentaux entre eux, mais un lien direct avec Nebulys : ils ressentent le besoin et le devoir de rester dans la forêt pour protéger leur créateur.",
+        "LOCATION": "Inconnue",
+        "AVANTAGES": "- Niveau « gravement atteint » de blessure : 3 cases<br>- Magie ne nécessitant pas de cristal",
+        "INCONVENIENTS": "- Doit se faire passer pour un humain pour protéger le secret de son peuple"
+      }
+    }
+  },
+  "ROLEPLAY": {
     "UNIVERSE": {
-			"TITLE": "La carte du monde et ses habitants",
+      "TITLE": "La carte du monde et ses habitants",
       "RESUME": "Avant de créer son personnage, ou même de lire les règles du jeu de rôles... découvrez l'univers du Monde d'Arlénor : la religion dominante, la magie omni-présente, les différents peuples y vivant et les conflits y règnant...",
       "SEEMORE": "Voir le monde"
     },
     "PERSO": {
-			"TITLE": "La création de personnage",
+      "TITLE": "La création de personnage",
       "RESUME": "Créez votre personnage, des caractéristiques aux compétences, en passant par leurs pouvoirs... Accédez dès maintenant à la naissance de votre personnage !",
-      "SEEMORE": "Activité : Passer à la création !"
+      "SEEMORE": "Passer à la création (Pas à jour)"
     },
     "FILES": {
-			"TITLE": "Les règles du jeu",
+      "TITLE": "Les règles du jeu",
       "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu et des propositions de pouvoirs.",
-			"SEEMORE01": "Télécharger le Manuel du Joueur V1.0",
-			"RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
-			"SEEMORE02": "Télécharger le Manuel du MJ V1.0",
-			"PERSOSPRETIRES": "Télécharger les personnages pré-tirés",
-			"PERSOSPARAMETERS": "Importer un personnage via sa sauvegarde",
-			"LISTPOWERS": "Télécharger la liste non-exhaustive de pouvoirs (cristaux)"
+      "SEEMORE01": "Télécharger le Manuel du Joueur V1.0 (pas à jour)",
+      "RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
+      "SEEMORE02": "Télécharger le Manuel du MJ V1.0 (pas à jour)",
+      "PERSOSPRETIRES": "Télécharger les personnages pré-tirés",
+      "PERSOSPARAMETERS": "Importer un personnage via sa sauvegarde",
+      "LISTPOWERS": "Télécharger la liste non-exhaustive de pouvoirs (cristaux)"
     }
-	},
-	"CREATION": {
-		"MENU": {
-			"IMPORT": "Pré-tirés / Importation de personnage",
-			"TITLE": "Fiche de personnage",
-			"TITLE01": "I - Peuple / Race",
-			"TITLE02": "II - Caractéristiques",
-			"TITLE03": "III - Compétences",
-			"TITLE04": "IV - Cristaux",
-			"TITLE05": "V - Equipement",
-			"TITLE06": "VI - Identité",
-			"CONCLUSION": "Téléchargement de la fiche"
-		},
-		"INDICS": {
-			"LEFTPOINTS": "Points restants",
-			"AVANTAGES": "Avantages",
-			"INCONVENIENTS": "Inconvénients",
-			"INITIATIVE": "Initiative",
-			"PV": "Points de Vie",
-			"PE": "Points d'Energie Vitale",
-			"SPE": "Spécialité (option)",
-			"CRYSTAL": "Nom du cristal",
-			"TYPE": "Type",
-			"RANK": "Rang",
-			"RARITY": "Rareté",
-			"POWER": "Puissance",
-			"EV": "Coût en EV",
-			"DEMIEV": "Coût en EV (pour les arléniens)",
-			"ARMOR": "Armure",
-			"WEAPON": "Arme (optionnel)",
-			"ATTACKBONUS": "Attaque",
-			"DEFENCEBONUS": "Défense",
-			"MOBILITY": "Mobilité",
-			"ACTIONSMALUS": "Malus aux actions (hors Défense)",
-			"CATEGORY": "Catégorie",
-			"COUNT": "Chargeur",
-			"COOLDOWN": "Rechargement",
-			"ZONE": "Portée efficace"
-		},
-		"HEROS01": "Un personnage est défini par deux séries de chiffres : ses <b>caractéristiques</b> et ses <b>compétences</b>.<br>Les caractéristiques définissent ce qu’est le personnage, et les compétences ce qu’il sait. Votre personnage sera plus ou moins fort, plus ou moins intelligent, plus ou moins adroit. Et c’est vous qui choisirez si, au cours de sa vie, il a appris à se battre ou s'il a préféré se tourner vers l'érudition, la médecine...",
-		"HEROS02": "Dans ce monde, hormis les stats, les principaux choix qui orienteront votre personnage seront sa race / peuple, mais aussi les cristaux qu'il utilisera. Cependant, malgré toutes les nombres et les textes notés sur la fiche de perso, c'est VOUS qui ferez vivre votre personnage via ses actions : on choisit ce que l'on est par nos actions !",
-		"HEROS03": "Créez alors ici un nouveau personnage du Monde d'Arlénor, ou mettez à jour la fiche du vôtre !",
-		"PRETIRES": "Créer un personnage peut prendre du temps ou ne pas être simple au début... C'est pour cela qu'il existe des personnages pré-tirés : ce sont des fiches déjà complétées, prêtes à être utilisées ! Vous y trouverez un guerrier humain, un elfe nécromant, un mutant fou, un pan discret... Une variété de personnages pour vous permettre d'y trouver votre compte !",
-		"IMPORT": "Si vous avez sauvegardé les paramètres d'un personnage, ou que vous souhaitez personnaliser un perso pré-tiré, vous pouvez l'importer (fichier JSON) et le modifier ensuite sur cette page. ",
-		"CARACTS01": "Toute personne est dotée de capacités de base qui lui sont inhérentes et qu’il peut utiliser de bien des manières. Ces aptitudes naturelles sont définies par cinq caractéristiques distinctes, chacune évaluée sur une échelle allant de <b>1 à 5</b>.",
-		"CARACTS02": "Un score de 1 dans une caractéristique indique une vraie faiblesse dans le domaine concerné, tandis qu’un 2 place le personnage dans la moyenne, ni plus ni moins. A partir de 3, la personne dispose d’une facilité particulière dans la caractéristique concernée, et un 4 indique des facultés exceptionnelles. Enfin, un score de 5 représente le maximum des capacités : seuls quelques très rares individus atteignent ce score.",
-		"VIGUEUR": {
-			"NAME": "Vigueur",
-			"HELP": "<b>Vigueur</b><br><br>Mélange de résistance physique et de puissance brute, la <b>Vigueur</b> évalue la forme physique de votre personnage. Cette caractéristique est importante pour les personnages combattants, les sportifs et tous ceux qui aiment se sortir de situations dangereuses.<br><br>1 : Fragile. Force et endurance limitées, vous vous fatiguez vite.<br>2 : Moyen. Vous n’avez de problèmes qu’avec des tours de force inhabituels.<br>3 : Costaud. Vous fatiguez rarement et réalisez des tours de force.<br>4 : Fort comme un bœuf. Peu de choses ou de personnes peuvent vous résister.<br>5 : Herculéen. Vous résistez à tout et rivalisez de puissance avec les ours."
-		},
-		"HABILETE": {
-			"NAME": "Habileté",
-			"HELP": "<b>Habileté</b><br><br>L’<b>Habileté</b> représente la capacité du personnage à s’acquitter de tâches de précision, sa finesse, sa dextérité, son talent pour viser ainsi que sa rapidité de réaction. C’est une aptitude inestimable pour les artisans, les voleurs, les danseurs et les tireurs de tout calibre.<br><br>1 : Maladroit. Vous êtes un véritable éléphant dans un magasin de porcelaine.<br>2 : Moyen. Au moins, vous ne provoquez que rarement des catastrophes.<br>3 : Agile. Vous êtes doué de vos mains, et votre agilité vous sert dans bien des situations.<br>4 : Félin. Vos réflexes et votre souplesse tiennent davantage de l’animal que de l’humain.<br>5 : Gracieux. Vos mouvements sont tellement fluides qu’ils semblent irréels."
-		},
-		"INTELLECT": {
-			"NAME": "Intellect",
-			"HELP": "<b>Intellect</b><br><br>Les capacités intellectuelles de votre personnage, sa capacité à analyser, retenir les informations et les réutiliser en temps utile. L'<b>Intellect</b> est utile aux tacticiens, aux érudits, aux scientifiques et aux enquêteurs.<br><br>1 : Simplet. Vous comprenez l’essentiel, mais toutes les subtilités vous échappent.<br>2 : Moyen. Vous ne faites pas de miracles, mais vous vous en sortez honorablement.<br>3 : Vif. Vous comprenez vite, analysez de manière pertinente et savez vous adapter.<br>4 : Brillant. Vous comprenez rapidement ce que certains mettent des années à apprendre.<br>5 : Génie. Vous maniez facilement des notions que la majorité des gens sont incapables d’appréhender."
-		},
-		"CHARISME": {
-			"NAME": "Charisme",
-			"HELP": "<b>Charisme</b><br><br>La capacité à s’imposer aux autres, à leur inspirer de la confiance, du respect ou de la crainte, ainsi qu’à les manipuler. Le <b>Charisme</b> comprend bien plus que la beauté physique, et est l’atout principal des dirigeants, des séducteurs et de tous les menteurs invétérés.<br><br>1 : Fade. Vous n’inspirez pas les autres et semblez parfois transparent à leurs yeux.<br>2 : Moyen. Vous vous faites des amis, comme tout le monde.<br>3 : Intéressant. Vous ne laissez pas les gens indifférents, et beaucoup vous apprécient.<br>4 : Captivant. Leader-né, votre personnalité attire les autres à vous.<br>5 : Fascinant. Vous pourriez amener n’importe qui à faire n’importe quoi pour vous."
-		},
-		"POUVOIR": {
-			"NAME": "Pouvoir",
-			"HELP": "<b>Pouvoir</b><br><br>Le <b>Pouvoir</b> est la caractéristique déterminant le niveau de facilité à utiliser la magie des cristaux du Monde d'Arlénor. Les mages et sorciers ont généralement un bon niveau dans cette caractéristique.<br><br>1 : Débutant. L'utilisation de ton énergie vitale est encore un mystère pour vous.<br>5 : Master. La magie n'a plus (ou très peu) de secrets pour vous."
-		},
-		"SKILLS": {
-			"TEXT01": "Survivre en milieu hostile. Mentir. Utiliser un pouvoir élémentaire. Autant de savoir-faire qu’un personnage peut, ou non, développer au cours de sa vie. Cette section s’intéresse à ces compétences que les personnages apprennent ou non à utiliser et qui les différencient les uns des autres.<br>Le test classique qui détermine si un personnage réussit ou non une action se réalise de la façon suivante. Le MJ détermine quelle caractéristique de base du personnage est concernée (Vigueur, Habileté, Intellect, Charisme, Pouvoir), ainsi que la compétence mise en jeu si nécessaire. Il annonce cette combinaison au joueur, qui lance autant de dés à 6 faces qu’il a de points dans la caractéristique concernée, additionne les résultats puis rajoute son score de compétence. Il compare ensuite le total à la difficulté fixée par le MJ. Si le résultat de son test est supérieur ou égal à cette difficulté, il l’emporte.",
-			"TEXT02": "Pour résumer, un jet de compétence est réussi si :<br><b>Caractéristique x 1D6 + Compétence + 4 de Bonus (si Spécialité) - 4 de Malus (si 0 dans la Compétence) >= Difficulté (donnée par le MJ)</b>",
-			"TEXT03": "Vous commencez avec 25 points à répartir en plus des avantages de votre race. Notez que vous pouvez décider de sacrifier deux points de création pour acheter une Spécialité dans l’une de vos compétences. Il s’agit d’un bonus de +4 qui ne s’applique qu’à une utilisation précise de la compétence. Par exemple, un personnage possédant la compétence Combat à +4 et une Spécialité (Épée) aura un bonus de +8 chaque fois qu’il combattra à l’épée, mais seulement de +4 pour toute autre forme de combat.<br>Par contre, avoir une compétence à 0, donne un malus -4 lors de son utilisation !<br>Conseil : Votre personnage sera très souvent mené à se battre, donc n'oubliez pas de mettre des points dans la compétence 'Combat' en ce qui concerne l'utilisation des armes, et dans les compétences de 'Cristaux' pour l'utilisation de la magie.",
-			"TEXT04": "La synergie des cristaux : augmenter une compétence de cristaux (par ex: Elémentaires), permet de donner un bonus dans l'utilisation de tous les cristaux de ce type seulement (par ex: Création du Feu, Manipulation de l'Eau, etc). Votre nombre de points à répartir dans ces compétences est lié à la valeur de votre 'Pouvoir'.<br>Concernant la spécialité d'un cristal, vous pouvez ajouter le nom d'un cristal en particulier : par exemple, une spécialité 'Manipulation de l'Eau' dans les cristaux de type Elémentaires permet un bonus +4 lors de l'utilisation de ce cristal."
-		},
-		"ANIMAUX": {
-			"NAME": "Animaux",
-			"HELP": "<b>Animaux</b><br><br>Cette compétence mesure le degré d’affinité du personnage avec les animaux, qu’ils soient sauvages ou domestiques. Elle permet de comprendre leur langage corporel, de deviner leurs intentions, de s’adapter à leur comportement et même de les dresser.<br><br><i>Exemples :</i><br>- Comprendre le comportement d’un animal domestique (Int. + Animaux, Diff. 8).<br>- Avoir le comportement adéquat devant un animal sauvage en colère (Pré. + Animaux, Diff. 14).<br>- Élever un animal sauvage intelligent (Test étendu, Pré. + Animaux, Diff. 18, Objectif 50).<br><br><i>Temps d’action :</i><br>Variable. Comprendre un comportement est une action instantanée, mais pour ce qui est d’élever un animal, il faut une semaine d’action complète pour effectuer un test.<br><br><i>Spécialités :</i><br>Animaux domestiques, Animaux sauvages, Comportement, Dressage.",
-			"SPECIALISTICS": "Animaux domestiques, Animaux sauvages, Comportement, Dressage"
-		},
-		"ART": {
-			"NAME": "Art / Artisanat",
-			"HELP": "<b>Art / Artisanat</b><br><br>La capacité artistique pure et simple. Les grands peintres, les musiciens, les chanteurs, sculpteurs et comédiens ont tous en commun l’utilisation de cette compétence. Elle permet de gagner sa vie et de se faire apprécier de ceux que l’on rencontre. Cette compétence est aussi celle que partagent tous les bricoleurs, jusqu’aux grands maîtres artisans créant des pièces uniques. Fonctionnant surtout sur le principe du test étendu, l’Artisanat permet aux personnages de créer seuls ce qu’ils ne trouvent pas ailleurs.<br><br><i>Exemples :</i><br>- Gagner quelques piécettes dans la rue (Pré. + Art / Artisanat, Diff. 6).<br>- Expertiser un objet ancien redécouvert récemment (Int. + Art / Artisanat, Diff. 16).<br>- Peindre un chef d’œuvre à la gloire de la princesse (Test étendu, Hab. + Art / Artisanat, Diff. 22, Objectif 20).<br><br><i>Temps d'action :</i><br>Variable. Faire un concert ou une représentation de comédie dure environ une heure, tandis que composer une œuvre prend une journée par test. <br><br><i>Spécialités :</i><br>Archéologie, Armurerie, Comédie, Écriture, Ébénisterie, Musique, Peinture.",
-			"SPECIALISTICS": "Archéologie, Armurerie, Comédie, Écriture, Ébénisterie, Musique, Peinture"
-		},
-		"ATHLETISME": {
-			"NAME": "Athlétisme",
-			"HELP": "<b>Athlétisme</b><br><br>Cette compétence regroupe les capacités sportives. Un personnage avec un haut niveau d’Athlétisme peut courir vite et longtemps, escalader des parois difficiles d’accès, nager sur de longues distances et tenir en équilibre sur un fil.<br><br><i>Exemples :</i><br>- Courir après quelqu’un (test en opposition étendu de Vig. + Athlétisme, Difficulté et Objectif variable selon la distance entre les personnages).<br>- Tenir en équilibre tout en avançant sur une corniche étroite (Hab. + Athlétisme, Diff. 14).<br>- Nager au beau milieu d’une mer démontée (Vig. + Athlétisme, Diff. 20).<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Course, Équilibre, Escalade, Lancer, Natation, Saut.",
-			"SPECIALISTICS": "Course, Équilibre, Escalade, Lancer, Natation, Saut"
-		},
-		"COMBAT": {
-			"NAME": "Combat",
-			"HELP": "<b>Combat</b><br><br>L’aptitude du personnage à manier les armes et à se défendre en situation d’affrontement physique. Cette compétence regroupe la maîtrise de tous les types d’armes ainsi que du combat à mains nues. Cependant, elle ne gère absolument pas ce qui concerne le combat avec les cristaux !<br><br><i>Exemples :</i><br>Voir les règles de bases.<br><br><i>Temps d'action :</i><br>Généralement, un tour de combat. <br><br><i>Spécialités :</i><br>Arcs, Épées, Dagues, Esquive, Parade.",
-			"SPECIALISTICS": "Arcs, Épées, Dagues, Esquive, Parade"
-		},
-		"FURTIVITE": {
-			"NAME": "Furtivité",
-			"HELP": "<b>Furtivité</b><br><br>Cette compétence est celle des criminels, des espions et des enquêteurs. Elle permet de se cacher en toutes circonstances, qu’il s’agisse de se faire discret dans une forêt ou de paraître anonyme au milieu de la foule.<br><br><i>Exemples :</i><br>Le test d’Habileté + Furtivité du personnage est toujours un test en opposition avec un test d’Intellect + Investigation de celui ou ceux qui auraient intérêt à le repérer. Si le personnage échoue à ce test, il est repéré.<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Anonymat, Camouflage, Filature.",
-			"SPECIALISTICS": "Anonymat, Camouflage, Filature"
-		},
-		"INFORMATION": {
-			"NAME": "Information",
-			"HELP": "<b>Information</b><br><br>Cette compétence permet d’obtenir rapidement des informations sur tout un tas de sujets. Les experts dans ce domaine savent délier les langues rapidement, fouiller aux bons endroits et connaissent les endroits appropriés pour obtenir ce qu’ils cherchent, même si cela signifie prendre des risques. Ainsi, échouer à un test d’Information peut parfois poser de sérieux problèmes. Cette compétence évalue aussi la capacité du personnage à évoluer au sein de la société, à se montrer élégant, raffiné mais également à comprendre les rouages du monde dans lequel il vit.<br><br><i>Exemples :</i><br>- Obtenir des informations sur la situation locale (Pré. + Information Diff. 9).<br>- Trouver un receleur dans une grande ville (Int. + Information Diff. 15).<br>- Obtenir des informations classées secret défense (Int. + Information Diff. 25).<br><br><i>Temps d'action :</i><br>Une journée de recherche par test. <br><br><i>Spécialités :</i><br>Bibliothèque, Discussions de comptoir, Légendes urbaines, Réseaux criminels, Relations politiques.",
-			"SPECIALISTICS": "Bibliothèque, Discussions de comptoir, Légendes urbaines, Réseaux criminels, Relations politiques"
-		},
-		"INTUITION": {
-			"NAME": "Intuition",
-			"HELP": "<b>Intuition</b><br><br>Sens aigu de la psychologie ou capacité à remarquer ce qui ne va pas, l’intuition permet au personnage de remarquer les détails chez les autres sans y réfléchir, de discerner l’état émotionnel de ses interlocuteurs ou de comprendre quand on lui ment.<br><br><i>Exemples :</i><br>- Comprendre l’émotion principale d’une personne qui ne ment pas (Int. + Intuition Diff. 10).<br>- Percer à jour un mensonge (Test en opposition Int. + Intuition contre Pré. + Manipulation).<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Comportement, Motivations secrètes, Intuition magique.",
-			"SPECIALISTICS": "Comportement, Motivations secrètes, Intuition magique"
-		},
-		"INVESTIGATION": {
-			"NAME": "Investigation",
-			"HELP": "<b>Investigation</b><br><br>L’Investigation est la compétence qui permet au personnage de trouver des indices, d’établir des relations entre différents éléments et de remarquer les détails de son environnement, ce qui comprend les personnes ou objets cachés.<br><br><i>Exemples :</i><br>- Trouver un indice sur une scène de crime (Int. + Investigation Diff. 10).<br>- Établir un lien entre plusieurs éléments (Int. + Investigation Diff. 16).<br>- Repérer un détective en filature (Int. + Investigation contre Hab. + Furtivité).<br><br><i>Temps d'action :</i><br>Une heure de recherche par test environ. Repérer quelqu’un est un test instantané. <br><br><i>Spécialités :</i><br>Audition, Déduction, Chercher objets, Odorat, Toucher, Cryptographie.",
-			"SPECIALISTICS": "Audition, Déduction, Chercher objets, Odorat, Toucher, Cryptographie"
-		},
-		"LARCIN": {
-			"NAME": "Larcin",
-			"HELP": "<b>Larcin</b><br><br>Toutes les capacités des filous, trafiquants, voleurs à la tire et amateurs de contrefaçon sont regroupées dans cette compétence. Ses usages sont divers et variés, et peuvent même servir à accomplir des choses en toute légalité.<br><br><i>Exemples :</i><br>- Voler un objet dans la poche de son propriétaire (Hab. + Larcin contre Int. + Investigation de la victime).<br>- Créer une contrefaçon d’un document officiel (test étendu, Hab. + Larcin Diff. 15, Objectif 10).<br>- Crocheter une serrure de bonne qualité (Hab. + Larcin Diff. 16).<br><br><i>Temps d'action :</i><br>Un tour de combat ou instantané, le plus souvent. Réaliser une contrefaçon prend une heure par test. <br><br><i>Spécialités :</i><br>Contrefaçon, Sabotage, Serrurerie, Vol à la tire.",
-			"SPECIALISTICS": "Contrefaçon, Sabotage, Serrurerie, Vol à la tire"
-		},
-		"MANIPULATION": {
-			"NAME": "Manipulation",
-			"HELP": "<b>Manipulation</b><br><br>Cette compétence est celle qui permet d’obtenir ce que l’on veut des autres. Elle sert à mentir, tricher et lancer des rumeurs sans se faire prendre, ainsi qu’à dissimuler ses véritables émotions et objectifs aux yeux des autres.<br><br><i>Exemples :</i><br>La Manipulation fonctionne principalement sur un test en opposition de Pré. + Manipulation contre Int. + Intuition.<br><br><i>Temps d'action :</i><br>Instantané pour camoufler ses intentions. Mentir à quelqu’un et obtenir ce que l’on veut de lui peut prendre plus de temps, voire demander un test étendu. <br><br><i>Spécialités :</i><br>Camouflage, Mensonge, Messages cachés, Séduction.",
-			"SPECIALISTICS": "Camouflage, Mensonge, Messages cachés, Séduction"
-		},
-		"MEDECINE": {
-			"NAME": "Médecine",
-			"HELP": "<b>Médecine</b><br><br>La médecine est la compétence qui permet au personnage de comprendre les causes des maladies, de soigner les blessures et de guérir une personne empoisonnée. Elle comprend la fabrication des médicaments et remèdes, mais également celle des poisons.<br><br><i>Exemples :</i><br>- Diagnostiquer une maladie simple (Int. + Médecine Diff. 9).<br>- Fabriquer un antidote à un poison courant (Test étendu, Int. + Médecine Diff. 14, Objectif 10).<br>- Traiter une maladie inconnue et mortelle (Test étendu, Int. + Médecine Diff. 25, Objectif 30 et plus).<br><br><i>Temps d'action :</i><br>Variable. Le plus souvent, une heure est requise pour tenter un diagnostic ou faire un test pour fabriquer un médicament. Pour soigner les blessures ou traiter une maladie, il faut une journée par test. <br><br><i>Spécialités :</i><br>Apothicaire, Chirurgie, Diagnostic, Poisons, Maladies, Secourisme.",
-			"SPECIALISTICS": "Apothicaire, Chirurgie, Diagnostic, Poisons, Maladies, Secourisme"
-		},
-		"PERSUASION": {
-			"NAME": "Persuasion",
-			"HELP": "<b>Persuasion</b><br><br>Capacité à convaincre les autres par la force de vos arguments ou par la crainte, la Persuasion est l’instrument préféré des diplomates, des vendeurs et de tous les professionnels de la négociation. Elle permet d’obtenir un prix sur un objet autant que de captiver les foules.<br><br><i>Exemples :</i><br>Que ce soit pour faire avouer un secret à quelqu’un en le menaçant ou pour convaincre quelqu’un, la Persuasion se joue par un test opposé (Pré. + Persuasion contre Int. + Intuition).<br>Si plusieurs orateurs cherchent à se convaincre, un test opposé de Pré. + Persuasion a lieu, et le plus haut score l’emporte.<br><br><i>Temps d'action :</i><br>Variable. <br><br><i>Spécialités :</i><br>Discours, Interrogatoire, Marchandage.",
-			"SPECIALISTICS": "Discours, Interrogatoire, Marchandage"
-		},
-		"SAVOIR": {
-			"NAME": "Savoir",
-			"HELP": "<b>Savoir</b><br><br>Cette compétence évalue l’érudition du personnage. Elle représente un savoir général dans tous les domaines, de l’histoire aux sciences de la vie, et celui qui la maîtrise à un haut niveau peut être considéré comme un véritable puits de science. De plus, celui qui maîtrise cette compétence peut identifier des sorts, connaît les créatures magiques et la science des potions et philtres en tous genres.<br><br><i>Exemples :</i><br>Selon la rareté de l’information et sa précision, la Difficulté varie.<br><br><i>Temps d'action :</i><br>Instantané. Le personnage sait ou ne sait pas, mais régler une énigme mystique particulièrement longue peut demander plus de temps, et un test étendu. <br><br><i>Spécialités :</i><br>Astronomie, Histoire et Géographie, Informatique, Ingénierie, Théologie, Occultisme, Pilotage, Entités mystérieuses, Identification.",
-			"SPECIALISTICS": "Astronomie, Histoire et Géographie, Informatique, Ingénierie, Théologie, Occultisme, Pilotage, Entités mystérieuses, Identification"
-		},
-		"SURVIE": {
-			"NAME": "Survie",
-			"HELP": "<b>Survie</b><br><br>Survivre en milieu hostile n’est pas donné à tout le monde. Avec cette compétence, le personnage a appris à se débrouiller pour trouver un abri, sait comment chasser et éviter les plantes toxiques et peut éviter de mourir de froid, de soif ou dans un piège naturel.<br><br><i>Exemples :</i><br>- Trouver quelques fruits comestibles à la bonne saison (Int. + Survie Diff. 8).<br>- Reconnaître un danger naturel comme des sables mouvants (Int. + Survie Diff. 14).<br>- Survivre sans matériel au cœur d’une montagne enneigée (Int. + Survie Diff. 20).<br><br><i>Temps d'action :</i><br>Variable. Reconnaître un danger est instantané, mais un test pour survivre doit être réalisé chaque jour que le personnage passe dans un environnement sauvage. <br><br><i>Spécialités :</i><br>Chasse, Pister, Désert, Flore, Montagne.",
-			"SPECIALISTICS": "Chasse, Pister, Désert, Flore, Montagne"
-		},
-		"ELEMENTAIRES": {
-			"NAME": "Cristaux de type Elémentaires",
-			"HELP": "<b>Elémentaires</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « élémentaires » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Créer une flamme sur du bois de camp (Pou. + Élémentaires, Diff. 7).<br>- Inonder une petite pièce (Pou. + Élémentaires, Diff. 14).<br>- Créer une tornade dévastatrice (Pou. + Élémentaires, Diff. 25)."
-		},
-		"INVOCATIONS": {
-			"NAME": "Cristaux de type Invocations",
-			"HELP": "<b>Invocations</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « invocations » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Invoquer une souris (Pou. + Invocations, Diff. 6).<br>- Invoquer un goule (Pou. + Invocations, Diff. 22).<br>- Invoquer un dragon (Pou. + Invocations, Diff. 30)."
-		},
-		"MENTAUX": {
-			"NAME": "Cristaux de type Mentaux",
-			"HELP": "<b>Mentaux</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « mentaux » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Créer une amnésie temporaire (Pou. + Mentaux, Diff. 7).<br>- Communiquer avec un mort (Pou. + Mentaux, Diff. 16).<br>- Donner un ordre absolu (Pou. + Mentaux, Diff. 27)."
-		},
-		"TRANSFORMATIONS": {
-			"NAME": "Cristaux de type Transformations",
-			"HELP": "<b>Transformations</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « transformation » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Améliorer sa vision (Pou. + Transformation, Diff. 7).<br>- Se camoufler comme un caméléon (Pou. + Transformation, Diff. 15).<br>- Se métamorphoser en une autre personne (Pou. + Transformation, Diff. 28)."
-		},
-		"SPATIAUXTEMPORELS": {
-			"NAME": "Cristaux de type Spatiaux-temporels",
-			"HELP": "<b>Spatiaux-temporels</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « spatiauxtemporels » et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Créer un champ de force (Pou. + Spatiaux-temporels, Diff. 10).<br>- Annuler la magie des cristaux dans une pièce (Pou. + Spatiaux-temporels, Diff. 18).<br>- Arrêt sur image (Pou. + Spatiaux-temporels, Diff. 26)."
-		},
-		"SPECIAUX": {
-			"NAME": "Cristaux de type Spéciaux",
-			"HELP": "<b>Spéciaux</b><br><br>Cette compétence permet de comprendre le fonctionnement des cristaux de type « spéciaux », des cristaux qui n'entrent pas dans les autres catégories, et d'en augmenter l'efficacité de leur utilisation.<br><br><i>Exemples :</i><br>- Entraver une personne (Pou. + Spéciaux, Diff. 9).<br>- Voler de la vie (Pou. + Spéciaux, Diff. 17).<br>- Transférer les blessures et la douleur (Pou. + Spéciaux, Diff. 22)."
-		},
-		"CRYSTALS": {
-			"TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne (principalement des rangs O selon la convention SABO). En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible.",
-			"TEXT02": "Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.<br>Dans la logique, au début un personnage ne devrait avoir <b>au maximum, un cristal de rang A et un de rang B</b> et aucun de rang S ! Les personnages ne peuvent porter que 3 cristaux de rangs supérieurs ou égaux à B, car porter plus de cristaux sur soi entrainerait des perturbations physiques et psychiques..."
-		},
-		"EQUIPEMENT": {
-			"TEXT": "La magie du monde d'Arlénor est puissante et quasi primordiale pour combattre. Cependant, pour certains personnages, il est aussi vital d'avoir un équipement adéquat en cas de panne d'Energie Vitale. Dans le Monde d'Arlénor, il existe toute sorte d'armes, cependant les armes non magiques ne sont pas très bien vues par les gens de la société adeptes des cristaux (notamment la société Faradélienne).<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement.",
-			"HELP": "<b>Indicateurs</b><br><br><i>Attaque :</i><br>Bonus accordé au test de Combat pour l'utilisateur de l'arme.<br><br><i>Défense :</i><br>Bonus accordé à la Défense pour l'utilisateur de l'arme.<br><br><i>Catégories :</i><br>Les armes légères demandent un test d’Habileté + Combat pour être employées, les armes moyennes et lourdes un test de Vigueur + Combat. Les armes lourdes demandent les deux mains pour être utilisées.<br><br><i>Chargeur :</i><br>La quantité d’attaques pouvant être réalisées avec l’arme sans avoir besoin de la recharger.<br><br><i>Rechargement :</i><br>Le temps de rechargement nécessaire.<br>Rapide : l’arme se recharge sans perdre de temps.<br>Action : Recharger l’arme prend l’action du tour du personnage, ne lui laissant que la possibilité de se déplacer et d’effectuer des actions rapides lorsqu’il recharge.<br><br><i>Portée efficace :</i><br>Chaque fois que cette portée est dépassée, le personnage subit un malus cumulatif de -2 à son test de Combat. Ainsi, un archer tirant sur une cible à 100m tire à 4 fois sa portée efficace, subissant un malus de -8 à son test."
-		},
-		"IDENTITY": {
-			"TEXT": "Pour l'instant, votre personnage est une série de chiffres sur un formulaire... pour lui insuffler un peu de vie, il faut lui remplir son 'état civil'. Le choix d'un nom est toujours délicat, mais une fois baptisé, il vous restera à lui donner un peu de relief avec une description (physique, ou historique personnel) et finir par lui donner une apparence."
-		}
-	},
-	"ABOUT": {
-		"INTRODUCTION": "Présentation",
-		"INTRODUCTIONTEXT": "Je suis Spefire, j'ai 24 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
-		"CONTACT": "Contact / Questions",
-		"CONTACTTEXT": "Vous pouvez me contacter sur ",
-		"PROJECTS": "Projets",
-		"PROJECTSTEXT": {
-			"PROJECT01": "Le Monde d'Arlénor",
-			"PROJECT01TEXT": "Ce projet est né avec ma découverte du jeu de rôles en 2014. J'avais envie de contrôler le monde dans lequel vivrait mes joueurs et créer mes propres scénarios très rapidement. En janvier 2015, le Monde d'Arlénor est né. Mes premiers joueurs ont vécu une première campagne de 8 scénarios. Seulement, je souhaitais partager cet univers au delà du jeu de rôles... d'où ce site !",
-			"PROJECT02": "Célestia et le cercle des mages Evanell",
-			"PROJECT02TEXT": "Célestia est une sorte d'extension du Monde d'Arlénor : une île céleste encore inexplorée par les joueurs. Je l'ai créé pour y faire vivre mes OCs (mes propres personnages) et partager leurs histoires."
-		},
-		"THANKS": "Remerciements",
-		"THANKSTEXT": "Merci à mes joueurs Laetitia, Jérôme, Jonathan et Sylvain qui m'ont accompagné lors de la création d'Arlénor.<br>Merci à mes MJs d'autres univers qui m'ont énormément apporté en terme de conseils et de soutien.<br>Et puis merci à ce qui m'ont soutenu durant ce projet et ce site : Estelle, Alice, Audrey et mes amis testeurs... et puis merci à toi de t'intéresser au Monde d'Arlénor !"
+  },
+  "CREATION": {
+    "MENU": {
+      "IMPORT": "Pré-tirés / Importation de personnage",
+      "TITLE": "Fiche de personnage",
+      "TITLE01": "I - Peuple / Race",
+      "TITLE02": "II - Caractéristiques",
+      "TITLE03": "III - Compétences",
+      "TITLE04": "IV - Magie des Cristaux",
+      "TITLE05": "V - Armes, Equipement",
+      "TITLE06": "VI - Identité",
+      "CONCLUSION": "Téléchargement de la fiche"
+    },
+    "INDICS": {
+      "LEFTPOINTS": "Points restants",
+      "AVANTAGES": "Avantages",
+      "INCONVENIENTS": "Inconvénients",
+      "INITIATIVE": "Initiative",
+      "PV": "Points de Vie",
+      "PE": "Points d'Energie Vitale",
+      "SPE": "Spécialité (option)",
+      "CRYSTAL": "Nom du cristal",
+      "TYPE": "Type",
+      "RANK": "Rang",
+      "RARITY": "Rareté",
+      "POWER": "Puissance",
+      "EV": "Coût en EV",
+      "DEMIEV": "Coût en EV (pour les arléniens)",
+      "ARMOR": "Armure",
+      "WEAPON": "Arme (optionnel)",
+      "ATTACKBONUS": "Bonus d'Attaque",
+      "DEFENCEBONUS": "Bonus de Défense"
+    },
+    "HEROS01": "Un personnage est défini par deux séries de chiffres : ses <b>caractéristiques</b> et ses <b>compétences</b>.<br>Les caractéristiques définissent ce qu’est le personnage, et les compétences ce qu’il sait. Votre personnage sera plus ou moins fort, plus ou moins intelligent, plus ou moins adroit. Et c’est vous qui choisirez si, au cours de sa vie, il a appris à se battre ou s'il a préféré se tourner vers l'érudition, la médecine...",
+    "HEROS02": "Dans ce monde, hormis les stats, les principaux choix qui orienteront votre personnage seront sa race / peuple, mais aussi les cristaux qu'il utilisera. Cependant, malgré toutes les nombres et les textes notés sur la fiche de perso, c'est VOUS qui ferez vivre votre personnage via ses actions : on choisit ce que l'on est par nos actions !",
+    "HEROS03": "Créez alors ici un nouveau personnage du Monde d'Arlénor, ou mettez à jour la fiche du vôtre !",
+    "PRETIRES": "Créer un personnage peut prendre du temps ou ne pas être simple au début... C'est pour cela qu'il existe des personnages pré-tirés : ce sont des fiches déjà complétées, prêtes à être utilisées ! Vous y trouverez un guerrier humain, un elfe nécromant, un mutant fou, un pan discret... Une variété de personnages pour vous permettre d'y trouver votre compte !",
+    "IMPORT": "Si vous avez sauvegardé les paramètres d'un personnage, ou que vous souhaitez personnaliser un perso pré-tiré, vous pouvez l'importer (fichier JSON) et le modifier ensuite sur cette page. ",
+    "CARACTS01": "Toute personne est dotée de capacités de base qui lui sont inhérentes et qu’il peut utiliser de bien des manières. Ces aptitudes naturelles sont définies par cinq caractéristiques distinctes, chacune évaluée sur une échelle allant de <b>1 à 5</b>.",
+    "CARACTS02": "Un score de 1 dans une caractéristique indique une vraie faiblesse dans le domaine concerné, tandis qu’un 2 place le personnage dans la moyenne, ni plus ni moins. A partir de 3, la personne dispose d’une facilité particulière dans la caractéristique concernée, et un 4 indique des facultés exceptionnelles. Enfin, un score de 5 représente le maximum des capacités : seuls quelques très rares individus atteignent ce score.",
+    "VIGUEUR": {
+      "NAME": "Vigueur",
+      "HELP": "<b>Vigueur</b><br><br>Mélange de résistance physique et de puissance brute, la <b>Vigueur</b> évalue la forme physique de votre personnage. Cette caractéristique est importante pour les personnages combattants, les sportifs et tous ceux qui aiment se sortir de situations dangereuses.<br>Note : Une Vigueur à 1 donne 1 case de blessure à l'état « Indemne ».<br>Note : Une Vigueur à 5 donne 3 cases de blessure à l'état « Indemne ».<br><br>1 : Fragile. Force et endurance limitées, vous vous fatiguez vite.<br>2 : Moyen. Vous n’avez de problèmes qu’avec des tours de force inhabituels.<br>3 : Costaud. Vous fatiguez rarement et réalisez des tours de force.<br>4 : Fort comme un bœuf. Peu de choses ou de personnes peuvent vous résister.<br>5 : Herculéen. Vous résistez à tout et rivalisez de puissance avec les ours."
+    },
+    "HABILETE": {
+      "NAME": "Habileté",
+      "HELP": "<b>Habileté</b><br><br>L’<b>Habileté</b> représente la capacité du personnage à s’acquitter de tâches de précision, sa finesse, sa dextérité, son talent pour viser ainsi que sa rapidité de réaction. C’est une aptitude inestimable pour les artisans, les voleurs, les danseurs et les tireurs de tout calibre.<br><br>1 : Maladroit. Vous êtes un véritable éléphant dans un magasin de porcelaine.<br>2 : Moyen. Au moins, vous ne provoquez que rarement des catastrophes.<br>3 : Agile. Vous êtes doué de vos mains, et votre agilité vous sert dans bien des situations.<br>4 : Félin. Vos réflexes et votre souplesse tiennent davantage de l’animal que de l’humain.<br>5 : Gracieux. Vos mouvements sont tellement fluides qu’ils semblent irréels."
+    },
+    "INTELLECT": {
+      "NAME": "Intellect",
+      "HELP": "<b>Intellect</b><br><br>Les capacités intellectuelles de votre personnage, sa capacité à analyser, retenir les informations et les réutiliser en temps utile. L'<b>Intellect</b> est utile aux tacticiens, aux érudits, aux scientifiques et aux enquêteurs.<br><br>1 : Simplet. Vous comprenez l’essentiel, mais toutes les subtilités vous échappent.<br>2 : Moyen. Vous ne faites pas de miracles, mais vous vous en sortez honorablement.<br>3 : Vif. Vous comprenez vite, analysez de manière pertinente et savez vous adapter.<br>4 : Brillant. Vous comprenez rapidement ce que certains mettent des années à apprendre.<br>5 : Génie. Vous maniez facilement des notions que la majorité des gens sont incapables d’appréhender."
+    },
+    "CHARISME": {
+      "NAME": "Charisme",
+      "HELP": "<b>Charisme</b><br><br>La capacité à s’imposer aux autres, à leur inspirer de la confiance, du respect ou de la crainte, ainsi qu’à les manipuler. Le <b>Charisme</b> comprend bien plus que la beauté physique, et est l’atout principal des dirigeants, des séducteurs et de tous les menteurs invétérés.<br><br>1 : Fade. Vous n’inspirez pas les autres et semblez parfois transparent à leurs yeux.<br>2 : Moyen. Vous vous faites des amis, comme tout le monde.<br>3 : Intéressant. Vous ne laissez pas les gens indifférents, et beaucoup vous apprécient.<br>4 : Captivant. Leader-né, votre personnalité attire les autres à vous.<br>5 : Fascinant. Vous pourriez amener n’importe qui à faire n’importe quoi pour vous."
+    },
+    "POUVOIR": {
+      "NAME": "Pouvoir",
+      "HELP": "<b>Pouvoir</b><br><br>Le <b>Pouvoir</b> est la caractéristique déterminant le niveau de facilité à utiliser la magie des cristaux du Monde d'Arlénor. Les mages et sorciers ont généralement un bon niveau dans cette caractéristique.<br><br>1 : Débutant. L'utilisation de ton énergie vitale est encore un mystère pour vous.<br>5 : Master. La magie n'a plus (ou très peu) de secrets pour vous."
+    },
+    "SKILLS": {
+      "TEXT01": "Survivre en milieu hostile. Mentir. Etudier un cristal. Autant de savoir-faire qu’un personnage peut, ou non, développer au cours de sa vie. Cette section s’intéresse à ces compétences que les personnages apprennent ou non à utiliser et qui les différencient les uns des autres.<br>Le test classique qui détermine si un personnage réussit ou non une action se réalise de la façon suivante. Le MJ détermine quelle caractéristique de base du personnage est concernée (Vigueur, Habileté, Intellect, Charisme, Pouvoir), ainsi que la compétence mise en jeu si nécessaire. Il annonce cette combinaison au joueur, qui lance autant de dés à 6 faces qu’il a de points dans la caractéristique concernée, additionne les résultats puis rajoute son score de compétence. Il compare ensuite le total à la difficulté fixée par le MJ. Si le résultat de son test est supérieur ou égal à cette difficulté, il l’emporte.",
+      "TEXT02": "Pour résumer, un jet de compétence est réussi si :<br><b>Caractéristique x 1D6 + Compétence + 4 de Bonus (si Spécialité) - 4 de Malus (si 0 dans la Compétence) >= Difficulté (donnée par le MJ)</b>",
+      "TEXT03": "Vous commencez avec 25 points à répartir en plus des avantages de votre race. Notez que vous pouvez décider de sacrifier deux points de création pour acheter une Spécialité dans l’une de vos compétences. Il s’agit d’un bonus de +4 qui ne s’applique qu’à une utilisation précise de la compétence. Par exemple, un personnage possédant la compétence Combat à +4 et une Spécialité (Épée) aura un bonus de +8 chaque fois qu’il combattra à l’épée, mais seulement de +4 pour toute autre forme de combat.<br>Par contre, avoir une compétence à 0, donne un malus -4 lors de son utilisation !"
+    },
+    "ART": {
+      "NAME": "Art / Artisanat",
+      "HELP": "<b>Art / Artisanat</b><br><br>La capacité artistique pure et simple. Les grands peintres, les musiciens, les chanteurs, sculpteurs et comédiens ont tous en commun l’utilisation de cette compétence. Elle permet de gagner sa vie et de se faire apprécier de ceux que l’on rencontre. Cette compétence est aussi celle que partagent tous les bricoleurs, jusqu’aux grands maîtres artisans créant des pièces uniques. Fonctionnant surtout sur le principe du test étendu, l’Artisanat permet aux personnages de créer seuls ce qu’ils ne trouvent pas ailleurs.<br><br><i>Exemples :</i><br>- Créer une contrefaçon d’un document officiel (test étendu, Hab. + Art / Artisanat Diff. 15, Objectif 10).<br>- Expertiser un objet ancien redécouvert récemment (Int. + Art / Artisanat, Diff. 16).<br>- Peindre un chef d’œuvre à la gloire de la princesse (Test étendu, Hab. + Art / Artisanat, Diff. 22, Objectif 20).<br><br><i>Temps d'action :</i><br>Variable. Faire un concert ou une représentation de comédie dure environ une heure, tandis que composer une œuvre prend une journée par test. <br><br><i>Spécialités :</i><br>Archéologie, Armurerie, Contrefaçon, Comédie, Écriture, Musique, Peinture.",
+      "SPECIALISTICS": "Archéologie, Armurerie, Contrefaçon, Comédie, Écriture, Musique, Peinture"
+    },
+    "ATHLETISME": {
+      "NAME": "Athlétisme",
+      "HELP": "<b>Athlétisme</b><br><br>Cette compétence regroupe les capacités sportives. Un personnage avec un haut niveau d’Athlétisme peut courir vite et longtemps, escalader des parois difficiles d’accès, nager sur de longues distances et tenir en équilibre sur un fil.<br><br><i>Exemples :</i><br>- Courir après quelqu’un (test en opposition étendu de Vig. + Athlétisme, Difficulté et Objectif variable selon la distance entre les personnages).<br>- Tenir en équilibre tout en avançant sur une corniche étroite (Hab. + Athlétisme, Diff. 14).<br>- Nager au beau milieu d’une mer démontée (Vig. + Athlétisme, Diff. 20).<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Course, Équilibre, Escalade, Lancer, Natation, Saut.",
+      "SPECIALISTICS": "Course, Équilibre, Escalade, Lancer, Natation, Saut"
+    },
+    "COMBAT": {
+      "NAME": "Combat",
+      "HELP": "<b>Combat</b><br><br>L’aptitude du personnage à manier les armes et à se défendre en situation d’affrontement physique. Cette compétence regroupe la maîtrise de tous les types d’armes ainsi que du combat à mains nues. Cependant, elle ne gère absolument pas ce qui concerne le combat avec les cristaux !<br><br><i>Exemples :</i><br>Voir les règles de bases.<br><br><i>Temps d'action :</i><br>Généralement, un tour de combat. <br><br><i>Spécialités :</i><br>Arcs, Armes à feu, Haches, Épées, Esquive, Parade.",
+      "SPECIALISTICS": "Arcs, Armes à feu, Haches, Épées, Esquive, Parade"
+    },
+    "FURTIVITE": {
+      "NAME": "Furtivité",
+      "HELP": "<b>Furtivité</b><br><br>Cette compétence est celle des criminels, des espions et des enquêteurs. Elle permet de se cacher en toutes circonstances, qu’il s’agisse de se faire discret dans une forêt ou de paraître anonyme au milieu de la foule.<br><br><i>Exemples :</i><br>Le test d’Habileté + Furtivité du personnage est toujours un test en opposition avec un test d’Intellect + Perception de celui ou ceux qui auraient intérêt à le repérer. Si le personnage échoue à ce test, il est repéré.<br><br><i>Temps d'action :</i><br>Instantané. <br><br><i>Spécialités :</i><br>Anonymat, Camouflage, Filature, Vol à la tire.",
+      "SPECIALISTICS": "Anonymat, Camouflage, Filature, Vol à la tire"
+    },
+    "MEDECINE": {
+      "NAME": "Médecine",
+      "HELP": "<b>Médecine</b><br><br>La médecine est la compétence qui permet au personnage de comprendre les causes des maladies, de soigner les blessures et de guérir une personne empoisonnée. Elle comprend la fabrication des médicaments et remèdes, mais également celle des poisons.<br><br><i>Exemples :</i><br>- Diagnostiquer une maladie simple (Int. + Médecine Diff. 9).<br>- Fabriquer un antidote à un poison courant (Test étendu, Int. + Médecine Diff. 14, Objectif 10).<br>- Traiter une maladie inconnue et mortelle (Test étendu, Int. + Médecine Diff. 25, Objectif 30 et plus).<br><br><i>Temps d'action :</i><br>Variable. Le plus souvent, une heure est requise pour tenter un diagnostic ou faire un test pour fabriquer un médicament. Pour soigner les blessures ou traiter une maladie, il faut une journée par test. <br><br><i>Spécialités :</i><br>Apothicaire, Chirurgie, Diagnostic, Poisons, Maladies, Secourisme.",
+      "SPECIALISTICS": "Apothicaire, Chirurgie, Diagnostic, Poisons, Maladies, Secourisme"
+    },
+    "PERCEPTION": {
+      "NAME": "Perception",
+      "HELP": "<b>Perception</b><br><br>La Perception est la compétence qui permet au personnage de trouver des indices, d’établir des relations entre différents sens et de remarquer les détails de son environnement, ce qui comprend les personnes ou objets cachés. Elle permet aussi de discerner l’état émotionnel de ses interlocuteurs ou de comprendre quand on lui ment.<br><br><i>Exemples :</i><br>- Trouver un indice sur une scène de crime (Int. + Perception Diff. 10).<br>- Établir un lien entre plusieurs éléments (Int. + Perception Diff. 16).<br>- Repérer un détective en filature (Int. + Perception contre Hab. + Furtivité).<br><br><i>Temps d'action :</i><br>Une heure de recherche par test environ. Repérer quelqu’un est un test instantané. <br><br><i>Spécialités :</i><br>Audition, Chercher objets, Intuition, Odorat, Toucher.",
+      "SPECIALISTICS": "Audition, Chercher objets, Intuition, Odorat, Toucher"
+    },
+    "SAVOIR": {
+      "NAME": "Savoir",
+      "HELP": "<b>Savoir</b><br><br>Cette compétence évalue l’érudition du personnage. Elle représente un savoir général dans tous les domaines, de l’histoire aux sciences de la vie, et celui qui la maîtrise à un haut niveau peut être considéré comme un véritable puits de science. De plus, celui qui maîtrise cette compétence peut identifier des sorts, connaît les créatures magiques et la science des potions et philtres en tous genres.<br><br><i>Exemples :</i><br>Selon la rareté de l’information et sa précision, la Difficulté varie.<br><br><i>Temps d'action :</i><br>Instantané. Le personnage sait ou ne sait pas, mais régler une énigme mystique particulièrement longue peut demander plus de temps, et un test étendu. <br><br><i>Spécialités :</i><br>Bibliothèque, Cristologie, Histoire et Théologie, Langues et Littérature, Pilotage, Sciences de la nature, Sciences technologiques.",
+      "SPECIALISTICS": "Bibliothèque, Cristologie, Histoire et Théologie, Langues et Littérature, Pilotage, Sciences de la nature, Sciences technologiques"
+    },
+    "SOCIAL": {
+      "NAME": "Social",
+      "HELP": "<b>Social</b><br><br>Capacité à convaincre les autres par la force de vos arguments, celle qui permet d’obtenir ce que l’on veut des autres, ou des informations sur tout un tas de sujets. Le Social est l’instrument préféré des diplomates, des vendeurs et de tous les professionnels de la négociation. Elle permet d’obtenir un prix sur un objet autant que de captiver les foules. Les experts dans ce domaine savent aussi délier les langues rapidement et dissimuler leurs véritables émotions ou objectifs aux yeux des autres.<br><br><i>Exemples :</i><br>Que ce soit pour faire avouer un secret à quelqu’un en le menaçant ou pour convaincre quelqu’un, le Social se joue par un test opposé (Pré. + Social contre Int. + Intuition).<br>Si plusieurs orateurs cherchent à se convaincre, un test opposé de Pré. + Social a lieu, et le plus haut score l’emporte.<br><br><i>Temps d'action :</i><br>Variable. <br><br><i>Spécialités :</i><br>Discours, Interrogatoire, Marchandage, Mensonge, Séduction.",
+      "SPECIALISTICS": "Discours, Interrogatoire, Marchandage, Mensonge, Séduction"
+    },
+    "CRYSTALS": {
+      "TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne (principalement des rangs O selon la convention SABO). En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible.",
+      "TEXT02": "Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.<br>Dans la logique, au début un personnage ne devrait avoir <b>au maximum, un cristal de rang A et un de rang B</b> et aucun de rang S ! Les personnages ne peuvent porter que 3 cristaux de rangs supérieurs ou égaux à B, car porter plus de cristaux sur soi entrainerait des perturbations physiques et psychiques..."
+    },
+    "EQUIPEMENT": {
+      "TEXT": "La magie du monde d'Arlénor est puissante et quasi primordiale pour combattre. Cependant, pour certains personnages, il est aussi vital d'avoir un équipement adéquat en cas de panne d'Energie Vitale. Dans le Monde d'Arlénor, il existe toute sorte d'armes, cependant les armes non magiques ne sont pas très bien vues par les gens de la société adeptes des cristaux (notamment la société Faradélienne).<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement."
+    },
+    "IDENTITY": {
+      "TEXT": "Pour l'instant, votre personnage est une série de chiffres sur un formulaire... pour lui insuffler un peu de vie, il faut lui remplir son 'état civil'. Le choix d'un nom est toujours délicat, mais une fois baptisé, il vous restera à lui donner un peu de relief avec une description (physique, ou historique personnel) et finir par lui donner une apparence."
+    }
+  },
+  "ABOUT": {
+    "INTRODUCTION": "Présentation",
+    "INTRODUCTIONTEXT": "Je suis Spefire, j'ai 25 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
+    "CONTACT": "Contact / Questions",
+    "CONTACTTEXT": "Vous pouvez me contacter sur ",
+    "PROJECTS": "Projets",
+    "PROJECTSTEXT": {
+      "PROJECT01": "Le Monde d'Arlénor",
+      "PROJECT01TEXT": "Ce projet est né avec ma découverte du jeu de rôles en 2014. J'avais envie de contrôler le monde dans lequel vivrait mes joueurs et créer mes propres scénarios très rapidement. En janvier 2015, le Monde d'Arlénor est né. Mes premiers joueurs ont vécu une première campagne de 8 scénarios. Seulement, je souhaitais partager cet univers au delà du jeu de rôles... d'où ce site !",
+      "PROJECT02": "Célestia et le cercle des mages Evanell",
+      "PROJECT02TEXT": "Célestia est une sorte d'extension du Monde d'Arlénor : une île céleste encore inexplorée par les joueurs. Je l'ai créé pour y faire vivre mes OCs (mes propres personnages) et partager leurs histoires."
+    },
+    "THANKS": "Remerciements",
+    "THANKSTEXT": "Merci à mes joueurs Laetitia, Jérôme, Jonathan et Sylvain qui m'ont accompagné lors de la création d'Arlénor.<br>Merci à mes MJs d'autres univers qui m'ont énormément apporté en terme de conseils et de soutien.<br>Et puis merci à ce qui m'ont soutenu durant ce projet et ce site : Estelle, Alice, Audrey et mes amis testeurs... et puis merci à toi de t'intéresser au Monde d'Arlénor !"
   },
   "LEGACY": {
     "STATUT": "Statut du propriétaire : <strong>Particulier</strong>",
     "HOST": "<strong>Hébergeur OVH<br>2 rue Kellermann<br>59100 ROUBAIX – France</strong>",
-		"CONTACT": "Pour contacter cet hébergeur, rendez-vous à l’adresse suivante :",
-		"IMAGES": "Note : Tous les dessins, images et illustrations de ce site ne sont pas libres de droit. Merci de ne pas les utiliser sans mon autorisation."
+    "CONTACT": "Pour contacter cet hébergeur, rendez-vous à l’adresse suivante :",
+    "IMAGES": "Note : Tous les dessins, images et illustrations de ce site ne sont pas libres de droit. Merci de ne pas les utiliser sans mon autorisation."
   }
 }
