@@ -57,21 +57,22 @@
       p {
         text-align: center;
       }
-
-      a,
-      label {
-        padding: 5px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        outline: none;
-        background: none;
-        border: 1px solid #dad090;
-        color: #fcf8b0;
-      }
     }
 
     &.final {
       background-image: linear-gradient(0deg, rgba($dark-color, 0.8), rgba($dark-color, 0.8)), url("/assets/images/home_02.png");
+    }
+
+    a,
+    label {
+      margin: 10px 0;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      background: none;
+      border: 1px solid #dad090;
+      color: #fcf8b0;
     }
   }
 
@@ -113,10 +114,11 @@
     }
   }
 
-  .creation-help-equipment {
-    @media screen and (max-width: 700px) {
-      display: none;
-    }
+  .creation-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
   }
 
   .creation-identity {
@@ -142,8 +144,8 @@
   }
 
   .creation-avatar {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border: 1px solid $secondary-color;
     display: flex;
     align-items: center;
@@ -152,21 +154,9 @@
     cursor: pointer;
 
     img {
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
     }
-  }
-
-  #creation-save-pdf,
-  #creation-save-parameters {
-    margin: 10px 0;
-    padding: 5px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    background: none;
-    border: 1px solid #dad090;
-    color: #fcf8b0;
   }
 
   h2 {

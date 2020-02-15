@@ -1,39 +1,27 @@
 export const LIST_RACES = [
   {
     id: 1,
-    name: "Humain",
-    pe: 6,
-    nbPointsSkills: 16
+    name: "Humain"
   },
   {
     id: 2,
-    name: "Elfe",
-    pe: 8,
-    nbPointsSkills: 15
+    name: "Elfe"
   },
   {
     id: 3,
-    name: "Nain",
-    pe: 8,
-    nbPointsSkills: 17
+    name: "Nain"
   },
   {
     id: 4,
-    name: "Mutant",
-    pe: 8,
-    nbPointsSkills: 17
+    name: "Mutant"
   },
   {
     id: 5,
-    name: "Pan",
-    pe: 12,
-    nbPointsSkills: 17
+    name: "Pan"
   },
   {
     id: 6,
-    name: "Arlénien",
-    pe: 8,
-    nbPointsSkills: 18
+    name: "Arlénien"
   }
 ];
 
@@ -129,31 +117,27 @@ export const LIST_CRYSTALS = [
     rank: "S",
     rarity: "Unique",
     power: "Extrême",
-    EV: 5,
-    demiEV: 3
+    levelmax: 10
   },
   {
     id: 2,
     rank: "A",
     rarity: "Rare",
     power: "Forte",
-    EV: 3,
-    demiEV: 1
+    levelmax: 6
   },
   {
     id: 3,
     rank: "B",
     rarity: "Commune",
     power: "Faible",
-    EV: 1,
-    demiEV: 0
+    levelmax: 2
   },
   {
     id: 4,
     rank: "O",
     rarity: "Très commune",
     power: "Nulle",
-    EV: 0,
-    demiEV: 0
+    levelmax: 1
   }
 ];

@@ -1,10 +1,10 @@
 <head-creation
-	title="{{ 'CREATION.MENU.TITLE' | translate | uppercase }}"
-	section01="{{ 'CREATION.HEROS01' | translate }}"
-	section02="{{ 'CREATION.HEROS02' | translate }}"
-	section03="{{ 'CREATION.HEROS03' | translate }}"
-	imgLeft="assets/images/creation/perso_left.png"
-	imgRight="assets/images/creation/perso_right.png"
+  title="{{ 'CREATION.MENU.TITLE' | translate | uppercase }}"
+  section01="{{ 'CREATION.HEROS01' | translate }}"
+  section02="{{ 'CREATION.HEROS02' | translate }}"
+  section03="{{ 'CREATION.HEROS03' | translate }}"
+  imgLeft="assets/images/creation/perso_left.png"
+  imgRight="assets/images/creation/perso_right.png"
 >
 </head-creation>
 
@@ -14,652 +14,611 @@
 <!------------                                IMPORT                                                ------------->
 <!--------------------------------------------------------------------------------------------------------------->
 <div class="creation-container big import">
-	<h2>{{ "CREATION.MENU.IMPORT" | translate }}</h2>
-	<p innerHtml="{{ 'CREATION.PRETIRES' | translate }}"></p>
-	<a href="./assets/files/Persos_Pretires.zip" download>{{
-		"ROLEPLAY.FILES.PERSOSPRETIRES" | translate
-	}}</a>
-	<p innerHtml="{{ 'CREATION.IMPORT' | translate }}"></p>
-	<label for="creation-load-parameters">{{
-		"ROLEPLAY.FILES.PERSOSPARAMETERS" | translate
-	}}</label>
-	<input
-		type="file"
-		id="creation-load-parameters"
-		accept=".json, application/json"
-		(change)="loadJSON($event.target)"
-	/>
+  <h2>{{ "CREATION.MENU.IMPORT" | translate }}</h2>
+  <p innerHtml="{{ 'CREATION.PRETIRES' | translate }}"></p>
+  <a href="./assets/files/Persos_Pretires.zip" download>{{ "ROLEPLAY.FILES.PERSOSPRETIRES" | translate }}</a>
+  <p innerHtml="{{ 'CREATION.IMPORT' | translate }}"></p>
+  <label for="creation-load-parameters">{{ "ROLEPLAY.FILES.PERSOSPARAMETERS" | translate }}</label>
+  <input type="file" id="creation-load-parameters" accept=".json, application/json" (change)="loadJSON($event.target)" />
 </div>
 
 <div class="creation-flex">
-	<div class="creation-container left">
-		<!--------------------------------------------------------------------------------------------------------------->
-		<!------------                             PART I : RACE                                            ------------->
-		<!--------------------------------------------------------------------------------------------------------------->
-		<h2>{{ "CREATION.MENU.TITLE01" | translate }}</h2>
-		<img
-			*ngIf="race == 1"
-			class="creation-race-img"
-			src="assets/images/population/p_humain.png"
-			alt=""
-		/>
-		<img
-			*ngIf="race == 2"
-			class="creation-race-img"
-			src="assets/images/population/p_elfe.png"
-			alt=""
-		/>
-		<img
-			*ngIf="race == 3"
-			class="creation-race-img"
-			src="assets/images/population/p_nain.png"
-			alt=""
-		/>
-		<img
-			*ngIf="race == 4"
-			class="creation-race-img"
-			src="assets/images/population/p_mutant.png"
-			alt=""
-		/>
-		<img
-			*ngIf="race == 5"
-			class="creation-race-img"
-			src="assets/images/population/p_pan.png"
-			alt=""
-		/>
-		<img
-			*ngIf="race == 6"
-			class="creation-race-img"
-			src="assets/images/population/p_arlenien.png"
-			alt=""
-		/>
-		<div class="dropdown">
-			<select
-				class="dropdown-select"
-				value="{{ race }}"
-				(change)="changeRace($event.target)"
-			>
-				<option value="1">{{
-					"UNIVERSE.POPULATION.PEOPLE1.NAME" | translate
-				}}</option>
-				<option value="2">{{
-					"UNIVERSE.POPULATION.PEOPLE2.NAME" | translate
-				}}</option>
-				<option value="3">{{
-					"UNIVERSE.POPULATION.PEOPLE3.NAME" | translate
-				}}</option>
-				<option value="4">{{
-					"UNIVERSE.POPULATION.PEOPLE4.NAME" | translate
-				}}</option>
-				<option value="5">{{
-					"UNIVERSE.POPULATION.PEOPLE5.NAME" | translate
-				}}</option>
-				<option value="6">{{
-					"UNIVERSE.POPULATION.PEOPLE6.NAME" | translate
-				}}</option>
-			</select>
-		</div>
-		<p
-			innerHtml="{{
-				'UNIVERSE.POPULATION.PEOPLE' + race + '.TEXT01' | translate
-			}}"
-		></p>
-		<p
-			innerHtml="{{
-				'UNIVERSE.POPULATION.PEOPLE' + race + '.TEXT02' | translate
-			}}"
-		></p>
-		<table class="full-table">
-			<thead>
-				<tr>
-					<th>{{ "CREATION.INDICS.AVANTAGES" | translate }}</th>
-					<th>{{ "CREATION.INDICS.INCONVENIENTS" | translate }}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td innerHtml="{{ avantages }}"></td>
-					<td innerHtml="{{ inconvenients }}"></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<!--------------------------------------------------------------------------------------------------------------->
-	<!------------                         PART II : CARACTERISTICS                                     ------------->
-	<!--------------------------------------------------------------------------------------------------------------->
-	<div class="creation-container right">
-		<h2>{{ "CREATION.MENU.TITLE02" | translate }}</h2>
-		<p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
-		<p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
-		<p
-			[ngClass]="{ warning: leftPointsCaracteristics < 0 }"
-			class="creation-points"
-		>
-			{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
-			<b>{{ leftPointsCaracteristics }}</b>
-		</p>
-		<table>
-			<tbody>
-				<creation-slider
-					min="1"
-					max="5"
-					name="{{ 'CREATION.VIGUEUR.NAME' | translate }}"
-					help="{{ 'CREATION.VIGUEUR.HELP' | translate }}"
-					type="vigueur"
-					value="{{ caracteristics.vigueur }}"
-					(onOpenPopup)="openPopup($event)"
-					(onValueChange)="changeCaracteristics($event)"
-				></creation-slider>
-				<creation-slider
-					min="1"
-					max="5"
-					name="{{ 'CREATION.HABILETE.NAME' | translate }}"
-					help="{{ 'CREATION.HABILETE.HELP' | translate }}"
-					type="habilete"
-					value="{{ caracteristics.habilete }}"
-					(onOpenPopup)="openPopup($event)"
-					(onValueChange)="changeCaracteristics($event)"
-				></creation-slider>
-				<creation-slider
-					min="1"
-					max="5"
-					name="{{ 'CREATION.INTELLECT.NAME' | translate }}"
-					help="{{ 'CREATION.INTELLECT.HELP' | translate }}"
-					type="intellect"
-					value="{{ caracteristics.intellect }}"
-					(onOpenPopup)="openPopup($event)"
-					(onValueChange)="changeCaracteristics($event)"
-				></creation-slider>
-				<creation-slider
-					min="1"
-					max="5"
-					name="{{ 'CREATION.CHARISME.NAME' | translate }}"
-					help="{{ 'CREATION.CHARISME.HELP' | translate }}"
-					type="charisme"
-					value="{{ caracteristics.charisme }}"
-					(onOpenPopup)="openPopup($event)"
-					(onValueChange)="changeCaracteristics($event)"
-				></creation-slider>
-				<creation-slider
-					min="1"
-					max="5"
-					name="{{ 'CREATION.POUVOIR.NAME' | translate }}"
-					help="{{ 'CREATION.POUVOIR.HELP' | translate }}"
-					type="pouvoir"
-					value="{{ caracteristics.pouvoir }}"
-					(onOpenPopup)="openPopup($event)"
-					(onValueChange)="changeCaracteristics($event)"
-				></creation-slider>
-			</tbody>
-		</table>
-		<table class="full-table">
-			<thead>
-				<tr>
-					<th>{{ "CREATION.INDICS.INITIATIVE" | translate }}</th>
-					<th>{{ "CREATION.INDICS.PV" | translate }}</th>
-					<th>{{ "CREATION.INDICS.PE" | translate }}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>{{ initiative }}</td>
-					<td>{{ pv }}</td>
-					<td>{{ pe }}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+  <div class="creation-container left">
+    <!--------------------------------------------------------------------------------------------------------------->
+    <!------------                             PART I : RACE                                            ------------->
+    <!--------------------------------------------------------------------------------------------------------------->
+    <h2>{{ "CREATION.MENU.TITLE01" | translate }}</h2>
+    <img *ngIf="race == 1" class="creation-race-img" src="assets/images/population/p_humain.png" alt="" />
+    <img *ngIf="race == 2" class="creation-race-img" src="assets/images/population/p_elfe.png" alt="" />
+    <img *ngIf="race == 3" class="creation-race-img" src="assets/images/population/p_nain.png" alt="" />
+    <img *ngIf="race == 4" class="creation-race-img" src="assets/images/population/p_mutant.png" alt="" />
+    <img *ngIf="race == 5" class="creation-race-img" src="assets/images/population/p_pan.png" alt="" />
+    <img *ngIf="race == 6" class="creation-race-img" src="assets/images/population/p_arlenien.png" alt="" />
+    <div class="dropdown">
+      <select class="dropdown-select" value="{{ race }}" (change)="changeRace($event.target)">
+        <option value="1">{{ "UNIVERSE.POPULATION.PEOPLE1.NAME" | translate }}</option>
+        <option value="2">{{ "UNIVERSE.POPULATION.PEOPLE2.NAME" | translate }}</option>
+        <option value="3">{{ "UNIVERSE.POPULATION.PEOPLE3.NAME" | translate }}</option>
+        <option value="4">{{ "UNIVERSE.POPULATION.PEOPLE4.NAME" | translate }}</option>
+        <option value="5">{{ "UNIVERSE.POPULATION.PEOPLE5.NAME" | translate }}</option>
+        <option value="6">{{ "UNIVERSE.POPULATION.PEOPLE6.NAME" | translate }}</option>
+      </select>
+    </div>
+    <p innerHtml="{{ 'UNIVERSE.POPULATION.PEOPLE' + race + '.TEXT01' | translate }}<br><br>{{ 'UNIVERSE.POPULATION.PEOPLE' + race + '.TEXT02' | translate }}"></p>
+    <table class="full-table">
+      <thead>
+        <tr>
+          <th *ngIf="avantages">{{ "CREATION.INDICS.AVANTAGES" | translate }}</th>
+          <th *ngIf="inconvenients">{{ "CREATION.INDICS.INCONVENIENTS" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngIf="avantages" innerHtml="{{ avantages }}"></td>
+          <td *ngIf="inconvenients" innerHtml="{{ inconvenients }}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--------------------------------------------------------------------------------------------------------------->
+  <!------------                         PART II : CARACTERISTICS                                     ------------->
+  <!--------------------------------------------------------------------------------------------------------------->
+  <div class="creation-container right">
+    <h2>{{ "CREATION.MENU.TITLE02" | translate }}</h2>
+    <p innerHtml="{{ 'CREATION.CARACTS01' | translate }}"></p>
+    <p innerHtml="{{ 'CREATION.CARACTS02' | translate }}"></p>
+    <p [ngClass]="{ warning: leftPointsCaracteristics < 0 }" class="creation-points">
+      {{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
+      <b>{{ leftPointsCaracteristics }}</b>
+    </p>
+    <table>
+      <tbody>
+        <creation-slider
+          min="1"
+          max="5"
+          name="{{ 'CREATION.VIGUEUR.NAME' | translate }}"
+          help="{{ 'CREATION.VIGUEUR.HELP' | translate }}"
+          type="vigueur"
+          value="{{ caracteristics.vigueur }}"
+          (onOpenPopup)="openPopup($event)"
+          (onValueChange)="changeCaracteristics($event)"
+        ></creation-slider>
+        <creation-slider
+          min="1"
+          max="5"
+          name="{{ 'CREATION.HABILETE.NAME' | translate }}"
+          help="{{ 'CREATION.HABILETE.HELP' | translate }}"
+          type="habilete"
+          value="{{ caracteristics.habilete }}"
+          (onOpenPopup)="openPopup($event)"
+          (onValueChange)="changeCaracteristics($event)"
+        ></creation-slider>
+        <creation-slider
+          min="1"
+          max="5"
+          name="{{ 'CREATION.INTELLECT.NAME' | translate }}"
+          help="{{ 'CREATION.INTELLECT.HELP' | translate }}"
+          type="intellect"
+          value="{{ caracteristics.intellect }}"
+          (onOpenPopup)="openPopup($event)"
+          (onValueChange)="changeCaracteristics($event)"
+        ></creation-slider>
+        <creation-slider
+          min="1"
+          max="5"
+          name="{{ 'CREATION.CHARISME.NAME' | translate }}"
+          help="{{ 'CREATION.CHARISME.HELP' | translate }}"
+          type="charisme"
+          value="{{ caracteristics.charisme }}"
+          (onOpenPopup)="openPopup($event)"
+          (onValueChange)="changeCaracteristics($event)"
+        ></creation-slider>
+        <creation-slider
+          min="1"
+          max="5"
+          name="{{ 'CREATION.POUVOIR.NAME' | translate }}"
+          help="{{ 'CREATION.POUVOIR.HELP' | translate }}"
+          type="pouvoir"
+          value="{{ caracteristics.pouvoir }}"
+          (onOpenPopup)="openPopup($event)"
+          (onValueChange)="changeCaracteristics($event)"
+        ></creation-slider>
+      </tbody>
+    </table>
+    <table class="full-table">
+      <tbody>
+        <tr>
+          <th>{{ "CREATION.INDICS.INITIATIVE" | translate }}</th>
+          <td>{{ initiative }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="full-table">
+      <thead>
+        <tr>
+          <th>{{ "CREATION.INDICS.HEALTH.LEVEL" | translate }}</th>
+          <th colspan="3">{{ "CREATION.INDICS.HEALTH.CASES" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ "CREATION.INDICS.HEALTH.01" | translate }}</td>
+          <th>{{ health01 >= 1 ? "X" : " " }}</th>
+          <th>{{ health01 >= 2 ? "X" : " " }}</th>
+          <th>{{ health01 >= 3 ? "X" : " " }}</th>
+        </tr>
+        <tr>
+          <td>{{ "CREATION.INDICS.HEALTH.02" | translate }}</td>
+          <th>{{ health02 >= 1 ? "X" : " " }}</th>
+          <th>{{ health02 >= 2 ? "X" : " " }}</th>
+          <th>{{ health02 >= 3 ? "X" : " " }}</th>
+        </tr>
+        <tr>
+          <td>{{ "CREATION.INDICS.HEALTH.03" | translate }}</td>
+          <th>{{ health03 >= 1 ? "X" : " " }}</th>
+          <th>{{ health03 >= 2 ? "X" : " " }}</th>
+          <th>{{ health03 >= 3 ? "X" : " " }}</th>
+        </tr>
+        <tr>
+          <td>{{ "CREATION.INDICS.HEALTH.04" | translate }}</td>
+          <th>{{ health04 >= 1 ? "X" : " " }}</th>
+          <th>{{ health04 >= 2 ? "X" : " " }}</th>
+          <th>{{ health04 >= 3 ? "X" : " " }}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                           PART III : SKILLS                                          ------------->
 <!--------------------------------------------------------------------------------------------------------------->
 <div class="creation-container big">
-	<h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
-	<p innerHtml="{{ 'CREATION.SKILLS.TEXT01' | translate }}"></p>
-	<p
-		class="creation-points"
-		innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"
-	></p>
-	<p innerHtml="{{ 'CREATION.SKILLS.TEXT03' | translate }}"></p>
-	<p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
-		{{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
-		<b>{{ leftPointsMainSkills }}</b>
-	</p>
-	<div class="creation-flex">
-		<div class="creation-skills">
-			<table>
-				<tbody>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.ART.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.ART.NAME' | translate }}"
-						help="{{ 'CREATION.ART.HELP' | translate }}"
-						type="art"
-						value="{{ mainSkills.art.value }}"
-						spe="{{ mainSkills.art.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{
-							'CREATION.ATHLETISME.SPECIALISTICS' | translate
-						}}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.ATHLETISME.NAME' | translate }}"
-						help="{{ 'CREATION.ATHLETISME.HELP' | translate }}"
-						type="athletisme"
-						value="{{ mainSkills.athletisme.value }}"
-						spe="{{ mainSkills.athletisme.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.COMBAT.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.COMBAT.NAME' | translate }}"
-						help="{{ 'CREATION.COMBAT.HELP' | translate }}"
-						type="combat"
-						value="{{ mainSkills.combat.value }}"
-						spe="{{ mainSkills.combat.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.FURTIVITE.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.FURTIVITE.NAME' | translate }}"
-						help="{{ 'CREATION.FURTIVITE.HELP' | translate }}"
-						type="furtivite"
-						value="{{ mainSkills.furtivite.value }}"
-						spe="{{ mainSkills.furtivite.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-				</tbody>
-			</table>
-		</div>
-		<div class="creation-skills">
-			<table>
-				<tbody>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.MEDECINE.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.MEDECINE.NAME' | translate }}"
-						help="{{ 'CREATION.MEDECINE.HELP' | translate }}"
-						type="medecine"
-						value="{{ mainSkills.medecine.value }}"
-						spe="{{ mainSkills.medecine.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{
-							'CREATION.PERCEPTION.SPECIALISTICS' | translate
-						}}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.PERCEPTION.NAME' | translate }}"
-						help="{{ 'CREATION.PERCEPTION.HELP' | translate }}"
-						type="perception"
-						value="{{ mainSkills.perception.value }}"
-						spe="{{ mainSkills.perception.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.SAVOIR.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.SAVOIR.NAME' | translate }}"
-						help="{{ 'CREATION.SAVOIR.HELP' | translate }}"
-						type="savoir"
-						value="{{ mainSkills.savoir.value }}"
-						spe="{{ mainSkills.savoir.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-					<creation-slider
-						hasSpecialistic="true"
-						specialistics="{{ 'CREATION.SOCIAL.SPECIALISTICS' | translate }}"
-						min="0"
-						max="10"
-						name="{{ 'CREATION.SOCIAL.NAME' | translate }}"
-						help="{{ 'CREATION.SOCIAL.HELP' | translate }}"
-						type="social"
-						value="{{ mainSkills.social.value }}"
-						spe="{{ mainSkills.social.spe }}"
-						(onOpenPopup)="openPopup($event)"
-						(onValueChange)="changeMainSkills($event)"
-						(onSpeChange)="changeSpeMainSkills($event)"
-					></creation-slider>
-				</tbody>
-			</table>
-		</div>
-	</div>
+  <h2>{{ "CREATION.MENU.TITLE03" | translate }}</h2>
+  <p innerHtml="{{ 'CREATION.SKILLS.TEXT01' | translate }}"></p>
+  <p class="creation-points" innerHtml="{{ 'CREATION.SKILLS.TEXT02' | translate }}"></p>
+  <p innerHtml="{{ 'CREATION.SKILLS.TEXT03' | translate }}"></p>
+  <p [ngClass]="{ warning: leftPointsSkills < 0 }" class="creation-points">
+    {{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
+    <b>{{ leftPointsMainSkills }}</b>
+  </p>
+  <div class="creation-flex">
+    <div class="creation-skills">
+      <table>
+        <tbody>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.ART.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.ART.NAME' | translate }}"
+            help="{{ 'CREATION.ART.HELP' | translate }}"
+            type="art"
+            value="{{ mainSkills.art.value }}"
+            spe="{{ mainSkills.art.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.ATHLETISME.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.ATHLETISME.NAME' | translate }}"
+            help="{{ 'CREATION.ATHLETISME.HELP' | translate }}"
+            type="athletisme"
+            value="{{ mainSkills.athletisme.value }}"
+            spe="{{ mainSkills.athletisme.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.COMBAT.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.COMBAT.NAME' | translate }}"
+            help="{{ 'CREATION.COMBAT.HELP' | translate }}"
+            type="combat"
+            value="{{ mainSkills.combat.value }}"
+            spe="{{ mainSkills.combat.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.FURTIVITE.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.FURTIVITE.NAME' | translate }}"
+            help="{{ 'CREATION.FURTIVITE.HELP' | translate }}"
+            type="furtivite"
+            value="{{ mainSkills.furtivite.value }}"
+            spe="{{ mainSkills.furtivite.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+        </tbody>
+      </table>
+    </div>
+    <div class="creation-skills">
+      <table>
+        <tbody>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.MEDECINE.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.MEDECINE.NAME' | translate }}"
+            help="{{ 'CREATION.MEDECINE.HELP' | translate }}"
+            type="medecine"
+            value="{{ mainSkills.medecine.value }}"
+            spe="{{ mainSkills.medecine.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.PERCEPTION.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.PERCEPTION.NAME' | translate }}"
+            help="{{ 'CREATION.PERCEPTION.HELP' | translate }}"
+            type="perception"
+            value="{{ mainSkills.perception.value }}"
+            spe="{{ mainSkills.perception.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.SAVOIR.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.SAVOIR.NAME' | translate }}"
+            help="{{ 'CREATION.SAVOIR.HELP' | translate }}"
+            type="savoir"
+            value="{{ mainSkills.savoir.value }}"
+            spe="{{ mainSkills.savoir.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+          <creation-slider
+            hasSpecialistic="true"
+            specialistics="{{ 'CREATION.SOCIAL.SPECIALISTICS' | translate }}"
+            min="0"
+            max="10"
+            name="{{ 'CREATION.SOCIAL.NAME' | translate }}"
+            help="{{ 'CREATION.SOCIAL.HELP' | translate }}"
+            type="social"
+            value="{{ mainSkills.social.value }}"
+            spe="{{ mainSkills.social.spe }}"
+            (onOpenPopup)="openPopup($event)"
+            (onValueChange)="changeMainSkills($event)"
+            (onSpeChange)="changeSpeMainSkills($event)"
+          ></creation-slider>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                           PART IV : CRYSTALS                                         ------------->
 <!--------------------------------------------------------------------------------------------------------------->
-<div class="creation-flex">
-	<div class="creation-container left">
-		<h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
-		<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
-		<table class="creation-crystal-table full-table">
-			<thead>
-				<tr>
-					<th>{{ "CREATION.INDICS.RANK" | translate }}</th>
-					<th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
-					<th>{{ "CREATION.INDICS.POWER" | translate }}</th>
-					<th>{{ "CREATION.INDICS.EV" | translate }}</th>
-					<th>{{ "CREATION.INDICS.DEMIEV" | translate }}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let c of listCrystals">
-					<td>{{ c.rank }}</td>
-					<td>{{ c.rarity }}</td>
-					<td>{{ c.power }}</td>
-					<td>{{ c.EV }}</td>
-					<td>{{ c.demiEV }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<table class="creation-crystal-mobile-table full-table">
-			<thead>
-				<tr>
-					<th>{{ "CREATION.INDICS.RANK" | translate }}</th>
-					<th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
-					<th>{{ "CREATION.INDICS.POWER" | translate }}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let c of listCrystals">
-					<td>{{ c.rank }}</td>
-					<td>{{ c.rarity }}</td>
-					<td>{{ c.power }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<table class="creation-crystal-mobile-table full-table">
-			<thead>
-				<tr>
-					<th>{{ "CREATION.INDICS.EV" | translate }}</th>
-					<th>{{ "CREATION.INDICS.DEMIEV" | translate }}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let c of listCrystals">
-					<td>{{ c.EV }}</td>
-					<td>{{ c.demiEV }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<button>
-			<a href="./assets/files/Annexe_Cristaux.pdf" download>{{
-				"ROLEPLAY.FILES.LISTPOWERS" | translate | uppercase
-			}}</a>
-		</button>
-		<p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
-		<table>
-			<thead>
-				<tr>
-					<th>{{ "CREATION.INDICS.CRYSTAL" | translate }}</th>
-					<th>{{ "CREATION.INDICS.TYPE" | translate }}</th>
-					<th>{{ "CREATION.INDICS.RANK" | translate }}</th>
-					<th>{{ "CREATION.INDICS.EV" | translate }}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<input
-							type="text"
-							value="{{ crystal01.name }}"
-							(change)="changeCrystalName(1, $event.target)"
-						/>
-					</td>
-					<td>
-						<div class="dropdown">
-							<select
-								class="dropdown-select"
-								value="{{ crystal01.type }}"
-								(change)="changeCrystalType(1, $event.target)"
-							>
-								<option value=""></option>
-								<option value="ELE">Elémentaire</option>
-								<option value="INV">Invocation</option>
-								<option value="MEN">Mental</option>
-								<option value="TRA">Transformation</option>
-								<option value="SPA">Spatio-temporel</option>
-								<option value="SPE">Spécial</option>
-							</select>
-						</div>
-					</td>
-					<td>
-						<div class="dropdown">
-							<select
-								class="dropdown-select"
-								value="{{ crystal01.rank }}"
-								(change)="changeCrystalRank(1, $event.target)"
-							>
-								<option value=""></option>
-								<option value="S" class="warning">S</option>
-								<option value="A">A</option>
-								<option value="B">B</option>
-							</select>
-						</div>
-					</td>
-					<td>{{ race === 6 ? crystal01.demiEV : crystal01.EV }}</td>
-				</tr>
-				<tr>
-					<td>
-						<input
-							value="{{ crystal02.name }}"
-							type="text"
-							(change)="changeCrystalName(2, $event.target)"
-						/>
-					</td>
-					<td>
-						<div class="dropdown">
-							<select
-								class="dropdown-select"
-								value="{{ crystal02.type }}"
-								(change)="changeCrystalType(2, $event.target)"
-							>
-								<option value=""></option>
-								<option value="ELE">Elémentaire</option>
-								<option value="INV">Invocation</option>
-								<option value="MEN">Mental</option>
-								<option value="TRA">Transformation</option>
-								<option value="SPA">Spatio-temporel</option>
-								<option value="SPE">Spécial</option>
-							</select>
-						</div>
-					</td>
-					<td>
-						<div class="dropdown">
-							<select
-								class="dropdown-select"
-								value="{{ crystal02.rank }}"
-								(change)="changeCrystalRank(2, $event.target)"
-							>
-								<option value=""></option>
-								<option value="S" class="warning">S</option>
-								<option value="A">A</option>
-								<option value="B">B</option>
-							</select>
-						</div>
-					</td>
-					<td>{{ race === 6 ? crystal02.demiEV : crystal02.EV }}</td>
-				</tr>
-				<tr>
-					<td>
-						<input
-							value="{{ crystal03.name }}"
-							type="text"
-							(change)="changeCrystalName(3, $event.target)"
-						/>
-					</td>
-					<td>
-						<div class="dropdown">
-							<select
-								class="dropdown-select"
-								value="{{ crystal03.type }}"
-								(change)="changeCrystalType(3, $event.target)"
-							>
-								<option value=""></option>
-								<option value="ELE">Elémentaire</option>
-								<option value="INV">Invocation</option>
-								<option value="MEN">Mental</option>
-								<option value="TRA">Transformation</option>
-								<option value="SPA">Spatio-temporel</option>
-								<option value="SPE">Spécial</option>
-							</select>
-						</div>
-					</td>
-					<td>
-						<div class="dropdown">
-							<select
-								class="dropdown-select"
-								value="{{ crystal03.rank }}"
-								(change)="changeCrystalRank(3, $event.target)"
-							>
-								<option value=""></option>
-								<option value="S" class="warning">S</option>
-								<option value="A">A</option>
-								<option value="B">B</option>
-							</select>
-						</div>
-					</td>
-					<td>{{ race === 6 ? crystal03.demiEV : crystal03.EV }}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<!--------------------------------------------------------------------------------------------------------------->
-	<!------------                           PART V : EQUIPMENT                                         ------------->
-	<!--------------------------------------------------------------------------------------------------------------->
-	<div class="creation-container right">
-		<h2>{{ "CREATION.MENU.TITLE05" | translate }}</h2>
-		<p innerHtml="{{ 'CREATION.EQUIPEMENT.TEXT' | translate }}"></p>
-		<div>
-			<span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
-			<div class="dropdown">
-				<select
-					class="dropdown-select"
-					value="{{ weapon01.id }}"
-					(change)="changeWeapon01($event.target)"
-				>
-					<option value="0"></option>
-					<option *ngFor="let w of listWeapons" value="{{ w.id }}">{{
-						w.name
-					}}</option>
-				</select>
-			</div>
-			<p
-				innerHtml="{{ 'CREATION.INDICS.ATTACKBONUS' | translate }} : {{	weapon01.attackBonus || '-'	}} / {{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{	weapon01.attackBonus || '-'	}}"
-			></p>
-		</div>
-		<div>
-			<span>Arme (optionnel) : </span>
-			<div class="dropdown">
-				<select
-					class="dropdown-select"
-					value="{{ weapon02.id }}"
-					(change)="changeWeapon02($event.target)"
-				>
-					<option value="0"></option>
-					<option *ngFor="let weapon of listWeapons" value="{{ weapon.id }}">{{
-						weapon.name
-					}}</option>
-				</select>
-			</div>
-			<p
-				innerHtml="{{ 'CREATION.INDICS.ATTACKBONUS' | translate }} : {{
-					weapon02.attackBonus || '-'
-				}} / {{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{
-					weapon02.attackBonus || '-'
-				}}"
-			></p>
-		</div>
+<div class="creation-container big">
+  <h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
+  <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
+  <table class="creation-crystal-table full-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+        <th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
+        <th>{{ "CREATION.INDICS.POWER" | translate }}</th>
+        <th>{{ "CREATION.INDICS.LEVELMAX" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of listCrystals">
+        <td>{{ c.rank }}</td>
+        <td>{{ c.rarity }}</td>
+        <td>{{ c.power }}</td>
+        <td>{{ c.levelmax }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="creation-crystal-mobile-table full-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+        <th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of listCrystals">
+        <td>{{ c.rank }}</td>
+        <td>{{ c.rarity }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="creation-crystal-mobile-table full-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.POWER" | translate }}</th>
+        <th>{{ "CREATION.INDICS.LEVELMAX" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of listCrystals">
+        <td>{{ c.power }}</td>
+        <td>{{ c.levelmax }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="./assets/files/Annexe_Cristaux.pdf" download>{{ "ROLEPLAY.FILES.LISTPOWERS" | translate }}</a>
+  <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
+  <p [ngClass]="{ warning: leftPointsCrystals < 0 }" class="creation-points">
+    {{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
+    <b>{{ leftPointsCrystals }}</b>
+  </p>
+  <table class="creation-crystal-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.CRYSTAL" | translate }}</th>
+        <th>{{ "CREATION.INDICS.TYPE" | translate }}</th>
+        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+        <th>{{ "CREATION.INDICS.LEVEL" | translate }}</th>
+        <th>{{ "CREATION.INDICS.TIME" | translate }}</th>
+        <th>{{ "CREATION.INDICS.TARGET" | translate }}</th>
+        <th>{{ "CREATION.INDICS.CONTRAINTS" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crystal of crystals; let index = index">
+        <td>
+          <input type="text" value="{{ crystal.name }}" (change)="changeCrystalName(index, $event.target)" />
+        </td>
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.type }}" (change)="changeCrystalType(index, $event.target)">
+              <option value=""></option>
+              <option value="ABJ">Abjuration</option>
+              <option value="CONV">Convocation</option>
+              <option value="DIV">Divination</option>
+              <option value="ENCH">Enchantement</option>
+              <option value="EVOC">Evocation</option>
+              <option value="ILL">Illusion</option>
+              <option value="TRANS">Transmutation</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.rank }}" (change)="changeCrystalRank(index, $event.target)">
+              <option value=""></option>
+              <option value="S" class="warning">S</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <input [ngClass]="{ warning: crystal.level > crystal.levelmax }" type="number" min="1" value="{{ crystal.level }}" (change)="changeCrystalLevel(index, $event.target)" />
+        </td>
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.target }}" (change)="changeCrystalTarget(index, $event.target)">
+              <option value=""></option>
+              <option value="0">Instantannée</option>
+              <option value="1">Une scène</option>
+              <option value="2">Une journée</option>
+              <option value="3">Illimitée</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.time }}" (change)="changeCrystalTime(index, $event.target)">
+              <option value=""></option>
+              <option value="0">Personnelle</option>
+              <option value="1">Toucher</option>
+              <option value="2">A vue</option>
+              <option value="3">Infinie</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <input type="text" value="{{ crystal.contraints }}" (change)="changeCrystalContraints(index, $event.target)" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-		<div>
-			<span>{{ "CREATION.INDICS.ARMOR" | translate }} : </span>
-			<div class="dropdown">
-				<select
-					class="dropdown-select"
-					value="{{ armor.id }}"
-					(change)="changeArmor($event.target)"
-				>
-					<option *ngFor="let a of listArmors" value="{{ a.id }}">{{
-						a.name
-					}}</option>
-				</select>
-			</div>
-			<p
-				innerHtml="{{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{
-					armor.defenceBonus
-				}}"
-			></p>
-		</div>
-	</div>
+  <table class="creation-crystal-mobile-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.CRYSTAL" | translate }}</th>
+        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crystal of crystals; let index = index">
+        <td>
+          <input type="text" value="{{ crystal.name }}" (change)="changeCrystalName(index, $event.target)" />
+        </td>
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.rank }}" (change)="changeCrystalRank(index, $event.target)">
+              <option value=""></option>
+              <option value="S" class="warning">S</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="creation-crystal-mobile-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.TYPE" | translate }}</th>
+        <th>{{ "CREATION.INDICS.LEVEL" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crystal of crystals; let index = index">
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.type }}" (change)="changeCrystalType(index, $event.target)">
+              <option value=""></option>
+              <option value="ABJ">Abjuration</option>
+              <option value="CONV">Convocation</option>
+              <option value="DIV">Divination</option>
+              <option value="ENCH">Enchantement</option>
+              <option value="EVOC">Evocation</option>
+              <option value="ILL">Illusion</option>
+              <option value="TRANS">Transmutation</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <input [ngClass]="{ warning: crystal.level > crystal.levelmax }" type="number" min="1" value="{{ crystal.level }}" (change)="changeCrystalLevel(index, $event.target)" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="creation-crystal-mobile-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.TIME" | translate }}</th>
+        <th>{{ "CREATION.INDICS.TARGET" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crystal of crystals; let index = index">
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.target }}" (change)="changeCrystalTarget(index, $event.target)">
+              <option value=""></option>
+              <option value="0">Instantannée</option>
+              <option value="1">Une scène</option>
+              <option value="2">Une journée</option>
+              <option value="3">Illimitée</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <div class="dropdown">
+            <select class="dropdown-select" value="{{ crystal.time }}" (change)="changeCrystalTime(index, $event.target)">
+              <option value=""></option>
+              <option value="0">Personnelle</option>
+              <option value="1">Toucher</option>
+              <option value="2">A vue</option>
+              <option value="3">Infinie</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="creation-crystal-mobile-table">
+    <thead>
+      <tr>
+        <th>{{ "CREATION.INDICS.CONTRAINTS" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crystal of crystals; let index = index">
+        <td>
+          <input type="text" value="{{ crystal.contraints }}" (change)="changeCrystalContraints(index, $event.target)" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
-<!------------                             PART VI : IDENTITY                                       ------------->
+<!------------                           PART V : EQUIPMENT                                         ------------->
 <!--------------------------------------------------------------------------------------------------------------->
-<div class="creation-container big">
-	<h2>{{ "CREATION.MENU.TITLE06" | translate }}</h2>
-	<div class="creation-flex">
-		<div class="creation-identity left">
-			<p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
-			<span>Nom du personnage</span>
-			<input
-				type="text"
-				value="{{ name }}"
-				(change)="changeName($event.target)"
-			/>
-			<span>Description / histoire du personnage (max : 440 caract.)</span>
-			<textarea
-				value="{{ description }}"
-				maxlength="440"
-				(change)="changeDescription($event.target)"
-			></textarea>
-		</div>
-		<div class="creation-identity right">
-			<span>Avatar du personnage</span>
-			<label for="avatar" class="creation-avatar">
-				<span *ngIf="!avatar">Importer une image<br />(ratio 1:1 | JPG, PNG | max 2Mo)</span>
-				<img *ngIf="avatar" alt="" [src]="avatar" />
-			</label>
-			<input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg" (change)="changeAvatar($event.target)" />
-		</div>
-	</div>
+<div class="creation-flex">
+  <div class="creation-container left">
+    <h2>{{ "CREATION.MENU.TITLE05" | translate }}</h2>
+    <p innerHtml="{{ 'CREATION.EQUIPEMENT.TEXT' | translate }}"></p>
+    <div class="creation-element">
+      <span>{{ "CREATION.INDICS.ARMOR" | translate }} : </span>
+      <div class="dropdown">
+        <select class="dropdown-select" value="{{ armor.id }}" (change)="changeArmor($event.target)">
+          <option *ngFor="let a of listArmors" value="{{ a.id }}">{{ a.name }}</option>
+        </select>
+      </div>
+      <span innerHtml="{{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{ armor.defenceBonus }}"></span>
+    </div>
+    <div class="creation-element">
+      <span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
+      <div class="dropdown">
+        <select class="dropdown-select" value="{{ weapon01.id }}" (change)="changeWeapon01($event.target)">
+          <option value="0"></option>
+          <option *ngFor="let w of listWeapons" value="{{ w.id }}">{{ w.name }}</option>
+        </select>
+      </div>
+      <span
+        innerHtml="{{ 'CREATION.INDICS.ATTACKBONUS' | translate }} : {{ weapon01.attackBonus || '-' }} / {{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{ weapon01.attackBonus || '-' }}"
+      ></span>
+    </div>
+    <div class="creation-element">
+      <span>Arme (optionnel) : </span>
+      <div class="dropdown">
+        <select class="dropdown-select" value="{{ weapon02.id }}" (change)="changeWeapon02($event.target)">
+          <option value="0"></option>
+          <option *ngFor="let weapon of listWeapons" value="{{ weapon.id }}">{{ weapon.name }}</option>
+        </select>
+      </div>
+      <span
+        innerHtml="{{ 'CREATION.INDICS.ATTACKBONUS' | translate }} : {{ weapon02.attackBonus || '-' }} / {{ 'CREATION.INDICS.DEFENCEBONUS' | translate }} : {{ weapon02.attackBonus || '-' }}"
+      ></span>
+    </div>
+  </div>
+  <!--------------------------------------------------------------------------------------------------------------->
+  <!------------                             PART VI : IDENTITY                                       ------------->
+  <!--------------------------------------------------------------------------------------------------------------->
+  <div class="creation-container right">
+    <h2>{{ "CREATION.MENU.TITLE06" | translate }}</h2>
+    <div class="creation-flex">
+      <div class="creation-identity left">
+        <p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
+        <div class="creation-element">
+          <span>Nom du personnage</span>
+          <input type="text" value="{{ name }}" (change)="changeName($event.target)" />
+        </div>
+        <div class="creation-element">
+          <span>Description du personnage (max : 440 caract.)</span>
+          <textarea value="{{ description }}" maxlength="440" (change)="changeDescription($event.target)"></textarea>
+        </div>
+      </div>
+      <div class="creation-identity right">
+        <div class="creation-element">
+          <span>Avatar du personnage</span>
+          <label for="avatar" class="creation-avatar">
+            <span *ngIf="!avatar">Importer une image<br />(ratio 1:1 | JPG, PNG | max 2Mo)</span>
+            <img *ngIf="avatar" alt="" [src]="avatar" />
+          </label>
+          <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg" (change)="changeAvatar($event.target)" />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                              CONCLUSION                                              ------------->
 <!--------------------------------------------------------------------------------------------------------------->
 <div class="creation-container big final">
-	<h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
-	<p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
-	<a id="creation-save-pdf" (click)="downloadPDF()">Télécharger la fiche de personnage</a>
-	<a id="creation-save-parameters" (click)="downloadJSON()">Sauvegarder les paramètres du personnage</a>
+  <h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
+  <p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
+  <a (click)="downloadPDF()">Télécharger la fiche de personnage</a>
+  <a (click)="downloadJSON()">Sauvegarder les paramètres du personnage</a>
 </div>

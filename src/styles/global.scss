@@ -95,7 +95,7 @@ img {
 }
 
 .warning {
-  color: $warning-color;
+  color: $warning-color !important;
 }
 
 ::-webkit-scrollbar {
@@ -141,7 +141,25 @@ input[type="file"] {
   display: none;
 }
 
-input[type="text"] {
+input[type="number"] {
+  width: 50px;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+  -o-appearance: none;
+  margin: 0;
+}
+
+input[type="text"],
+input[type="number"] {
   overflow: hidden;
   height: 30px;
   padding: 0 10px;
@@ -159,8 +177,8 @@ input[type="text"] {
 }
 
 textarea {
-  width: 400px;
-  height: 50px;
+  height: 150px;
+  width: 100%;
   padding: 10px;
   border: 1px solid;
   border-radius: 5px;

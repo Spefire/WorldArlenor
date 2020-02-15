@@ -198,14 +198,14 @@
     "CRYSTALS": {
       "SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les anges et démons lors de la création du monde, des fragments de leurs pouvoirs.",
       "SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux.",
-      "SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant une certaine quantité de leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
+      "SECTION03": "Les détenteurs de cristaux les utilisent en leur transférant leur énergie vitale, ce qui donne ensuite un effet, un pouvoir. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
       "PROPERTIES": {
         "SUBTITLE": "Le cristal arlénien",
         "TITLE": "Propriétés connues par tous",
         "01": "Ils mesurent entre 1 cm et 2 m.",
         "02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
         "03": "Un cristal est très solide, résistant.",
-        "04": "Un cristal est caractérisé par un rang S, A, B, O en fonction de la puissance, et de l'énergie vitale demandée.",
+        "04": "Un cristal est caractérisé par un rang S, A, B, O en fonction de la puissance et de sa rareté.",
         "05": "Les cristaux de rang S sont uniques au monde, il y en a très peu et leur puissance est légendaire.",
         "06": "L'énergie vitale doit être transmise par contact physique entre le cristal et l'utilisateur.",
         "07": "Plus l'utilisateur est en contact avec son cristal, plus un lien, encore inconnu, se tisse entre eux.",
@@ -232,7 +232,7 @@
         "NAME": "Elfe",
         "TITLE": "Les Elfes",
         "TEXT01": "Les Elfes sont les premiers humains à avoir muté dans le Monde d'Arlénor. Au fur et à mesure des siècles, ils ont vu leurs oreilles pousser, leurs poils disparaître... mais aussi leur affiliation aux cristaux s'agrandir, ce qui a fait d'eux une race dite 'supérieure' aux Humains.",
-        "TEXT02": "Les Elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction, leur esprit ne supportant plus l'absence d'Energie Vitale... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
+        "TEXT02": "Les Elfes se sont habitués à ce statut, si bien que lorsque d'autres races sont apparues, une foule de discriminations envers ces dernières, ont commencé. De plus, leur affinité aux cristaux est devenue au fil des siècles un problème d'addiction... Ils sont eux aussi concentrés dans les plaines de Terfil, et vivent dans les hauts quartiers de la cité de Faradel.",
         "LOCATION": "L'Empire Faradélien, Le Régime Jirakanien",
         "AVANTAGES": "- Personnage très respecté globalement par les humains et les autres elfes",
         "INCONVENIENTS": "- Niveau « gravement atteint » de blessure : 1 case<br>- Personnage craint ou hait globalement par les nains et les mutants<br>- Dû à son addiction, la magie de l'elfe se lie intensément aux premiers cristaux que l'elfe tente de maîtriser. Si bien qu'il ne pourra se concentrer que sur trois cristaux dans toute sa vie."
@@ -313,17 +313,26 @@
       "LEFTPOINTS": "Points restants",
       "AVANTAGES": "Avantages",
       "INCONVENIENTS": "Inconvénients",
-      "INITIATIVE": "Initiative",
-      "PV": "Points de Vie",
-      "PE": "Points d'Energie Vitale",
+      "INITIATIVE": "Bonus d'Initiative",
+      "HEALTH": {
+        "LEVEL": "Niveau de blessures",
+        "CASES": "Cases de blessures",
+        "01": "Indemne",
+        "02": "Touché (-1D6 aux jets)",
+        "03": "Gravement atteint (-2D6 aux jets)",
+        "04": "Au seuil de la mort (-3D6 aux jets)"
+      },
       "SPE": "Spécialité (option)",
       "CRYSTAL": "Nom du cristal",
-      "TYPE": "Type",
+      "TYPE": "Famille",
       "RANK": "Rang",
+      "LEVELMAX": "Niveau maximum",
+      "LEVEL": "Niveau",
       "RARITY": "Rareté",
+      "TARGET": "Portée",
+      "TIME": "Durée",
+      "CONTRAINTS": "Contraintes",
       "POWER": "Puissance",
-      "EV": "Coût en EV",
-      "DEMIEV": "Coût en EV (pour les arléniens)",
       "ARMOR": "Armure",
       "WEAPON": "Arme (optionnel)",
       "ATTACKBONUS": "Bonus d'Attaque",
@@ -359,7 +368,7 @@
     "SKILLS": {
       "TEXT01": "Survivre en milieu hostile. Mentir. Etudier un cristal. Autant de savoir-faire qu’un personnage peut, ou non, développer au cours de sa vie. Cette section s’intéresse à ces compétences que les personnages apprennent ou non à utiliser et qui les différencient les uns des autres.<br>Le test classique qui détermine si un personnage réussit ou non une action se réalise de la façon suivante. Le MJ détermine quelle caractéristique de base du personnage est concernée (Vigueur, Habileté, Intellect, Charisme, Pouvoir), ainsi que la compétence mise en jeu si nécessaire. Il annonce cette combinaison au joueur, qui lance autant de dés à 6 faces qu’il a de points dans la caractéristique concernée, additionne les résultats puis rajoute son score de compétence. Il compare ensuite le total à la difficulté fixée par le MJ. Si le résultat de son test est supérieur ou égal à cette difficulté, il l’emporte.",
       "TEXT02": "Pour résumer, un jet de compétence est réussi si :<br><b>Caractéristique x 1D6 + Compétence + 4 de Bonus (si Spécialité) - 4 de Malus (si 0 dans la Compétence) >= Difficulté (donnée par le MJ)</b>",
-      "TEXT03": "Vous commencez avec 25 points à répartir en plus des avantages de votre race. Notez que vous pouvez décider de sacrifier deux points de création pour acheter une Spécialité dans l’une de vos compétences. Il s’agit d’un bonus de +4 qui ne s’applique qu’à une utilisation précise de la compétence. Par exemple, un personnage possédant la compétence Combat à +4 et une Spécialité (Épée) aura un bonus de +8 chaque fois qu’il combattra à l’épée, mais seulement de +4 pour toute autre forme de combat.<br>Par contre, avoir une compétence à 0, donne un malus -4 lors de son utilisation !"
+      "TEXT03": "Vous commencez avec 15 points à répartir. Notez que vous pouvez décider de sacrifier deux points de création pour acheter une Spécialité dans l’une de vos compétences. Il s’agit d’un bonus de +4 qui ne s’applique qu’à une utilisation précise de la compétence. Par exemple, un personnage possédant la compétence Combat à +4 et une Spécialité (Épée) aura un bonus de +8 chaque fois qu’il combattra à l’épée, mais seulement de +4 pour toute autre forme de combat.<br>Par contre, avoir une compétence à 0, donne un malus -4 lors de son utilisation !"
     },
     "ART": {
       "NAME": "Art / Artisanat",
@@ -402,11 +411,11 @@
       "SPECIALISTICS": "Discours, Interrogatoire, Marchandage, Mensonge, Séduction"
     },
     "CRYSTALS": {
-      "TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne (principalement des rangs O selon la convention SABO). En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs très souvent en échange d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat. Néanmoins, ce n’est pas sans coût ni sans échec possible.",
-      "TEXT02": "Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination). Par contre c'est le rang que vous lui donnerez qui définira leur rareté leur puissance, et le coût en Energie Vitale.<br>Dans la logique, au début un personnage ne devrait avoir <b>au maximum, un cristal de rang A et un de rang B</b> et aucun de rang S ! Les personnages ne peuvent porter que 3 cristaux de rangs supérieurs ou égaux à B, car porter plus de cristaux sur soi entrainerait des perturbations physiques et psychiques..."
+      "TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne (principalement des rangs O selon la convention SABO). En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs en échange d'un peu d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat.",
+      "TEXT02": "Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination) et le créer via 10 points de création. Les personnages ne peuvent se lier qu'à 3 cristaux de rangs supérieurs ou égaux à B à la fois, car plus, entrainerait sur soi des perturbations physiques et psychiques..."
     },
     "EQUIPEMENT": {
-      "TEXT": "La magie du monde d'Arlénor est puissante et quasi primordiale pour combattre. Cependant, pour certains personnages, il est aussi vital d'avoir un équipement adéquat en cas de panne d'Energie Vitale. Dans le Monde d'Arlénor, il existe toute sorte d'armes, cependant les armes non magiques ne sont pas très bien vues par les gens de la société adeptes des cristaux (notamment la société Faradélienne).<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement."
+      "TEXT": "La magie du monde d'Arlénor est puissante et quasi primordiale pour combattre. Cependant, pour certains personnages, il est aussi vital d'avoir un équipement adéquat en combat. Dans le Monde d'Arlénor, il existe toute sorte d'armes, cependant les armes non magiques ne sont pas très bien vues par les gens de la société adeptes des cristaux (notamment la société Faradélienne).<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement."
     },
     "IDENTITY": {
       "TEXT": "Pour l'instant, votre personnage est une série de chiffres sur un formulaire... pour lui insuffler un peu de vie, il faut lui remplir son 'état civil'. Le choix d'un nom est toujours délicat, mais une fois baptisé, il vous restera à lui donner un peu de relief avec une description (physique, ou historique personnel) et finir par lui donner une apparence."
