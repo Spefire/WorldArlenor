@@ -88,7 +88,7 @@ export class CreationComponent {
 
     this.nbPointsCaracteristics = 13;
     this.nbPointsMainSkills = 15;
-    this.nbPointsCrystals = 8;
+    this.nbPointsCrystals = 5;
 
     this.health01 = 2;
     this.health02 = 2;
@@ -441,6 +441,7 @@ export class CreationComponent {
           let value = parameters.mainSkills[key];
           if (value) {
             this.mainSkills[key] = value;
+            if (!parameters.version) this.mainSkills[key].spe = "";
           }
         }
         if (parameters.crystal01) this.crystals[0].name = parameters.crystal01.name;
@@ -475,10 +476,11 @@ export class CreationComponent {
       weapon02: this.weapon02,
       name: this.name,
       description: this.description,
-      avatar: this.avatar
+      avatar: this.avatar,
+      version: "2.0"
     };
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parameters));
-    var dlAnchorElem = document.getElementById("creation-save-parameters");
+    var dlAnchorElem = document.getElementById("creation-save-json");
     dlAnchorElem.setAttribute("href", dataStr);
     dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.name + ".json");
   }
@@ -517,88 +519,178 @@ export class CreationComponent {
     });
 
     Promise.all([promise]).then(() => {
+      // --- AVATAR ET DESCRIPTION
       if (this.avatar) doc.addImage(this.avatar, "JPEG", 9.5, 10.5, 95.5, 82.25);
       doc.setFontSize(8);
       doc.text(176, 54, "" + this.description, {
         align: "justify",
-        maxWidth: 182
+        maxWidth: 190
       });
       doc.setFontSize(10);
 
-      doc.text(122, 132.9, "" + this.name);
-
+      // --- IDENTITE
+      doc.text(112, 132.9, "" + this.name);
       LIST_RACES.forEach(element => {
         if (this.race === element.id) {
-          doc.text(122, 154.1, element.name);
+          doc.text(112, 154.1, element.name);
         }
       });
 
+      // --- CARACTERISTIQUES
       var i = 217.2;
       for (var key in this.caracteristics) {
-        doc.text(132.5, i, "" + this.caracteristics[key], { align: "center" });
+        doc.text(123, i, "" + this.caracteristics[key], { align: "center" });
         i += 21.2;
       }
 
-      i = 365.6;
-      doc.text(132.5, i, "" + this.initiative, { align: "center" });
+      // --- NIVEAU DE BLESSURES
+      i = 353;
+      doc.setFillColor(255, 255, 255);
+      if (this.health01 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.health01 < 3) doc.rect(168, i, 20, 20, "F");
+      i += 21.2;
+      if (this.health02 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.health02 < 3) doc.rect(168, i, 20, 20, "F");
+      i += 21.2;
+      if (this.health03 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.health03 < 3) doc.rect(168, i, 20, 20, "F");
+      i += 21.2;
+      if (this.health04 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.health04 < 3) doc.rect(168, i, 20, 20, "F");
 
-      i = 513.2;
-      if (this.armor.name) {
-        let res = this.armor.name.indexOf(" (") > 0 ? this.armor.name.substring(0, this.armor.name.indexOf(" (")) : this.armor.name;
-        doc.text(29.3, i, "" + res);
-      }
-      if (this.armor.attackBonus) doc.text(132.5, i, "" + this.armor.attackBonus, { align: "center" });
-      if (this.armor.defenceBonus) doc.text(199, i, "" + this.armor.defenceBonus, { align: "center" });
-      i += 10.6;
-      if (this.weapon01.name) {
-        let res = this.weapon01.name.indexOf(" (") > 0 ? this.weapon01.name.substring(0, this.weapon01.name.indexOf(" (")) : this.weapon01.name;
-        doc.text(29.3, i, "" + res);
-      }
-      if (this.weapon01.attackBonus) doc.text(132.5, i, "" + this.weapon01.attackBonus, { align: "center" });
-      if (this.weapon01.defenceBonus) doc.text(199, i, "" + this.weapon01.defenceBonus, { align: "center" });
-      i += 10.6;
-      if (this.weapon02.name) {
-        let res = this.weapon02.name.indexOf(" (") > 0 ? this.weapon02.name.substring(0, this.weapon02.name.indexOf(" (")) : this.weapon02.name;
-        doc.text(29.3, i, "" + res);
-      }
-      if (this.weapon02.attackBonus) doc.text(132.5, i, "" + this.weapon02.attackBonus, { align: "center" });
-      if (this.weapon02.defenceBonus) doc.text(199, i, "" + this.weapon02.defenceBonus, { align: "center" });
-
-      i = 587.6;
-      if (this.crystals[0].name && this.crystals[0].type && this.crystals[0].rank) {
-        doc.text(29.3, i, "" + this.crystals[0].name);
-        doc.text(132.5, i, "" + this.crystals[0].type, { align: "center" });
-        doc.text(165.7, i, "" + this.crystals[0].rank, { align: "center" });
-        doc.text(199, i, "" + this.crystals[0].level, { align: "center" });
-      }
-      i += 10.6;
-      if (this.crystals[1].name && this.crystals[1].type && this.crystals[1].rank) {
-        doc.text(29.3, i, "" + this.crystals[1].name);
-        doc.text(132.5, i, "" + this.crystals[1].type, { align: "center" });
-        doc.text(165.7, i, "" + this.crystals[1].rank, { align: "center" });
-        doc.text(199, i, "" + this.crystals[1].level, { align: "center" });
-      }
-      i += 10.6;
-      if (this.crystals[2].name && this.crystals[2].type && this.crystals[2].rank) {
-        doc.text(29.3, i, "" + this.crystals[2].name);
-        doc.text(132.5, i, "" + this.crystals[2].type, { align: "center" });
-        doc.text(165.7, i, "" + this.crystals[2].rank, { align: "center" });
-        doc.text(199, i, "" + this.crystals[2].level, { align: "center" });
-      }
-
+      // --- COMPTENCES PRINCIPALES
       i = 154.0;
       for (var key in this.mainSkills) {
-        doc.text(326.5, i, "" + this.mainSkills[key].value, {
+        doc.text(313.5, i, "" + this.mainSkills[key].value, {
           align: "center"
         });
         doc.setFontSize(8);
         let res = this.mainSkills[key].spe.length > 18 ? this.mainSkills[key].spe.slice(0, 17) + "." : this.mainSkills[key].spe;
-        doc.text(391.2, i, "" + res, { align: "center" });
+        doc.text(388.5, i, "" + res, { align: "center" });
         doc.setFontSize(10);
         i += 21.2;
       }
 
+      // --- VALEURS DE COMBAT
+      i = 376.2;
+      doc.text(313.5, i, "" + this.initiative, { align: "center" });
+
+      i = 407.6;
+      if (this.armor.name) {
+        let res = this.armor.name.indexOf(" (") > 0 ? this.armor.name.substring(0, this.armor.name.indexOf(" (")) : this.armor.name;
+        doc.setFontSize(8);
+        doc.text(234, i, "" + res);
+        doc.setFontSize(10);
+      }
+      if (this.armor.attackBonus) doc.text(326, i, "" + this.armor.attackBonus, { align: "center" });
+      if (this.armor.defenceBonus) doc.text(371.5, i, "" + this.armor.defenceBonus, { align: "center" });
+      i += 10.6;
+      if (this.weapon01.name) {
+        let res = this.weapon01.name.indexOf(" (") > 0 ? this.weapon01.name.substring(0, this.weapon01.name.indexOf(" (")) : this.weapon01.name;
+        doc.setFontSize(8);
+        doc.text(234, i, "" + res);
+        doc.setFontSize(10);
+      }
+      if (this.weapon01.attackBonus) doc.text(326, i, "" + this.weapon01.attackBonus, { align: "center" });
+      if (this.weapon01.defenceBonus) doc.text(371.5, i, "" + this.weapon01.defenceBonus, { align: "center" });
+      i += 10.6;
+      if (this.weapon02.name) {
+        let res = this.weapon02.name.indexOf(" (") > 0 ? this.weapon02.name.substring(0, this.weapon02.name.indexOf(" (")) : this.weapon02.name;
+        doc.setFontSize(8);
+        doc.text(234, i, "" + res);
+        doc.setFontSize(10);
+      }
+      if (this.weapon02.attackBonus) doc.text(326, i, "" + this.weapon02.attackBonus, { align: "center" });
+      if (this.weapon02.defenceBonus) doc.text(371.5, i, "" + this.weapon02.defenceBonus, { align: "center" });
+
+      // --- CRISTAUX LIES
+      i = 483;
+      if (this.crystals[0].name && this.crystals[0].type && this.crystals[0].rank) {
+        doc.setFontSize(8);
+        doc.text(29, i, "" + this.crystals[0].name);
+        doc.text(145, i, "" + this.convertTypeCrystal(this.crystals[0]) + " (" + this.crystals[0].rank + ")", { align: "center" });
+        doc.setFontSize(10);
+        doc.text(201, i, "" + this.crystals[0].level, { align: "center" });
+        doc.setFontSize(8);
+        doc.text(247, i, "" + this.convertTimeCrystal(this.crystals[0]), { align: "center" });
+        doc.text(292, i, "" + this.convertTargetCrystal(this.crystals[0]), { align: "center" });
+        doc.text(334, i, "" + (this.crystals[0].contraints ? this.crystals[0].contraints : ""), { align: "justify", maxWidth: 85 });
+        doc.setFontSize(10);
+      }
+      i += 21.2;
+      if (this.crystals[1].name && this.crystals[1].type && this.crystals[1].rank) {
+        doc.setFontSize(8);
+        doc.text(29, i, "" + this.crystals[1].name);
+        doc.text(145, i, "" + this.convertTypeCrystal(this.crystals[1]) + " (" + this.crystals[1].rank + ")", { align: "center" });
+        doc.setFontSize(10);
+        doc.text(201, i, "" + this.crystals[1].level, { align: "center" });
+        doc.setFontSize(8);
+        doc.text(247, i, "" + this.convertTimeCrystal(this.crystals[1]), { align: "center" });
+        doc.text(292, i, "" + this.convertTargetCrystal(this.crystals[1]), { align: "center" });
+        doc.text(334, i, "" + (this.crystals[1].contraints ? this.crystals[1].contraints : ""), { align: "justify", maxWidth: 85 });
+        doc.setFontSize(10);
+      }
+      i += 21.2;
+      if (this.crystals[2].name && this.crystals[2].type && this.crystals[2].rank) {
+        doc.setFontSize(8);
+        doc.text(29, i, "" + this.crystals[2].name);
+        doc.text(145, i, "" + this.convertTypeCrystal(this.crystals[2]) + " (" + this.crystals[2].rank + ")", { align: "center" });
+        doc.setFontSize(10);
+        doc.text(201, i, "" + this.crystals[2].level, { align: "center" });
+        doc.setFontSize(8);
+        doc.text(247, i, "" + this.convertTimeCrystal(this.crystals[2]), { align: "center" });
+        doc.text(292, i, "" + this.convertTargetCrystal(this.crystals[2]), { align: "center" });
+        doc.text(334, i, "" + (this.crystals[2].contraints ? this.crystals[2].contraints : ""), { align: "justify", maxWidth: 85 });
+        doc.setFontSize(10);
+      }
       doc.save("Arlenor_" + this.name + ".pdf");
     });
+  }
+
+  convertTypeCrystal(crystal) {
+    var element = LIST_TYPE.find(type => type.code === crystal.type);
+    return element.title;
+  }
+
+  convertTimeCrystal(crystal) {
+    var time;
+    switch (crystal.time) {
+      case 0:
+        time = "Instant.";
+        break;
+      case 1:
+        time = "Scène";
+        break;
+      case 2:
+        time = "Journée";
+        break;
+      case 3:
+        time = "Illimitée";
+        break;
+      default:
+        time = "";
+    }
+    return time;
+  }
+
+  convertTargetCrystal(crystal) {
+    var target;
+    switch (crystal.target) {
+      case 0:
+        target = "Perso.";
+        break;
+      case 1:
+        target = "Toucher";
+        break;
+      case 2:
+        target = "A vue";
+        break;
+      case 3:
+        target = "Infinie";
+        break;
+      default:
+        target = "";
+    }
+    return target;
   }
 }

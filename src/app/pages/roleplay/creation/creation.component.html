@@ -639,6 +639,6 @@
 <div class="creation-container big final">
   <h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
   <p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
-  <a (click)="downloadPDF()">Télécharger la fiche de personnage</a>
-  <a (click)="downloadJSON()">Sauvegarder les paramètres du personnage</a>
+  <a id="creation-save-pdf" (click)="downloadPDF()">Télécharger la fiche de personnage</a>
+  <a id="creation-save-json" (click)="downloadJSON()">Sauvegarder les paramètres du personnage</a>
 </div>
