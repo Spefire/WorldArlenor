@@ -88,7 +88,7 @@ export class CreationComponent {
 
     this.nbPointsCaracteristics = 13;
     this.nbPointsMainSkills = 15;
-    this.nbPointsCrystals = 10;
+    this.nbPointsCrystals = 8;
 
     this.health01 = 2;
     this.health02 = 2;
@@ -96,9 +96,9 @@ export class CreationComponent {
     this.health04 = 1;
 
     this.crystals = [
-      { level: 0, levelmax: 0 },
-      { level: 0, levelmax: 0 },
-      { level: 0, levelmax: 0 }
+      { level: 0, levelmax: 0, time: 0, target: 0 },
+      { level: 0, levelmax: 0, time: 0, target: 0 },
+      { level: 0, levelmax: 0, time: 0, target: 0 }
     ];
 
     this.armor = LIST_ARMORS[0];
@@ -162,7 +162,14 @@ export class CreationComponent {
     }
     this.leftPointsMainSkills = this.nbPointsMainSkills - totalMainSkills;
 
-    this.leftPointsCrystals = this.nbPointsCrystals;
+    var totalCrystals = 0;
+    for (var key in this.crystals) {
+      totalCrystals += this.crystals[key].level;
+      if (this.crystals[key].time) totalCrystals += this.crystals[key].time;
+      if (this.crystals[key].target) totalCrystals += this.crystals[key].target;
+      if (this.crystals[key].listContraints) totalCrystals -= this.crystals[key].listContraints.length;
+    }
+    this.leftPointsCrystals = this.nbPointsCrystals - totalCrystals;
 
     this.initiative = this.caracteristics.habilete + this.caracteristics.intellect;
     if (this.caracteristics.vigueur === 1) {
@@ -217,11 +224,13 @@ export class CreationComponent {
       if (element.rank === event.value) {
         change = true;
         this.crystals[number].rank = element.rank;
+        if (!this.crystals[number].level) this.crystals[number].level = 1;
         this.crystals[number].levelmax = element.levelmax;
       }
     });
     if (!change) {
       this.crystals[number].rank = undefined;
+      this.crystals[number].level = 0;
       this.crystals[number].levelmax = undefined;
     }
     this.refreshPoints();
@@ -243,7 +252,11 @@ export class CreationComponent {
   }
 
   changeCrystalContraints(number, event) {
-    this.crystals[number].contraints = event.value;
+    var contraints = event.value;
+    this.crystals[number].contraints = contraints;
+    contraints = contraints.split(";");
+    contraints = contraints.filter(contraint => contraint);
+    this.crystals[number].listContraints = contraints;
     this.refreshPoints();
   }
 
@@ -343,6 +356,39 @@ export class CreationComponent {
 
     if (!this.crystals[0].name && !this.crystals[1].name && !this.crystals[2].name) {
       infos += "Votre personnage n'a pas de cristal. (Est-ce voulu ?)<br>";
+    }
+
+    if (
+      this.crystals[0].name &&
+      (!this.crystals[0].type ||
+        !this.crystals[0].rank ||
+        !this.crystals[0].level ||
+        (!this.crystals[0].time && this.crystals[0].time !== 0) ||
+        (!this.crystals[0].target && this.crystals[0].target !== 0))
+    ) {
+      infos += "Votre premier cristal est incomplet.<br>";
+    }
+
+    if (
+      this.crystals[1].name &&
+      (!this.crystals[1].type ||
+        !this.crystals[1].rank ||
+        !this.crystals[1].level ||
+        (!this.crystals[1].time && this.crystals[1].time !== 0) ||
+        (!this.crystals[1].target && this.crystals[1].target !== 0))
+    ) {
+      infos += "Votre deuxième cristal est incomplet.<br>";
+    }
+
+    if (
+      this.crystals[2].name &&
+      (!this.crystals[2].type ||
+        !this.crystals[2].rank ||
+        !this.crystals[2].level ||
+        (!this.crystals[2].time && this.crystals[2].time !== 0) ||
+        (!this.crystals[2].target && this.crystals[2].target !== 0))
+    ) {
+      infos += "Votre troisième cristal est incomplet.<br>";
     }
 
     if ((this.crystals[0].name && this.crystals[0].rank === "S") || (this.crystals[1].name && this.crystals[1].rank === "S") || (this.crystals[2].name && this.crystals[2].rank === "S")) {
