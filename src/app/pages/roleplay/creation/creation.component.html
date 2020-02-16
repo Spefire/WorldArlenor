@@ -314,54 +314,72 @@
 <div class="creation-container big">
   <h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
   <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
-  <table class="creation-crystal-table full-table">
+  <table class="full-table">
     <thead>
       <tr>
-        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
-        <th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
-        <th>{{ "CREATION.INDICS.POWER" | translate }}</th>
-        <th>{{ "CREATION.INDICS.LEVELMAX" | translate }}</th>
+        <th colspan="2">{{ "CREATION.INDICS.TYPEFULL" | translate }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let c of listCrystals">
-        <td>{{ c.rank }}</td>
-        <td>{{ c.rarity }}</td>
-        <td>{{ c.power }}</td>
-        <td>{{ c.levelmax }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="creation-crystal-mobile-table full-table">
-    <thead>
-      <tr>
-        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
-        <th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let c of listCrystals">
-        <td>{{ c.rank }}</td>
-        <td>{{ c.rarity }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="creation-crystal-mobile-table full-table">
-    <thead>
-      <tr>
-        <th>{{ "CREATION.INDICS.POWER" | translate }}</th>
-        <th>{{ "CREATION.INDICS.LEVELMAX" | translate }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let c of listCrystals">
-        <td>{{ c.power }}</td>
-        <td>{{ c.levelmax }}</td>
+      <tr *ngFor="let type of listTypes">
+        <td>{{ type.title }}</td>
+        <td>{{ type.description }}</td>
       </tr>
     </tbody>
   </table>
   <a href="./assets/files/Annexe_Cristaux.pdf" download>{{ "ROLEPLAY.FILES.LISTPOWERS" | translate }}</a>
   <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
+  <div class="creation-crystal-tables">
+    <table class="full-table">
+      <thead>
+        <tr>
+          <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
+          <th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
+          <th>{{ "CREATION.INDICS.POWER" | translate }}</th>
+          <th>{{ "CREATION.INDICS.LEVELMAX" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of listCrystals">
+          <td>{{ c.rank }}</td>
+          <td>{{ c.rarity }}</td>
+          <td>{{ c.power }}</td>
+          <td>{{ c.levelmax }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="full-table">
+      <thead>
+        <tr>
+          <th>{{ "CREATION.INDICS.COST" | translate }}</th>
+          <th>{{ "CREATION.INDICS.TIME" | translate }}</th>
+          <th>{{ "CREATION.INDICS.TARGET" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0 point</td>
+          <td>Instantannée</td>
+          <td>Personnelle</td>
+        </tr>
+        <tr>
+          <td>1 point</td>
+          <td>Une scène</td>
+          <td>Toucher</td>
+        </tr>
+        <tr>
+          <td>2 points</td>
+          <td>Une journée</td>
+          <td>A vue</td>
+        </tr>
+        <tr>
+          <td>3 points</td>
+          <td>Illimitée</td>
+          <td>Infinie</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <p [ngClass]="{ warning: leftPointsCrystals < 0 }" class="creation-points">
     {{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
     <b>{{ leftPointsCrystals }}</b>
@@ -387,13 +405,7 @@
           <div class="dropdown">
             <select class="dropdown-select" value="{{ crystal.type }}" (change)="changeCrystalType(index, $event.target)">
               <option value=""></option>
-              <option value="ABJ">Abjuration</option>
-              <option value="CONV">Convocation</option>
-              <option value="DIV">Divination</option>
-              <option value="ENCH">Enchantement</option>
-              <option value="EVOC">Evocation</option>
-              <option value="ILL">Illusion</option>
-              <option value="TRANS">Transmutation</option>
+              <option *ngFor="let type of listTypes" value="{{ type.code }}">{{ type.title }}</option>
             </select>
           </div>
         </td>
@@ -438,7 +450,6 @@
       </tr>
     </tbody>
   </table>
-
   <table class="creation-crystal-mobile-table">
     <thead>
       <tr>
@@ -541,6 +552,7 @@
       </tr>
     </tbody>
   </table>
+  <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT03' | translate }}"></p>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                           PART V : EQUIPMENT                                         ------------->

@@ -141,3 +141,54 @@ export const LIST_CRYSTALS = [
     levelmax: 1
   }
 ];
+
+export const LIST_TYPE = [
+  {
+    id: 1,
+    code: "ABJ",
+    title: "Abjuration",
+    description: "Annulation et contre-sorts"
+  },
+  {
+    id: 2,
+    code: "CONV",
+    title: "Convocation",
+    description: "Appel à une entité"
+  },
+  {
+    id: 3,
+    code: "DIV",
+    title: "Divination",
+    description: "Révélation des choses cachées / secrètes"
+  },
+  {
+    id: 4,
+    code: "ENCH",
+    title: "Enchantement",
+    description: "Sort de renforcement / malédiction d'une entité"
+  },
+  {
+    id: 5,
+    code: "EVOC",
+    title: "Evocation",
+    description: "Créer / Détruire à partir de rien"
+  },
+  {
+    id: 6,
+    code: "ENV",
+    title: "Envoûtement",
+    description: "Contrôle d'une entité"
+  },
+  {
+    id: 7,
+    code: "ILL",
+    title: "Illusion",
+    description: "Manipulation des 5 sens par l'environnement"
+  },
+  {
+    id: 8,
+    code: "TRANS",
+    title: "Transmutation",
+    description: "Transformation physique complète ou partielle d'une entité"
+  }
+];

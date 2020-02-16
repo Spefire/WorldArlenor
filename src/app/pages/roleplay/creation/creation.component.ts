@@ -4,7 +4,7 @@ import { TranslateService } from "@ngx-translate/core";
 import { RoutesService } from "../../../services/routes.service";
 import jsPDF from "jspdf";
 
-import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS } from "./../../../models/creation.model";
+import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS, LIST_TYPE } from "./../../../models/creation.model";
 
 @Component({
   selector: "app-creation",
@@ -48,6 +48,7 @@ export class CreationComponent {
 
   public listRaces: any = LIST_RACES;
   public listCrystals: any = LIST_CRYSTALS;
+  public listTypes: any = LIST_TYPE;
   public listArmors: any = LIST_ARMORS;
   public listWeapons: any = LIST_WEAPONS;
 
