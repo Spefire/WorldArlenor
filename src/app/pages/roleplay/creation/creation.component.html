@@ -430,7 +430,7 @@
         </td>
         <td>
           <div class="dropdown">
-            <select class="dropdown-select" value="{{ crystal.target }}" (change)="changeCrystalTarget(index, $event.target)">
+            <select class="dropdown-select" value="{{ crystal.time }}" (change)="changeCrystalTime(index, $event.target)">
               <option value="0">Instantanée</option>
               <option value="1">Une scène</option>
               <option value="2">Une journée</option>
@@ -440,7 +440,7 @@
         </td>
         <td>
           <div class="dropdown">
-            <select class="dropdown-select" value="{{ crystal.time }}" (change)="changeCrystalTime(index, $event.target)">
+            <select class="dropdown-select" value="{{ crystal.target }}" (change)="changeCrystalTarget(index, $event.target)">
               <option value="0">Personnelle</option>
               <option value="1">Toucher</option>
               <option value="2">A vue</option>
