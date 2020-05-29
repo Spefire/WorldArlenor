@@ -314,6 +314,7 @@
 <div class="creation-container big">
   <h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
   <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
+  <p class="creation-points" innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
   <table class="full-table">
     <thead>
       <tr>
@@ -328,7 +329,6 @@
     </tbody>
   </table>
   <a href="./assets/files/Annexe_Cristaux.pdf" download>{{ "ROLEPLAY.FILES.LISTPOWERS" | translate }}</a>
-  <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
   <div class="creation-crystal-tables">
     <table class="full-table">
       <thead>
@@ -380,6 +380,7 @@
       </tbody>
     </table>
   </div>
+  <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT03' | translate }}"></p>
   <p [ngClass]="{ warning: leftPointsCrystals < 0 }" class="creation-points">
     {{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
     <b>{{ leftPointsCrystals }}</b>
@@ -560,7 +561,6 @@
       </tr>
     </tbody>
   </table>
-  <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT03' | translate }}"></p>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                           PART V : EQUIPMENT                                         ------------->

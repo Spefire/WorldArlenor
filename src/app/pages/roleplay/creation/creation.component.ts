@@ -10,7 +10,7 @@ import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS, LIST_TYPE } from 
   selector: "app-creation",
   templateUrl: "./creation.component.html",
   styleUrls: ["./creation.component.scss"],
-  providers: [RoutesService]
+  providers: [RoutesService],
 })
 export class CreationComponent {
   public race: number;
@@ -73,7 +73,7 @@ export class CreationComponent {
       habilete: 1,
       intellect: 1,
       charisme: 1,
-      pouvoir: 1
+      pouvoir: 1,
     };
     this.mainSkills = {
       art: { value: 0, spe: "" },
@@ -83,7 +83,7 @@ export class CreationComponent {
       medecine: { value: 0, spe: "" },
       perception: { value: 0, spe: "" },
       savoir: { value: 0, spe: "" },
-      social: { value: 0, spe: "" }
+      social: { value: 0, spe: "" },
     };
 
     this.nbPointsCaracteristics = 13;
@@ -98,7 +98,7 @@ export class CreationComponent {
     this.crystals = [
       { level: 0, levelmax: 0, time: 0, target: 0 },
       { level: 0, levelmax: 0, time: 0, target: 0 },
-      { level: 0, levelmax: 0, time: 0, target: 0 }
+      { level: 0, levelmax: 0, time: 0, target: 0 },
     ];
 
     this.armor = LIST_ARMORS[0];
@@ -220,7 +220,7 @@ export class CreationComponent {
 
   changeCrystalRank(number, event) {
     let change = false;
-    LIST_CRYSTALS.forEach(element => {
+    LIST_CRYSTALS.forEach((element) => {
       if (element.rank === event.value) {
         change = true;
         this.crystals[number].rank = element.rank;
@@ -255,7 +255,7 @@ export class CreationComponent {
     var contraints = event.value;
     this.crystals[number].contraints = contraints;
     contraints = contraints.split(";");
-    contraints = contraints.filter(contraint => contraint);
+    contraints = contraints.filter((contraint) => contraint);
     this.crystals[number].listContraints = contraints;
     this.refreshPoints();
   }
@@ -266,7 +266,7 @@ export class CreationComponent {
 
   changeArmor(event) {
     this.armor = LIST_ARMORS[0];
-    LIST_ARMORS.forEach(element => {
+    LIST_ARMORS.forEach((element) => {
       if (element.id === parseInt(event.value)) this.armor = element;
     });
     this.checkWarnings();
@@ -274,7 +274,7 @@ export class CreationComponent {
 
   changeWeapon01(event) {
     this.weapon01 = {};
-    LIST_WEAPONS.forEach(element => {
+    LIST_WEAPONS.forEach((element) => {
       if (element.id === parseInt(event.value)) this.weapon01 = element;
     });
     this.checkWarnings();
@@ -282,7 +282,7 @@ export class CreationComponent {
 
   changeWeapon02(event) {
     this.weapon02 = {};
-    LIST_WEAPONS.forEach(element => {
+    LIST_WEAPONS.forEach((element) => {
       if (element.id === parseInt(event.value)) this.weapon02 = element;
     });
     this.checkWarnings();
@@ -309,14 +309,14 @@ export class CreationComponent {
       alert("Warning (Max size : 2 Mo)");
     } else {
       var image64;
-      const promiseGetImage64 = new Promise(function(resolve, reject) {
+      const promiseGetImage64 = new Promise(function (resolve, reject) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = function() {
+        reader.onload = function () {
           image64 = reader.result;
           return resolve(true);
         };
-        reader.onerror = function(error) {
+        reader.onerror = function (error) {
           console.log(error);
         };
       });
@@ -423,14 +423,14 @@ export class CreationComponent {
       alert("Warning (Max size : 2 Mo)");
     } else {
       var parameters;
-      const promiseGetParameters = new Promise(function(resolve, reject) {
+      const promiseGetParameters = new Promise(function (resolve, reject) {
         var reader = new FileReader();
         reader.readAsText(file);
-        reader.onload = function() {
+        reader.onload = function () {
           parameters = JSON.parse(reader.result.toString());
           return resolve(true);
         };
-        reader.onerror = function(error) {
+        reader.onerror = function (error) {
           console.log(error);
         };
       });
@@ -441,7 +441,7 @@ export class CreationComponent {
           let value = parameters.mainSkills[key];
           if (value) {
             this.mainSkills[key] = value;
-            if (!parameters.version) this.mainSkills[key].spe = "";
+            if (!parameters.version || parameters.version !== "2.1") this.mainSkills[key].spe = "";
           }
         }
         if (parameters.crystal01) this.crystals[0].name = parameters.crystal01.name;
@@ -452,9 +452,9 @@ export class CreationComponent {
             this.crystals[index] = crystal;
           });
         }
-        this.armor = LIST_ARMORS.find(armor => armor.id === parameters.armor.id);
-        this.weapon01 = LIST_WEAPONS.find(weapon => weapon.id === parameters.weapon01.id);
-        this.weapon02 = LIST_WEAPONS.find(weapon => weapon.id === parameters.weapon02.id);
+        this.armor = LIST_ARMORS.find((armor) => armor.id === parameters.armor.id);
+        this.weapon01 = LIST_WEAPONS.find((weapon) => weapon.id === parameters.weapon01.id);
+        this.weapon02 = LIST_WEAPONS.find((weapon) => weapon.id === parameters.weapon02.id);
         this.name = parameters.name;
         this.description = parameters.description;
         this.avatar = parameters.avatar;
@@ -477,7 +477,7 @@ export class CreationComponent {
       name: this.name,
       description: this.description,
       avatar: this.avatar,
-      version: "2.0"
+      version: "2.1",
     };
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parameters));
     var dlAnchorElem = document.getElementById("creation-save-json");
@@ -498,9 +498,9 @@ export class CreationComponent {
 
     function toDataURL(url, callback) {
       var xhr = new XMLHttpRequest();
-      xhr.onload = function() {
+      xhr.onload = function () {
         var reader = new FileReader();
-        reader.onloadend = function() {
+        reader.onloadend = function () {
           callback(reader.result);
         };
         reader.readAsDataURL(xhr.response);
@@ -510,8 +510,8 @@ export class CreationComponent {
       xhr.send();
     }
 
-    const promise = new Promise(function(resolve, reject) {
-      toDataURL("./assets/files/Fiche_PersoVide.jpg", function(dataUrl) {
+    const promise = new Promise(function (resolve, reject) {
+      toDataURL("./assets/files/Fiche_PersoVide.jpg", function (dataUrl) {
         doc.addImage(dataUrl, "JPEG", 0, 0, width, height);
         doc.setFontSize(10);
         return resolve(true);
@@ -524,13 +524,13 @@ export class CreationComponent {
       doc.setFontSize(8);
       doc.text(176, 54, "" + this.description, {
         align: "justify",
-        maxWidth: 190
+        maxWidth: 190,
       });
       doc.setFontSize(10);
 
       // --- IDENTITE
       doc.text(112, 132.9, "" + this.name);
-      LIST_RACES.forEach(element => {
+      LIST_RACES.forEach((element) => {
         if (this.race === element.id) {
           doc.text(112, 154.1, element.name);
         }
@@ -562,7 +562,7 @@ export class CreationComponent {
       i = 154.0;
       for (var key in this.mainSkills) {
         doc.text(313.5, i, "" + this.mainSkills[key].value, {
-          align: "center"
+          align: "center",
         });
         doc.setFontSize(8);
         let res = this.mainSkills[key].spe.length > 18 ? this.mainSkills[key].spe.slice(0, 17) + "." : this.mainSkills[key].spe;
@@ -648,7 +648,7 @@ export class CreationComponent {
   }
 
   convertTypeCrystal(crystal) {
-    var element = LIST_TYPE.find(type => type.code === crystal.type);
+    var element = LIST_TYPE.find((type) => type.code === crystal.type);
     return element.title;
   }
 
