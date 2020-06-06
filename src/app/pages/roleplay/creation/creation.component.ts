@@ -455,6 +455,9 @@ export class CreationComponent {
         this.armor = LIST_ARMORS.find((armor) => armor.id === parameters.armor.id);
         this.weapon01 = LIST_WEAPONS.find((weapon) => weapon.id === parameters.weapon01.id);
         this.weapon02 = LIST_WEAPONS.find((weapon) => weapon.id === parameters.weapon02.id);
+        if (!this.armor) this.armor = {};
+        if (!this.weapon01) this.weapon01 = {};
+        if (!this.weapon02) this.weapon02 = {};
         this.name = parameters.name;
         this.description = parameters.description;
         this.avatar = parameters.avatar;
