@@ -4,7 +4,7 @@ import { TranslateService } from "@ngx-translate/core";
 import { RoutesService } from "../../../services/routes.service";
 import jsPDF from "jspdf";
 
-import { LIST_RACES, LIST_CRYSTALS, LIST_ARMORS, LIST_WEAPONS, LIST_TYPE } from "./../../../models/creation.model";
+import { LIST_RACES, LIST_ARMORS, LIST_WEAPONS, LIST_TYPE } from "./../../../models/creation.model";
 
 @Component({
   selector: "app-creation",
@@ -47,7 +47,6 @@ export class CreationComponent {
   public listWarnings: string;
 
   public listRaces: any = LIST_RACES;
-  public listCrystals: any = LIST_CRYSTALS;
   public listTypes: any = LIST_TYPE;
   public listArmors: any = LIST_ARMORS;
   public listWeapons: any = LIST_WEAPONS;
@@ -96,9 +95,9 @@ export class CreationComponent {
     this.health04 = 1;
 
     this.crystals = [
-      { level: 0, levelmax: 0, time: 0, target: 0 },
-      { level: 0, levelmax: 0, time: 0, target: 0 },
-      { level: 0, levelmax: 0, time: 0, target: 0 },
+      { level: 0, time: 0, target: 0 },
+      { level: 0, time: 0, target: 0 },
+      { level: 0, time: 0, target: 0 },
     ];
 
     this.armor = LIST_ARMORS[0];
@@ -167,7 +166,6 @@ export class CreationComponent {
       totalCrystals += this.crystals[key].level;
       if (this.crystals[key].time) totalCrystals += this.crystals[key].time;
       if (this.crystals[key].target) totalCrystals += this.crystals[key].target;
-      if (this.crystals[key].listContraints) totalCrystals -= this.crystals[key].listContraints.length;
     }
     this.leftPointsCrystals = this.nbPointsCrystals - totalCrystals;
 
@@ -218,24 +216,6 @@ export class CreationComponent {
     this.refreshPoints();
   }
 
-  changeCrystalRank(number, event) {
-    let change = false;
-    LIST_CRYSTALS.forEach((element) => {
-      if (element.rank === event.value) {
-        change = true;
-        this.crystals[number].rank = element.rank;
-        if (!this.crystals[number].level) this.crystals[number].level = 1;
-        this.crystals[number].levelmax = element.levelmax;
-      }
-    });
-    if (!change) {
-      this.crystals[number].rank = undefined;
-      this.crystals[number].level = 0;
-      this.crystals[number].levelmax = undefined;
-    }
-    this.refreshPoints();
-  }
-
   changeCrystalLevel(number, event) {
     this.crystals[number].level = parseInt(event.value);
     this.refreshPoints();
@@ -248,15 +228,6 @@ export class CreationComponent {
 
   changeCrystalTime(number, event) {
     this.crystals[number].time = parseInt(event.value);
-    this.refreshPoints();
-  }
-
-  changeCrystalContraints(number, event) {
-    var contraints = event.value;
-    this.crystals[number].contraints = contraints;
-    contraints = contraints.split(";");
-    contraints = contraints.filter((contraint) => contraint);
-    this.crystals[number].listContraints = contraints;
     this.refreshPoints();
   }
 
@@ -361,7 +332,6 @@ export class CreationComponent {
     if (
       this.crystals[0].name &&
       (!this.crystals[0].type ||
-        !this.crystals[0].rank ||
         !this.crystals[0].level ||
         (!this.crystals[0].time && this.crystals[0].time !== 0) ||
         (!this.crystals[0].target && this.crystals[0].target !== 0))
@@ -372,7 +342,6 @@ export class CreationComponent {
     if (
       this.crystals[1].name &&
       (!this.crystals[1].type ||
-        !this.crystals[1].rank ||
         !this.crystals[1].level ||
         (!this.crystals[1].time && this.crystals[1].time !== 0) ||
         (!this.crystals[1].target && this.crystals[1].target !== 0))
@@ -383,16 +352,11 @@ export class CreationComponent {
     if (
       this.crystals[2].name &&
       (!this.crystals[2].type ||
-        !this.crystals[2].rank ||
         !this.crystals[2].level ||
         (!this.crystals[2].time && this.crystals[2].time !== 0) ||
         (!this.crystals[2].target && this.crystals[2].target !== 0))
     ) {
       infos += "Votre troisième cristal est incomplet.<br>";
-    }
-
-    if ((this.crystals[0].name && this.crystals[0].rank === "S") || (this.crystals[1].name && this.crystals[1].rank === "S") || (this.crystals[2].name && this.crystals[2].rank === "S")) {
-      infos += "Votre personnage a un cristal de rang S (votre personnage l'a obtenu via l'eXPérience ?).<br>";
     }
 
     if (!this.weapon01.name && !this.weapon02.name) {
@@ -525,24 +489,24 @@ export class CreationComponent {
       // --- AVATAR ET DESCRIPTION
       if (this.avatar) doc.addImage(this.avatar, "JPEG", 9.5, 10.5, 95.5, 82.25);
       doc.setFontSize(8);
-      doc.text(176, 54, "" + this.description, {
+      doc.text("" + this.description, 176, 54, {
         align: "justify",
         maxWidth: 190,
       });
       doc.setFontSize(10);
 
       // --- IDENTITE
-      doc.text(112, 132.9, "" + this.name);
+      doc.text("" + this.name, 112, 132.9);
       LIST_RACES.forEach((element) => {
         if (this.race === element.id) {
-          doc.text(112, 154.1, element.name);
+          doc.text(element.name, 112, 154.1);
         }
       });
 
       // --- CARACTERISTIQUES
       var i = 217.2;
       for (var key in this.caracteristics) {
-        doc.text(123, i, "" + this.caracteristics[key], { align: "center" });
+        doc.text("" + this.caracteristics[key], 123, i, { align: "center" });
         i += 21.2;
       }
 
@@ -564,86 +528,81 @@ export class CreationComponent {
       // --- COMPTENCES PRINCIPALES
       i = 154.0;
       for (var key in this.mainSkills) {
-        doc.text(313.5, i, "" + this.mainSkills[key].value, {
-          align: "center",
-        });
+        doc.text("" + this.mainSkills[key].value, 313.5, i, { align: "center" });
         doc.setFontSize(8);
         let res = this.mainSkills[key].spe.length > 18 ? this.mainSkills[key].spe.slice(0, 17) + "." : this.mainSkills[key].spe;
-        doc.text(388.5, i, "" + res, { align: "center" });
+        doc.text("" + res, 388.5, i, { align: "center" });
         doc.setFontSize(10);
         i += 21.2;
       }
 
       // --- VALEURS DE COMBAT
       i = 376.2;
-      doc.text(313.5, i, "" + this.initiative, { align: "center" });
+      doc.text("" + this.initiative, 313.5, i, { align: "center" });
 
       i = 407.6;
       if (this.armor.name) {
         let res = this.armor.name.indexOf(" (") > 0 ? this.armor.name.substring(0, this.armor.name.indexOf(" (")) : this.armor.name;
         doc.setFontSize(8);
-        doc.text(234, i, "" + res);
+        doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
-      if (this.armor.attackBonus) doc.text(326, i, "" + this.armor.attackBonus, { align: "center" });
-      if (this.armor.defenceBonus) doc.text(371.5, i, "" + this.armor.defenceBonus, { align: "center" });
+      if (this.armor.attackBonus) doc.text("" + this.armor.attackBonus, 326, i, { align: "center" });
+      if (this.armor.defenceBonus) doc.text("" + this.armor.defenceBonus, 371.5, i, { align: "center" });
       i += 10.6;
       if (this.weapon01.name) {
         let res = this.weapon01.name.indexOf(" (") > 0 ? this.weapon01.name.substring(0, this.weapon01.name.indexOf(" (")) : this.weapon01.name;
         doc.setFontSize(8);
-        doc.text(234, i, "" + res);
+        doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
-      if (this.weapon01.attackBonus) doc.text(326, i, "" + this.weapon01.attackBonus, { align: "center" });
-      if (this.weapon01.defenceBonus) doc.text(371.5, i, "" + this.weapon01.defenceBonus, { align: "center" });
+      if (this.weapon01.attackBonus) doc.text("" + this.weapon01.attackBonus, 326, i, { align: "center" });
+      if (this.weapon01.defenceBonus) doc.text("" + this.weapon01.defenceBonus, 371.5, i, { align: "center" });
       i += 10.6;
       if (this.weapon02.name) {
         let res = this.weapon02.name.indexOf(" (") > 0 ? this.weapon02.name.substring(0, this.weapon02.name.indexOf(" (")) : this.weapon02.name;
         doc.setFontSize(8);
-        doc.text(234, i, "" + res);
+        doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
-      if (this.weapon02.attackBonus) doc.text(326, i, "" + this.weapon02.attackBonus, { align: "center" });
-      if (this.weapon02.defenceBonus) doc.text(371.5, i, "" + this.weapon02.defenceBonus, { align: "center" });
+      if (this.weapon02.attackBonus) doc.text("" + this.weapon02.attackBonus, 326, i, { align: "center" });
+      if (this.weapon02.defenceBonus) doc.text("" + this.weapon02.defenceBonus, 371.5, i, { align: "center" });
 
       // --- CRISTAUX LIES
       i = 483;
-      if (this.crystals[0].name && this.crystals[0].type && this.crystals[0].rank) {
+      if (this.crystals[0].name && this.crystals[0].type) {
         doc.setFontSize(8);
-        doc.text(29, i, "" + this.crystals[0].name);
-        doc.text(145, i, "" + this.convertTypeCrystal(this.crystals[0]) + " (" + this.crystals[0].rank + ")", { align: "center" });
+        doc.text("" + this.crystals[0].name, 29, i);
+        doc.text("" + this.convertTypeCrystal(this.crystals[0]), 145, i, { align: "center" });
         doc.setFontSize(10);
-        doc.text(201, i, "" + this.crystals[0].level, { align: "center" });
+        doc.text("" + this.crystals[0].level, 201, i, { align: "center" });
         doc.setFontSize(8);
-        doc.text(247, i, "" + this.convertTimeCrystal(this.crystals[0]), { align: "center" });
-        doc.text(292, i, "" + this.convertTargetCrystal(this.crystals[0]), { align: "center" });
-        doc.text(334, i, "" + (this.crystals[0].contraints ? this.crystals[0].contraints : ""), { align: "justify", maxWidth: 85 });
-        doc.setFontSize(10);
-      }
-      i += 21.2;
-      if (this.crystals[1].name && this.crystals[1].type && this.crystals[1].rank) {
-        doc.setFontSize(8);
-        doc.text(29, i, "" + this.crystals[1].name);
-        doc.text(145, i, "" + this.convertTypeCrystal(this.crystals[1]) + " (" + this.crystals[1].rank + ")", { align: "center" });
-        doc.setFontSize(10);
-        doc.text(201, i, "" + this.crystals[1].level, { align: "center" });
-        doc.setFontSize(8);
-        doc.text(247, i, "" + this.convertTimeCrystal(this.crystals[1]), { align: "center" });
-        doc.text(292, i, "" + this.convertTargetCrystal(this.crystals[1]), { align: "center" });
-        doc.text(334, i, "" + (this.crystals[1].contraints ? this.crystals[1].contraints : ""), { align: "justify", maxWidth: 85 });
+        doc.text("" + this.convertTimeCrystal(this.crystals[0]), 247, i, { align: "center" });
+        doc.text("" + this.convertTargetCrystal(this.crystals[0]), 292, i, { align: "center" });
         doc.setFontSize(10);
       }
       i += 21.2;
-      if (this.crystals[2].name && this.crystals[2].type && this.crystals[2].rank) {
+      if (this.crystals[1].name && this.crystals[1].type) {
         doc.setFontSize(8);
-        doc.text(29, i, "" + this.crystals[2].name);
-        doc.text(145, i, "" + this.convertTypeCrystal(this.crystals[2]) + " (" + this.crystals[2].rank + ")", { align: "center" });
+        doc.text("" + this.crystals[1].name, 29, i);
+        doc.text("" + this.convertTypeCrystal(this.crystals[1]), 145, i, { align: "center" });
         doc.setFontSize(10);
-        doc.text(201, i, "" + this.crystals[2].level, { align: "center" });
+        doc.text("" + this.crystals[1].level, 201, i, { align: "center" });
         doc.setFontSize(8);
-        doc.text(247, i, "" + this.convertTimeCrystal(this.crystals[2]), { align: "center" });
-        doc.text(292, i, "" + this.convertTargetCrystal(this.crystals[2]), { align: "center" });
-        doc.text(334, i, "" + (this.crystals[2].contraints ? this.crystals[2].contraints : ""), { align: "justify", maxWidth: 85 });
+        doc.text("" + this.convertTimeCrystal(this.crystals[1]), 247, i, { align: "center" });
+        doc.text("" + this.convertTargetCrystal(this.crystals[1]), 292, i, { align: "center" });
+        doc.setFontSize(10);
+      }
+      i += 21.2;
+      if (this.crystals[2].name && this.crystals[2].type) {
+        doc.setFontSize(8);
+        doc.text("" + this.crystals[2].name, 29, i);
+        doc.text("" + this.convertTypeCrystal(this.crystals[2]), 145, i, { align: "center" });
+        doc.setFontSize(10);
+        doc.text("" + this.crystals[2].level, 201, i, { align: "center" });
+        doc.setFontSize(8);
+        doc.text("" + this.convertTimeCrystal(this.crystals[2]), 247, i, { align: "center" });
+        doc.text("" + this.convertTargetCrystal(this.crystals[2]), 292, i, { align: "center" });
         doc.setFontSize(10);
       }
       doc.save("Arlenor_" + this.name + ".pdf");

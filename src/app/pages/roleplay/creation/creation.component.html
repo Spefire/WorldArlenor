@@ -333,24 +333,6 @@
     <table class="full-table">
       <thead>
         <tr>
-          <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
-          <th>{{ "CREATION.INDICS.RARITY" | translate }}</th>
-          <th>{{ "CREATION.INDICS.POWER" | translate }}</th>
-          <th>{{ "CREATION.INDICS.LEVELMAX" | translate }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let c of listCrystals">
-          <td>{{ c.rank }}</td>
-          <td>{{ c.rarity }}</td>
-          <td>{{ c.power }}</td>
-          <td>{{ c.levelmax }}</td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="full-table">
-      <thead>
-        <tr>
           <th>{{ "CREATION.INDICS.COST" | translate }}</th>
           <th>{{ "CREATION.INDICS.TIME" | translate }}</th>
           <th>{{ "CREATION.INDICS.TARGET" | translate }}</th>
@@ -390,11 +372,9 @@
       <tr>
         <th>{{ "CREATION.INDICS.CRYSTAL" | translate }}</th>
         <th>{{ "CREATION.INDICS.TYPE" | translate }}</th>
-        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
         <th>{{ "CREATION.INDICS.LEVEL" | translate }}</th>
         <th>{{ "CREATION.INDICS.TIME" | translate }}</th>
         <th>{{ "CREATION.INDICS.TARGET" | translate }}</th>
-        <th>{{ "CREATION.INDICS.CONTRAINTS" | translate }}</th>
       </tr>
     </thead>
     <tbody>
@@ -411,18 +391,7 @@
           </div>
         </td>
         <td>
-          <div class="dropdown">
-            <select class="dropdown-select" value="{{ crystal.rank }}" (change)="changeCrystalRank(index, $event.target)">
-              <option value=""></option>
-              <option value="S" class="warning">S</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-            </select>
-          </div>
-        </td>
-        <td>
           <input
-            [ngClass]="{ warning: crystal.levelmax ? crystal.level > crystal.levelmax : false }"
             type="number"
             min="1"
             value="{{ crystal.level }}"
@@ -449,9 +418,6 @@
             </select>
           </div>
         </td>
-        <td>
-          <input type="text" value="{{ crystal.contraints }}" (change)="changeCrystalContraints(index, $event.target)" />
-        </td>
       </tr>
     </tbody>
   </table>
@@ -459,23 +425,12 @@
     <thead>
       <tr>
         <th>{{ "CREATION.INDICS.CRYSTAL" | translate }}</th>
-        <th>{{ "CREATION.INDICS.RANK" | translate }}</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let crystal of crystals; let index = index">
         <td>
           <input type="text" value="{{ crystal.name }}" (change)="changeCrystalName(index, $event.target)" />
-        </td>
-        <td>
-          <div class="dropdown">
-            <select class="dropdown-select" value="{{ crystal.rank }}" (change)="changeCrystalRank(index, $event.target)">
-              <option value=""></option>
-              <option value="S" class="warning">S</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-            </select>
-          </div>
         </td>
       </tr>
     </tbody>
@@ -505,7 +460,6 @@
         </td>
         <td>
           <input
-            [ngClass]="{ warning: crystal.levelmax ? crystal.level > crystal.levelmax : false }"
             type="number"
             min="1"
             value="{{ crystal.level }}"
@@ -543,20 +497,6 @@
               <option value="3">Infinie</option>
             </select>
           </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="creation-crystal-mobile-table">
-    <thead>
-      <tr>
-        <th>{{ "CREATION.INDICS.CONTRAINTS" | translate }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let crystal of crystals; let index = index">
-        <td>
-          <input type="text" value="{{ crystal.contraints }}" (change)="changeCrystalContraints(index, $event.target)" />
         </td>
       </tr>
     </tbody>

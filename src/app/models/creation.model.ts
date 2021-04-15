@@ -111,37 +111,6 @@ export const LIST_WEAPONS = [
   }
 ];
 
-export const LIST_CRYSTALS = [
-  {
-    id: 1,
-    rank: "S",
-    rarity: "Unique",
-    power: "Extrême",
-    levelmax: 10
-  },
-  {
-    id: 2,
-    rank: "A",
-    rarity: "Rare",
-    power: "Forte",
-    levelmax: 6
-  },
-  {
-    id: 3,
-    rank: "B",
-    rarity: "Commune",
-    power: "Faible",
-    levelmax: 2
-  },
-  {
-    id: 4,
-    rank: "O",
-    rarity: "Très commune",
-    power: "Nulle",
-    levelmax: 1
-  }
-];
-
 export const LIST_TYPE = [
   {
     id: 1,
