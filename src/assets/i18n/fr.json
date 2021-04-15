@@ -69,7 +69,7 @@
       }
     },
     "RELIGION": {
-      "SECTION01": "Selon la légende connue par tous, la Divinité de l'Existance et du Destin, Arlénor, a façonné le monde en y instaurant un équilibre entre le Bien et le Mal. Pour se faire, Arlénor enfanta 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
+      "SECTION01": "Selon la légende connue par tous, la Divinité de l'Existence et du Destin, Arlénor, a façonné le monde en y instaurant un équilibre entre le Bien et le Mal. Pour se faire, Arlénor enfanta 10 anges et 10 démons. Les anges forment la Sainte Cabale et les démons, la Cabale Inversée.",
       "SECTION02": "Ces entités de l'équilibre ont aidé Arlénor lors de la Création du Monde, et sont devenu un symbole dans leur domaine respectif... On dit qu'à la fin de leur travail, ils retournèrent tous auprès d'Arlénor, au cœur de son monde : un endroit où seules les âmes pures peuvent entrer à leur mort. Les âmes qui sont jugées encore impures, subissent la réincarnation.",
       "SECTION03": "Aujourd'hui, des temples d'Arlénor existent un peu partout. Les peuples vénèrent dans chaque temple : Arlénor et l'un de ses enfants. La religion se base sur le maintien d'un équilibre entre le Bien et le Mal, et appuie sur le fait qu'il faut autant vénérer les anges que les démons.",
       "LIGHTKABAL": "La Sainte Cabale",
@@ -196,25 +196,23 @@
       }
     },
     "CRYSTALS": {
-      "SECTION01": "La magie du Monde d'Arlénor provient des cristaux laissés par les anges et démons lors de la création du monde, des fragments de leurs pouvoirs.",
-      "SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Le Monde d'Arlénor vit alors une chasse aux cristaux, un développement d'outils, d'armes, et même de citées basées sur ces cristaux. Aujourd'hui, les peuples utilisent les cristaux dans leur vie quotidienne, avec plus ou moins de puissance.",
-      "SECTION03": "Les détenteurs de cristaux se lient à eux, puis les utilisent en leur transférant leur énergie vitale : ce qui donne ensuite un effet, un pouvoir.",
+      "SECTION01": "La magie du Monde d'Arlénor proviendraient des cristaux laissés par les anges et démons lors de la création du monde, des fragments de leurs pouvoirs.",
+      "SECTION02": "Les premiers humains découvrirent leur pouvoir en l'An 0 du calendrier arlénien. Malgré que peu d'humains aient la capacité de les utiliser, le Monde d'Arlénor vit alors : une chasse aux cristaux, un développement d'outils, d'armes, et même une citée basée sur ces cristaux.",
+      "SECTION03": "Les détenteurs de cristaux se lient à eux, et activent leur pouvoir en leur transférant de l'énergie vitale.",
       "PROPERTIES": {
         "SUBTITLE": "Le cristal arlénien",
         "TITLE": "Propriétés connues par tous",
         "01": "Ils mesurent entre 1 cm et 2 m.",
         "02": "La couleur d'un cristal est liée à son effet, à son pouvoir.",
         "03": "Un cristal est très solide, résistant.",
-        "04": "Un cristal est caractérisé par un rang S, A, B, O en fonction de la puissance et de sa rareté.",
-        "05": "Les cristaux de rang S sont uniques au monde, il y en a très peu et leur puissance est légendaire.",
-        "06": "Les cristaux de rang 0 ont la puissance d'une pile, et sont utilisés dans la technologie de tous les jours.",
-        "07": "L'utilisateur se lie à un cristal, avec une limite de 3 cristaux de rang (B ou supérieur) à la fois.",
-        "08": "Le lien peut se briser, mais il ne pourra pas se reformer entièrement par la suite.",
-        "09": "Plus l'utilisateur utilise ses cristaux, plus le lien entre eux s'intensifie.",
-        "10": "Plus l'utilisateur est loin de son cristal, plus il lui est difficile de l'utiliser.",
-        "11": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
-        "12": "Seuls les cristalliens (métier complexe) peuvent les retravailler en leur donnant une forme précise.",
-        "13": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir."
+        "04": "L'utilisateur se lie à un cristal, avec une limite de 3 cristaux de rang (B ou supérieur) à la fois.",
+        "05": "Le lien peut se briser, mais il ne pourra pas se reformer entièrement par la suite.",
+        "06": "Plus l'utilisateur utilise ses cristaux, plus le lien entre eux s'intensifie.",
+        "07": "Plus l'utilisateur est loin de son cristal, plus il lui est difficile de l'utiliser.",
+        "08": "Les cristaux viennent principalement des mines de la cité désertique Jirakan.",
+        "09": "Seuls les cristalliens (métier complexe) peuvent les retravailler en leur donnant une forme précise.",
+        "10": "Les cristaux ne peuvent pas être séparés en plusieurs parties. Cassés, ils perdent leur pouvoir.",
+        "11": "Il existerait des cristaux uniques, dits 'légendaires', aux puissances incommensurables..."
       }
     },
     "POPULATION": {
@@ -292,11 +290,10 @@
     "FILES": {
       "TITLE": "Les règles du jeu",
       "RESUME01": "Trouvez ici tous les éléments permettant de comprendre la création de personnage en profondeur ainsi que le système de jeu et des propositions de pouvoirs.",
-      "SEEMORE01": "Télécharger le Manuel du Joueur V2.1",
+      "SEEMORE01": "Télécharger le Manuel du Joueur V2.1 (pas à jour)",
       "RESUME02": "Pour les Maitres du Jeu seulement : un guide sur la campagne et le premier scénario d'introduction.",
       "SEEMORE02": "Télécharger le Manuel du MJ V1.0 (pas à jour)",
       "PERSOSPRETIRES": "Télécharger les personnages pré-tirés (pas à jour)",
-      "PERSOSPARAMETERS": "Importer un personnage via sa sauvegarde",
       "LISTPOWERS": "Télécharger la liste non-exhaustive de pouvoirs (pas à jour)"
     }
   },
@@ -342,7 +339,7 @@
     "HEROS02": "Dans ce monde, hormis les stats, les principaux choix qui orienteront votre personnage seront sa race / peuple, mais aussi les cristaux qu'il utilisera. Cependant, malgré toutes les nombres et les textes notés sur la fiche de perso, c'est VOUS qui ferez vivre votre personnage via ses actions : on choisit ce que l'on est par nos actions !",
     "HEROS03": "Créez alors ici un nouveau personnage du Monde d'Arlénor, ou mettez à jour la fiche du vôtre !",
     "PRETIRES": "Créer un personnage peut prendre du temps ou ne pas être simple au début... C'est pour cela qu'il existe des personnages pré-tirés : ce sont des fiches déjà complétées, prêtes à être utilisées ! Vous y trouverez un guerrier humain, un elfe nécromant, un mutant fou, un pan discret... Une variété de personnages pour vous permettre d'y trouver votre compte !",
-    "IMPORT": "Si vous avez sauvegardé les paramètres d'un personnage, ou que vous souhaitez personnaliser un perso pré-tiré, vous pouvez l'importer (fichier JSON) et le modifier ensuite sur cette page. ",
+    "IMPORT": "Si vous avez précédemment sauvegardé un personnage (fichier JSON) ou que vous souhaitez personnaliser un perso pré-tiré, vous pouvez l'importer et le modifier ensuite sur cette page.",
     "CARACTS01": "Toute personne est dotée de capacités de base qui lui sont inhérentes et qu’il peut utiliser de bien des manières. Ces aptitudes naturelles sont définies par cinq caractéristiques distinctes, chacune évaluée sur une échelle allant de <b>1 à 5</b>.",
     "CARACTS02": "Un score de 1 dans une caractéristique indique une vraie faiblesse dans le domaine concerné, tandis qu’un 2 place le personnage dans la moyenne, ni plus ni moins. A partir de 3, la personne dispose d’une facilité particulière dans la caractéristique concernée, et un 4 indique des facultés exceptionnelles. Enfin, un score de 5 représente le maximum des capacités : seuls quelques très rares individus atteignent ce score.",
     "VIGUEUR": {
@@ -411,9 +408,9 @@
       "SPECIALISTICS": "Discours,Interrogatoire,Marchandage,Mensonge,Séduction"
     },
     "CRYSTALS": {
-      "TEXT01": "Dans le Monde d'Arlénor, la quasi-totalité des personnes utilisent des cristaux dans leur vie quotidienne (principalement des rangs O selon la convention SABO). En étant à leur contact, ces cristaux permettent d'utiliser certains pouvoirs en échange d'un peu d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le personnage le désire, et l'utilisation du pouvoir est alors immédiat.<br>Pour la création, vous pouvez choisir n'importe quel pouvoir (la limite est votre imagination) et le créer via 5 points de cristaux. De plus, pour rappel, les personnages ne peuvent se lier qu'à 3 cristaux de rangs supérieurs ou égaux à B à la fois, car plus, entrainerait sur soi des perturbations physiques et psychiques... et les rangs S ne s'acquiert généralement pas durant la création.",
-      "TEXT02": "<b>Il est fortement conseillé à la création de n'avoir qu'un 1 ou 2 cristaux de rang A, et 1 ou 2 cristaux de rang B !</b>",
-      "TEXT03": "L'augmentation du niveau, équivalent de compétence, ainsi que le choix d'une durée et d'une portée, fera baisser ce nombre de points. Tandis que l'ajout de contraintes (séparées par des ';') ajoutera 1 point par contrainte posée sur l'utilisation du cristal.<br>Le lien entre l'utilisateur et son cristal n'est pas innée, mais s'améliore à force de l'utiliser : cela se traduit notamment par des contraintes qui s'enlèvent au fur et mesure de l'expérience obtenue.<br>Exemple de contraintes : artificiel (besoin d'un outil pour être utilisé), fréquence d'utilisation, forme alternative (devoir se transformer pour utiliser le pouvoir), apparence inhumaine (avoir les yeux fluorescents), circonstance (ne fonctionner que la nuit)... tout est encore soumis à l'imagination !"
+      "TEXT01": "Dans le Monde d'Arlénor, peu de personnes ont accès au pouvoir des cristaux. En étant à leur contact, ces personnes, ou 'mages', permettent d'utiliser les cristaux en échange d'un peu d’énergie vitale. De plus, faire appel au pouvoir d'un cristal est une action rapide. Il suffit que le mage le désire, et l'utilisation du pouvoir est immédiate.<br>Pour la création, vous pouvez choisir n'importe quel pouvoir (la seule limite est votre imagination et celle de votre Maitre du Jeu) et le définir grâce aux points de cristaux. De plus, pour rappel, les personnages ne peuvent se lier qu'à 3 cristaux à la fois, car se lier à un plus grand nombre entrainerait sur soi des perturbations physiques et psychiques...",
+      "TEXT02": "<b>Il est fortement conseillé à la création de n'avoir qu'un 1 ou 2 cristaux</b> pour qu'ils soient vraiment efficaces, tout en sachant que l'on peut en trouver d'autres durant l'aventure.",
+      "TEXT03": "L'augmentation du niveau (équivalent à la valeur d'une compétence) ainsi que le choix d'une durée et d'une portée, feront baisser le nombre de points de cristaux, permis à la création.<br>Le lien entre l'utilisateur et son cristal n'est pas innée, mais s'améliore à force de l'utiliser : cela se traduit notamment par des évolutions sur les limites de durée et de portée."
     },
     "EQUIPEMENT": {
       "TEXT": "La magie du monde d'Arlénor est puissante et quasi primordiale pour combattre. Cependant, pour certains personnages, il est aussi vital d'avoir un équipement adéquat en combat. Dans le Monde d'Arlénor, il existe toute sorte d'armes, cependant les armes non magiques ne sont pas très bien vues par les gens de la société adeptes des cristaux (notamment la société Faradélienne).<br>L'équipement est limité à trois slots pour ce qui est armes et armures : cela correspond aussi bien à la capacité physique d'une personne à transporter des choses sur elle quotidiennement."
@@ -424,7 +421,7 @@
   },
   "ABOUT": {
     "INTRODUCTION": "Présentation",
-    "INTRODUCTIONTEXT": "Je suis Spefire, j'ai 25 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
+    "INTRODUCTIONTEXT": "Je suis Spefire, j'ai 26 ans et je suis un ingénieur en informatique ayant une passion pour le dessin (ironique hein ?). Je m'entraine sérieusement depuis 2015 en jongleant avec les fanarts, les jeux vidéo et le jeu de rôles.",
     "CONTACT": "Contact / Questions",
     "CONTACTTEXT": "Vous pouvez me contacter sur ",
     "PROJECTS": "Projets",

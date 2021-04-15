@@ -18,7 +18,7 @@
   <p innerHtml="{{ 'CREATION.PRETIRES' | translate }}"></p>
   <a href="./assets/files/Persos_Pretires.zip" download>{{ "ROLEPLAY.FILES.PERSOSPRETIRES" | translate }}</a>
   <p innerHtml="{{ 'CREATION.IMPORT' | translate }}"></p>
-  <label for="creation-load-parameters">{{ "ROLEPLAY.FILES.PERSOSPARAMETERS" | translate }}</label>
+  <label for="creation-load-parameters">Importer un personnage<br/>(précédemment exporté en JSON)</label>
   <input type="file" id="creation-load-parameters" accept=".json, application/json" (change)="loadJSON($event.target)" />
 </div>
 
@@ -580,5 +580,5 @@
   <h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
   <p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
   <a id="creation-save-pdf" (click)="downloadPDF()">Télécharger la fiche de personnage</a>
-  <a id="creation-save-json" (click)="downloadJSON()">Sauvegarder les paramètres du personnage</a>
+  <a id="creation-save-json" (click)="downloadJSON()">Exporter le personnage en JSON<br/>(pour pouvoir le ré-importer plus tard)</a>
 </div>
