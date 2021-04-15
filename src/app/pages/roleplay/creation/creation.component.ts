@@ -414,6 +414,8 @@ export class CreationComponent {
         if (parameters.crystals) {
           parameters.crystals.forEach((crystal, index) => {
             this.crystals[index] = crystal;
+            // Obligé car les selects ne se rechargent pas
+            this.crystals[index].type = null;
           });
         }
         this.armor = LIST_ARMORS.find((armor) => armor.id === parameters.armor.id);
@@ -623,10 +625,10 @@ export class CreationComponent {
       case 1:
         time = "Scène";
         break;
-      case 2:
+      case 3:
         time = "Journée";
         break;
-      case 3:
+      case 5:
         time = "Illimitée";
         break;
       default:
@@ -644,10 +646,10 @@ export class CreationComponent {
       case 1:
         target = "Toucher";
         break;
-      case 2:
+      case 3:
         target = "A vue";
         break;
-      case 3:
+      case 5:
         target = "Infinie";
         break;
       default:
