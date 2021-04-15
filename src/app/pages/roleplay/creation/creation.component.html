@@ -315,21 +315,20 @@
   <h2>{{ "CREATION.MENU.TITLE04" | translate }}</h2>
   <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT01' | translate }}"></p>
   <p class="creation-points" innerHtml="{{ 'CREATION.CRYSTALS.TEXT02' | translate }}"></p>
-  <table class="full-table">
-    <thead>
-      <tr>
-        <th colspan="2">{{ "CREATION.INDICS.TYPEFULL" | translate }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let type of listTypes">
-        <td>{{ type.title }}</td>
-        <td>{{ type.description }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <a href="./assets/files/Annexe_Cristaux.pdf" download>{{ "ROLEPLAY.FILES.LISTPOWERS" | translate }}</a>
   <div class="creation-crystal-tables">
+    <table class="full-table">
+      <thead>
+        <tr>
+          <th colspan="2">{{ "CREATION.INDICS.TYPEFULL" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let type of listTypes">
+          <td>{{ type.title }}</td>
+          <td>{{ type.description }}</td>
+        </tr>
+      </tbody>
+    </table>
     <table class="full-table">
       <thead>
         <tr>
@@ -350,18 +349,19 @@
           <td>Toucher</td>
         </tr>
         <tr>
-          <td>2 points</td>
+          <td>3 points</td>
           <td>Une journée</td>
           <td>A vue</td>
         </tr>
         <tr>
-          <td>3 points</td>
+          <td>5 points</td>
           <td>Illimitée</td>
           <td>Infinie</td>
         </tr>
       </tbody>
     </table>
   </div>
+  <a href="./assets/files/Annexe_Cristaux.pdf" download>{{ "ROLEPLAY.FILES.LISTPOWERS" | translate }}</a>
   <p innerHtml="{{ 'CREATION.CRYSTALS.TEXT03' | translate }}"></p>
   <p [ngClass]="{ warning: leftPointsCrystals < 0 }" class="creation-points">
     {{ "CREATION.INDICS.LEFTPOINTS" | translate }} :
@@ -403,8 +403,8 @@
             <select class="dropdown-select" value="{{ crystal.time }}" (change)="changeCrystalTime(index, $event.target)">
               <option value="0">Instantanée</option>
               <option value="1">Une scène</option>
-              <option value="2">Une journée</option>
-              <option value="3">Illimitée</option>
+              <option value="3">Une journée</option>
+              <option value="5">Illimitée</option>
             </select>
           </div>
         </td>
@@ -413,8 +413,8 @@
             <select class="dropdown-select" value="{{ crystal.target }}" (change)="changeCrystalTarget(index, $event.target)">
               <option value="0">Personnelle</option>
               <option value="1">Toucher</option>
-              <option value="2">A vue</option>
-              <option value="3">Infinie</option>
+              <option value="3">A vue</option>
+              <option value="5">Infinie</option>
             </select>
           </div>
         </td>
@@ -483,8 +483,8 @@
             <select class="dropdown-select" value="{{ crystal.target }}" (change)="changeCrystalTarget(index, $event.target)">
               <option value="0">Instantanée</option>
               <option value="1">Une scène</option>
-              <option value="2">Une journée</option>
-              <option value="3">Illimitée</option>
+              <option value="3">Une journée</option>
+              <option value="5">Illimitée</option>
             </select>
           </div>
         </td>
@@ -493,8 +493,8 @@
             <select class="dropdown-select" value="{{ crystal.time }}" (change)="changeCrystalTime(index, $event.target)">
               <option value="0">Personnelle</option>
               <option value="1">Toucher</option>
-              <option value="2">A vue</option>
-              <option value="3">Infinie</option>
+              <option value="3">A vue</option>
+              <option value="5">Infinie</option>
             </select>
           </div>
         </td>

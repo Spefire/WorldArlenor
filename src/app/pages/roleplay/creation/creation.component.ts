@@ -87,7 +87,7 @@ export class CreationComponent {
 
     this.nbPointsCaracteristics = 13;
     this.nbPointsMainSkills = 15;
-    this.nbPointsCrystals = 5;
+    this.nbPointsCrystals = 10;
 
     this.health01 = 2;
     this.health02 = 2;
