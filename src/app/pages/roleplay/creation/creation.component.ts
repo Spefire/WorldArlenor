@@ -95,9 +95,9 @@ export class CreationComponent {
     this.health04 = 1;
 
     this.crystals = [
-      { level: 0, time: 0, target: 0 },
-      { level: 0, time: 0, target: 0 },
-      { level: 0, time: 0, target: 0 },
+      { level: 0 },
+      { level: 0 },
+      { level: 0 },
     ];
 
     this.armor = LIST_ARMORS[0];
@@ -164,8 +164,6 @@ export class CreationComponent {
     var totalCrystals = 0;
     for (var key in this.crystals) {
       totalCrystals += this.crystals[key].level;
-      if (this.crystals[key].time) totalCrystals += this.crystals[key].time;
-      if (this.crystals[key].target) totalCrystals += this.crystals[key].target;
     }
     this.leftPointsCrystals = this.nbPointsCrystals - totalCrystals;
 
@@ -218,16 +216,6 @@ export class CreationComponent {
 
   changeCrystalLevel(number, event) {
     this.crystals[number].level = parseInt(event.value);
-    this.refreshPoints();
-  }
-
-  changeCrystalTarget(number, event) {
-    this.crystals[number].target = parseInt(event.value);
-    this.refreshPoints();
-  }
-
-  changeCrystalTime(number, event) {
-    this.crystals[number].time = parseInt(event.value);
     this.refreshPoints();
   }
 
@@ -329,33 +317,15 @@ export class CreationComponent {
       infos += "Votre personnage n'a pas de cristal. (Est-ce voulu ?)<br>";
     }
 
-    if (
-      this.crystals[0].name &&
-      (!this.crystals[0].type ||
-        !this.crystals[0].level ||
-        (!this.crystals[0].time && this.crystals[0].time !== 0) ||
-        (!this.crystals[0].target && this.crystals[0].target !== 0))
-    ) {
+    if (this.crystals[0].name && (!this.crystals[0].type || !this.crystals[0].level)) {
       infos += "Votre premier cristal est incomplet.<br>";
     }
 
-    if (
-      this.crystals[1].name &&
-      (!this.crystals[1].type ||
-        !this.crystals[1].level ||
-        (!this.crystals[1].time && this.crystals[1].time !== 0) ||
-        (!this.crystals[1].target && this.crystals[1].target !== 0))
-    ) {
+    if (this.crystals[1].name && (!this.crystals[1].type || !this.crystals[1].level)) {
       infos += "Votre deuxième cristal est incomplet.<br>";
     }
 
-    if (
-      this.crystals[2].name &&
-      (!this.crystals[2].type ||
-        !this.crystals[2].level ||
-        (!this.crystals[2].time && this.crystals[2].time !== 0) ||
-        (!this.crystals[2].target && this.crystals[2].target !== 0))
-    ) {
+    if (this.crystals[2].name && (!this.crystals[2].type || !this.crystals[2].level)) {
       infos += "Votre troisième cristal est incomplet.<br>";
     }
 
@@ -578,10 +548,6 @@ export class CreationComponent {
         doc.text("" + this.convertTypeCrystal(this.crystals[0]), 145, i, { align: "center" });
         doc.setFontSize(10);
         doc.text("" + this.crystals[0].level, 201, i, { align: "center" });
-        doc.setFontSize(8);
-        doc.text("" + this.convertTimeCrystal(this.crystals[0]), 247, i, { align: "center" });
-        doc.text("" + this.convertTargetCrystal(this.crystals[0]), 292, i, { align: "center" });
-        doc.setFontSize(10);
       }
       i += 21.2;
       if (this.crystals[1].name && this.crystals[1].type) {
@@ -590,10 +556,6 @@ export class CreationComponent {
         doc.text("" + this.convertTypeCrystal(this.crystals[1]), 145, i, { align: "center" });
         doc.setFontSize(10);
         doc.text("" + this.crystals[1].level, 201, i, { align: "center" });
-        doc.setFontSize(8);
-        doc.text("" + this.convertTimeCrystal(this.crystals[1]), 247, i, { align: "center" });
-        doc.text("" + this.convertTargetCrystal(this.crystals[1]), 292, i, { align: "center" });
-        doc.setFontSize(10);
       }
       i += 21.2;
       if (this.crystals[2].name && this.crystals[2].type) {
@@ -602,10 +564,6 @@ export class CreationComponent {
         doc.text("" + this.convertTypeCrystal(this.crystals[2]), 145, i, { align: "center" });
         doc.setFontSize(10);
         doc.text("" + this.crystals[2].level, 201, i, { align: "center" });
-        doc.setFontSize(8);
-        doc.text("" + this.convertTimeCrystal(this.crystals[2]), 247, i, { align: "center" });
-        doc.text("" + this.convertTargetCrystal(this.crystals[2]), 292, i, { align: "center" });
-        doc.setFontSize(10);
       }
       doc.save("Arlenor_" + this.name + ".pdf");
     });
@@ -614,47 +572,5 @@ export class CreationComponent {
   convertTypeCrystal(crystal) {
     var element = LIST_TYPE.find((type) => type.code === crystal.type);
     return element.title;
-  }
-
-  convertTimeCrystal(crystal) {
-    var time;
-    switch (crystal.time) {
-      case 0:
-        time = "Instant.";
-        break;
-      case 1:
-        time = "Scène";
-        break;
-      case 3:
-        time = "Journée";
-        break;
-      case 5:
-        time = "Illimitée";
-        break;
-      default:
-        time = "";
-    }
-    return time;
-  }
-
-  convertTargetCrystal(crystal) {
-    var target;
-    switch (crystal.target) {
-      case 0:
-        target = "Perso.";
-        break;
-      case 1:
-        target = "Toucher";
-        break;
-      case 3:
-        target = "A vue";
-        break;
-      case 5:
-        target = "Infinie";
-        break;
-      default:
-        target = "";
-    }
-    return target;
   }
 }
