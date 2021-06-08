@@ -1,4 +1,17 @@
 <div class="creation-popup">
 	<button class="creation-popup-close" (click)="closePopup()">X</button>
-	<span innerHtml="{{ text }}"></span>
+	<b>
+		<div [innerHtml]="element.name"></div>
+	</b>
+	<br />
+	<br />
+	<div [innerHtml]="element.description"></div>
+	<br />
+	<ng-container *ngIf="element.notes">
+		<div *ngFor="let note of element.notes" [innerHtml]="note"></div>
+	</ng-container>
+	<br />
+	<i>
+		<div *ngIf="specs" [innerHtml]="specs"></div>
+	</i>
 </div>

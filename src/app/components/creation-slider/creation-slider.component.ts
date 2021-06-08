@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { ArlenorObj } from "src/app/models/creation.model";
 
 @Component({
 	selector: "creation-slider",
@@ -6,17 +7,13 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 	styleUrls: ["./creation-slider.component.scss"]
 })
 export class CreationSliderComponent {
-	@Input() public name: string;
-	@Input() public help: string;
-	@Input() public type: string;
+	@Input() public element: ArlenorObj;
 	@Input() public value: number;
 	@Input() public spe: string;
-	@Input() public hasSpecialistic: boolean;
-	@Input() public hasCristalSpecialistic: boolean;
 	@Input() public fixed: boolean;
-	@Output() onOpenPopup = new EventEmitter();
 	@Output() onValueChange = new EventEmitter();
 	@Output() onSpeChange = new EventEmitter();
+	@Output() onOpenPopup = new EventEmitter();
 
 	@Input()
 	set min(minValue: number) {
@@ -28,15 +25,8 @@ export class CreationSliderComponent {
 		this.valueMax = maxValue;
 	}
 
-	@Input()
-	set specialistics(list: string) {
-		list = list.replace(', ', ',');
-		this.listSpecialistics = list.split(',');
-	}
-
 	public valueMin: number;
 	public valueMax: number;
-	public listSpecialistics: Array<string>;
 
 	downValue() {
 		if (parseInt(this.value.toString()) > parseInt(this.valueMin.toString())) {
@@ -53,14 +43,14 @@ export class CreationSliderComponent {
 	}
 
 	valueChange() {
-		this.onValueChange.emit({ type: this.type, value: this.value });
+		this.onValueChange.emit({ code: this.element.code, value: this.value });
 	}
 
 	speChange(spe: string) {
-		this.onSpeChange.emit({ type: this.type, spe: spe });
+		this.onSpeChange.emit({ code: this.element.code, spe: spe });
 	}
 
 	openPopup() {
-		this.onOpenPopup.emit({ value: this.help });
+		this.onOpenPopup.emit({ value: this.element });
 	}
 }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ArlenorObj } from 'src/app/models/creation.model';
 
 @Component({
 	selector: 'creation-popup',
@@ -7,10 +8,23 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class CreationPopupComponent {
 
-	@Input() public text: string;
+	@Input() public element: ArlenorObj;
 	@Output() onClosePopup = new EventEmitter();
 
+	public specs: string;
+
 	constructor() { }
+
+	ngOnInit() {
+		if (this.element.specs) {
+			this.specs = "";
+			this.element.specs.forEach((spe, i) => {
+				this.specs += spe;
+				if (i === this.element.specs.length - 1) this.specs += '.';
+				else this.specs += ', ';
+			});
+		}
+	}
 
 	closePopup() {
 		this.onClosePopup.emit();

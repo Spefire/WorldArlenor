@@ -1,40 +1,38 @@
 <tr class="cs-line">
-	<td class="cs-name">{{ name }}</td>
+	<td class="cs-name">{{ element.name }}</td>
 	<td *ngIf="!fixed">
-		<button class="cs-button" [ngClass]="{'disabled': value === valueMin }" (click)="downValue()">&#8249;</button>
+		<button class="cs-button" [class.disabled]="value === valueMin" (click)="downValue()">&#8249;</button>
 		<span class="cs-value">{{ value }}</span>
-		<button class="cs-button" [ngClass]="{'disabled': value === valueMax }" (click)="upValue()">&#8250;</button>
+		<button class="cs-button" [class.disabled]="value === valueMax" (click)="upValue()">&#8250;</button>
 	</td>
 	<td *ngIf="fixed">
 		<button class="cs-button disabled"></button>
 		<span class="cs-value">{{ value }}</span>
 		<button class="cs-button disabled"></button>
 	</td>
-	<td *ngIf="hasSpecialistic || hasCristalSpecialistic" class="cs-spe">
-		<div *ngIf="hasSpecialistic" class="dropdown">
-			<select class="dropdown-select" [ngClass]="{'cs-option-default': !spe }" value="{{ spe }}"
+	<td *ngIf="element.specs" class="cs-spe">
+		<div class="dropdown">
+			<select class="dropdown-select" [class.cs-option-default]="!spe" value="{{ spe }}"
 				(change)="speChange($event.target.value)">
 				<option class="cs-option-default" value="">
 					{{ "CREATION.INDICS.SPE" | translate }}
 				</option>
-				<option class="cs-option" *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">
+				<option class="cs-option" *ngFor="let specialistic of element.specs" value="{{ specialistic }}">
 					{{ specialistic }}
 				</option>
 			</select>
 		</div>
-		<input *ngIf="hasCristalSpecialistic" type="text" placeholder="{{ 'CREATION.INDICS.SPE' | translate }}"
-			value="{{ spe }}" (change)="speChange($event.target.value)" />
 	</td>
 	<td>
 		<button (click)="openPopup()">?</button>
 	</td>
 </tr>
 <tr class="cs-mobile-line">
-	<td class="cs-name">{{ name }}</td>
+	<td class="cs-name">{{ element.name }}</td>
 	<td *ngIf="!fixed">
-		<button class="cs-button" [ngClass]="{'disabled': value === valueMin }" (click)="downValue()">&#8249;</button>
+		<button class="cs-button" [class.disabled]="value === valueMin" (click)="downValue()">&#8249;</button>
 		<span class="cs-value">{{ value }}</span>
-		<button class="cs-button" [ngClass]="{'disabled': value === valueMax }" (click)="upValue()">&#8250;</button>
+		<button class="cs-button" [class.disabled]="value === valueMax" (click)="upValue()">&#8250;</button>
 	</td>
 	<td *ngIf="fixed">
 		<button class="cs-button disabled"></button>
@@ -43,19 +41,17 @@
 	</td>
 </tr>
 <tr class="cs-mobile-line">
-	<td *ngIf="hasSpecialistic || hasCristalSpecialistic" class="cs-spe">
-		<div *ngIf="hasSpecialistic" class="dropdown">
-			<select class="dropdown-select" [ngClass]="{'cs-option-default': !spe }" value="{{ spe }}"
+	<td *ngIf="element.specs" class="cs-spe">
+		<div class="dropdown">
+			<select class="dropdown-select" [class.cs-option-default]="!spe" value="{{ spe }}"
 				(change)="speChange($event.target.value)">
 				<option class="cs-option-default" value="">
 					{{ "CREATION.INDICS.SPE" | translate }}
 				</option>
-				<option class="cs-option" *ngFor="let specialistic of listSpecialistics" value="{{ specialistic }}">
+				<option class="cs-option" *ngFor="let specialistic of element.specs" value="{{ specialistic }}">
 					{{ specialistic }}
 				</option>
 			</select>
 		</div>
-		<input *ngIf="hasCristalSpecialistic" type="text" placeholder="{{ 'CREATION.INDICS.SPE' | translate }}"
-			value="{{ spe }}" (change)="speChange($event.target.value)" />
 	</td>
 </tr>

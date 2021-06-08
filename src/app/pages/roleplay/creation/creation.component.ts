@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
-import { RoutesService } from "../../../services/routes.service";
 import jsPDF from "jspdf";
 
-import { LIST_RACES, LIST_ARMORS, LIST_WEAPONS, LIST_TYPE } from "./../../../models/creation.model";
+import { ArlenorCharacter } from "src/app/models/character.model";
+import { ArlenorObj, ListArmors, ListRaces, ListWeapons, ListTypesCrystals, ListCaracts, ListSkills } from "src/app/models/creation.model";
+import { RoutesService } from "src/app/services/routes.service";
 
 @Component({
   selector: "app-creation",
@@ -13,23 +14,17 @@ import { LIST_RACES, LIST_ARMORS, LIST_WEAPONS, LIST_TYPE } from "./../../../mod
   providers: [RoutesService],
 })
 export class CreationComponent {
-  public race: number;
+
+  public perso: ArlenorCharacter;
+
   public avantages: string;
   public inconvenients: string;
 
-  public caracteristics: any;
   public nbPointsCaracteristics: number;
   public leftPointsCaracteristics: number;
-  public initiative: number;
 
-  public mainSkills: any;
-  public nbPointsMainSkills: number;
-  public leftPointsMainSkills: number;
-
-  public health01: number;
-  public health02: number;
-  public health03: number;
-  public health04: number;
+  public nbPointsSkills: number;
+  public leftPointsSkills: number;
 
   public crystals: any[];
   public nbPointsCrystals: number;
@@ -46,19 +41,21 @@ export class CreationComponent {
   public warning: boolean;
   public listWarnings: string;
 
-  public listRaces: any = LIST_RACES;
-  public listTypes: any = LIST_TYPE;
-  public listArmors: any = LIST_ARMORS;
-  public listWeapons: any = LIST_WEAPONS;
+  public listRaces: ArlenorObj[] = ListRaces;
+  public listCaracts: ArlenorObj[] = ListCaracts;
+  public listSkills: ArlenorObj[] = ListSkills;
+  public listTypes: ArlenorObj[] = ListTypesCrystals;
+  public listArmors: ArlenorObj[] = ListArmors;
+  public listWeapons: ArlenorObj[] = ListWeapons;
 
-  public help: string;
+  public help: ArlenorObj;
 
   constructor(private routesService: RoutesService, private route: ActivatedRoute, private translate: TranslateService) {
     this.routesService.setTitleMetas("CREATION");
-    this.translate.get("UNIVERSE.POPULATION.PEOPLE" + this.race + ".AVANTAGES").subscribe((res: string) => {
+    this.translate.get("UNIVERSE.POPULATION.PEOPLE1.AVANTAGES").subscribe((res: string) => {
       this.avantages = res;
     });
-    this.translate.get("UNIVERSE.POPULATION.PEOPLE" + this.race + ".INCONVENIENTS").subscribe((res: string) => {
+    this.translate.get("UNIVERSE.POPULATION.PEOPLE1.INCONVENIENTS").subscribe((res: string) => {
       this.inconvenients = res;
     });
     this.initValues();
@@ -67,32 +64,11 @@ export class CreationComponent {
   }
 
   initValues() {
-    this.caracteristics = {
-      vigueur: 1,
-      habilete: 1,
-      intellect: 1,
-      charisme: 1,
-      pouvoir: 5,
-    };
-    this.mainSkills = {
-      art: { value: 0, spe: "" },
-      athletisme: { value: 0, spe: "" },
-      combat: { value: 0, spe: "" },
-      furtivite: { value: 0, spe: "" },
-      medecine: { value: 0, spe: "" },
-      perception: { value: 0, spe: "" },
-      savoir: { value: 0, spe: "" },
-      social: { value: 0, spe: "" },
-    };
+    this.perso = new ArlenorCharacter();
 
     this.nbPointsCaracteristics = 14;
-    this.nbPointsMainSkills = 15;
+    this.nbPointsSkills = 15;
     this.nbPointsCrystals = 4;
-
-    this.health01 = 2;
-    this.health02 = 2;
-    this.health03 = 2;
-    this.health04 = 1;
 
     this.crystals = [
       { level: 0 },
@@ -100,15 +76,13 @@ export class CreationComponent {
       { level: 0 },
     ];
 
-    this.armor = LIST_ARMORS[0];
+    this.armor = this.listArmors[0];
     this.weapon01 = {};
     this.weapon02 = {};
 
     this.name = "";
     this.description = "";
     this.avatar = "";
-
-    this.changeRace({ value: 1 });
   }
 
   openPopup(event: any) {
@@ -118,7 +92,7 @@ export class CreationComponent {
   }
 
   closePopup() {
-    this.help = "";
+    this.help = null;
   }
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -126,12 +100,12 @@ export class CreationComponent {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   changeRace(event) {
-    this.race = parseInt(event.value);
+    this.perso.race = parseInt(event.value);
 
-    this.translate.get("UNIVERSE.POPULATION.PEOPLE" + this.race + ".AVANTAGES").subscribe((res: string) => {
+    this.translate.get("UNIVERSE.POPULATION.PEOPLE" + event.value + ".AVANTAGES").subscribe((res: string) => {
       this.avantages = res;
     });
-    this.translate.get("UNIVERSE.POPULATION.PEOPLE" + this.race + ".INCONVENIENTS").subscribe((res: string) => {
+    this.translate.get("UNIVERSE.POPULATION.PEOPLE" + event.value + ".INCONVENIENTS").subscribe((res: string) => {
       this.inconvenients = res;
     });
 
@@ -142,46 +116,20 @@ export class CreationComponent {
   /////////////                           PART II : CARACTERISTICS                       ////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  changeCaracteristics(event) {
-    this.caracteristics[event.type] = parseInt(event.value);
+  changeCaract(event) {
+    this.perso.caracts[event.code].value = parseInt(event.value);
     this.refreshPoints();
   }
 
   refreshPoints() {
-    var totalCaracteristics = 0;
-    for (var key in this.caracteristics) {
-      totalCaracteristics += this.caracteristics[key];
-    }
-    this.leftPointsCaracteristics = this.nbPointsCaracteristics - totalCaracteristics;
-
-    var totalMainSkills = 0;
-    for (var key in this.mainSkills) {
-      totalMainSkills += this.mainSkills[key].value;
-      if (this.mainSkills[key].spe) totalMainSkills += 2;
-    }
-    this.leftPointsMainSkills = this.nbPointsMainSkills - totalMainSkills;
+    this.leftPointsCaracteristics = this.nbPointsCaracteristics - this.perso.caracts.totalCaracts;
+    this.leftPointsSkills = this.nbPointsSkills - this.perso.skills.totalSkills;
 
     var totalCrystals = 0;
     for (var key in this.crystals) {
       totalCrystals += this.crystals[key].level;
     }
     this.leftPointsCrystals = this.nbPointsCrystals - totalCrystals;
-
-    this.initiative = this.caracteristics.habilete + this.caracteristics.intellect;
-    if (this.caracteristics.vigueur === 1) {
-      this.health01 = 1;
-    } else if (this.caracteristics.vigueur === 5) {
-      this.health01 = 3;
-    } else {
-      this.health01 = 2;
-    }
-    if (this.race === 2 || this.race === 5) {
-      this.health03 = 1;
-    } else if (this.race === 3 || this.race === 6) {
-      this.health03 = 3;
-    } else {
-      this.health03 = 2;
-    }
 
     this.checkWarnings();
   }
@@ -190,13 +138,13 @@ export class CreationComponent {
   /////////////                           PART III : SKILLS                              ////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  changeMainSkills(event) {
-    this.mainSkills[event.type].value = parseInt(event.value);
+  changeValueSkill(event) {
+    this.perso.skills[event.code].value = parseInt(event.value);
     this.refreshPoints();
   }
 
-  changeSpeMainSkills(event) {
-    this.mainSkills[event.type].spe = event.spe;
+  changeSpeSkill(event) {
+    this.perso.skills[event.code].spe = event.spe;
     this.refreshPoints();
   }
 
@@ -225,8 +173,8 @@ export class CreationComponent {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   changeArmor(event) {
-    this.armor = LIST_ARMORS[0];
-    LIST_ARMORS.forEach((element) => {
+    this.armor = this.listArmors[0];
+    this.listArmors.forEach((element) => {
       if (element.id === parseInt(event.value)) this.armor = element;
     });
     this.checkWarnings();
@@ -234,7 +182,7 @@ export class CreationComponent {
 
   changeWeapon01(event) {
     this.weapon01 = {};
-    LIST_WEAPONS.forEach((element) => {
+    this.listWeapons.forEach((element) => {
       if (element.id === parseInt(event.value)) this.weapon01 = element;
     });
     this.checkWarnings();
@@ -242,7 +190,7 @@ export class CreationComponent {
 
   changeWeapon02(event) {
     this.weapon02 = {};
-    LIST_WEAPONS.forEach((element) => {
+    this.listWeapons.forEach((element) => {
       if (element.id === parseInt(event.value)) this.weapon02 = element;
     });
     this.checkWarnings();
@@ -300,10 +248,10 @@ export class CreationComponent {
       infos += "Vous avez dépensé trop de points de caractéristiques (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
     }
 
-    if (this.leftPointsMainSkills > 0) {
+    if (this.leftPointsSkills > 0) {
       infos += "Il reste des points de compétences à dépenser.<br>";
     }
-    if (this.leftPointsMainSkills < 0) {
+    if (this.leftPointsSkills < 0) {
       infos += "Vous avez dépensé trop de points de compétences (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
     }
 
@@ -369,8 +317,17 @@ export class CreationComponent {
           console.log(error);
         };
       });
+
+      this.perso = new ArlenorCharacter();
       Promise.all([promiseGetParameters]).then(() => {
-        this.caracteristics = parameters.caracteristics;
+        // Import caracts
+        /*if (parameters.caracteristics) {
+          this.perso.caracts.vig = parameters.caracteristics.vigueur;
+          this.perso.caracts.hab = parameters.caracteristics.habilete;
+          this.perso.caracts.int = parameters.caracteristics.intellect;
+          this.perso.caracts.cha = parameters.caracteristics.charisme;
+          this.perso.caracts.pou = parameters.caracteristics.pouvoir;
+        }
         this.changeRace({ value: parameters.race });
         for (var key in this.mainSkills) {
           let value = parameters.mainSkills[key];
@@ -389,15 +346,15 @@ export class CreationComponent {
             this.crystals[index].type = null;
           });
         }
-        this.armor = LIST_ARMORS.find((armor) => armor.id === parameters.armor.id);
-        this.weapon01 = LIST_WEAPONS.find((weapon) => weapon.id === parameters.weapon01.id);
-        this.weapon02 = LIST_WEAPONS.find((weapon) => weapon.id === parameters.weapon02.id);
+        this.armor = this.listArmors.find((armor) => armor.id === parameters.armor.id);
+        this.weapon01 = this.listWeapons.find((weapon) => weapon.id === parameters.weapon01.id);
+        this.weapon02 = this.listWeapons.find((weapon) => weapon.id === parameters.weapon02.id);
         if (!this.armor) this.armor = {};
         if (!this.weapon01) this.weapon01 = {};
         if (!this.weapon02) this.weapon02 = {};
         this.name = parameters.name;
         this.description = parameters.description;
-        this.avatar = parameters.avatar;
+        this.avatar = parameters.avatar;*/
         this.refreshPoints();
         this.checkWarnings();
         alert("Importation du personnage réussie !");
@@ -405,7 +362,7 @@ export class CreationComponent {
     }
   }
 
-  downloadJSON() {
+  downloadJSON() {/*
     var parameters = {
       race: this.race,
       caracteristics: this.caracteristics,
@@ -422,7 +379,7 @@ export class CreationComponent {
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parameters));
     var dlAnchorElem = document.getElementById("creation-save-json");
     dlAnchorElem.setAttribute("href", dataStr);
-    dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.name + ".json");
+    dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.name + ".json");*/
   }
 
   downloadPDF() {
@@ -470,48 +427,54 @@ export class CreationComponent {
 
       // --- IDENTITE
       doc.text("" + this.name, 112, 132.9);
-      LIST_RACES.forEach((element) => {
-        if (this.race === element.id) {
+      this.listRaces.forEach((element) => {
+        if (this.perso.race === element.id) {
           doc.text(element.name, 112, 154.1);
         }
       });
 
       // --- CARACTERISTIQUES
       var i = 217.2;
-      for (var key in this.caracteristics) {
-        doc.text("" + this.caracteristics[key], 123, i, { align: "center" });
-        i += 21.2;
-      }
+      doc.text("" + this.perso.caracts.vig, 123, i, { align: "center" });
+      i += 21.2;
+      doc.text("" + this.perso.caracts.hab, 123, i, { align: "center" });
+      i += 21.2;
+      doc.text("" + this.perso.caracts.int, 123, i, { align: "center" });
+      i += 21.2;
+      doc.text("" + this.perso.caracts.cha, 123, i, { align: "center" });
+      i += 21.2;
+      doc.text("" + this.perso.caracts.pou, 123, i, { align: "center" });
+      i += 21.2;
 
       // --- NIVEAU DE BLESSURES
       i = 353;
       doc.setFillColor(255, 255, 255);
-      if (this.health01 < 2) doc.rect(135, i, 20, 20, "F");
-      if (this.health01 < 3) doc.rect(168, i, 20, 20, "F");
+      if (this.perso.health01 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.perso.health01 < 3) doc.rect(168, i, 20, 20, "F");
       i += 21.2;
-      if (this.health02 < 2) doc.rect(135, i, 20, 20, "F");
-      if (this.health02 < 3) doc.rect(168, i, 20, 20, "F");
+      if (this.perso.health02 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.perso.health02 < 3) doc.rect(168, i, 20, 20, "F");
       i += 21.2;
-      if (this.health03 < 2) doc.rect(135, i, 20, 20, "F");
-      if (this.health03 < 3) doc.rect(168, i, 20, 20, "F");
+      if (this.perso.health03 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.perso.health03 < 3) doc.rect(168, i, 20, 20, "F");
       i += 21.2;
-      if (this.health04 < 2) doc.rect(135, i, 20, 20, "F");
-      if (this.health04 < 3) doc.rect(168, i, 20, 20, "F");
+      if (this.perso.health04 < 2) doc.rect(135, i, 20, 20, "F");
+      if (this.perso.health04 < 3) doc.rect(168, i, 20, 20, "F");
 
       // --- COMPTENCES PRINCIPALES
       i = 154.0;
-      for (var key in this.mainSkills) {
+      /*for (var key in this.mainSkills) {
         doc.text("" + this.mainSkills[key].value, 313.5, i, { align: "center" });
         doc.setFontSize(8);
         let res = this.mainSkills[key].spe.length > 18 ? this.mainSkills[key].spe.slice(0, 17) + "." : this.mainSkills[key].spe;
         doc.text("" + res, 388.5, i, { align: "center" });
         doc.setFontSize(10);
         i += 21.2;
-      }
+      }*/
 
       // --- VALEURS DE COMBAT
       i = 376.2;
-      doc.text("" + this.initiative, 313.5, i, { align: "center" });
+      doc.text("" + this.perso.initiative, 313.5, i, { align: "center" });
 
       i = 407.6;
       if (this.armor.name) {
@@ -565,7 +528,7 @@ export class CreationComponent {
   }
 
   convertTypeCrystal(crystal) {
-    var element = LIST_TYPE.find((type) => type.code === crystal.type);
-    return element.title;
+    var element = this.listTypes.find((type) => type.code === crystal.type);
+    return element.name;
   }
 }
