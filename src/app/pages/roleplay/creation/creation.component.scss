@@ -116,10 +116,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
 
-    @media screen and (max-width: 1200px) {
-      width: 100%;
+    .creation-skills-columns {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .creation-skills-column {
+      width: 50%;
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+      }
     }
   }
 

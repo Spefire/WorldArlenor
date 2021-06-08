@@ -135,9 +135,9 @@
   <div class="creation-flex">
     <div class="creation-skills">
       <table>
-        <tbody>
-          <creation-slider *ngFor="let skill of listSkills" min="0" max="10" [element]="skill"
-            [value]="perso.skills[skill.code].value" [spe]="perso.skills[skill.code].spe"
+        <tbody class="creation-skills-columns">
+          <creation-slider *ngFor="let skill of listSkills" class="creation-skills-column" min="0" max="10"
+            [element]="skill" [value]="perso.skills[skill.code].value" [spe]="perso.skills[skill.code].spe"
             (onOpenPopup)="openPopup($event)" (onValueChange)="changeValueSkill($event)"
             (onSpeChange)="changeSpeSkill($event)"></creation-slider>
         </tbody>
@@ -161,7 +161,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let type of listTypes">
-          <td>{{ type.title }}</td>
+          <td>{{ type.name }}</td>
           <td>{{ type.description }}</td>
         </tr>
       </tbody>
@@ -212,22 +212,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let crystal of crystals; let index = index">
+      <tr *ngFor="let crystal of perso.crystals; let index = index">
         <td>
-          <input type="text" value="{{ crystal.name }}" (change)="changeCrystalName(index, $event.target)" />
+          <input type="text" [value]="crystal.name" (change)="changeCrystalName(index, $event.target)" />
         </td>
         <td>
           <div class="dropdown">
-            <select class="dropdown-select" value="{{ crystal.type }}"
-              (change)="changeCrystalType(index, $event.target)">
+            <select class="dropdown-select" [value]="crystal.type" (change)="changeCrystalType(index, $event.target)">
               <option value=""></option>
-              <option *ngFor="let type of listTypes" value="{{ type.code }}">{{ type.title }}</option>
+              <option *ngFor="let type of listTypes" [value]="type.code">{{ type.name }}</option>
             </select>
           </div>
         </td>
         <td>
-          <input type="number" min="1" value="{{ crystal.level }}"
-            (change)="changeCrystalLevel(index, $event.target)" />
+          <input type="number" min="1" [value]="crystal.level" (change)="changeCrystalLevel(index, $event.target)" />
         </td>
       </tr>
     </tbody>
@@ -239,9 +237,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let crystal of crystals; let index = index">
+      <tr *ngFor="let crystal of perso.crystals; let index = index">
         <td>
-          <input type="text" value="{{ crystal.name }}" (change)="changeCrystalName(index, $event.target)" />
+          <input type="text" [value]="crystal.name" (change)="changeCrystalName(index, $event.target)" />
         </td>
       </tr>
     </tbody>
@@ -254,56 +252,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let crystal of crystals; let index = index">
+      <tr *ngFor="let crystal of perso.crystals; let index = index">
         <td>
           <div class="dropdown">
-            <select class="dropdown-select" value="{{ crystal.type }}"
-              (change)="changeCrystalType(index, $event.target)">
+            <select class="dropdown-select" [value]="crystal.type" (change)="changeCrystalType(index, $event.target)">
               <option value=""></option>
-              <option value="ABJ">Abjuration</option>
-              <option value="CONV">Convocation</option>
-              <option value="DIV">Divination</option>
-              <option value="ENCH">Enchantement</option>
-              <option value="EVOC">Evocation</option>
-              <option value="ILL">Illusion</option>
-              <option value="TRANS">Transmutation</option>
+              <option *ngFor="let type of listTypes" [value]="type.code">{{ type.name }}</option>
             </select>
           </div>
         </td>
         <td>
-          <input type="number" min="1" value="{{ crystal.level }}"
-            (change)="changeCrystalLevel(index, $event.target)" />
+          <input type="number" min="1" [value]="crystal.level" (change)="changeCrystalLevel(index, $event.target)" />
         </td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="creation-crystal-mobile-table">
-    <thead>
-      <tr>
-        <th>{{ "CREATION.INDICS.LEVEL" | translate }}</th>
-        <th>{{ "CREATION.INDICS.CAPACITY" | translate }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>25% du cristal</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>50% du cristal</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>75% du cristal</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>100% du cristal</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>125% du cristal</td>
       </tr>
     </tbody>
   </table>
@@ -318,26 +278,27 @@
     <div class="creation-element">
       <span>{{ "CREATION.INDICS.ARMOR" | translate }} : </span>
       <div class="dropdown">
-        <select class="dropdown-select" value="{{ armor.id }}" (change)="changeArmor($event.target)">
-          <option *ngFor="let a of listArmors" value="{{ a.id }}">{{ a.name }}</option>
+        <select class="dropdown-select" [value]="armor?.id" (change)="changeArmor($event.target)">
+          <option value=""></option>
+          <option *ngFor="let a of listArmors" [value]="a.id">{{ a.name }}</option>
         </select>
       </div>
     </div>
     <div class="creation-element">
       <span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
       <div class="dropdown">
-        <select class="dropdown-select" value="{{ weapon01.id }}" (change)="changeWeapon01($event.target)">
-          <option value="0"></option>
-          <option *ngFor="let w of listWeapons" value="{{ w.id }}">{{ w.name }}</option>
+        <select class="dropdown-select" [value]="weapon01?.id" (change)="changeWeapon01($event.target)">
+          <option value=""></option>
+          <option *ngFor="let w of listWeapons" [value]="w.id">{{ w.name }}</option>
         </select>
       </div>
     </div>
     <div class="creation-element">
       <span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
       <div class="dropdown">
-        <select class="dropdown-select" value="{{ weapon02.id }}" (change)="changeWeapon02($event.target)">
-          <option value="0"></option>
-          <option *ngFor="let weapon of listWeapons" value="{{ weapon.id }}">{{ weapon.name }}</option>
+        <select class="dropdown-select" [value]="weapon02?.id" (change)="changeWeapon02($event.target)">
+          <option value=""></option>
+          <option *ngFor="let w of listWeapons" [value]="w.id">{{ w.name }}</option>
         </select>
       </div>
     </div>
@@ -352,19 +313,19 @@
         <p innerHtml="{{ 'CREATION.IDENTITY.TEXT' | translate }}"></p>
         <div class="creation-element">
           <span>Nom du personnage</span>
-          <input type="text" value="{{ name }}" (change)="changeName($event.target)" />
+          <input type="text" [value]="perso.name" (change)="changeName($event.target)" />
         </div>
         <div class="creation-element">
           <span>Description du personnage (max : 440 caract.)</span>
-          <textarea value="{{ description }}" maxlength="440" (change)="changeDescription($event.target)"></textarea>
+          <textarea [value]="perso.description" maxlength="440" (change)="changeDescription($event.target)"></textarea>
         </div>
       </div>
       <div class="creation-identity right">
         <div class="creation-element">
           <span>Avatar du personnage</span>
           <label for="avatar" class="creation-avatar">
-            <span *ngIf="!avatar">Importer une image<br />(ratio 1:1 | JPG, PNG | max 2Mo)</span>
-            <img *ngIf="avatar" alt="" [src]="avatar" />
+            <span *ngIf="!perso.avatar">Importer une image<br />(ratio 1:1 | JPG, PNG | max 2Mo)</span>
+            <img *ngIf="perso.avatar" alt="" [src]="perso.avatar" />
           </label>
           <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg"
             (change)="changeAvatar($event.target)" />
@@ -378,8 +339,8 @@
 <!--------------------------------------------------------------------------------------------------------------->
 <div class="creation-container big final">
   <h2>{{ "CREATION.MENU.CONCLUSION" | translate }}</h2>
-  <p class="creation-points warning" innerHtml="{{ listWarnings }}"></p>
+  <p class="creation-points warning" [innerHtml]="listWarnings"></p>
   <a id="creation-save-pdf" (click)="downloadPDF()">Télécharger la fiche de personnage</a>
-  <a id="creation-save-json" (click)="downloadJSON()">Exporter le personnage en JSON<br />(pour pouvoir le ré-importer
-    plus tard)</a>
+  <a id="creation-save-json" (click)="downloadJSON()">Exporter le personnage en JSON
+    <br />(pour pouvoir le ré-importer plus tard)</a>
 </div>

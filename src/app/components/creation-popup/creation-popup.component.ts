@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ArlenorObj } from 'src/app/models/creation.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { ArlenorObj } from 'src/app/models/creation.model';
 	templateUrl: './creation-popup.component.html',
 	styleUrls: ['./creation-popup.component.scss']
 })
-export class CreationPopupComponent {
+export class CreationPopupComponent implements OnInit {
 
 	@Input() public element: ArlenorObj;
 	@Output() onClosePopup = new EventEmitter();

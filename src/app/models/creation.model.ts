@@ -1,3 +1,15 @@
+export class ArlenorCrystal {
+  public name?: string;
+  public type?: string;
+  public level: number;
+
+  constructor() {
+    this.name = "";
+    this.type = "";
+    this.level = 1;
+  }
+}
+
 export class ArlenorObj {
   public id?: number;
   public code?: string;

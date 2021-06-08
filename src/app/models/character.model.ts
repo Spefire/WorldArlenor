@@ -1,3 +1,5 @@
+import { ArlenorCrystal, ArlenorObj } from "./creation.model";
+
 class ArlenorCaracts {
   public vig: ArlenorValue;
   public hab: ArlenorValue;
@@ -66,9 +68,16 @@ class ArlenorValue {
 }
 
 export class ArlenorCharacter {
+  public name: string;
+  public description: string;
+  public avatar: string;
   public race: number;
   public caracts: ArlenorCaracts;
   public skills: ArlenorSkills;
+  public crystals: ArlenorCrystal[];
+  public armor: ArlenorObj;
+  public weapon01: ArlenorObj;
+  public weapon02: ArlenorObj;
 
   get initiative(): number {
     return this.caracts.hab.value + this.caracts.int.value;
@@ -102,9 +111,28 @@ export class ArlenorCharacter {
     return 1;
   }
 
+  get totalCrystals(): number {
+    var total = 0;
+    this.crystals.forEach(cryst => {
+      if (cryst.name) total += cryst.level;
+    });
+    return total;
+  }
+
   constructor() {
+    this.name = "";
+    this.description = "";
+    this.avatar = "";
     this.race = 1;
     this.caracts = new ArlenorCaracts();
     this.skills = new ArlenorSkills();
+    this.crystals = [
+      new ArlenorCrystal(),
+      new ArlenorCrystal(),
+      new ArlenorCrystal(),
+    ];
+    this.armor = null;
+    this.weapon01 = null;
+    this.weapon02 = null;
   }
 }

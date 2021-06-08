@@ -22,21 +22,10 @@ export class CreationComponent {
 
   public nbPointsCaracteristics: number;
   public leftPointsCaracteristics: number;
-
   public nbPointsSkills: number;
   public leftPointsSkills: number;
-
-  public crystals: any[];
   public nbPointsCrystals: number;
   public leftPointsCrystals: number;
-
-  public armor: any;
-  public weapon01: any;
-  public weapon02: any;
-
-  public name: string;
-  public description: string;
-  public avatar: string;
 
   public warning: boolean;
   public listWarnings: string;
@@ -69,26 +58,10 @@ export class CreationComponent {
     this.nbPointsCaracteristics = 14;
     this.nbPointsSkills = 15;
     this.nbPointsCrystals = 4;
-
-    this.crystals = [
-      { level: 0 },
-      { level: 0 },
-      { level: 0 },
-    ];
-
-    this.armor = this.listArmors[0];
-    this.weapon01 = {};
-    this.weapon02 = {};
-
-    this.name = "";
-    this.description = "";
-    this.avatar = "";
   }
 
   openPopup(event: any) {
-    if (event) {
-      this.help = event.value;
-    }
+    if (event) this.help = event.value;
   }
 
   closePopup() {
@@ -124,12 +97,7 @@ export class CreationComponent {
   refreshPoints() {
     this.leftPointsCaracteristics = this.nbPointsCaracteristics - this.perso.caracts.totalCaracts;
     this.leftPointsSkills = this.nbPointsSkills - this.perso.skills.totalSkills;
-
-    var totalCrystals = 0;
-    for (var key in this.crystals) {
-      totalCrystals += this.crystals[key].level;
-    }
-    this.leftPointsCrystals = this.nbPointsCrystals - totalCrystals;
+    this.leftPointsCrystals = this.nbPointsCrystals - this.perso.totalCrystals;
 
     this.checkWarnings();
   }
@@ -153,18 +121,18 @@ export class CreationComponent {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   changeCrystalName(number, event) {
-    this.crystals[number].name = event.value;
+    this.perso.crystals[number].name = event.value;
     this.refreshPoints();
   }
 
   changeCrystalType(number, event) {
-    this.crystals[number].type = event.value;
+    this.perso.crystals[number].type = event.value;
     this.refreshPoints();
   }
 
   changeCrystalLevel(number, event) {
-    if (!event.value) event.value = 0;
-    this.crystals[number].level = parseInt(event.value);
+    if (!event.value) event.value = 1;
+    this.perso.crystals[number].level = parseInt(event.value);
     this.refreshPoints();
   }
 
@@ -173,25 +141,25 @@ export class CreationComponent {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   changeArmor(event) {
-    this.armor = this.listArmors[0];
+    this.perso.armor = null;
     this.listArmors.forEach((element) => {
-      if (element.id === parseInt(event.value)) this.armor = element;
+      if (element.id === parseInt(event.value)) this.perso.armor = element;
     });
     this.checkWarnings();
   }
 
   changeWeapon01(event) {
-    this.weapon01 = {};
+    this.perso.weapon01 = null;
     this.listWeapons.forEach((element) => {
-      if (element.id === parseInt(event.value)) this.weapon01 = element;
+      if (element.id === parseInt(event.value)) this.perso.weapon01 = element;
     });
     this.checkWarnings();
   }
 
   changeWeapon02(event) {
-    this.weapon02 = {};
+    this.perso.weapon02 = null;
     this.listWeapons.forEach((element) => {
-      if (element.id === parseInt(event.value)) this.weapon02 = element;
+      if (element.id === parseInt(event.value)) this.perso.weapon02 = element;
     });
     this.checkWarnings();
   }
@@ -201,12 +169,12 @@ export class CreationComponent {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   changeName(event) {
-    this.name = event.value;
+    this.perso.name = event.value;
     this.checkWarnings();
   }
 
   changeDescription(event) {
-    this.description = event.value;
+    this.perso.description = event.value;
     this.checkWarnings();
   }
 
@@ -229,7 +197,7 @@ export class CreationComponent {
         };
       });
       Promise.all([promiseGetImage64]).then(() => {
-        this.avatar = image64;
+        this.perso.avatar = image64;
         this.checkWarnings();
       });
     }
@@ -245,50 +213,50 @@ export class CreationComponent {
       infos += "Il reste des points de caractéristiques à dépenser.<br>";
     }
     if (this.leftPointsCaracteristics < 0) {
-      infos += "Vous avez dépensé trop de points de caractéristiques (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
+      infos += "Vous avez dépensé trop de points de caractéristiques (Votre personnage a augmenté de niveau ?).<br>";
     }
 
     if (this.leftPointsSkills > 0) {
       infos += "Il reste des points de compétences à dépenser.<br>";
     }
     if (this.leftPointsSkills < 0) {
-      infos += "Vous avez dépensé trop de points de compétences (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
+      infos += "Vous avez dépensé trop de points de compétences (Votre personnage a augmenté de niveau ?).<br>";
     }
 
     if (this.leftPointsCrystals > 0) {
       infos += "Il reste des points de cristaux à dépenser.<br>";
     }
     if (this.leftPointsCrystals < 0) {
-      infos += "Vous avez dépensé trop de points de cristaux (votre personnage a déjà obtenu de l'eXPérience ?).<br>";
+      infos += "Vous avez dépensé trop de points de cristaux (Votre personnage a augmenté de niveau ?).<br>";
     }
 
-    if (!this.crystals[0].name && !this.crystals[1].name && !this.crystals[2].name) {
+    if (!this.perso.crystals[0].name && !this.perso.crystals[1].name && !this.perso.crystals[2].name) {
       infos += "Votre personnage n'a pas de cristal. (Est-ce voulu ?)<br>";
     }
 
-    if (this.crystals[0].name && (!this.crystals[0].type || !this.crystals[0].level)) {
+    if (this.perso.crystals[0].name && !this.perso.crystals[0].type) {
       infos += "Votre premier cristal est incomplet.<br>";
     }
 
-    if (this.crystals[1].name && (!this.crystals[1].type || !this.crystals[1].level)) {
+    if (this.perso.crystals[1].name && !this.perso.crystals[1].type) {
       infos += "Votre deuxième cristal est incomplet.<br>";
     }
 
-    if (this.crystals[2].name && (!this.crystals[2].type || !this.crystals[2].level)) {
+    if (this.perso.crystals[2].name && !this.perso.crystals[2].type) {
       infos += "Votre troisième cristal est incomplet.<br>";
     }
 
-    if (!this.weapon01.name && !this.weapon02.name) {
-      infos += "Votre personnage n'a pas d'armes. (Est-ce voulu ?).<br>";
+    if (!this.perso.armor && !this.perso.weapon01 && !this.perso.weapon02) {
+      infos += "Votre personnage n'a pas d'équipement. (Est-ce voulu ?).<br>";
     }
 
-    if (this.name.length <= 0) {
+    if (this.perso.name.length <= 0) {
       infos += "Votre personnage n'a pas de nom.<br>";
     }
-    if (this.description.length <= 0) {
+    if (this.perso.description.length <= 0) {
       infos += "Votre personnage n'a pas de description.<br>";
     }
-    if (this.avatar.length <= 0) {
+    if (this.perso.avatar.length <= 0) {
       infos += "Votre personnage n'a pas d'avatar.<br>";
     }
     this.warning = infos.length > 0;
@@ -417,16 +385,16 @@ export class CreationComponent {
 
     Promise.all([promise]).then(() => {
       // --- AVATAR ET DESCRIPTION
-      if (this.avatar) doc.addImage(this.avatar, "JPEG", 9.5, 10.5, 95.5, 82.25);
+      if (this.perso.avatar) doc.addImage(this.perso.avatar, "JPEG", 9.5, 10.5, 95.5, 82.25);
       doc.setFontSize(8);
-      doc.text("" + this.description, 176, 54, {
+      doc.text("" + this.perso.description, 176, 54, {
         align: "justify",
         maxWidth: 190,
       });
       doc.setFontSize(10);
 
       // --- IDENTITE
-      doc.text("" + this.name, 112, 132.9);
+      doc.text("" + this.perso.name, 112, 132.9);
       this.listRaces.forEach((element) => {
         if (this.perso.race === element.id) {
           doc.text(element.name, 112, 154.1);
@@ -471,22 +439,25 @@ export class CreationComponent {
       doc.text("" + this.perso.initiative, 313.5, i, { align: "center" });
 
       i = 407.6;
-      if (this.armor.name) {
-        let res = this.armor.name.indexOf(" (") > 0 ? this.armor.name.substring(0, this.armor.name.indexOf(" (")) : this.armor.name;
+      if (this.perso.armor) {
+        let res = this.perso.armor.name.indexOf(" (") > 0 ?
+          this.perso.armor.name.substring(0, this.perso.armor.name.indexOf(" (")) : this.perso.armor.name;
         doc.setFontSize(8);
         doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
       i += 10.6;
-      if (this.weapon01.name) {
-        let res = this.weapon01.name.indexOf(" (") > 0 ? this.weapon01.name.substring(0, this.weapon01.name.indexOf(" (")) : this.weapon01.name;
+      if (this.perso.weapon01) {
+        let res = this.perso.weapon01.name.indexOf(" (") > 0 ?
+          this.perso.weapon01.name.substring(0, this.perso.weapon01.name.indexOf(" (")) : this.perso.weapon01.name;
         doc.setFontSize(8);
         doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
       i += 10.6;
-      if (this.weapon02.name) {
-        let res = this.weapon02.name.indexOf(" (") > 0 ? this.weapon02.name.substring(0, this.weapon02.name.indexOf(" (")) : this.weapon02.name;
+      if (this.perso.weapon02) {
+        let res = this.perso.weapon02.name.indexOf(" (") > 0 ?
+          this.perso.weapon02.name.substring(0, this.perso.weapon02.name.indexOf(" (")) : this.perso.weapon02.name;
         doc.setFontSize(8);
         doc.text("" + res, 234, i);
         doc.setFontSize(10);
@@ -494,30 +465,30 @@ export class CreationComponent {
 
       // --- CRISTAUX LIES
       i = 483;
-      if (this.crystals[0].name && this.crystals[0].type) {
+      if (this.perso.crystals[0].name && this.perso.crystals[0].type) {
         doc.setFontSize(8);
-        doc.text("" + this.crystals[0].name, 29, i);
-        doc.text("" + this.convertTypeCrystal(this.crystals[0]), 145, i, { align: "center" });
+        doc.text("" + this.perso.crystals[0].name, 29, i);
+        doc.text("" + this.convertTypeCrystal(this.perso.crystals[0]), 145, i, { align: "center" });
         doc.setFontSize(10);
-        doc.text("" + this.crystals[0].level, 201, i, { align: "center" });
+        doc.text("" + this.perso.crystals[0].level, 201, i, { align: "center" });
       }
       i += 21.2;
-      if (this.crystals[1].name && this.crystals[1].type) {
+      if (this.perso.crystals[1].name && this.perso.crystals[1].type) {
         doc.setFontSize(8);
-        doc.text("" + this.crystals[1].name, 29, i);
-        doc.text("" + this.convertTypeCrystal(this.crystals[1]), 145, i, { align: "center" });
+        doc.text("" + this.perso.crystals[1].name, 29, i);
+        doc.text("" + this.convertTypeCrystal(this.perso.crystals[1]), 145, i, { align: "center" });
         doc.setFontSize(10);
-        doc.text("" + this.crystals[1].level, 201, i, { align: "center" });
+        doc.text("" + this.perso.crystals[1].level, 201, i, { align: "center" });
       }
       i += 21.2;
-      if (this.crystals[2].name && this.crystals[2].type) {
+      if (this.perso.crystals[2].name && this.perso.crystals[2].type) {
         doc.setFontSize(8);
-        doc.text("" + this.crystals[2].name, 29, i);
-        doc.text("" + this.convertTypeCrystal(this.crystals[2]), 145, i, { align: "center" });
+        doc.text("" + this.perso.crystals[2].name, 29, i);
+        doc.text("" + this.convertTypeCrystal(this.perso.crystals[2]), 145, i, { align: "center" });
         doc.setFontSize(10);
-        doc.text("" + this.crystals[2].level, 201, i, { align: "center" });
+        doc.text("" + this.perso.crystals[2].level, 201, i, { align: "center" });
       }
-      doc.save("Arlenor_" + this.name + ".pdf");
+      doc.save("Arlenor_" + this.perso.name + ".pdf");
     });
   }
 
