@@ -330,9 +330,7 @@
       "LEVEL": "Maîtrise",
       "CAPACITY": "Capacité",
       "ARMOR": "Armure",
-      "WEAPON": "Arme (optionnel)",
-      "ATTACKBONUS": "Bonus d'Attaque",
-      "DEFENCEBONUS": "Bonus de Défense"
+      "WEAPON": "Arme (optionnel)"
     },
     "HEROS01": "Un personnage est défini par deux séries de chiffres : ses <b>caractéristiques</b> et ses <b>compétences</b>.<br>Les caractéristiques définissent ce qu’est le personnage, et les compétences ce qu’il sait. Votre personnage sera plus ou moins fort, plus ou moins intelligent, plus ou moins adroit. Et c’est vous qui choisirez si, au cours de sa vie, il a appris à se battre ou s'il a préféré se tourner vers l'érudition, la médecine...",
     "HEROS02": "Dans ce monde, hormis les stats, les principaux choix qui orienteront votre personnage seront sa race / peuple, mais aussi les cristaux qu'il utilisera. Cependant, malgré toutes les nombres et les textes notés sur la fiche de perso, c'est VOUS qui ferez vivre votre personnage via ses actions : on choisit ce que l'on est par nos actions !",

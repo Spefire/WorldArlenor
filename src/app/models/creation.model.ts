@@ -46,68 +46,51 @@ export const LIST_ARMORS = [
 export const LIST_WEAPONS = [
   {
     id: 1,
-    name: "Lame courte (dague)",
-    attackBonus: 1,
-    defenceBonus: 1
+    name: "Lame courte (dague)"
   },
   {
     id: 2,
-    name: "Arme à une main (épée longue, hache)",
-    attackBonus: 2,
-    defenceBonus: 0
+    name: "Arme à une main (épée longue, hache)"
   },
   {
     id: 3,
-    name: "Arme à deux mains (espadon, grande hache)",
-    attackBonus: 3,
-    defenceBonus: -1
+    name: "Arme à deux mains (espadon, grande hache)"
   },
   {
     id: 4,
-    name: "Arme d'hast (lance, hallebarde)",
-    attackBonus: 2,
-    defenceBonus: 1
+    name: "Arme d'hast (lance, hallebarde)"
   },
   {
     id: 5,
-    name: "Arme contondante (matraque, bâton)",
-    attackBonus: 1,
-    defenceBonus: 1
+    name: "Arme contondante (matraque, bâton)"
   },
   {
     id: 6,
-    name: "Arc",
-    attackBonus: 2
+    name: "Arc"
   },
   {
     id: 7,
-    name: "Arbalète",
-    attackBonus: 3
+    name: "Arbalète"
   },
   {
     id: 8,
-    name: "Fronde",
-    attackBonus: 0
+    name: "Fronde"
   },
   {
     id: 9,
-    name: "Armes de lancer (couteaux)",
-    attackBonus: 2
+    name: "Armes de lancer (couteaux)"
   },
   {
     id: 10,
-    name: "Armes à feu lègere (pistolet)",
-    attackBonus: 3
+    name: "Armes à feu lègere (pistolet)"
   },
   {
     id: 11,
-    name: "Armes à feu lourde (fusil)",
-    attackBonus: 4
+    name: "Armes à feu lourde (fusil)"
   },
   {
     id: 12,
-    name: "Bouclier",
-    defenceBonus: 2
+    name: "Bouclier"
   }
 ];
 

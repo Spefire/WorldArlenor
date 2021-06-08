@@ -519,8 +519,6 @@ export class CreationComponent {
         doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
-      if (this.armor.attackBonus) doc.text("" + this.armor.attackBonus, 326, i, { align: "center" });
-      if (this.armor.defenceBonus) doc.text("" + this.armor.defenceBonus, 371.5, i, { align: "center" });
       i += 10.6;
       if (this.weapon01.name) {
         let res = this.weapon01.name.indexOf(" (") > 0 ? this.weapon01.name.substring(0, this.weapon01.name.indexOf(" (")) : this.weapon01.name;
@@ -528,8 +526,6 @@ export class CreationComponent {
         doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
-      if (this.weapon01.attackBonus) doc.text("" + this.weapon01.attackBonus, 326, i, { align: "center" });
-      if (this.weapon01.defenceBonus) doc.text("" + this.weapon01.defenceBonus, 371.5, i, { align: "center" });
       i += 10.6;
       if (this.weapon02.name) {
         let res = this.weapon02.name.indexOf(" (") > 0 ? this.weapon02.name.substring(0, this.weapon02.name.indexOf(" (")) : this.weapon02.name;
@@ -537,8 +533,6 @@ export class CreationComponent {
         doc.text("" + res, 234, i);
         doc.setFontSize(10);
       }
-      if (this.weapon02.attackBonus) doc.text("" + this.weapon02.attackBonus, 326, i, { align: "center" });
-      if (this.weapon02.defenceBonus) doc.text("" + this.weapon02.defenceBonus, 371.5, i, { align: "center" });
 
       // --- CRISTAUX LIES
       i = 483;
