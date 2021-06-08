@@ -4,7 +4,7 @@
   imgRight="assets/images/creation/perso_right.png">
 </head-creation>
 
-<popup *ngIf="help" text="{{ help }}" (onClosePopup)="closePopup()"></popup>
+<creation-popup *ngIf="help" [text]="help" (onClosePopup)="closePopup()"></creation-popup>
 
 <!--------------------------------------------------------------------------------------------------------------->
 <!------------                                IMPORT                                                ------------->

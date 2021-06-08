@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-	selector: 'popup',
-	templateUrl: './popup.component.html',
-	styleUrls: ['./popup.component.scss']
+	selector: 'creation-popup',
+	templateUrl: './creation-popup.component.html',
+	styleUrls: ['./creation-popup.component.scss']
 })
-export class PopupComponent {
+export class CreationPopupComponent {
 
 	@Input() public text: string;
 	@Output() onClosePopup = new EventEmitter();
