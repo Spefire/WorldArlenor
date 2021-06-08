@@ -72,7 +72,7 @@ export class CreationComponent {
       habilete: 1,
       intellect: 1,
       charisme: 1,
-      pouvoir: 1,
+      pouvoir: 5,
     };
     this.mainSkills = {
       art: { value: 0, spe: "" },
@@ -85,9 +85,9 @@ export class CreationComponent {
       social: { value: 0, spe: "" },
     };
 
-    this.nbPointsCaracteristics = 13;
+    this.nbPointsCaracteristics = 14;
     this.nbPointsMainSkills = 15;
-    this.nbPointsCrystals = 10;
+    this.nbPointsCrystals = 4;
 
     this.health01 = 2;
     this.health02 = 2;
@@ -215,6 +215,7 @@ export class CreationComponent {
   }
 
   changeCrystalLevel(number, event) {
+    if (!event.value) event.value = 0;
     this.crystals[number].level = parseInt(event.value);
     this.refreshPoints();
   }

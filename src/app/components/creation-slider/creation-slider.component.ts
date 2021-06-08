@@ -13,6 +13,7 @@ export class CreationSliderComponent {
 	@Input() public spe: string;
 	@Input() public hasSpecialistic: boolean;
 	@Input() public hasCristalSpecialistic: boolean;
+	@Input() public fixed: boolean;
 	@Output() onOpenPopup = new EventEmitter();
 	@Output() onValueChange = new EventEmitter();
 	@Output() onSpeChange = new EventEmitter();

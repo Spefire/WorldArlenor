@@ -135,7 +135,7 @@ export const LIST_TYPE = [
     id: 7,
     code: "ILL",
     title: "Illusion",
-    description: "Manipulation des 5 sens par l'environnement"
+    description: "Manipulation des sens par l'environnement"
   },
   {
     id: 8,

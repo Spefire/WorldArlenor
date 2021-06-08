@@ -86,7 +86,8 @@
           (onOpenPopup)="openPopup($event)" (onValueChange)="changeCaracteristics($event)"></creation-slider>
         <creation-slider min="1" max="5" name="{{ 'CREATION.POUVOIR.NAME' | translate }}"
           help="{{ 'CREATION.POUVOIR.HELP' | translate }}" type="pouvoir" value="{{ caracteristics.pouvoir }}"
-          (onOpenPopup)="openPopup($event)" (onValueChange)="changeCaracteristics($event)"></creation-slider>
+          (onOpenPopup)="openPopup($event)" (onValueChange)="changeCaracteristics($event)" [fixed]="true">
+        </creation-slider>
       </tbody>
     </table>
     <table class="full-table">
