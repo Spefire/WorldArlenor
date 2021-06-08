@@ -435,16 +435,10 @@ export class CreationComponent {
 
       // --- CARACTERISTIQUES
       var i = 217.2;
-      doc.text("" + this.perso.caracts.vig, 123, i, { align: "center" });
-      i += 21.2;
-      doc.text("" + this.perso.caracts.hab, 123, i, { align: "center" });
-      i += 21.2;
-      doc.text("" + this.perso.caracts.int, 123, i, { align: "center" });
-      i += 21.2;
-      doc.text("" + this.perso.caracts.cha, 123, i, { align: "center" });
-      i += 21.2;
-      doc.text("" + this.perso.caracts.pou, 123, i, { align: "center" });
-      i += 21.2;
+      for (var key in this.perso.caracts) {
+        doc.text("" + this.perso.caracts[key].value, 123, i, { align: "center" });
+        i += 21.2;
+      }
 
       // --- NIVEAU DE BLESSURES
       i = 353;
@@ -463,14 +457,14 @@ export class CreationComponent {
 
       // --- COMPTENCES PRINCIPALES
       i = 154.0;
-      /*for (var key in this.mainSkills) {
-        doc.text("" + this.mainSkills[key].value, 313.5, i, { align: "center" });
+      for (var key in this.perso.skills) {
+        doc.text("" + this.perso.skills[key].value, 313.5, i, { align: "center" });
         doc.setFontSize(8);
-        let res = this.mainSkills[key].spe.length > 18 ? this.mainSkills[key].spe.slice(0, 17) + "." : this.mainSkills[key].spe;
+        let res = this.perso.skills[key].spe.length > 18 ? this.perso.skills[key].spe.slice(0, 17) + "." : this.perso.skills[key].spe;
         doc.text("" + res, 388.5, i, { align: "center" });
         doc.setFontSize(10);
         i += 21.2;
-      }*/
+      }
 
       // --- VALEURS DE COMBAT
       i = 376.2;
