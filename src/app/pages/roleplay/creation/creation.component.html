@@ -278,7 +278,7 @@
     <div class="creation-element">
       <span>{{ "CREATION.INDICS.ARMOR" | translate }} : </span>
       <div class="dropdown">
-        <select class="dropdown-select" [value]="armor?.id" (change)="changeArmor($event.target)">
+        <select class="dropdown-select" [value]="perso.armor?.id" (change)="changeArmor($event.target)">
           <option value=""></option>
           <option *ngFor="let a of listArmors" [value]="a.id">{{ a.name }}</option>
         </select>
@@ -287,7 +287,7 @@
     <div class="creation-element">
       <span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
       <div class="dropdown">
-        <select class="dropdown-select" [value]="weapon01?.id" (change)="changeWeapon01($event.target)">
+        <select class="dropdown-select" [value]="perso.weapon01?.id" (change)="changeWeapon01($event.target)">
           <option value=""></option>
           <option *ngFor="let w of listWeapons" [value]="w.id">{{ w.name }}</option>
         </select>
@@ -296,7 +296,7 @@
     <div class="creation-element">
       <span>{{ "CREATION.INDICS.WEAPON" | translate }} : </span>
       <div class="dropdown">
-        <select class="dropdown-select" [value]="weapon02?.id" (change)="changeWeapon02($event.target)">
+        <select class="dropdown-select" [value]="perso.weapon02?.id" (change)="changeWeapon02($event.target)">
           <option value=""></option>
           <option *ngFor="let w of listWeapons" [value]="w.id">{{ w.name }}</option>
         </select>

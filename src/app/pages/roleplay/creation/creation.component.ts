@@ -288,66 +288,124 @@ export class CreationComponent {
 
       this.perso = new ArlenorCharacter();
       Promise.all([promiseGetParameters]).then(() => {
-        // Import caracts
-        /*if (parameters.caracteristics) {
-          this.perso.caracts.vig = parameters.caracteristics.vigueur;
-          this.perso.caracts.hab = parameters.caracteristics.habilete;
-          this.perso.caracts.int = parameters.caracteristics.intellect;
-          this.perso.caracts.cha = parameters.caracteristics.charisme;
-          this.perso.caracts.pou = parameters.caracteristics.pouvoir;
-        }
-        this.changeRace({ value: parameters.race });
-        for (var key in this.mainSkills) {
-          let value = parameters.mainSkills[key];
-          if (value) {
-            this.mainSkills[key] = value;
-            if (!parameters.version || parameters.version !== "2.1") this.mainSkills[key].spe = "";
-          }
-        }
-        if (parameters.crystal01) this.crystals[0].name = parameters.crystal01.name;
-        if (parameters.crystal02) this.crystals[1].name = parameters.crystal02.name;
-        if (parameters.crystal03) this.crystals[2].name = parameters.crystal03.name;
-        if (parameters.crystals) {
-          parameters.crystals.forEach((crystal, index) => {
-            this.crystals[index] = crystal;
-            // Obligé car les selects ne se rechargent pas
-            this.crystals[index].type = null;
+        if (parameters.version === "2.2") {
+
+          // Import race
+          this.changeRace({ value: parameters.race });
+          // Import caracts
+          this.perso.caracts.vig = parameters.caracts.vig;
+          this.perso.caracts.hab = parameters.caracts.hab;
+          this.perso.caracts.int = parameters.caracts.int;
+          this.perso.caracts.cha = parameters.caracts.cha;
+          this.perso.caracts.pou = parameters.caracts.pou;
+          // Import skills
+          this.perso.skills.art = parameters.skills.art;
+          this.perso.skills.ath = parameters.skills.ath;
+          this.perso.skills.com = parameters.skills.com;
+          this.perso.skills.fur = parameters.skills.fur;
+          this.perso.skills.med = parameters.skills.med;
+          this.perso.skills.per = parameters.skills.per;
+          this.perso.skills.sav = parameters.skills.sav;
+          this.perso.skills.soc = parameters.skills.soc;
+          // Import crystals
+          this.perso.crystals = parameters.crystals;
+          this.perso.crystals.forEach(crystal => {
+            crystal.type = ""; // TODO : Le select n'est pas mis à jour, donc par défaut on vide le type
           });
+          // Import stuff
+          this.listArmors.forEach((armor) => {
+            if (armor.id === parseInt(parameters.armor.id)) this.perso.armor = armor;
+          });
+          this.listWeapons.forEach((weapon) => {
+            if (weapon.id === parseInt(parameters.weapon01.id)) this.perso.weapon01 = weapon;
+            if (weapon.id === parseInt(parameters.weapon02.id)) this.perso.weapon02 = weapon;
+          });
+          // Import all
+          this.perso.name = parameters.name;
+          this.perso.description = parameters.description;
+          this.perso.avatar = parameters.avatar;
+
+        } else {
+
+          // Import race
+          this.changeRace({ value: parameters.race });
+          // Import caracts
+          if (parameters.caracteristics) {
+            this.perso.caracts.vig.value = parameters.caracteristics.vigueur;
+            this.perso.caracts.hab.value = parameters.caracteristics.habilete;
+            this.perso.caracts.int.value = parameters.caracteristics.intellect;
+            this.perso.caracts.cha.value = parameters.caracteristics.charisme;
+            this.perso.caracts.pou.value = 5;
+          }
+          // Import skills
+          if (parameters.mainSkills) {
+            this.perso.skills.art.value = parameters.mainSkills.art.value;
+            this.perso.skills.ath.value = parameters.mainSkills.athletisme.value;
+            this.perso.skills.com.value = parameters.mainSkills.combat.value;
+            this.perso.skills.fur.value = parameters.mainSkills.furtivite.value;
+            this.perso.skills.med.value = parameters.mainSkills.medecine.value;
+            this.perso.skills.per.value = parameters.mainSkills.perception.value;
+            this.perso.skills.sav.value = parameters.mainSkills.savoir.value;
+            this.perso.skills.soc.value = parameters.mainSkills.social.value;
+          }
+          // Import crystals
+          if (parameters.crystal01 && parameters.crystal01.name) {
+            this.perso.crystals[0].name = parameters.crystal01.name;
+          }
+          if (parameters.crystal02 && parameters.crystal02.name) {
+            this.perso.crystals[1].name = parameters.crystal02.name;
+          }
+          if (parameters.crystal03 && parameters.crystal03.name) {
+            this.perso.crystals[2].name = parameters.crystal03.name;
+          }
+          if (parameters.crystals[0] && parameters.crystals[0].name) {
+            this.perso.crystals[0].name = parameters.crystals[0].name;
+          }
+          if (parameters.crystals[1] && parameters.crystals[1].name) {
+            this.perso.crystals[1].name = parameters.crystals[1].name;
+          }
+          if (parameters.crystals[2] && parameters.crystals[2].name) {
+            this.perso.crystals[2].name = parameters.crystals[2].name;
+          }
+          // Import stuff
+          this.listArmors.forEach((armor) => {
+            if (armor.id === parseInt(parameters.armor.id)) this.perso.armor = armor;
+          });
+          this.listWeapons.forEach((weapon) => {
+            if (weapon.id === parseInt(parameters.weapon01.id)) this.perso.weapon01 = weapon;
+            if (weapon.id === parseInt(parameters.weapon02.id)) this.perso.weapon02 = weapon;
+          });
+          // Import all
+          this.perso.name = parameters.name;
+          this.perso.description = parameters.description;
+          this.perso.avatar = parameters.avatar;
+
         }
-        this.armor = this.listArmors.find((armor) => armor.id === parameters.armor.id);
-        this.weapon01 = this.listWeapons.find((weapon) => weapon.id === parameters.weapon01.id);
-        this.weapon02 = this.listWeapons.find((weapon) => weapon.id === parameters.weapon02.id);
-        if (!this.armor) this.armor = {};
-        if (!this.weapon01) this.weapon01 = {};
-        if (!this.weapon02) this.weapon02 = {};
-        this.name = parameters.name;
-        this.description = parameters.description;
-        this.avatar = parameters.avatar;*/
         this.refreshPoints();
         this.checkWarnings();
-        alert("Importation du personnage réussie !");
+        alert("Importation partielle du personnage réussie.");
       });
     }
   }
 
-  downloadJSON() {/*
+  downloadJSON() {
     var parameters = {
-      race: this.race,
-      caracteristics: this.caracteristics,
-      mainSkills: this.mainSkills,
-      crystals: this.crystals,
-      armor: this.armor,
-      weapon01: this.weapon01,
-      weapon02: this.weapon02,
-      name: this.name,
-      description: this.description,
-      avatar: this.avatar,
-      version: "2.1",
+      version: "2.2",
+      name: this.perso.name,
+      race: this.perso.race,
+      caracts: this.perso.caracts,
+      skills: this.perso.skills,
+      crystals: this.perso.crystals,
+      armor: this.perso.armor,
+      weapon01: this.perso.weapon01,
+      weapon02: this.perso.weapon02,
+      description: this.perso.description,
+      avatar: this.perso.avatar,
     };
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(parameters));
     var dlAnchorElem = document.getElementById("creation-save-json");
     dlAnchorElem.setAttribute("href", dataStr);
-    dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.name + ".json");*/
+    dlAnchorElem.setAttribute("download", "Arlenor_Save_" + this.perso.name + ".json");
   }
 
   downloadPDF() {
